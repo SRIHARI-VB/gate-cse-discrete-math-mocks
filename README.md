@@ -7,7 +7,8 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 1 — Propositional Logic**, 2026-10-25 → [`discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html`](discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html)
+- **Unit 1 — Propositional Logic**, 2026-10-25, Set 2 → [`discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html`](discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html)
+- Set 1 of the same unit and date is archived at [`.../archive/gate_dm_mock_1_2026-10-25_run1.html`](discrete-mathematics/propositional-logic/archive/gate_dm_mock_1_2026-10-25_run1.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: propositions & connectives · truth tables · logical equivalences · implications & inference · CNF/DNF · validity & satisfiability
 
@@ -15,13 +16,20 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Mock tests published | 2 |
+| Mock tests published | 3 (Unit 16 Set 3, Unit 1 Set 2; 2 units) |
 | Units covered | 2 of 16 |
-| Questions in master_bank.json | 100 (75 in Unit 16, 25 in Unit 1) |
+| Questions in master_bank.json | 125 (75 in Unit 16, 50 in Unit 1) |
 | Verified official PYQs | 2 |
-| Archived sets (earlier runs) | 2 (both Unit 16, 2026-10-25) |
+| Archived sets (earlier runs) | 3 (2 Unit 16, 1 Unit 1) |
 
 ## Rotation log
+
+- **2026-10-25, Unit 1 (second set).** `master_bank.json` showed Unit 1 with 25 banked questions, current since the
+  same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 1 instead of
+  advancing. 25 + 25 = 50 closes Unit 1 at the cap; the next run for this subject advances to
+  (0 + 1) mod 16 = Unit 2, Predicate & First-Order Logic.
+- Set 2 repeats no question from Set 1. It contains no `GATE_PYQ_VARIATION` item, and the About tab says so: every
+  question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
 
 - **2026-10-25, Unit 16 → Unit 1.** Unit 16 had reached 75 banked questions, i.e. at or beyond the
   50-question unit cap, so the rotation advanced by the modulo rule: (15 + 1) mod 16 = 0 → Unit 1.
@@ -41,7 +49,7 @@ README.md
 design-tokens.css                            canonical :root token block (copied into every page, never linked)
 discrete-mathematics/
   <unit-slug>/gate_dm_mock_<unit>_<date>.html current paper for that unit
-  <unit-slug>/archive/                       earlier sets for the same date, content frozen
+  <unit-slug>/archive/                       superseded sets, content frozen, shell current
   question-bank/master_bank.json             append-only master question bank
 ```
 
@@ -49,7 +57,7 @@ discrete-mathematics/
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Propositional Logic | `propositional-logic` | 25 | yes |
+| 1 | Propositional Logic | `propositional-logic` | 50 | yes |
 | 2 | Predicate & First-Order Logic | `predicate-logic` | 0 | — |
 | 3 | Set Theory | `set-theory` | 0 | — |
 | 4 | Relations | `relations` | 0 | — |
@@ -83,3 +91,12 @@ The active mock test reveals nothing before submission. On submit, the file grad
 unlocks the answer-key tab and shows a detailed solution for every question (concept, steps, final answer, why the other
 options fail, common misconception, faster method, takeaway). Banked historical questions use a separate expand-on-demand
 review interface.
+
+## Known deviations (to be fixed in one pass across every paper)
+
+- `6.4 No raw hex outside :root` is not yet met: the shipped shell uses literal hex values for a handful of tints and
+  borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one byte-identical shell, this can only
+  be corrected by re-issuing all papers together, so it is recorded here rather than fixed in one file and breaking
+  shell parity.
+- `6.1` requires an archived paper to be rebuilt on the current shell. The archived Unit 1 Set 1 file is frozen exactly
+  as it shipped; it already uses the current shell, so no rebuild was needed.
