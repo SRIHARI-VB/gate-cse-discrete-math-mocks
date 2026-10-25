@@ -7,22 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 1 — Propositional Logic**, 2026-10-25, Set 2 → [`discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html`](discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html)
-- Set 1 of the same unit and date is archived at [`.../archive/gate_dm_mock_1_2026-10-25_run1.html`](discrete-mathematics/propositional-logic/archive/gate_dm_mock_1_2026-10-25_run1.html)
+- **Unit 2 — Predicate & First-Order Logic**, 2026-10-25, Set 1 → [`discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html`](discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: propositions & connectives · truth tables · logical equivalences · implications & inference · CNF/DNF · validity & satisfiability
+- Subtopics: predicates & domain · universal & existential quantifiers · negation of nested quantifiers · scope & order of quantifiers · English to FOL translation
+- No superseded set yet for this unit, so nothing was moved into `predicate-logic/archive/`.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 5 (3 on Unit 16, 2 on Unit 1) |
-| Units covered | 2 of 16 |
-| Questions in master_bank.json | 125 (75 in Unit 16, 50 in Unit 1) |
+| Papers published | 6 (3 on Unit 16, 2 on Unit 1, 1 on Unit 2) |
+| Units covered | 3 of 16 |
+| Questions in master_bank.json | 150 (75 in Unit 16, 50 in Unit 1, 25 in Unit 2) |
 | Verified official PYQs | 2 |
 | Archived sets (earlier runs) | 3 (2 Unit 16, 1 Unit 1) |
 
 ## Rotation log
+
+- **2026-10-25, Unit 1 → Unit 2.** `master_bank.json` showed Unit 1 with 50 banked questions — at the 50-question cap —
+  so the rotation advanced by the modulo rule: (0 + 1) mod 16 = 1 → Unit 2, Predicate & First-Order Logic. The new set is
+  exactly 25 questions; Unit 2 now holds 25, which leaves room for one more set before it too reaches the cap.
+- Unit 2 contains no `GATE_PYQ_VARIATION` item: no first-order-logic previous-year question has been verified against an
+  official paper and key, so none is claimed. Every question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
+- Unit 2's five subtopics are covered five questions each (25 total), so no subtopic is under-represented.
 
 - **2026-10-25, Unit 1 (second set).** `master_bank.json` showed Unit 1 with 25 banked questions, current since the
   same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 1 instead of
@@ -51,6 +58,7 @@ discrete-mathematics/
   <unit-slug>/gate_dm_mock_<unit>_<date>.html current paper for that unit
   <unit-slug>/archive/                       superseded sets, content frozen, shell current
   question-bank/master_bank.json             append-only master question bank
+  predicate-logic/                           Unit 2 paper (gate_dm_mock_2_2026-10-25.html)
 ```
 
 ## Syllabus coverage checklist
@@ -58,7 +66,7 @@ discrete-mathematics/
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Propositional Logic | `propositional-logic` | 50 | yes |
-| 2 | Predicate & First-Order Logic | `predicate-logic` | 0 | — |
+| 2 | Predicate & First-Order Logic | `predicate-logic` | 25 | yes |
 | 3 | Set Theory | `set-theory` | 0 | — |
 | 4 | Relations | `relations` | 0 | — |
 | 5 | Functions | `functions` | 0 | — |
@@ -98,5 +106,8 @@ review interface.
   borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one byte-identical shell, this can only
   be corrected by re-issuing all papers together, so it is recorded here rather than fixed in one file and breaking
   shell parity.
+- The `index.html` archive prints an answer line from `answer_display` and, for records created before 2026-10-25, a
+  second identical line inside `solution_html`. The 25 Unit 2 records carry it once; the older records still carry it
+  twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
 - `6.1` requires an archived paper to be rebuilt on the current shell. The archived Unit 1 Set 1 file is frozen exactly
   as it shipped; it already uses the current shell, so no rebuild was needed.

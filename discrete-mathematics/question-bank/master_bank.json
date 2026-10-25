@@ -6,9 +6,10 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-25",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 125,
+  "total_questions": 150,
   "units_with_questions": [
    1,
+   2,
    16
   ]
  },
@@ -133,6 +134,34 @@
     "validity-and-satisfiability"
    ],
    "note": "Second set for Unit 1 on this date. Unit 1 had 25 banked questions and had been current for 0 days, so it stayed under the 50-question unit cap and the rotation re-selected it: 25 + 25 = 50, which closes Unit 1 at the cap. No question from Set 1 is repeated; the two sets share no question text. This set contains no GATE_PYQ_VARIATION item."
+  },
+  {
+   "date": "2026-10-25",
+   "run": 1,
+   "set": "Set 1",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "file": "discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "predicates-and-domain",
+    "quantifiers-universal-existential",
+    "negation-nested-quantifiers",
+    "scope-and-order",
+    "english-to-fol-translation"
+   ],
+   "note": "First paper for Unit 2. Unit 1 had reached the 50-question cap, so the rotation advanced (0 + 1) mod 16 -> Unit 2. No question repeats any earlier paper. No GATE_PYQ_VARIATION item: no first-order-logic PYQ has been verified against an official paper and key yet."
   }
  ],
  "verified_pyqs": [
@@ -5490,6 +5519,1063 @@
    "subtopic": "implications-and-inference",
    "subtopic_label": "Implications & inference",
    "question_format": "NAT"
+  },
+  {
+   "id": "DM-FOL1-Q01",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Predicates & domain",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">P(x)</span> be the predicate “<span class=\"mm\">x + 2 &gt; 5</span>”, where the domain of <span class=\"mm\">x</span> is <span class=\"mm\">ℤ</span>. Which one of the following is correct?",
+   "options": [
+    "<span class=\"mm\">P(x)</span> is a proposition, and it is true.",
+    "<span class=\"mm\">P(x)</span> is not a proposition; it becomes a proposition only when <span class=\"mm\">x</span> is given a value or is quantified.",
+    "<span class=\"mm\">P(x)</span> is a proposition, and it is false.",
+    "<span class=\"mm\">P(x)</span> is a proposition only when <span class=\"mm\">x</span> is a positive integer."
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A predicate with a free variable is an open sentence, not a proposition. It acquires a truth value only when the variable is bound — by substitution of a value or by a quantifier.",
+    "steps": [
+     "The expression <span class=\"mm\">P(x)</span> contains the free variable <span class=\"mm\">x</span>, so its truth value depends on which integer is substituted.",
+     "For <span class=\"mm\">x = 4</span> it is true (4 + 2 &gt; 5), and for <span class=\"mm\">x = 1</span> it is false — two different truth values from the same expression.",
+     "Something that is sometimes true and sometimes false is not a proposition; it is a predicate.",
+     "Once we write <span class=\"mm\">P(4)</span> or <span class=\"mm\">∀x P(x)</span>, the variable is bound and the result is a proposition."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) and (C) both assign a single truth value to an expression whose truth depends on <span class=\"mm\">x</span>.",
+     "(D) confuses the domain restriction with the property of being a proposition: restricting the domain still leaves <span class=\"mm\">x</span> free, so <span class=\"mm\">P(x)</span> is still not a proposition."
+    ],
+    "misconception": "Many students answer (A) because “x + 2 &gt; 5 is true for most integers”. Being true for most values is not the same as having a definite truth value.",
+    "faster": "Look for a free variable. Free variable present ⇒ predicate; no free variable ⇒ proposition.",
+    "takeaway": "A predicate is a truth-valued function; a proposition is its value at a point or under a quantifier."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "predicates-and-domain",
+   "subtopic_label": "Predicates & domain",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q02",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Universal & existential quantifiers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let the domain be <span class=\"mm\">D = {1, 2, 3, 4}</span>. Which one of the following statements is TRUE?",
+   "options": [
+    "<span class=\"mm\">∀x ∃y (x + y = 5)</span>",
+    "<span class=\"mm\">∃x ∀y (x + y = 5)</span>",
+    "<span class=\"mm\">∀x ∀y (x + y &lt; 8)</span>",
+    "<span class=\"mm\">∃x ∃y (x + y = 9)</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "The order of quantifiers changes meaning. <span class=\"mm\">∀x ∃y</span> lets the witness <span class=\"mm\">y</span> depend on <span class=\"mm\">x</span>; <span class=\"mm\">∃x ∀y</span> demands one witness that works for every <span class=\"mm\">y</span>.",
+    "steps": [
+     "<span class=\"mm\">∀x ∃y (x + y = 5)</span>: take <span class=\"mm\">y = 5 − x</span>. For x = 1, 2, 3, 4 the witnesses are 4, 3, 2, 1, all inside D. TRUE.",
+     "<span class=\"mm\">∃x ∀y (x + y = 5)</span>: a single x would need <span class=\"mm\">x + 1 = 5</span> and <span class=\"mm\">x + 4 = 5</span> at once. FALSE.",
+     "<span class=\"mm\">∀x ∀y (x + y &lt; 8)</span>: fails at <span class=\"mm\">x = y = 4</span>, where the sum is exactly 8, not less. FALSE.",
+     "<span class=\"mm\">∃x ∃y (x + y = 9)</span>: the largest possible sum is 4 + 4 = 8. FALSE."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) needs one x working for all four y values; no such x exists.",
+     "(C) is off by one at the boundary 4 + 4 = 8.",
+     "(D) asks for a sum that the domain cannot produce."
+    ],
+    "misconception": "Treating <span class=\"mm\">∀x ∃y</span> and <span class=\"mm\">∃y ∀x</span> as the same statement. The witness in the first may depend on x; in the second it may not.",
+    "faster": "Evaluate a finite domain by drawing the addition table and scanning each row (for ∀x ∃y) or each column (for ∃x ∀y).",
+    "takeaway": "∀x ∃y is a per-row claim; ∃x ∀y is a single-witness claim. Always check the boundary values of a finite domain."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "quantifiers-universal-existential",
+   "subtopic_label": "Universal & existential quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q03",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Negation of nested quantifiers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "The negation of <span class=\"mm\">∀x ∃y (x &lt; y)</span> is logically equivalent to",
+   "options": [
+    "<span class=\"mm\">∃x ∀y (x ≥ y)</span>",
+    "<span class=\"mm\">∀x ∃y (x ≥ y)</span>",
+    "<span class=\"mm\">∃x ∃y (x ≥ y)</span>",
+    "<span class=\"mm\">∀x ∀y (x ≥ y)</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Quantifier negation: <span class=\"mm\">¬∀x φ ≡ ∃x ¬φ</span> and <span class=\"mm\">¬∃y ψ ≡ ∀y ¬ψ</span>. Each quantifier flips as the negation moves inward, and the inner formula is negated.",
+    "steps": [
+     "Start: <span class=\"mm\">¬∀x ∃y (x &lt; y)</span>.",
+     "Move ¬ past ∀x: <span class=\"mm\">∃x ¬∃y (x &lt; y)</span>.",
+     "Move ¬ past ∃y: <span class=\"mm\">∃x ∀y ¬(x &lt; y)</span>.",
+     "Negate the comparison: <span class=\"mm\">¬(x &lt; y) ≡ x ≥ y</span>, giving <span class=\"mm\">∃x ∀y (x ≥ y)</span>."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) keeps ∀x — the outer quantifier must flip to ∃x.",
+     "(C) flips the inner quantifier wrongly: ∀y must become ∀y (it stays universal because the original inner quantifier was ∃y).",
+     "(D) flips neither quantifier."
+    ],
+    "misconception": "The most common error is to flip only the first quantifier. Both quantifiers flip, and the atomic formula is negated as well.",
+    "faster": "Swap ∀↔∃ for every quantifier in turn and negate the body: <span class=\"mm\">¬∀∃ φ ≡ ∃∀ ¬φ</span>.",
+    "takeaway": "Negation walks inward flipping every quantifier and negating the matrix — never the quantifiers alone."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "negation-nested-quantifiers",
+   "subtopic_label": "Negation of nested quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q04",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Scope & order of quantifiers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Consider the formula <span class=\"mm\">φ = ∀x (P(x) → ∃y R(x, y)) ∧ Q(y)</span>. Which one of the following statements about <span class=\"mm\">φ</span> is TRUE?",
+   "options": [
+    "The occurrence of <span class=\"mm\">y</span> in <span class=\"mm\">Q(y)</span> is free, and every occurrence of <span class=\"mm\">x</span> is bound.",
+    "Both <span class=\"mm\">x</span> and <span class=\"mm\">y</span> occur free in <span class=\"mm\">φ</span>.",
+    "The occurrence of <span class=\"mm\">y</span> in <span class=\"mm\">R(x, y)</span> is free.",
+    "<span class=\"mm\">φ</span> has no free variables, so it is a sentence."
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "A quantifier binds only the occurrences inside its scope. The scope of <span class=\"mm\">∀x</span> here is <span class=\"mm\">(P(x) → ∃y R(x, y))</span>; the scope of <span class=\"mm\">∃y</span> is <span class=\"mm\">R(x, y)</span>. The conjunct <span class=\"mm\">Q(y)</span> lies outside both scopes.",
+    "steps": [
+     "<span class=\"mm\">x</span> occurs only inside <span class=\"mm\">∀x (…)</span>, so both of its occurrences are bound.",
+     "<span class=\"mm\">y</span> occurs twice: inside <span class=\"mm\">∃y R(x, y)</span>, where it is bound, and in <span class=\"mm\">Q(y)</span>, which is outside that scope, where it is free.",
+     "Because <span class=\"mm\">Q(y)</span> is outside the scope of <span class=\"mm\">∃y</span>, the formula is not closed: it has one free variable."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) is wrong about <span class=\"mm\">x</span>: every occurrence of <span class=\"mm\">x</span> is bound by <span class=\"mm\">∀x</span>.",
+     "(C) reverses the scopes — the <span class=\"mm\">y</span> inside <span class=\"mm\">R(x, y)</span> is the bound one.",
+     "(D) fails because of the free <span class=\"mm\">y</span> in <span class=\"mm\">Q(y)</span>."
+    ],
+    "misconception": "Assuming a quantifier reaches the whole conjunction. Without parentheses around the whole formula, <span class=\"mm\">∀x</span> governs only the part that follows it up to the matching closing bracket.",
+    "faster": "Underline each quantifier's scope first, then mark occurrences inside versus outside.",
+    "takeaway": "Scope is decided by brackets, not by proximity: <span class=\"mm\">∀x A ∧ B</span> means <span class=\"mm\">(∀x A) ∧ B</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "scope-and-order",
+   "subtopic_label": "Scope & order of quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q05",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "English to FOL translation",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Domain: all people and all courses. <span class=\"mm\">S(x)</span>: <span class=\"mm\">x</span> is a student; <span class=\"mm\">C(y)</span>: <span class=\"mm\">y</span> is a course; <span class=\"mm\">E(x, y)</span>: <span class=\"mm\">x</span> is enrolled in <span class=\"mm\">y</span>. Which one of the following formulas says “Some student is not enrolled in any course”?",
+   "options": [
+    "<span class=\"mm\">∃x (S(x) ∧ ∀y (C(y) → ¬E(x, y)))</span>",
+    "<span class=\"mm\">∃x (S(x) → ∀y (C(y) → ¬E(x, y)))</span>",
+    "<span class=\"mm\">∀x (S(x) → ∃y (C(y) ∧ ¬E(x, y)))</span>",
+    "<span class=\"mm\">¬∃x (S(x) ∧ ∃y (C(y) ∧ E(x, y)))</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "“Some A is B” translates as <span class=\"mm\">∃x (A(x) ∧ B(x))</span> — the connective after an existential is ∧. “Not enrolled in any course” is the universal negative <span class=\"mm\">∀y (C(y) → ¬E(x, y))</span>.",
+    "steps": [
+     "“Some student” ⇒ <span class=\"mm\">∃x S(x) ∧ …</span> with ∧, because we assert the existence of a student.",
+     "“… is not enrolled in any course” ⇒ for every course y, x is not enrolled in y ⇒ <span class=\"mm\">∀y (C(y) → ¬E(x, y))</span>.",
+     "Combining: <span class=\"mm\">∃x (S(x) ∧ ∀y (C(y) → ¬E(x, y)))</span>."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) uses → after ∃: a non-student would make the formula true, so it does not assert that a student exists.",
+     "(C) says every student avoids at least one course — a different, weaker claim.",
+     "(D) says no student is enrolled in any course, i.e. every student avoids every course. It does not assert that any student exists at all."
+    ],
+    "misconception": "Pairing ∃ with → instead of ∧. The pairings that work are <span class=\"mm\">∀</span> with <span class=\"mm\">→</span> and <span class=\"mm\">∃</span> with <span class=\"mm\">∧</span>.",
+    "faster": "Translate the noun phrase (“some student”) first, then attach the rest as a restricted universal.",
+    "takeaway": "∃ takes ∧, ∀ takes →. Watch for the negated-universal pattern “not … any”."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "english-to-fol-translation",
+   "subtopic_label": "English to FOL translation",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q06",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Predicates & domain",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Over which one of the following domains is the statement <span class=\"mm\">∀x (x² ≥ x)</span> FALSE?",
+   "options": [
+    "<span class=\"mm\">ℕ = {0, 1, 2, 3, …}</span>",
+    "<span class=\"mm\">ℤ</span>",
+    "the finite set <span class=\"mm\">{1, 2, 3}</span>",
+    "<span class=\"mm\">ℝ</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "A quantified statement's truth value depends on the domain. <span class=\"mm\">x² − x = x(x − 1)</span> is negative exactly for <span class=\"mm\">0 &lt; x &lt; 1</span>.",
+    "steps": [
+     "Factor: <span class=\"mm\">x² − x = x(x − 1)</span>. It is ≥ 0 when <span class=\"mm\">x ≤ 0</span> or <span class=\"mm\">x ≥ 1</span>, and negative for <span class=\"mm\">0 &lt; x &lt; 1</span>.",
+     "Over <span class=\"mm\">ℕ</span>: values 0, 1, 2, … all satisfy <span class=\"mm\">x² ≥ x</span>. TRUE.",
+     "Over <span class=\"mm\">ℤ</span> and over <span class=\"mm\">{1, 2, 3}</span>: every element is ≤ 0 or ≥ 1, so the inequality holds. TRUE.",
+     "Over <span class=\"mm\">ℝ</span>: take <span class=\"mm\">x = 0.5</span>; then <span class=\"mm\">x² = 0.25 &lt; 0.5</span>. FALSE — this domain supplies a counterexample."
+    ],
+    "final": "Option (D)",
+    "why_wrong": [
+     "(A), (B) and (C) contain no element strictly between 0 and 1, so the negative region of <span class=\"mm\">x(x − 1)</span> is never entered."
+    ],
+    "misconception": "Believing the truth of a quantified statement is a property of the formula alone. Change the domain and the truth value can flip — here from true to false.",
+    "faster": "Solve the inequality once; the counterexamples are exactly the complement of its solution set. Then ask which domain meets that complement.",
+    "takeaway": "Before judging a quantified statement, read its domain. Fractions are the usual source of failures for <span class=\"mm\">x² ≥ x</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "predicates-and-domain",
+   "subtopic_label": "Predicates & domain",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q07",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Universal & existential quantifiers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let the domain be <span class=\"mm\">ℝ</span>. Which one of the following statements is TRUE?",
+   "options": [
+    "<span class=\"mm\">∀x ∃y (x + y = 0)</span>",
+    "<span class=\"mm\">∃y ∀x (x + y = 0)</span>",
+    "<span class=\"mm\">∀x ∀y (x · y = 0)</span>",
+    "<span class=\"mm\">∃x ∀y (x · y = 1)</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "In <span class=\"mm\">∀x ∃y φ(x, y)</span> the witness may depend on x; in <span class=\"mm\">∃y ∀x φ(x, y)</span> one fixed witness must serve every x.",
+    "steps": [
+     "(A) Given x, choose <span class=\"mm\">y = −x</span>, which is in <span class=\"mm\">ℝ</span>. TRUE.",
+     "(B) A single y would need <span class=\"mm\">x = −y</span> for every x, which is impossible for two different x. FALSE.",
+     "(C) Fails at <span class=\"mm\">x = y = 1</span>: the product is 1, not 0. FALSE.",
+     "(D) For a fixed x, <span class=\"mm\">x · y = 1</span> fails at <span class=\"mm\">y = 0</span> whatever x is. FALSE."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) and (D) both assert the existence of one witness that must work for all values of the other variable — the classic <span class=\"mm\">∃∀</span> overreach.",
+     "(C) is refuted by any pair of non-zero reals."
+    ],
+    "misconception": "Reading <span class=\"mm\">∀x ∃y</span> as <span class=\"mm\">∃y ∀x</span>. The first is almost always easier to satisfy because the witness is allowed to depend on x.",
+    "faster": "Try to name the witness as a function of x. If you can, the <span class=\"mm\">∀∃</span> statement is true; if you must fix a constant first, check the <span class=\"mm\">∃∀</span> form.",
+    "takeaway": "Only one direction is valid in general: <span class=\"mm\">∃y ∀x P(x, y) ⇒ ∀x ∃y P(x, y)</span>, never the reverse."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "quantifiers-universal-existential",
+   "subtopic_label": "Universal & existential quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q08",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Negation of nested quantifiers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "The negation of <span class=\"mm\">∀x ∃y (P(x) → Q(y))</span> is logically equivalent to",
+   "options": [
+    "<span class=\"mm\">∃x ∀y (P(x) ∧ ¬Q(y))</span>",
+    "<span class=\"mm\">∀x ∃y (P(x) ∧ ¬Q(y))</span>",
+    "<span class=\"mm\">∃x ∀y (¬P(x) ∧ Q(y))</span>",
+    "<span class=\"mm\">∃x ∃y (P(x) ∧ ¬Q(y))</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Negate inward: flip each quantifier and negate the matrix. Negating an implication needs <span class=\"mm\">¬(P → Q) ≡ P ∧ ¬Q</span>.",
+    "steps": [
+     "<span class=\"mm\">¬∀x ∃y (P(x) → Q(y))</span>",
+     "<span class=\"mm\">≡ ∃x ¬∃y (P(x) → Q(y))</span>",
+     "<span class=\"mm\">≡ ∃x ∀y ¬(P(x) → Q(y))</span>",
+     "<span class=\"mm\">≡ ∃x ∀y (P(x) ∧ ¬Q(y))</span>, since the only false row of an implication is true-hypothesis, false-conclusion."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) leaves the outer quantifier universal.",
+     "(C) negates the hypothesis instead of the whole implication.",
+     "(D) turns the inner ∀y into ∃y, but the original inner quantifier is ∃y, so its negation is ∀y."
+    ],
+    "misconception": "Negating <span class=\"mm\">P → Q</span> as <span class=\"mm\">¬P → ¬Q</span> or as <span class=\"mm\">¬P ∧ Q</span>. The negation of an implication is a conjunction: hypothesis true, conclusion false.",
+    "faster": "Apply <span class=\"mm\">¬∀∃ φ ≡ ∃∀ ¬φ</span> first, then negate the matrix with the implication rule.",
+    "takeaway": "Two rules do all the work: flip every quantifier, and <span class=\"mm\">¬(P → Q) ≡ P ∧ ¬Q</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "negation-nested-quantifiers",
+   "subtopic_label": "Negation of nested quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q09",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Scope & order of quantifiers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For an arbitrary binary predicate <span class=\"mm\">P(x, y)</span>, which one of the following is TRUE?",
+   "options": [
+    "<span class=\"mm\">∃y ∀x P(x, y) ⇒ ∀x ∃y P(x, y)</span>",
+    "<span class=\"mm\">∀x ∃y P(x, y) ⇒ ∃y ∀x P(x, y)</span>",
+    "<span class=\"mm\">∀x ∃y P(x, y) ⇔ ∃x ∀y P(x, y)</span>",
+    "<span class=\"mm\">∃x ∀y P(x, y) ⇔ ∀y ∃x P(x, y)</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Swapping adjacent quantifiers is sound only when the inner one is existential and the outer one is universal being pulled out — formally <span class=\"mm\">∃y ∀x P ⇒ ∀x ∃y P</span>. The converse fails.",
+    "steps": [
+     "Suppose <span class=\"mm\">∃y ∀x P(x, y)</span>: there is a <span class=\"mm\">y₀</span> with <span class=\"mm\">P(x, y₀)</span> for every x.",
+     "Given any x, that same <span class=\"mm\">y₀</span> is a witness for <span class=\"mm\">∃y P(x, y)</span>. So <span class=\"mm\">∀x ∃y P(x, y)</span> holds. (A) is valid.",
+     "The converse fails: over <span class=\"mm\">{1, 2}</span> let P hold only on (1,1) and (2,2). Then <span class=\"mm\">∀x ∃y P</span> is true but <span class=\"mm\">∃y ∀x P</span> is false. So (B) fails.",
+     "(C) claims the two mixed orders are equivalent, which they are not. (D) fails too: with <span class=\"mm\">P</span> true only on (1,1) and (2,2), <span class=\"mm\">∃x ∀y P</span> is false while <span class=\"mm\">∀y ∃x P</span> is true."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) is the invalid direction of the swap.",
+     "(C) and (D) both assert equivalences between a mixed <span class=\"mm\">∀∃</span> order and the opposite order; only one direction of each is valid, and the example <span class=\"mm\">P = {(1,1), (2,2)}</span> separates them."
+    ],
+    "misconception": "Believing that quantifier order never matters. Only quantifiers of the same type commute: <span class=\"mm\">∀∀</span> and <span class=\"mm\">∃∃</span> may be swapped, <span class=\"mm\">∀∃</span> may not.",
+    "faster": "Test any candidate equivalence on a 2-element domain with the identity-like predicate <span class=\"mm\">P = {(1,1), (2,2)}</span> — it separates most quantifier swaps.",
+    "takeaway": "<span class=\"mm\">∃∀ ⇒ ∀∃</span> is valid; the reverse is the single most common false claim in first-order logic."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "scope-and-order",
+   "subtopic_label": "Scope & order of quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q10",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "English to FOL translation",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Domain: all people. <span class=\"mm\">S(x)</span>: <span class=\"mm\">x</span> is a student; <span class=\"mm\">B(x)</span>: <span class=\"mm\">x</span> may borrow books. Which one of the following formulas expresses “Only students may borrow books”?",
+   "options": [
+    "<span class=\"mm\">∀x (B(x) → S(x))</span>",
+    "<span class=\"mm\">∀x (S(x) → B(x))</span>",
+    "<span class=\"mm\">∃x (S(x) ∧ B(x))</span>",
+    "<span class=\"mm\">∀x (S(x) ↔ B(x))</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "“Only A are B” restricts B to A: it says <span class=\"mm\">B → A</span> for everything. The A-entity is the necessary condition, so it sits on the right of the arrow.",
+    "steps": [
+     "“Only students may borrow books” allows a non-student to be barred from borrowing; it does not promise every student may borrow.",
+     "So the implication runs from borrowing to being a student: <span class=\"mm\">∀x (B(x) → S(x))</span>.",
+     "Equivalently, no non-student may borrow: <span class=\"mm\">¬∃x (B(x) ∧ ¬S(x))</span>."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) says every student may borrow — the converse of what “only” asserts.",
+     "(C) merely asserts that some student may borrow, far weaker than the claim.",
+     "(D) says the two properties coincide, which also forbids a student who may not borrow."
+    ],
+    "misconception": "The word order tempts students to put “students” first, giving <span class=\"mm\">S → B</span>. “Only” reverses the direction of the arrow.",
+    "faster": "Rewrite “Only A are B” as “If B then A” before translating. “The only A that is B” is different and does start from A.",
+    "takeaway": "“All A are B” ⇒ <span class=\"mm\">A → B</span>. “Only A are B” ⇒ <span class=\"mm\">B → A</span>. Same words, opposite arrows."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "english-to-fol-translation",
+   "subtopic_label": "English to FOL translation",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q11",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Predicates & domain",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For which one of the following domains is the statement <span class=\"mm\">∀x ∃y (y &gt; x)</span> FALSE?",
+   "options": [
+    "<span class=\"mm\">ℕ = {0, 1, 2, …}</span>",
+    "<span class=\"mm\">ℤ</span>",
+    "<span class=\"mm\">ℝ</span>",
+    "the finite set <span class=\"mm\">{1, 2, …, 10}</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "An unbounded domain always supplies a larger element; a finite domain has a maximum, and that maximum has no <span class=\"mm\">y</span> above it.",
+    "steps": [
+     "Over <span class=\"mm\">ℕ</span>, <span class=\"mm\">ℤ</span> and <span class=\"mm\">ℝ</span> the witness <span class=\"mm\">y = x + 1</span> always lies in the domain. TRUE in each case.",
+     "Over <span class=\"mm\">{1, …, 10}</span>, take <span class=\"mm\">x = 10</span>. No element of the domain exceeds 10, so the inner <span class=\"mm\">∃y</span> fails.",
+     "One failing x is enough to falsify the universal statement, so the statement is FALSE on the finite domain."
+    ],
+    "final": "Option (D)",
+    "why_wrong": [
+     "(A), (B) and (C) are unbounded above, so <span class=\"mm\">x + 1</span> is always available."
+    ],
+    "misconception": "Checking only “typical” small values of x. Universally quantified statements over a finite domain fail exactly at the boundary element — here the maximum.",
+    "faster": "For <span class=\"mm\">∀x ∃y (y &gt; x)</span>, ask whether the domain has a maximum element. If it does, the statement fails there.",
+    "takeaway": "Finiteness is a domain property that changes quantifier truth values; always test the extreme element."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "predicates-and-domain",
+   "subtopic_label": "Predicates & domain",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q12",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Negation of nested quantifiers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following is logically equivalent to <span class=\"mm\">¬∀x (P(x) → ∃y (Q(y) ∧ R(x, y)))</span>?",
+   "options": [
+    "<span class=\"mm\">∃x (P(x) ∧ ∀y (Q(y) → ¬R(x, y)))</span>",
+    "<span class=\"mm\">∀x (P(x) ∧ ∃y (Q(y) ∧ ¬R(x, y)))</span>",
+    "<span class=\"mm\">∃x (¬P(x) ∧ ∀y (¬Q(y) ∨ ¬R(x, y)))</span>",
+    "<span class=\"mm\">∃x (P(x) ∧ ∃y (Q(y) ∧ ¬R(x, y)))</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Push the negation inward one quantifier and one connective at a time: <span class=\"mm\">¬∀ ≡ ∃¬</span>, <span class=\"mm\">¬(A → B) ≡ A ∧ ¬B</span>, <span class=\"mm\">¬∃ ≡ ∀¬</span>, and <span class=\"mm\">¬(Q ∧ R) ≡ Q → ¬R</span>.",
+    "steps": [
+     "<span class=\"mm\">¬∀x (P(x) → ∃y (Q(y) ∧ R(x, y)))</span>",
+     "<span class=\"mm\">≡ ∃x ¬(P(x) → ∃y (Q(y) ∧ R(x, y)))</span>",
+     "<span class=\"mm\">≡ ∃x (P(x) ∧ ¬∃y (Q(y) ∧ R(x, y)))</span>",
+     "<span class=\"mm\">≡ ∃x (P(x) ∧ ∀y ¬(Q(y) ∧ R(x, y)))</span>",
+     "<span class=\"mm\">≡ ∃x (P(x) ∧ ∀y (Q(y) → ¬R(x, y)))</span>"
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) never flips the outer quantifier.",
+     "(C) negates <span class=\"mm\">P(x)</span> although <span class=\"mm\">P(x)</span> survives the negation of the implication as a positive conjunct.",
+     "(D) stops at <span class=\"mm\">∃y</span> instead of pushing the negation through it to <span class=\"mm\">∀y</span>."
+    ],
+    "misconception": "Stopping the inward push once an existential appears. The negation must travel all the way to the atomic formulas; every quantifier it crosses flips.",
+    "faster": "Do it mechanically: flip, negate, flip, negate — one symbol at a time, never rewriting two things at once.",
+    "takeaway": "A correct negation of a deeply nested formula contains no negation sign other than the ones the original matrix already had."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "negation-nested-quantifiers",
+   "subtopic_label": "Negation of nested quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q13",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "English to FOL translation",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Domain: all people. <span class=\"mm\">L(x, y)</span>: <span class=\"mm\">x</span> likes <span class=\"mm\">y</span>. Which one of the following formulas expresses “Every person who likes somebody is liked by somebody”?",
+   "options": [
+    "<span class=\"mm\">∀x (∃y L(x, y) → ∃z L(z, x))</span>",
+    "<span class=\"mm\">∀x ∃y (L(x, y) → ∃z L(z, x))</span>",
+    "<span class=\"mm\">∀x (∃z L(z, x) → ∃y L(x, y))</span>",
+    "<span class=\"mm\">∃x (∀y L(x, y) → ∀z L(z, x))</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "The subject of the sentence is a restricted universal: “every person who likes somebody” is <span class=\"mm\">∀x (∃y L(x, y) → …)</span>. The restriction belongs in the hypothesis; the consequent is the separate claim “x is liked by somebody”.",
+    "steps": [
+     "“Every person who likes somebody” ⇒ <span class=\"mm\">∀x (∃y L(x, y) → …)</span>. The existential sits inside the hypothesis.",
+     "“is liked by somebody” ⇒ <span class=\"mm\">∃z L(z, x)</span>, with x in the second position and a fresh variable z.",
+     "Together: <span class=\"mm\">∀x (∃y L(x, y) → ∃z L(z, x))</span>."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) pulls <span class=\"mm\">∃y</span> outside the implication, so a person who likes nobody satisfies it by choosing any y — the restriction is lost.",
+     "(C) reverses the implication and says that being liked forces liking, which is a different claim.",
+     "(D) is only an existential statement about one special person."
+    ],
+    "misconception": "Hoisting the inner quantifier to the front. <span class=\"mm\">∀x (∃y L → …)</span> and <span class=\"mm\">∀x ∃y (L → …)</span> differ: only the first restricts to people who like somebody.",
+    "faster": "Translate the relative clause as a hypothesis, keep it inside the brackets, and use a fresh variable for each quantifier.",
+    "takeaway": "A relative clause “who …” becomes the antecedent of an implication under <span class=\"mm\">∀</span>; never hoist its quantifier out."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "english-to-fol-translation",
+   "subtopic_label": "English to FOL translation",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q14",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Scope & order of quantifiers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "A student wants to rename the bound variable in <span class=\"mm\">∀x ∃y (x &lt; y)</span> and writes <span class=\"mm\">∀y ∃y (y &lt; y)</span>. Which one of the following best explains what went wrong?",
+   "options": [
+    "The new name <span class=\"mm\">y</span> already occurs in the scope, so the renaming captures it; a bound variable may be renamed only to a variable that does not already occur there.",
+    "Nothing went wrong: <span class=\"mm\">∀y ∃y (y &lt; y)</span> is logically equivalent to <span class=\"mm\">∀x ∃y (x &lt; y)</span>.",
+    "Renaming a bound variable is never permitted in first-order logic.",
+    "The original formula <span class=\"mm\">∀x ∃y (x &lt; y)</span> is not well formed, so renaming does not apply."
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Renaming a bound variable (α-conversion) is legal only when the new variable is free for that position — practically, when it does not already occur free or bound inside the scope. Otherwise the rename captures the inner variable and changes meaning.",
+    "steps": [
+     "The original formula says: for every x there is a y greater than x. It is true over <span class=\"mm\">ℤ</span> and <span class=\"mm\">ℝ</span>.",
+     "Renaming <span class=\"mm\">x</span> to <span class=\"mm\">y</span> gives <span class=\"mm\">∀y ∃y (y &lt; y)</span>. The inner <span class=\"mm\">∃y</span> now captures the outer occurrence, so the two quantifiers range over the same variable.",
+     "The resulting formula says: for every y there is a y with <span class=\"mm\">y &lt; y</span> — always false, since no number is less than itself. The meaning changed, so the rename was invalid.",
+     "A safe rename uses a fresh variable, e.g. <span class=\"mm\">∀z ∃y (z &lt; y)</span>, which is equivalent to the original."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) is false: the renamed formula is a contradiction, not an equivalent statement.",
+     "(C) overstates the rule — α-conversion is a standard, valid operation when done with a fresh variable.",
+     "(D) is false: the original formula is perfectly well formed."
+    ],
+    "misconception": "Treating variable names as free to change. A name that is already in use inside the scope gets captured, and capture silently changes the meaning of the formula.",
+    "faster": "Before renaming, list every variable occurring in the scope; choose a name that appears nowhere in it.",
+    "takeaway": "Bound variables are placeholders, but only a fresh placeholder can replace them. Capture is the one way a legal-looking rewrite changes truth value."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "scope-and-order",
+   "subtopic_label": "Scope & order of quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q15",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Universal & existential quantifiers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following formulas is VALID — true in every interpretation over every non-empty domain?",
+   "options": [
+    "<span class=\"mm\">∀x (P(x) ∨ Q(x)) → (∀x P(x) ∨ ∀x Q(x))</span>",
+    "<span class=\"mm\">(∀x P(x) ∨ ∀x Q(x)) → ∀x (P(x) ∨ Q(x))</span>",
+    "<span class=\"mm\">(∃x P(x) ∧ ∃x Q(x)) → ∃x (P(x) ∧ Q(x))</span>",
+    "<span class=\"mm\">∀x ∃y P(x, y) → ∃y ∀x P(x, y)</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A formula is valid if every interpretation makes it true. Universal quantifiers distribute over ∧ but not over ∨; existential quantifiers distribute over ∨ but not over ∧.",
+    "steps": [
+     "(B): if every element is a P, or every element is a Q, then certainly every element is P or Q. Valid.",
+     "(A) fails on a two-element domain with <span class=\"mm\">P = {1}</span>, <span class=\"mm\">Q = {2}</span>: the hypothesis holds, both disjuncts of the conclusion fail.",
+     "(C) fails on the same interpretation: <span class=\"mm\">∃x P</span> and <span class=\"mm\">∃x Q</span> hold, but no element is both.",
+     "(D) fails on <span class=\"mm\">{1, 2}</span> with P holding only on (1,1) and (2,2): <span class=\"mm\">∀x ∃y P</span> holds, <span class=\"mm\">∃y ∀x P</span> does not."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) reverses the valid distribution: a pointwise disjunction does not give a uniform choice of disjunct.",
+     "(C) merges two existentials that may be witnessed by different elements.",
+     "(D) is the invalid direction of the quantifier swap."
+    ],
+    "misconception": "Assuming <span class=\"mm\">∀</span> distributes over both ∧ and ∨. It distributes over ∧ only. Likewise <span class=\"mm\">∃</span> distributes over ∨ only.",
+    "faster": "For any claimed validity, try the two-element domain with P and Q on different elements. It refutes most false distribution laws in one line.",
+    "takeaway": "Valid: <span class=\"mm\">∀(P ∧ Q) ⇔ ∀P ∧ ∀Q</span> and <span class=\"mm\">∃(P ∨ Q) ⇔ ∃P ∨ ∃Q</span>. The ∨/∧ mirror images are invalid."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "quantifiers-universal-existential",
+   "subtopic_label": "Universal & existential quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q16",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Predicates & domain",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following have a definite truth value as written — that is, are propositions? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">∃x ∈ ℤ (x² = 4)</span>",
+    "<span class=\"mm\">x + 1 = 7</span>",
+    "<span class=\"mm\">∀n ∈ ℕ (n + 0 = n)</span>",
+    "“<span class=\"mm\">P(x)</span>”, where <span class=\"mm\">P</span> is a predicate symbol and <span class=\"mm\">x</span> is a free variable"
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "solution": {
+    "concept": "A statement is a proposition when every variable in it is bound. A quantifier binds its variable; a free variable leaves the statement open.",
+    "steps": [
+     "(A) has no free variable — <span class=\"mm\">x</span> is bound by <span class=\"mm\">∃</span> — and it is true, since <span class=\"mm\">x = 2</span> works. A proposition.",
+     "(B) contains a free <span class=\"mm\">x</span>; it is true for <span class=\"mm\">x = 6</span> and false otherwise. Not a proposition.",
+     "(C) has no free variable and is true for every natural number. A proposition.",
+     "(D) is a predicate applied to a free variable; it has no truth value until <span class=\"mm\">x</span> is bound. Not a proposition."
+    ],
+    "final": "Options (A) and (C)",
+    "why_wrong": [
+     "(B) is an open sentence: its truth value changes with x.",
+     "(D) is an unevaluated predicate application, which is exactly what a free variable produces."
+    ],
+    "misconception": "Judging by whether the sentence “looks mathematical”. The test is syntactic: is any variable left free?",
+    "faster": "Scan for free variables only. No free variable ⇒ proposition, whatever the content.",
+    "takeaway": "Quantifying a predicate turns it into a proposition; leaving a variable free keeps it a predicate."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "predicates-and-domain",
+   "subtopic_label": "Predicates & domain",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q17",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Universal & existential quantifiers",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let the domain be <span class=\"mm\">ℝ</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">∀x ∃y (x + y = 0)</span>",
+    "<span class=\"mm\">∃x ∀y (x · y = y)</span>",
+    "<span class=\"mm\">∀x ∃y (x · y = 1)</span>",
+    "<span class=\"mm\">∃x ∀y (x + y = y)</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "solution": {
+    "concept": "To verify <span class=\"mm\">∀x ∃y</span>, produce a witness depending on x. To verify <span class=\"mm\">∃x ∀y</span>, exhibit one constant that works for every y.",
+    "steps": [
+     "(A) <span class=\"mm\">y = −x</span> is a witness for each x. TRUE.",
+     "(B) <span class=\"mm\">x = 1</span> gives <span class=\"mm\">1 · y = y</span> for every y. TRUE.",
+     "(C) <span class=\"mm\">x = 0</span> admits no y with <span class=\"mm\">0 · y = 1</span>. FALSE.",
+     "(D) <span class=\"mm\">x = 0</span> gives <span class=\"mm\">0 + y = y</span> for every y. TRUE."
+    ],
+    "final": "Options (A), (B) and (D)",
+    "why_wrong": [
+     "(C) fails at <span class=\"mm\">x = 0</span>, where no multiplicative inverse exists in <span class=\"mm\">ℝ</span>."
+    ],
+    "misconception": "Marking (C) true by thinking of the inverse of a non-zero x. A universal statement must survive the exceptional value <span class=\"mm\">x = 0</span>.",
+    "faster": "For each <span class=\"mm\">∀x</span>, test the awkward values first: 0, 1, negatives. They break most false claims.",
+    "takeaway": "<span class=\"mm\">x = 0</span> is the single most productive counterexample in algebra-style quantifier questions."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "quantifiers-universal-existential",
+   "subtopic_label": "Universal & existential quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q18",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Negation of nested quantifiers",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following pairs of formulas are logically equivalent? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">¬∀x P(x)</span> and <span class=\"mm\">∃x ¬P(x)</span>",
+    "<span class=\"mm\">¬∃x P(x)</span> and <span class=\"mm\">∀x ¬P(x)</span>",
+    "<span class=\"mm\">∀x (P(x) ∧ Q(x))</span> and <span class=\"mm\">(∀x P(x)) ∧ (∀x Q(x))</span>",
+    "<span class=\"mm\">∃x (P(x) → Q(x))</span> and <span class=\"mm\">(∃x P(x)) → (∃x Q(x))</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "The two quantifier-negation laws are equivalences in both directions, and <span class=\"mm\">∀</span> distributes over <span class=\"mm\">∧</span>. <span class=\"mm\">∃</span> does not distribute over <span class=\"mm\">→</span>.",
+    "steps": [
+     "(A) is the De Morgan law for quantifiers: <span class=\"mm\">¬∀ ≡ ∃¬</span>. Equivalent.",
+     "(B) is the dual law: <span class=\"mm\">¬∃ ≡ ∀¬</span>. Equivalent.",
+     "(C) holds because both sides say every element satisfies both properties. Equivalent.",
+     "(D) fails on a two-element domain with <span class=\"mm\">P = {1}</span>, <span class=\"mm\">Q = ∅</span>: the left side is true (at x = 2 the hypothesis is false), the right side is false since <span class=\"mm\">∃x Q</span> fails. Not equivalent."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "why_wrong": [
+     "(D) mixes an existential with an implication: the left side only needs one element that either fails P or satisfies Q, which is much weaker than the right side."
+    ],
+    "misconception": "Assuming quantifiers always distribute over connectives. <span class=\"mm\">∀</span> distributes over <span class=\"mm\">∧</span>, <span class=\"mm\">∃</span> over <span class=\"mm\">∨</span>; the other combinations need side conditions or fail.",
+    "faster": "Check any doubtful pair on a two-element domain — a two-row truth assignment settles most of these in seconds.",
+    "takeaway": "Quantifier De Morgan holds both ways. Distribution over ∧ for ∀ and over ∨ for ∃ holds; the mirrors do not."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "negation-nested-quantifiers",
+   "subtopic_label": "Negation of nested quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q19",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Scope & order of quantifiers",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "In <span class=\"mm\">∀x (P(x) → Q(y))</span>, the variable <span class=\"mm\">x</span> is bound and <span class=\"mm\">y</span> is free.",
+    "In <span class=\"mm\">∃x P(x) ∧ Q(x)</span>, the scope of <span class=\"mm\">∃x</span> is <span class=\"mm\">P(x)</span> only.",
+    "A formula with no free variables is called a sentence (closed formula).",
+    "<span class=\"mm\">∃x ∀y P(x, y)</span> and <span class=\"mm\">∀y ∃x P(x, y)</span> are logically equivalent."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Scope is determined by brackets: a quantifier governs the subformula that immediately follows it. Free variables are those with an occurrence outside every scope binding them. Sentences are formulas with no free variables.",
+    "steps": [
+     "(A) <span class=\"mm\">x</span> is bound by <span class=\"mm\">∀x</span>; <span class=\"mm\">y</span> appears nowhere bound. TRUE.",
+     "(B) Without brackets, <span class=\"mm\">∃x</span> applies only to <span class=\"mm\">P(x)</span>; the <span class=\"mm\">x</span> in <span class=\"mm\">Q(x)</span> is free. TRUE.",
+     "(C) That is the definition of a sentence. TRUE.",
+     "(D) FALSE: with <span class=\"mm\">P</span> true only on <span class=\"mm\">(1,1)</span> and <span class=\"mm\">(2,2)</span> over <span class=\"mm\">{1, 2}</span>, <span class=\"mm\">∃x ∀y P</span> is false while <span class=\"mm\">∀y ∃x P</span> is true."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "why_wrong": [
+     "(D) swaps a <span class=\"mm\">∃∀</span> pair into <span class=\"mm\">∀∃</span>; only one direction of that swap is valid, so the two are not equivalent."
+    ],
+    "misconception": "Reading a quantifier as reaching the end of the formula. <span class=\"mm\">∃x P(x) ∧ Q(x)</span> is <span class=\"mm\">(∃x P(x)) ∧ Q(x)</span>, not <span class=\"mm\">∃x (P(x) ∧ Q(x))</span>.",
+    "faster": "Add the missing brackets mentally before reading any formula: quantifiers bind the shortest subformula that follows.",
+    "takeaway": "Two habits fix almost every scope error: bracket the quantifier's scope, and rename variables so no name is used twice."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "scope-and-order",
+   "subtopic_label": "Scope & order of quantifiers",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q20",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "English to FOL translation",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Domain: all animals. <span class=\"mm\">D(x)</span>: <span class=\"mm\">x</span> is a dog; <span class=\"mm\">C(x)</span>: <span class=\"mm\">x</span> is a cat; <span class=\"mm\">L(x, y)</span>: <span class=\"mm\">x</span> likes <span class=\"mm\">y</span>. Which of the following formulas express “Every dog likes some cat”? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">∀x (D(x) → ∃y (C(y) ∧ L(x, y)))</span>",
+    "<span class=\"mm\">∀x (D(x) → ∃y (C(y) → L(x, y)))</span>",
+    "<span class=\"mm\">¬∃x (D(x) ∧ ∀y (C(y) → ¬L(x, y)))</span>",
+    "<span class=\"mm\">∀x (D(x) ∧ ∃y (C(y) ∧ L(x, y)))</span>"
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "solution": {
+    "concept": "The target is a restricted universal with an existential consequent: <span class=\"mm\">∀x (D(x) → ∃y (C(y) ∧ L(x, y)))</span>. Its negation, negated once more, is an equally good spelling of the same statement.",
+    "steps": [
+     "(A) reads: for every animal, if it is a dog then there is a cat it likes. Correct.",
+     "(B) reads: for every dog there is an animal y such that either y is not a cat or the dog likes y. Any non-cat in the domain satisfies this without the dog liking any cat. Too weak.",
+     "(C) reads: there is no dog that fails to like every cat — i.e. every dog likes at least one cat. By quantifier De Morgan it is exactly (A). Correct.",
+     "(D) additionally asserts that every animal is a dog, since the conjunct <span class=\"mm\">D(x)</span> is outside the implication. Too strong."
+    ],
+    "final": "Options (A) and (C)",
+    "why_wrong": [
+     "(B) puts an implication after <span class=\"mm\">∃y</span>, so a single non-cat in the domain makes it true for every dog.",
+     "(D) asserts dog-hood for all animals instead of restricting to dogs."
+    ],
+    "misconception": "Pairing <span class=\"mm\">∃</span> with <span class=\"mm\">→</span>. Under an existential the connective must be <span class=\"mm\">∧</span>; with <span class=\"mm\">→</span> the formula becomes satisfiable by irrelevant elements.",
+    "faster": "Check the connectives: <span class=\"mm\">∀</span> pairs with <span class=\"mm\">→</span>, <span class=\"mm\">∃</span> pairs with <span class=\"mm\">∧</span>. Any other pairing is a red flag.",
+    "takeaway": "A statement and its double negation are the same statement — (C) is (A) written negatively, and both are correct translations."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "english-to-fol-translation",
+   "subtopic_label": "English to FOL translation",
+   "question_format": "choice"
+  },
+  {
+   "id": "DM-FOL1-Q21",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Predicates & domain",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">P</span> be a predicate on the three-element domain <span class=\"mm\">D = {1, 2, 3}</span>, described by its truth set <span class=\"mm\">T = {x ∈ D : P(x)}</span>. For how many of the 8 possible truth sets <span class=\"mm\">T</span> is <span class=\"mm\">∃x P(x)</span> TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 7,
+   "solution": {
+    "concept": "A predicate on a finite domain is determined by its truth set. <span class=\"mm\">∃x P(x)</span> is true exactly when the truth set is non-empty.",
+    "steps": [
+     "There are <span class=\"mm\">2³ = 8</span> subsets of <span class=\"mm\">D</span>, hence 8 predicates.",
+     "<span class=\"mm\">∃x P(x)</span> holds iff <span class=\"mm\">T ≠ ∅</span>.",
+     "Only the empty set fails, so the count is <span class=\"mm\">8 − 1 = 7</span>."
+    ],
+    "final": "7",
+    "misconception": "Counting 8 by including the empty truth set. With <span class=\"mm\">T = ∅</span> there is no witness, so the existential is false.",
+    "faster": "Number of predicates satisfying <span class=\"mm\">∃x P(x)</span> on an n-element domain is <span class=\"mm\">2ⁿ − 1</span>.",
+    "takeaway": "Truth sets turn quantifier questions into counting questions: <span class=\"mm\">∃</span> means non-empty, <span class=\"mm\">∀</span> means the whole domain."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "predicates-and-domain",
+   "subtopic_label": "Predicates & domain",
+   "question_format": "integer"
+  },
+  {
+   "id": "DM-FOL1-Q22",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Universal & existential quantifiers",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let the domain be <span class=\"mm\">ℤ</span>. Consider the four statements<br/>(i) <span class=\"mm\">∀x ∃y (x + y = 0)</span>&nbsp;&nbsp;(ii) <span class=\"mm\">∃y ∀x (x + y = 0)</span>&nbsp;&nbsp;(iii) <span class=\"mm\">∀x ∀y (x · y = 0)</span>&nbsp;&nbsp;(iv) <span class=\"mm\">∃x ∀y (x · y = y)</span><br/>How many of them are TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2,
+   "solution": {
+    "concept": "Judge each statement on its own quantifier pattern; the witness in <span class=\"mm\">∀∃</span> may depend on the outer variable, the witness in <span class=\"mm\">∃∀</span> may not.",
+    "steps": [
+     "(i) For each x take <span class=\"mm\">y = −x ∈ ℤ</span>. TRUE.",
+     "(ii) One fixed y would have to equal <span class=\"mm\">−x</span> for every x at once. FALSE.",
+     "(iii) Fails at <span class=\"mm\">x = y = 1</span>, where the product is 1. FALSE.",
+     "(iv) <span class=\"mm\">x = 1</span> gives <span class=\"mm\">1 · y = y</span> for every integer y. TRUE.",
+     "True statements: (i) and (iv) ⇒ 2."
+    ],
+    "final": "2",
+    "misconception": "Marking (ii) true alongside (i). They differ exactly in whether the witness may depend on x, and that difference decides the truth value.",
+    "faster": "For <span class=\"mm\">∃x ∀y</span>, ask whether a single constant works for all y; for <span class=\"mm\">∀x ∃y</span>, write the witness as a formula in x.",
+    "takeaway": "The pair (i)/(ii) is the standard illustration that <span class=\"mm\">∀∃</span> and <span class=\"mm\">∃∀</span> are not interchangeable."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "quantifiers-universal-existential",
+   "subtopic_label": "Universal & existential quantifiers",
+   "question_format": "integer"
+  },
+  {
+   "id": "DM-FOL1-Q23",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Negation of nested quantifiers",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many free variables occur in the formula <span class=\"mm\">¬∀x ∃y (P(x, y) ∧ Q(z))</span>?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 1,
+   "solution": {
+    "concept": "Negation does not bind anything, and a quantifier binds only its own variable. A variable is free if at least one of its occurrences lies outside every scope that binds it.",
+    "steps": [
+     "<span class=\"mm\">x</span> is bound by <span class=\"mm\">∀x</span>. Not free.",
+     "<span class=\"mm\">y</span> is bound by <span class=\"mm\">∃y</span>. Not free.",
+     "<span class=\"mm\">z</span> is bound by no quantifier in the formula. Free.",
+     "Distinct free variables: <span class=\"mm\">{z}</span>, so the count is 1."
+    ],
+    "final": "1",
+    "misconception": "Thinking the leading <span class=\"mm\">¬</span> changes the binding structure, or that <span class=\"mm\">z</span> is bound because it appears inside the same brackets. Brackets do not bind; quantifiers do.",
+    "faster": "List every variable, then cross off the ones with a quantifier of their own name in the formula.",
+    "takeaway": "Count distinct free variables, not occurrences: <span class=\"mm\">Q(z) ∧ R(z)</span> contributes one free variable, not two."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "negation-nested-quantifiers",
+   "subtopic_label": "Negation of nested quantifiers",
+   "question_format": "integer"
+  },
+  {
+   "id": "DM-FOL1-Q24",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "Scope & order of quantifiers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many distinct variables occur bound in the formula <span class=\"mm\">∀x (∃y R(x, y) ∨ ∀z S(z)) ∧ T(w)</span>?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 3,
+   "solution": {
+    "concept": "A variable is bound if some occurrence of it lies inside the scope of a quantifier using that name. Here three different quantifiers bind three different names.",
+    "steps": [
+     "<span class=\"mm\">∀x</span> binds the occurrences of <span class=\"mm\">x</span> in <span class=\"mm\">R(x, y)</span>.",
+     "<span class=\"mm\">∃y</span> binds the occurrence of <span class=\"mm\">y</span> in <span class=\"mm\">R(x, y)</span>.",
+     "<span class=\"mm\">∀z</span> binds <span class=\"mm\">z</span> in <span class=\"mm\">S(z)</span>.",
+     "<span class=\"mm\">w</span> in <span class=\"mm\">T(w)</span> is outside every scope and is free, not bound.",
+     "Bound variables: <span class=\"mm\">{x, y, z}</span> ⇒ 3."
+    ],
+    "final": "3",
+    "misconception": "Counting <span class=\"mm\">w</span> because it is “inside the formula”. Being inside the formula is not the same as being inside a binding scope; the conjunct <span class=\"mm\">T(w)</span> sits outside <span class=\"mm\">∀x (…)</span>.",
+    "faster": "Walk the formula with a stack of active quantifiers and mark each variable as bound the first time it appears under its own quantifier.",
+    "takeaway": "Bound and free are properties of occurrences; the formula above has 3 bound and 1 free variable, so it is not a sentence."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "scope-and-order",
+   "subtopic_label": "Scope & order of quantifiers",
+   "question_format": "integer"
+  },
+  {
+   "id": "DM-FOL1-Q25",
+   "unit": 2,
+   "unit_name": "Predicate & First-Order Logic",
+   "topic": "Predicate Logic",
+   "sub": "English to FOL translation",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let the domain be the integers 1 to 20. For how many of them is the statement “the number is a perfect square and every smaller perfect square divides it” TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2,
+   "solution": {
+    "concept": "“Every smaller perfect square divides it” is a restricted universal over a set that may be empty. When the set is empty the universal is vacuously true — the boundary case that decides this question.",
+    "steps": [
+     "Perfect squares in 1..20: 1, 4, 9, 16.",
+     "<span class=\"mm\">n = 1</span>: there is no smaller perfect square ≥ 1, so the universal is vacuously true. TRUE.",
+     "<span class=\"mm\">n = 4</span>: smaller perfect squares are <span class=\"mm\">{1}</span>, and <span class=\"mm\">1 | 4</span>. TRUE.",
+     "<span class=\"mm\">n = 9</span>: smaller perfect squares <span class=\"mm\">{1, 4}</span>; <span class=\"mm\">4 ∤ 9</span>. FALSE.",
+     "<span class=\"mm\">n = 16</span>: smaller perfect squares <span class=\"mm\">{1, 4, 9}</span>; <span class=\"mm\">9 ∤ 16</span>. FALSE.",
+     "Count = 2."
+    ],
+    "final": "2",
+    "misconception": "Discarding <span class=\"mm\">n = 1</span> because “there is nothing to check”. An empty set of requirements makes the universal true, not false — the same vacuity trap that appears in implication questions.",
+    "faster": "Handle the smallest element of the domain separately: it is usually the vacuous case.",
+    "takeaway": "Vacuously true is still true. Universals over empty index sets count as satisfied."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "predicate-logic",
+   "unit_number": 2,
+   "subtopic": "english-to-fol-translation",
+   "subtopic_label": "English to FOL translation",
+   "question_format": "integer"
   }
  ]
 }
