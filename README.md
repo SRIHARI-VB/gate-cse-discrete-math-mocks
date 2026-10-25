@@ -1,30 +1,59 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
-Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on the 16-unit rotation of Discrete
-Mathematics. Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
+Two subjects are now in the series: Discrete Mathematics (16 units) and Algorithms (7 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 5 — Functions, Set 2 of 2**, 2026-10-26 → [`discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`](discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html)
+- **Algorithms · Unit 1 — Asymptotic Analysis & Recurrences, Set 1 of 2**, 2026-10-26 → [`algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`](algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: types of functions (injective / surjective / bijective) · composition & inverses · counting functions ·
-  pigeonhole principle · floor, ceiling & recursion
-- Unit 5 held 25 banked questions and had been current for 0 days, so the rotation re-selected it. This set closes
-  Unit 5 at the 50-question cap; the next run advances to Unit 6, Mathematical Induction & Recursion.
+- Subtopics: big-O / Ω / Θ · Master Theorem cases · recursion-tree method · substitution method
+- Algorithms had no `runs[]` entry, so the rotation fell back to the day-offset formula:
+  `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. This is the first paper for this subject.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 13 (3 on Unit 16, 2 each on Units 1–5) |
-| Units covered | 6 of 16 |
-| Questions in master_bank.json | 325 (75 in Unit 16, 50 each in Units 1–5) |
-| Verified official PYQs | 2 |
-| Archived sets (earlier runs) | 7 (2 Unit 16, 1 Unit 1, 1 Unit 2, 1 Unit 3, 1 Unit 4, 1 Unit 5) |
+| Papers published | 14 (13 Discrete Mathematics, 1 Algorithms) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms |
+| Questions in the subject banks | 350 (325 Discrete Mathematics, 25 Algorithms) |
+| Verified official PYQs | 2 (both Discrete Mathematics) |
+| Archived sets (earlier runs) | 7 (all Discrete Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Algorithms → Unit 1 (Asymptotic Analysis & Recurrences).** MODE A: the subject was drawn at random from the 11 GATE CSE
+  subjects and came out Algorithms. `algorithms/question-bank/master_bank.json` did not exist, so there was no `runs[]`
+  entry to read and no cap to check; the starting unit came from the documented fallback,
+  `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. No override was used and no second pass has started. This is a new
+  subject, not a continuation of the Discrete Mathematics rotation — that series is untouched by this run and Unit 6
+  (Mathematical Induction & Recursion) is still the next unit there.
+- The 25 questions cover all four of Unit 1's subtopics (8 / 8 / 6 / 4 by subtopic) with the standard 10 easy / 10
+  medium / 5 hard split and the standard 15 MCQ / 5 MSQ / 5 NAT composition. Every recurrence in the paper was checked
+  against its Master Theorem case or its recursion tree by hand, and every numeric answer was recomputed
+  independently: `T(n) = 8T(n/2) + n²` → `n³`; `T(n) = 2T(n/4) + √n` → `√n log n`, so `k = 1`; `T(n) = T(n−1) + n`
+  with `T(1) = 1` → `T(10) = 55`; the substitution bound `T(n) ≤ cn log₂ n` for `T(n) = 2T(n/2) + n` closes at
+  `c = 1`; and the recursion tree for `T(n) = 4T(n/2) + n²` has `4⁵ = 1024` leaves at `n = 32`.
+- No `GATE_PYQ_VARIATION` item ships: no algorithms PYQ has been verified against an official paper and answer key for
+  this unit, so none is claimed. The About tab and the Question Bank tab both say so, and `verified_pyqs` is empty for
+  this subject.
+- Filed only at `algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`. Nothing was written at the repository
+  root; `index.html` is still the only HTML file there.
+- Shell parity checked this run: the new paper was generated from the existing exam shell, and after normalising the
+  question payload, the Question Bank pane, the About pane and the metadata block, the remaining bytes are identical to
+  `discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html` (27 487 bytes on both sides). The `:root` block still
+  matches `design-tokens.css` byte for byte.
+- The paper was exercised in a jsdom harness before shipping: no solution, no option mark and no answer-key content is
+  in the DOM before submit; all 25 answered correctly scores 35/35; a mixed paper (2 correct MCQ, 1 wrong MCQ, 1 MSQ
+  with a partial selection, 1 exact MSQ, 1 correct NAT, 1 wrong NAT) scores 5/35 with 3 correct, 3 wrong, 19
+  unattempted; the palette reaches `na` / `ans` / `mrk` / `amr` / `cur` and switches to `ok` / `bad` / `skip` after
+  submit; the answer key unlocks with all 25 solutions.
+- `index.html` was extended, not rebuilt: seven `tests` entries, 23 `units` entries and 350 `questions` entries in its
+  data block, with the two lookups made subject-aware so Algorithms Unit 1 does not collide with Discrete Mathematics
+  Unit 1. Every `href` in the portal resolves.
 
 - **2026-10-26, Unit 5 → Unit 5 (Set 2).** `master_bank.json` showed Unit 5 with 25 banked questions, current since the
   same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 5 rather than
@@ -210,6 +239,9 @@ discrete-mathematics/
   <unit-slug>/gate_dm_mock_<unit>_<date>.html current paper for that unit
   <unit-slug>/archive/                       superseded sets, content frozen, shell current
   question-bank/master_bank.json             append-only master question bank
+algorithms/
+  asymptotic-analysis/gate_algo_mock_1_<date>.html   current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -232,6 +264,18 @@ discrete-mathematics/
 | 14 | Number Theory | `number-theory` | 0 | — |
 | 15 | Discrete Probability | `discrete-probability` | 0 | — |
 | 16 | Logic & Proof Techniques | `proof-techniques` | 75 | yes |
+
+Algorithms:
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 25 | yes |
+| 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 0 | — |
+| 3 | Greedy Algorithms | `greedy-algorithms` | 0 | — |
+| 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
+| 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
+| 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
+| 7 | Complexity Theory & NP-Completeness | `complexity-np-complete` | 0 | — |
 
 ## Provenance rules used in every test
 
