@@ -16,7 +16,7 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Mock tests published | 3 (Unit 16 Set 3, Unit 1 Set 2; 2 units) |
+| Papers published | 5 (3 on Unit 16, 2 on Unit 1) |
 | Units covered | 2 of 16 |
 | Questions in master_bank.json | 125 (75 in Unit 16, 50 in Unit 1) |
 | Verified official PYQs | 2 |
