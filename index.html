@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GATE CSE 2027 — Discrete Mathematics Mock Test Series</title>
+<style>
+:root{--ink:#12232e;--muted:#5b6b7a;--line:#d5dde5;--bg:#eef2f6;--hdr:#0b3c5d;--hdr2:#12608f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55}
+header{background:linear-gradient(180deg,var(--hdr2),var(--hdr));color:#fff;padding:18px 22px}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;font-size:13px;opacity:.9}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 22px 70px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.tabs button{font-family:inherit;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:20px;border:1px solid var(--line);background:#fff;color:#3d4d5c;cursor:pointer}
+.tabs button.on{background:var(--hdr2);border-color:var(--hdr2);color:#fff}
+.panel{display:none}.panel.on{display:block}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:16px;box-shadow:0 1px 3px rgba(18,35,46,.06)}
+.card h2{margin:0 0 10px;font-size:16px;color:var(--hdr)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f8fafc;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+td.c{text-align:center}
+.s{font-size:12px;color:var(--muted)}
+a.btn{display:inline-block;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:5px;background:var(--hdr2);color:#fff;text-decoration:none;border:1px solid var(--hdr2)}
+a.btn.ghost{background:#fff;color:var(--hdr2)}
+.ugrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px}
+.ucard{border:1px solid var(--line);border-radius:9px;padding:12px 14px;background:#fbfcfd}
+.ucard.live{background:#f2faf5;border-color:#b7e1c8}
+.un{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
+.ut{font-weight:700;font-size:14px;margin:2px 0 4px;color:var(--hdr)}
+.um{font-size:12.5px;color:var(--muted)}
+.ul{margin-top:7px;font-size:12.5px}
+.ul a{color:var(--hdr2)}
+iframe{width:100%;height:78vh;border:1px solid var(--line);border-radius:10px;background:#fff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 15px}
+.stat .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
+.stat .v{font-size:22px;font-weight:700;color:var(--hdr)}
+.note{background:#fffdf5;border:1px solid #f0dca8;border-radius:9px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}
+code{background:#f4f7fa;padding:1px 5px;border-radius:3px;border:1px solid #e3eaf1;font-size:12.5px}
+</style></head><body>
+<header>
+  <h1>GATE CSE 2027 — Discrete Mathematics Mock Test Series</h1>
+  <p>SRIHARI V B · daily 25-question practice papers (15 MCQ · 5 MSQ · 5 NAT) · 16-unit rotation · append-only historical question bank</p>
+</header>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="k">Papers generated</div><div class="v">2</div></div>
+    <div class="stat"><div class="k">Questions in bank</div><div class="v">50</div></div>
+    <div class="stat"><div class="k">Units covered</div><div class="v">1 / 16</div></div>
+    <div class="stat"><div class="k">Latest paper</div><div class="v" style="font-size:15px">2026-10-25</div></div>
+  </div>
+
+  <div class="tabs">
+    <button class="on" onclick="tab('date',this)">By date</button>
+    <button onclick="tab('unit',this)">By unit</button>
+    <button onclick="tab('topic',this)">By topic &amp; subtopic</button>
+    <button onclick="tab('launch',this)">Launch a paper</button>
+  </div>
+
+  <div class="panel on" id="p-date">
+    <div class="card"><h2>Mock tests by date</h2>
+      <table><tr><th>Date</th><th>Unit</th><th class="c">MCQ</th><th class="c">MSQ</th><th class="c">NAT</th><th class="c">Total</th><th>Difficulty</th><th>Open</th></tr>
+      <tr><td><b>2026-10-25</b><br><span class="s">run 1</span></td><td>Unit 16<br><span class="s">Logic & Proof Techniques</span></td><td class="c">15</td><td class="c">5</td><td class="c">5</td><td class="c">25</td><td class="s">Easy 10 / Moderate 10 / Difficult 5</td><td><a class="btn" href="archive/gate_dm_mock_16_2026-10-25_run1.html" target="_blank">Open</a> <a class="btn ghost" href="archive/gate_dm_mock_16_2026-10-25_run1.html" onclick="loadFrame('archive/gate_dm_mock_16_2026-10-25_run1.html');return false;">Load here</a></td></tr><tr><td><b>2026-10-25</b><br><span class="s">run 2</span></td><td>Unit 16<br><span class="s">Logic & Proof Techniques</span></td><td class="c">15</td><td class="c">5</td><td class="c">5</td><td class="c">25</td><td class="s">Easy 10 / Moderate 10 / Difficult 5</td><td><a class="btn" href="gate_dm_mock_16_2026-10-25.html" target="_blank">Open</a> <a class="btn ghost" href="gate_dm_mock_16_2026-10-25.html" onclick="loadFrame('gate_dm_mock_16_2026-10-25.html');return false;">Load here</a></td></tr></table>
+    </div>
+    <div class="note"><b>Rotation:</b> day index = (today − 2026-10-26) days, mod 16, index 0 = Unit 1. One unit per day, in syllabus order.</div>
+  </div>
+
+  <div class="panel" id="p-unit">
+    <div class="card"><h2>All 16 units</h2><div class="ugrid"><div class="ucard"><div class="un">Unit 1</div><div class="ut">Propositional Logic</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/propositional-logic/">folder</a></div></div><div class="ucard"><div class="un">Unit 2</div><div class="ut">Predicate & First-Order Logic</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/predicate-first-order-logic/">folder</a></div></div><div class="ucard"><div class="un">Unit 3</div><div class="ut">Set Theory</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/set-theory/">folder</a></div></div><div class="ucard"><div class="un">Unit 4</div><div class="ut">Relations</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/relations/">folder</a></div></div><div class="ucard"><div class="un">Unit 5</div><div class="ut">Functions</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/functions/">folder</a></div></div><div class="ucard"><div class="un">Unit 6</div><div class="ut">Mathematical Induction & Recursion</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/mathematical-induction-recursion/">folder</a></div></div><div class="ucard"><div class="un">Unit 7</div><div class="ut">Counting & Combinatorics</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/counting-combinatorics/">folder</a></div></div><div class="ucard"><div class="un">Unit 8</div><div class="ut">Recurrence Relations & Generating Functions</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/recurrence-relations-generating-functions/">folder</a></div></div><div class="ucard"><div class="un">Unit 9</div><div class="ut">Graph Theory Fundamentals</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/graph-theory-fundamentals/">folder</a></div></div><div class="ucard"><div class="un">Unit 10</div><div class="ut">Graph Theory Advanced</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/graph-theory-advanced/">folder</a></div></div><div class="ucard"><div class="un">Unit 11</div><div class="ut">Boolean Algebra & Switching Logic</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/boolean-algebra-switching-logic/">folder</a></div></div><div class="ucard"><div class="un">Unit 12</div><div class="ut">Algebraic Structures</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/algebraic-structures/">folder</a></div></div><div class="ucard"><div class="un">Unit 13</div><div class="ut">Lattices & Posets</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/lattices-posets/">folder</a></div></div><div class="ucard"><div class="un">Unit 14</div><div class="ut">Number Theory</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/number-theory/">folder</a></div></div><div class="ucard"><div class="un">Unit 15</div><div class="ut">Discrete Probability</div><div class="um">0 questions in bank</div><div class="ul"><a href="discrete-mathematics/discrete-probability/">folder</a></div></div><div class="ucard live"><div class="un">Unit 16</div><div class="ut">Logic & Proof Techniques</div><div class="um">50 questions in bank</div><div class="ul"><a href="discrete-mathematics/logic-proof-techniques/">folder</a></div></div></div></div>
+  </div>
+
+  <div class="panel" id="p-topic">
+    <div class="card"><h2>Questions in the historical bank, by unit → topic → subtopic</h2>
+      <table><tr><th>Unit</th><th>Topic</th><th>Subtopic</th><th class="c">Questions</th></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>Counterexample to a divisibility claim</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>Counterexample to a primality pattern</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>Counting counterexamples in a range</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>Identifying false universal claims</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>Smallest counterexample</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Counterexamples</td><td>When no counterexample exists</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Necessity & Sufficiency</td><td>Implication chains and biconditionals</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Necessity & Sufficiency</td><td>Necessary and sufficient conditions</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Necessity & Sufficiency</td><td>Necessary condition</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Necessity & Sufficiency</td><td>Sufficient condition</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Necessity & Sufficiency</td><td>Sufficient vs necessary condition</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Assumption in a proof by contradiction</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Choosing contrapositive</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Choosing proof by contradiction</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Contrapositive</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Contrapositive construction</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Contrapositive vs contradiction</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Converse / inverse / contrapositive</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Counterexample / primality</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Counterexample over the reals</td><td class='c'>2</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Counterexamples to a conjecture</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Direct proof structure</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Disproving a restricted universal claim</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Disproving an existential statement</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Disproving universal statements (counterexample)</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Equivalence of implication forms</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Equivalent implication forms</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Exhaustive case splits</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Existence and uniqueness proofs</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Logical equivalence of implication forms</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Multiple valid proof strategies</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Proof by cases</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Proof by cases — choosing the split</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Proof by contradiction</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Proof of biconditionals (iff)</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Rules of inference (valid vs fallacious)</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Trivial proof</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Truth of converse/inverse/contrapositive</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Vacuous truth</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Valid strategies for an implication</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>Validity of a proof by cases</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Proof Techniques</td><td>What does and does not prove an implication</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Propositional Equivalence</td><td>Equivalent forms of implication</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Fallacies</td><td>Affirming the consequent</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Fallacies</td><td>Counting valid argument forms</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Fallacies</td><td>Locating the flaw in a false proof</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Fallacies</td><td>Valid inference forms</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Tautology</td><td>Counting satisfying assignments</td><td class='c'>1</td></tr><tr><td>Unit 16 — Logic & Proof Techniques</td><td>Validity & Tautology</td><td>Counting tautologies</td><td class='c'>1</td></tr></table>
+      <p class="s" style="margin:10px 0 0">Units with no rows have no recorded questions yet. Nothing is invented to fill a gap.</p>
+    </div>
+  </div>
+
+  <div class="panel" id="p-launch">
+    <div class="card"><h2>Launch a paper in place</h2>
+      <p class="s" style="margin-top:0">Pick a paper from the By-date tab and choose <b>Load here</b>, or open one directly below.</p>
+      <p><a class="btn" href="gate_dm_mock_16_2026-10-25.html" target="_blank">Open gate_dm_mock_16_2026-10-25.html in a new tab</a></p>
+      <iframe id="fr" src="gate_dm_mock_16_2026-10-25.html" title="Mock test viewer"></iframe>
+    </div>
+  </div>
+
+  <div class="card"><h2>Repository layout</h2>
+    <p class="s" style="margin-top:0">Subject → unit (topic) → subtopic folders hold each paper's canonical copy; the root also carries the latest paper for direct linking.</p>
+    <pre class="s" style="white-space:pre-wrap;margin:0"><code>index.html                                  this dashboard
+gate_dm_mock_&lt;unit&gt;_&lt;date&gt;.html             today's paper (root copy)
+discrete-mathematics/
+  &lt;unit-slug&gt;/
+    &lt;subtopic-slug&gt;/
+      gate_dm_mock_&lt;unit&gt;_&lt;date&gt;.html       canonical copy
+bank/master_question_bank.json              append-only master bank
+archive/                                    superseded files kept intact</code></pre>
+  </div>
+</div>
+<script>
+function tab(id, el){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+  document.getElementById('p-'+id).classList.add('on');
+  document.querySelectorAll('.tabs button').forEach(function(b){b.classList.remove('on')});
+  el.classList.add('on');
+}
+function loadFrame(src){
+  document.getElementById('fr').src = src;
+  tab('launch', document.querySelectorAll('.tabs button')[3]);
+  document.getElementById('fr').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body></html>
