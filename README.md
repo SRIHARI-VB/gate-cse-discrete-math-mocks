@@ -1,80 +1,70 @@
-# GATE CSE — Daily Mock Test Series
+# gate-cse-mocks — GATE CSE 2027 mock test series
 
-Daily self-contained HTML mock tests for the GATE CSE syllabus, generated for
-**SRIHARI V B** (target: GATE CSE 2027).
+Daily, self-contained mock tests for **GATE CSE 2027**, one unit per day on a 16-unit rotation of Discrete
+Mathematics. Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
+and no answer, option mark or hint visible until the test is submitted.
 
-**Scope.** The series covers all of GATE CSE. Only **Discrete Mathematics** has papers so
-far; the other nine syllabus sections are reserved in the dashboard and have no papers yet.
-One unit per day, in syllabus order, within each subject.
+## Latest test
 
-Open **[`index.html`](index.html)** first — it is the test-series dashboard (views by date, by
-subject & unit, and by topic/subtopic, with an in-page launcher for any paper).
+- **Unit 16 — Logic & Proof Techniques**, 2026-10-25, Set 3 → [`discrete-mathematics/proof-techniques/gate_dm_mock_16_2026-10-25.html`](discrete-mathematics/proof-techniques/gate_dm_mock_16_2026-10-25.html)
+- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
+- Subtopics: direct proof, contradiction & contrapositive · counterexamples · biconditional (iff) proofs · necessity vs sufficiency
+- Earlier sets for the same date are kept in `discrete-mathematics/proof-techniques/archive/`
 
-Each daily paper is one HTML file styled like the GATE exam interface: question palette, running
-timer, MCQ radio buttons, MSQ checkboxes, NAT numeric inputs, and a submit button. It contains:
+## Status
 
-- **Today's 25-question mock test** — 15 MCQ + 5 MSQ + 5 NAT, difficulty split 10 Easy / 10 Moderate
-  / 5 Difficult. No answer, option mark or hint is rendered until **Submit**; the answer payload is
-  stored base64-encoded and decoded only on submission.
-- **A separate answer key with detailed solutions** (concept, step-by-step reasoning, final answer,
-  why the other options fail, common misconception, faster route, takeaway) that unlocks only after
-  submission.
-- **A preserved historical question bank** in the same file, organised by unit → topic →
-  subtopic. Historical questions are a separate review interface, are append-only, and are never
-  counted among the active 25.
+| Item | Value |
+| --- | --- |
+| Mock tests published | 1 |
+| Units covered | 1 of 16 |
+| Questions in master_bank.json | 75 (50 archived for review, 25 in the active set) |
+| Verified official PYQs | 2 |
 
-## Unit rotation — Discrete Mathematics (live)
-One unit per day. Day index = (today − 2026-10-26) days, mod 16 → index 0 = Unit 1.
-Each subject will carry its own rotation once it has papers.
-
-| # | Unit | # | Unit |
-|---|------|---|------|
-| 1 | Propositional Logic | 9 | Graph Theory Fundamentals |
-| 2 | Predicate & First-Order Logic | 10 | Graph Theory Advanced |
-| 3 | Set Theory | 11 | Boolean Algebra & Switching Logic |
-| 4 | Relations | 12 | Algebraic Structures |
-| 5 | Functions | 13 | Lattices & Posets |
-| 6 | Mathematical Induction & Recursion | 14 | Number Theory |
-| 7 | Counting & Combinatorics | 15 | Discrete Probability |
-| 8 | Recurrence Relations & Generating Functions | 16 | Logic & Proof Techniques |
-
-## Layout
+## Repository layout
 
 ```
-index.html                                   dashboard
+index.html                                   master portal (test list + topic/subtopic archive)
+README.md
 discrete-mathematics/
-  <unit-slug>/
-    gate_dm_mock_<unit>_<YYYY-MM-DD>.html    the paper — one copy, at unit level
-    README.md                                unit index
-    <subtopic-slug>/
-      README.md                              navigation; points at the unit paper
-bank/master_question_bank.json               append-only master bank
-archive/                                     superseded papers, content frozen
+  <unit-slug>/gate_dm_mock_<unit>_<date>.html
+  <unit-slug>/archive/                       earlier sets for the same date
+  question-bank/master_bank.json             append-only master question bank
 ```
 
-Both papers in this repo are generated from **one interface** (markup, CSS and JavaScript), so
-a superseded paper differs from a current one only in its embedded question payload.
+## Syllabus coverage checklist
 
-**One copy per paper.** A paper covers a whole unit, so it is filed once at unit level and
-exists in exactly one place. It is not copied into subtopic folders and it is not copied to
-the repository root — the dashboard links to that one file. Duplicating a 150 KB
-self-contained paper gives you two files that must stay byte-identical with nothing
-enforcing it.
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Propositional Logic | `propositional-logic` | 0 | — |
+| 2 | Predicate & First-Order Logic | `predicate-logic` | 0 | — |
+| 3 | Set Theory | `set-theory` | 0 | — |
+| 4 | Relations | `relations` | 0 | — |
+| 5 | Functions | `functions` | 0 | — |
+| 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
+| 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
+| 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
+| 9 | Graph Theory Fundamentals | `graph-theory-fundamentals` | 0 | — |
+| 10 | Graph Theory Advanced | `graph-theory-advanced` | 0 | — |
+| 11 | Boolean Algebra & Switching Logic | `boolean-algebra` | 0 | — |
+| 12 | Algebraic Structures | `algebraic-structures` | 0 | — |
+| 13 | Lattices & Posets | `lattices-posets` | 0 | — |
+| 14 | Number Theory | `number-theory` | 0 | — |
+| 15 | Discrete Probability | `discrete-probability` | 0 | — |
+| 16 | Logic & Proof Techniques | `proof-techniques` | 75 | yes |
 
-The top-level folder is a **subject** directory (`discrete-mathematics/`, and later
-`operating-systems/`, `databases/` and so on). `design-tokens.css` holds the canonical
-token block and component rules; it is **copied** into each paper's `<style>` rather than
-linked, so every paper stays a self-contained single file.
+## Provenance rules used in every test
 
-## Provenance policy
-A question is labelled an official GATE PYQ **only** when its year, paper and official answer key
-are verified. Unverified or partially reconstructed records are marked as such. Nothing is invented.
-Questions tagged *Original*, *Textbook-inspired*, *NPTEL-inspired* or *GateOverflow-inspired* are
-practice material, not official GATE questions.
+1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
+   those records live in `master_bank.json` under `verified_pyqs`.
+2. Questions built on a verified PYQ pattern are tagged `GATE_PYQ_VARIATION` and are explicitly *not* official questions.
+3. Everything else is tagged `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS` and is practice material written for this series.
+4. Historical questions are never deleted, never counted towards an active test, and are always filed under their
+   `data-subtopic` slug.
 
-## Run log
+## Answer key policy
 
-| Date | Unit | Composition | Difficulty | Note |
-|------|------|-------------|------------|------|
-| 2026-10-25 (run 1) | 16 — Logic & Proof Techniques | 15 / 5 / 5 | 10 / 10 / 5 | Superseded; its 25 questions are preserved in the historical bank and in `archive/`. The archived file was rebuilt on the current interface — its questions, solutions, answers and 45-minute duration are unchanged. |
-| 2026-10-25 (run 2) | 16 — Logic & Proof Techniques | 15 / 5 / 5 | 10 / 10 / 5 | Current paper. 25 new questions, no duplication with run 1. |
+The active mock test reveals nothing before submission. On submit, the file grades itself, marks the correct options,
+unlocks the answer-key tab and shows a detailed solution for every question (concept, steps, final answer, why the other
+options fail, common misconception, faster method, takeaway). Banked historical questions use a separate expand-on-demand
+review interface.
