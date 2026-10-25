@@ -1,10 +1,14 @@
-# GATE CSE — Discrete Mathematics Daily Mock Test Series
+# GATE CSE — Daily Mock Test Series
 
-Daily self-contained HTML mock tests for GATE CSE Discrete Mathematics, generated for
+Daily self-contained HTML mock tests for the GATE CSE syllabus, generated for
 **SRIHARI V B** (target: GATE CSE 2027).
 
-Open **[`index.html`](index.html)** first — it is the test-series dashboard (tabs by date, unit,
-topic/subtopic, with an in-page launcher for any paper).
+**Scope.** The series covers all of GATE CSE. Only **Discrete Mathematics** has papers so
+far; the other nine syllabus sections are reserved in the dashboard and have no papers yet.
+One unit per day, in syllabus order, within each subject.
+
+Open **[`index.html`](index.html)** first — it is the test-series dashboard (views by date, by
+subject & unit, and by topic/subtopic, with an in-page launcher for any paper).
 
 Each daily paper is one HTML file styled like the GATE exam interface: question palette, running
 timer, MCQ radio buttons, MSQ checkboxes, NAT numeric inputs, and a submit button. It contains:
@@ -15,12 +19,13 @@ timer, MCQ radio buttons, MSQ checkboxes, NAT numeric inputs, and a submit butto
 - **A separate answer key with detailed solutions** (concept, step-by-step reasoning, final answer,
   why the other options fail, common misconception, faster route, takeaway) that unlocks only after
   submission.
-- **A preserved historical question bank** in the same file, organised by all 16 units → topic →
+- **A preserved historical question bank** in the same file, organised by unit → topic →
   subtopic. Historical questions are a separate review interface, are append-only, and are never
   counted among the active 25.
 
-## Unit rotation
+## Unit rotation — Discrete Mathematics (live)
 One unit per day. Day index = (today − 2026-10-26) days, mod 16 → index 0 = Unit 1.
+Each subject will carry its own rotation once it has papers.
 
 | # | Unit | # | Unit |
 |---|------|---|------|
@@ -45,6 +50,11 @@ discrete-mathematics/
 bank/master_question_bank.json               append-only master bank
 archive/                                     superseded files, kept intact
 ```
+
+The top-level folder is a **subject** directory (`discrete-mathematics/`, and later
+`operating-systems/`, `databases/` and so on). `design-tokens.css` holds the canonical
+token block and component rules; it is **copied** into each paper's `<style>` rather than
+linked, so every paper stays a self-contained single file.
 
 ## Provenance policy
 A question is labelled an official GATE PYQ **only** when its year, paper and official answer key
