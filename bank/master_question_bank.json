@@ -76,19 +76,6 @@
    "topic": "Logic & Proof Techniques",
    "sub": "Sound inference / hypothetical syllogism",
    "note": "Corrupt / kind / elected inference chain; answer: 'If a person is kind, he is not known to be corrupt'."
-  },
-  {
-   "id": "PYQ-GATE2015-S2",
-   "year": 2015,
-   "paper": "GATE CSE 2015, Set 2",
-   "type": "MCQ",
-   "official_key": [
-    "C"
-   ],
-   "unit": 16,
-   "topic": "Logic & Proof Techniques",
-   "sub": "Sound inference / hypothetical syllogism",
-   "note": "Corrupt / kind / elected inference chain. Numbered Q1 in the official Set-2 booklet ('Q.1–Q.25 carry one mark each'); GateOverflow lists it as Set 2 Q3. Official key C."
   }
  ],
  "questions": [
