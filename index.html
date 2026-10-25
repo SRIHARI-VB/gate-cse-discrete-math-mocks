@@ -193,20 +193,11 @@ footer.foot p{margin:6px 0}
     <div class="grid2" id="testList"></div>
   </div>
 
-  <div id="view-archive" class="hidden">
-    <div class="banner warn">Today's active set is not listed here: its answers stay locked until the test is
-    submitted. It is already recorded in <code>master_bank.json</code> and joins this archive once superseded.</div>
-    <div class="banner info"><b>Topic &amp; subtopic archive.</b> Organised by unit, then by the standardised subtopic slug.
-    Each subtopic shows how many questions are banked; open a question to review its answer and full solution. Historical
-    questions never count towards any active mock test.</div>
-    <div id="archive"></div>
+  <div id="view-archive" class="hidden"><div id="archive"></div>
   </div>
 </div>
 
 <footer class="foot">
-  <p><b>Repository layout.</b> <code>index.html</code> (this portal) · <code>README.md</code> ·
-  <code>discrete-mathematics/&lt;unit-slug&gt;/gate_dm_mock_&lt;unit&gt;_&lt;date&gt;.html</code> ·
-  <code>discrete-mathematics/question-bank/master_bank.json</code>.</p>
   <p>Provenance: official GATE previous-year questions appear only with a verified year, paper and official answer key,
   recorded in <code>master_bank.json</code>. Everything else is practice material written for this series.</p>
 </footer>
@@ -236,72 +227,86 @@ footer.foot p{margin:6px 0}
     tl.appendChild(el);
   });
 
-  // ---------- tab 2: unit / subtopic archive ----------
+  // ---------- tab 2: topic & subtopic archive ----------
+  // Same card + launch-button pattern as tab 1. One expander per unit, not one
+  // accordion per unit and another per subtopic.
   var host = document.getElementById('archive');
-  D.units.forEach(function(u){
-    var qs = D.questions.filter(function(q){ return q.unit === u.n; });
-    var det = document.createElement('details');
-    det.className = 'unit';
-    var sum = document.createElement('summary');
-    sum.innerHTML = 'Unit ' + u.n + ' — ' + u.name +
-      ' <span class="count' + (qs.length ? '' : ' zero') + '">' + qs.length +
-      ' solved question' + (qs.length === 1 ? '' : 's') + '</span>';
-    det.appendChild(sum);
+  function banked(n){
+    return D.questions.filter(function(q){ return q.unit === n; });
+  }
+  var filled = D.units.filter(function(u){ return banked(u.n).length > 0; });
+  var blank = D.units.filter(function(u){ return banked(u.n).length === 0; });
 
-    if (qs.length === 0){
-      var e = document.createElement('div');
-      e.className = 'empty';
-      e.textContent = 'No questions banked yet for this unit. It fills in when this unit comes up in the daily rotation.';
-      det.appendChild(e);
-    }
+  var LAUNCH = 'display:inline-block;background:#286090;color:#fff;padding:7px 15px;' +
+               'border-radius:5px;font-size:13px;font-weight:600;text-decoration:none';
 
+  function questionCard(q){
+    var opts = (q.options && q.options.length)
+      ? '<ol class="ho" type="A">' + q.options.map(function(o){ return '<li>' + o + '</li>'; }).join('') + '</ol>'
+      : '';
+    var c = document.createElement('div');
+    c.className = 'hcard';
+    c.innerHTML =
+      '<div class="hh"><span class="id">' + q.id + '</span>' +
+      '<span class="tag ' + q.type.toLowerCase() + '">' + q.type + '</span>' +
+      '<span class="tag ' + q.difficulty + '">' + q.difficulty + '</span></div>' +
+      '<div class="hb"><p class="hq">' + q.text + '</p>' + opts +
+      '<details class="rev"><summary>Show answer &amp; solution</summary>' +
+      '<div class="sol" style="border-top:none;padding:8px 0 0;background:transparent">' +
+      '<p class="row"><span class="ansline">Answer: ' + q.answer_display + '</span></p>' +
+      q.solution_html + '</div></details></div>';
+    return c;
+  }
+
+  filled.forEach(function(u){
+    var qs = banked(u.n);
+    var t = D.tests.filter(function(x){ return x.unit === u.n; })[0];
+    var card = document.createElement('div');
+    card.className = 'testcard';
+
+    var chips = u.subtopics.map(function(s){
+      var n = qs.filter(function(q){ return q.subtopic === s[0]; }).length;
+      return n ? '<span class="pill">' + s[1] + ' &middot; ' + n + '</span>' : '';
+    }).join('');
+
+    // the banked questions come from the superseded sets, so those are the papers
+    // that can actually be launched to practise them
+    var launch = (t && t.archives ? t.archives : []).map(function(a){
+      return '<a href="' + a.path + '" style="' + LAUNCH + '">Practise ' + a.label + ' &rarr;</a>';
+    }).join(' ');
+
+    card.innerHTML =
+      '<h3>Unit ' + u.n + ' &mdash; ' + u.name +
+      ' <span class="count">' + qs.length + ' solved</span></h3>' +
+      '<div class="row">' + chips + '</div>' +
+      (launch ? '<div class="row" style="margin-top:10px">' + launch + '</div>' : '') +
+      '<details class="rev"><summary>Review the ' + qs.length +
+      ' solved questions</summary><div class="qbank"></div></details>';
+    host.appendChild(card);
+
+    var box = card.querySelector('.qbank');
     u.subtopics.forEach(function(s){
       var list = qs.filter(function(q){ return q.subtopic === s[0]; });
-      var sd = document.createElement('details');
-      sd.className = 'sub';
-      var ss = document.createElement('summary');
-      ss.innerHTML = s[1] + ' <span class="count' + (list.length ? '' : ' zero') + '">' + list.length + '</span>';
-      sd.appendChild(ss);
-
-      if (!list.length){
-        var ee = document.createElement('div');
-        ee.className = 'empty';
-        ee.textContent = 'No banked questions for this subtopic yet.';
-        sd.appendChild(ee);
-      } else {
-        var box = document.createElement('div');
-        box.className = 'qbank';
-        list.forEach(function(q){
-          var c = document.createElement('div');
-          c.className = 'hcard';
-          c.setAttribute('data-unit', q.unit_slug);
-          c.setAttribute('data-unit-number', q.unit);
-          c.setAttribute('data-subtopic', q.subtopic);
-          c.setAttribute('data-type', q.type);
-          c.setAttribute('data-difficulty', q.difficulty);
-          c.setAttribute('data-source', q.source);
-          var opts = (q.options && q.options.length)
-            ? '<ol class="ho" type="A">' + q.options.map(function(o){ return '<li>' + o + '</li>'; }).join('') + '</ol>'
-            : '';
-          c.innerHTML =
-            '<div class="hh"><span class="id">' + q.id + '</span>' +
-            '<span class="tag ' + q.type.toLowerCase() + '">' + q.type + '</span>' +
-            '<span class="tag ' + q.difficulty + '">' + q.difficulty + '</span>' +
-            '<span class="tag src">' + q.source.replace(/_/g, ' ').toLowerCase() + '</span>' +
-            '<span class="pill">' + q.date + '</span></div>' +
-            '<div class="hb"><p class="hq">' + q.text + '</p>' + opts +
-            '<details class="rev"><summary>Show answer &amp; detailed solution</summary>' +
-            '<div class="sol" style="border-top:none;padding:8px 0 0;background:transparent">' +
-            '<p class="row"><span class="ansline">Answer: ' + q.answer_display + '</span></p>' +
-            q.solution_html + '</div></details></div>';
-          box.appendChild(c);
-        });
-        sd.appendChild(box);
-      }
-      det.appendChild(sd);
+      if (!list.length) return;
+      var head = document.createElement('div');
+      head.className = 'dt';
+      head.style.margin = '14px 0 6px';
+      head.innerHTML = '<b>' + s[1] + '</b> &middot; ' + list.length;
+      box.appendChild(head);
+      list.forEach(function(q){ box.appendChild(questionCard(q)); });
     });
-    host.appendChild(det);
   });
+
+  if (blank.length){
+    var p = document.createElement('p');
+    p.className = 'dt';
+    p.style.marginTop = '16px';
+    var nums = blank.map(function(u){ return u.n; });
+    var span = nums.length > 1 ? ('Units ' + nums[0] + '&ndash;' + nums[nums.length - 1])
+                               : ('Unit ' + nums[0]);
+    p.innerHTML = '<b>' + span + '</b> have no banked questions yet.';
+    host.appendChild(p);
+  }
 
   // ---------- tabs ----------
   document.querySelectorAll('.tabs button[data-view]').forEach(function(btn){
