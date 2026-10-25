@@ -69,9 +69,12 @@
   --purple-line:#dcc6e8;
 
   /* --- semantic: type tags / informational --- */
-  --blue:#1a5276;
+  --blue:#1a5276;         /* MCQ */
   --blue-bg:#eaf2f8;
   --blue-line:#b9d3e4;
+  --teal:#0d6a63;         /* NAT — added because it previously collided with Easy */
+  --teal-bg:#e7f5f3;
+  --teal-line:#a9d8d2;
 
   /* --- radii: four steps, nothing in between --- */
   --r-sm:4px;             /* tags, code spans, small chips */
@@ -100,11 +103,16 @@
    These are the things that drifted. State them once, here.
    ========================================================================== */
 
-/* 1. Colour carries ONE meaning per semantic axis.
-      type tags  (mcq/msq/nat) -> --blue-* / --purple-* / --green-*
-      difficulty (easy/moderate/difficult) -> --green-* / --amber-* / --red-*
+/* 1. Colour carries ONE meaning per semantic axis. Two independent palettes:
+      type tags  mcq -> --blue-*   msq -> --purple-*   nat -> --teal-*
+      difficulty easy -> --green-* moderate -> --amber-* difficult -> --red-*
       A type tag and a difficulty tag must never share a fill.
-      (.tag.nat and .tag.easy were byte-identical: #186a3b on #eafaf1.) */
+      (.tag.nat and .tag.easy were byte-identical: #186a3b on #eafaf1, which is
+      why NAT moved to --teal: 5.75:1 against --teal-bg, and a hue that cannot be
+      confused with either --green or --blue.)
+      Type tags take their ink from the -ink token when the fill is light:
+      --green-ink on --green-bg is 7.43:1, where --green on --green-bg is only
+      4.37:1 and would fail AA. */
 
 /* 2. Every interactive element ships all five states:
       rest, :hover, :focus-visible, :disabled, and (where it can be waiting)
