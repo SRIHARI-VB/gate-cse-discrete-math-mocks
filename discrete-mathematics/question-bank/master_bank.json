@@ -6,8 +6,9 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-25",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 75,
+  "total_questions": 100,
   "units_with_questions": [
+   1,
    16
   ]
  },
@@ -76,6 +77,34 @@
     "necessity-vs-sufficiency"
    ],
    "note": "Third set for this date. Its 25 questions are new; the 50 questions from runs 1 and 2 are preserved in the historical bank and are not repeated here."
+  },
+  {
+   "date": "2026-10-25",
+   "run": 1,
+   "set": "Set 1",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "file": "discrete-mathematics/propositional-logic/gate_dm_mock_1_2026-10-25.html",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "propositions-and-connectives",
+    "truth-tables",
+    "logical-equivalences",
+    "implications-and-inference",
+    "cnf-dnf",
+    "validity-and-satisfiability"
+   ],
+   "note": "First paper for Unit 1. Unit 16 reached the 50-question cap (75 banked), so the rotation advanced (15 + 1) mod 16 = 0 -> Unit 1."
   }
  ],
  "verified_pyqs": [
@@ -3324,6 +3353,1061 @@
    "run_date": "2026-10-25",
    "run": 3,
    "answer_display": "45"
+  },
+  {
+   "id": "DM-PL1-Q01",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Propositions & connectives",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following is a <strong>proposition</strong> — that is, a declarative statement that has exactly one definite truth value?",
+   "options": [
+    "<span class=\"mm\">x + 1 = 5</span>",
+    "Is it raining outside?",
+    "Every even integer greater than 2 is a sum of two primes.",
+    "Close the door, please."
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "A proposition is a declarative sentence that is either true or false, but not both. Interrogatives, imperatives and sentences with free variables are not propositions.",
+    "steps": [
+     "(A) contains the free variable x, so its truth value changes with x; it is an open sentence (a predicate), not a proposition.",
+     "(B) is a question and (D) is a command; neither has a truth value at all.",
+     "(C) is a declarative sentence. Whether or not anyone can prove it, it is objectively either true or false, so it is a proposition. (It is Goldbach's conjecture, still open — but openness is about our knowledge, not about the statement's form.)"
+    ],
+    "final": "Option (C)",
+    "why_wrong": [
+     "(A) is a predicate; it becomes a proposition only after x is given a value.",
+     "(B) is interrogative and (D) is imperative; truth values do not apply."
+    ],
+    "misconception": "Students often reject (C) with “nobody knows if it is true, so it is not a proposition”. Being unknown is not the same as being truth-valueless: a proposition only needs a definite truth value, not a known one.",
+    "faster": "Ask two questions: is it declarative, and does it contain a free variable? If yes-then-no, it is a proposition.",
+    "takeaway": "“Open sentence ≠ proposition” and “unknown ≠ not a proposition” are the two traps in this standard GATE opener."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "propositions-and-connectives",
+   "subtopic_label": "Propositions & connectives",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q02",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Truth tables",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many rows does a complete truth table for the compound proposition <span class=\"mm\">(p ∧ q) → (r ∨ ¬s)</span> contain?",
+   "options": [
+    "8",
+    "16",
+    "24",
+    "32"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A truth table for a formula with n distinct propositional variables has 2ⁿ rows, one per assignment of truth values to those variables.",
+    "steps": [
+     "List the distinct variables: p, q, r, s — four of them.",
+     "So the number of rows is 2⁴ = 16.",
+     "The number of connectives (three here) is irrelevant; only the variable count matters."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) 8 would be right for three variables; here there are four.",
+     "(C) and (D) do not correspond to any power of two."
+    ],
+    "misconception": "Counting occurrences instead of distinct variables — ¬s and r∨¬s both use s, but s still contributes one column, not two.",
+    "faster": "Count distinct variable names, then take 2 to that power.",
+    "takeaway": "Rows = 2^(distinct variables); columns = distinct variables + one per subformula."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "truth-tables",
+   "subtopic_label": "Truth tables",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q03",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Logical equivalences",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which proposition is logically equivalent to <span class=\"mm\">¬(p ∨ q)</span>?",
+   "options": [
+    "<span class=\"mm\">¬p ∨ ¬q</span>",
+    "<span class=\"mm\">¬p ∧ ¬q</span>",
+    "<span class=\"mm\">p ∧ q</span>",
+    "<span class=\"mm\">¬p → q</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "De Morgan's laws: ¬(p ∨ q) ≡ ¬p ∧ ¬q and ¬(p ∧ q) ≡ ¬p ∨ ¬q. Negation flips the connective.",
+    "steps": [
+     "Write the truth table of ¬(p ∨ q): true only when p ∨ q is false, i.e. only when p = F and q = F.",
+     "¬p ∧ ¬q is true exactly when both p and q are false — the same single row.",
+     "So the two formulas agree on all four assignments and are equivalent."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) is the negation of p ∧ q, not of p ∨ q.",
+     "(C) is true on exactly one row (p = q = T), the opposite corner.",
+     "(D) ¬p → q ≡ p ∨ q, which is the formula being negated."
+    ],
+    "misconception": "Pushing the ¬ inside while keeping the same connective — the commonest single error in this unit.",
+    "faster": "Negation of a disjunction is a conjunction of negations; of a conjunction, a disjunction of negations.",
+    "takeaway": "De Morgan is applied to the connective that the ¬ meets first; nothing else changes."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "logical-equivalences",
+   "subtopic_label": "Logical equivalences",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q04",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Implications & inference",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "The contrapositive of “If it rains, then the ground is wet” is",
+   "options": [
+    "If the ground is wet, then it rains.",
+    "If it does not rain, then the ground is not wet.",
+    "If the ground is not wet, then it did not rain.",
+    "It rains if and only if the ground is wet."
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "The contrapositive of p → q is ¬q → ¬p, and it is logically equivalent to the original implication.",
+    "steps": [
+     "p: it rains. q: the ground is wet.",
+     "Negate the conclusion: ¬q = “the ground is not wet”.",
+     "Negate the hypothesis: ¬p = “it did not rain”.",
+     "Contrapositive: if the ground is not wet, then it did not rain."
+    ],
+    "final": "Option (C)",
+    "why_wrong": [
+     "(A) is the converse (q → p).",
+     "(B) is the inverse (¬p → ¬q).",
+     "(D) is a biconditional, strictly stronger than the original."
+    ],
+    "misconception": "Swapping the two clauses without negating them (the converse), or negating without swapping (the inverse). Only swapping <em>and</em> negating preserves the statement.",
+    "faster": "Swap the two halves and put a “not” on both — done.",
+    "takeaway": "Contrapositive ≡ original; converse and inverse are equivalent to each other but not to the original."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "implications-and-inference",
+   "subtopic_label": "Implications & inference",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q05",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "CNF / DNF",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following formulas is in <strong>conjunctive normal form</strong> (CNF)?",
+   "options": [
+    "<span class=\"mm\">(p ∧ q) ∨ r</span>",
+    "<span class=\"mm\">p ∧ (q ∨ ¬r)</span>",
+    "<span class=\"mm\">¬(p ∨ q)</span>",
+    "<span class=\"mm\">p → q</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "CNF is a conjunction of clauses, where each clause is a disjunction of literals (a variable or its negation).",
+    "steps": [
+     "(B) reads as p ∧ (q ∨ ¬r): the outer connective is ∧, and each of its two conjuncts is a clause (p is a one-literal clause). So it is CNF.",
+     "(A) has ∨ at the top level — it is a disjunction, not a conjunction of clauses.",
+     "(C) has ¬ applied to a disjunction, so a clause is negated as a whole; that is not CNF until De Morgan is applied.",
+     "(D) contains →, which is not a CNF connective at all."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) is in DNF, not CNF.",
+     "(C) becomes ¬p ∧ ¬q only after applying De Morgan; as written it is not CNF.",
+     "(D) is an implication, not a normal form."
+    ],
+    "misconception": "Confusing “is equivalent to some CNF” with “is written in CNF”. Every formula has a CNF, but the question asks about the written shape.",
+    "faster": "Look at the outermost connective: ∧ with clause-shaped operands means CNF; ∨ with term-shaped operands means DNF.",
+    "takeaway": "CNF = AND of ORs; DNF = OR of ANDs. Read the outermost connective first."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "cnf-dnf",
+   "subtopic_label": "CNF / DNF",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q06",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Validity & satisfiability",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "The proposition <span class=\"mm\">p ∧ ¬p</span> is",
+   "options": [
+    "a tautology.",
+    "a contradiction (unsatisfiable).",
+    "a contingency.",
+    "a biconditional that is always true."
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A formula is a tautology if true on every assignment, a contradiction if true on none, and a contingency if true on at least one but not all.",
+    "steps": [
+     "Try p = T: p ∧ ¬p = T ∧ F = F.",
+     "Try p = F: p ∧ ¬p = F ∧ T = F.",
+     "False on both assignments, so it is unsatisfiable — a contradiction."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) p ∨ ¬p is the tautology; the conjunction is its opposite.",
+     "(C) a contingency must be true somewhere, which this is not.",
+     "(D) no biconditional is involved."
+    ],
+    "misconception": "Reading p ∧ ¬p as “p and not p can both be considered”, or assuming any formula built from one variable must be satisfiable.",
+    "faster": "A formula containing a literal and its negation as direct conjuncts is immediately unsatisfiable.",
+    "takeaway": "Validity = true on all rows; satisfiability = true on some row. p ∨ ¬p and p ∧ ¬p are the two extreme cases."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "validity-and-satisfiability",
+   "subtopic_label": "Validity & satisfiability",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q07",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Truth tables",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For how many of the eight truth assignments to <span class=\"mm\">(p, q, r)</span> is the proposition <span class=\"mm\">(p ∨ q) → r</span> <strong>false</strong>?",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "An implication is false in exactly one situation: antecedent true and consequent false.",
+    "steps": [
+     "(p ∨ q) → r is false iff (p ∨ q) is true and r is false.",
+     "(p ∨ q) is true for three of the four assignments to (p, q): (T,T), (T,F), (F,T).",
+     "Fix r = F for each of those three: (T,T,F), (T,F,T), (F,T,F) — three falsifying assignments.",
+     "Equivalently, the formula is true on 8 − 3 = 5 of the eight rows."
+    ],
+    "final": "Option (C)",
+    "why_wrong": [
+     "(A) 1 would be right only if the antecedent were a single variable.",
+     "(B) and (D) come from counting rows of (p, q) only, or from forgetting that r is free."
+    ],
+    "misconception": "Counting the rows where r is false (four) instead of intersecting with the rows where the antecedent holds (three).",
+    "faster": "False rows = (rows making the antecedent true) × (rows making the consequent false) = 3 × 1 = 3.",
+    "takeaway": "For a count of falsifying rows, count models of the antecedent and multiply by models of ¬consequent, then subtract any overlap."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "truth-tables",
+   "subtopic_label": "Truth tables",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q08",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Logical equivalences",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following is <strong>NOT</strong> logically equivalent to <span class=\"mm\">p → q</span>?",
+   "options": [
+    "<span class=\"mm\">¬q → ¬p</span>",
+    "<span class=\"mm\">¬p ∨ q</span>",
+    "<span class=\"mm\">¬(p ∧ ¬q)</span>",
+    "<span class=\"mm\">q → p</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "p → q ≡ ¬p ∨ q ≡ ¬q → ¬p ≡ ¬(p ∧ ¬q). The converse q → p is not among the equivalents.",
+    "steps": [
+     "(A) is the contrapositive — equivalent.",
+     "(B) is material implication — equivalent.",
+     "(C) is the negation of “p true and q false”, the only falsifying pattern — equivalent.",
+     "(D) reverses the arrow. With p = F, q = T: p → q is true but q → p is false, so the two differ."
+    ],
+    "final": "Option (D)",
+    "why_wrong": [
+     "(A), (B) and (C) are the three standard rewrites of an implication and are all equivalent to it."
+    ],
+    "misconception": "Believing an implication and its converse say the same thing; “if it rains the ground is wet” does not license “if the ground is wet it rained”.",
+    "faster": "Test the single row p = F, q = T: any candidate that is false there is not equivalent to p → q.",
+    "takeaway": "Memorise the three equivalent rewrites; the converse and the inverse are never among them."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "logical-equivalences",
+   "subtopic_label": "Logical equivalences",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q09",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Implications & inference",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following argument forms is <strong>invalid</strong>?",
+   "options": [
+    "From <span class=\"mm\">p → q</span> and <span class=\"mm\">p</span>, infer <span class=\"mm\">q</span>.",
+    "From <span class=\"mm\">p → q</span> and <span class=\"mm\">¬q</span>, infer <span class=\"mm\">¬p</span>.",
+    "From <span class=\"mm\">p ∨ q</span> and <span class=\"mm\">¬p</span>, infer <span class=\"mm\">q</span>.",
+    "From <span class=\"mm\">p → q</span> and <span class=\"mm\">q</span>, infer <span class=\"mm\">p</span>."
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "Valid propositional argument forms include modus ponens, modus tollens, disjunctive syllogism and hypothetical syllogism. Affirming the consequent is a fallacy.",
+    "steps": [
+     "(A) is modus ponens — valid.",
+     "(B) is modus tollens — valid.",
+     "(C) is disjunctive syllogism — valid.",
+     "(D) is affirming the consequent: take p = F, q = T. Both premises (p → q) and q are true, but the conclusion p is false, so the form is invalid."
+    ],
+    "final": "Option (D)",
+    "why_wrong": [
+     "(A), (B) and (C) are all standard valid rules of inference."
+    ],
+    "misconception": "Treating “q is true” as evidence for p. The implication only runs from p to q; a true conclusion can come from many causes.",
+    "faster": "For any candidate rule, look for the one assignment that makes all premises true and the conclusion false.",
+    "takeaway": "Denying the antecedent and affirming the consequent are the two named fallacies; both are distractors in GATE inference questions."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "implications-and-inference",
+   "subtopic_label": "Implications & inference",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q10",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "CNF / DNF",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "The disjunctive normal form (DNF) of <span class=\"mm\">p ⊕ q</span> (exclusive or) is",
+   "options": [
+    "<span class=\"mm\">(p ∨ q) ∧ (¬p ∨ ¬q)</span>",
+    "<span class=\"mm\">(p ∧ ¬q) ∨ (¬p ∧ q)</span>",
+    "<span class=\"mm\">(p ∧ q) ∨ (¬p ∧ ¬q)</span>",
+    "<span class=\"mm\">(p ∨ ¬q) ∧ (¬p ∨ q)</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "The full DNF is the OR of one minterm per row where the formula is true. p ⊕ q is true exactly on the rows where p and q differ.",
+    "steps": [
+     "Rows: (T,F) gives the minterm p ∧ ¬q; (F,T) gives ¬p ∧ q.",
+     "(T,T) and (F,F) make p ⊕ q false, so those minterms are excluded.",
+     "Therefore p ⊕ q ≡ (p ∧ ¬q) ∨ (¬p ∧ q)."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) is the CNF of p ⊕ q (a conjunction of clauses), not the DNF.",
+     "(C) is the DNF of p ↔ q — the rows where the two agree.",
+     "(D) is the CNF of p ↔ q."
+    ],
+    "misconception": "Mixing up ⊕ with ↔: XOR is true when the inputs differ, equivalence when they agree. The two have complementary minterm sets.",
+    "faster": "Read the name: DNF = OR of the true rows; CNF = AND of the false rows. XOR has two true rows and two false rows, so both forms have two terms.",
+    "takeaway": "Every Boolean function has both a DNF and a CNF; the DNF lists the 1-rows, the CNF the 0-rows."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "cnf-dnf",
+   "subtopic_label": "CNF / DNF",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q11",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Propositions & connectives",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following sets of connectives is <strong>functionally complete</strong> — that is, able to express every Boolean function?",
+   "options": [
+    "<span class=\"mm\">{∧, ∨}</span>",
+    "<span class=\"mm\">{¬, →}</span>",
+    "<span class=\"mm\">{∨, →}</span>",
+    "<span class=\"mm\">{¬, ↔}</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A set of connectives is functionally complete if every truth function can be written using only those connectives. {¬, ∧}, {¬, ∨}, {¬, →}, {↑} and {↓} are complete.",
+    "steps": [
+     "(B) {¬, →}: ¬ is available directly, and p ∨ q ≡ ¬p → q, so ∨ is definable; with {¬, ∨} we already have a complete set. Hence {¬, →} is complete.",
+     "(A) {∧, ∨}: both are monotone — replacing a false input by true never makes the output false — so no formula built from them alone can express ¬p.",
+     "(C) {∨, →}: exhaustively, only 6 of the 16 binary functions are expressible; for instance no formula in one variable built from ∨ and → can produce ¬p or the constant F.",
+     "(D) {¬, ↔}: ↔ and ¬ preserve the property “f(x,x) = f(y,y) for all x, y”, so only 8 of the 16 functions are reachable; ∧ is not one of them."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) cannot express negation (monotonicity).",
+     "(C) reaches only 6 of the 16 binary truth functions.",
+     "(D) reaches only 8 of the 16."
+    ],
+    "misconception": "Assuming any “reasonably rich” pair works. Completeness is a strong condition; {∧, ∨} fails because negation is unavailable, which is easy to forget.",
+    "faster": "If the set contains ¬ plus anything that can build ∨ (or ∧), it is complete. Without ¬ you need a single connective such as ↑ or ↓.",
+    "takeaway": "NAND and NOR are each complete on their own; {∧, ∨} and {¬, ↔} are the classic incomplete traps."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "propositions-and-connectives",
+   "subtopic_label": "Propositions & connectives",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q12",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Logical equivalences",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following pairs of formulas is <strong>NOT</strong> logically equivalent?",
+   "options": [
+    "<span class=\"mm\">p → (q → r)</span> and <span class=\"mm\">(p ∧ q) → r</span>",
+    "<span class=\"mm\">(p → q) → r</span> and <span class=\"mm\">p → (q → r)</span>",
+    "<span class=\"mm\">¬(p ↔ q)</span> and <span class=\"mm\">p ⊕ q</span>",
+    "<span class=\"mm\">p → q</span> and <span class=\"mm\">¬p ∨ q</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "Implication is right-associative and curries: p → (q → r) ≡ (p ∧ q) → r. Grouping the other way, (p → q) → r, is a different function.",
+    "steps": [
+     "(A) p → (q → r) ≡ ¬p ∨ ¬q ∨ r ≡ ¬(p ∧ q) ∨ r ≡ (p ∧ q) → r. Equivalent.",
+     "(C) ¬(p ↔ q) is true exactly when p and q differ, which is the definition of p ⊕ q. Equivalent.",
+     "(D) is material implication. Equivalent.",
+     "(B) Test p = F, q = F, r = F: (p → q) = T, so (p → q) → r = T → F = F; but p → (q → r) = F → T = T. Different truth values, so not equivalent."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A), (C) and (D) are genuine equivalences, each provable by the rewrites ¬x ∨ y and ¬(p ↔ q) ≡ p ⊕ q."
+    ],
+    "misconception": "Treating → as associative. It is not: only the right-nested form curries into a conjunction of hypotheses.",
+    "faster": "Push all implications into ¬/∨ form and compare the resulting formulas as Boolean expressions.",
+    "takeaway": "(p ∧ q) → r ≡ p → (q → r) ≡ ¬p ∨ ¬q ∨ r. The left-nested (p → q) → r is not in this family."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "logical-equivalences",
+   "subtopic_label": "Logical equivalences",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q13",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Truth tables",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "PYQ variation",
+   "source": "GATE_PYQ_VARIATION",
+   "question": "Which one of the following formulas is TRUE exactly when an <strong>odd</strong> number of <span class=\"mm\">p, q, r</span> are TRUE?",
+   "options": [
+    "<span class=\"mm\">(p ⊕ q) ⊕ r</span>",
+    "<span class=\"mm\">(p ⊕ q) ∧ r</span>",
+    "<span class=\"mm\">(p ∨ q ∨ r) ∧ ¬(p ∧ q ∧ r)</span>",
+    "<span class=\"mm\">p ⊕ q</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "XOR is addition modulo 2. Iterating it over three variables gives the parity function: true exactly when the number of TRUE inputs is odd.",
+    "steps": [
+     "Check the four odd rows. One TRUE: (T,F,F) → T⊕F = T, T⊕F = T. Symmetric for the other two single-TRUE rows.",
+     "Three TRUE: (T,T,T) → T⊕T = F, F⊕T = T. True, as parity requires.",
+     "Check the even rows. Two TRUE: (T,T,F) → F⊕F = F. Zero TRUE: (F,F,F) → F⊕F = F. Correct.",
+     "(B) is true only on rows with exactly two TRUE values and r = T, i.e. only (T,T,T) — wrong. (C) is true for one or two TRUE values, so it wrongly accepts the two-TRUE rows. (D) ignores r entirely."
+    ],
+    "final": "Option (A)",
+    "why_wrong": [
+     "(B) collapses to (p ⊕ q) ∧ r, true on a single row.",
+     "(C) is the “at least one but not all” formula, which is not parity.",
+     "(D) is independent of r, so it cannot distinguish rows that differ only in r."
+    ],
+    "misconception": "Assuming “odd number of TRUE” means “exactly one TRUE”. Parity also includes three TRUE, which is where (C) and (B) fail.",
+    "faster": "Parity over n variables is the n-fold XOR. Write p ⊕ q ⊕ r and verify the two extreme rows (all false, all true).",
+    "takeaway": "This is a variation on the GATE CSE 2014 Set 1 Q53 pattern (formula true exactly when a given number of p, q, r are TRUE); the original asked for “exactly two”, this asks for odd parity. It is practice material, not the official question."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "truth-tables",
+   "subtopic_label": "Truth tables",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q14",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Validity & satisfiability",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Which one of the following formulas is <strong>satisfiable but not valid</strong>?",
+   "options": [
+    "<span class=\"mm\">p ∨ ¬p</span>",
+    "<span class=\"mm\">p ∧ ¬p</span>",
+    "<span class=\"mm\">(p → q) ∧ (q → r) ∧ ¬(p → r)</span>",
+    "<span class=\"mm\">(p ∨ q) ∧ ¬(p ∧ q)</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "Valid = true on every assignment. Satisfiable = true on at least one. “Satisfiable but not valid” means true somewhere and false somewhere.",
+    "steps": [
+     "(A) p ∨ ¬p is true on both assignments — valid, so it fails the “not valid” half.",
+     "(B) p ∧ ¬p is false everywhere — unsatisfiable, so it fails the “satisfiable” half.",
+     "(C) Suppose p → q and q → r hold but p → r fails. Failing p → r forces p = T, r = F. Then p → q forces q = T, and q → r forces r = T — contradiction. So (C) is unsatisfiable.",
+     "(D) p = T, q = F gives (T ∨ F) ∧ ¬(T ∧ F) = T ∧ T = T, so it is satisfiable; p = q = T gives T ∧ ¬T = F, so it is not valid."
+    ],
+    "final": "Option (D)",
+    "why_wrong": [
+     "(A) is valid.",
+     "(B) is unsatisfiable.",
+     "(C) is unsatisfiable, because → is transitive."
+    ],
+    "misconception": "Trying to break transitivity with (C): (p → q) ∧ (q → r) ∧ ¬(p → r) looks plausible but has no model. Implication is transitive, so that conjunction is a contradiction.",
+    "faster": "For “satisfiable but not valid”, hunt one model and one counter-model. Only (D) admits both; (A) admits no counter-model and (B), (C) admit no model.",
+    "takeaway": "¬(p → r) = p ∧ ¬r. Combining it with p → q and q → r is the standard way to build an unsatisfiable formula."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "validity-and-satisfiability",
+   "subtopic_label": "Validity & satisfiability",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q15",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Implications & inference",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Consider the three premises: (i) <span class=\"mm\">p → (q ∨ r)</span>, (ii) <span class=\"mm\">¬q</span>, (iii) <span class=\"mm\">¬r</span>. Which one of the following conclusions follows logically from them?",
+   "options": [
+    "<span class=\"mm\">p</span>",
+    "<span class=\"mm\">¬p</span>",
+    "<span class=\"mm\">q ∧ r</span>",
+    "<span class=\"mm\">p ∨ q</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A conclusion follows logically iff every assignment satisfying all the premises also satisfies the conclusion.",
+    "steps": [
+     "From (ii) and (iii), q = F and r = F, so q ∨ r = F.",
+     "Premise (i) becomes p → F, which is true only when p = F.",
+     "So the only model of the three premises is p = F, q = F, r = F.",
+     "In that model ¬p is true and p, q ∧ r, p ∨ q are all false. Hence only ¬p follows."
+    ],
+    "final": "Option (B)",
+    "why_wrong": [
+     "(A) p is false in the only model.",
+     "(C) q ∧ r is false because both q and r are false.",
+     "(D) p ∨ q is false in the model as well."
+    ],
+    "misconception": "Applying modus tollens to the wrong part: from p → (q ∨ r) and ¬q alone you cannot conclude ¬p, because r might still be true. You need ¬r as well, so that the consequent fails as a whole.",
+    "faster": "Substitute the units first: two negated literals turn the disjunction into F, and p → F gives ¬p immediately.",
+    "takeaway": "To use modus tollens on a disjunctive consequent, you must refute every disjunct — refuting one is not enough."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "implications-and-inference",
+   "subtopic_label": "Implications & inference",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-PL1-Q16",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Propositions & connectives",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following are propositions? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">2 + 2 = 5</span>",
+    "<span class=\"mm\">x &gt; 3</span>",
+    "New Delhi is the capital of India.",
+    "Please submit your answer sheet before 5 p.m."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "solution": {
+    "concept": "A proposition is a declarative sentence with exactly one truth value. It may be false — falsity does not disqualify it.",
+    "steps": [
+     "(A) is declarative and false; false propositions are still propositions.",
+     "(B) has a free variable, so its truth value depends on x; it is a predicate, not a proposition.",
+     "(C) is declarative and true.",
+     "(D) is a request; it has no truth value."
+    ],
+    "final": "Options (A) and (C)",
+    "why_wrong": [
+     "(B) is an open sentence.",
+     "(D) is an imperative sentence."
+    ],
+    "misconception": "Excluding (A) because it is false. A proposition needs a definite truth value, not the value “true”.",
+    "faster": "Declarative + no free variable = proposition, regardless of truth value.",
+    "takeaway": "“2 + 2 = 5” is a proposition (a false one); “x > 3” is not."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "propositions-and-connectives",
+   "subtopic_label": "Propositions & connectives",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-PL1-Q17",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Truth tables",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following are tautologies? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">p → (q → p)</span>",
+    "<span class=\"mm\">(p → q) → (q → p)</span>",
+    "<span class=\"mm\">(p ∧ (p → q)) → q</span>",
+    "<span class=\"mm\">(p ∨ q) → p</span>"
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "solution": {
+    "concept": "A tautology is true under every assignment. (A) and (C) are the two standard “absorption” tautologies; (B) and (D) are not.",
+    "steps": [
+     "(A) p → (q → p) ≡ ¬p ∨ ¬q ∨ p ≡ T. Tautology.",
+     "(B) p = F, q = T: (F → T) → (T → F) = T → F = F. Not a tautology.",
+     "(C) p ∧ (p → q) → q is modus ponens as a formula: ≡ ¬(p ∧ (¬p ∨ q)) ∨ q ≡ (¬p ∨ (p ∧ ¬q)) ∨ q ≡ T. Tautology.",
+     "(D) p = F, q = T: (F ∨ T) → F = F. Not a tautology."
+    ],
+    "final": "Options (A) and (C)",
+    "why_wrong": [
+     "(B) fails at p = F, q = T — it is the converse-flavoured formula.",
+     "(D) fails at p = F, q = T."
+    ],
+    "misconception": "Assuming every formula with the shape “implication between implications” is a tautology. Test p = F, q = T, the standard killer row.",
+    "faster": "Convert to ¬/∨ form; a tautology becomes an expression that reduces to T for every assignment.",
+    "takeaway": "Modus ponens and “p implies (q implies p)” are tautologies; anything that reverses an arrow usually is not."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "truth-tables",
+   "subtopic_label": "Truth tables",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-PL1-Q18",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Logical equivalences",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Which of the following pairs are logically equivalent? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">¬(p ∧ q) ≡ ¬p ∧ ¬q</span>",
+    "<span class=\"mm\">p → q ≡ ¬q → ¬p</span>",
+    "<span class=\"mm\">p ↔ q ≡ (p → q) ∧ (q → p)</span>",
+    "<span class=\"mm\">p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)</span>"
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "The equivalences to check are De Morgan (correctly and incorrectly stated), contraposition, the definition of the biconditional, and distributivity of ∨ over ∧.",
+    "steps": [
+     "(A) De Morgan gives ¬(p ∧ q) ≡ ¬p ∨ ¬q. The option states ∧, so it is wrong: with p = F, q = T the left side is T and the right side is F.",
+     "(B) Contraposition — equivalent.",
+     "(C) Definition of ↔ — equivalent.",
+     "(D) Distributivity of ∨ over ∧ — equivalent (check p = T: both sides are T; check p = F: both reduce to q ∧ r)."
+    ],
+    "final": "Options (B), (C) and (D)",
+    "why_wrong": [
+     "(A) flips the connective the wrong way; ¬p ∨ ¬q is the correct De Morgan partner."
+    ],
+    "misconception": "(A) is deliberately the “common wrong De Morgan”. The negation of a conjunction is a disjunction of negations.",
+    "faster": "Two formulas are equivalent iff they have the same truth table — four rows settle any two-variable candidate instantly.",
+    "takeaway": "De Morgan, contraposition, the ↔ definition and distributivity are the four workhorses of this unit."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "logical-equivalences",
+   "subtopic_label": "Logical equivalences",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-PL1-Q19",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "CNF / DNF",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following formulas are in conjunctive normal form (CNF)? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">p ∧ (¬q ∨ r)</span>",
+    "<span class=\"mm\">(p ∨ q) ∧ (¬p ∨ r)</span>",
+    "<span class=\"mm\">¬(p ∧ q)</span>",
+    "<span class=\"mm\">p ∨ (q ∧ r)</span>"
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "solution": {
+    "concept": "CNF is a conjunction of clauses; each clause is a disjunction of literals only.",
+    "steps": [
+     "(A) outer ∧, conjuncts p and (¬q ∨ r) — both clauses. CNF.",
+     "(B) outer ∧, both operands are disjunctions of literals. CNF.",
+     "(C) ¬ is applied to a conjunction, not to a single literal, so the operand of the top-level ¬ is not a clause. Not CNF (it is equivalent to ¬p ∨ ¬q, which is a single clause).",
+     "(D) outer ∨ with a conjunctive right operand — that is DNF shape, not CNF."
+    ],
+    "final": "Options (A) and (B)",
+    "why_wrong": [
+     "(C) becomes CNF only after De Morgan is applied.",
+     "(D) is in DNF."
+    ],
+    "misconception": "Accepting (C) because “it has only two variables”. CNF constrains the shape — negations may only sit on single literals.",
+    "faster": "Scan for a ¬ in front of a bracket: if one is at the top of a clause, the formula is not yet CNF.",
+    "takeaway": "CNF: literals → clauses (∨) → one big ∧. DNF: literals → terms (∧) → one big ∨."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "cnf-dnf",
+   "subtopic_label": "CNF / DNF",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-PL1-Q20",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Validity & satisfiability",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Which of the following formulas are satisfiable? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">(p ∨ q) ∧ (¬p ∨ q) ∧ (p ∨ ¬q) ∧ (¬p ∨ ¬q)</span>",
+    "<span class=\"mm\">(p → q) ∧ (q → r) ∧ (r → p)</span>",
+    "<span class=\"mm\">(p ∨ q ∨ r) ∧ (¬p ∨ ¬q ∨ ¬r)</span>",
+    "<span class=\"mm\">(p ↔ q) ∧ (q ⊕ r)</span>"
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "A formula is satisfiable if at least one assignment makes it true. For a CNF, look for an assignment satisfying every clause simultaneously.",
+    "steps": [
+     "(A) The first three clauses force q = T (from ¬p ∨ q and p ∨ q with p = T) and then the fourth clause ¬p ∨ ¬q fails. Exhaustively: p = T forces q = T from (¬p ∨ q) and then (¬p ∨ ¬q) is false; p = F forces q = T from (p ∨ q) and then (¬p ∨ ¬q) is false again. Unsatisfiable.",
+     "(B) p = q = r = T satisfies all three implications; p = q = r = F does too.",
+     "(C) p = T, q = F, r = F satisfies both clauses.",
+     "(D) p = q = T, r = F: p ↔ q is true and q ⊕ r is true."
+    ],
+    "final": "Options (B), (C) and (D)",
+    "why_wrong": [
+     "(A) is the CNF of p ⊕ q — an unsatisfiable conjunction of all four clauses over two variables."
+    ],
+    "misconception": "Believing any CNF with many clauses is satisfiable, or checking clauses one at a time instead of simultaneously.",
+    "faster": "For a two-variable formula, try the four rows in order; for (A) note it demands q with p and q with ¬p at once.",
+    "takeaway": "(B) shows that a cycle of implications is satisfiable — it forces p, q, r to agree, which is a useful pattern."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "validity-and-satisfiability",
+   "subtopic_label": "Validity & satisfiability",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-PL1-Q21",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Propositions & connectives",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For how many of the four truth assignments to <span class=\"mm\">(p, q)</span> is the implication <span class=\"mm\">p → q</span> TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 3,
+   "solution": {
+    "concept": "p → q is false only when p is true and q is false; the other three rows make it true.",
+    "steps": [
+     "(T,T): T → T = T.",
+     "(T,F): T → F = F — the only false row.",
+     "(F,T): F → T = T.",
+     "(F,F): F → F = T."
+    ],
+    "final": "3",
+    "why_wrong": [],
+    "misconception": "Counting (F,F) as false. A false hypothesis makes the implication vacuously true, which is exactly why 3 and not 2 is the answer.",
+    "faster": "False rows of an implication = 1 for each pair of variables; so true rows = 2ⁿ − 2ⁿ⁻¹ = 2 for n = 2 ... here simply 4 − 1 = 3.",
+    "takeaway": "p → q is true on 3 of the 4 rows and false on exactly one."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "propositions-and-connectives",
+   "subtopic_label": "Propositions & connectives",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-PL1-Q22",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Truth tables",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For how many of the eight truth assignments to <span class=\"mm\">(p, q, r)</span> is the proposition <span class=\"mm\">p → (q ∧ r)</span> TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 5,
+   "solution": {
+    "concept": "Count the falsifying rows and subtract from 8: the implication fails only when p is true and q ∧ r is false.",
+    "steps": [
+     "p = F: the implication is vacuously true for all four assignments of (q, r) — 4 rows.",
+     "p = T: the implication is true only when q ∧ r is true, i.e. only (q, r) = (T, T) — 1 row.",
+     "Total true rows = 4 + 1 = 5; the three false rows are (T,T,F), (T,F,T), (T,F,F)."
+    ],
+    "final": "5",
+    "why_wrong": [],
+    "misconception": "Forgetting the four vacuous rows with p = F and answering 1 or 3.",
+    "faster": "True rows = 2ⁿ⁻¹ (hypothesis false) + (rows with hypothesis true and conclusion true) = 4 + 1.",
+    "takeaway": "Split on the hypothesis first; the false-hypothesis half is always free."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "truth-tables",
+   "subtopic_label": "Truth tables",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-PL1-Q23",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "CNF / DNF",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many minterms appear in the full disjunctive normal form of <span class=\"mm\">p ↔ q</span>?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2,
+   "solution": {
+    "concept": "The full DNF has one minterm per row on which the formula is true.",
+    "steps": [
+     "p ↔ q is true exactly when p and q have the same value.",
+     "Rows: (T,T) contributes the minterm p ∧ q; (F,F) contributes ¬p ∧ ¬q.",
+     "The rows (T,F) and (F,T) make it false and contribute nothing."
+    ],
+    "final": "2",
+    "why_wrong": [],
+    "misconception": "Confusing the number of minterms with the number of variables, or with the number of clauses in the CNF (also 2 here, which hides the error).",
+    "faster": "Count the rows where the formula is true — that is exactly the minterm count.",
+    "takeaway": "Minterms of the DNF = 1-rows; maxterms of the CNF = 0-rows."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "cnf-dnf",
+   "subtopic_label": "CNF / DNF",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-PL1-Q24",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Validity & satisfiability",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For how many of the eight truth assignments to <span class=\"mm\">(p, q, r)</span> is <span class=\"mm\">(p → q) ∧ (q → r)</span> TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 4,
+   "solution": {
+    "concept": "The conjunction is true exactly on the assignments where p, q, r never decrease in truth value, i.e. p ≤ q ≤ r.",
+    "steps": [
+     "List the non-decreasing triples over {F, T}: (F,F,F), (F,F,T), (F,T,T), (T,T,T).",
+     "Check (T,T,F): p → q is true but q → r is false. Excluded.",
+     "Check (F,T,F): p → q true, q → r false. Excluded.",
+     "Check (T,F,T) and (T,F,F): p → q is false. Excluded.",
+     "Remaining valid assignments: the four listed above."
+    ],
+    "final": "4",
+    "why_wrong": [],
+    "misconception": "Assuming the conjunction is true whenever at least one implication is true, which would give 6 or more rows.",
+    "faster": "Both implications true ⇔ p ≤ q ≤ r as a chain of truth values; the number of non-decreasing sequences of length 3 over two values is C(3+2−1, 3) = 4.",
+    "takeaway": "A chain of implications behaves like an ordering constraint on truth values."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "validity-and-satisfiability",
+   "subtopic_label": "Validity & satisfiability",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-PL1-Q25",
+   "unit": 1,
+   "unit_name": "Propositional Logic",
+   "topic": "Propositional Logic",
+   "sub": "Implications & inference",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Consider the premises <span class=\"mm\">p → q</span>, <span class=\"mm\">q → r</span> and <span class=\"mm\">r → s</span>. For how many of the sixteen truth assignments to <span class=\"mm\">(p, q, r, s)</span> are all three premises simultaneously TRUE?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 5,
+   "solution": {
+    "concept": "All three implications hold exactly when the truth values never decrease along p → q → r → s, i.e. p ≤ q ≤ r ≤ s.",
+    "steps": [
+     "The satisfying assignments are the non-decreasing 4-tuples over {F, T}:",
+     "(F,F,F,F), (F,F,F,T), (F,F,T,T), (F,T,T,T), (T,T,T,T).",
+     "Any tuple with a T before an F (such as (T,F,F,T)) falsifies one of the implications, e.g. p → q here.",
+     "Count: 5."
+    ],
+    "final": "5",
+    "why_wrong": [],
+    "misconception": "Multiplying 3 premises by 2 assignments, or assuming 2³ = 8 rows satisfy a chain of three implications.",
+    "faster": "Count non-decreasing sequences of length 4 over 2 values: C(4+2−1, 4) = C(5,4) = 5.",
+    "takeaway": "A chain of implications is a monotonicity constraint; counting its models is a stars-and-bars count."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "propositional-logic",
+   "unit_number": 1,
+   "subtopic": "implications-and-inference",
+   "subtopic_label": "Implications & inference",
+   "question_format": "NAT"
   }
  ]
 }

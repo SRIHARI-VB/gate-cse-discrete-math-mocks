@@ -1,0 +1,9 @@
+:root{
+  --hdr:#286090; --hdr-d:#1f4e73; --hdr-l:#3a7bb0;
+  --ink:#12232e; --muted:#5b6b7a; --line:#d5dde5; --bg:#eef2f6; --card:#fff;
+  --green:#2e8b57; --green-d:#1e8449; --green-bg:#e9f7ef; --green-line:#b7e1c8;
+  --red:#e05a4f; --red-d:#b03a2e; --red-bg:#fdecea; --red-line:#f2b8b1;
+  --violet:#8e6bbf; --violet-d:#6c3483; --violet-bg:#f4ecf7; --violet-line:#dcc6e8;
+  --amber:#8a5a00; --amber-bg:#fff6e0; --amber-line:#f0dca8;
+  --grey:#d6d6d6; --blue:#1a5276; --teal:#0d6a63; --tealbg:#e7f5f3; --tealline:#a9d8d2;
+}
