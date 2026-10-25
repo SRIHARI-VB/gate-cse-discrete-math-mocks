@@ -6,7 +6,7 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-25",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 200,
+  "total_questions": 225,
   "units_with_questions": [
    1,
    2,
@@ -199,6 +199,33 @@
    "unit": 3,
    "unit_number": 3,
    "unit_name": "Set Theory",
+   "file": "discrete-mathematics/set-theory/archive/gate_dm_mock_3_2026-10-25_run1.html",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "subsets-and-power-sets",
+    "cardinality",
+    "set-algebra-de-morgan",
+    "inclusion-exclusion",
+    "partitions-and-cartesian-products"
+   ],
+   "note": "First paper for Unit 3. Unit 2 had reached the 50-question cap, so the rotation advanced (1 + 1) mod 16 = 2 -> Unit 3, Set Theory. Superseded by Set 2 on the same date; the file was moved to archive/ unchanged, so this path now points at the archived copy."
+  },
+  {
+   "date": "2026-10-25",
+   "run": 2,
+   "set": "Set 2",
+   "unit": 3,
+   "unit_name": "Set Theory",
    "file": "discrete-mathematics/set-theory/gate_dm_mock_3_2026-10-25.html",
    "composition": {
     "mcq": 15,
@@ -218,7 +245,7 @@
     "inclusion-exclusion",
     "partitions-and-cartesian-products"
    ],
-   "note": "First paper for Unit 3. Unit 2 had reached the 50-question cap (50 banked), so the rotation advanced (1 + 1) mod 16 -> Unit 3, Set Theory. No question repeats any earlier paper. No GATE_PYQ_VARIATION item: no set-theory PYQ has been verified against an official paper and key yet."
+   "note": "Second set for Unit 3 on this date. Unit 3 held 25 banked questions and had been current for 0 days, so it stayed under the 50-question cap and the rotation re-selected it: 25 + 25 = 50, which closes Unit 3 at the cap. No question from Set 1 is repeated. This set contains no GATE_PYQ_VARIATION item: no set-theory PYQ has been verified against an official paper and key."
   }
  ],
  "verified_pyqs": [
@@ -8793,6 +8820,1075 @@
    "subtopic": "partitions-and-cartesian-products",
    "subtopic_label": "Partitions & Cartesian products",
    "question_format": "numeric"
+  },
+  {
+   "id": "DM-ST2-Q01",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Subsets & power sets",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A = {1, {1}, {1, {1}}}</span>. How many elements does <span class=\"mm\">A</span> have?",
+   "options": [
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">5</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "The elements of a set are the objects listed at its top level. Nesting does not flatten: a set that appears as an element is one element, however many objects it contains.",
+    "steps": [
+     "Read the list inside the outermost braces. It has three entries: the number <span class=\"mm\">1</span>, the set <span class=\"mm\">{1}</span>, and the set <span class=\"mm\">{1, {1}}</span>.",
+     "Nothing is listed twice, so the three entries are three distinct elements.",
+     "Hence <span class=\"mm\">|A| = 3</span>."
+    ],
+    "final": "Option (B) — 3 elements.",
+    "why_wrong": [
+     "(A) 2 is what you get if you flatten <span class=\"mm\">{1, {1}}</span> into its own two members and then drop a duplicate.",
+     "(C) 4 counts <span class=\"mm\">{1, {1}}</span> as two elements instead of one.",
+     "(D) 5 flattens the whole nested structure into <span class=\"mm\">1, 1, 1, 1</span> plus extra objects that are not there."
+    ],
+    "misconception": "Students unpack nested braces and count the innermost objects. The braces of an inner set are part of a single element; only the outermost list decides the cardinality.",
+    "faster": "Count commas at the top level and add one. Here there are two top-level commas, so three elements.",
+    "takeaway": "A set's size counts top-level members, not the members of its members."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "subsets-and-power-sets",
+   "subtopic_label": "Subsets & power sets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q02",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Subsets & power sets",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many subsets of <span class=\"mm\">{1, 2, 3, 4, 5, 6, 7}</span> contain at least one of the elements <span class=\"mm\">1</span> and <span class=\"mm\">2</span>?",
+   "options": [
+    "<span class=\"mm\">64</span>",
+    "<span class=\"mm\">80</span>",
+    "<span class=\"mm\">96</span>",
+    "<span class=\"mm\">112</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Count the complement. “At least one of 1 and 2” is the negation of “neither 1 nor 2”, so subtract the subsets that avoid both from all <span class=\"mm\">2⁷</span> subsets.",
+    "steps": [
+     "The set has 7 elements, so it has <span class=\"mm\">2⁷ = 128</span> subsets in all.",
+     "A subset avoids both 1 and 2 exactly when it is a subset of <span class=\"mm\">{3, 4, 5, 6, 7}</span>, which is a 5-element set; there are <span class=\"mm\">2⁵ = 32</span> such subsets.",
+     "Therefore the number containing at least one of 1 and 2 is <span class=\"mm\">128 − 32 = 96</span>."
+    ],
+    "final": "Option (C) — 96 subsets.",
+    "why_wrong": [
+     "(A) 64 = 2⁶ counts subsets of a 6-element set; one element too few is free.",
+     "(B) 80 is what a sloppy inclusion-exclusion gives: 64 + 64 − 32 double counts.",
+     "(D) 112 = 128 − 16 subtracts <span class=\"mm\">2⁴</span>, i.e. forgets that two elements were excluded, not three."
+    ],
+    "misconception": "The commonest error is adding the two families (containing 1, containing 2) and forgetting to subtract the overlap. Complement counting avoids the overlap entirely.",
+    "faster": "Whenever a question says “at least one”, count the complement. Here one subtraction finishes it.",
+    "takeaway": "“At least one of a fixed set of elements” = all subsets minus subsets of the rest."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "subsets-and-power-sets",
+   "subtopic_label": "Subsets & power sets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q03",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Subsets & power sets",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">A</span> be a set with <span class=\"mm\">|A| = 8</span>. How many subsets of <span class=\"mm\">A</span> have a cardinality that is divisible by 3?",
+   "options": [
+    "<span class=\"mm\">84</span>",
+    "<span class=\"mm\">85</span>",
+    "<span class=\"mm\">86</span>",
+    "<span class=\"mm\">93</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Count by size. The subsets of an 8-element set of size <span class=\"mm\">k</span> number <span class=\"mm\">C(8, k)</span>; only sizes 0, 3 and 6 are divisible by 3 and lie in the range 0…8.",
+    "steps": [
+     "Size 0: <span class=\"mm\">C(8, 0) = 1</span> subset (the empty set).",
+     "Size 3: <span class=\"mm\">C(8, 3) = 56</span>.",
+     "Size 6: <span class=\"mm\">C(8, 6) = C(8, 2) = 28</span>.",
+     "Sizes 9 and above do not exist in an 8-element set, so the total is <span class=\"mm\">1 + 56 + 28 = 85</span>."
+    ],
+    "final": "Option (B) — 85 subsets.",
+    "why_wrong": [
+     "(A) 84 drops the empty set, whose size 0 is divisible by 3.",
+     "(C) 86 adds a size-9 term that cannot occur in an 8-element set.",
+     "(D) 93 adds <span class=\"mm\">C(8, 3) + C(8, 6) + C(8, 0)</span> with an arithmetic slip; 56 + 28 + 1 is 85, not 93."
+    ],
+    "misconception": "Two traps sit side by side here: forgetting that 0 is divisible by 3, and forgetting that sizes above <span class=\"mm\">|A|</span> contribute nothing. Both are easy to miss under time pressure.",
+    "faster": "List the admissible sizes first (0, 3, 6), then look each binomial coefficient up in the 8th row of Pascal's triangle: 1, 8, 28, 56, 70, 56, 28, 8, 1.",
+    "takeaway": "“Cardinality divisible by k” is always a sum of binomial coefficients over the admissible sizes."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "subsets-and-power-sets",
+   "subtopic_label": "Subsets & power sets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q04",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Cardinality",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of the following sets is <strong>uncountable</strong>?",
+   "options": [
+    "<span class=\"mm\">ℚ</span>",
+    "<span class=\"mm\">ℤ × ℤ</span>",
+    "<span class=\"mm\">P(ℕ)</span>",
+    "the set of all algebraic real numbers"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Countable sets are those that can be listed; <span class=\"mm\">ℚ</span>, <span class=\"mm\">ℤ × ℤ</span> and the algebraic numbers all have an enumeration, while the power set of <span class=\"mm\">ℕ</span> cannot be listed by Cantor's theorem.",
+    "steps": [
+     "<span class=\"mm\">ℚ</span> is countable: the fractions can be listed along the diagonals of a grid.",
+     "<span class=\"mm\">ℤ × ℤ</span> is a countable product of countable sets, hence countable.",
+     "The algebraic numbers are the roots of non-zero polynomials with integer coefficients; there are countably many such polynomials, each with finitely many roots, so the algebraic numbers are countable.",
+     "<span class=\"mm\">|P(ℕ)| = 2^ℵ₀ > ℵ₀</span> by Cantor's theorem, so <span class=\"mm\">P(ℕ)</span> is uncountable."
+    ],
+    "final": "Option (C) — <span class=\"mm\">P(ℕ)</span>.",
+    "why_wrong": [
+     "(A) <span class=\"mm\">ℚ</span> is countable, though it is dense in <span class=\"mm\">ℝ</span>; density and countability are independent.",
+     "(B) A finite product of countable sets is countable.",
+     "(D) “Algebraic” sounds restrictive, but the algebraic numbers are countable — it is the transcendental ones that are uncountable."
+    ],
+    "misconception": "Density is confused with uncountability. <span class=\"mm\">ℚ</span> is dense in <span class=\"mm\">ℝ</span> yet countable; between any two reals there are only countably many rationals but uncountably many reals.",
+    "faster": "Remember the two cardinalities the syllabus tests: <span class=\"mm\">ℵ₀</span> for anything listable (integers, rationals, pairs, finite strings, algebraic numbers) and <span class=\"mm\">2^ℵ₀</span> for anything involving all subsets or all real numbers.",
+    "takeaway": "Listable ⇒ countable. “All subsets of ℕ” and “all real numbers” are the standard uncountable sets."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "cardinality",
+   "subtopic_label": "Cardinality",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q05",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Cardinality",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A</span> be an infinite set and let <span class=\"mm\">B ⊆ A</span> be finite. Which one of the following is necessarily TRUE?",
+   "options": [
+    "<span class=\"mm\">|A − B| = |A|</span>",
+    "<span class=\"mm\">|A − B| = |A| − |B|</span>",
+    "<span class=\"mm\">A − B</span> is finite",
+    "<span class=\"mm\">|A − B| < |A|</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Removing finitely many elements from an infinite set never changes its cardinality: <span class=\"mm\">A − B</span> and <span class=\"mm\">A</span> can be put in bijection.",
+    "steps": [
+     "Write <span class=\"mm\">A = (A − B) ∪ B</span>; the two parts are disjoint and <span class=\"mm\">B</span> is finite, say <span class=\"mm\">B = {b₁, …, bₖ}</span>.",
+     "Take a countably infinite subset <span class=\"mm\">C ⊆ A − B</span> (it exists because <span class=\"mm\">A</span> is infinite and only finitely many points were removed).",
+     "List <span class=\"mm\">C = {c₁, c₂, …}</span> and map <span class=\"mm\">cᵢ ↦ c_{i+k}</span>, <span class=\"mm\">bⱼ ↦ cⱼ</span>, fixing everything else. This is a bijection from <span class=\"mm\">A</span> onto <span class=\"mm\">A − B</span>.",
+     "Hence <span class=\"mm\">|A − B| = |A|</span>."
+    ],
+    "final": "Option (A).",
+    "why_wrong": [
+     "(B) <span class=\"mm\">|A| − |B|</span> is not even meaningful when <span class=\"mm\">A</span> is infinite; cardinal arithmetic does not subtract finite numbers from infinite ones like this.",
+     "(C) <span class=\"mm\">A − B</span> is still infinite, since only finitely many elements were removed.",
+     "(D) The cardinality is unchanged, not smaller."
+    ],
+    "misconception": "Treating infinite cardinalities as if they obeyed the arithmetic of natural numbers. For infinite <span class=\"mm\">A</span>, <span class=\"mm\">|A| − 1 = |A|</span>; subtraction is simply not defined the finite way.",
+    "faster": "Ask what a finite deletion can do: nothing to the size of an infinite set. That eliminates (B), (C) and (D) at once.",
+    "takeaway": "Infinite minus finite is the same infinite cardinality."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "cardinality",
+   "subtopic_label": "Cardinality",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q06",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Cardinality",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">S</span> be the set of all <strong>infinite</strong> subsets of <span class=\"mm\">ℕ</span>. The cardinality of <span class=\"mm\">S</span> is",
+   "options": [
+    "<span class=\"mm\">ℵ₀</span>",
+    "<span class=\"mm\">2^ℵ₀</span>",
+    "<span class=\"mm\">2^(2^ℵ₀)</span>",
+    "finite"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "All subsets of <span class=\"mm\">ℕ</span> number <span class=\"mm\">2^ℵ₀</span>; only countably many of them are finite, and removing countably many elements from an uncountable set leaves an uncountable set of the same cardinality.",
+    "steps": [
+     "<span class=\"mm\">|P(ℕ)| = 2^ℵ₀</span>.",
+     "The finite subsets of <span class=\"mm\">ℕ</span> form a countable family: for each <span class=\"mm\">n</span> there are only <span class=\"mm\">C(k, n)</span> subsets of size <span class=\"mm\">n</span>, a countable union of finite sets.",
+     "So <span class=\"mm\">S = P(ℕ) − {finite subsets}</span> has cardinality <span class=\"mm\">2^ℵ₀ − ℵ₀ = 2^ℵ₀</span>."
+    ],
+    "final": "Option (B) — <span class=\"mm\">2^ℵ₀</span>.",
+    "why_wrong": [
+     "(A) <span class=\"mm\">ℵ₀</span> is the size of the finite subsets, not of the infinite ones.",
+     "(C) <span class=\"mm\">2^(2^ℵ₀)</span> is the size of <span class=\"mm\">P(P(ℕ))</span>, one level too high.",
+     "(D) <span class=\"mm\">S</span> contains, for instance, every set <span class=\"mm\">ℕ − {k}</span>, which is already infinitely many distinct infinite subsets."
+    ],
+    "misconception": "“Infinite subsets are hard to describe, so there must be few of them.” The opposite is true: the infinite subsets are almost all of <span class=\"mm\">P(ℕ)</span>, and the finite ones are a countable dust.",
+    "faster": "Removing a countable set from an uncountable set changes nothing. Locate the small part, subtract it, keep the cardinality.",
+    "takeaway": "Countable subsets are a negligible part of <span class=\"mm\">P(ℕ)</span>; the complement keeps the full cardinality <span class=\"mm\">2^ℵ₀</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "cardinality",
+   "subtopic_label": "Cardinality",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q07",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Set algebra & De Morgan",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For any sets <span class=\"mm\">A</span> and <span class=\"mm\">B</span>, the set <span class=\"mm\">A − (A − B)</span> equals",
+   "options": [
+    "<span class=\"mm\">A ∩ B</span>",
+    "<span class=\"mm\">A − B</span>",
+    "<span class=\"mm\">B − A</span>",
+    "<span class=\"mm\">A ∪ B</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Rewrite difference as intersection with a complement and simplify: <span class=\"mm\">A − X = A ∩ X′</span>.",
+    "steps": [
+     "<span class=\"mm\">A − B = A ∩ B′</span>, so <span class=\"mm\">A − (A − B) = A ∩ (A ∩ B′)′</span>.",
+     "By De Morgan, <span class=\"mm\">(A ∩ B′)′ = A′ ∪ B</span>.",
+     "Distribute: <span class=\"mm\">A ∩ (A′ ∪ B) = (A ∩ A′) ∪ (A ∩ B) = ∅ ∪ (A ∩ B) = A ∩ B</span>."
+    ],
+    "final": "Option (A) — <span class=\"mm\">A ∩ B</span>.",
+    "why_wrong": [
+     "(B) <span class=\"mm\">A − B</span> is the inner set, which was removed; it cannot survive.",
+     "(C) <span class=\"mm\">B − A</span> shares no element with <span class=\"mm\">A</span>, so it cannot be the answer.",
+     "(D) <span class=\"mm\">A ∪ B</span> includes elements of <span class=\"mm\">B</span> outside <span class=\"mm\">A</span>, which the double difference never contains."
+    ],
+    "misconception": "“Removing the removal puts everything back” is the natural but wrong intuition. Removing <span class=\"mm\">A − B</span> from <span class=\"mm\">A</span> leaves exactly the part of <span class=\"mm\">A</span> that was in <span class=\"mm\">B</span>.",
+    "faster": "Test with <span class=\"mm\">A = {1, 2}</span>, <span class=\"mm\">B = {2, 3}</span>: <span class=\"mm\">A − B = {1}</span> and <span class=\"mm\">A − {1} = {2} = A ∩ B</span>.",
+    "takeaway": "Double difference is not the identity map; <span class=\"mm\">A − (A − B) = A ∩ B</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "set-algebra-de-morgan",
+   "subtopic_label": "Set algebra & De Morgan",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q08",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Set algebra & De Morgan",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For any sets <span class=\"mm\">A, B, C</span>, the set <span class=\"mm\">(A ∩ B) ∪ (A ∩ B′ ∩ C)</span> equals",
+   "options": [
+    "<span class=\"mm\">A ∩ B ∩ C</span>",
+    "<span class=\"mm\">A ∪ (B ∩ C)</span>",
+    "<span class=\"mm\">A ∩ (B ∪ C)</span>",
+    "<span class=\"mm\">(A ∪ B) ∩ C</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Factor out the common <span class=\"mm\">A</span>, then simplify the bracket with the absorption identity <span class=\"mm\">B ∪ (B′ ∩ C) = B ∪ C</span>.",
+    "steps": [
+     "Factor: <span class=\"mm\">(A ∩ B) ∪ (A ∩ B′ ∩ C) = A ∩ (B ∪ (B′ ∩ C))</span>.",
+     "Distribute the bracket: <span class=\"mm\">B ∪ (B′ ∩ C) = (B ∪ B′) ∩ (B ∪ C) = U ∩ (B ∪ C) = B ∪ C</span>.",
+     "Therefore the set is <span class=\"mm\">A ∩ (B ∪ C)</span>."
+    ],
+    "final": "Option (C) — <span class=\"mm\">A ∩ (B ∪ C)</span>.",
+    "why_wrong": [
+     "(A) <span class=\"mm\">A ∩ B ∩ C</span> is far too small: it drops the whole of <span class=\"mm\">A ∩ B</span>.",
+     "(B) <span class=\"mm\">A ∪ (B ∩ C)</span> adds elements outside <span class=\"mm\">A</span>, which neither term contains.",
+     "(D) <span class=\"mm\">(A ∪ B) ∩ C</span> requires membership in <span class=\"mm\">C</span>, which the first term does not."
+    ],
+    "misconception": "Students reach for <span class=\"mm\">A ∩ B ∩ C</span> because the second term looks like a narrowing of the first. The union of the two terms is what widens the result to all of <span class=\"mm\">A ∩ (B ∪ C)</span>.",
+    "faster": "Take <span class=\"mm\">A = U = {1, 2, 3}</span>, <span class=\"mm\">B = {1}</span>, <span class=\"mm\">C = {2}</span>. The expression gives <span class=\"mm\">{1, 2}</span>, which matches only <span class=\"mm\">A ∩ (B ∪ C)</span>.",
+    "takeaway": "Difference-flavoured terms usually simplify by factoring out the common set and applying <span class=\"mm\">B ∪ (B′ ∩ C) = B ∪ C</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "set-algebra-de-morgan",
+   "subtopic_label": "Set algebra & De Morgan",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q09",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Set algebra & De Morgan",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Starting from two sets <span class=\"mm\">A</span> and <span class=\"mm\">B</span> and applying <span class=\"mm\">∪, ∩</span> and complement (relative to <span class=\"mm\">U = A ∪ B</span>) any number of times, at most how many distinct sets can be produced?",
+   "options": [
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">8</span>",
+    "<span class=\"mm\">16</span>",
+    "<span class=\"mm\">32</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Two sets cut the universe into four disjoint regions; every set built from <span class=\"mm\">A, B</span> by the Boolean operations is a union of some of those regions, so there are at most <span class=\"mm\">2⁴ = 16</span> of them.",
+    "steps": [
+     "The four Venn regions are <span class=\"mm\">A ∩ B</span>, <span class=\"mm\">A ∩ B′</span>, <span class=\"mm\">A′ ∩ B</span>, <span class=\"mm\">A′ ∩ B′</span>; they partition <span class=\"mm\">U</span>.",
+     "Any expression built with <span class=\"mm\">∪, ∩, ′</span> is a union of whole regions — it never splits a region, because the generators are constant on each region.",
+     "So each obtainable set is described by choosing a subset of the four regions: at most <span class=\"mm\">2⁴ = 16</span> sets.",
+     "All 16 really occur (the empty set, the four regions, the four unions of two regions, …), so the bound is attained."
+    ],
+    "final": "Option (C) — 16.",
+    "why_wrong": [
+     "(A) 4 is the number of Venn regions, not the number of sets built from them.",
+     "(B) 8 would be the answer for a single generator with a universe of three regions.",
+     "(D) 32 = 2⁵ counts a fifth region that does not exist for two sets."
+    ],
+    "misconception": "Counting expressions instead of counting the distinct sets they denote. Infinitely many expressions collapse onto 16 sets, which is why a finite bound exists at all.",
+    "faster": "Memorise the formula: <span class=\"mm\">n</span> generators give <span class=\"mm\">2^{2ⁿ}</span> sets in the free Boolean algebra — 4 for one, 16 for two, 256 for three.",
+    "takeaway": "The Boolean algebra on <span class=\"mm\">n</span> generators has <span class=\"mm\">2^{2ⁿ}</span> elements; for <span class=\"mm\">n = 2</span> that is 16."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "set-algebra-de-morgan",
+   "subtopic_label": "Set algebra & De Morgan",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q10",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Inclusion-exclusion",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "In a group of 40 students, 25 play cricket, 20 play football and 10 play both. How many play neither game?",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">5</span>",
+    "<span class=\"mm\">10</span>",
+    "<span class=\"mm\">15</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Two-set inclusion-exclusion gives the size of the union; the answer is the complement of that union inside the group.",
+    "steps": [
+     "<span class=\"mm\">|C ∪ F| = |C| + |F| − |C ∩ F| = 25 + 20 − 10 = 35</span>.",
+     "Students playing neither = <span class=\"mm\">40 − 35 = 5</span>."
+    ],
+    "final": "Option (B) — 5.",
+    "why_wrong": [
+     "(A) 0 would mean the union fills the group, i.e. <span class=\"mm\">|C ∪ F| = 40</span>, which it does not.",
+     "(C) 10 is the size of the overlap, not of the complement.",
+     "(D) 15 = 25 − 10, the number playing cricket only."
+    ],
+    "misconception": "Adding 25 + 20 = 45 and concluding that 5 students were double counted is correct arithmetic but answers a different question. The overlap is given as 10, not 5.",
+    "faster": "Union first, complement second — always in that order for “neither” questions.",
+    "takeaway": "“Neither” = total − union, and the union needs inclusion-exclusion."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "inclusion-exclusion",
+   "subtopic_label": "Inclusion-exclusion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q11",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Inclusion-exclusion",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many integers <span class=\"mm\">n</span> with <span class=\"mm\">1 ≤ n ≤ 200</span> are divisible by exactly one of 3 and 5?",
+   "options": [
+    "<span class=\"mm\">53</span>",
+    "<span class=\"mm\">66</span>",
+    "<span class=\"mm\">80</span>",
+    "<span class=\"mm\">93</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Multiples of 3 form a set, multiples of 5 another; “exactly one” means the symmetric difference, counted as <span class=\"mm\">|A| + |B| − 2|A ∩ B|</span> with <span class=\"mm\">A ∩ B</span> = multiples of 15.",
+    "steps": [
+     "<span class=\"mm\">⌊200/3⌋ = 66</span> multiples of 3.",
+     "<span class=\"mm\">⌊200/5⌋ = 40</span> multiples of 5.",
+     "<span class=\"mm\">⌊200/15⌋ = 13</span> multiples of both.",
+     "Exactly one: <span class=\"mm\">(66 − 13) + (40 − 13) = 53 + 27 = 80</span>."
+    ],
+    "final": "Option (C) — 80.",
+    "why_wrong": [
+     "(A) 53 counts only the multiples of 3 that are not multiples of 5.",
+     "(B) 66 is the total number of multiples of 3, including the shared ones.",
+     "(D) 93 = 66 + 40 − 13 is the union — divisible by 3 <em>or</em> 5, which includes multiples of 15."
+    ],
+    "misconception": "“Exactly one” is routinely read as “at least one”. The union counts multiples of 15 once; symmetric difference excludes them altogether.",
+    "faster": "Exactly one of two = union − intersection = 93 − 13 = 80. Same number, one line less.",
+    "takeaway": "Exactly-one-of-two = <span class=\"mm\">|A ∪ B| − |A ∩ B|</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "inclusion-exclusion",
+   "subtopic_label": "Inclusion-exclusion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q12",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Inclusion-exclusion",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many integers <span class=\"mm\">n</span> with <span class=\"mm\">1 ≤ n ≤ 500</span> are divisible by exactly two of the numbers 2, 3 and 5?",
+   "options": [
+    "<span class=\"mm\">102</span>",
+    "<span class=\"mm\">118</span>",
+    "<span class=\"mm\">134</span>",
+    "<span class=\"mm\">150</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Sum the pairwise intersections, then subtract three times the triple intersection, because an element in all three sets is counted in all three pairwise terms but must not be counted at all.",
+    "steps": [
+     "<span class=\"mm\">|2 ∧ 3| = ⌊500/6⌋ = 83</span>, <span class=\"mm\">|2 ∧ 5| = ⌊500/10⌋ = 50</span>, <span class=\"mm\">|3 ∧ 5| = ⌊500/15⌋ = 33</span>.",
+     "Sum of pairwise intersections: <span class=\"mm\">83 + 50 + 33 = 166</span>.",
+     "<span class=\"mm\">|2 ∧ 3 ∧ 5| = ⌊500/30⌋ = 16</span>; these 16 elements appear in all three pairwise terms and must be removed.",
+     "Exactly two = <span class=\"mm\">166 − 3·16 = 166 − 48 = 118</span>."
+    ],
+    "final": "Option (B) — 118.",
+    "why_wrong": [
+     "(A) 102 subtracts the triple intersection twice instead of three times.",
+     "(C) 134 subtracts the triple intersection only once.",
+     "(D) 150 is close to the sum of pairwise intersections with the triple intersection ignored in a different way; it does not correspond to “exactly two”."
+    ],
+    "misconception": "The coefficient of the triple intersection is 3, not 1 or 2. Each element divisible by 30 lies in all three pairwise intersections, so it must be cancelled three times.",
+    "faster": "Exactly-two = (sum of pairwise intersections) − 3·(triple). For exactly-one it is (sum of singles) − 2·(sum of pairwise) + 3·(triple).",
+    "takeaway": "Learn the coefficients: exactly one uses 1, −2, 3; exactly two uses 0, 1, −3."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "inclusion-exclusion",
+   "subtopic_label": "Inclusion-exclusion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q13",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Partitions & Cartesian products",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A = {1, 2, 3}</span>. How many elements does the set <span class=\"mm\">P(A) × {x, y}</span> have?",
+   "options": [
+    "<span class=\"mm\">6</span>",
+    "<span class=\"mm\">8</span>",
+    "<span class=\"mm\">12</span>",
+    "<span class=\"mm\">16</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "The product rule multiplies cardinalities, and <span class=\"mm\">|P(A)| = 2^{|A|}</span>.",
+    "steps": [
+     "<span class=\"mm\">|A| = 3</span>, so <span class=\"mm\">|P(A)| = 2³ = 8</span>.",
+     "The second factor has 2 elements.",
+     "Therefore <span class=\"mm\">|P(A) × {x, y}| = 8 · 2 = 16</span>."
+    ],
+    "final": "Option (D) — 16.",
+    "why_wrong": [
+     "(A) 6 = 3 · 2 uses <span class=\"mm\">|A|</span> instead of <span class=\"mm\">|P(A)|</span>.",
+     "(B) 8 is <span class=\"mm\">|P(A)|</span> alone, forgetting the second factor.",
+     "(C) 12 = 8 + 4 or 3 · 4: neither the product rule nor a correct sum."
+    ],
+    "misconception": "Reading <span class=\"mm\">P(A)</span> as <span class=\"mm\">A</span>. The power set has <span class=\"mm\">2³ = 8</span> members, not 3.",
+    "faster": "Cartesian product sizes always multiply; get the size of each factor right first.",
+    "takeaway": "A product of sets is counted by the product rule, with <span class=\"mm\">|P(A)| = 2^{|A|}</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "partitions-and-cartesian-products",
+   "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q14",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Partitions & Cartesian products",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many partitions of <span class=\"mm\">{1, 2, 3, 4, 5, 6}</span> have exactly three blocks?",
+   "options": [
+    "<span class=\"mm\">15</span>",
+    "<span class=\"mm\">31</span>",
+    "<span class=\"mm\">45</span>",
+    "<span class=\"mm\">90</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "The number of partitions of an <span class=\"mm\">n</span>-element set into exactly <span class=\"mm\">k</span> blocks is the Stirling number of the second kind <span class=\"mm\">S(n, k)</span>, computed by <span class=\"mm\">S(n,k) = k·S(n−1,k) + S(n−1,k−1)</span>.",
+    "steps": [
+     "Base values: <span class=\"mm\">S(5, 2) = 2⁴ − 1 = 15</span> and <span class=\"mm\">S(5, 3) = 25</span>.",
+     "Recurrence: <span class=\"mm\">S(6, 3) = 3·S(5, 3) + S(5, 2) = 3·25 + 15</span>.",
+     "<span class=\"mm\">= 75 + 15 = 90</span>."
+    ],
+    "final": "Option (D) — 90.",
+    "why_wrong": [
+     "(A) 15 = <span class=\"mm\">S(5, 2)</span>, the two-block count for a five-element set.",
+     "(B) 31 is <span class=\"mm\">S(6, 4) + S(6, 3)</span> partially added — an arithmetic slip, not a valid count.",
+     "(C) 45 is half of 90 and comes from treating the three blocks as distinguishable."
+    ],
+    "misconception": "Counting ordered triples of blocks instead of partitions overcounts by <span class=\"mm\">3! = 6</span> — the blocks of a partition are an unordered collection.",
+    "faster": "Learn the Stirling triangle: row 6 is 1, 31, 90, 65, 15, 1. The third entry is 90.",
+    "takeaway": "Exactly <span class=\"mm\">k</span> blocks = <span class=\"mm\">S(n,k)</span>; total partitions = Bell number <span class=\"mm\">B(n)</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "partitions-and-cartesian-products",
+   "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q15",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Partitions & Cartesian products",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many ordered pairs <span class=\"mm\">(A, B)</span> of subsets of <span class=\"mm\">{1, 2, 3, 4, 5}</span> satisfy <span class=\"mm\">A ∩ B = ∅</span>?",
+   "options": [
+    "<span class=\"mm\">125</span>",
+    "<span class=\"mm\">243</span>",
+    "<span class=\"mm\">252</span>",
+    "<span class=\"mm\">1024</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Independently for each element there are three legal placements — in <span class=\"mm\">A</span> only, in <span class=\"mm\">B</span> only, or in neither — and disjointness forbids the fourth.",
+    "steps": [
+     "Fix an element <span class=\"mm\">x</span> of the 5-element ground set.",
+     "Disjointness allows exactly three placements: <span class=\"mm\">x ∈ A</span>, <span class=\"mm\">x ∈ B</span>, or <span class=\"mm\">x ∉ A ∪ B</span>. The placement <span class=\"mm\">x ∈ A ∩ B</span> is forbidden.",
+     "Choices for different elements are independent, so the count is <span class=\"mm\">3⁵ = 243</span>."
+    ],
+    "final": "Option (B) — 243.",
+    "why_wrong": [
+     "(A) 125 = 5³ mixes the roles of the base and the exponent.",
+     "(C) 252 = <span class=\"mm\">C(10, 5)</span>, which counts something entirely different.",
+     "(D) 1024 = <span class=\"mm\">2^{10} = 4⁵</span> counts all pairs <span class=\"mm\">(A, B)</span> with no disjointness condition."
+    ],
+    "misconception": "Starting from <span class=\"mm\">4⁵ = 1024</span> and trying to subtract the non-disjoint pairs is messy and error-prone; counting the three allowed placements per element is immediate.",
+    "faster": "Two sets with a disjointness constraint = ternary choice per element = <span class=\"mm\">3ⁿ</span>. Drop the constraint and it becomes <span class=\"mm\">4ⁿ</span>.",
+    "takeaway": "Constraints that exclude one combination per element turn a <span class=\"mm\">4ⁿ</span> count into a <span class=\"mm\">3ⁿ</span> count."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "partitions-and-cartesian-products",
+   "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q16",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Subsets & power sets",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For sets <span class=\"mm\">A</span> and <span class=\"mm\">B</span>, which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "If <span class=\"mm\">A ⊆ B</span>, then <span class=\"mm\">P(A) ⊆ P(B)</span>.",
+    "<span class=\"mm\">P(A ∩ B) = P(A) ∩ P(B)</span>.",
+    "<span class=\"mm\">P(A ∪ B) = P(A) ∪ P(B)</span>.",
+    "<span class=\"mm\">|P(A × B)| = |P(A)| · |P(B)|</span> for all finite <span class=\"mm\">A, B</span>."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution": {
+    "concept": "The power set converts <span class=\"mm\">⊆</span> into <span class=\"mm\">∈</span> and preserves intersections, but it does not preserve unions, and its size does not multiply.",
+    "steps": [
+     "(A) If every element of <span class=\"mm\">A</span> lies in <span class=\"mm\">B</span>, every subset of <span class=\"mm\">A</span> is also a subset of <span class=\"mm\">B</span>, so <span class=\"mm\">P(A) ⊆ P(B)</span>. TRUE.",
+     "(B) <span class=\"mm\">X ∈ P(A ∩ B)</span> means <span class=\"mm\">X ⊆ A ∩ B</span>, which holds exactly when <span class=\"mm\">X ⊆ A</span> and <span class=\"mm\">X ⊆ B</span>, i.e. <span class=\"mm\">X ∈ P(A) ∩ P(B)</span>. TRUE.",
+     "(C) Take <span class=\"mm\">A = {1}</span>, <span class=\"mm\">B = {2}</span>. Then <span class=\"mm\">{1, 2} ∈ P(A ∪ B)</span> but <span class=\"mm\">{1, 2} ∉ P(A) ∪ P(B)</span>. FALSE.",
+     "(D) <span class=\"mm\">|P(A × B)| = 2^{|A|·|B|}</span> while <span class=\"mm\">|P(A)| · |P(B)| = 2^{|A|+|B|}</span>. These agree only when <span class=\"mm\">|A|·|B| = |A|+|B|</span>, e.g. <span class=\"mm\">|A| = |B| = 2</span> gives <span class=\"mm\">16 ≠ 8</span>. FALSE."
+    ],
+    "final": "Options (A) and (B) are correct.",
+    "why_wrong": [],
+    "misconception": "“The power set of a union is the union of the power sets” feels symmetric and is repeated in notes; the mixed subset <span class=\"mm\">{1, 2}</span> is the one-line refutation.",
+    "faster": "Test any claimed power-set identity with <span class=\"mm\">A = {1}, B = {2}</span>; it separates union from intersection immediately.",
+    "takeaway": "P preserves <span class=\"mm\">∩</span> and <span class=\"mm\">⊆</span>; it does not preserve <span class=\"mm\">∪</span> and does not turn products into products."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "subsets-and-power-sets",
+   "subtopic_label": "Subsets & power sets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q17",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Cardinality",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following claims about countable and uncountable sets are TRUE? (Select all that apply.)",
+   "options": [
+    "Every infinite subset of <span class=\"mm\">ℕ</span> is countably infinite.",
+    "If <span class=\"mm\">A</span> and <span class=\"mm\">B</span> are countably infinite, then <span class=\"mm\">A × B</span> is countably infinite.",
+    "The union of countably many countable sets is countable.",
+    "The set of all real numbers whose decimal expansion uses only the digits 0 and 1 is countable."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "The countable sets are closed under subsets, finite products and countable unions; the binary-expansion reals are the standard uncountable exception.",
+    "steps": [
+     "(A) An infinite subset of <span class=\"mm\">ℕ</span> can be listed in increasing order, which is an enumeration by <span class=\"mm\">ℕ</span>. TRUE.",
+     "(B) <span class=\"mm\">ℕ × ℕ</span> is countable by the diagonal enumeration, and <span class=\"mm\">A × B</span> is in bijection with it. TRUE.",
+     "(C) This is the standard countable-union theorem; enumerate the <span class=\"mm\">i</span>-th element of the <span class=\"mm\">j</span>-th set along the diagonals of the grid. TRUE.",
+     "(D) These reals correspond to infinite binary sequences, of which there are <span class=\"mm\">2^ℵ₀</span> — uncountable. FALSE."
+    ],
+    "final": "Options (A), (B) and (C) are correct.",
+    "why_wrong": [],
+    "misconception": "(D) is tempting because the restriction to two digits feels like a drastic thinning. It is not: the set of infinite binary sequences is still in bijection with <span class=\"mm\">P(ℕ)</span>.",
+    "faster": "Two-digit expansions = infinite binary strings = subsets of <span class=\"mm\">ℕ</span>, so the size is <span class=\"mm\">2^ℵ₀</span> at once.",
+    "takeaway": "Countable is closed under subset, finite product and countable union — but not under power set."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "cardinality",
+   "subtopic_label": "Cardinality",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q18",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Set algebra & De Morgan",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For arbitrary sets <span class=\"mm\">A, B, C</span>, which of the following identities hold? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">A − (B ∪ C) = (A − B) ∩ (A − C)</span>",
+    "<span class=\"mm\">(A − B) − C = A − (B − C)</span>",
+    "<span class=\"mm\">(A ∪ B)′ = A′ ∩ B′</span>",
+    "<span class=\"mm\">(A − B) ∪ (B − A) = (A ∪ B) − (A ∩ B)</span>"
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution": {
+    "concept": "De Morgan governs complements of unions and intersections; difference is a masked intersection; symmetric difference is the union minus the overlap.",
+    "steps": [
+     "(A) <span class=\"mm\">A ∩ (B ∪ C)′ = A ∩ B′ ∩ C′ = (A ∩ B′) ∩ (A ∩ C′)</span>. TRUE.",
+     "(B) Take <span class=\"mm\">A = {1, 2}</span>, <span class=\"mm\">B = {2}</span>, <span class=\"mm\">C = {2}</span>. Left side is <span class=\"mm\">{1}</span>, right side is <span class=\"mm\">{1, 2}</span>. FALSE.",
+     "(C) De Morgan's law for two sets. TRUE.",
+     "(D) Both sides are exactly the elements in precisely one of <span class=\"mm\">A</span> and <span class=\"mm\">B</span>. TRUE."
+    ],
+    "final": "Options (A), (C) and (D) are correct.",
+    "why_wrong": [],
+    "misconception": "(B) is accepted because difference “looks” associative, as union and intersection are. It is not: the order of subtraction matters, and the right-hand side removes less than the left.",
+    "faster": "For any claimed set identity, test one small case such as <span class=\"mm\">A = {1, 2}, B = {2}, C = {2}</span> before doing algebra.",
+    "takeaway": "Difference is not associative; De Morgan and the symmetric-difference identity are the reliable rewrites."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "set-algebra-de-morgan",
+   "subtopic_label": "Set algebra & De Morgan",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q19",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Inclusion-exclusion",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For finite sets <span class=\"mm\">A, B, C</span>, which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">|A ∪ B| ≥ max(|A|, |B|)</span>",
+    "<span class=\"mm\">|A ∩ B| ≤ min(|A|, |B|)</span>",
+    "<span class=\"mm\">|A − B| = |A| − |B|</span>",
+    "<span class=\"mm\">|A ∪ B ∪ C| ≥ |A| + |B| + |C| − |A ∩ B| − |B ∩ C| − |A ∩ C|</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Monotonicity gives the first two bounds; the third-set inequality follows from the exact three-set formula by dropping the non-negative triple term.",
+    "steps": [
+     "(A) <span class=\"mm\">A ⊆ A ∪ B</span> and <span class=\"mm\">B ⊆ A ∪ B</span>, so the union is at least as large as each part. TRUE.",
+     "(B) <span class=\"mm\">A ∩ B ⊆ A</span> and <span class=\"mm\">A ∩ B ⊆ B</span>. TRUE.",
+     "(C) Take <span class=\"mm\">|A| = 3</span>, <span class=\"mm\">|B| = 5</span> disjoint; <span class=\"mm\">|A − B| = 3</span> but <span class=\"mm\">3 − 5 = −2</span>. FALSE.",
+     "(D) The exact identity has <span class=\"mm\">+ |A ∩ B ∩ C|</span> at the end; dropping a non-negative term can only lower the right side, so the inequality holds. TRUE."
+    ],
+    "final": "Options (A), (B) and (D) are correct.",
+    "why_wrong": [],
+    "misconception": "(C) is believed because “difference” suggests subtraction of sizes. The correct identity is <span class=\"mm\">|A − B| = |A| − |A ∩ B|</span>, and <span class=\"mm\">|A| − |B|</span> can even be negative.",
+    "faster": "Check (C) on disjoint sets, where it is most obviously wrong; that settles it without any algebra.",
+    "takeaway": "Sizes are monotone under <span class=\"mm\">⊆</span>, and the three-set formula becomes an inequality when the last term is dropped."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "inclusion-exclusion",
+   "subtopic_label": "Inclusion-exclusion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q20",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Partitions & Cartesian products",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Which of the following claims about products, partitions and equivalence relations are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">(A × B) ∪ (C × D) = (A ∪ C) × (B ∪ D)</span> for all sets <span class=\"mm\">A, B, C, D</span>.",
+    "For non-empty sets <span class=\"mm\">A</span> and <span class=\"mm\">B</span>, <span class=\"mm\">A × B = B × A</span> if and only if <span class=\"mm\">A = B</span>.",
+    "Every partition of a set <span class=\"mm\">A</span> determines an equivalence relation on <span class=\"mm\">A</span>.",
+    "The number of partitions of a 5-element set is 52."
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "answer_display": "Options (B), (C) and (D)",
+   "solution": {
+    "concept": "Products are not distributive over unions in the way it looks; a partition and an equivalence relation are two views of the same data; the Bell numbers begin 1, 1, 2, 5, 15, 52.",
+    "steps": [
+     "(A) Take <span class=\"mm\">A = {1}, B = {2}, C = {2}, D = {1}</span>. Left side is <span class=\"mm\">{(1,2), (2,1)}</span>, right side is <span class=\"mm\">{1,2} × {1,2}</span>, which is larger. FALSE.",
+     "(B) If <span class=\"mm\">A × B = B × A</span> then the sets of first coordinates agree, so <span class=\"mm\">A = B</span>; the converse is immediate. TRUE.",
+     "(C) Declare <span class=\"mm\">x ~ y</span> exactly when <span class=\"mm\">x</span> and <span class=\"mm\">y</span> lie in the same block; reflexivity, symmetry and transitivity follow at once. TRUE.",
+     "(D) <span class=\"mm\">B(5) = S(5,1) + S(5,2) + S(5,3) + S(5,4) + S(5,5) = 1 + 15 + 25 + 10 + 1 = 52</span>. TRUE."
+    ],
+    "final": "Options (B), (C) and (D) are correct.",
+    "why_wrong": [],
+    "misconception": "(A) looks like distributivity and is often accepted. A union of two products is much smaller than the product of the two unions; the two sides coincide only in degenerate cases.",
+    "faster": "For (A), test single-element sets with the coordinates crossed, as above; one counterexample settles it.",
+    "takeaway": "A partition and an equivalence relation are the same object seen twice; products of unions are not unions of products."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "partitions-and-cartesian-products",
+   "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q21",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Subsets & power sets",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">A = {1, 2, 3, 4, 5}</span>. How many ordered pairs of subsets <span class=\"mm\">(X, Y)</span> satisfy <span class=\"mm\">X ⊆ Y ⊆ A</span>, <span class=\"mm\">|X| = 2</span> and <span class=\"mm\">|Y| = 4</span>?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 30,
+   "answer_display": "30",
+   "solution": {
+    "concept": "Build the pair in two stages: choose the larger set <span class=\"mm\">Y</span> first, then choose <span class=\"mm\">X</span> from inside it. The constraint <span class=\"mm\">X ⊆ Y</span> then holds automatically.",
+    "steps": [
+     "Choose <span class=\"mm\">Y ⊆ A</span> with <span class=\"mm\">|Y| = 4</span>: <span class=\"mm\">C(5, 4) = 5</span> choices.",
+     "For a fixed <span class=\"mm\">Y</span>, choose <span class=\"mm\">X ⊆ Y</span> with <span class=\"mm\">|X| = 2</span>: <span class=\"mm\">C(4, 2) = 6</span> choices.",
+     "The stages are independent, so the total is <span class=\"mm\">5 · 6 = 30</span>."
+    ],
+    "final": "30 ordered pairs.",
+    "why_wrong": [],
+    "misconception": "Trying to count <span class=\"mm\">X</span> first makes the condition <span class=\"mm\">X ⊆ Y</span> awkward. Building the pair from the outside in is what keeps the count simple.",
+    "faster": "A chain of sizes is always counted outermost first: choose the largest set, then each smaller set inside it.",
+    "takeaway": "Order the nesting <span class=\"mm\">X ⊆ Y ⊆ A</span> from the top down and multiply the binomial coefficients."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "subsets-and-power-sets",
+   "subtopic_label": "Subsets & power sets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q22",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Cardinality",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "A finite set <span class=\"mm\">A</span> satisfies <span class=\"mm\">|P(P(A))| = 256</span>. What is <span class=\"mm\">|A|</span>?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution": {
+    "concept": "Iterating the power set raises 2 to the power repeatedly: <span class=\"mm\">|P(P(A))| = 2^{2^{|A|}}</span>.",
+    "steps": [
+     "Let <span class=\"mm\">|A| = n</span>. Then <span class=\"mm\">|P(A)| = 2ⁿ</span> and <span class=\"mm\">|P(P(A))| = 2^{2ⁿ}</span>.",
+     "Set <span class=\"mm\">2^{2ⁿ} = 256 = 2⁸</span>.",
+     "So <span class=\"mm\">2ⁿ = 8</span>, giving <span class=\"mm\">n = 3</span>."
+    ],
+    "final": "3",
+    "why_wrong": [],
+    "misconception": "Halving 256 twice (256 → 128 → 64) instead of taking logarithms twice. The nesting is exponential in both layers, so 256 = 2^8 forces the inner power set to have size 8, not 128.",
+    "faster": "Write 256 as a power of 2, then solve the outer exponent as a power of 2 again: 256 = 2⁸ and 8 = 2³.",
+    "takeaway": "Each power set doubles the exponent: <span class=\"mm\">|P^k(A)| = 2↑↑k</span> applied to <span class=\"mm\">n</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "cardinality",
+   "subtopic_label": "Cardinality",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q23",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Set algebra & De Morgan",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">|A| = 18</span>, <span class=\"mm\">|B| = 14</span> and <span class=\"mm\">|A ∩ B| = 5</span>. How many elements lie in <span class=\"mm\">(A − B) ∪ (B − A)</span>?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 22,
+   "answer_display": "22",
+   "solution": {
+    "concept": "The set <span class=\"mm\">(A − B) ∪ (B − A)</span> is the symmetric difference: the elements in exactly one of the two sets, so count each side separately and add.",
+    "steps": [
+     "<span class=\"mm\">|A − B| = |A| − |A ∩ B| = 18 − 5 = 13</span>.",
+     "<span class=\"mm\">|B − A| = |B| − |A ∩ B| = 14 − 5 = 9</span>.",
+     "The two parts are disjoint, so the union has <span class=\"mm\">13 + 9 = 22</span> elements."
+    ],
+    "final": "22",
+    "why_wrong": [],
+    "misconception": "Computing <span class=\"mm\">|A| + |B| = 32</span> and forgetting to remove the overlap twice. Symmetric difference excludes the shared part entirely.",
+    "faster": "Symmetric difference count = <span class=\"mm\">|A| + |B| − 2|A ∩ B|</span> = 18 + 14 − 10 = 22.",
+    "takeaway": "Exactly-one-of-two counts as <span class=\"mm\">|A| + |B| − 2|A ∩ B|</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "set-algebra-de-morgan",
+   "subtopic_label": "Set algebra & De Morgan",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q24",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Inclusion-exclusion",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "In a survey of 100 people, 60 read newspaper A, 50 read B, 40 read C, 25 read A and B, 20 read B and C, 15 read A and C, and 10 read all three. How many read exactly one newspaper?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 60,
+   "answer_display": "60",
+   "solution": {
+    "concept": "Exactly one = (sum of the three sizes) − 2·(sum of the three pairwise intersections) + 3·(triple intersection). Each person reading <span class=\"mm\">k</span> papers must be counted exactly once.",
+    "steps": [
+     "Sum of singles: <span class=\"mm\">60 + 50 + 40 = 150</span>.",
+     "Sum of pairwise intersections: <span class=\"mm\">25 + 20 + 15 = 60</span>.",
+     "Triple intersection: 10.",
+     "Exactly one = <span class=\"mm\">150 − 2·60 + 3·10 = 150 − 120 + 30 = 60</span>."
+    ],
+    "final": "60",
+    "why_wrong": [],
+    "misconception": "Using <span class=\"mm\">150 − 60 + 10 = 100</span>, which is the union (and here also the whole population). Exactly-one needs the coefficients 1, −2, +3, not 1, −1, +1.",
+    "faster": "Compute the union first (150 − 60 + 10 = 100), then sanity-check your exactly-one figure against it — exactly one must be smaller than the union unless nobody reads two papers.",
+    "takeaway": "Exactly-one coefficients are 1, −2, +3; the union's are 1, −1, +1."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "inclusion-exclusion",
+   "subtopic_label": "Inclusion-exclusion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-ST2-Q25",
+   "unit": 3,
+   "unit_name": "Set Theory",
+   "topic": "Set Theory",
+   "sub": "Partitions & Cartesian products",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many partitions does the set <span class=\"mm\">{1, 2, 3, 4, 5}</span> have?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 52,
+   "answer_display": "52",
+   "solution": {
+    "concept": "The total number of partitions of an <span class=\"mm\">n</span>-element set is the Bell number <span class=\"mm\">B(n)</span>, the sum of the Stirling numbers of the second kind over all block counts.",
+    "steps": [
+     "Split by the number of blocks <span class=\"mm\">k</span>: <span class=\"mm\">S(5,1) = 1</span>, <span class=\"mm\">S(5,2) = 15</span>, <span class=\"mm\">S(5,3) = 25</span>, <span class=\"mm\">S(5,4) = 10</span>, <span class=\"mm\">S(5,5) = 1</span>.",
+     "Add: <span class=\"mm\">1 + 15 + 25 + 10 + 1 = 52</span>."
+    ],
+    "final": "52",
+    "why_wrong": [],
+    "misconception": "Counting only the “interesting” partitions, or reporting <span class=\"mm\">S(5,2) = 15</span>. The Bell number sums every possible number of blocks, including the one-block and five-block partitions.",
+    "faster": "Recall the Bell ladder 1, 1, 2, 5, 15, 52 for <span class=\"mm\">n = 0, 1, 2, 3, 4, 5</span>; the fifth entry is the answer.",
+    "takeaway": "Bell numbers: 1, 1, 2, 5, 15, 52, 203 — worth memorising to <span class=\"mm\">B(6)</span>."
+   },
+   "run_date": "2026-10-25",
+   "unit_slug": "set-theory",
+   "unit_number": 3,
+   "subtopic": "partitions-and-cartesian-products",
+   "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
   }
  ]
 }
