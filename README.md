@@ -7,24 +7,58 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 5 — Functions, Set 1 of 2**, 2026-10-26 → [`discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`](discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html)
+- **Unit 5 — Functions, Set 2 of 2**, 2026-10-26 → [`discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`](discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: types of functions (injective / surjective / bijective) · composition & inverses · counting functions ·
   pigeonhole principle · floor, ceiling & recursion
-- Unit 4 closed at the 50-question cap with its Set 2, so the rotation advanced to Unit 5. This is Unit 5's first paper:
-  25 of 50 questions banked, one set to go.
+- Unit 5 held 25 banked questions and had been current for 0 days, so the rotation re-selected it. This set closes
+  Unit 5 at the 50-question cap; the next run advances to Unit 6, Mathematical Induction & Recursion.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 12 (3 on Unit 16, 2 each on Units 1–4, 1 on Unit 5) |
+| Papers published | 13 (3 on Unit 16, 2 each on Units 1–5) |
 | Units covered | 6 of 16 |
-| Questions in master_bank.json | 300 (75 in Unit 16, 50 each in Units 1–4, 25 in Unit 5) |
+| Questions in master_bank.json | 325 (75 in Unit 16, 50 each in Units 1–5) |
 | Verified official PYQs | 2 |
-| Archived sets (earlier runs) | 6 (2 Unit 16, 1 Unit 1, 1 Unit 2, 1 Unit 3, 1 Unit 4) |
+| Archived sets (earlier runs) | 7 (2 Unit 16, 1 Unit 1, 1 Unit 2, 1 Unit 3, 1 Unit 4, 1 Unit 5) |
 
 ## Rotation log
+
+- **2026-10-26, Unit 5 → Unit 5 (Set 2).** `master_bank.json` showed Unit 5 with 25 banked questions, current since the
+  same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 5 rather than
+  advancing. 25 + 25 = 50 closes Unit 5 at the cap; the next run for this subject advances to
+  (4 + 1) mod 16 = 5 → Unit 6, Mathematical Induction & Recursion.
+- Set 2 repeats no question from Set 1: the two sets share no id, no stem, no option set and no numeric answer. Each of
+  the five subtopics carries exactly five questions (5 / 5 / 5 / 5 / 5), so every subtopic is represented, and the
+  difficulty split is 10 easy / 10 medium / 5 hard as in every paper.
+- Set 2 contains no `GATE_PYQ_VARIATION` item — no functions PYQ has been verified against an official paper and
+  answer key for this unit, so none is claimed — and the About tab says so; every question is `STANDARD_TEXTBOOK` or
+  `ORIGINAL_SYNTHESIS`.
+- Filed only at `discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`. Set 1 was moved into that unit's
+  `archive/` as `..._run1.html` before the new file was written, so the unit folder never held two current papers and
+  nothing was written at the repository root.
+- Every computational answer in this set was checked by brute force before shipping: 5³ = 125 functions and 0 injections
+  from a 5-set to a 3-set; 4² = 16, P(4,2) = 12, 0 surjections and 0 bijections from a 2-set to a 4-set; 540 surjections
+  from a 6-set onto a 3-set (exhaustive enumeration over 3⁶ = 729 maps agrees); 4⁴ − 4! = 232 non-bijections on a 4-set;
+  ⌈40/12⌉ = 4; ⌈100/4⌉ = 25 for the 10 × 10 grid colouring; exactly 3 integers satisfy ⌊n/3⌋ = 12 and exactly 23 satisfy
+  ⌊√n⌋ = 11 for n ≤ 200; ⌊−3.4⌋ + ⌈−3.4⌉ = −7; T(8) = 32 for T(n) = 2T(⌊n/2⌋) + n; (g ∘ f)⁻¹(8) = 3 for
+  f(x) = 2x − 1, g(x) = x + 3; and exactly 2 of the six named test functions are bijections of ℝ onto ℝ.
+- Shell parity checked this run: the `<style>` block and the `<script>` block are byte-identical to the Unit 5 Set 1
+  paper's, the `:root` block still matches `design-tokens.css` exactly, and the paper carries the same literal hex
+  occurrences as the shell it was built from — no new hex value was introduced.
+- The paper was exercised in a jsdom harness before shipping (27 checks, all passing): timer starts at 60:00, the answer
+  key tab stays locked, no option mark or solution renders before submit, the palette reaches `na` / `ans` / `mrk` /
+  `amr` / `cur` correctly, all 25 answered correctly scores 35/35, an MSQ with one of three correct options selected
+  scores zero for that question (33/35), a blank paper scores 0/35, and the key tab unlocks on submit with all 25
+  solutions.
+- The Question Bank tab inside the paper now lists 300 solved questions — Unit 5's Set 1 has been superseded, so its 25
+  join Set 2 there; Unit 5 Set 2's own 25 are the active test and are not repeated in the tab. `index.html` holds all
+  325.
+- No second pass has started; units 6–15 are still untouched.
+- Subject selection: the series is still running Discrete Mathematics, the only subject with a question bank, until its
+  16 units complete a pass. No override was used for this run.
 
 - **2026-10-26, Unit 4 → Unit 5.** `master_bank.json` showed Unit 4 with 50 banked questions — the 50-question cap — so
   the rotation advanced by the modulo rule: (3 + 1) mod 16 = 4 → Unit 5, Functions. Unit 5 now holds 25 questions,
@@ -186,7 +220,7 @@ discrete-mathematics/
 | 2 | Predicate & First-Order Logic | `predicate-logic` | 50 | yes |
 | 3 | Set Theory | `set-theory` | 50 | yes |
 | 4 | Relations | `relations` | 50 | yes |
-| 5 | Functions | `functions` | 25 | yes |
+| 5 | Functions | `functions` | 50 | yes |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
 | 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
 | 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
@@ -227,7 +261,14 @@ review interface.
 - The `index.html` archive prints an answer line from `answer_display` and, for records created before 2026-10-25, a
   second identical line inside `solution_html`. The 50 Unit 2 records and the 25 Unit 1 Set 2 records carry it once; the
   older records still carry it twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
-- `6.1` requires an archived paper to be rebuilt on the current shell. The archived papers are frozen exactly as they
-  shipped; they already use the current shell, so no rebuild was needed. Shell parity between the archived Unit 3 Set 1
-  file and the new Unit 3 Set 2 file was checked this run: identical `<style>` block, identical `<script>` block,
-  identical structural markup.
+- The exam shell binds `btnNext`, `btnPrev`, `btnMark` and `btnClear` with `document.getElementById`, and every
+  question card carries the same four ids, so those handlers attach only to Question 1's buttons. Palette navigation
+  and the submit flow are unaffected, and the visible footer buttons on cards 2–25 are inert. The fix is to scope the
+  lookup to the current card; because every paper must share one byte-identical `<script>`, it belongs to the same
+  one-pass re-issue as the two items above rather than to a single file.
+- `6.1` requires an archived paper to be rebuilt on the current shell. Twelve of the thirteen papers share one shell:
+  this run confirmed the `<style>` block and the `<script>` block of every current and archived paper are byte-identical
+  to each other. The exception is `proof-techniques/archive/gate_dm_mock_16_2026-10-25_run1.html` and `..._run2.html`,
+  which were produced before the shell was fixed and still use the earlier layout (no `.qcard` cards, different style
+  block). Their content is frozen and correct; they need rebuilding on the current shell in the same one-pass re-issue
+  as the items above.
