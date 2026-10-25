@@ -7,23 +7,50 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 3 — Set Theory, Set 2 of 2**, 2026-10-25 → [`discrete-mathematics/set-theory/gate_dm_mock_3_2026-10-25.html`](discrete-mathematics/set-theory/gate_dm_mock_3_2026-10-25.html)
+- **Unit 4 — Relations, Set 1 of 2**, 2026-10-26 → [`discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html`](discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: subsets & power sets · cardinality · set algebra & De Morgan · inclusion-exclusion · partitions & Cartesian products
-- Unit 3 was at 25 banked questions and current for 0 days, so the rotation re-selected it; 25 + 25 = 50 closes Unit 3 at the
-  cap. Set 1 now lives in `discrete-mathematics/set-theory/archive/gate_dm_mock_3_2026-10-25_run1.html`, unchanged.
+- Subtopics: relation properties · equivalence relations & classes · partial orders & Hasse diagrams · lattices in
+  posets · composition & transitive closure · counting relations
+- Unit 3 closed at 50 banked questions, so the rotation advanced: (2 + 1) mod 16 = 3 → Unit 4. This is Unit 4's first
+  paper; nothing was archived for this unit.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 9 (3 on Unit 16, 2 on Unit 1, 2 on Unit 2, 2 on Unit 3) |
-| Units covered | 4 of 16 |
-| Questions in master_bank.json | 225 (75 in Unit 16, 50 in Unit 1, 50 in Unit 2, 50 in Unit 3) |
+| Papers published | 10 (3 on Unit 16, 2 on Unit 1, 2 on Unit 2, 2 on Unit 3, 1 on Unit 4) |
+| Units covered | 5 of 16 |
+| Questions in master_bank.json | 250 (75 in Unit 16, 50 each in Units 1–3, 25 in Unit 4) |
 | Verified official PYQs | 2 |
 | Archived sets (earlier runs) | 5 (2 Unit 16, 1 Unit 1, 1 Unit 2, 1 Unit 3) |
 
 ## Rotation log
+
+- **2026-10-26, Unit 3 → Unit 4.** `master_bank.json` showed Unit 3 at 50 banked questions — the 50-question cap — so
+  the rotation advanced by the modulo rule: (2 + 1) mod 16 = 3 → Unit 4, Relations. Unit 4 now holds 25 questions,
+  Set 1 of 2.
+- The 25 questions are new: no id, stem, option set or numeric answer repeats an earlier paper. All six of Unit 4's
+  subtopics are represented (relation properties 4, equivalence relations 5, partial orders 4, lattices 4, composition
+  4, counting 4), and the difficulty split is 10 easy / 10 medium / 5 hard as in every paper.
+- Every computational answer in this set was checked by brute force before shipping: 8 relations are both symmetric and
+  antisymmetric on three elements; 512 relations and 64 symmetric relations on three elements; 12 antisymmetric
+  relations on two; 4096 reflexive relations on four; 5 equivalence relations on four elements keep 1 and 2 together;
+  the divisibility poset on {1,2,3,4,6,12} has 7 Hasse edges; the largest antichain of {1,…,30} has 15 elements; exactly
+  4 elements of D(72) have a complement; and the transitive closures in Q2, Q13 and Q25 contain 6, 5 and 10 pairs.
+  Option D of Q18 was corrected during verification — "24 covers 8" is *true* in that poset, so the false option is now
+  "24 covers 6" (12 lies between).
+- Filed only at `discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html`. Nothing was written at the repository
+  root, and no unit folder holds two current papers — Unit 4 had no earlier paper to archive.
+- Shell parity checked this run: the `<style>` block and the `<script>` block are byte-identical to the Unit 3 Set 2
+  paper's, and the `:root` block still matches `design-tokens.css` exactly. No new literal hex value was introduced.
+- The paper was exercised in a DOM harness before shipping: timer starts at 60:00, the answer key tab stays locked, no
+  option mark or solution renders before submit, the palette reaches `ans` / `mrk` / `amr` / `cur` correctly, all 25
+  answered correctly scores 35/35, and the key tab unlocks on submit.
+- The Question Bank tab inside the paper now lists 225 solved questions — Unit 3's Set 2 has been superseded, so its 25
+  join Set 1 there; Unit 4's own 25 are the active test and are not repeated in the tab. `index.html` holds all 250.
+- No second pass has started; units 5–15 are still untouched.
+- Subject selection: the series is still running Discrete Mathematics, the only subject with a question bank, until its
+  16 units complete a pass. No override was used for this run.
 
 - **2026-10-25, Unit 3 → Unit 3 (Set 2).** `master_bank.json` showed Unit 3 with 25 banked questions, current since the
   same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 3 instead of advancing.
@@ -99,7 +126,7 @@ discrete-mathematics/
 | 1 | Propositional Logic | `propositional-logic` | 50 | yes |
 | 2 | Predicate & First-Order Logic | `predicate-logic` | 50 | yes |
 | 3 | Set Theory | `set-theory` | 50 | yes |
-| 4 | Relations | `relations` | 0 | — |
+| 4 | Relations | `relations` | 25 | yes |
 | 5 | Functions | `functions` | 0 | — |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
 | 7 | Counting & Combinatorics | `combinatorics` | 0 | — |

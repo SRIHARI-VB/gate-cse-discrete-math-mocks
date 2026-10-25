@@ -4,13 +4,14 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-25",
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-10-26",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 225,
+  "total_questions": 250,
   "units_with_questions": [
    1,
    2,
    3,
+   4,
    16
   ]
  },
@@ -246,6 +247,35 @@
     "partitions-and-cartesian-products"
    ],
    "note": "Second set for Unit 3 on this date. Unit 3 held 25 banked questions and had been current for 0 days, so it stayed under the 50-question cap and the rotation re-selected it: 25 + 25 = 50, which closes Unit 3 at the cap. No question from Set 1 is repeated. This set contains no GATE_PYQ_VARIATION item: no set-theory PYQ has been verified against an official paper and key."
+  },
+  {
+   "date": "2026-10-26",
+   "run": 1,
+   "set": "Set 1",
+   "unit": 4,
+   "unit_name": "Relations",
+   "day_index": 3,
+   "file": "discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "relation-properties",
+    "equivalence-relations-classes",
+    "partial-orders-hasse-diagrams",
+    "lattices-in-posets",
+    "composition-transitive-closure",
+    "counting-relations"
+   ],
+   "note": "First paper for Unit 4. Unit 3 closed at the 50-question cap, so the rotation advanced (2 + 1) mod 16 = 3 -> Unit 4, Relations. No question repeats an earlier paper."
   }
  ],
  "verified_pyqs": [
@@ -9888,6 +9918,1100 @@
    "unit_number": 3,
    "subtopic": "partitions-and-cartesian-products",
    "subtopic_label": "Partitions & Cartesian products",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q01",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Relation properties",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A = {a, b, c}</span> and <span class=\"mm\">R = {(a,a), (b,b), (c,c), (a,b), (b,a)}</span>. Which statement about <span class=\"mm\">R</span> is TRUE?",
+   "options": [
+    "R is reflexive and symmetric but not transitive.",
+    "R is an equivalence relation with exactly two equivalence classes.",
+    "R is antisymmetric.",
+    "R is a partial order on A."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "An equivalence relation is exactly a relation that is reflexive, symmetric and transitive; its classes are the blocks it cuts the set into.",
+    "steps": [
+     "Reflexive: <span class=\"mm\">(a,a), (b,b), (c,c)</span> are all present.",
+     "Symmetric: the only off-diagonal pairs are <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span>, which come as a pair.",
+     "Transitive: the only compositions to check are <span class=\"mm\">(a,b) ∘ (b,a) = (a,a)</span> and <span class=\"mm\">(b,a) ∘ (a,b) = (b,b)</span>, and both are in <span class=\"mm\">R</span>.",
+     "So <span class=\"mm\">R</span> is an equivalence relation. Its classes are <span class=\"mm\">{a, b}</span> and <span class=\"mm\">{c}</span> — exactly two."
+    ],
+    "final": "Option (B) — two equivalence classes.",
+    "why_wrong": [
+     "(A) fails: the relation is transitive, as the two compositions above show.",
+     "(C) fails: <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span> are both in <span class=\"mm\">R</span> with <span class=\"mm\">a ≠ b</span>, which is precisely what antisymmetry forbids.",
+     "(D) fails for the same reason: a partial order must be antisymmetric, and <span class=\"mm\">R</span> is not."
+    ],
+    "misconception": "Students check transitivity only on pairs of the form <span class=\"mm\">(x,y), (y,z)</span> that are both off-diagonal, and miss the compositions that involve a reversed pair.",
+    "faster": "A relation that is symmetric and antisymmetric can only contain diagonal pairs. Since this one has an off-diagonal pair, it cannot be antisymmetric — which kills (C) and (D) at once.",
+    "takeaway": "Symmetric and antisymmetric are not opposites; a relation can be both, but only if it contains no off-diagonal pair at all."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "relation-properties",
+   "subtopic_label": "Relation properties",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q02",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Relation properties",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">A = {1, 2, 3, 4}</span> and <span class=\"mm\">R = {(1,2), (2,3), (3,4)}</span>. Let <span class=\"mm\">R⁺</span> be the transitive closure of <span class=\"mm\">R</span>. How many ordered pairs does the symmetric closure of <span class=\"mm\">R⁺</span> contain?",
+   "options": [
+    "6",
+    "10",
+    "12",
+    "16"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "The transitive closure adds every pair <span class=\"mm\">(a,b)</span> for which a path of length ≥ 1 runs from <span class=\"mm\">a</span> to <span class=\"mm\">b</span>; the symmetric closure then adds the reverse of every pair.",
+    "steps": [
+     "Paths of length 1: <span class=\"mm\">(1,2), (2,3), (3,4)</span>.",
+     "Paths of length 2: <span class=\"mm\">(1,3), (2,4)</span>.",
+     "Paths of length 3: <span class=\"mm\">(1,4)</span>.",
+     "So <span class=\"mm\">R⁺</span> has <span class=\"mm\">3 + 2 + 1 = 6</span> pairs.",
+     "No pair in <span class=\"mm\">R⁺</span> has the form <span class=\"mm\">(x,x)</span>, so the symmetric closure adds exactly one new pair per pair: <span class=\"mm\">6 + 6 = 12</span>."
+    ],
+    "final": "Option (C) — 12 ordered pairs.",
+    "why_wrong": [
+     "(A) 6 is <span class=\"mm\">|R⁺|</span> itself; the reverses are forgotten.",
+     "(B) 10 is <span class=\"mm\">|R⁺|</span> plus four reverses, which happens if the length-3 path <span class=\"mm\">(1,4)</span> is missed.",
+     "(D) 16 is <span class=\"mm\">|A × A|</span>, which would need the closure to be the universal relation."
+    ],
+    "misconception": "Two closures are routinely mixed up: the reflexive closure adds the diagonal pairs <span class=\"mm\">(x,x)</span> (10 pairs here), while the symmetric closure adds the reverses (12 pairs here).",
+    "faster": "A chain of <span class=\"mm\">n</span> links gives <span class=\"mm\">n(n+1)/2</span> ordered pairs in its transitive closure; here <span class=\"mm\">4·3/2 = 6</span>, then double it.",
+    "takeaway": "Count the closure level by level (path length 1, 2, 3, …) before applying the second closure."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "relation-properties",
+   "subtopic_label": "Relation properties",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q03",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Relation properties",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many relations on a three-element set are both symmetric and antisymmetric?",
+   "options": [
+    "8",
+    "16",
+    "27",
+    "64"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Symmetry forces <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span> to travel together; antisymmetry forbids them from both being present when <span class=\"mm\">a ≠ b</span>. Together they force every off-diagonal pair out.",
+    "steps": [
+     "Let <span class=\"mm\">A = {1, 2, 3}</span>. Take any <span class=\"mm\">a ≠ b</span> with <span class=\"mm\">(a,b) ∈ R</span>.",
+     "Symmetry gives <span class=\"mm\">(b,a) ∈ R</span>; antisymmetry then forces <span class=\"mm\">a = b</span>, a contradiction.",
+     "Hence <span class=\"mm\">R ⊆ {(1,1), (2,2), (3,3)}</span>.",
+     "Every subset of the three diagonal pairs is symmetric (no off-diagonal pair exists) and antisymmetric, so all <span class=\"mm\">2³ = 8</span> subsets qualify."
+    ],
+    "final": "Option (A) — 8 relations.",
+    "why_wrong": [
+     "(B) 16 = <span class=\"mm\">2⁴</span> counts a relation on a two-element set, or treats one off-diagonal pair as free.",
+     "(C) 27 = <span class=\"mm\">3³</span> is the number of antisymmetric relations on a three-element set on its own.",
+     "(D) 64 = <span class=\"mm\">2⁶</span> is the number of symmetric relations on a three-element set on its own."
+    ],
+    "misconception": "The pair of adjectives is read as \"symmetric or antisymmetric\". The question asks for both, and the two conditions together are far more restrictive than either alone.",
+    "faster": "Symmetric ∧ antisymmetric ⟹ <span class=\"mm\">R ⊆ I_A</span>, so the answer is always <span class=\"mm\">2ⁿ</span> for an <span class=\"mm\">n</span>-element set.",
+    "takeaway": "Two extreme properties can intersect in a very small family — reason from the definitions rather than from counts of each separately."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "relation-properties",
+   "subtopic_label": "Relation properties",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q04",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Equivalence relations & classes",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "On <span class=\"mm\">A = {1, 2, 3, 4, 5, 6}</span> define <span class=\"mm\">aRb</span> exactly when <span class=\"mm\">a ≡ b (mod 3)</span>. How many equivalence classes does <span class=\"mm\">R</span> have?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "6"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Congruence modulo <span class=\"mm\">m</span> is an equivalence relation, and its classes are the residue classes <span class=\"mm\">0, 1, …, m−1</span>.",
+    "steps": [
+     "Residues of <span class=\"mm\">A</span> modulo 3: <span class=\"mm\">1 ≡ 4 ≡ 1</span>, <span class=\"mm\">2 ≡ 5 ≡ 2</span>, <span class=\"mm\">3 ≡ 6 ≡ 0</span>.",
+     "The classes are <span class=\"mm\">{1, 4}</span>, <span class=\"mm\">{2, 5}</span> and <span class=\"mm\">{3, 6}</span>.",
+     "There are three of them, indexed by the residues 0, 1, 2."
+    ],
+    "final": "Option (B) — 3 equivalence classes.",
+    "why_wrong": [
+     "(A) 2 would be the answer for modulus 2.",
+     "(C) 4 counts the elements of the class <span class=\"mm\">{1, 4}</span> as separate classes.",
+     "(D) 6 is <span class=\"mm\">|A|</span>, the count for the identity relation."
+    ],
+    "misconception": "Students count the number of distinct residues present among the elements (0, 1, 2 — three) but then sometimes report the modulus range <span class=\"mm\">0…2</span> as four values, or forget that residue 0 occurs (at 3 and 6).",
+    "faster": "The number of classes of congruence mod <span class=\"mm\">m</span> on <span class=\"mm\">{1, …, n}</span> is <span class=\"mm\">min(m, n)</span> when the set is long enough to hit every residue; here 3.",
+    "takeaway": "Modulo <span class=\"mm\">m</span> always yields exactly <span class=\"mm\">m</span> classes on a set that covers all residues."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "equivalence-relations-classes",
+   "subtopic_label": "Equivalence relations & classes",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q05",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Equivalence relations & classes",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "On <span class=\"mm\">A = {1, 2, 3, 4, 5, 6, 7}</span> define <span class=\"mm\">aRb</span> exactly when <span class=\"mm\">|a − b| ≤ 2</span>. Which defining property of an equivalence relation does <span class=\"mm\">R</span> fail?",
+   "options": [
+    "Reflexivity",
+    "Symmetry",
+    "Transitivity",
+    "None — R is an equivalence relation"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "An equivalence relation must satisfy all three of reflexivity, symmetry and transitivity; a single counterexample to any one of them is enough to disqualify it.",
+    "steps": [
+     "Reflexive: <span class=\"mm\">|a − a| = 0 ≤ 2</span> for every <span class=\"mm\">a</span>, so <span class=\"mm\">(a,a) ∈ R</span>.",
+     "Symmetric: <span class=\"mm\">|a − b| = |b − a|</span>, so the condition is unchanged on swapping.",
+     "Transitive: take <span class=\"mm\">a = 1, b = 2, c = 4</span>. Then <span class=\"mm\">|1 − 2| = 1 ≤ 2</span> and <span class=\"mm\">|2 − 4| = 2 ≤ 2</span>, but <span class=\"mm\">|1 − 4| = 3 > 2</span>, so <span class=\"mm\">(1,4) ∉ R</span>.",
+     "Transitivity therefore fails."
+    ],
+    "final": "Option (C) — transitivity.",
+    "why_wrong": [
+     "(A) is wrong: distance 0 always satisfies <span class=\"mm\">≤ 2</span>.",
+     "(B) is wrong: absolute value is unchanged by reversing the order.",
+     "(D) is wrong because of the explicit counterexample <span class=\"mm\">1R2, 2R4</span> yet <span class=\"mm\">1R̸4</span>."
+    ],
+    "misconception": "A \"close enough\" relation feels like it should be transitive. Distances add up, so a tolerance relation is almost never transitive — it fails exactly when the two hops together exceed the tolerance.",
+    "faster": "Any relation of the form <span class=\"mm\">|a − b| ≤ k</span> with <span class=\"mm\">k ≥ 1</span> is reflexive and symmetric but transitive only when <span class=\"mm\">k = 0</span>.",
+    "takeaway": "Tolerance relations are the standard counterexample that reflexive + symmetric does not give an equivalence relation."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "equivalence-relations-classes",
+   "subtopic_label": "Equivalence relations & classes",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q06",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Equivalence relations & classes",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many equivalence relations on <span class=\"mm\">A = {1, 2, 3, 4}</span> place 1 and 2 in the same class?",
+   "options": [
+    "4",
+    "5",
+    "7",
+    "8"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Equivalence relations on <span class=\"mm\">A</span> correspond one-to-one with partitions of <span class=\"mm\">A</span>; requiring <span class=\"mm\">1</span> and <span class=\"mm\">2</span> to share a class means gluing them into one block before partitioning.",
+    "steps": [
+     "Fuse <span class=\"mm\">1</span> and <span class=\"mm\">2</span> into a single block <span class=\"mm\">B = {1, 2}</span>.",
+     "The remaining partition problem is over the three objects <span class=\"mm\">B, 3, 4</span>.",
+     "The number of partitions of a three-element set is the Bell number <span class=\"mm\">B(3) = 5</span>.",
+     "So there are 5 such equivalence relations."
+    ],
+    "final": "Option (B) — 5.",
+    "why_wrong": [
+     "(A) 4 = <span class=\"mm\">B(3) − 1</span>, dropping one of the five partitions.",
+     "(C) 7 counts the partitions of <span class=\"mm\">{1,2,3}</span> plus the ones of <span class=\"mm\">{1,2,3,4}</span> that keep 1 and 2 apart, which the question excludes.",
+     "(D) 8 is <span class=\"mm\">2³</span>, treating each of the three objects as independently in or out of the block containing 1 and 2 — which double counts."
+    ],
+    "misconception": "Students try to count partitions of four elements and then filter, which is error-prone. Contracting the forced pair first turns the problem into a smaller standard one.",
+    "faster": "Number of partitions of <span class=\"mm\">n</span> elements in which a fixed <span class=\"mm\">k</span>-set stays together = <span class=\"mm\">B(n − k + 1)</span>; here <span class=\"mm\">B(3) = 5</span>.",
+    "takeaway": "\"Two elements must be together\" is a contraction — reduce the ground set by one and use the Bell number."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "equivalence-relations-classes",
+   "subtopic_label": "Equivalence relations & classes",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q07",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Partial orders & Hasse diagrams",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following relations on <span class=\"mm\">{1, 2, 3}</span> is a partial order?",
+   "options": [
+    "<span class=\"mm\">{(1,1), (2,2), (3,3), (1,2), (2,1)}</span>",
+    "<span class=\"mm\">{(1,1), (2,2), (3,3), (1,2), (2,3)}</span>",
+    "<span class=\"mm\">{(1,1), (2,2), (3,3), (1,2), (1,3), (2,3)}</span>",
+    "<span class=\"mm\">{(1,2), (2,3), (1,3)}</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A partial order is reflexive, antisymmetric and transitive; all three must hold simultaneously.",
+    "steps": [
+     "(A) is reflexive and transitive but not antisymmetric: <span class=\"mm\">(1,2)</span> and <span class=\"mm\">(2,1)</span> are both present with <span class=\"mm\">1 ≠ 2</span>.",
+     "(B) is reflexive and antisymmetric but not transitive: <span class=\"mm\">(1,2)</span> and <span class=\"mm\">(2,3)</span> are present while <span class=\"mm\">(1,3)</span> is not.",
+     "(C) is the usual order <span class=\"mm\">≤</span> on <span class=\"mm\">{1,2,3}</span>: reflexive, antisymmetric, and transitive because <span class=\"mm\">1 < 2 < 3</span> gives <span class=\"mm\">1 < 3</span>.",
+     "(D) is transitive and antisymmetric but not reflexive — it is a strict order, and it is missing <span class=\"mm\">(1,1), (2,2), (3,3)</span>."
+    ],
+    "final": "Option (C).",
+    "why_wrong": [
+     "(A) fails antisymmetry — it contains a 2-cycle.",
+     "(B) fails transitivity — it is missing the short-circuit pair <span class=\"mm\">(1,3)</span>.",
+     "(D) fails reflexivity — no diagonal pairs at all."
+    ],
+    "misconception": "Reflexivity is the property most often skipped when students scan a list of pairs; and strict orders (like <span class=\"mm\"><</span>) are routinely mistaken for partial orders.",
+    "faster": "Check the three properties in the order reflexivity → antisymmetry → transitivity; the first list that fails one is out, and you rarely need to check all three for every option.",
+    "takeaway": "A partial order is <span class=\"mm\">≤</span>-like, not <span class=\"mm\"><</span>-like: the diagonal is mandatory."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "partial-orders-hasse-diagrams",
+   "subtopic_label": "Partial orders & Hasse diagrams",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q08",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Partial orders & Hasse diagrams",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "In the divisibility poset on <span class=\"mm\">{1, 2, 3, 4, 6, 12}</span>, how many edges does the Hasse diagram have?",
+   "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "A Hasse diagram draws one edge for each covering relation: <span class=\"mm\">a</span> covers <span class=\"mm\">b</span> when <span class=\"mm\">b < a</span> and no element lies strictly between them.",
+    "steps": [
+     "List the covering pairs. <span class=\"mm\">1</span> is covered by exactly the atoms <span class=\"mm\">2</span> and <span class=\"mm\">3</span>.",
+     "Above <span class=\"mm\">2</span>: <span class=\"mm\">4</span> and <span class=\"mm\">6</span> cover it (both quotients are prime).",
+     "Above <span class=\"mm\">3</span>: only <span class=\"mm\">6</span> covers it.",
+     "Above <span class=\"mm\">4</span>: <span class=\"mm\">12</span> covers it; above <span class=\"mm\">6</span>: <span class=\"mm\">12</span> covers it.",
+     "Edges: <span class=\"mm\">1–2, 1–3, 2–4, 2–6, 3–6, 4–12, 6–12</span> — that is 7."
+    ],
+    "final": "Option (B) — 7 edges.",
+    "why_wrong": [
+     "(A) 6 is what you get by dropping the edge <span class=\"mm\">2–6</span> and forgetting that 6 covers 2.",
+     "(C) 8 usually comes from drawing <span class=\"mm\">3–12</span> (3 divides 12, but 6 lies in between, so 12 does not cover 3).",
+     "(D) 9 usually comes from drawing both <span class=\"mm\">3–12</span> and <span class=\"mm\">2–12</span>."
+    ],
+    "misconception": "Every divisor pair is drawn as an edge. In a Hasse diagram divisibility alone is not enough — the pair must be a covering pair.",
+    "faster": "In a divisor-closed set, <span class=\"mm\">a</span> covers <span class=\"mm\">b</span> exactly when <span class=\"mm\">a / b</span> is prime. Count the pairs <span class=\"mm\">(a, b)</span> with <span class=\"mm\">a/b</span> prime: <span class=\"mm\">12/6, 12/4, 6/3, 6/2, 4/2, 3/1, 2/1</span> — seven.",
+    "takeaway": "Hasse edge = covering pair = quotient is prime (inside a divisor-closed set)."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "partial-orders-hasse-diagrams",
+   "subtopic_label": "Partial orders & Hasse diagrams",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q09",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Partial orders & Hasse diagrams",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "In the poset <span class=\"mm\">({1, 2, …, 30}, ∣)</span> ordered by divisibility, what is the size of a largest antichain?",
+   "options": [
+    "10",
+    "15",
+    "16",
+    "30"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "An antichain is a set of pairwise incomparable elements. If the poset can be split into <span class=\"mm\">c</span> chains, every antichain meets each chain at most once, so it has at most <span class=\"mm\">c</span> elements.",
+    "steps": [
+     "Write every <span class=\"mm\">n ≤ 30</span> uniquely as <span class=\"mm\">n = 2^k · m</span> with <span class=\"mm\">m</span> odd.",
+     "Numbers sharing the same odd part <span class=\"mm\">m</span> form a chain <span class=\"mm\">m, 2m, 4m, …</span>, since each divides the next.",
+     "The odd parts that occur are the 15 odd numbers <span class=\"mm\">1, 3, 5, …, 29</span>, so the poset splits into 15 chains.",
+     "Hence every antichain has at most 15 elements.",
+     "The interval <span class=\"mm\">{16, 17, …, 30}</span> is an antichain: for <span class=\"mm\">a < b</span> in it, <span class=\"mm\">2a ≥ 32 > 30</span>, so <span class=\"mm\">a ∤ b</span>. It has 15 elements."
+    ],
+    "final": "Option (B) — 15.",
+    "why_wrong": [
+     "(A) 10 comes from using only the 10 primes up to 30, which is a different (and smaller) antichain question.",
+     "(C) 16 is an off-by-one on the interval <span class=\"mm\">{15, …, 30}</span> — but 15 divides 30, so that interval is not an antichain.",
+     "(D) 30 is the whole set, which is far from an antichain."
+    ],
+    "misconception": "The upper half <span class=\"mm\">{16, …, 30}</span> looks obviously incomparable by size, but students forget to check divisibility inside it and often include 15 as well.",
+    "faster": "For <span class=\"mm\">{1, …, 2n}</span> the largest antichain under divisibility always has <span class=\"mm\">n</span> elements; here <span class=\"mm\">n = 15</span>.",
+    "takeaway": "Chain decomposition gives the upper bound, an explicit interval gives the lower bound — matching them proves the maximum."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "partial-orders-hasse-diagrams",
+   "subtopic_label": "Partial orders & Hasse diagrams",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q10",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Lattices in posets",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following posets is NOT a lattice?",
+   "options": [
+    "<span class=\"mm\">(𝒫(S), ⊆)</span> for a set <span class=\"mm\">S</span>",
+    "<span class=\"mm\">(ℤ⁺, ∣)</span> — the positive integers under divisibility",
+    "The poset with elements <span class=\"mm\">{0, a, b}</span> where <span class=\"mm\">0 < a</span>, <span class=\"mm\">0 < b</span> and <span class=\"mm\">a, b</span> are incomparable",
+    "<span class=\"mm\">({1, 2, 3, 6, 12}, ∣)</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A lattice is a poset in which every pair of elements has a least upper bound and a greatest lower bound inside the poset.",
+    "steps": [
+     "(A): <span class=\"mm\">A ∨ B = A ∪ B</span> and <span class=\"mm\">A ∧ B = A ∩ B</span> — always a lattice.",
+     "(B): <span class=\"mm\">a ∨ b = lcm(a,b)</span> and <span class=\"mm\">a ∧ b = gcd(a,b)</span> — always a lattice.",
+     "(C): the upper bounds of <span class=\"mm\">a</span> and <span class=\"mm\">b</span> form the empty set, so no least upper bound exists. Not a lattice.",
+     "(D): the set is divisor-closed, so every pair has both a join and a meet inside it: <span class=\"mm\">2 ∨ 3 = lcm(2,3) = 6</span>, <span class=\"mm\">6 ∨ 12 = 12</span>, <span class=\"mm\">2 ∧ 12 = gcd(2,12) = 2</span>, <span class=\"mm\">3 ∧ 12 = 3</span>. A lattice."
+    ],
+    "final": "Option (C) — the three-element V-poset.",
+    "why_wrong": [
+     "(A) is the Boolean lattice <span class=\"mm\">2^S</span>, the archetypal lattice.",
+     "(B) is the divisibility lattice of the positive integers, with lcm as join.",
+     "(D) is the divisor lattice of 12 restricted to a divisor-closed set, hence closed under both operations."
+    ],
+    "misconception": "\"Incomparable\" is confused with \"no join\". Two incomparable elements can still have a join — the failure in (C) is that they have no common upper bound at all.",
+    "faster": "Look for two elements with no common upper bound, or with two minimal common upper bounds. Either defect immediately disqualifies a lattice.",
+    "takeaway": "A lattice needs joins and meets for every pair, not just for comparable pairs."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "lattices-in-posets",
+   "subtopic_label": "Lattices in posets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q11",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Lattices in posets",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For a positive integer <span class=\"mm\">n</span>, let <span class=\"mm\">D(n)</span> be the lattice of positive divisors of <span class=\"mm\">n</span> under divisibility. <span class=\"mm\">D(n)</span> is a Boolean lattice exactly when",
+   "options": [
+    "<span class=\"mm\">n</span> is prime",
+    "<span class=\"mm\">n</span> is a product of distinct primes",
+    "<span class=\"mm\">n</span> is a power of a prime",
+    "<span class=\"mm\">n</span> is even"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "If <span class=\"mm\">n = p₁^{e₁} … p_k^{e_k}</span>, then <span class=\"mm\">D(n)</span> is isomorphic to the product of chains <span class=\"mm\">C_{e₁+1} × … × C_{e_k+1}</span>. A Boolean lattice is a product of copies of the two-element chain.",
+    "steps": [
+     "Each divisor corresponds to a tuple of exponents <span class=\"mm\">(a₁, …, a_k)</span> with <span class=\"mm\">0 ≤ aᵢ ≤ eᵢ</span>, ordered coordinatewise.",
+     "That is a product of chains of lengths <span class=\"mm\">eᵢ + 1</span>.",
+     "A product of chains is Boolean only when every factor is the two-element chain, i.e. every <span class=\"mm\">eᵢ = 1</span>.",
+     "So <span class=\"mm\">D(n) ≅ 2^k</span> exactly when <span class=\"mm\">n</span> is squarefree, a product of distinct primes."
+    ],
+    "final": "Option (B) — n is a product of distinct primes.",
+    "why_wrong": [
+     "(A) a prime gives <span class=\"mm\">D(p) ≅ 2¹</span>, which is Boolean, but the condition must characterise all cases; <span class=\"mm\">n = 12</span> is neither prime nor Boolean, so (A) is too narrow.",
+     "(C) <span class=\"mm\">D(p³)</span> is a chain of four elements — it has a chain of length 3, which no Boolean lattice has.",
+     "(D) <span class=\"mm\">n = 12 = 2² · 3</span> is even and <span class=\"mm\">D(12)</span> is not Boolean."
+    ],
+    "misconception": "Prime powers feel \"simple\" and are assumed to give Boolean lattices; in fact they give chains, the opposite extreme.",
+    "faster": "Count atoms: <span class=\"mm\">D(n)</span> is Boolean iff it has <span class=\"mm\">k</span> atoms and exactly <span class=\"mm\">2^k</span> elements. For <span class=\"mm\">n = 12</span> there are 2 atoms but 6 elements ≠ 4.",
+    "takeaway": "Boolean divisor lattice ⟺ squarefree <span class=\"mm\">n</span>; prime power ⟺ chain."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "lattices-in-posets",
+   "subtopic_label": "Lattices in posets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q12",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Composition & transitive closure",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">R = {(1,2), (2,3)}</span> on <span class=\"mm\">A = {1, 2, 3}</span>. What is the composite relation <span class=\"mm\">R ∘ R</span>?",
+   "options": [
+    "<span class=\"mm\">{(1,2), (2,3)}</span>",
+    "<span class=\"mm\">{(1,3)}</span>",
+    "<span class=\"mm\">{(1,2), (2,3), (1,3)}</span>",
+    "<span class=\"mm\">∅</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "<span class=\"mm\">(a,c) ∈ S ∘ R</span> exactly when some <span class=\"mm\">b</span> satisfies <span class=\"mm\">(a,b) ∈ R</span> and <span class=\"mm\">(b,c) ∈ S</span> — a two-step walk.",
+    "steps": [
+     "Start at <span class=\"mm\">1</span>: the only pair out of 1 is <span class=\"mm\">(1,2)</span>, so continue from 2. The only pair out of 2 is <span class=\"mm\">(2,3)</span>, giving <span class=\"mm\">(1,3)</span>.",
+     "Start at <span class=\"mm\">2</span>: leads to 3, and nothing leaves 3, so no pair.",
+     "Start at <span class=\"mm\">3</span>: nothing leaves 3, so no pair.",
+     "Hence <span class=\"mm\">R ∘ R = {(1,3)}</span>."
+    ],
+    "final": "Option (B) — {(1,3)}.",
+    "why_wrong": [
+     "(A) is <span class=\"mm\">R</span> itself, not the composite.",
+     "(C) is the transitive closure <span class=\"mm\">R⁺</span>, which unions <span class=\"mm\">R</span> with <span class=\"mm\">R²</span>.",
+     "(D) would need no two-step walk to exist, but <span class=\"mm\">1 → 2 → 3</span> is one."
+    ],
+    "misconception": "<span class=\"mm\">R²</span> is read as \"the transitive closure\" or as \"square each element\". Composition is path concatenation of exactly two steps.",
+    "faster": "Build a 3×3 boolean matrix for <span class=\"mm\">R</span> and square it; the ones in <span class=\"mm\">R²</span> are the two-step walks.",
+    "takeaway": "<span class=\"mm\">R²</span> = two-step walks only; <span class=\"mm\">R⁺</span> = walks of every positive length."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "composition-transitive-closure",
+   "subtopic_label": "Composition & transitive closure",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q13",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Composition & transitive closure",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">R = {(1,2), (2,1), (3,4)}</span> on <span class=\"mm\">A = {1, 2, 3, 4}</span>. How many ordered pairs are in the transitive closure <span class=\"mm\">R⁺</span>?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "The transitive closure contains <span class=\"mm\">(a,b)</span> exactly when a walk of positive length runs from <span class=\"mm\">a</span> to <span class=\"mm\">b</span>.",
+    "steps": [
+     "The pairs <span class=\"mm\">(1,2)</span> and <span class=\"mm\">(2,1)</span> form a 2-cycle, so from 1 you can reach 2, and from 2 you can reach 1.",
+     "Composing the cycle with itself gives <span class=\"mm\">(1,1)</span> and <span class=\"mm\">(2,2)</span>, which must be added.",
+     "The pair <span class=\"mm\">(3,4)</span> is isolated: nothing leaves 4 and nothing enters 3, so it generates no new pair.",
+     "So <span class=\"mm\">R⁺ = {(1,2), (2,1), (1,1), (2,2), (3,4)}</span> — five pairs."
+    ],
+    "final": "Option (B) — 5 ordered pairs.",
+    "why_wrong": [
+     "(A) 4 keeps only <span class=\"mm\">R</span> and forgets that a cycle forces its diagonal pairs into the closure.",
+     "(C) 6 would need an extra pair such as <span class=\"mm\">(3,3)</span> or <span class=\"mm\">(4,4)</span>, which requires a walk, not just an element.",
+     "(D) 7 would need both diagonals of the isolated pair as well."
+    ],
+    "misconception": "The transitive closure is assumed to be the reflexive-transitive closure. Here the diagonal pairs come from the cycle, not from reflexivity — <span class=\"mm\">(3,3)</span> and <span class=\"mm\">(4,4)</span> are correctly absent.",
+    "faster": "Any strongly connected component of size <span class=\"mm\">s ≥ 2</span> contributes all <span class=\"mm\">s²</span> pairs to <span class=\"mm\">R⁺</span>; here <span class=\"mm\">2² + 1 = 5</span>.",
+    "takeaway": "Cycles generate diagonal pairs inside the closure; isolated edges generate nothing extra."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "composition-transitive-closure",
+   "subtopic_label": "Composition & transitive closure",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q14",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Counting relations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many relations are there on a set with three elements?",
+   "options": [
+    "64",
+    "256",
+    "512",
+    "729"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A relation on <span class=\"mm\">A</span> is any subset of <span class=\"mm\">A × A</span>, so the count is <span class=\"mm\">2^{|A|²}</span>.",
+    "steps": [
+     "With <span class=\"mm\">|A| = 3</span>, the product set has <span class=\"mm\">3 × 3 = 9</span> ordered pairs.",
+     "Each of those nine pairs is independently either in or out of the relation.",
+     "So the number of relations is <span class=\"mm\">2⁹ = 512</span>."
+    ],
+    "final": "Option (C) — 512.",
+    "why_wrong": [
+     "(A) 64 = <span class=\"mm\">2⁶</span> counts relations on a three-element set that are forced to be symmetric (6 free choices), or relations on a set of size 2.45 — not a valid interpretation.",
+     "(B) 256 = <span class=\"mm\">2⁸</span> comes from using <span class=\"mm\">n² − 1</span> free pairs, an off-by-one.",
+     "(D) 729 = <span class=\"mm\">3⁶</span> is the number of functions from a 6-element set, not of relations."
+    ],
+    "misconception": "The exponent is <span class=\"mm\">|A × A| = n²</span>, not <span class=\"mm\">n</span>. Students who write <span class=\"mm\">2³ = 8</span> are counting subsets of <span class=\"mm\">A</span> instead.",
+    "faster": "Memorise the ladder: <span class=\"mm\">n = 1, 2, 3, 4</span> gives 2, 16, 512, 65536 relations.",
+    "takeaway": "Relations on an <span class=\"mm\">n</span>-element set: <span class=\"mm\">2^{n²}</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "counting-relations",
+   "subtopic_label": "Counting relations",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q15",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Counting relations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many reflexive relations are there on a set with four elements?",
+   "options": [
+    "1024",
+    "2048",
+    "4096",
+    "65536"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Reflexivity forces the <span class=\"mm\">n</span> diagonal pairs into the relation; every other pair stays free, so the count is <span class=\"mm\">2^{n² − n}</span>.",
+    "steps": [
+     "There are <span class=\"mm\">4² = 16</span> ordered pairs in total.",
+     "The four diagonal pairs <span class=\"mm\">(a,a)</span> must be included — no freedom there.",
+     "The remaining <span class=\"mm\">16 − 4 = 12</span> pairs are free.",
+     "So the number of reflexive relations is <span class=\"mm\">2¹² = 4096</span>."
+    ],
+    "final": "Option (C) — 4096.",
+    "why_wrong": [
+     "(A) 1024 = <span class=\"mm\">2¹⁰</span> subtracts the wrong number of forced pairs.",
+     "(B) 2048 = <span class=\"mm\">2¹¹</span> is the count for a set of size 4 where only three pairs are forced.",
+     "(D) 65536 = <span class=\"mm\">2¹⁶</span> counts all relations, ignoring reflexivity entirely."
+    ],
+    "misconception": "Students subtract <span class=\"mm\">n</span> from <span class=\"mm\">n²</span> but then compute <span class=\"mm\">2^n</span> instead of <span class=\"mm\">2^{n²−n}</span>; or they forget that the diagonal is forced *in*, not just removed from the count.",
+    "faster": "Reflexive: <span class=\"mm\">2^{n(n−1)}</span>. Here <span class=\"mm\">2^{12} = 4096</span>.",
+    "takeaway": "Reflexive relations: <span class=\"mm\">2^{n(n−1)}</span>; irreflexive: the same count; symmetric: <span class=\"mm\">2^{n(n+1)/2}</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "counting-relations",
+   "subtopic_label": "Counting relations",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q16",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Relation properties",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "For relations on a finite set <span class=\"mm\">A</span>, which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "A relation that is both symmetric and antisymmetric is contained in the identity relation.",
+    "If <span class=\"mm\">R</span> is symmetric then <span class=\"mm\">R⁻¹ = R</span>.",
+    "If <span class=\"mm\">R</span> is reflexive and symmetric then <span class=\"mm\">R</span> is transitive.",
+    "If <span class=\"mm\">R</span> is an equivalence relation then so is <span class=\"mm\">A × A − R</span>."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A), (B)",
+   "solution": {
+    "concept": "Each option is settled by applying the definition directly or by exhibiting one small counterexample.",
+    "steps": [
+     "(A): if <span class=\"mm\">(a,b) ∈ R</span> with <span class=\"mm\">a ≠ b</span>, symmetry gives <span class=\"mm\">(b,a) ∈ R</span> and antisymmetry then forces <span class=\"mm\">a = b</span> — contradiction. So only diagonal pairs can occur. TRUE.",
+     "(B): <span class=\"mm\">R⁻¹ = {(b,a) : (a,b) ∈ R}</span>, and symmetry says <span class=\"mm\">(a,b) ∈ R ⇔ (b,a) ∈ R</span>, so the two sets coincide. TRUE.",
+     "(C): on <span class=\"mm\">A = {1,2,3}</span> take <span class=\"mm\">R = I_A ∪ {(1,2), (2,1), (2,3), (3,2)}</span>. It is reflexive and symmetric, yet <span class=\"mm\">(1,2), (2,3) ∈ R</span> while <span class=\"mm\">(1,3) ∉ R</span>. FALSE.",
+     "(D): with <span class=\"mm\">|A| ≥ 2</span>, <span class=\"mm\">A × A − R</span> omits every diagonal pair, so it is not reflexive and hence not an equivalence relation. FALSE."
+    ],
+    "final": "Options (A) and (B).",
+    "why_wrong": [
+     "(C) fails because reflexivity plus symmetry says nothing about paths of length two.",
+     "(D) fails because an equivalence relation must contain <span class=\"mm\">I_A</span>, and the complement of a set containing <span class=\"mm\">I_A</span> cannot contain <span class=\"mm\">I_A</span>."
+    ],
+    "misconception": "The complement of a nice relation is assumed to be nice. Complementing destroys reflexivity first, which kills (D) immediately.",
+    "faster": "Check (D) by reflexivity alone — the fastest possible kill — then look for the standard \"reflexive + symmetric but not transitive\" counterexample for (C).",
+    "takeaway": "Symmetric ∧ antisymmetric forces containment in <span class=\"mm\">I_A</span>; the complement of a reflexive relation is never reflexive."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "relation-properties",
+   "subtopic_label": "Relation properties",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q17",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Equivalence relations & classes",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">R</span> be an equivalence relation on a non-empty set <span class=\"mm\">A</span>, and let <span class=\"mm\">[a]</span> denote the equivalence class of <span class=\"mm\">a</span>. Which of the following are TRUE? (Select all that apply.)",
+   "options": [
+    "Every element of <span class=\"mm\">A</span> lies in exactly one equivalence class.",
+    "<span class=\"mm\">aRb</span> if and only if <span class=\"mm\">[a] = [b]</span>.",
+    "Any two distinct equivalence classes are disjoint.",
+    "<span class=\"mm\">R</span> has exactly <span class=\"mm\">|A|</span> equivalence classes."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "solution": {
+    "concept": "The equivalence classes of <span class=\"mm\">R</span> form a partition of <span class=\"mm\">A</span>: non-empty, pairwise disjoint, and covering <span class=\"mm\">A</span>.",
+    "steps": [
+     "(A): <span class=\"mm\">a ∈ [a]</span> by reflexivity, so every element is in at least one class; if <span class=\"mm\">a ∈ [b] ∩ [c]</span> then <span class=\"mm\">bRa</span> and <span class=\"mm\">aRc</span>, so <span class=\"mm\">bRc</span> and <span class=\"mm\">[b] = [c]</span> — at most one class. TRUE.",
+     "(B): if <span class=\"mm\">aRb</span> and <span class=\"mm\">x ∈ [a]</span>, then <span class=\"mm\">xRa</span> and <span class=\"mm\">aRb</span> give <span class=\"mm\">xRb</span>, so <span class=\"mm\">[a] ⊆ [b]</span>; symmetrically <span class=\"mm\">[b] ⊆ [a]</span>. Conversely <span class=\"mm\">[a] = [b]</span> with <span class=\"mm\">a ∈ [a]</span> gives <span class=\"mm\">a ∈ [b]</span>, i.e. <span class=\"mm\">aRb</span>. TRUE.",
+     "(C): if <span class=\"mm\">c ∈ [a] ∩ [b]</span> then <span class=\"mm\">[c] = [a]</span> and <span class=\"mm\">[c] = [b]</span> by (B), so <span class=\"mm\">[a] = [b]</span>. TRUE.",
+     "(D): the universal relation on <span class=\"mm\">A</span> has one class, not <span class=\"mm\">|A|</span>; the identity relation has <span class=\"mm\">|A|</span>. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "why_wrong": [
+     "(D) fails: the number of classes ranges from 1 to <span class=\"mm\">|A|</span> depending on <span class=\"mm\">R</span>."
+    ],
+    "misconception": "The count of classes is confused with the size of the set. <span class=\"mm\">|A|</span> classes is the maximum, attained only by the identity relation.",
+    "faster": "Everything about equivalence classes follows from \"classes = blocks of a partition\"; three of the four options are just restatements of that.",
+    "takeaway": "Equivalence relation ⟷ partition: the classes are the blocks, and there is no fourth option."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "equivalence-relations-classes",
+   "subtopic_label": "Equivalence relations & classes",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q18",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Partial orders & Hasse diagrams",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Consider the divisibility poset on <span class=\"mm\">P = {1, 2, 3, 4, 6, 8, 12, 24}</span>. Which of the following are covering relations in this poset? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">8</span> covers <span class=\"mm\">4</span>",
+    "<span class=\"mm\">6</span> covers <span class=\"mm\">2</span>",
+    "<span class=\"mm\">12</span> covers <span class=\"mm\">6</span>",
+    "<span class=\"mm\">24</span> covers <span class=\"mm\">6</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "solution": {
+    "concept": "<span class=\"mm\">a</span> covers <span class=\"mm\">b</span> when <span class=\"mm\">b ∣ a</span>, <span class=\"mm\">b ≠ a</span>, and no element of the poset lies strictly between them.",
+    "steps": [
+     "(A) <span class=\"mm\">4 ∣ 8</span> and the only element of <span class=\"mm\">P</span> strictly between them would divide 8 and be divisible by 4 — none exists. TRUE.",
+     "(B) <span class=\"mm\">2 ∣ 6</span> and the only candidate strictly between is 3, which does not divide 6 within a chain from 2… in fact no element of <span class=\"mm\">P</span> lies strictly between 2 and 6 (3 is not above 2). TRUE.",
+     "(C) <span class=\"mm\">6 ∣ 12</span> and no element of <span class=\"mm\">P</span> lies strictly between 6 and 12 (the divisors of 12 above 6 are only 12). TRUE.",
+     "(D) <span class=\"mm\">6 ∣ 24</span>, but <span class=\"mm\">12 ∈ P</span> satisfies <span class=\"mm\">6 ∣ 12 ∣ 24</span>, so 12 lies strictly between them. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "why_wrong": [
+     "(D) fails because the intermediate element 12 is present in <span class=\"mm\">P</span>: 6 ∣ 12 ∣ 24, so 24 does not cover 6. (Note that 24 does cover 8, since no element of <span class=\"mm\">P</span> lies between 8 and 24.)"
+    ],
+    "misconception": "Divisibility is taken as covering. Covering is a statement about the *specific* poset: 24 covers 8 here precisely because 12 is not a multiple of 8, while 24 fails to cover 6 because 12 is a multiple of 6.",
+    "faster": "When the poset is divisor-closed (as <span class=\"mm\">P</span> is), <span class=\"mm\">a</span> covers <span class=\"mm\">b</span> exactly when <span class=\"mm\">a/b</span> is prime. Here <span class=\"mm\">8/4 = 2</span>, <span class=\"mm\">6/2 = 3</span>, <span class=\"mm\">12/6 = 2</span> are prime, while <span class=\"mm\">24/6 = 4</span> is not.",
+    "takeaway": "In a divisor-closed poset, covering ⟺ the quotient is prime; the moment an intermediate element is present, the quotient is composite."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "partial-orders-hasse-diagrams",
+   "subtopic_label": "Partial orders & Hasse diagrams",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q19",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Lattices in posets",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements about lattices are TRUE? (Select all that apply.)",
+   "options": [
+    "Every finite lattice has a least element and a greatest element.",
+    "In a distributive lattice an element has at most one complement.",
+    "Every lattice is distributive.",
+    "In every bounded lattice every element has a complement."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A), (B)",
+   "solution": {
+    "concept": "A finite lattice is bounded because the join and meet of all elements exist; distributivity is an extra axiom, and complementedness is another.",
+    "steps": [
+     "(A): in a finite lattice the join of all elements is the greatest element and the meet of all elements is the least element. TRUE.",
+     "(B): if <span class=\"mm\">b</span> and <span class=\"mm\">c</span> are both complements of <span class=\"mm\">a</span>, then <span class=\"mm\">b = b ∧ 1 = b ∧ (a ∨ c) = (b ∧ a) ∨ (b ∧ c) = 0 ∨ (b ∧ c) = b ∧ c</span>, and symmetrically <span class=\"mm\">c = b ∧ c</span>, so <span class=\"mm\">b = c</span>. TRUE.",
+     "(C): the diamond <span class=\"mm\">M₃</span> and the pentagon <span class=\"mm\">N₅</span> are lattices that are not distributive. FALSE.",
+     "(D): in <span class=\"mm\">N₅</span> the middle element has no complement. FALSE."
+    ],
+    "final": "Options (A) and (B).",
+    "why_wrong": [
+     "(C) fails on the two classic non-distributive lattices <span class=\"mm\">M₃</span> and <span class=\"mm\">N₅</span>.",
+     "(D) fails because boundedness guarantees only that 0 and 1 exist, not that every element has a complement."
+    ],
+    "misconception": "Bounded is read as complemented. A bounded lattice may have elements with no complement at all, and in a non-distributive lattice an element may have several.",
+    "faster": "Distributive + bounded + complemented = Boolean; each adjective is independent, and (C) and (D) each assert that one of them is automatic.",
+    "takeaway": "Distributivity and complementedness are independent extras; only distributivity makes complements unique."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "lattices-in-posets",
+   "subtopic_label": "Lattices in posets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q20",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Composition & transitive closure",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">R</span> and <span class=\"mm\">S</span> be relations on a set <span class=\"mm\">A</span>. Which of the following identities hold? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">(R ∪ S)⁻¹ = R⁻¹ ∪ S⁻¹</span>",
+    "<span class=\"mm\">(R ∩ S)⁻¹ = R⁻¹ ∩ S⁻¹</span>",
+    "<span class=\"mm\">(S ∘ R)⁻¹ = R⁻¹ ∘ S⁻¹</span>",
+    "<span class=\"mm\">R ∘ R⁻¹</span> is the identity relation on <span class=\"mm\">A</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "solution": {
+    "concept": "Inversion commutes with union, intersection and difference because it only swaps the two coordinates of each pair; composition reverses the order of the factors.",
+    "steps": [
+     "(A): <span class=\"mm\">(a,b) ∈ (R ∪ S)⁻¹ ⇔ (b,a) ∈ R ∪ S ⇔ (b,a) ∈ R</span> or <span class=\"mm\">(b,a) ∈ S ⇔ (a,b) ∈ R⁻¹ ∪ S⁻¹</span>. TRUE.",
+     "(B): the same argument with \"or\" replaced by \"and\". TRUE.",
+     "(C): <span class=\"mm\">(a,c) ∈ (S ∘ R)⁻¹ ⇔ (c,a) ∈ S ∘ R ⇔ ∃b, (c,b) ∈ S, (b,a) ∈ R ⇔ ∃b, (b,c) ∈ S⁻¹, (a,b) ∈ R⁻¹ ⇔ (a,c) ∈ R⁻¹ ∘ S⁻¹</span>. TRUE.",
+     "(D): <span class=\"mm\">R ∘ R⁻¹ = {(a,a) : ∃b, (a,b) ∈ R}</span>. If some element of <span class=\"mm\">A</span> has no <span class=\"mm\">R</span>-image, its diagonal pair is missing, so the relation is only a subset of <span class=\"mm\">I_A</span>. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "why_wrong": [
+     "(D) fails whenever <span class=\"mm\">R</span> is not total, e.g. <span class=\"mm\">R = {(1,2)}</span> on <span class=\"mm\">A = {1,2}</span> gives only <span class=\"mm\">(1,1)</span>."
+    ],
+    "misconception": "The inverse of a composite is written in the same order. It must be reversed: <span class=\"mm\">(S ∘ R)⁻¹ = R⁻¹ ∘ S⁻¹</span>, like inverting a product of matrices.",
+    "faster": "For composition, read right-to-left in both the original and the inverse; for union and intersection the inverse distributes freely.",
+    "takeaway": "<span class=\"mm\">R ∘ R⁻¹</span> is the identity restricted to the domain of <span class=\"mm\">R</span>, not the identity on <span class=\"mm\">A</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "composition-transitive-closure",
+   "subtopic_label": "Composition & transitive closure",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q21",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Counting relations",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many symmetric relations are there on a set with three elements?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 64,
+   "answer_display": "64",
+   "solution": {
+    "concept": "A symmetric relation is determined independently on the diagonal pairs and on each unordered pair <span class=\"mm\">{a, b}</span>: for off-diagonal pairs symmetry forces both <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span> to be in, or both to be out.",
+    "steps": [
+     "There are 3 diagonal pairs, each free: <span class=\"mm\">2³</span> choices.",
+     "There are <span class=\"mm\">C(3,2) = 3</span> unordered off-diagonal pairs; symmetry makes each an all-or-nothing choice: <span class=\"mm\">2³</span> choices.",
+     "Multiply: <span class=\"mm\">2³ · 2³ = 2⁶ = 64</span>."
+    ],
+    "final": "64",
+    "why_wrong": [],
+    "misconception": "Counting <span class=\"mm\">2⁹ = 512</span> by treating all nine pairs as independent — symmetry couples the pairs <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span>.",
+    "faster": "Symmetric relations on <span class=\"mm\">n</span> elements: <span class=\"mm\">2^{n(n+1)/2}</span>; here <span class=\"mm\">2⁶ = 64</span>.",
+    "takeaway": "Symmetric: <span class=\"mm\">2^{n(n+1)/2}</span>. Antisymmetric: <span class=\"mm\">2ⁿ · 3^{n(n−1)/2}</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "counting-relations",
+   "subtopic_label": "Counting relations",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q22",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Counting relations",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many antisymmetric relations are there on a set with two elements?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 12,
+   "answer_display": "12",
+   "solution": {
+    "concept": "Antisymmetry only constrains pairs of the form <span class=\"mm\">(a,b)</span> and <span class=\"mm\">(b,a)</span> with <span class=\"mm\">a ≠ b</span>: they may not both be present.",
+    "steps": [
+     "Let <span class=\"mm\">A = {1, 2}</span>. The two diagonal pairs are unconstrained: <span class=\"mm\">2² = 4</span> choices.",
+     "For the pair <span class=\"mm\">{1, 2}</span> there are three legal states: include neither, include only <span class=\"mm\">(1,2)</span>, include only <span class=\"mm\">(2,1)</span>.",
+     "Multiply: <span class=\"mm\">4 × 3 = 12</span>."
+    ],
+    "final": "12",
+    "why_wrong": [],
+    "misconception": "Counting <span class=\"mm\">2⁴ = 16</span> by treating all four pairs as free — the state \"both <span class=\"mm\">(1,2)</span> and <span class=\"mm\">(2,1)</span>\" is exactly what antisymmetry forbids.",
+    "faster": "Antisymmetric relations on <span class=\"mm\">n</span> elements: <span class=\"mm\">2ⁿ · 3^{n(n−1)/2}</span>; here <span class=\"mm\">4 × 3 = 12</span>.",
+    "takeaway": "Antisymmetry: each unordered off-diagonal pair has 3 legal states, each diagonal pair 2."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "counting-relations",
+   "subtopic_label": "Counting relations",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q23",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Lattices in posets",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "In the divisor lattice <span class=\"mm\">D(72)</span> — the positive divisors of 72 ordered by divisibility — how many elements have a complement?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution": {
+    "concept": "In a bounded lattice, <span class=\"mm\">e</span> is a complement of <span class=\"mm\">d</span> when <span class=\"mm\">d ∧ e = 1</span> and <span class=\"mm\">d ∨ e = 72</span>, i.e. <span class=\"mm\">gcd(d,e) = 1</span> and <span class=\"mm\">lcm(d,e) = 72</span>.",
+    "steps": [
+     "Write <span class=\"mm\">72 = 2³ · 3²</span>. A divisor is <span class=\"mm\">d = 2^i 3^j</span> with <span class=\"mm\">0 ≤ i ≤ 3</span>, <span class=\"mm\">0 ≤ j ≤ 2</span>.",
+     "The two conditions together force <span class=\"mm\">d · e = 72</span>, so <span class=\"mm\">e = 72/d</span> is the only candidate.",
+     "Then <span class=\"mm\">gcd(d, 72/d) = 1</span> requires <span class=\"mm\">d</span> to take each prime's full exponent or none: <span class=\"mm\">i ∈ {0, 3}</span> and <span class=\"mm\">j ∈ {0, 2}</span>.",
+     "That gives <span class=\"mm\">2 × 2 = 4</span> divisors: <span class=\"mm\">1, 8, 9, 72</span>, with complements <span class=\"mm\">72, 9, 8, 1</span>."
+    ],
+    "final": "4",
+    "why_wrong": [],
+    "misconception": "<span class=\"mm\">D(72)</span> is distributive and bounded, so students assume every element has a complement. Distributive + bounded is not complemented — the standard counterexample is exactly this kind of divisor lattice.",
+    "faster": "Such divisors are the unitary divisors of <span class=\"mm\">n</span>: <span class=\"mm\">2^k</span> of them, where <span class=\"mm\">k</span> is the number of distinct primes. Here <span class=\"mm\">2² = 4</span>.",
+    "takeaway": "In <span class=\"mm\">D(n)</span>, exactly <span class=\"mm\">2^{ω(n)}</span> elements have complements, where <span class=\"mm\">ω(n)</span> is the number of distinct primes dividing <span class=\"mm\">n</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "lattices-in-posets",
+   "subtopic_label": "Lattices in posets",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q24",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Equivalence relations & classes",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A = {1, 2, 3, 4, 5}</span> and let <span class=\"mm\">R</span> be the smallest equivalence relation on <span class=\"mm\">A</span> containing <span class=\"mm\">{(1,2), (3,4)}</span>. How many equivalence classes does <span class=\"mm\">R</span> have?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution": {
+    "concept": "The smallest equivalence relation containing a set of pairs is obtained by taking the symmetric, transitive, reflexive closure — equivalently, by merging the elements that the given pairs force together.",
+    "steps": [
+     "The pair <span class=\"mm\">(1,2)</span> forces 1 and 2 into one class; the pair <span class=\"mm\">(3,4)</span> forces 3 and 4 into another.",
+     "Element 5 is in no given pair, so it stays alone.",
+     "No given pair links the block <span class=\"mm\">{1,2}</span> to the block <span class=\"mm\">{3,4}</span> or to 5, so nothing further merges.",
+     "Classes: <span class=\"mm\">{1,2}</span>, <span class=\"mm\">{3,4}</span>, <span class=\"mm\">{5}</span> — three in total."
+    ],
+    "final": "3",
+    "why_wrong": [],
+    "misconception": "Students apply transitivity across the two given pairs, as if <span class=\"mm\">2</span> were related to <span class=\"mm\">3</span>. It is not: the pairs <span class=\"mm\">(1,2)</span> and <span class=\"mm\">(3,4)</span> share no element.",
+    "faster": "Count the connected components of the graph whose edges are the given pairs, then add the isolated vertices.",
+    "takeaway": "Smallest equivalence relation = connected components of the relation graph; each component is one class."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "equivalence-relations-classes",
+   "subtopic_label": "Equivalence relations & classes",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-REL1-Q25",
+   "unit": 4,
+   "unit_name": "Relations",
+   "topic": "Relations",
+   "sub": "Composition & transitive closure",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "On <span class=\"mm\">A = {1, 2, 3, 4, 5}</span> let <span class=\"mm\">R = {(1,2), (2,3), (3,1), (4,5)}</span>. How many ordered pairs are in the transitive closure <span class=\"mm\">R⁺</span>?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 10,
+   "answer_display": "10",
+   "solution": {
+    "concept": "The transitive closure contains <span class=\"mm\">(a,b)</span> exactly when a walk of positive length runs from <span class=\"mm\">a</span> to <span class=\"mm\">b</span>.",
+    "steps": [
+     "Elements <span class=\"mm\">1, 2, 3</span> form a directed cycle <span class=\"mm\">1 → 2 → 3 → 1</span>, so every element of the cycle reaches every element of the cycle.",
+     "That contributes <span class=\"mm\">3² = 9</span> pairs.",
+     "The pair <span class=\"mm\">(4,5)</span> is isolated from the cycle and adds exactly one pair.",
+     "Total: <span class=\"mm\">9 + 1 = 10</span>."
+    ],
+    "final": "10",
+    "why_wrong": [],
+    "misconception": "Students count only the cycle's own three pairs plus <span class=\"mm\">(4,5)</span> and get 4, forgetting that a strongly connected component contributes all <span class=\"mm\">s²</span> pairs.",
+    "faster": "A strongly connected component of size <span class=\"mm\">s</span> contributes <span class=\"mm\">s²</span> pairs to <span class=\"mm\">R⁺</span>; add the pairs from all other components separately.",
+    "takeaway": "Collapse <span class=\"mm\">R</span> into strongly connected components, then count <span class=\"mm\">Σ s²</span> over the components."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "relations",
+   "unit_number": 4,
+   "subtopic": "composition-transitive-closure",
+   "subtopic_label": "Composition & transitive closure",
    "question_format": "text"
   }
  ]
