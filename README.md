@@ -1,29 +1,44 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Two subjects are now in the series: Discrete Mathematics (16 units) and Algorithms (7 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Three subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units) and Databases (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 1 — Asymptotic Analysis & Recurrences, Set 1 of 2**, 2026-10-26 → [`algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`](algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html)
+- **Databases · Unit 1 — ER Models & Relational Algebra, Set 1 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: big-O / Ω / Θ · Master Theorem cases · recursion-tree method · substitution method
-- Algorithms had no `runs[]` entry, so the rotation fell back to the day-offset formula:
-  `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. This is the first paper for this subject.
+- Subtopics: ER diagrams, cardinality & weak entities · relational model & constraints · relational algebra (σ, π, join, division) · tuple & domain relational calculus
+- Databases had no `runs[]` entry, so the rotation fell back to the day-offset formula:
+  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. This is the first paper for this subject.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 14 (13 Discrete Mathematics, 1 Algorithms) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms |
-| Questions in the subject banks | 350 (325 Discrete Mathematics, 25 Algorithms) |
-| Verified official PYQs | 2 (both Discrete Mathematics) |
+| Papers published | 15 (13 Discrete Mathematics, 1 Algorithms, 1 Databases) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases |
+| Questions in the subject banks | 375 (325 Discrete Mathematics, 25 Algorithms, 25 Databases) |
+| Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 7 (all Discrete Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Databases → Unit 1 (ER Models & Relational Algebra).** MODE A: the subject was drawn at random from the
+  11 GATE CSE subjects and came out Databases. `databases/question-bank/master_bank.json` did not exist, so there was no
+  `runs[]` entry to read and no cap to check; the starting unit came from the documented fallback,
+  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. No override was used.
+- All four of the unit's subtopics are represented: ER diagrams / cardinality / weak entities (6 questions), relational
+  model & constraints (6), relational algebra (8), tuple & domain relational calculus (5). Composition 15 MCQ / 5 MSQ /
+  5 NAT, difficulty 10 easy / 10 medium / 5 hard, 35 marks.
+- The set carries one `GATE_PYQ_VARIATION` item, `DB-U1-Q17`, built on the verified PYQ-GATE2014S3-Q30 (GATE CSE 2014,
+  Set 3, Q30, official key D). It is a re-worded variation over Doctor/Patient, not the original text, and it is not
+  presented as an official question.
+- This is the first paper for a unit with no earlier paper, so nothing was moved into `archive/`. The paper is filed
+  only at `databases/er-relational-algebra/`; no root copy was written.
+- A new subject folder and bank were created: `databases/question-bank/master_bank.json` now holds 25 questions on
+  Unit 1. `index.html` gained the five Databases units, one test card and the 25 banked questions.
 
 - **2026-10-26, Algorithms → Unit 1 (Asymptotic Analysis & Recurrences).** MODE A: the subject was drawn at random from the 11 GATE CSE
   subjects and came out Algorithms. `algorithms/question-bank/master_bank.json` did not exist, so there was no `runs[]`
@@ -242,6 +257,9 @@ discrete-mathematics/
 algorithms/
   asymptotic-analysis/gate_algo_mock_1_<date>.html   current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+databases/
+  er-relational-algebra/gate_db_mock_1_<date>.html   current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -277,13 +295,24 @@ Algorithms:
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
 | 7 | Complexity Theory & NP-Completeness | `complexity-np-complete` | 0 | — |
 
+### Databases
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | ER Models & Relational Algebra | `er-relational-algebra` | 25 | yes |
+| 2 | SQL & Advanced Querying | `sql-querying` | 0 | — |
+| 3 | Database Normalization | `normalization` | 0 | — |
+| 4 | Transactions & Concurrency Control | `transactions-concurrency` | 0 | — |
+| 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
    those records live in `master_bank.json` under `verified_pyqs`.
 2. Questions built on a verified PYQ pattern are tagged `GATE_PYQ_VARIATION` and are explicitly *not* official questions.
-   Unit 1's single variation is built on the GATE CSE 2014 Set 1 Q53 pattern (formula true exactly when a stated number
-   of p, q, r are TRUE; official key B).
+   Discrete Mathematics Unit 1's single variation is built on the GATE CSE 2014 Set 1 Q53 pattern (formula true exactly
+   when a stated number of p, q, r are TRUE; official key B). Databases Unit 1's single variation is built on the
+   GATE CSE 2014 Set 3 Q30 pattern (difference of projections over a join; official key D).
 3. Everything else is tagged `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS` and is practice material written for this series.
 4. Historical questions are never deleted, never counted towards an active test, and are always filed under their
    `data-subtopic` slug.
