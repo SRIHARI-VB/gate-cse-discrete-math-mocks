@@ -1,0 +1,845 @@
+{
+  "meta": {
+    "title": "GATE CSE Discrete Mathematics - Master Question Bank",
+    "owner": "SRIHARI V B",
+    "exam": "GATE CSE 2027",
+    "created": "2026-10-25",
+    "last_updated": "2026-10-25",
+    "note": "Append-only. Never delete previous entries. Historical PYQs carry verified provenance only; anything unverified is marked as such."
+  },
+  "runs": [
+    {
+      "date": "2026-10-25",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "day_index": 15,
+      "file": "gate_dm_mock_16_2026-10-25.html",
+      "composition": {
+        "mcq": 15,
+        "msq": 5,
+        "nat": 5,
+        "total": 25
+      },
+      "difficulty": {
+        "Easy": 10,
+        "Moderate": 10,
+        "Difficult": 5
+      }
+    }
+  ],
+  "verified_pyqs": [
+    {
+      "id": "PYQ-GATE2023-Q26",
+      "year": 2023,
+      "paper": "GATE CSE 2023 (official CS paper, IIT Kanpur)",
+      "qno": "25/26 (numbering differs across sources)",
+      "type": "MSQ",
+      "official_key": [
+        "B",
+        "C"
+      ],
+      "unit": 16,
+      "topic": "Logic & Proof Techniques",
+      "sub": "Implication / sufficiency of quantified statements",
+      "note": "Geetha's conjecture: which options imply forall x (P(x) => exists y Q(x,y))."
+    },
+    {
+      "id": "PYQ-GATE2015",
+      "year": 2015,
+      "paper": "GATE CSE 2015 (listed as Set 1 Q18 by ExamSIDE and Set 2 Q3 by GATE Overflow)",
+      "type": "MCQ",
+      "official_key": [
+        "C"
+      ],
+      "unit": 16,
+      "topic": "Logic & Proof Techniques",
+      "sub": "Sound inference / hypothetical syllogism",
+      "note": "Corrupt / kind / elected inference chain; answer: 'If a person is kind, he is not known to be corrupt'."
+    }
+  ],
+  "questions": [
+    {
+      "id": "DM-LPT-E-01",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Disproving universal statements (counterexample)",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "To disprove the statement  ∀n∈ℤ, P(n),  which of the following is logically correct AND sufficient?",
+      "options": [
+        "Exhibit one integer n for which P(n) is false.",
+        "Prove that P(n) is true for every integer n.",
+        "Prove that P(n) is true for at least one integer n.",
+        "Prove that P(n) is false for every integer n."
+      ],
+      "answer": 0,
+      "solution": {
+        "concept": "The negation of a universal statement is an existential statement: ¬(∀n P(n)) ≡ ∃n ¬P(n).",
+        "steps": [
+          "A universal claim is false as soon as a single instance fails.",
+          "Such a failing instance is a counterexample.",
+          "So one integer n with ¬P(n) is both necessary and sufficient to disprove ∀n P(n)."
+        ],
+        "final": "Option (A).",
+        "misconception": "Many students think a universal statement can only be refuted by proving the opposite for all n, or by finding a counterexample that is 'typical'. One valid counterexample is enough.",
+        "takeaway": "Remember: disprove ∀ with one ∃-counterexample; disprove ∃ by showing ∀¬ (no example exists)."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-02",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Contrapositive",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "The contrapositive of the implication  \"If n² is even, then n is even\"  is:",
+      "options": [
+        "If n is even, then n² is even.",
+        "If n² is odd, then n is odd.",
+        "If n is odd, then n² is odd.",
+        "If n is even, then n² is odd."
+      ],
+      "answer": 2,
+      "solution": {
+        "concept": "The contrapositive of p → q is ¬q → ¬p, and it is logically equivalent to the original.",
+        "steps": [
+          "Here p = \"n² is even\", q = \"n is even\".",
+          "¬q = \"n is odd\", ¬p = \"n² is odd\".",
+          "Contrapositive: \"If n is odd, then n² is odd\"."
+        ],
+        "final": "Option (C).",
+        "misconception": "Option (B) is the inverse ¬p → ¬q, which is equivalent to the converse, not the original. Students often swap contrapositive and inverse.",
+        "takeaway": "Contrapositive = negate both, then swap. Inverse = negate both, keep order. Converse = swap only."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-03",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Necessity & Sufficiency",
+      "sub": "Sufficient condition",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "The statement  \"p is sufficient for q\"  is formally written as:",
+      "options": [
+        "q → p",
+        "p → q",
+        "p ↔ q",
+        "¬p → ¬q"
+      ],
+      "answer": 1,
+      "solution": {
+        "concept": "Sufficient condition = the antecedent of the implication. Necessary condition = the consequent.",
+        "steps": [
+          "\"p is sufficient for q\" means: the truth of p guarantees the truth of q.",
+          "That is exactly p → q."
+        ],
+        "final": "Option (B).",
+        "misconception": "Confusing 'sufficient' with 'necessary'. p sufficient for q is p→q; p necessary for q is q→p.",
+        "takeaway": "Sufficient sits on the left of →; necessary sits on the right."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-04",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Proof by contradiction",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "The standard proof that √2 is irrational begins by assuming √2 = a/b with gcd(a,b) = 1 and derives that both a and b are even. This is an example of:",
+      "options": [
+        "Direct proof",
+        "Proof by cases",
+        "Proof by counterexample",
+        "Proof by contradiction"
+      ],
+      "answer": 3,
+      "solution": {
+        "concept": "In a proof by contradiction we assume the negation of the claim and derive an impossibility.",
+        "steps": [
+          "Assume the negation: √2 is rational, √2 = a/b in lowest terms.",
+          "Derive a = 2m and b = 2n, so gcd(a,b) ≥ 2.",
+          "This contradicts gcd(a,b) = 1, so the assumption is false."
+        ],
+        "final": "Option (D).",
+        "misconception": "Students sometimes call this a 'contrapositive' proof. It is a contradiction proof: we assume the opposite of the whole statement, not the negation of the conclusion of an implication.",
+        "takeaway": "Rationality of √2, infinitude of primes, and √2 + √3 irrationality are all classic contradiction proofs."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-05",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Proof of biconditionals (iff)",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "To prove a statement of the form  p ↔ q,  it is necessary and sufficient to prove:",
+      "options": [
+        "p → q only",
+        "q → p only",
+        "both p → q and q → p",
+        "neither direction"
+      ],
+      "answer": 2,
+      "solution": {
+        "concept": "p ↔ q ≡ (p → q) ∧ (q → p).",
+        "steps": [
+          "A biconditional is the conjunction of the two implications.",
+          "Hence both directions must be established.",
+          "One may also build a chain of equivalences p ↔ r₁ ↔ r₂ ↔ q."
+        ],
+        "final": "Option (C).",
+        "misconception": "Proving only one direction is a common error; a one-way proof does not establish 'if and only if'.",
+        "takeaway": "'iff' proofs: prove 'necessary' and 'sufficient' (or 'only if' and 'if') separately."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-06",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Converse / inverse / contrapositive",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "For the statement  \"If x > 3, then x² > 9\",  which of the following is its CONVERSE?",
+      "options": [
+        "If x² > 9, then x > 3.",
+        "If x ≤ 3, then x² ≤ 9.",
+        "If x² ≤ 9, then x ≤ 3.",
+        "x > 3 if and only if x² > 9."
+      ],
+      "answer": 0,
+      "solution": {
+        "concept": "Converse of p → q is q → p.",
+        "steps": [
+          "p = \"x > 3\", q = \"x² > 9\".",
+          "Converse = q → p = \"If x² > 9, then x > 3\"."
+        ],
+        "final": "Option (A).",
+        "misconception": "Option (B) is the inverse and (C) is the contrapositive. A converse is not logically equivalent to the original.",
+        "takeaway": "Converse swaps; inverse negates; contrapositive does both. Only the contrapositive is equivalent."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-07",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Counterexample over the reals",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the statement:  \"For every real number x, if x² = 4, then x = 2.\"  Which of the following correctly assesses it?",
+      "options": [
+        "True; provable directly.",
+        "False; x = −2 is a counterexample.",
+        "False; x = 4 is a counterexample.",
+        "True; provable by contradiction."
+      ],
+      "answer": 1,
+      "solution": {
+        "concept": "A universally quantified implication fails if some x makes the hypothesis true and the conclusion false.",
+        "steps": [
+          "Take x = −2. Then x² = 4 (hypothesis true) but x ≠ 2 (conclusion false).",
+          "So the statement is false."
+        ],
+        "final": "Option (B).",
+        "misconception": "x = 4 does not satisfy x² = 4, so it is not a counterexample — students often pick any 'unusual' value without checking the hypothesis.",
+        "takeaway": "Always verify a counterexample actually satisfies the hypothesis before using it."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-08",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Rules of inference (valid vs fallacious)",
+      "type": "mcq",
+      "difficulty": "Moderate",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following is a VALID rule of inference?",
+      "options": [
+        "From p → q and q, infer p.",
+        "From p → q and ¬p, infer ¬q.",
+        "From p → q and ¬q, infer ¬p.",
+        "From p → q and p, infer ¬q."
+      ],
+      "answer": 2,
+      "solution": {
+        "concept": "Modus tollens: (p → q) ∧ ¬q ⇒ ¬p is valid. Affirming the consequent and denying the antecedent are fallacies.",
+        "steps": [
+          "(A) affirms the consequent — invalid.",
+          "(B) denies the antecedent — invalid.",
+          "(C) modus tollens — valid.",
+          "(D) contradicts modus ponens — invalid."
+        ],
+        "final": "Option (C).",
+        "misconception": "The two most common fallacies are 'affirming the consequent' and 'denying the antecedent'; both look like modus ponens/tollens but are invalid.",
+        "takeaway": "Valid: modus ponens, modus tollens, hypothetical syllogism, disjunctive syllogism, resolution."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-09",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Choosing contrapositive",
+      "type": "mcq",
+      "difficulty": "Moderate",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "To prove  \"if n is an integer and n² is odd, then n is odd\",  the cleanest standard approach is:",
+      "options": [
+        "A direct proof expanding n² as a general integer.",
+        "Proof by contrapositive: assume n is even and show n² is even.",
+        "Proof by counterexample.",
+        "Proof by checking n = 1, 3, 5, …"
+      ],
+      "answer": 1,
+      "solution": {
+        "concept": "When the conclusion is hard to use directly, prove the contrapositive instead.",
+        "steps": [
+          "Contrapositive: if n is even, then n² is even.",
+          "Let n = 2k; then n² = 4k² = 2(2k²), which is even.",
+          "Done."
+        ],
+        "final": "Option (B).",
+        "misconception": "A direct proof of the original is awkward because 'n² odd' is hard to unpack; the contrapositive makes the algebra trivial.",
+        "takeaway": "If the hypothesis is a 'negative' or awkward property (odd, irrational, not divisible), try the contrapositive."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-10",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Necessity & Sufficiency",
+      "sub": "Necessary condition",
+      "type": "mcq",
+      "difficulty": "Moderate",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "The phrase  \"a is necessary for b\"  is logically equivalent to:",
+      "options": [
+        "a → b",
+        "¬a → b",
+        "a ↔ b",
+        "b → a"
+      ],
+      "answer": 3,
+      "solution": {
+        "concept": "'a is necessary for b' means b cannot hold without a, i.e. b → a.",
+        "steps": [
+          "If a were absent, b could not occur.",
+          "So b ⇒ a, written b → a."
+        ],
+        "final": "Option (D).",
+        "misconception": "Reading 'necessary' as the antecedent. Necessary = consequent side: b → a.",
+        "takeaway": "Necessary = 'only if'. 'b only if a' is b → a."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-11",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Counterexample over the reals",
+      "type": "mcq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the statement:  \"For every real number x, x² > x.\"  Which of the following is a correct disproof?",
+      "options": [
+        "x = 0.5",
+        "x = 2",
+        "x = −1",
+        "x = 3"
+      ],
+      "answer": 0,
+      "solution": {
+        "concept": "x² > x fails exactly when 0 ≤ x ≤ 1.",
+        "steps": [
+          "x² − x > 0 ⇔ x(x−1) > 0 ⇔ x < 0 or x > 1.",
+          "So the statement fails for every x in [0,1].",
+          "x = 0.5 gives 0.25 > 0.5, which is false — a counterexample."
+        ],
+        "final": "Option (A).",
+        "misconception": "Choosing a value such as x = 2 (which satisfies the inequality) instead of a failing value.",
+        "takeaway": "Solve the inequality first; the complement of its solution set is exactly where counterexamples live."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-12",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Vacuous truth",
+      "type": "mcq",
+      "difficulty": "Moderate",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the statement:  \"For every real number x, if x² < 0, then x = 7.\"  Which of the following is correct?",
+      "options": [
+        "False, because x = 7 does not satisfy x² < 0.",
+        "True only for x = 7.",
+        "Vacuously true, because no real x satisfies x² < 0.",
+        "Neither true nor false."
+      ],
+      "answer": 2,
+      "solution": {
+        "concept": "An implication p → q is true whenever the hypothesis p is false. If p is never true, the universal statement is vacuously true.",
+        "steps": [
+          "For every real x, x² ≥ 0, so x² < 0 is false for all x.",
+          "Each implication instance is therefore true (false → anything is true).",
+          "Hence the universally quantified statement is (vacuously) true."
+        ],
+        "final": "Option (C).",
+        "misconception": "Judging the statement 'false' because the conclusion 'x = 7' seems unrelated; the hypothesis is never satisfied, so the implication never fails.",
+        "takeaway": "Empty-domain / impossible-hypothesis implications are vacuously true — a favourite GATE trap."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-13",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Proof by cases",
+      "type": "mcq",
+      "difficulty": "Moderate",
+      "reference_category": "NPTEL-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following statements is most naturally proved by a proof by cases (division into cases)?",
+      "options": [
+        "√2 is irrational.",
+        "There are infinitely many prime numbers.",
+        "2 + 2 = 4.",
+        "For every integer n, |n| ≥ n."
+      ],
+      "answer": 3,
+      "solution": {
+        "concept": "A proof by cases splits the domain into exhaustive sub-cases and proves the claim in each.",
+        "steps": [
+          "|n| ≥ n: if n ≥ 0 then |n| = n ≥ n; if n < 0 then |n| = −n > n.",
+          "Both cases cover all integers, so the claim holds."
+        ],
+        "final": "Option (D).",
+        "misconception": "Choosing √2 irrationality (contradiction) or infinitude of primes (contradiction) — those are not naturally case proofs.",
+        "takeaway": "Whenever a statement depends on the sign or residue of an integer, a case split (parity, sign, mod k) is usually cleanest."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-14",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Disproving a restricted universal claim",
+      "type": "mcq",
+      "difficulty": "Difficult",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "A student wishes to disprove the claim  \"Every odd integer greater than or equal to 5 can be written as a sum of three primes.\"  The logically correct strategy is to:",
+      "options": [
+        "exhibit one odd integer ≥ 5 that cannot be written as a sum of three primes.",
+        "prove the claim for all odd integers ≥ 5.",
+        "exhibit an odd integer less than 5 that is not a sum of three primes.",
+        "show that 3 + 5 + 7 = 15."
+      ],
+      "answer": 0,
+      "solution": {
+        "concept": "A claim of the form ∀n≥5 (odd(n) → S(n)) is refuted by one qualifying counterexample inside the stated range.",
+        "steps": [
+          "The claim quantifies over odd integers ≥ 5.",
+          "Disproof requires one odd integer ≥ 5 violating S(n).",
+          "A value below 5 is outside the domain and cannot refute the claim."
+        ],
+        "final": "Option (A).",
+        "misconception": "Using an out-of-domain value (e.g. n = 1 or 3) as a 'counterexample'. It must satisfy every hypothesis of the claim.",
+        "takeaway": "A counterexample must lie inside the quantified domain AND satisfy the hypothesis."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-15",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Equivalence of implication forms",
+      "type": "mcq",
+      "difficulty": "Difficult",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following statements about proof techniques is FALSE?",
+      "options": [
+        "A proof by contrapositive of p → q is a direct proof of ¬q → ¬p.",
+        "Proof by contradiction can be used for statements that are not implications.",
+        "If a statement is proved by contradiction, then its negation is false.",
+        "The inverse ¬p → ¬q of p → q is logically equivalent to p → q."
+      ],
+      "answer": 3,
+      "solution": {
+        "concept": "p → q is equivalent to its contrapositive ¬q → ¬p, but NOT to its inverse ¬p → ¬q.",
+        "steps": [
+          "(A) True: that is the definition of a contrapositive proof.",
+          "(B) True: contradiction is general (e.g. 'there are infinitely many primes').",
+          "(C) True: deriving a contradiction shows ¬S is impossible, so S holds.",
+          "(D) False: ¬p → ¬q ≡ q → p, the converse, not p → q."
+        ],
+        "final": "Option (D).",
+        "misconception": "Believing the inverse is equivalent to the original. Only the contrapositive is equivalent.",
+        "takeaway": "Equivalent to p→q: itself, its contrapositive. NOT equivalent: converse, inverse."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-16",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Propositional Equivalence",
+      "sub": "Equivalent forms of implication",
+      "type": "msq",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following are logically equivalent to  p → q ?  (Select all that apply.)",
+      "options": [
+        "¬p ∨ q",
+        "¬p → ¬q",
+        "¬q → ¬p",
+        "¬(p ∧ ¬q)"
+      ],
+      "answer": [
+        0,
+        2,
+        3
+      ],
+      "solution": {
+        "concept": "p → q ≡ ¬p ∨ q ≡ ¬q → ¬p ≡ ¬(p ∧ ¬q).",
+        "steps": [
+          "Material implication: p → q ≡ ¬p ∨ q.",
+          "Contrapositive: p → q ≡ ¬q → ¬p.",
+          "Negation of conjunction: ¬p ∨ q ≡ ¬(p ∧ ¬q).",
+          "¬p → ¬q ≡ p ∨ ¬q ≡ q → p, the converse — not equivalent."
+        ],
+        "final": "Options (A), (C) and (D).",
+        "misconception": "Including (B): the inverse is equivalent to the converse, not to the original implication.",
+        "takeaway": "Memorise the three equivalent rewrites of an implication; the inverse is never one of them."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-17",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Contrapositive vs contradiction",
+      "type": "msq",
+      "difficulty": "Moderate",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following statements are TRUE?  (Select all that apply.)",
+      "options": [
+        "Every proof by contrapositive of p → q can also be phrased as a proof by contradiction.",
+        "Every proof by contradiction is a proof by contrapositive.",
+        "A proof by contrapositive of p → q proceeds by proving ¬q → ¬p directly.",
+        "A proof by contradiction of p → q may assume both p and ¬q and derive a contradiction."
+      ],
+      "answer": [
+        0,
+        2,
+        3
+      ],
+      "solution": {
+        "concept": "Contrapositive is a special, direct way of doing what contradiction does indirectly.",
+        "steps": [
+          "(A) True: assume p and ¬q, the contrapositive derivation gives a contradiction.",
+          "(B) False: contradiction applies to non-implication statements too.",
+          "(C) True: that is the definition.",
+          "(D) True: assuming p and ¬q is the standard contradiction setup for an implication."
+        ],
+        "final": "Options (A), (C) and (D).",
+        "misconception": "Thinking the two methods are identical. Contrapositive is strictly a proof of ¬q → ¬p; contradiction is more general.",
+        "takeaway": "Contrapositive ⊂ contradiction: every contrapositive proof is a contradiction proof, not vice versa."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-18",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Truth of converse/inverse/contrapositive",
+      "type": "msq",
+      "difficulty": "Moderate",
+      "reference_category": "NPTEL-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Let S be the statement:  \"If a positive integer is divisible by 6, then it is divisible by 3.\"  Which of the following are TRUE?  (Select all that apply.)",
+      "options": [
+        "The converse of S is true.",
+        "The inverse of S is true.",
+        "The contrapositive of S is true.",
+        "S itself is true."
+      ],
+      "answer": [
+        2,
+        3
+      ],
+      "solution": {
+        "concept": "S is true; its contrapositive is always equivalent to it; the converse and inverse need not be true.",
+        "steps": [
+          "S: 6 | n ⇒ 3 | n. True, since 3 | 6.",
+          "Contrapositive: 3 ∤ n ⇒ 6 ∤ n. True (equivalent to S).",
+          "Converse: 3 | n ⇒ 6 | n. False, e.g. n = 9.",
+          "Inverse: 6 ∤ n ⇒ 3 ∤ n. False, e.g. n = 9."
+        ],
+        "final": "Options (C) and (D).",
+        "misconception": "Assuming that if an implication is true then its converse is too. Converse and inverse can both fail.",
+        "takeaway": "Test converse/inverse with a small counterexample (here n = 9)."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-19",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Multiple valid proof strategies",
+      "type": "msq",
+      "difficulty": "Difficult",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the claim  C: \"For every integer n, n² + n is even.\"  Which of the following are VALID ways to establish C?  (Select all that apply.)",
+      "options": [
+        "Disproof by exhibiting n = 2.",
+        "Proof by cases: consider n even and n odd separately.",
+        "Proof by contradiction: suppose n² + n is odd and derive a contradiction.",
+        "Rewrite n² + n = n(n + 1) and note one of two consecutive integers is even."
+      ],
+      "answer": [
+        1,
+        2,
+        3
+      ],
+      "solution": {
+        "concept": "Parity of n² + n can be shown by cases, by contradiction, or by a product-of-consecutive-integers argument.",
+        "steps": [
+          "(B) Valid: n = 2k → n²+n = 2(2k²+k); n = 2k+1 → n²+n = 2(2k²+3k+1).",
+          "(C) Valid: assuming odd leads to n(n+1) odd, impossible for consecutive integers.",
+          "(A) Invalid: n = 2 satisfies C, it is not a disproof.",
+          "(D) Valid: of n and n+1 one is even, so the product is even."
+        ],
+        "final": "Options (B), (C) and (D).",
+        "misconception": "Thinking a single verified example (n = 2) 'proves' or 'disproves' a universal claim. Examples never prove a universal statement.",
+        "takeaway": "n² + n is always even — a template result worth memorising for parity arguments."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-20",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Necessity & Sufficiency",
+      "sub": "Implication chains and biconditionals",
+      "type": "msq",
+      "difficulty": "Moderate",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Which of the following statements are TRUE?  (Select all that apply.)",
+      "options": [
+        "If p → q is true, then its converse q → p must also be true.",
+        "'p is necessary for q' is equivalent to q → p.",
+        "If p → q and q → r are both true, then p → r is true.",
+        "p ↔ q is true exactly when p and q have the same truth value."
+      ],
+      "answer": [
+        1,
+        2,
+        3
+      ],
+      "solution": {
+        "concept": "Necessity, hypothetical syllogism, and the truth condition for a biconditional.",
+        "steps": [
+          "(B) True by definition of a necessary condition.",
+          "(C) True: hypothetical syllogism (transitivity of →).",
+          "(A) False: an implication does not force its converse.",
+          "(D) True: ↔ is true precisely when both sides agree."
+        ],
+        "final": "Options (B), (C) and (D).",
+        "misconception": "Treating → as symmetric. Only ↔ is symmetric; → is not.",
+        "takeaway": "Chain implications freely (transitivity); never reverse a single implication without proof."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-21",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Equivalent implication forms",
+      "type": "nat",
+      "difficulty": "Easy",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Let p → q be a true implication that is NOT a biconditional. Among its converse, its inverse and its contrapositive, how many statements are logically equivalent to p → q?\n(Enter an integer.)",
+      "options": null,
+      "answer": 1,
+      "solution": {
+        "concept": "Only the contrapositive is logically equivalent to p → q.",
+        "steps": [
+          "Converse q → p: not equivalent.",
+          "Inverse ¬p → ¬q: not equivalent.",
+          "Contrapositive ¬q → ¬p: equivalent.",
+          "Count = 1."
+        ],
+        "final": "1",
+        "misconception": "Counting the converse and inverse as equivalent. They are equivalent to each other, not to p → q.",
+        "takeaway": "Of the three derived forms, exactly one (the contrapositive) is always equivalent."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-22",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Counterexample / primality",
+      "type": "nat",
+      "difficulty": "Moderate",
+      "reference_category": "Textbook-inspired (Rosen-style)",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the polynomial f(n) = n² + n + 41. Find the SMALLEST positive integer n for which f(n) is NOT prime.\n(Enter an integer.)",
+      "options": null,
+      "answer": 40,
+      "solution": {
+        "concept": "f(n) = n² + n + 41 is prime for n = 0..39 (Euler's polynomial) but fails at n = 40.",
+        "steps": [
+          "Test the boundary n = 40: f(40) = 1600 + 40 + 41 = 1681.",
+          "1681 = 41², which is composite.",
+          "For n = 1..39, f(n) is prime, so 40 is the smallest positive n that fails."
+        ],
+        "final": "40",
+        "misconception": "Stopping the search early and assuming the pattern continues; a single counterexample is decisive, but you must find the smallest one.",
+        "takeaway": "Euler's n²+n+41 is the classic 'looks always prime' trap; it first fails at n = 40."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-23",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Validity & Tautology",
+      "sub": "Counting tautologies",
+      "type": "nat",
+      "difficulty": "Moderate",
+      "reference_category": "NPTEL-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "How many of the following four propositions are tautologies?\n  (i)  p → (p ∨ q)\n  (ii) (p ∧ q) → p\n  (iii)(p → q) → (q → p)\n  (iv) (p → q) ↔ (¬p ∨ q)\n(Enter an integer.)",
+      "options": null,
+      "answer": 3,
+      "solution": {
+        "concept": "A tautology is true for every truth assignment; use the truth table or algebraic equivalences.",
+        "steps": [
+          "(i) p → (p∨q): when p is true p∨q is true; when p is false the implication is true. Tautology.",
+          "(ii) (p∧q) → p: if p∧q true then p true. Tautology.",
+          "(iii)(p→q)→(q→p): p = F, q = T gives (T)→(F) = F. Not a tautology.",
+          "(iv)(p→q)↔(¬p∨q): both sides are the same formula, so it is always true. Tautology.",
+          "Tautologies: (i), (ii), (iv) = 3."
+        ],
+        "final": "3",
+        "misconception": "Marking (iii) as a tautology because both components 'look like implications'. Test p = F, q = T.",
+        "takeaway": "(iv) is an instance of the equivalence p→q ≡ ¬p∨q, so it is a tautology by definition."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-24",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Proof Techniques",
+      "sub": "Counterexamples to a conjecture",
+      "type": "nat",
+      "difficulty": "Difficult",
+      "reference_category": "Original",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the conjecture:  \"For every integer n ≥ 2, the number 2ⁿ − 1 is prime.\"  How many counterexamples n exist with 2 ≤ n ≤ 10?\n(Enter an integer.)",
+      "options": null,
+      "answer": 5,
+      "solution": {
+        "concept": "2ⁿ − 1 is prime only for certain n (Mersenne primes); composite values are counterexamples.",
+        "steps": [
+          "n = 2: 3 (prime)",
+          "n = 3: 7 (prime)",
+          "n = 4: 15 = 3·5 (counterexample)",
+          "n = 5: 31 (prime)",
+          "n = 6: 63 = 3·21 (counterexample)",
+          "n = 7: 127 (prime)",
+          "n = 8: 255 = 3·5·17 (counterexample)",
+          "n = 9: 511 = 7·73 (counterexample)",
+          "n = 10: 1023 = 3·11·31 (counterexample)",
+          "Counterexamples: n = 4, 6, 8, 9, 10 → 5."
+        ],
+        "final": "5",
+        "misconception": "Forgetting that 2ⁿ − 1 can be prime for some n and composite for others; each composite case counts.",
+        "takeaway": "If n is composite, 2ⁿ − 1 is composite; but n = 9 (odd composite) and n = 10 also fail here, so check each value."
+      },
+      "run_date": "2026-10-25"
+    },
+    {
+      "id": "DM-LPT-E-25",
+      "unit": 16,
+      "unit_name": "Logic & Proof Techniques",
+      "topic": "Validity & Tautology",
+      "sub": "Counting satisfying assignments",
+      "type": "nat",
+      "difficulty": "Difficult",
+      "reference_category": "GateOverflow-inspired",
+      "source": "Original practice question (AI-generated GATE-style) - not an official GATE question",
+      "question": "Consider the proposition  (p ∨ q) → (p ∧ q).  Over the four possible truth assignments of (p, q), how many make this proposition TRUE?\n(Enter an integer.)",
+      "options": null,
+      "answer": 2,
+      "solution": {
+        "concept": "An implication is false only when the antecedent is true and the consequent is false.",
+        "steps": [
+          "(p,q) = (T,T): T → T = T.",
+          "(T,F): T → F = F.",
+          "(F,T): T → F = F.",
+          "(F,F): F → F = T.",
+          "True for 2 assignments."
+        ],
+        "final": "2",
+        "misconception": "Assuming (F,F) is false. A false antecedent makes the implication vacuously true.",
+        "takeaway": "(p∨q) → (p∧q) is true exactly when p and q agree — i.e. it is equivalent to p ↔ q."
+      },
+      "run_date": "2026-10-25"
+    }
+  ]
+}
