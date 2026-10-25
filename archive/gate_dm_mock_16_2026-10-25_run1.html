@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GATE CSE Daily Mock &mdash; Unit 16: Logic &amp; Proof Techniques &mdash; 2026-10-25</title>
+<style>
+:root{
+  --blue:#1565c0; --blue-d:#0d47a1; --green:#2e7d32; --red:#c62828;
+  --amber:#ef6c00; --purple:#6a1b9a; --grey:#eceff1; --line:#cfd8dc;
+  --ink:#1c2733; --muted:#5b6b7a; --bg:#f4f6f8; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header.top{background:linear-gradient(135deg,var(--blue-d),var(--blue));color:#fff;padding:16px 22px}
+header.top h1{margin:0 0 4px;font-size:19px}
+header.top .sub{font-size:13px;opacity:.92}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  border-radius:12px;padding:1px 9px;font-size:12px;margin-right:6px}
+.tabs{display:flex;gap:4px;background:#fff;border-bottom:2px solid var(--line);padding:0 18px;position:sticky;top:0;z-index:30}
+.tabs button{background:none;border:none;padding:12px 16px;font-size:14px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent}
+.tabs button.active{color:var(--blue);border-bottom-color:var(--blue)}
+main{padding:16px 18px 60px;max-width:1220px;margin:0 auto}
+.exam-layout{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+@media(max-width:900px){.exam-layout{grid-template-columns:1fr}}
+.note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:6px;padding:10px 14px;font-size:13px;color:#4a3b1a;margin-bottom:14px}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.qhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;border-bottom:1px dashed var(--line);padding-bottom:8px;margin-bottom:10px}
+.qno{font-weight:700;color:var(--blue)}
+.qmeta{font-size:11.5px;color:var(--muted)}
+.tag{display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:600;margin-left:4px}
+.t-mcq{background:#e3f2fd;color:#0d47a1}.t-msq{background:#ede7f6;color:#4527a0}.t-nat{background:#e8f5e9;color:#1b5e20}
+.d-easy{background:#e8f5e9;color:#2e7d32}.d-moderate{background:#fff8e1;color:#a15c00}.d-hard{background:#ffebee;color:#b71c1c}
+.qtext{font-size:15px;margin:6px 0 12px;white-space:pre-wrap}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:9px 12px;cursor:pointer;font-size:14px;background:#fff}
+.opt:hover{background:#f7fbff;border-color:#9cc4ea}
+.opt input{margin-top:3px}
+.opt.correct{border-color:var(--green);background:#e9f7ea}
+.opt.wrong{border-color:var(--red);background:#fdeaea}
+.nat-wrap{margin-top:6px}
+.nat-wrap input{font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:180px}
+.sidebar{position:sticky;top:60px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}
+.timer{font-size:30px;font-weight:700;text-align:center;color:var(--blue-d);letter-spacing:1px;font-variant-numeric:tabular-nums}
+.timer.warn{color:var(--red)}
+.timer-label{text-align:center;font-size:12px;color:var(--muted);margin-bottom:10px}
+.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:12px 0}
+.palette button{aspect-ratio:1/1;border:1px solid var(--line);border-radius:6px;background:#fff;font-weight:600;font-size:13px;cursor:pointer}
+.palette button.answered{background:var(--green);color:#fff;border-color:var(--green)}
+.palette button.notans{background:#fdeaea;color:#b71c1c;border-color:#e8a9a9}
+.palette button.current{outline:3px solid var(--blue);outline-offset:1px}
+.legend{font-size:11.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.legend span{display:flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.btn{display:block;width:100%;border:none;border-radius:6px;padding:11px;font-size:15px;font-weight:700;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-d)}
+.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink);margin-top:8px}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.sol{display:none;margin-top:14px;border-top:2px solid var(--green);padding-top:12px;font-size:14px}
+.sol.show{display:block}
+.sol h4{margin:10px 0 4px;font-size:13px;color:var(--blue-d);text-transform:uppercase;letter-spacing:.4px}
+.sol ul{margin:4px 0 4px 18px;padding:0}
+.sol .ans{font-weight:700;color:var(--green)}
+.sol .mis{background:#fff6f6;border-left:4px solid var(--red);padding:6px 10px;border-radius:4px;margin-top:6px}
+.verdict{font-weight:700;margin-top:10px;padding:6px 10px;border-radius:5px;display:inline-block;font-size:13px}
+.v-ok{background:#e8f5e9;color:#1b5e20}.v-bad{background:#ffebee;color:#b71c1c}.v-skip{background:#eceff1;color:#546e7a}
+.result{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px;margin-bottom:16px;display:none}
+.result.show{display:block}
+.scorebar{display:flex;gap:22px;flex-wrap:wrap;margin:8px 0 4px}
+.scorebar div{font-size:14px}
+.scorebar b{font-size:22px;display:block;color:var(--blue-d)}
+h2.sec{font-size:17px;border-left:5px solid var(--blue);padding-left:10px;margin:22px 0 12px}
+.acc{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.acc>summary{cursor:pointer;padding:12px 16px;font-weight:700;font-size:14.5px;background:#f7f9fb;list-style:none}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary::before{content:"\25B8  ";color:var(--blue)}
+.acc[open]>summary::before{content:"\25BE  "}
+.acc .body{padding:12px 16px}
+.topic-h{font-size:13.5px;font-weight:700;color:var(--blue-d);margin:12px 0 6px;border-bottom:1px dashed var(--line);padding-bottom:3px}
+.sub-h{font-size:12.5px;color:var(--muted);margin:8px 0 4px;font-weight:600}
+.hq{border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin:8px 0;background:#fcfdff}
+.hq .prov{font-size:11.5px;color:var(--muted);margin-bottom:6px}
+.hq .hqtext{font-size:14px;white-space:pre-wrap}
+.hq .rev{display:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;font-size:13.5px}
+.hq .rev.show{display:block}
+.toggle{background:#eef4fb;border:1px solid #c5dbf2;color:var(--blue-d);border-radius:5px;padding:5px 11px;font-size:12.5px;font-weight:600;cursor:pointer;margin-top:8px}
+.empty{color:var(--muted);font-size:13px;font-style:italic}
+code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:13px}
+.foot{font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>GATE CSE &mdash; Daily Practice Mock Test</h1>
+  <div class="sub">
+    <span class="badge">Unit 16</span>
+    <span class="badge">Logic &amp; Proof Techniques</span>
+    <span class="badge">25 Questions</span>
+    <span class="badge">45 minutes</span>
+    <span class="badge">Date: 25-10-2026</span>
+  </div>
+</header>
+
+<div class="tabs">
+  <button id="tabTest" class="active" onclick="showTab('test')">Active Mock Test</button>
+  <button id="tabBank" onclick="showTab('bank')">Historical Question Bank</button>
+</div>
+
+<main>
+  <!-- ============ ACTIVE TEST ============ -->
+  <section id="view-test">
+    <div class="note">
+      <b>Mock Test Mode.</b> This is today's 25-question set for <b>Unit 16 &mdash; Logic &amp; Proof Techniques</b>
+      (day index = (25-10-2026 &minus; 26-10-2026) mod 16 = (&minus;1) mod 16 = <b>15 &rarr; Unit 16</b>).
+      Composition: 15 MCQ (single correct) + 5 MSQ (one or more correct) + 5 NAT (numeric answer).
+      No answer, option-mark or hint is shown until you press <b>Submit Test</b>. The marking scheme below is a
+      <i>practice-test assumption</i>, not an official GATE scheme.
+    </div>
+    <div class="exam-layout">
+      <div>
+        <div class="result" id="resultBox"></div>
+        <div id="qArea"></div>
+      </div>
+      <aside class="sidebar">
+        <div class="timer" id="timer">45:00</div>
+        <div class="timer-label">Time remaining</div>
+        <div class="palette" id="palette"></div>
+        <div class="legend">
+          <span><i class="dot" style="background:#fff"></i> Not visited</span>
+          <span><i class="dot" style="background:#2e7d32"></i> Answered</span>
+          <span><i class="dot" style="background:#fdeaea;border-color:#e8a9a9"></i> Visited, not answered</span>
+        </div>
+        <button class="btn btn-primary" id="submitBtn" onclick="submitTest()">Submit Test</button>
+        <button class="btn btn-ghost" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ HISTORICAL BANK ============ -->
+  <section id="view-bank" hidden>
+    <h2 class="sec">Historical Question Bank &mdash; Discrete Mathematics (all 16 units)</h2>
+    <div class="note">
+      This section is kept <b>separate from today's 25-question mock test</b> and never counts toward it.
+      Questions already generated/solved in earlier runs are preserved here under their unit, topic and subtopic
+      headings, with their original answer, solution, difficulty and source classification. This is the
+      <b>first generation run (25-10-2026)</b>, so only Unit 16 is populated &mdash; seeded with the verified GATE
+      previous-year questions found for this unit. Verified PYQ provenance is stated; nothing is invented.
+    </div>
+    <div id="bankArea"></div>
+  </section>
+
+  <div class="foot">
+    Generated 25-10-2026 for SRIHARI V B &middot; GATE CSE 2027 preparation &middot;
+    Method: GATE CSE Question Bank skill (concept map, five source categories, MCQ/MSQ/NAT mix, difficulty ladder,
+    full solutions, verification). Official PYQs are labelled only where year/paper provenance was verified.
+  </div>
+</main>
+
+<script>
+/* ------------------------------------------------------------------
+   QUESTION DATA  (answers live here but are rendered ONLY after submit)
+   ------------------------------------------------------------------ */
+const QUESTIONS = [
+ {
+  "id": "DM-LPT-E-01",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Disproving universal statements (counterexample)",
+  "q": "To disprove the statement  ∀n∈ℤ, P(n),  which of the following is logically correct AND sufficient?",
+  "opts": [
+   "Exhibit one integer n for which P(n) is false.",
+   "Prove that P(n) is true for every integer n.",
+   "Prove that P(n) is true for at least one integer n.",
+   "Prove that P(n) is false for every integer n."
+  ],
+  "ans": 0,
+  "concept": "The negation of a universal statement is an existential statement: ¬(∀n P(n)) ≡ ∃n ¬P(n).",
+  "steps": [
+   "A universal claim is false as soon as a single instance fails.",
+   "Such a failing instance is a counterexample.",
+   "So one integer n with ¬P(n) is both necessary and sufficient to disprove ∀n P(n)."
+  ],
+  "final": "Option (A).",
+  "mis": "Many students think a universal statement can only be refuted by proving the opposite for all n, or by finding a counterexample that is 'typical'. One valid counterexample is enough.",
+  "fast": "Remember: disprove ∀ with one ∃-counterexample; disprove ∃ by showing ∀¬ (no example exists)."
+ },
+ {
+  "id": "DM-LPT-E-02",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Contrapositive",
+  "q": "The contrapositive of the implication  \"If n² is even, then n is even\"  is:",
+  "opts": [
+   "If n is even, then n² is even.",
+   "If n² is odd, then n is odd.",
+   "If n is odd, then n² is odd.",
+   "If n is even, then n² is odd."
+  ],
+  "ans": 2,
+  "concept": "The contrapositive of p → q is ¬q → ¬p, and it is logically equivalent to the original.",
+  "steps": [
+   "Here p = \"n² is even\", q = \"n is even\".",
+   "¬q = \"n is odd\", ¬p = \"n² is odd\".",
+   "Contrapositive: \"If n is odd, then n² is odd\"."
+  ],
+  "final": "Option (C).",
+  "mis": "Option (B) is the inverse ¬p → ¬q, which is equivalent to the converse, not the original. Students often swap contrapositive and inverse.",
+  "fast": "Contrapositive = negate both, then swap. Inverse = negate both, keep order. Converse = swap only."
+ },
+ {
+  "id": "DM-LPT-E-03",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Necessity & Sufficiency",
+  "sub": "Sufficient condition",
+  "q": "The statement  \"p is sufficient for q\"  is formally written as:",
+  "opts": [
+   "q → p",
+   "p → q",
+   "p ↔ q",
+   "¬p → ¬q"
+  ],
+  "ans": 1,
+  "concept": "Sufficient condition = the antecedent of the implication. Necessary condition = the consequent.",
+  "steps": [
+   "\"p is sufficient for q\" means: the truth of p guarantees the truth of q.",
+   "That is exactly p → q."
+  ],
+  "final": "Option (B).",
+  "mis": "Confusing 'sufficient' with 'necessary'. p sufficient for q is p→q; p necessary for q is q→p.",
+  "fast": "Sufficient sits on the left of →; necessary sits on the right."
+ },
+ {
+  "id": "DM-LPT-E-04",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Proof by contradiction",
+  "q": "The standard proof that √2 is irrational begins by assuming √2 = a/b with gcd(a,b) = 1 and derives that both a and b are even. This is an example of:",
+  "opts": [
+   "Direct proof",
+   "Proof by cases",
+   "Proof by counterexample",
+   "Proof by contradiction"
+  ],
+  "ans": 3,
+  "concept": "In a proof by contradiction we assume the negation of the claim and derive an impossibility.",
+  "steps": [
+   "Assume the negation: √2 is rational, √2 = a/b in lowest terms.",
+   "Derive a = 2m and b = 2n, so gcd(a,b) ≥ 2.",
+   "This contradicts gcd(a,b) = 1, so the assumption is false."
+  ],
+  "final": "Option (D).",
+  "mis": "Students sometimes call this a 'contrapositive' proof. It is a contradiction proof: we assume the opposite of the whole statement, not the negation of the conclusion of an implication.",
+  "fast": "Rationality of √2, infinitude of primes, and √2 + √3 irrationality are all classic contradiction proofs."
+ },
+ {
+  "id": "DM-LPT-E-05",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Proof of biconditionals (iff)",
+  "q": "To prove a statement of the form  p ↔ q,  it is necessary and sufficient to prove:",
+  "opts": [
+   "p → q only",
+   "q → p only",
+   "both p → q and q → p",
+   "neither direction"
+  ],
+  "ans": 2,
+  "concept": "p ↔ q ≡ (p → q) ∧ (q → p).",
+  "steps": [
+   "A biconditional is the conjunction of the two implications.",
+   "Hence both directions must be established.",
+   "One may also build a chain of equivalences p ↔ r₁ ↔ r₂ ↔ q."
+  ],
+  "final": "Option (C).",
+  "mis": "Proving only one direction is a common error; a one-way proof does not establish 'if and only if'.",
+  "fast": "'iff' proofs: prove 'necessary' and 'sufficient' (or 'only if' and 'if') separately."
+ },
+ {
+  "id": "DM-LPT-E-06",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Converse / inverse / contrapositive",
+  "q": "For the statement  \"If x > 3, then x² > 9\",  which of the following is its CONVERSE?",
+  "opts": [
+   "If x² > 9, then x > 3.",
+   "If x ≤ 3, then x² ≤ 9.",
+   "If x² ≤ 9, then x ≤ 3.",
+   "x > 3 if and only if x² > 9."
+  ],
+  "ans": 0,
+  "concept": "Converse of p → q is q → p.",
+  "steps": [
+   "p = \"x > 3\", q = \"x² > 9\".",
+   "Converse = q → p = \"If x² > 9, then x > 3\"."
+  ],
+  "final": "Option (A).",
+  "mis": "Option (B) is the inverse and (C) is the contrapositive. A converse is not logically equivalent to the original.",
+  "fast": "Converse swaps; inverse negates; contrapositive does both. Only the contrapositive is equivalent."
+ },
+ {
+  "id": "DM-LPT-E-07",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Counterexample over the reals",
+  "q": "Consider the statement:  \"For every real number x, if x² = 4, then x = 2.\"  Which of the following correctly assesses it?",
+  "opts": [
+   "True; provable directly.",
+   "False; x = −2 is a counterexample.",
+   "False; x = 4 is a counterexample.",
+   "True; provable by contradiction."
+  ],
+  "ans": 1,
+  "concept": "A universally quantified implication fails if some x makes the hypothesis true and the conclusion false.",
+  "steps": [
+   "Take x = −2. Then x² = 4 (hypothesis true) but x ≠ 2 (conclusion false).",
+   "So the statement is false."
+  ],
+  "final": "Option (B).",
+  "mis": "x = 4 does not satisfy x² = 4, so it is not a counterexample — students often pick any 'unusual' value without checking the hypothesis.",
+  "fast": "Always verify a counterexample actually satisfies the hypothesis before using it."
+ },
+ {
+  "id": "DM-LPT-E-08",
+  "type": "mcq",
+  "diff": "Moderate",
+  "cat": "GateOverflow-inspired",
+  "topic": "Proof Techniques",
+  "sub": "Rules of inference (valid vs fallacious)",
+  "q": "Which of the following is a VALID rule of inference?",
+  "opts": [
+   "From p → q and q, infer p.",
+   "From p → q and ¬p, infer ¬q.",
+   "From p → q and ¬q, infer ¬p.",
+   "From p → q and p, infer ¬q."
+  ],
+  "ans": 2,
+  "concept": "Modus tollens: (p → q) ∧ ¬q ⇒ ¬p is valid. Affirming the consequent and denying the antecedent are fallacies.",
+  "steps": [
+   "(A) affirms the consequent — invalid.",
+   "(B) denies the antecedent — invalid.",
+   "(C) modus tollens — valid.",
+   "(D) contradicts modus ponens — invalid."
+  ],
+  "final": "Option (C).",
+  "mis": "The two most common fallacies are 'affirming the consequent' and 'denying the antecedent'; both look like modus ponens/tollens but are invalid.",
+  "fast": "Valid: modus ponens, modus tollens, hypothetical syllogism, disjunctive syllogism, resolution."
+ },
+ {
+  "id": "DM-LPT-E-09",
+  "type": "mcq",
+  "diff": "Moderate",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Choosing contrapositive",
+  "q": "To prove  \"if n is an integer and n² is odd, then n is odd\",  the cleanest standard approach is:",
+  "opts": [
+   "A direct proof expanding n² as a general integer.",
+   "Proof by contrapositive: assume n is even and show n² is even.",
+   "Proof by counterexample.",
+   "Proof by checking n = 1, 3, 5, …"
+  ],
+  "ans": 1,
+  "concept": "When the conclusion is hard to use directly, prove the contrapositive instead.",
+  "steps": [
+   "Contrapositive: if n is even, then n² is even.",
+   "Let n = 2k; then n² = 4k² = 2(2k²), which is even.",
+   "Done."
+  ],
+  "final": "Option (B).",
+  "mis": "A direct proof of the original is awkward because 'n² odd' is hard to unpack; the contrapositive makes the algebra trivial.",
+  "fast": "If the hypothesis is a 'negative' or awkward property (odd, irrational, not divisible), try the contrapositive."
+ },
+ {
+  "id": "DM-LPT-E-10",
+  "type": "mcq",
+  "diff": "Moderate",
+  "cat": "GateOverflow-inspired",
+  "topic": "Necessity & Sufficiency",
+  "sub": "Necessary condition",
+  "q": "The phrase  \"a is necessary for b\"  is logically equivalent to:",
+  "opts": [
+   "a → b",
+   "¬a → b",
+   "a ↔ b",
+   "b → a"
+  ],
+  "ans": 3,
+  "concept": "'a is necessary for b' means b cannot hold without a, i.e. b → a.",
+  "steps": [
+   "If a were absent, b could not occur.",
+   "So b ⇒ a, written b → a."
+  ],
+  "final": "Option (D).",
+  "mis": "Reading 'necessary' as the antecedent. Necessary = consequent side: b → a.",
+  "fast": "Necessary = 'only if'. 'b only if a' is b → a."
+ },
+ {
+  "id": "DM-LPT-E-11",
+  "type": "mcq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Counterexample over the reals",
+  "q": "Consider the statement:  \"For every real number x, x² > x.\"  Which of the following is a correct disproof?",
+  "opts": [
+   "x = 0.5",
+   "x = 2",
+   "x = −1",
+   "x = 3"
+  ],
+  "ans": 0,
+  "concept": "x² > x fails exactly when 0 ≤ x ≤ 1.",
+  "steps": [
+   "x² − x > 0 ⇔ x(x−1) > 0 ⇔ x < 0 or x > 1.",
+   "So the statement fails for every x in [0,1].",
+   "x = 0.5 gives 0.25 > 0.5, which is false — a counterexample."
+  ],
+  "final": "Option (A).",
+  "mis": "Choosing a value such as x = 2 (which satisfies the inequality) instead of a failing value.",
+  "fast": "Solve the inequality first; the complement of its solution set is exactly where counterexamples live."
+ },
+ {
+  "id": "DM-LPT-E-12",
+  "type": "mcq",
+  "diff": "Moderate",
+  "cat": "GateOverflow-inspired",
+  "topic": "Proof Techniques",
+  "sub": "Vacuous truth",
+  "q": "Consider the statement:  \"For every real number x, if x² < 0, then x = 7.\"  Which of the following is correct?",
+  "opts": [
+   "False, because x = 7 does not satisfy x² < 0.",
+   "True only for x = 7.",
+   "Vacuously true, because no real x satisfies x² < 0.",
+   "Neither true nor false."
+  ],
+  "ans": 2,
+  "concept": "An implication p → q is true whenever the hypothesis p is false. If p is never true, the universal statement is vacuously true.",
+  "steps": [
+   "For every real x, x² ≥ 0, so x² < 0 is false for all x.",
+   "Each implication instance is therefore true (false → anything is true).",
+   "Hence the universally quantified statement is (vacuously) true."
+  ],
+  "final": "Option (C).",
+  "mis": "Judging the statement 'false' because the conclusion 'x = 7' seems unrelated; the hypothesis is never satisfied, so the implication never fails.",
+  "fast": "Empty-domain / impossible-hypothesis implications are vacuously true — a favourite GATE trap."
+ },
+ {
+  "id": "DM-LPT-E-13",
+  "type": "mcq",
+  "diff": "Moderate",
+  "cat": "NPTEL-inspired",
+  "topic": "Proof Techniques",
+  "sub": "Proof by cases",
+  "q": "Which of the following statements is most naturally proved by a proof by cases (division into cases)?",
+  "opts": [
+   "√2 is irrational.",
+   "There are infinitely many prime numbers.",
+   "2 + 2 = 4.",
+   "For every integer n, |n| ≥ n."
+  ],
+  "ans": 3,
+  "concept": "A proof by cases splits the domain into exhaustive sub-cases and proves the claim in each.",
+  "steps": [
+   "|n| ≥ n: if n ≥ 0 then |n| = n ≥ n; if n < 0 then |n| = −n > n.",
+   "Both cases cover all integers, so the claim holds."
+  ],
+  "final": "Option (D).",
+  "mis": "Choosing √2 irrationality (contradiction) or infinitude of primes (contradiction) — those are not naturally case proofs.",
+  "fast": "Whenever a statement depends on the sign or residue of an integer, a case split (parity, sign, mod k) is usually cleanest."
+ },
+ {
+  "id": "DM-LPT-E-14",
+  "type": "mcq",
+  "diff": "Difficult",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Disproving a restricted universal claim",
+  "q": "A student wishes to disprove the claim  \"Every odd integer greater than or equal to 5 can be written as a sum of three primes.\"  The logically correct strategy is to:",
+  "opts": [
+   "exhibit one odd integer ≥ 5 that cannot be written as a sum of three primes.",
+   "prove the claim for all odd integers ≥ 5.",
+   "exhibit an odd integer less than 5 that is not a sum of three primes.",
+   "show that 3 + 5 + 7 = 15."
+  ],
+  "ans": 0,
+  "concept": "A claim of the form ∀n≥5 (odd(n) → S(n)) is refuted by one qualifying counterexample inside the stated range.",
+  "steps": [
+   "The claim quantifies over odd integers ≥ 5.",
+   "Disproof requires one odd integer ≥ 5 violating S(n).",
+   "A value below 5 is outside the domain and cannot refute the claim."
+  ],
+  "final": "Option (A).",
+  "mis": "Using an out-of-domain value (e.g. n = 1 or 3) as a 'counterexample'. It must satisfy every hypothesis of the claim.",
+  "fast": "A counterexample must lie inside the quantified domain AND satisfy the hypothesis."
+ },
+ {
+  "id": "DM-LPT-E-15",
+  "type": "mcq",
+  "diff": "Difficult",
+  "cat": "GateOverflow-inspired",
+  "topic": "Proof Techniques",
+  "sub": "Equivalence of implication forms",
+  "q": "Which of the following statements about proof techniques is FALSE?",
+  "opts": [
+   "A proof by contrapositive of p → q is a direct proof of ¬q → ¬p.",
+   "Proof by contradiction can be used for statements that are not implications.",
+   "If a statement is proved by contradiction, then its negation is false.",
+   "The inverse ¬p → ¬q of p → q is logically equivalent to p → q."
+  ],
+  "ans": 3,
+  "concept": "p → q is equivalent to its contrapositive ¬q → ¬p, but NOT to its inverse ¬p → ¬q.",
+  "steps": [
+   "(A) True: that is the definition of a contrapositive proof.",
+   "(B) True: contradiction is general (e.g. 'there are infinitely many primes').",
+   "(C) True: deriving a contradiction shows ¬S is impossible, so S holds.",
+   "(D) False: ¬p → ¬q ≡ q → p, the converse, not p → q."
+  ],
+  "final": "Option (D).",
+  "mis": "Believing the inverse is equivalent to the original. Only the contrapositive is equivalent.",
+  "fast": "Equivalent to p→q: itself, its contrapositive. NOT equivalent: converse, inverse."
+ },
+ {
+  "id": "DM-LPT-E-16",
+  "type": "msq",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Propositional Equivalence",
+  "sub": "Equivalent forms of implication",
+  "q": "Which of the following are logically equivalent to  p → q ?  (Select all that apply.)",
+  "opts": [
+   "¬p ∨ q",
+   "¬p → ¬q",
+   "¬q → ¬p",
+   "¬(p ∧ ¬q)"
+  ],
+  "ans": [
+   0,
+   2,
+   3
+  ],
+  "concept": "p → q ≡ ¬p ∨ q ≡ ¬q → ¬p ≡ ¬(p ∧ ¬q).",
+  "steps": [
+   "Material implication: p → q ≡ ¬p ∨ q.",
+   "Contrapositive: p → q ≡ ¬q → ¬p.",
+   "Negation of conjunction: ¬p ∨ q ≡ ¬(p ∧ ¬q).",
+   "¬p → ¬q ≡ p ∨ ¬q ≡ q → p, the converse — not equivalent."
+  ],
+  "final": "Options (A), (C) and (D).",
+  "mis": "Including (B): the inverse is equivalent to the converse, not to the original implication.",
+  "fast": "Memorise the three equivalent rewrites of an implication; the inverse is never one of them."
+ },
+ {
+  "id": "DM-LPT-E-17",
+  "type": "msq",
+  "diff": "Moderate",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Contrapositive vs contradiction",
+  "q": "Which of the following statements are TRUE?  (Select all that apply.)",
+  "opts": [
+   "Every proof by contrapositive of p → q can also be phrased as a proof by contradiction.",
+   "Every proof by contradiction is a proof by contrapositive.",
+   "A proof by contrapositive of p → q proceeds by proving ¬q → ¬p directly.",
+   "A proof by contradiction of p → q may assume both p and ¬q and derive a contradiction."
+  ],
+  "ans": [
+   0,
+   2,
+   3
+  ],
+  "concept": "Contrapositive is a special, direct way of doing what contradiction does indirectly.",
+  "steps": [
+   "(A) True: assume p and ¬q, the contrapositive derivation gives a contradiction.",
+   "(B) False: contradiction applies to non-implication statements too.",
+   "(C) True: that is the definition.",
+   "(D) True: assuming p and ¬q is the standard contradiction setup for an implication."
+  ],
+  "final": "Options (A), (C) and (D).",
+  "mis": "Thinking the two methods are identical. Contrapositive is strictly a proof of ¬q → ¬p; contradiction is more general.",
+  "fast": "Contrapositive ⊂ contradiction: every contrapositive proof is a contradiction proof, not vice versa."
+ },
+ {
+  "id": "DM-LPT-E-18",
+  "type": "msq",
+  "diff": "Moderate",
+  "cat": "NPTEL-inspired",
+  "topic": "Proof Techniques",
+  "sub": "Truth of converse/inverse/contrapositive",
+  "q": "Let S be the statement:  \"If a positive integer is divisible by 6, then it is divisible by 3.\"  Which of the following are TRUE?  (Select all that apply.)",
+  "opts": [
+   "The converse of S is true.",
+   "The inverse of S is true.",
+   "The contrapositive of S is true.",
+   "S itself is true."
+  ],
+  "ans": [
+   2,
+   3
+  ],
+  "concept": "S is true; its contrapositive is always equivalent to it; the converse and inverse need not be true.",
+  "steps": [
+   "S: 6 | n ⇒ 3 | n. True, since 3 | 6.",
+   "Contrapositive: 3 ∤ n ⇒ 6 ∤ n. True (equivalent to S).",
+   "Converse: 3 | n ⇒ 6 | n. False, e.g. n = 9.",
+   "Inverse: 6 ∤ n ⇒ 3 ∤ n. False, e.g. n = 9."
+  ],
+  "final": "Options (C) and (D).",
+  "mis": "Assuming that if an implication is true then its converse is too. Converse and inverse can both fail.",
+  "fast": "Test converse/inverse with a small counterexample (here n = 9)."
+ },
+ {
+  "id": "DM-LPT-E-19",
+  "type": "msq",
+  "diff": "Difficult",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Multiple valid proof strategies",
+  "q": "Consider the claim  C: \"For every integer n, n² + n is even.\"  Which of the following are VALID ways to establish C?  (Select all that apply.)",
+  "opts": [
+   "Disproof by exhibiting n = 2.",
+   "Proof by cases: consider n even and n odd separately.",
+   "Proof by contradiction: suppose n² + n is odd and derive a contradiction.",
+   "Rewrite n² + n = n(n + 1) and note one of two consecutive integers is even."
+  ],
+  "ans": [
+   1,
+   2,
+   3
+  ],
+  "concept": "Parity of n² + n can be shown by cases, by contradiction, or by a product-of-consecutive-integers argument.",
+  "steps": [
+   "(B) Valid: n = 2k → n²+n = 2(2k²+k); n = 2k+1 → n²+n = 2(2k²+3k+1).",
+   "(C) Valid: assuming odd leads to n(n+1) odd, impossible for consecutive integers.",
+   "(A) Invalid: n = 2 satisfies C, it is not a disproof.",
+   "(D) Valid: of n and n+1 one is even, so the product is even."
+  ],
+  "final": "Options (B), (C) and (D).",
+  "mis": "Thinking a single verified example (n = 2) 'proves' or 'disproves' a universal claim. Examples never prove a universal statement.",
+  "fast": "n² + n is always even — a template result worth memorising for parity arguments."
+ },
+ {
+  "id": "DM-LPT-E-20",
+  "type": "msq",
+  "diff": "Moderate",
+  "cat": "GateOverflow-inspired",
+  "topic": "Necessity & Sufficiency",
+  "sub": "Implication chains and biconditionals",
+  "q": "Which of the following statements are TRUE?  (Select all that apply.)",
+  "opts": [
+   "If p → q is true, then its converse q → p must also be true.",
+   "'p is necessary for q' is equivalent to q → p.",
+   "If p → q and q → r are both true, then p → r is true.",
+   "p ↔ q is true exactly when p and q have the same truth value."
+  ],
+  "ans": [
+   1,
+   2,
+   3
+  ],
+  "concept": "Necessity, hypothetical syllogism, and the truth condition for a biconditional.",
+  "steps": [
+   "(B) True by definition of a necessary condition.",
+   "(C) True: hypothetical syllogism (transitivity of →).",
+   "(A) False: an implication does not force its converse.",
+   "(D) True: ↔ is true precisely when both sides agree."
+  ],
+  "final": "Options (B), (C) and (D).",
+  "mis": "Treating → as symmetric. Only ↔ is symmetric; → is not.",
+  "fast": "Chain implications freely (transitivity); never reverse a single implication without proof."
+ },
+ {
+  "id": "DM-LPT-E-21",
+  "type": "nat",
+  "diff": "Easy",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Equivalent implication forms",
+  "q": "Let p → q be a true implication that is NOT a biconditional. Among its converse, its inverse and its contrapositive, how many statements are logically equivalent to p → q?\n(Enter an integer.)",
+  "ans": 1,
+  "unit": "integer",
+  "concept": "Only the contrapositive is logically equivalent to p → q.",
+  "steps": [
+   "Converse q → p: not equivalent.",
+   "Inverse ¬p → ¬q: not equivalent.",
+   "Contrapositive ¬q → ¬p: equivalent.",
+   "Count = 1."
+  ],
+  "final": "1",
+  "mis": "Counting the converse and inverse as equivalent. They are equivalent to each other, not to p → q.",
+  "fast": "Of the three derived forms, exactly one (the contrapositive) is always equivalent."
+ },
+ {
+  "id": "DM-LPT-E-22",
+  "type": "nat",
+  "diff": "Moderate",
+  "cat": "Textbook-inspired (Rosen-style)",
+  "topic": "Proof Techniques",
+  "sub": "Counterexample / primality",
+  "q": "Consider the polynomial f(n) = n² + n + 41. Find the SMALLEST positive integer n for which f(n) is NOT prime.\n(Enter an integer.)",
+  "ans": 40,
+  "unit": "integer",
+  "concept": "f(n) = n² + n + 41 is prime for n = 0..39 (Euler's polynomial) but fails at n = 40.",
+  "steps": [
+   "Test the boundary n = 40: f(40) = 1600 + 40 + 41 = 1681.",
+   "1681 = 41², which is composite.",
+   "For n = 1..39, f(n) is prime, so 40 is the smallest positive n that fails."
+  ],
+  "final": "40",
+  "mis": "Stopping the search early and assuming the pattern continues; a single counterexample is decisive, but you must find the smallest one.",
+  "fast": "Euler's n²+n+41 is the classic 'looks always prime' trap; it first fails at n = 40."
+ },
+ {
+  "id": "DM-LPT-E-23",
+  "type": "nat",
+  "diff": "Moderate",
+  "cat": "NPTEL-inspired",
+  "topic": "Validity & Tautology",
+  "sub": "Counting tautologies",
+  "q": "How many of the following four propositions are tautologies?\n  (i)  p → (p ∨ q)\n  (ii) (p ∧ q) → p\n  (iii)(p → q) → (q → p)\n  (iv) (p → q) ↔ (¬p ∨ q)\n(Enter an integer.)",
+  "ans": 3,
+  "unit": "integer",
+  "concept": "A tautology is true for every truth assignment; use the truth table or algebraic equivalences.",
+  "steps": [
+   "(i) p → (p∨q): when p is true p∨q is true; when p is false the implication is true. Tautology.",
+   "(ii) (p∧q) → p: if p∧q true then p true. Tautology.",
+   "(iii)(p→q)→(q→p): p = F, q = T gives (T)→(F) = F. Not a tautology.",
+   "(iv)(p→q)↔(¬p∨q): both sides are the same formula, so it is always true. Tautology.",
+   "Tautologies: (i), (ii), (iv) = 3."
+  ],
+  "final": "3",
+  "mis": "Marking (iii) as a tautology because both components 'look like implications'. Test p = F, q = T.",
+  "fast": "(iv) is an instance of the equivalence p→q ≡ ¬p∨q, so it is a tautology by definition."
+ },
+ {
+  "id": "DM-LPT-E-24",
+  "type": "nat",
+  "diff": "Difficult",
+  "cat": "Original",
+  "topic": "Proof Techniques",
+  "sub": "Counterexamples to a conjecture",
+  "q": "Consider the conjecture:  \"For every integer n ≥ 2, the number 2ⁿ − 1 is prime.\"  How many counterexamples n exist with 2 ≤ n ≤ 10?\n(Enter an integer.)",
+  "ans": 5,
+  "unit": "integer",
+  "concept": "2ⁿ − 1 is prime only for certain n (Mersenne primes); composite values are counterexamples.",
+  "steps": [
+   "n = 2: 3 (prime)",
+   "n = 3: 7 (prime)",
+   "n = 4: 15 = 3·5 (counterexample)",
+   "n = 5: 31 (prime)",
+   "n = 6: 63 = 3·21 (counterexample)",
+   "n = 7: 127 (prime)",
+   "n = 8: 255 = 3·5·17 (counterexample)",
+   "n = 9: 511 = 7·73 (counterexample)",
+   "n = 10: 1023 = 3·11·31 (counterexample)",
+   "Counterexamples: n = 4, 6, 8, 9, 10 → 5."
+  ],
+  "final": "5",
+  "mis": "Forgetting that 2ⁿ − 1 can be prime for some n and composite for others; each composite case counts.",
+  "fast": "If n is composite, 2ⁿ − 1 is composite; but n = 9 (odd composite) and n = 10 also fail here, so check each value."
+ },
+ {
+  "id": "DM-LPT-E-25",
+  "type": "nat",
+  "diff": "Difficult",
+  "cat": "GateOverflow-inspired",
+  "topic": "Validity & Tautology",
+  "sub": "Counting satisfying assignments",
+  "q": "Consider the proposition  (p ∨ q) → (p ∧ q).  Over the four possible truth assignments of (p, q), how many make this proposition TRUE?\n(Enter an integer.)",
+  "ans": 2,
+  "unit": "integer",
+  "concept": "An implication is false only when the antecedent is true and the consequent is false.",
+  "steps": [
+   "(p,q) = (T,T): T → T = T.",
+   "(T,F): T → F = F.",
+   "(F,T): T → F = F.",
+   "(F,F): F → F = T.",
+   "True for 2 assignments."
+  ],
+  "final": "2",
+  "mis": "Assuming (F,F) is false. A false antecedent makes the implication vacuously true.",
+  "fast": "(p∨q) → (p∧q) is true exactly when p and q agree — i.e. it is equivalent to p ↔ q."
+ }
+];
+/* ------------------------------------------------------------------
+   STATE + RENDERING
+   ------------------------------------------------------------------ */
+const state = {};
+let submitted = false;
+let timerId = null;
+let secondsLeft = 45*60;
+
+function showTab(which){
+  document.getElementById('view-test').hidden = (which!=='test');
+  document.getElementById('view-bank').hidden = (which!=='bank');
+  document.getElementById('tabTest').classList.toggle('active', which==='test');
+  document.getElementById('tabBank').classList.toggle('active', which==='bank');
+}
+
+function diffClass(d){return d==='Easy'?'d-easy':(d==='Moderate'?'d-moderate':'d-hard');}
+function typeClass(t){return t==='mcq'?'t-mcq':(t==='msq'?'t-msq':'t-nat');}
+function typeLabel(t){return t==='mcq'?'MCQ \u00b7 single correct':(t==='msq'?'MSQ \u00b7 one or more correct':'NAT \u00b7 numeric answer');}
+
+function renderTest(){
+  const area = document.getElementById('qArea');
+  area.innerHTML = '';
+  QUESTIONS.forEach((q,i)=>{
+    const card = document.createElement('div');
+    card.className = 'qcard';
+    card.id = 'card-'+i;
+    let html = '<div class="qhead"><div class="qno">Question '+(i+1)+
+      ' <span class="tag '+typeClass(q.type)+'">'+typeLabel(q.type)+'</span>'+
+      '<span class="tag '+diffClass(q.diff)+'">'+q.diff+'</span></div>'+
+      '<div class="qmeta">'+q.topic+' &rsaquo; '+q.sub+'</div></div>';
+    html += '<div class="qtext">'+q.q+'</div>';
+    if(q.type==='mcq' || q.type==='msq'){
+      html += '<div class="opts">';
+      const letters = ['A','B','C','D'];
+      q.opts.forEach((o,j)=>{
+        html += '<label class="opt" id="opt-'+i+'-'+j+'"><input type="'+
+          (q.type==='mcq'?'radio':'checkbox')+'" name="q'+i+'" value="'+j+
+          '" onchange="record('+i+')"><span><b>'+letters[j]+'.</b> '+o+'</span></label>';
+      });
+      html += '</div>';
+    } else {
+      html += '<div class="nat-wrap"><label>Answer: <input type="number" step="any" id="nat-'+i+
+        '" oninput="record('+i+')" placeholder="enter a number"></label></div>';
+    }
+    html += '<div class="sol" id="sol-'+i+'"></div>';
+    card.innerHTML = html;
+    area.appendChild(card);
+  });
+  renderPalette();
+}
+
+function renderPalette(){
+  const p = document.getElementById('palette');
+  p.innerHTML='';
+  QUESTIONS.forEach((q,i)=>{
+    const b=document.createElement('button');
+    b.textContent=(i+1);
+    b.id='pal-'+i;
+    b.onclick=()=>{document.getElementById('card-'+i).scrollIntoView({behavior:'smooth',block:'start'});};
+    p.appendChild(b);
+  });
+  updatePalette();
+}
+
+function isAnswered(i){
+  const q=QUESTIONS[i];
+  if(q.type==='nat'){
+    const v=document.getElementById('nat-'+i).value;
+    return v!=='' && v!==null;
+  }
+  return document.querySelector('input[name="q'+i+'"]:checked')!==null;
+}
+
+function record(i){
+  state[i]=true; // visited/answered tracking handled via isAnswered
+  updatePalette();
+}
+
+function updatePalette(){
+  QUESTIONS.forEach((q,i)=>{
+    const b=document.getElementById('pal-'+i);
+    if(!b) return;
+    b.classList.remove('answered','notans');
+    if(isAnswered(i)) b.classList.add('answered');
+    else if(state[i]) b.classList.add('notans');
+  });
+}
+
+/* ---------------- TIMER ---------------- */
+function startTimer(){
+  const el=document.getElementById('timer');
+  timerId=setInterval(()=>{
+    secondsLeft--;
+    if(secondsLeft<=0){secondsLeft=0;clearInterval(timerId);el.textContent='00:00';submitTest(true);return;}
+    const m=String(Math.floor(secondsLeft/60)).padStart(2,'0');
+    const s=String(secondsLeft%60).padStart(2,'0');
+    el.textContent=m+':'+s;
+    el.classList.toggle('warn', secondsLeft<=300);
+  },1000);
+}
+
+/* ---------------- SUBMIT / EVALUATE ---------------- */
+function submitTest(auto){
+  if(submitted) return;
+  if(!auto){
+    const answered = QUESTIONS.filter((q,i)=>isAnswered(i)).length;
+    if(!confirm('Submit the test now?\nAnswered: '+answered+' / '+QUESTIONS.length+
+      '\nYou cannot change answers after submitting.')) return;
+  }
+  submitted=true;
+  clearInterval(timerId);
+  document.getElementById('submitBtn').disabled=true;
+  document.querySelectorAll('input').forEach(el=>el.disabled=true);
+
+  let correct=0, wrong=0, skipped=0;
+  const breakdown={Easy:[0,0],Moderate:[0,0],Difficult:[0,0]};
+
+  QUESTIONS.forEach((q,i)=>{
+    const letterIndex=['A','B','C','D'];
+    let ok=false, yourLabel='Not attempted';
+    if(q.type==='nat'){
+      const raw=document.getElementById('nat-'+i).value.trim();
+      if(raw===''){ skipped++; }
+      else{
+        const val=parseFloat(raw);
+        ok=(Math.abs(val-q.ans)<1e-9);
+        yourLabel='Your answer: '+raw;
+        if(ok) correct++; else wrong++;
+      }
+      const inp=document.getElementById('nat-'+i);
+      if(raw!==''){ inp.style.borderColor= ok?'#2e7d32':'#c62828'; inp.style.background= ok?'#e9f7ea':'#fdeaea'; }
+    } else {
+      const checked=[...document.querySelectorAll('input[name="q'+i+'"]:checked')].map(e=>parseInt(e.value));
+      if(checked.length===0){ skipped++; }
+      else{
+        const ansArr = Array.isArray(q.ans)?q.ans:[q.ans];
+        const a=ansArr.slice().sort().join(','); const b=checked.slice().sort().join(',');
+        ok=(a===b);
+        yourLabel='Your answer: '+(checked.map(c=>letterIndex[c]).join(', ')||'\u2014');
+        if(ok) correct++; else wrong++;
+      }
+      // colour options
+      const ansArr=Array.isArray(q.ans)?q.ans:[q.ans];
+      ansArr.forEach(j=>{const el=document.getElementById('opt-'+i+'-'+j); if(el) el.classList.add('correct');});
+      checked.forEach(j=>{ if(!ansArr.includes(j)){const el=document.getElementById('opt-'+i+'-'+j); if(el) el.classList.add('wrong');} });
+    }
+    const key=(q.diff==='Easy')?'Easy':(q.diff==='Moderate'?'Moderate':'Difficult');
+    breakdown[key][1]++; if(ok) breakdown[key][0]++;
+    // solution
+    const sol=document.getElementById('sol-'+i);
+    sol.classList.add('show');
+    const ansText = q.type==='nat' ? String(q.ans) : (Array.isArray(q.ans)?q.ans.map(x=>letterIndex[x]).join(', '):letterIndex[q.ans]);
+    const verdict = (q.type==='nat'? (document.getElementById('nat-'+i).value.trim()==='') : (document.querySelectorAll('input[name="q'+i+'"]:checked').length===0));
+    sol.innerHTML =
+      '<h4>Answer</h4><div class="ans">Correct answer: ('+ansText+')</div>'+
+      '<div style="font-size:12.5px;color:#5b6b7a;margin-top:2px">'+yourLabel+'</div>'+
+      '<span class="verdict '+(verdict?'v-skip':(ok?'v-ok':'v-bad'))+'">'+
+        (verdict?'Not attempted':(ok?'Correct':'Incorrect'))+'</span>'+
+      '<h4>Concept</h4><div>'+q.concept+'</div>'+
+      '<h4>Step-by-step reasoning</h4><ul>'+q.steps.map(s=>'<li>'+s+'</li>').join('')+'</ul>'+
+      '<h4>Final answer</h4><div class="ans">'+q.final+'</div>'+
+      '<h4>Common misconception</h4><div class="mis">'+q.mis+'</div>'+
+      '<h4>Faster method / takeaway</h4><div>'+q.fast+'</div>'+
+      '<div style="font-size:12px;color:#5b6b7a;margin-top:8px">Reference category: '+q.cat+
+        ' &middot; ID: '+q.id+' &middot; Difficulty: '+q.diff+'</div>';
+  });
+
+  const pct=Math.round(100*correct/QUESTIONS.length);
+  const box=document.getElementById('resultBox');
+  box.classList.add('show');
+  box.innerHTML='<h2 class="sec" style="margin-top:0">Result &amp; Answer Key</h2>'+
+    '<div class="note" style="border-left-color:#1565c0;color:#1c2733">Practice-test marking assumption: '+
+    '<b>+1 per correct answer, 0 for wrong or unattempted</b> (no negative marking assumed). '+
+    'This is a practice score, <b>not</b> an official GATE score or rank prediction. '+
+    'Detailed solutions for all 25 questions are revealed below each question.</div>'+
+    '<div class="scorebar">'+
+      '<div><b>'+correct+' / 25</b>Correct</div>'+
+      '<div><b>'+wrong+'</b>Incorrect</div>'+
+      '<div><b>'+skipped+'</b>Unattempted</div>'+
+      '<div><b>'+pct+'%</b>Score</div>'+
+      '<div><b>'+breakdown.Easy[0]+'/'+breakdown.Easy[1]+'</b>Easy</div>'+
+      '<div><b>'+breakdown.Moderate[0]+'/'+breakdown.Moderate[1]+'</b>Moderate</div>'+
+      '<div><b>'+breakdown.Difficult[0]+'/'+breakdown.Difficult[1]+'</b>Difficult</div>'+
+    '</div>';
+  box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ------------------------------------------------------------------
+   HISTORICAL QUESTION BANK
+   ------------------------------------------------------------------ */
+const UNITS=[
+ ["Propositional Logic","propositions, connectives, truth tables, logical equivalences, implications, CNF/DNF, validity"],
+ ["Predicate & First-Order Logic","predicates, domain of discourse, free/bound variables, quantifiers, negation of nested quantifiers, translation"],
+ ["Set Theory","subsets, power sets, cardinality, set algebra, De Morgan, inclusion-exclusion, partitions, Cartesian products"],
+ ["Relations","properties, equivalence relations and classes, partial orders, Hasse diagrams, lattices, composition, transitive closure"],
+ ["Functions","injective/surjective/bijective, composition, inverse, counting functions, pigeonhole, floor/ceiling, recursion"],
+ ["Mathematical Induction & Recursion","weak/strong/structural induction, well-ordering, proof techniques, common induction errors"],
+ ["Counting & Combinatorics","permutations, combinations, stars and bars, binomial/multinomial, inclusion-exclusion, pigeonhole, double counting"],
+ ["Recurrence Relations & Generating Functions","characteristic equations, homogeneous/nonhomogeneous, divide-and-conquer, OGFs, coefficient extraction"],
+ ["Graph Theory Fundamentals","degree & handshaking lemma, walks/trails/paths/circuits, connectivity, isomorphism, complete/bipartite graphs"],
+ ["Graph Theory Advanced","Euler & Hamiltonian, planarity & Euler's formula, colouring, trees, spanning trees, network flows"],
+ ["Boolean Algebra & Switching Logic","identities, De Morgan, duality, SOP/POS, minterms/maxterms, Karnaugh maps, simplification"],
+ ["Algebraic Structures","binary operations, semigroups/monoids/groups, Abelian groups, subgroups, cyclic groups, homomorphisms"],
+ ["Lattices & Posets","posets, Hasse diagrams, LUB/GLB, meet/join, bounded/complemented/distributive lattices"],
+ ["Number Theory","divisibility, GCD/LCM, Euclidean algorithm, modular arithmetic, congruences, multiplicative inverses"],
+ ["Discrete Probability","sample spaces, conditional probability, independence, counting-based probability, expectation"],
+ ["Logic & Proof Techniques","direct/contradiction/contrapositive/cases, counterexamples, iff proofs, necessity vs sufficiency"]
+];
+
+const HIST = {
+  15: [ // Unit 16 (index 15)
+   {prov:"Verified official PYQ \u00b7 GATE CSE 2023 (official CS paper, IIT Kanpur; question numbered 25/26 across sources) \u00b7 MSQ \u00b7 Official key: (B) and (C)",
+    topic:"Logic & Proof Techniques", sub:"Implication / sufficiency of quantified statements",
+    diff:"Moderate",
+    q:"Geetha has a conjecture about integers, of the form  \u2200x ( P(x) \u21d2 \u2203y Q(x, y) ),  where P is a statement about integers and Q is a statement about pairs of integers. Which of the following (one or more) option(s) would IMPLY Geetha's conjecture?\n(A) \u2203x ( P(x) \u2227 \u2200y Q(x, y) )\n(B) \u2200x \u2200y Q(x, y)\n(C) \u2203y \u2200x ( P(x) \u21d2 Q(x, y) )\n(D) \u2203x ( P(x) \u2227 \u2203y Q(x, y) )",
+    ans:"(B) and (C)",
+    sol:"Concept: a statement S implies the conjecture G iff S \u21d2 G is valid. (B) \u2200x\u2200y Q(x,y): for any x, pick any y (domain non-empty), then Q(x,y) holds, so \u2203y Q(x,y) holds for every x \u2014 hence G. (C) \u2203y\u2200x(P(x)\u21d2Q(x,y)): a single witness y\u2080 works for all x; for any x with P(x), Q(x,y\u2080) holds, so \u2203y Q(x,y) \u2014 hence G (the rule \u2203y\u2200x \u21d2 \u2200x\u2203y). (A) and (D) are \u2203x statements about a single x and cannot force the property for all x. Misconception: choosing (A)/(D) because they resemble the conjecture, and doubting (C) because of the quantifier order."},
+   {prov:"Verified official PYQ \u00b7 GATE CSE 2015 (paper-set attribution varies across sources: listed as Set 1 Q18 by ExamSIDE and Set 2 Q3 by GATE Overflow) \u00b7 MCQ \u00b7 Official key: (C)",
+    topic:"Logic & Proof Techniques", sub:"Sound inference / hypothetical syllogism",
+    diff:"Moderate",
+    q:"Consider the following two statements.\nS1: If a candidate is known to be corrupt, then he will not be elected.\nS2: If a candidate is kind, he will be elected.\nWhich one of the following statements follows from S1 and S2 as per sound inference rules of logic?\n(A) If a person is known to be corrupt, he is kind.\n(B) If a person is not known to be corrupt, he is not kind.\n(C) If a person is kind, he is not known to be corrupt.\n(D) If a person is not kind, he is not known to be corrupt.",
+    ans:"(C)",
+    sol:"Let C = 'is known to be corrupt', E = 'will be elected', K = 'is kind'. S1: C \u2192 \u00acE. S2: K \u2192 E. Contrapositive of S1: E \u2192 \u00acC. Chain S2 with it (hypothetical syllogism): K \u2192 E \u2192 \u00acC, i.e. K \u2192 \u00acC \u2014 'if a person is kind, he is not known to be corrupt', which is (C). (A) is the inverse of S1 chained wrongly; (B) is the inverse of the correct conclusion; (D) is equivalent to (A). Misconception: using the inverse/converse instead of the contrapositive when chaining implications."}
+  ]
+};
+
+function renderBank(){
+  const area=document.getElementById('bankArea');
+  let html='';
+  UNITS.forEach((u,idx)=>{
+    const items=HIST[idx]||[];
+    const open = (idx===15 && items.length)?' open':'';
+    html+='<details class="acc"'+open+'><summary>Unit '+(idx+1)+': '+u[0]+'</summary><div class="body">'+
+      '<div style="font-size:12.5px;color:#5b6b7a">GATE focus areas: '+u[1]+'</div>';
+    if(items.length===0){
+      html+='<div class="empty">No historical questions recorded yet. This unit will be populated on its scheduled day.</div>';
+    } else {
+      // group by topic then subtopic
+      const byTopic={};
+      items.forEach(it=>{ (byTopic[it.topic]=byTopic[it.topic]||[]).push(it); });
+      Object.keys(byTopic).forEach(t=>{
+        html+='<div class="topic-h">Topic: '+t+'</div>';
+        const bySub={};
+        byTopic[t].forEach(it=>{ (bySub[it.sub]=bySub[it.sub]||[]).push(it); });
+        Object.keys(bySub).forEach(s=>{
+          html+='<div class="sub-h">Subtopic: '+s+'</div>';
+          bySub[s].forEach((it,k)=>{
+            const uid='h'+idx+'_'+t.replace(/\W/g,'')+'_'+k;
+            html+='<div class="hq"><div class="prov">'+it.prov+' \u00b7 Difficulty: '+it.diff+'</div>'+
+              '<div class="hqtext">'+it.q+'</div>'+
+              '<button class="toggle" onclick="var r=document.getElementById(\''+uid+'\');r.classList.toggle(\'show\');this.textContent=r.classList.contains(\'show\')?\'Hide answer & solution\':\'Show answer & solution\'">Show answer &amp; solution</button>'+
+              '<div class="rev" id="'+uid+'"><div class="ans">Answer: '+it.ans+'</div><div style="margin-top:6px">'+it.sol+'</div></div>'+
+            '</div>';
+          });
+        });
+      });
+    }
+    html+='</div></details>';
+  });
+  area.innerHTML=html;
+}
+
+/* ---------------- INIT ---------------- */
+renderTest();
+renderBank();
+startTimer();
+</script>
+</body>
+</html>
