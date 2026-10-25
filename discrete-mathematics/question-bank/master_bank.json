@@ -6,12 +6,13 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-26",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 275,
+  "total_questions": 300,
   "units_with_questions": [
    1,
    2,
    3,
    4,
+   5,
    16
   ]
  },
@@ -305,6 +306,33 @@
     "counting-relations"
    ],
    "note": "Second set for Unit 4 on this date. Unit 4 held 25 banked questions and had been current for 0 days, so it stayed under the 50-question cap and the rotation re-selected it: 25 + 25 = 50, which closes Unit 4 at the cap. No question repeats Set 1; the two sets share no id, stem or numeric answer."
+  },
+  {
+   "date": "2026-10-26",
+   "run": 1,
+   "set": "Set 1",
+   "unit": 5,
+   "unit_name": "Functions",
+   "file": "discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "types-injective-surjective-bijective",
+    "composition-and-inverses",
+    "counting-functions",
+    "pigeonhole-principle",
+    "floor-ceiling-recursion"
+   ],
+   "note": "First paper for Unit 5. Unit 4 reached the 50-question cap (50 banked), so the rotation advanced (3 + 1) mod 16 = 4 -> Unit 5, Functions. No earlier paper existed for this unit, so nothing was archived."
   }
  ],
  "verified_pyqs": [
@@ -12137,6 +12165,1119 @@
    "subtopic": "composition-transitive-closure",
    "subtopic_label": "Composition & transitive closure",
    "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q01",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Injective / surjective / bijective",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">f : ℤ → ℤ</span> be defined by <span class=\"mm\">f(x) = 2x</span>. Which one of the following describes <span class=\"mm\">f</span> correctly?",
+   "options": [
+    "<span class=\"mm\">f</span> is bijective.",
+    "<span class=\"mm\">f</span> is injective but not surjective.",
+    "<span class=\"mm\">f</span> is surjective but not injective.",
+    "<span class=\"mm\">f</span> is neither injective nor surjective."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Injectivity asks whether two different inputs can share an output; surjectivity asks whether every element of the codomain is hit at all. On infinite domains the two are independent.",
+    "steps": [
+     "Suppose <span class=\"mm\">f(a) = f(b)</span>, i.e. <span class=\"mm\">2a = 2b</span>. Dividing by 2 gives <span class=\"mm\">a = b</span>, so <span class=\"mm\">f</span> is injective.",
+     "Now take the codomain element 3. If <span class=\"mm\">2x = 3</span> then <span class=\"mm\">x = 3/2</span>, which is not an integer, so 3 has no preimage in <span class=\"mm\">ℤ</span>.",
+     "More generally only even integers are values of <span class=\"mm\">f</span>, so the image is <span class=\"mm\">2ℤ ⊊ ℤ</span>.",
+     "Hence <span class=\"mm\">f</span> is injective and not surjective."
+    ],
+    "final": "Option (B) — injective, not surjective.",
+    "why_wrong": [
+     "(A) fails: odd integers such as 3 are never attained, so <span class=\"mm\">f</span> is not onto.",
+     "(C) fails: doubling is one-to-one, so it is not \"onto but not one-to-one\".",
+     "(D) fails: injectivity is already proved in step 1."
+    ],
+    "misconception": "Students transfer the finite-set rule \"injective ⇔ surjective\" to <span class=\"mm\">ℤ</span>. That equivalence needs the domain and codomain to be finite of equal size; on infinite sets <span class=\"mm\">x ↦ 2x</span> is injective but leaves half the codomain untouched.",
+    "faster": "Check surjectivity first with a single odd target such as 3. One missing preimage settles the question, and injectivity of a linear map is immediate from the slope.",
+    "takeaway": "On infinite sets, injective does not imply surjective: the classic witness is <span class=\"mm\">f(x) = 2x</span> on <span class=\"mm\">ℤ</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "types-injective-surjective-bijective",
+   "subtopic_label": "Injective / surjective / bijective",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q02",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Injective / surjective / bijective",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">ℤ⁺ = {1, 2, 3, …}</span>. Which one of the following functions <span class=\"mm\">f : ℤ⁺ → ℤ⁺</span> is surjective (onto)?",
+   "options": [
+    "<span class=\"mm\">f(n) = n + 1</span>",
+    "<span class=\"mm\">f(n) = 2n</span>",
+    "<span class=\"mm\">f(n) = ⌈n/2⌉</span>",
+    "<span class=\"mm\">f(n) = n²</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "A function into <span class=\"mm\">ℤ⁺</span> is surjective when every positive integer occurs as a value. For a candidate, the quickest test is to try to hit a small target such as 1.",
+    "steps": [
+     "(A) <span class=\"mm\">n + 1 ≥ 2</span> for every <span class=\"mm\">n ≥ 1</span>, so 1 is never attained. Not surjective.",
+     "(B) <span class=\"mm\">2n</span> is even, so 1 (and every odd number) is missed. Not surjective.",
+     "(C) <span class=\"mm\">⌈n/2⌉</span> takes the values 1, 1, 2, 2, 3, 3, … for <span class=\"mm\">n = 1, 2, 3, 4, 5, 6, …</span>. Every <span class=\"mm\">k ∈ ℤ⁺</span> is attained, for instance at <span class=\"mm\">n = 2k − 1</span>. Surjective.",
+     "(D) <span class=\"mm\">n²</span> attains only perfect squares, so 2 is missed. Not surjective."
+    ],
+    "final": "Option (C) — <span class=\"mm\">f(n) = ⌈n/2⌉</span>.",
+    "why_wrong": [
+     "(A) and (B) are strictly increasing with image bounded below by 2 and by the even numbers respectively.",
+     "(D) misses every non-square."
+    ],
+    "misconception": "Assuming a \"spreading out\" function such as <span class=\"mm\">2n</span> covers everything because it grows. Growth is irrelevant to surjectivity; what matters is which values are hit.",
+    "faster": "For each option, ask \"can it produce 1?\" Only (C) can.",
+    "takeaway": "<span class=\"mm\">⌈n/2⌉</span> is the standard example of a surjective non-injective map on <span class=\"mm\">ℤ⁺</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "types-injective-surjective-bijective",
+   "subtopic_label": "Injective / surjective / bijective",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q03",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Injective / surjective / bijective",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">A</span> and <span class=\"mm\">B</span> be finite sets with <span class=\"mm\">|A| = |B| = n ≥ 1</span>, and let <span class=\"mm\">f : A → B</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "If <span class=\"mm\">f</span> is injective, then <span class=\"mm\">f</span> is bijective.",
+    "If <span class=\"mm\">f</span> is surjective, then <span class=\"mm\">f</span> is bijective.",
+    "Every function <span class=\"mm\">f : A → B</span> is bijective.",
+    "If <span class=\"mm\">f</span> is bijective, then <span class=\"mm\">f</span> has an inverse function <span class=\"mm\">f⁻¹ : B → A</span>."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "For a function between finite sets of equal size, injective, surjective and bijective are the same condition. That is the pigeonhole principle in disguise.",
+    "steps": [
+     "If <span class=\"mm\">f</span> is injective, its <span class=\"mm\">n</span> inputs give <span class=\"mm\">n</span> distinct outputs inside an <span class=\"mm\">n</span>-element codomain, so every element of <span class=\"mm\">B</span> is used: <span class=\"mm\">f</span> is also surjective, hence bijective. (A) is TRUE.",
+     "If <span class=\"mm\">f</span> is surjective, all <span class=\"mm\">n</span> elements of <span class=\"mm\">B</span> are hit; <span class=\"mm\">n</span> hits from <span class=\"mm\">n</span> inputs with no repeats is impossible unless each output is hit exactly once. So <span class=\"mm\">f</span> is injective, hence bijective. (B) is TRUE.",
+     "(C) is FALSE: with <span class=\"mm\">A = B = {1, 2}</span>, the constant map <span class=\"mm\">f ≡ 1</span> is a function but not bijective.",
+     "A bijection has an inverse: <span class=\"mm\">f⁻¹(y)</span> is the unique <span class=\"mm\">x</span> with <span class=\"mm\">f(x) = y</span>. (D) is TRUE."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "why_wrong": [
+     "(C) is the trap: existence of a function is not existence of a bijection. Most maps between equal finite sets are not bijections."
+    ],
+    "misconception": "Reading \"injective implies bijective\" as a universal law. It holds only because <span class=\"mm\">|A| = |B|</span> is finite; drop either hypothesis and it fails.",
+    "faster": "Memorise the finite equal-cardinality triangle: injective ⇔ surjective ⇔ bijective. Then (A) and (B) are immediate and (C) is obviously too strong.",
+    "takeaway": "On finite sets of equal size, one-to-one and onto are the same test; on infinite sets they are not."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "types-injective-surjective-bijective",
+   "subtopic_label": "Injective / surjective / bijective",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q04",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Injective / surjective / bijective",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">f : ℝ → ℝ</span> be defined by <span class=\"mm\">f(x) = x / (x² + 1)</span>. Which one of the following is TRUE?",
+   "options": [
+    "<span class=\"mm\">f</span> is injective but not surjective.",
+    "<span class=\"mm\">f</span> is surjective but not injective.",
+    "<span class=\"mm\">f</span> is neither injective nor surjective.",
+    "<span class=\"mm\">f</span> is bijective."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "Injectivity is destroyed by a single collision <span class=\"mm\">f(a) = f(b)</span> with <span class=\"mm\">a ≠ b</span>. Surjectivity onto <span class=\"mm\">ℝ</span> is destroyed by showing the range is bounded.",
+    "steps": [
+     "Collision: <span class=\"mm\">f(2) = 2/5</span> and <span class=\"mm\">f(1/2) = (1/2)/(5/4) = 2/5</span>. Since <span class=\"mm\">2 ≠ 1/2</span>, <span class=\"mm\">f</span> is not injective.",
+     "In general <span class=\"mm\">f(x) = f(1/x)</span> for <span class=\"mm\">x ≠ 0</span>, so every value away from 0 is taken at least twice.",
+     "Range: by AM–GM, <span class=\"mm\">x² + 1 ≥ 2|x|</span>, so <span class=\"mm\">|f(x)| ≤ 1/2</span>, with equality at <span class=\"mm\">x = ±1</span>.",
+     "Values such as 1 lie outside <span class=\"mm\">[−1/2, 1/2]</span>, so <span class=\"mm\">f</span> is not surjective onto <span class=\"mm\">ℝ</span>.",
+     "Therefore <span class=\"mm\">f</span> is neither injective nor surjective."
+    ],
+    "final": "Option (C) — neither injective nor surjective.",
+    "why_wrong": [
+     "(A) fails because of the collision <span class=\"mm\">f(2) = f(1/2)</span>.",
+     "(B) fails because the range is confined to <span class=\"mm\">[−1/2, 1/2]</span>.",
+     "(D) fails on both counts."
+    ],
+    "misconception": "Testing injectivity only with integers, or assuming a bounded, symmetric-looking curve must still be one-to-one. The symmetry <span class=\"mm\">f(x) = f(1/x)</span> is exactly what breaks injectivity.",
+    "faster": "Boundedness settles surjectivity in one line. For injectivity, look for symmetry: any <span class=\"mm\">f</span> with <span class=\"mm\">f(x) = f(1/x)</span> or <span class=\"mm\">f(x) = f(−x)</span> is immediately non-injective.",
+    "takeaway": "A function can fail injectivity (symmetry) and surjectivity (bounded range) at the same time; check each property separately."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "types-injective-surjective-bijective",
+   "subtopic_label": "Injective / surjective / bijective",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q05",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Injective / surjective / bijective",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">f : ℝ → ℝ</span> be defined by <span class=\"mm\">f(x) = x² − 4x + 7</span>. How many real numbers <span class=\"mm\">x</span> satisfy <span class=\"mm\">f(x) = 3</span>?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 1,
+   "answer_display": "1",
+   "marks": 2,
+   "solution": {
+    "concept": "Solving <span class=\"mm\">f(x) = c</span> is solving a quadratic; the number of solutions is the number of distinct real roots, which the discriminant decides.",
+    "steps": [
+     "Set <span class=\"mm\">x² − 4x + 7 = 3</span>.",
+     "Rearrange: <span class=\"mm\">x² − 4x + 4 = 0</span>.",
+     "Factor: <span class=\"mm\">(x − 2)² = 0</span>, so <span class=\"mm\">x = 2</span> is a double root.",
+     "The discriminant is <span class=\"mm\">16 − 16 = 0</span>, confirming exactly one distinct real solution."
+    ],
+    "final": "1",
+    "misconception": "Counting the double root twice and answering 2. \"How many real numbers <span class=\"mm\">x</span>\" asks for distinct solutions, so a repeated root counts once.",
+    "faster": "Complete the square first: <span class=\"mm\">f(x) = (x−2)² + 3</span>. Then <span class=\"mm\">f(x) = 3 ⇔ (x−2)² = 0</span>, giving the answer at a glance and also showing the minimum value is 3.",
+    "takeaway": "Vertex form <span class=\"mm\">(x − h)² + k</span> tells you both the range and how many preimages a value has: below <span class=\"mm\">k</span> none, at <span class=\"mm\">k</span> exactly one, above <span class=\"mm\">k</span> two."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "types-injective-surjective-bijective",
+   "subtopic_label": "Injective / surjective / bijective",
+   "question_format": "text",
+   "nat_format": "integer between 0 and 10."
+  },
+  {
+   "id": "DM-FUN1-Q06",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Composition & inverses",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">f, g : ℝ → ℝ</span> with <span class=\"mm\">f(x) = 2x + 3</span> and <span class=\"mm\">g(x) = x²</span>. Then <span class=\"mm\">(f ∘ g)(x)</span> equals",
+   "options": [
+    "<span class=\"mm\">4x² + 12x + 9</span>",
+    "<span class=\"mm\">2x² + 3</span>",
+    "<span class=\"mm\">4x² + 3</span>",
+    "<span class=\"mm\">2x² + 3x</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "<span class=\"mm\">(f ∘ g)(x) = f(g(x))</span>: the right-hand function acts first, and its output becomes the input of the left-hand function.",
+    "steps": [
+     "<span class=\"mm\">(f ∘ g)(x) = f(g(x)) = f(x²)</span>.",
+     "Substitute <span class=\"mm\">x²</span> into <span class=\"mm\">f(u) = 2u + 3</span>: <span class=\"mm\">f(x²) = 2x² + 3</span>."
+    ],
+    "final": "Option (B) — <span class=\"mm\">2x² + 3</span>.",
+    "why_wrong": [
+     "(A) is <span class=\"mm\">(g ∘ f)(x) = (2x + 3)²</span>, the composition in the other order.",
+     "(C) and (D) square the wrong coefficient or add the wrong term; neither follows from substituting <span class=\"mm\">x²</span> into <span class=\"mm\">2u + 3</span>."
+    ],
+    "misconception": "Applying <span class=\"mm\">f</span> first. Composition is read right to left: in <span class=\"mm\">f ∘ g</span>, <span class=\"mm\">g</span> goes first.",
+    "faster": "Write the outer function with a blank: <span class=\"mm\">2( ) + 3</span>, then drop <span class=\"mm\">g(x)</span> into the blank.",
+    "takeaway": "<span class=\"mm\">f ∘ g ≠ g ∘ f</span> in general; here the two orders give <span class=\"mm\">2x² + 3</span> and <span class=\"mm\">4x² + 12x + 9</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "composition-and-inverses",
+   "subtopic_label": "Composition & inverses",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q07",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Composition & inverses",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">f : A → B</span> and <span class=\"mm\">g : B → C</span>. Suppose <span class=\"mm\">g ∘ f : A → C</span> is injective. Which one of the following must be TRUE?",
+   "options": [
+    "<span class=\"mm\">f</span> is injective.",
+    "<span class=\"mm\">g</span> is injective.",
+    "<span class=\"mm\">f</span> is surjective.",
+    "<span class=\"mm\">g</span> is surjective."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Injectivity of a composite forces injectivity of the first map applied, but says nothing about the second.",
+    "steps": [
+     "Suppose <span class=\"mm\">f(a₁) = f(a₂)</span>. Applying <span class=\"mm\">g</span> gives <span class=\"mm\">g(f(a₁)) = g(f(a₂))</span>, i.e. <span class=\"mm\">(g∘f)(a₁) = (g∘f)(a₂)</span>.",
+     "Injectivity of <span class=\"mm\">g ∘ f</span> then gives <span class=\"mm\">a₁ = a₂</span>. Hence <span class=\"mm\">f</span> is injective. (A) holds.",
+     "Counterexample for <span class=\"mm\">g</span>: <span class=\"mm\">A = {1}</span>, <span class=\"mm\">B = {p, q}</span>, <span class=\"mm\">C = {r}</span>, <span class=\"mm\">f(1) = p</span>, <span class=\"mm\">g(p) = g(q) = r</span>. Then <span class=\"mm\">g ∘ f</span> is injective but <span class=\"mm\">g</span> is not, so (B) fails.",
+     "Surjectivity is untouched: with <span class=\"mm\">A = B = C = {1}</span> and identity maps everything is injective and surjective; with <span class=\"mm\">B = {p, q}</span> above, <span class=\"mm\">f</span> is not surjective, so (C) fails."
+    ],
+    "final": "Option (A) — <span class=\"mm\">f</span> must be injective.",
+    "why_wrong": [
+     "(B) fails by the two-element counterexample above: <span class=\"mm\">g</span> may collapse elements of <span class=\"mm\">B</span> that <span class=\"mm\">f</span> never reaches.",
+     "(C) and (D) are about surjectivity, which composition does not force from injectivity."
+    ],
+    "misconception": "Concluding that <span class=\"mm\">g</span> is injective because <span class=\"mm\">g ∘ f</span> is. <span class=\"mm\">g</span> only has to be injective on the image of <span class=\"mm\">f</span>, not on all of <span class=\"mm\">B</span>.",
+    "faster": "Remember the two legal deductions: <span class=\"mm\">g∘f</span> injective ⇒ <span class=\"mm\">f</span> injective, and <span class=\"mm\">g∘f</span> surjective ⇒ <span class=\"mm\">g</span> surjective. The other two implications are false.",
+    "takeaway": "Injectivity propagates backwards through a composite (to the first map); surjectivity propagates forwards (to the second)."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "composition-and-inverses",
+   "subtopic_label": "Composition & inverses",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q08",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Composition & inverses",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">f : A → B</span> and <span class=\"mm\">g : B → C</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "If <span class=\"mm\">f</span> and <span class=\"mm\">g</span> are both injective, then <span class=\"mm\">g ∘ f</span> is injective.",
+    "If <span class=\"mm\">f</span> and <span class=\"mm\">g</span> are both surjective, then <span class=\"mm\">g ∘ f</span> is surjective.",
+    "If <span class=\"mm\">g ∘ f</span> is surjective, then <span class=\"mm\">g</span> is surjective.",
+    "If <span class=\"mm\">g ∘ f</span> is injective, then <span class=\"mm\">g</span> is injective."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Composition preserves both injectivity and surjectivity when both factors have the property, and the composite can also pass a property back to one factor.",
+    "steps": [
+     "(A) If <span class=\"mm\">(g∘f)(a₁) = (g∘f)(a₂)</span>, injectivity of <span class=\"mm\">g</span> gives <span class=\"mm\">f(a₁) = f(a₂)</span> and injectivity of <span class=\"mm\">f</span> gives <span class=\"mm\">a₁ = a₂</span>. TRUE.",
+     "(B) Take any <span class=\"mm\">c ∈ C</span>. Surjectivity of <span class=\"mm\">g</span> gives <span class=\"mm\">b ∈ B</span> with <span class=\"mm\">g(b) = c</span>; surjectivity of <span class=\"mm\">f</span> gives <span class=\"mm\">a ∈ A</span> with <span class=\"mm\">f(a) = b</span>. Then <span class=\"mm\">(g∘f)(a) = c</span>. TRUE.",
+     "(C) The image of <span class=\"mm\">g ∘ f</span> is <span class=\"mm\">g(f(A)) ⊆ g(B)</span>. If <span class=\"mm\">g(f(A)) = C</span> then certainly <span class=\"mm\">g(B) = C</span>. TRUE.",
+     "(D) FALSE: take <span class=\"mm\">A = {1}</span>, <span class=\"mm\">B = {p, q}</span>, <span class=\"mm\">C = {r}</span>, <span class=\"mm\">f(1) = p</span>, <span class=\"mm\">g(p) = g(q) = r</span>. Then <span class=\"mm\">g∘f</span> is injective but <span class=\"mm\">g</span> is not."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "why_wrong": [
+     "(D) reverses the correct direction: injectivity of the composite passes back to the first factor <span class=\"mm\">f</span>, not to <span class=\"mm\">g</span>."
+    ],
+    "misconception": "Assuming every property is inherited in both directions. Composition preserves injective/injective and surjective/surjective forwards, but passes a property back to only one factor.",
+    "faster": "Picture the arrows: <span class=\"mm\">A → B → C</span>. Anything that must \"not collide\" is inherited by the map leaving <span class=\"mm\">A</span>; anything that must \"cover\" is inherited by the map entering <span class=\"mm\">C</span>.",
+    "takeaway": "<span class=\"mm\">g∘f</span> injective ⇒ <span class=\"mm\">f</span> injective; <span class=\"mm\">g∘f</span> surjective ⇒ <span class=\"mm\">g</span> surjective; both properties are preserved by composing two maps that have them."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "composition-and-inverses",
+   "subtopic_label": "Composition & inverses",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q09",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Composition & inverses",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">f(x) = x + 1</span> and <span class=\"mm\">g(x) = x²</span> be functions on <span class=\"mm\">ℝ</span>, and put <span class=\"mm\">h = g ∘ f</span>, <span class=\"mm\">k = f ∘ g</span>. Which one of the following is TRUE?",
+   "options": [
+    "<span class=\"mm\">h = k</span> as functions.",
+    "The equation <span class=\"mm\">h(x) = k(x)</span> holds for exactly one real <span class=\"mm\">x</span>.",
+    "Both <span class=\"mm\">h</span> and <span class=\"mm\">k</span> are injective.",
+    "<span class=\"mm\">k ∘ h = h ∘ k</span> as functions."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Two composites of the same pair of functions generally differ; comparing them means writing both in closed form and solving, and remembering that <span class=\"mm\">x²</span> is not injective.",
+    "steps": [
+     "<span class=\"mm\">h(x) = g(f(x)) = (x + 1)²</span> and <span class=\"mm\">k(x) = f(g(x)) = x² + 1</span>. They are different functions, so (A) is false.",
+     "<span class=\"mm\">h(x) = k(x) ⇔ x² + 2x + 1 = x² + 1 ⇔ 2x = 0 ⇔ x = 0</span>. Exactly one solution, so (B) is true.",
+     "<span class=\"mm\">k(1) = k(−1) = 2</span>, so <span class=\"mm\">k</span> is not injective and (C) is false.",
+     "<span class=\"mm\">k(h(x)) = ((x+1)²)² + 1 = (x+1)⁴ + 1</span> while <span class=\"mm\">h(k(x)) = (x² + 1 + 1)² = (x² + 2)²</span>. At <span class=\"mm\">x = 0</span> these are 2 and 4, so (D) is false."
+    ],
+    "final": "Option (B) — exactly one real solution, <span class=\"mm\">x = 0</span>.",
+    "why_wrong": [
+     "(A) fails since <span class=\"mm\">h(1) = 4</span> but <span class=\"mm\">k(1) = 2</span>.",
+     "(C) fails because squaring destroys injectivity.",
+     "(D) fails at <span class=\"mm\">x = 0</span>, where the two iterates differ."
+    ],
+    "misconception": "Assuming <span class=\"mm\">g ∘ f = f ∘ g</span> for \"simple\" functions, or that composing twice is automatically commutative. Composition is associative but almost never commutative.",
+    "faster": "Compare at a single convenient point first: <span class=\"mm\">h(0) = 1</span>, <span class=\"mm\">k(0) = 1</span> (so 0 is a candidate root); <span class=\"mm\">h(1) = 4</span>, <span class=\"mm\">k(1) = 2</span> (so they are different). Then solve the difference, which is linear here.",
+    "takeaway": "<span class=\"mm\">g∘f</span> and <span class=\"mm\">f∘g</span> can agree at isolated points without being equal functions; expanding both sides usually leaves a linear equation."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "composition-and-inverses",
+   "subtopic_label": "Composition & inverses",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q10",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Composition & inverses",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">f(x) = 2x + 1</span> and <span class=\"mm\">g(x) = 3x + 1</span> be bijections on <span class=\"mm\">ℝ</span>. Find the value of <span class=\"mm\">(f⁻¹ ∘ g⁻¹)(16)</span>.<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2,
+   "answer_display": "2",
+   "marks": 2,
+   "solution": {
+    "concept": "To evaluate <span class=\"mm\">f⁻¹ ∘ g⁻¹</span>, apply the right-hand inverse first: undo <span class=\"mm\">g</span>, then undo <span class=\"mm\">f</span>. Equivalently use <span class=\"mm\">(g ∘ f)⁻¹ = f⁻¹ ∘ g⁻¹</span>.",
+    "steps": [
+     "Inverses: <span class=\"mm\">f⁻¹(y) = (y − 1)/2</span> and <span class=\"mm\">g⁻¹(y) = (y − 1)/3</span>.",
+     "Apply <span class=\"mm\">g⁻¹</span> first: <span class=\"mm\">g⁻¹(16) = (16 − 1)/3 = 5</span>.",
+     "Then apply <span class=\"mm\">f⁻¹</span>: <span class=\"mm\">f⁻¹(5) = (5 − 1)/2 = 2</span>.",
+     "Check with the other route: <span class=\"mm\">(g ∘ f)(x) = 3(2x + 1) + 1 = 6x + 4</span>, and <span class=\"mm\">6x + 4 = 16</span> gives <span class=\"mm\">x = 2</span>. Both routes agree."
+    ],
+    "final": "2",
+    "misconception": "Applying <span class=\"mm\">f⁻¹</span> first, which computes <span class=\"mm\">(g⁻¹ ∘ f⁻¹)(16) = g⁻¹(7.5) = 13/6</span> — a different number. In <span class=\"mm\">f⁻¹ ∘ g⁻¹</span> the function written on the right acts first, exactly as in ordinary composition.",
+    "faster": "Solve <span class=\"mm\">(g ∘ f)(x) = 16</span> directly: <span class=\"mm\">6x + 4 = 16</span> gives <span class=\"mm\">x = 2</span> in one line.",
+    "takeaway": "<span class=\"mm\">(g ∘ f)⁻¹ = f⁻¹ ∘ g⁻¹</span>: inverting a composite reverses the order, and the order matters."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "composition-and-inverses",
+   "subtopic_label": "Composition & inverses",
+   "question_format": "text",
+   "nat_format": "integer between 0 and 100."
+  },
+  {
+   "id": "DM-FUN1-Q11",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Counting functions",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">|A| = 4</span> and <span class=\"mm\">|B| = 3</span>. How many functions <span class=\"mm\">f : A → B</span> are there?",
+   "options": [
+    "12",
+    "24",
+    "81",
+    "64"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "A function <span class=\"mm\">A → B</span> is an independent choice of one codomain element for each domain element, so the count is <span class=\"mm\">|B|^|A|</span>.",
+    "steps": [
+     "Each of the 4 elements of <span class=\"mm\">A</span> may map to any of the 3 elements of <span class=\"mm\">B</span>.",
+     "The choices are independent, so multiply: <span class=\"mm\">3 × 3 × 3 × 3 = 3⁴ = 81</span>."
+    ],
+    "final": "Option (C) — 81.",
+    "why_wrong": [
+     "(A) 12 is <span class=\"mm\">|A| · |B|</span>, which counts pairs, not functions.",
+     "(B) 24 counts the injective functions only.",
+     "(D) 64 is <span class=\"mm\">4³</span>, the count with the sizes swapped."
+    ],
+    "misconception": "Swapping the exponent: the domain size is the exponent, the codomain size is the base.",
+    "faster": "Say it out loud: \"for each of the 4 inputs, 3 choices\" → <span class=\"mm\">3⁴</span>.",
+    "takeaway": "Number of functions <span class=\"mm\">A → B</span> is <span class=\"mm\">|B|^|A|</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "counting-functions",
+   "subtopic_label": "Counting functions",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q12",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Counting functions",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">|A| = 4</span> and <span class=\"mm\">|B| = 5</span>. How many injective functions <span class=\"mm\">f : A → B</span> are there?",
+   "options": [
+    "20",
+    "120",
+    "625",
+    "24"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "An injective function picks distinct images for the domain elements in turn, so the count is a falling factorial <span class=\"mm\">|B|(|B|−1)…(|B|−|A|+1)</span>.",
+    "steps": [
+     "The first element of <span class=\"mm\">A</span> has 5 possible images.",
+     "The second must avoid that one: 4 choices. The third: 3 choices. The fourth: 2 choices.",
+     "Multiply: <span class=\"mm\">5 × 4 × 3 × 2 = 120</span>."
+    ],
+    "final": "Option (B) — 120.",
+    "why_wrong": [
+     "(A) 20 is <span class=\"mm\">5 × 4</span>, the count if <span class=\"mm\">|A|</span> were 2.",
+     "(C) 625 is <span class=\"mm\">5⁴</span>, the count of all functions, which includes the non-injective ones.",
+     "(D) 24 is <span class=\"mm\">4!</span>, the count of bijections when <span class=\"mm\">|A| = |B| = 4</span>."
+    ],
+    "misconception": "Using <span class=\"mm\">|B|^|A|</span> and forgetting the distinctness constraint, or using <span class=\"mm\">P(5,5)</span> instead of <span class=\"mm\">P(5,4)</span>.",
+    "faster": "<span class=\"mm\">P(5,4) = 5!/(5−4)! = 120</span>.",
+    "takeaway": "Injective functions <span class=\"mm\">A → B</span>: <span class=\"mm\">P(|B|, |A|)</span>, and 0 when <span class=\"mm\">|A| &gt; |B|</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "counting-functions",
+   "subtopic_label": "Counting functions",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q13",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Counting functions",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">|A| = 3</span> and <span class=\"mm\">|B| = 4</span>. Which of the following counts are correct? (Select all that apply.)",
+   "options": [
+    "There are 64 functions <span class=\"mm\">f : A → B</span>.",
+    "There are 24 injective functions <span class=\"mm\">f : A → B</span>.",
+    "There are 0 surjective functions <span class=\"mm\">f : A → B</span>.",
+    "There are 24 bijections <span class=\"mm\">f : A → B</span>."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Counts follow the size comparison: all functions <span class=\"mm\">|B|^|A|</span>, injective <span class=\"mm\">P(|B|,|A|)</span>, surjective 0 whenever <span class=\"mm\">|A| &lt; |B|</span>, bijections 0 whenever <span class=\"mm\">|A| ≠ |B|</span>.",
+    "steps": [
+     "All functions: <span class=\"mm\">4³ = 64</span>. (A) TRUE.",
+     "Injective: <span class=\"mm\">4 × 3 × 2 = 24</span>. (B) TRUE.",
+     "Surjective: 3 inputs can hit at most 3 of the 4 codomain elements, so none. (C) TRUE.",
+     "Bijections require equal sizes; <span class=\"mm\">3 ≠ 4</span>, so there are 0, not 24. (D) FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "why_wrong": [
+     "(D) is the trap: 24 is the number of injections, and every injection here is far from a bijection because two codomain elements are left unused."
+    ],
+    "misconception": "Equating \"injective count\" with \"bijection count\". They coincide only when the two sets have equal size.",
+    "faster": "First compare sizes. Smaller domain → no surjection; unequal sizes → no bijection. That eliminates (C) and (D) instantly, leaving two arithmetic checks.",
+    "takeaway": "With <span class=\"mm\">|A| &lt; |B|</span>: <span class=\"mm\">|B|^|A|</span> functions, <span class=\"mm\">P(|B|,|A|)</span> injections, no surjections, no bijections."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "counting-functions",
+   "subtopic_label": "Counting functions",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q14",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Counting functions",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">|A| = 5</span> and <span class=\"mm\">|B| = 3</span>. How many surjective functions <span class=\"mm\">f : A → B</span> are there?",
+   "options": [
+    "90",
+    "125",
+    "150",
+    "243"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "Count onto maps by inclusion–exclusion over the codomain elements that are missed: <span class=\"mm\">Σ (−1)^k C(n,k) (n−k)^m</span> for <span class=\"mm\">m</span> inputs and <span class=\"mm\">n</span> targets.",
+    "steps": [
+     "Total functions: <span class=\"mm\">3⁵ = 243</span>.",
+     "Subtract those missing at least one target. Missing a fixed target leaves <span class=\"mm\">2⁵ = 32</span> functions, and there are <span class=\"mm\">C(3,1) = 3</span> choices of the missed target: <span class=\"mm\">3 × 32 = 96</span>.",
+     "Add back the double subtractions. Missing two fixed targets leaves <span class=\"mm\">1⁵ = 1</span> function, with <span class=\"mm\">C(3,2) = 3</span> such pairs: <span class=\"mm\">3</span>.",
+     "Nothing misses all three targets. So the count is <span class=\"mm\">243 − 96 + 3 = 150</span>."
+    ],
+    "final": "Option (C) — 150.",
+    "why_wrong": [
+     "(A) 90 is <span class=\"mm\">3! · S(5,3) = 6 · 15</span> — that counts onto maps up to relabelling of the codomain, then multiplies, but <span class=\"mm\">S(5,3) = 25</span>, not 15, so 90 is the wrong product.",
+     "(B) 125 is <span class=\"mm\">5³</span>, the count with the sizes swapped.",
+     "(D) 243 is <span class=\"mm\">3⁵</span>, all functions, including the 93 that miss something."
+    ],
+    "misconception": "Using <span class=\"mm\">S(m,n)</span> alone. The Stirling number counts partitions of the domain, so the number of onto maps is <span class=\"mm\">n! · S(m,n) = 6 × 25 = 150</span>; forgetting the <span class=\"mm\">n!</span> factor (or using a wrong Stirling value) is the usual error.",
+    "faster": "<span class=\"mm\">S(5,3) = 25</span> from the Stirling triangle, then <span class=\"mm\">3! × 25 = 150</span>. Cross-check with inclusion–exclusion as above.",
+    "takeaway": "Surjections from an <span class=\"mm\">m</span>-set onto an <span class=\"mm\">n</span>-set: <span class=\"mm\">n! S(m,n)</span>, equivalently <span class=\"mm\">Σ(−1)^k C(n,k)(n−k)^m</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "counting-functions",
+   "subtopic_label": "Counting functions",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q15",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Counting functions",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many bijections are there from a set with 6 elements onto itself?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 720,
+   "answer_display": "720",
+   "marks": 2,
+   "solution": {
+    "concept": "A bijection from a finite set onto itself is a permutation of its elements, so the count is <span class=\"mm\">n!</span>.",
+    "steps": [
+     "Choose the image of element 1: 6 ways.",
+     "Choose the image of element 2 from what is left: 5 ways, and so on down to 1 way for the last element.",
+     "Multiply: <span class=\"mm\">6 × 5 × 4 × 3 × 2 × 1 = 720</span>."
+    ],
+    "final": "720",
+    "misconception": "Counting <span class=\"mm\">6⁶</span> (all functions) or <span class=\"mm\">2⁶</span>. A bijection must use each element exactly once, which is a permutation, not an arbitrary assignment.",
+    "faster": "<span class=\"mm\">6! = 720</span>; memorise factorials up to <span class=\"mm\">10! = 3628800</span>.",
+    "takeaway": "Bijections of an <span class=\"mm\">n</span>-set to itself = <span class=\"mm\">n!</span>; between two different <span class=\"mm\">n</span>-sets also <span class=\"mm\">n!</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "counting-functions",
+   "subtopic_label": "Counting functions",
+   "question_format": "text",
+   "nat_format": "integer between 0 and 10000."
+  },
+  {
+   "id": "DM-FUN1-Q16",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Pigeonhole principle",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "What is the minimum number of people in a room that guarantees at least three of them were born in the same month?",
+   "options": [
+    "13",
+    "24",
+    "25",
+    "27"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "To force <span class=\"mm\">k + 1</span> objects into one of <span class=\"mm\">m</span> boxes, you need <span class=\"mm\">km + 1</span> objects: with only <span class=\"mm\">km</span> you could place exactly <span class=\"mm\">k</span> in every box.",
+    "steps": [
+     "Here <span class=\"mm\">m = 12</span> months and we want <span class=\"mm\">k + 1 = 3</span>, so <span class=\"mm\">k = 2</span>.",
+     "The bound is <span class=\"mm\">2 × 12 + 1 = 25</span>.",
+     "Sharpness: 24 people can be spread with exactly 2 per month, so 24 is not enough. With 25 people some month receives at least <span class=\"mm\">⌈25/12⌉ = 3</span>."
+    ],
+    "final": "Option (C) — 25.",
+    "why_wrong": [
+     "(A) 13 forces only two in a month: <span class=\"mm\">⌈13/12⌉ = 2</span>.",
+     "(B) 24 is the largest number that avoids three in a month, so it does not guarantee it.",
+     "(D) 27 works but is not the minimum."
+    ],
+    "misconception": "Answering 24 because \"2 per month is 24\". That is exactly the configuration to be avoided; the guarantee needs one more.",
+    "faster": "<span class=\"mm\">⌈N/12⌉ ≥ 3 ⇔ N &gt; 24 ⇔ N ≥ 25</span>.",
+    "takeaway": "Guaranteeing <span class=\"mm\">k+1</span> in some box of <span class=\"mm\">m</span> boxes needs <span class=\"mm\">km + 1</span> objects — never <span class=\"mm\">km</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "pigeonhole-principle",
+   "subtopic_label": "Pigeonhole principle",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q17",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Pigeonhole principle",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Let <span class=\"mm\">f</span> be a function from a set with 10 elements into a set with 9 elements. Which one of the following must be TRUE?",
+   "options": [
+    "<span class=\"mm\">f</span> is injective.",
+    "Some element of the codomain is the image of at least two domain elements.",
+    "<span class=\"mm\">f</span> is surjective.",
+    "Exactly one codomain element is the image of exactly two domain elements."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Pigeonhole: 10 objects in 9 boxes force some box to hold at least two. It says nothing about which box, or about how the rest are distributed.",
+    "steps": [
+     "The 10 domain elements are assigned to 9 codomain elements.",
+     "If every codomain element were the image of at most one element, the image would contain 10 distinct values inside a 9-element set — impossible.",
+     "So some codomain element is hit at least twice. (B) holds.",
+     "Nothing forces surjectivity: the map could send all 10 elements to one value and leave 8 values unused. So (C) fails, and (A) fails too.",
+     "Nothing forces the excess to be exactly 2: <span class=\"mm\">f</span> could send 3 elements to one value. So (D) fails."
+    ],
+    "final": "Option (B) — some codomain element is hit at least twice.",
+    "why_wrong": [
+     "(A) is impossible here: injectivity needs at least 10 codomain elements.",
+     "(C) fails for the constant function, which is a perfectly legal map.",
+     "(D) is too specific: a 3-to-1 collision is equally allowed."
+    ],
+    "misconception": "Strengthening the conclusion from \"at least two\" to \"exactly two\". The pigeonhole principle gives an inequality, not a distribution.",
+    "faster": "Compare sizes: <span class=\"mm\">10 &gt; 9</span>, so no injection; that kills (A) and, with a one-line constant-function counterexample, kills (C) and (D).",
+    "takeaway": "Pigeonhole conclusions are \"at least\", never \"exactly\"; and no injection exists as soon as the domain is larger than the codomain."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "pigeonhole-principle",
+   "subtopic_label": "Pigeonhole principle",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q18",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Pigeonhole principle",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "In any group of 13 people, at least two share a birth month.",
+    "In any group of 25 people, at least three share a birth month.",
+    "In any group of 24 people, at least three share a birth month.",
+    "If 11 numbers are chosen from <span class=\"mm\">{1, 2, …, 20}</span>, two of them are consecutive."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "Each claim is a pigeonhole count: identify the objects, the boxes, and how many objects force a given occupancy.",
+    "steps": [
+     "(A) 13 people, 12 months: <span class=\"mm\">⌈13/12⌉ = 2</span>, so some month holds at least two. TRUE.",
+     "(B) 25 people: <span class=\"mm\">⌈25/12⌉ = 3</span>. TRUE.",
+     "(C) 24 people can occupy the 12 months exactly two at a time, so three is not forced. FALSE.",
+     "(D) Split <span class=\"mm\">{1, …, 20}</span> into the 10 pairs <span class=\"mm\">{1,2}, {3,4}, …, {19,20}</span>. Choosing 11 numbers means two come from the same pair, and those two are consecutive. TRUE."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "why_wrong": [
+     "(C) is the boundary case: <span class=\"mm\">24 = 2 × 12</span> is achievable with two per month, so it guarantees nothing beyond two."
+    ],
+    "misconception": "Treating 24 as \"close enough\" to force three, and forgetting to build the boxes in (D). For (D) the boxes are the consecutive pairs, not the numbers themselves.",
+    "faster": "For each claim, compute <span class=\"mm\">⌈N/m⌉</span> and compare with the claimed occupancy; for (D), partition the range into the relevant pairs.",
+    "takeaway": "Pigeonhole questions are decided by the right choice of boxes: months, pairs, residues, or subsquares."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "pigeonhole-principle",
+   "subtopic_label": "Pigeonhole principle",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q19",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Pigeonhole principle",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Given any 5 integers, which one of the following is guaranteed?",
+   "options": [
+    "Some three of them have a sum divisible by 3.",
+    "Some two of them have a sum divisible by 3.",
+    "Some four of them have a sum divisible by 3.",
+    "Their total sum is divisible by 3."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Work modulo 3. Only the residues matter, and there are just three of them, so a short case analysis on how the five residues are distributed settles everything.",
+    "steps": [
+     "Reduce the five integers modulo 3, giving five residues in <span class=\"mm\">{0, 1, 2}</span>.",
+     "Case 1: some residue class contains at least three of them. Three integers with the same residue <span class=\"mm\">r</span> sum to <span class=\"mm\">3r ≡ 0 (mod 3)</span>. Done.",
+     "Case 2: no class has three. With five residues over three classes, the counts must be <span class=\"mm\">(2, 2, 1)</span> in some order.",
+     "Then one element has each residue <span class=\"mm\">0, 1, 2</span>, and <span class=\"mm\">0 + 1 + 2 = 3 ≡ 0 (mod 3)</span>. Done.",
+     "So a suitable triple always exists, and (A) is guaranteed."
+    ],
+    "final": "Option (A) — some three have a sum divisible by 3.",
+    "why_wrong": [
+     "(B) fails: take all five equal to 1; every pair sums to 2, which is not divisible by 3.",
+     "(C) fails for the same five 1s: four of them sum to 4.",
+     "(D) fails for the same five 1s: the total is 5."
+    ],
+    "misconception": "Stopping after Case 1. The interesting case is the \"balanced\" distribution (2, 2, 1), where no class is large but one element of each residue still gives a multiple of 3.",
+    "faster": "Check the two shapes of a 5-element multiset of residues: a class of size ≥ 3, or the balanced (2,2,1) split. Both give a zero-sum triple, so the claim is immediate.",
+    "takeaway": "Any 5 integers contain three whose sum is a multiple of 3; the extremal configuration is all five congruent, which already satisfies the claim."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "pigeonhole-principle",
+   "subtopic_label": "Pigeonhole principle",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q20",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Pigeonhole principle",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "What is the smallest number <span class=\"mm\">n</span> such that among any <span class=\"mm\">n</span> integers there are always two whose difference is divisible by 9?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 10,
+   "answer_display": "10",
+   "marks": 2,
+   "solution": {
+    "concept": "\"Difference divisible by 9\" means the two integers are congruent modulo 9, so the boxes are the 9 residue classes and the objects are the chosen integers.",
+    "steps": [
+     "Two integers differ by a multiple of 9 exactly when they share a residue modulo 9. There are 9 residues, i.e. 9 boxes.",
+     "With 9 integers we can pick one from each class, e.g. <span class=\"mm\">0, 1, …, 8</span>, and no two share a residue. So <span class=\"mm\">n = 9</span> is not enough.",
+     "With 10 integers, two must fall in the same class, and their difference is divisible by 9.",
+     "Hence the smallest such <span class=\"mm\">n</span> is 10."
+    ],
+    "final": "10",
+    "misconception": "Answering 9 because there are 9 residue classes. Nine objects can occupy nine boxes one each; the guarantee needs one more object than there are boxes.",
+    "faster": "The answer is always (number of boxes) + 1: here <span class=\"mm\">9 + 1 = 10</span>.",
+    "takeaway": "For \"two congruent modulo m\" the threshold is <span class=\"mm\">m + 1</span>; the extremal example is one representative per residue class."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "pigeonhole-principle",
+   "subtopic_label": "Pigeonhole principle",
+   "question_format": "text",
+   "nat_format": "integer between 2 and 50."
+  },
+  {
+   "id": "DM-FUN1-Q21",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Floor, ceiling & recursion",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For a real number <span class=\"mm\">x</span>, the value of <span class=\"mm\">⌈x⌉ − ⌊x⌋</span> is",
+   "options": [
+    "always 0",
+    "0 when <span class=\"mm\">x</span> is an integer, and 1 otherwise",
+    "always 1",
+    "0 when <span class=\"mm\">x</span> is an integer, and −1 otherwise"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "<span class=\"mm\">⌊x⌋</span> is the largest integer not exceeding <span class=\"mm\">x</span>; <span class=\"mm\">⌈x⌉</span> is the smallest integer not less than <span class=\"mm\">x</span>. Their difference measures the fractional part.",
+    "steps": [
+     "If <span class=\"mm\">x ∈ ℤ</span>, then <span class=\"mm\">⌊x⌋ = ⌈x⌉ = x</span>, so the difference is 0.",
+     "If <span class=\"mm\">x ∉ ℤ</span>, write <span class=\"mm\">x = k + f</span> with <span class=\"mm\">k ∈ ℤ</span> and <span class=\"mm\">0 &lt; f &lt; 1</span>. Then <span class=\"mm\">⌊x⌋ = k</span> and <span class=\"mm\">⌈x⌉ = k + 1</span>.",
+     "So the difference is 1 exactly for non-integers.",
+     "Check: <span class=\"mm\">x = 2.3</span> gives <span class=\"mm\">3 − 2 = 1</span>; <span class=\"mm\">x = −2.3</span> gives <span class=\"mm\">−2 − (−3) = 1</span>; <span class=\"mm\">x = 5</span> gives 0."
+    ],
+    "final": "Option (B) — 0 for integers, 1 otherwise.",
+    "why_wrong": [
+     "(A) and (C) each fail for one of the two cases: (A) at <span class=\"mm\">x = 2.3</span>, (C) at <span class=\"mm\">x = 5</span>.",
+     "(D) never occurs: <span class=\"mm\">⌈x⌉ ≥ ⌊x⌋</span> always, so the difference is never negative."
+    ],
+    "misconception": "Handling negative numbers wrongly. For <span class=\"mm\">x = −2.3</span>, <span class=\"mm\">⌊x⌋ = −3</span> and <span class=\"mm\">⌈x⌉ = −2</span>; the difference is still 1, not <span class=\"mm\">−1</span>.",
+    "faster": "The difference is the indicator of \"x is not an integer\" — worth memorising, together with <span class=\"mm\">⌊x⌋ + ⌈−x⌉ = 0</span>.",
+    "takeaway": "<span class=\"mm\">⌈x⌉ − ⌊x⌋ ∈ {0, 1}</span>, equal to 0 exactly on the integers."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "floor-ceiling-recursion",
+   "subtopic_label": "Floor, ceiling & recursion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q22",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Floor, ceiling & recursion",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many integers from 1 to 1000 (both inclusive) are divisible by neither 3 nor 5?",
+   "options": [
+    "466",
+    "533",
+    "534",
+    "600"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Counting \"neither\" is inclusion–exclusion on the complement: subtract the multiples of 3 and of 5, then add back the multiples of 15 that were removed twice.",
+    "steps": [
+     "Multiples of 3 up to 1000: <span class=\"mm\">⌊1000/3⌋ = 333</span>.",
+     "Multiples of 5: <span class=\"mm\">⌊1000/5⌋ = 200</span>.",
+     "Multiples of 15 (counted in both lists): <span class=\"mm\">⌊1000/15⌋ = 66</span>.",
+     "Divisible by 3 or 5: <span class=\"mm\">333 + 200 − 66 = 467</span>.",
+     "Neither: <span class=\"mm\">1000 − 467 = 533</span>."
+    ],
+    "final": "Option (B) — 533.",
+    "why_wrong": [
+     "(A) 466 forgets to add back the 66 multiples of 15.",
+     "(C) 534 is off by one, the usual fencepost slip.",
+     "(D) 600 is 1000 minus the 400 multiples of 5 and 3 counted separately without the overlap correction."
+    ],
+    "misconception": "Subtracting 333 and 200 and stopping: the 66 multiples of 15 get removed twice, so the total of \"divisible by 3 or 5\" is overstated and the \"neither\" count is understated by 66.",
+    "faster": "<span class=\"mm\">1000 − 333 − 200 + 66 = 533</span>; note the alternating signs and use floor division only.",
+    "takeaway": "For \"neither a nor b\" up to <span class=\"mm\">N</span>: <span class=\"mm\">N − ⌊N/a⌋ − ⌊N/b⌋ + ⌊N/lcm(a,b)⌋</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "floor-ceiling-recursion",
+   "subtopic_label": "Floor, ceiling & recursion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q23",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Floor, ceiling & recursion",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following identities hold for ALL real numbers <span class=\"mm\">x</span> and <span class=\"mm\">y</span>? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">⌊−x⌋ = −⌈x⌉</span>",
+    "<span class=\"mm\">⌈−x⌉ = −⌊x⌋</span>",
+    "<span class=\"mm\">⌊x + ½⌋ = ⌈x⌉</span>",
+    "<span class=\"mm\">⌊x⌋ + ⌊y⌋ ≤ ⌊x + y⌋</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "Negation swaps floor and ceiling; floors add sub-additively, never super-additively.",
+    "steps": [
+     "(A) True: reflecting about 0 turns the greatest integer below <span class=\"mm\">x</span> into the least integer above <span class=\"mm\">−x</span>. Test <span class=\"mm\">x = 2.3</span>: <span class=\"mm\">⌊−2.3⌋ = −3 = −⌈2.3⌉</span>.",
+     "(B) True: the same reflection the other way. Test <span class=\"mm\">x = 2.3</span>: <span class=\"mm\">⌈−2.3⌉ = −2 = −⌊2.3⌋</span>.",
+     "(C) False: at <span class=\"mm\">x = 0.4</span>, <span class=\"mm\">⌊0.9⌋ = 0</span> but <span class=\"mm\">⌈0.4⌉ = 1</span>.",
+     "(D) True: <span class=\"mm\">⌊x⌋ ≤ x</span> and <span class=\"mm\">⌊y⌋ ≤ y</span>, so <span class=\"mm\">⌊x⌋ + ⌊y⌋ ≤ x + y</span>; the left side is an integer, hence it is at most <span class=\"mm\">⌊x + y⌋</span>."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "why_wrong": [
+     "(C) is a near-identity that fails for fractional parts below <span class=\"mm\">½</span>; it holds only when <span class=\"mm\">{x} ≥ ½</span>."
+    ],
+    "misconception": "Believing <span class=\"mm\">⌊x + y⌋ = ⌊x⌋ + ⌊y⌋</span>. It can differ by 1 (take <span class=\"mm\">x = y = 0.6</span>) but the left side is never smaller.",
+    "faster": "Test each identity at a fractional value such as <span class=\"mm\">x = 0.4</span> and at a negative value: most false identities die at once.",
+    "takeaway": "<span class=\"mm\">⌊−x⌋ = −⌈x⌉</span>, <span class=\"mm\">⌈−x⌉ = −⌊x⌋</span>, and <span class=\"mm\">⌊x⌋ + ⌊y⌋ ≤ ⌊x + y⌋ ≤ ⌊x⌋ + ⌊y⌋ + 1</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "floor-ceiling-recursion",
+   "subtopic_label": "Floor, ceiling & recursion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q24",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Floor, ceiling & recursion",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Let <span class=\"mm\">f(0) = 1</span> and <span class=\"mm\">f(n) = f(⌊n/2⌋) + 1</span> for every integer <span class=\"mm\">n ≥ 1</span>. Then <span class=\"mm\">f(1000)</span> equals",
+   "options": [
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Unrolling a recurrence that halves its argument counts how many halvings are needed to reach 0, i.e. the number of bits of <span class=\"mm\">n</span> plus one.",
+    "steps": [
+     "<span class=\"mm\">f(1000) = f(500) + 1 = f(250) + 2 = f(125) + 3</span>.",
+     "<span class=\"mm\">f(125) = f(62) + 1</span>, <span class=\"mm\">f(62) = f(31) + 1</span>, <span class=\"mm\">f(31) = f(15) + 1</span>, <span class=\"mm\">f(15) = f(7) + 1</span>, <span class=\"mm\">f(7) = f(3) + 1</span>, <span class=\"mm\">f(3) = f(1) + 1</span>, <span class=\"mm\">f(1) = f(0) + 1 = 2</span>.",
+     "Working back up: <span class=\"mm\">f(3) = 3, f(7) = 4, f(15) = 5, f(31) = 6, f(62) = 7, f(125) = 8, f(250) = 9, f(500) = 10, f(1000) = 11</span>.",
+     "Closed form: <span class=\"mm\">f(n) = ⌊log₂ n⌋ + 2</span> for <span class=\"mm\">n ≥ 1</span>. Here <span class=\"mm\">⌊log₂ 1000⌋ = 9</span> since <span class=\"mm\">2⁹ = 512 ≤ 1000 &lt; 1024 = 2¹⁰</span>, so <span class=\"mm\">f(1000) = 11</span>."
+    ],
+    "final": "Option (B) — 11.",
+    "why_wrong": [
+     "(A) 10 forgets the base case <span class=\"mm\">f(0) = 1</span> and counts only the halvings.",
+     "(C) 12 and (D) 13 over-count by one or two, typically by rounding <span class=\"mm\">log₂ 1000 ≈ 9.97</span> up and then adding the base twice."
+    ],
+    "misconception": "Using <span class=\"mm\">log₂1000 ≈ 9.97 → 10</span> and then answering 10. The recurrence counts halvings with floor division, and the base case contributes the extra 1.",
+    "faster": "Count the bits: <span class=\"mm\">1000 = 1111101000₂</span> has 10 bits, so the number of halvings to reach 0 is 10 and <span class=\"mm\">f = 10 + 1 = 11</span>.",
+    "takeaway": "For <span class=\"mm\">f(n) = f(⌊n/2⌋) + c</span>, <span class=\"mm\">f(n) = c⌊log₂ n⌋ + f(0) + c</span> on <span class=\"mm\">n ≥ 1</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "floor-ceiling-recursion",
+   "subtopic_label": "Floor, ceiling & recursion",
+   "question_format": "text"
+  },
+  {
+   "id": "DM-FUN1-Q25",
+   "unit": 5,
+   "unit_name": "Functions",
+   "topic": "Functions",
+   "sub": "Floor, ceiling & recursion",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "A sequence is defined by <span class=\"mm\">T(1) = 1</span> and <span class=\"mm\">T(n) = T(⌊n/2⌋) + n</span> for <span class=\"mm\">n ≥ 2</span>. Find <span class=\"mm\">T(8)</span>.<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 15,
+   "answer_display": "15",
+   "marks": 2,
+   "solution": {
+    "concept": "Unroll the recurrence from the top down, replacing each argument by its floor half until the base case is reached, then add the contributions on the way back up.",
+    "steps": [
+     "<span class=\"mm\">T(8) = T(4) + 8</span>.",
+     "<span class=\"mm\">T(4) = T(2) + 4</span>.",
+     "<span class=\"mm\">T(2) = T(1) + 2 = 1 + 2 = 3</span>.",
+     "So <span class=\"mm\">T(4) = 3 + 4 = 7</span> and <span class=\"mm\">T(8) = 7 + 8 = 15</span>.",
+     "Check with the sum form: <span class=\"mm\">T(8) = 8 + 4 + 2 + 1 = 15</span>, since the arguments along the chain are the powers of two down to the base case."
+    ],
+    "final": "15",
+    "misconception": "Adding the halved values (<span class=\"mm\">4 + 2 + 1</span>) instead of the original arguments, which gives 8 rather than 15; in this recurrence the added term is <span class=\"mm\">n</span>, the current argument.",
+    "faster": "For <span class=\"mm\">n = 2^k</span> the chain is <span class=\"mm\">2^k, 2^{k−1}, …, 1</span>, so <span class=\"mm\">T(2^k) = 2^{k+1} − 1</span>. With <span class=\"mm\">k = 3</span>: <span class=\"mm\">T(8) = 16 − 1 = 15</span>.",
+    "takeaway": "Unroll small recurrences explicitly; for power-of-two arguments the answer is a geometric sum <span class=\"mm\">n + n/2 + n/4 + … + 1 = 2n − 1</span>."
+   },
+   "run_date": "2026-10-26",
+   "unit_slug": "functions",
+   "unit_number": 5,
+   "subtopic": "floor-ceiling-recursion",
+   "subtopic_label": "Floor, ceiling & recursion",
+   "question_format": "text",
+   "nat_format": "integer between 1 and 100."
   }
  ]
 }

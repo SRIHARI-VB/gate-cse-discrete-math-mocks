@@ -7,24 +7,54 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 4 — Relations, Set 2 of 2**, 2026-10-26 → [`discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html`](discrete-mathematics/relations/gate_dm_mock_4_2026-10-26.html)
+- **Unit 5 — Functions, Set 1 of 2**, 2026-10-26 → [`discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`](discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: relation properties · equivalence relations & classes · partial orders & Hasse diagrams · lattices in
-  posets · composition & transitive closure · counting relations
-- Unit 4 held 25 banked questions and had been current for 0 days, so the rotation re-selected it instead of advancing.
-  25 + 25 = 50 closes Unit 4 at the cap; Set 1 moved into that unit's `archive/` as `..._run1.html`.
+- Subtopics: types of functions (injective / surjective / bijective) · composition & inverses · counting functions ·
+  pigeonhole principle · floor, ceiling & recursion
+- Unit 4 closed at the 50-question cap with its Set 2, so the rotation advanced to Unit 5. This is Unit 5's first paper:
+  25 of 50 questions banked, one set to go.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 11 (3 on Unit 16, 2 each on Units 1–4) |
-| Units covered | 5 of 16 |
-| Questions in master_bank.json | 275 (75 in Unit 16, 50 each in Units 1–4) |
+| Papers published | 12 (3 on Unit 16, 2 each on Units 1–4, 1 on Unit 5) |
+| Units covered | 6 of 16 |
+| Questions in master_bank.json | 300 (75 in Unit 16, 50 each in Units 1–4, 25 in Unit 5) |
 | Verified official PYQs | 2 |
 | Archived sets (earlier runs) | 6 (2 Unit 16, 1 Unit 1, 1 Unit 2, 1 Unit 3, 1 Unit 4) |
 
 ## Rotation log
+
+- **2026-10-26, Unit 4 → Unit 5.** `master_bank.json` showed Unit 4 with 50 banked questions — the 50-question cap — so
+  the rotation advanced by the modulo rule: (3 + 1) mod 16 = 4 → Unit 5, Functions. Unit 5 now holds 25 questions,
+  Set 1 of 2. The advance is computed from the bank, not from the calendar.
+- The 25 questions are new: no id, stem, option set or numeric answer repeats an earlier paper. Each of the five
+  subtopics carries exactly five questions (5 / 5 / 5 / 5 / 5), so every subtopic is represented, and the difficulty
+  split is 10 easy / 10 medium / 5 hard as in every paper.
+- Set 1 contains no `GATE_PYQ_VARIATION` item — no functions PYQ has been verified against an official paper and
+  answer key for this unit, so none is claimed — and the About tab says so; every question is `STANDARD_TEXTBOOK` or
+  `ORIGINAL_SYNTHESIS`.
+- Filed only at `discrete-mathematics/functions/gate_dm_mock_5_2026-10-26.html`. Unit 5 had no earlier paper, so
+  nothing was archived, no unit folder holds two current papers, and nothing was written at the repository root.
+- Every numeric answer in this set was checked by brute force before shipping: `⌈n/2⌉` is onto `ℤ⁺` while `2n` is not;
+  `f(x) = x/(x²+1)` collides at 2 and ½ and has range `[−½, ½]`; `x²−4x+7 = 3` has the single root 2; `(f⁻¹∘g⁻¹)(16) = 2`
+  for `f(x)=2x+1`, `g(x)=3x+1`; 3⁴ = 81, `P(5,4) = 120`, and 150 onto maps from a 5-set onto a 3-set (exhaustive
+  enumeration); 720 bijections on 6 elements; 533 integers in 1…1000 divisible by neither 3 nor 5; `f(1000) = 11` and
+  `T(8) = 15` for the two halving recurrences; and no 5-tuple of residues mod 3 avoids a zero-sum triple, which is what
+  Q19 asserts.
+- Shell parity checked this run: the `<style>` block and the `<script>` block are byte-identical to the Unit 4 Set 2
+  paper's, the `:root` block still matches `design-tokens.css` exactly, and the paper carries the same 114 literal hex
+  occurrences as the shell it was built from — no new hex value was introduced.
+- The paper was exercised in a jsdom harness before shipping: timer starts at 60:00, the answer key tab stays locked,
+  no option mark or solution renders before submit, the palette reaches `na` / `ans` / `mrk` / `amr` / `cur`
+  correctly, all 25 answered correctly scores 35/35, an MSQ with one of three correct options selected scores zero for
+  that question, and the key tab unlocks on submit with all 25 solutions.
+- The Question Bank tab inside the paper now lists 275 solved questions — Unit 4's Set 2 has been superseded, so its 25
+  join Set 1 there; Unit 5's own 25 are the active test and are not repeated in the tab. `index.html` holds all 300.
+- No second pass has started; units 6–15 are still untouched.
+- Subject selection: the series is still running Discrete Mathematics, the only subject with a question bank, until its
+  16 units complete a pass. No override was used for this run.
 
 - **2026-10-26, Unit 4 → Unit 4 (Set 2).** `master_bank.json` showed Unit 4 with 25 banked questions, current since the
   same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 4 rather than
@@ -156,7 +186,7 @@ discrete-mathematics/
 | 2 | Predicate & First-Order Logic | `predicate-logic` | 50 | yes |
 | 3 | Set Theory | `set-theory` | 50 | yes |
 | 4 | Relations | `relations` | 50 | yes |
-| 5 | Functions | `functions` | 0 | — |
+| 5 | Functions | `functions` | 25 | yes |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
 | 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
 | 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
@@ -189,7 +219,7 @@ review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
 
-- `6.4 No raw hex outside :root` is not yet met (the Unit 3 Set 2 paper carries exactly the same literal hex
+- `6.4 No raw hex outside :root` is not yet met (the Unit 5 paper carries exactly the same literal hex
   occurrences — 114 — as the shell it was built from, so nothing new was added): the shipped shell uses literal hex
   values for a handful of tints and borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one
   byte-identical shell, this can only be corrected by re-issuing all papers together, so it is recorded here rather than
