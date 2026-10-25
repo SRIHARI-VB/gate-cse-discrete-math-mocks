@@ -7,22 +7,34 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 2 — Predicate & First-Order Logic, Set 2**, 2026-10-25 → [`discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html`](discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html)
+- **Unit 3 — Set Theory, Set 1 of 2**, 2026-10-25 → [`discrete-mathematics/set-theory/gate_dm_mock_3_2026-10-25.html`](discrete-mathematics/set-theory/gate_dm_mock_3_2026-10-25.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: predicates & domain · universal & existential quantifiers · negation of nested quantifiers · scope & order of quantifiers · English to FOL translation
-- Set 1 of this unit moved to `predicate-logic/archive/gate_dm_mock_2_2026-10-25_run1.html`; it is content-frozen and uses the same shell.
+- Subtopics: subsets & power sets · cardinality · set algebra & De Morgan · inclusion-exclusion · partitions & Cartesian products
+- Unit 2 closed at its 50-question cap, so this is the first paper of Unit 3. It is the only paper in its unit folder and has
+  no archived predecessor; the shell is the same one every other paper uses.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 7 (3 on Unit 16, 2 on Unit 1, 2 on Unit 2) |
-| Units covered | 3 of 16 |
-| Questions in master_bank.json | 175 (75 in Unit 16, 50 in Unit 1, 50 in Unit 2) |
+| Papers published | 8 (3 on Unit 16, 2 on Unit 1, 2 on Unit 2, 1 on Unit 3) |
+| Units covered | 4 of 16 |
+| Questions in master_bank.json | 200 (75 in Unit 16, 50 in Unit 1, 50 in Unit 2, 25 in Unit 3) |
 | Verified official PYQs | 2 |
 | Archived sets (earlier runs) | 4 (2 Unit 16, 1 Unit 1, 1 Unit 2) |
 
 ## Rotation log
+
+- **2026-10-25, Unit 2 → Unit 3.** `master_bank.json` showed Unit 2 at 50 banked questions — the 50-question cap — so the
+  rotation advanced by the modulo rule: (1 + 1) mod 16 = 2 → Unit 3, Set Theory. Unit 3 now holds 25 questions, Set 1 of 2.
+- The 25 questions are new: no id, stem or option set repeats an earlier paper, and each of the five subtopics carries
+  exactly five questions. The set contains no `GATE_PYQ_VARIATION` item — no set-theory PYQ has been verified against an
+  official paper and key — and the About tab says so; every question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
+- Filed only at `discrete-mathematics/set-theory/`. Nothing was written at the repository root, and Unit 2's paper stayed
+  where it was as that unit's final paper, so no unit folder holds two current papers.
+- Unit 3's paper is built from the same shell as every earlier paper: identical `<style>` block, identical `<script>`
+  block, identical structural markup; only the payload, the meta strip, the header and the tab contents differ.
+- No second pass has started; units 4–15 are still untouched.
 
 - **2026-10-25, Unit 2 → Unit 2 (Set 2).** `master_bank.json` showed Unit 2 with 25 banked questions, current since the
   same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 2 instead of
@@ -47,7 +59,6 @@ and no answer, option mark or hint visible until the test is submitted.
 - The unit for a run is chosen from `master_bank.json` (questions banked per unit, and the date of that unit's first
   paper), never from the calendar. Unit 16 stops at 75 because runs 1–3 were produced before the cap rule was applied;
   it is closed to new sets and will be revisited only after the other 15 units complete a pass.
-- No second pass has started yet; units 3–15 are still untouched.
 - Subject selection: the series is running Discrete Mathematics, the only subject with a question bank. Subject
   rotation across all 11 GATE CSE subjects begins once this subject's 16 units complete a pass.
 - No override was used for any run.
@@ -70,7 +81,7 @@ discrete-mathematics/
 | --- | --- | --- | --- | --- |
 | 1 | Propositional Logic | `propositional-logic` | 50 | yes |
 | 2 | Predicate & First-Order Logic | `predicate-logic` | 50 | yes |
-| 3 | Set Theory | `set-theory` | 0 | — |
+| 3 | Set Theory | `set-theory` | 25 | yes |
 | 4 | Relations | `relations` | 0 | — |
 | 5 | Functions | `functions` | 0 | — |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
@@ -105,7 +116,7 @@ review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
 
-- `6.4 No raw hex outside :root` is not yet met: the shipped shell uses literal hex values for a handful of tints and
+- `6.4 No raw hex outside :root` is not yet met (the Unit 3 paper inherits the same 81 literal hex values as the rest of the shell): the shipped shell uses literal hex values for a handful of tints and
   borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one byte-identical shell, this can only
   be corrected by re-issuing all papers together, so it is recorded here rather than fixed in one file and breaking
   shell parity.
