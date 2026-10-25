@@ -183,7 +183,7 @@ iframe{width:100%;height:78vh;border:1px solid var(--line);
         <tr><th>Date</th><th>Subject</th><th>Unit</th><th class="c">MCQ</th>
           <th class="c">MSQ</th><th class="c">NAT</th><th class="c">Total</th>
           <th>Difficulty</th><th>Open</th></tr>
-        <tr data-subject="DM"><td data-label="Date"><b>25-10-2026</b><br><span class="s">run 1 · Archived — superseded content</span></td><td data-label="Subject">Discrete Mathematics</td><td data-label="Unit"><b>DM · Unit 16</b><br><span class="s">Logic &amp; Proof Techniques</span></td><td class="c" data-label="MCQ">15</td><td class="c" data-label="MSQ">5</td><td class="c" data-label="NAT">5</td><td class="c" data-label="Total">25</td><td class="s" data-label="Difficulty">Easy 10 / Moderate 10 / Difficult 5</td><td data-label="Open"><span class="flag archived">Archived</span><a class="btn" href="archive/gate_dm_mock_16_2026-10-25_run1.html" target="_blank" rel="noopener">Open in a new tab</a> <button class="btn ghost" type="button" data-frame="archive/gate_dm_mock_16_2026-10-25_run1.html">Load here</button></td></tr><tr data-subject="DM"><td data-label="Date"><b>25-10-2026</b><br><span class="s">run 2 · Current paper</span></td><td data-label="Subject">Discrete Mathematics</td><td data-label="Unit"><b>DM · Unit 16</b><br><span class="s">Logic &amp; Proof Techniques</span></td><td class="c" data-label="MCQ">15</td><td class="c" data-label="MSQ">5</td><td class="c" data-label="NAT">5</td><td class="c" data-label="Total">25</td><td class="s" data-label="Difficulty">Easy 10 / Moderate 10 / Difficult 5</td><td data-label="Open"><a class="btn" href="gate_dm_mock_16_2026-10-25.html" target="_blank" rel="noopener">Open in a new tab</a> <button class="btn ghost" type="button" data-frame="gate_dm_mock_16_2026-10-25.html">Load here</button></td></tr>
+        <tr data-subject="DM"><td data-label="Date"><b>25-10-2026</b><br><span class="s">run 1 · Archived — superseded content</span></td><td data-label="Subject">Discrete Mathematics</td><td data-label="Unit"><b>DM · Unit 16</b><br><span class="s">Logic &amp; Proof Techniques</span></td><td class="c" data-label="MCQ">15</td><td class="c" data-label="MSQ">5</td><td class="c" data-label="NAT">5</td><td class="c" data-label="Total">25</td><td class="s" data-label="Difficulty">Easy 10 / Moderate 10 / Difficult 5</td><td data-label="Open"><span class="flag archived">Archived</span><a class="btn" href="archive/gate_dm_mock_16_2026-10-25_run1.html" target="_blank" rel="noopener">Open in a new tab</a> <button class="btn ghost" type="button" data-frame="archive/gate_dm_mock_16_2026-10-25_run1.html">Load here</button></td></tr><tr data-subject="DM"><td data-label="Date"><b>25-10-2026</b><br><span class="s">run 2 · Current paper</span></td><td data-label="Subject">Discrete Mathematics</td><td data-label="Unit"><b>DM · Unit 16</b><br><span class="s">Logic &amp; Proof Techniques</span></td><td class="c" data-label="MCQ">15</td><td class="c" data-label="MSQ">5</td><td class="c" data-label="NAT">5</td><td class="c" data-label="Total">25</td><td class="s" data-label="Difficulty">Easy 10 / Moderate 10 / Difficult 5</td><td data-label="Open"><a class="btn" href="discrete-mathematics/logic-proof-techniques/gate_dm_mock_16_2026-10-25.html" target="_blank" rel="noopener">Open in a new tab</a> <button class="btn ghost" type="button" data-frame="discrete-mathematics/logic-proof-techniques/gate_dm_mock_16_2026-10-25.html">Load here</button></td></tr>
       </table>
       </div>
       <p class="s" style="margin:10px 0 0">Dates are shown dd-mm-yyyy, as in
@@ -224,23 +224,25 @@ iframe{width:100%;height:78vh;border:1px solid var(--line);
       <p class="s" style="margin-top:0">Pick a paper from the By date tab and
         choose <b>Load here</b>, or open one directly below.</p>
       <p style="margin:0 0 12px">
-        <a class="btn" href="gate_dm_mock_16_2026-10-25.html" target="_blank"
+        <a class="btn" href="discrete-mathematics/logic-proof-techniques/gate_dm_mock_16_2026-10-25.html" target="_blank"
            rel="noopener">Open today's paper in a new tab</a></p>
-      <iframe id="fr" src="gate_dm_mock_16_2026-10-25.html"
+      <iframe id="fr" src="discrete-mathematics/logic-proof-techniques/gate_dm_mock_16_2026-10-25.html"
         title="Mock test viewer"></iframe>
     </div>
     <div class="card"><h2>Repository layout</h2>
-      <p class="s" style="margin-top:0">Subject → area → unit → subtopic folders
-        hold each paper's canonical copy; the root also carries the latest paper
-        for direct linking.</p>
+      <p class="s" style="margin-top:0">A paper covers a whole unit, so it is filed
+        once at unit level and exists in exactly one place — not copied into
+        subtopic folders, not copied to the repository root. These links point at
+        that one copy.</p>
       <pre class="s" style="white-space:pre-wrap;margin:0"><code>index.html                                   this dashboard
-gate_&lt;subj&gt;_mock_&lt;unit&gt;_&lt;date&gt;.html         latest paper (root copy)
 &lt;subject&gt;/
   &lt;unit-slug&gt;/
+    gate_&lt;subj&gt;_mock_&lt;unit&gt;_&lt;date&gt;.html      the paper — one copy
+    README.md                                unit index
     &lt;subtopic-slug&gt;/
-      gate_&lt;subj&gt;_mock_&lt;unit&gt;_&lt;date&gt;.html    canonical copy
+      README.md                              navigation; points at the unit paper
 bank/master_question_bank.json               append-only master bank
-archive/                                     superseded files kept intact</code></pre>
+archive/                                     superseded papers, content frozen</code></pre>
     </div>
   </div>
 
