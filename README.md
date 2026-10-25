@@ -48,8 +48,11 @@ discrete-mathematics/
     <subtopic-slug>/
       gate_dm_mock_<unit>_<YYYY-MM-DD>.html  canonical copy of the paper
 bank/master_question_bank.json               append-only master bank
-archive/                                     superseded files, kept intact
+archive/                                     superseded papers (content frozen)
 ```
+
+Both papers in this repo are generated from **one interface** (markup, CSS and JavaScript), so
+a superseded paper differs from a current one only in its embedded question payload.
 
 The top-level folder is a **subject** directory (`discrete-mathematics/`, and later
 `operating-systems/`, `databases/` and so on). `design-tokens.css` holds the canonical
@@ -66,5 +69,5 @@ practice material, not official GATE questions.
 
 | Date | Unit | Composition | Difficulty | Note |
 |------|------|-------------|------------|------|
-| 2026-10-25 (run 1) | 16 — Logic & Proof Techniques | 15 / 5 / 5 | 10 / 10 / 5 | Superseded; its 25 questions are preserved in the historical bank and in `archive/`. |
+| 2026-10-25 (run 1) | 16 — Logic & Proof Techniques | 15 / 5 / 5 | 10 / 10 / 5 | Superseded; its 25 questions are preserved in the historical bank and in `archive/`. The archived file was rebuilt on the current interface — its questions, solutions, answers and 45-minute duration are unchanged. |
 | 2026-10-25 (run 2) | 16 — Logic & Proof Techniques | 15 / 5 / 5 | 10 / 10 / 5 | Current paper. 25 new questions, no duplication with run 1. |
