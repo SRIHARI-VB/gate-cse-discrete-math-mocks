@@ -42,17 +42,24 @@ Each subject will carry its own rotation once it has papers.
 
 ```
 index.html                                   dashboard
-gate_dm_mock_<unit>_<YYYY-MM-DD>.html        latest paper (root copy)
 discrete-mathematics/
   <unit-slug>/
+    gate_dm_mock_<unit>_<YYYY-MM-DD>.html    the paper — one copy, at unit level
+    README.md                                unit index
     <subtopic-slug>/
-      gate_dm_mock_<unit>_<YYYY-MM-DD>.html  canonical copy of the paper
+      README.md                              navigation; points at the unit paper
 bank/master_question_bank.json               append-only master bank
-archive/                                     superseded papers (content frozen)
+archive/                                     superseded papers, content frozen
 ```
 
 Both papers in this repo are generated from **one interface** (markup, CSS and JavaScript), so
 a superseded paper differs from a current one only in its embedded question payload.
+
+**One copy per paper.** A paper covers a whole unit, so it is filed once at unit level and
+exists in exactly one place. It is not copied into subtopic folders and it is not copied to
+the repository root — the dashboard links to that one file. Duplicating a 150 KB
+self-contained paper gives you two files that must stay byte-identical with nothing
+enforcing it.
 
 The top-level folder is a **subject** directory (`discrete-mathematics/`, and later
 `operating-systems/`, `databases/` and so on). `design-tokens.css` holds the canonical
