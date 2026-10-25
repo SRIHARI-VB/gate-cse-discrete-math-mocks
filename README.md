@@ -1,52 +1,56 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
-Daily, self-contained mock tests for **GATE CSE 2027**, one unit per day on a 16-unit rotation of Discrete
+Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on the 16-unit rotation of Discrete
 Mathematics. Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Unit 2 — Predicate & First-Order Logic**, 2026-10-25, Set 1 → [`discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html`](discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html)
+- **Unit 2 — Predicate & First-Order Logic, Set 2**, 2026-10-25 → [`discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html`](discrete-mathematics/predicate-logic/gate_dm_mock_2_2026-10-25.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: predicates & domain · universal & existential quantifiers · negation of nested quantifiers · scope & order of quantifiers · English to FOL translation
-- No superseded set yet for this unit, so nothing was moved into `predicate-logic/archive/`.
+- Set 1 of this unit moved to `predicate-logic/archive/gate_dm_mock_2_2026-10-25_run1.html`; it is content-frozen and uses the same shell.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 6 (3 on Unit 16, 2 on Unit 1, 1 on Unit 2) |
+| Papers published | 7 (3 on Unit 16, 2 on Unit 1, 2 on Unit 2) |
 | Units covered | 3 of 16 |
-| Questions in master_bank.json | 150 (75 in Unit 16, 50 in Unit 1, 25 in Unit 2) |
+| Questions in master_bank.json | 175 (75 in Unit 16, 50 in Unit 1, 50 in Unit 2) |
 | Verified official PYQs | 2 |
-| Archived sets (earlier runs) | 3 (2 Unit 16, 1 Unit 1) |
+| Archived sets (earlier runs) | 4 (2 Unit 16, 1 Unit 1, 1 Unit 2) |
 
 ## Rotation log
 
+- **2026-10-25, Unit 2 → Unit 2 (Set 2).** `master_bank.json` showed Unit 2 with 25 banked questions, current since the
+  same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 2 instead of
+  advancing. 25 + 25 = 50 closes Unit 2 at the cap; the next run for this subject advances to
+  (1 + 1) mod 16 = 2 → Unit 3, Set Theory.
+- Set 2 repeats no question from Set 1: the two sets share no id, no formula and no stem. Its five subtopics carry five
+  questions each, so no subtopic is under-represented. It contains no `GATE_PYQ_VARIATION` item, and the About tab says
+  so: every question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
+- The new paper is filed only at `discrete-mathematics/predicate-logic/`; the previous paper was moved into that unit's
+  `archive/` as `..._run1.html` before the new file was written, so the unit folder never held two current papers.
+
 - **2026-10-25, Unit 1 → Unit 2.** `master_bank.json` showed Unit 1 with 50 banked questions — at the 50-question cap —
-  so the rotation advanced by the modulo rule: (0 + 1) mod 16 = 1 → Unit 2, Predicate & First-Order Logic. The new set is
-  exactly 25 questions; Unit 2 now holds 25, which leaves room for one more set before it too reaches the cap.
+  so the rotation advanced by the modulo rule: (0 + 1) mod 16 = 1 → Unit 2, Predicate & First-Order Logic.
 - Unit 2 contains no `GATE_PYQ_VARIATION` item: no first-order-logic previous-year question has been verified against an
-  official paper and key, so none is claimed. Every question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
-- Unit 2's five subtopics are covered five questions each (25 total), so no subtopic is under-represented.
+  official paper and key, so none is claimed.
 
-- **2026-10-25, Unit 1 (second set).** `master_bank.json` showed Unit 1 with 25 banked questions, current since the
-  same date — under the 50-question cap and current for 0 days — so the rotation re-selected Unit 1 instead of
-  advancing. 25 + 25 = 50 closes Unit 1 at the cap; the next run for this subject advances to
-  (0 + 1) mod 16 = Unit 2, Predicate & First-Order Logic.
-- Set 2 repeats no question from Set 1. It contains no `GATE_PYQ_VARIATION` item, and the About tab says so: every
-  question is `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`.
+- **2026-10-25, Unit 1 (second set).** Unit 1 was at 25 banked questions and current for 0 days, so the rotation
+  re-selected it; 25 + 25 = 50 closed Unit 1 at the cap.
 
-- **2026-10-25, Unit 16 → Unit 1.** Unit 16 had reached 75 banked questions, i.e. at or beyond the
-  50-question unit cap, so the rotation advanced by the modulo rule: (15 + 1) mod 16 = 0 → Unit 1.
+- **2026-10-25, Unit 16 → Unit 1.** Unit 16 had reached 75 banked questions, i.e. at or beyond the 50-question unit cap,
+  so the rotation advanced by the modulo rule: (15 + 1) mod 16 = 0 → Unit 1.
 - The unit for a run is chosen from `master_bank.json` (questions banked per unit, and the date of that unit's first
   paper), never from the calendar. Unit 16 stops at 75 because runs 1–3 were produced before the cap rule was applied;
   it is closed to new sets and will be revisited only after the other 15 units complete a pass.
-- No second pass has started yet; units 2–15 are still untouched.
+- No second pass has started yet; units 3–15 are still untouched.
 - Subject selection: the series is running Discrete Mathematics, the only subject with a question bank. Subject
   rotation across all 11 GATE CSE subjects begins once this subject's 16 units complete a pass.
-- No override was used for this run.
+- No override was used for any run.
 
 ## Repository layout
 
@@ -58,7 +62,6 @@ discrete-mathematics/
   <unit-slug>/gate_dm_mock_<unit>_<date>.html current paper for that unit
   <unit-slug>/archive/                       superseded sets, content frozen, shell current
   question-bank/master_bank.json             append-only master question bank
-  predicate-logic/                           Unit 2 paper (gate_dm_mock_2_2026-10-25.html)
 ```
 
 ## Syllabus coverage checklist
@@ -66,7 +69,7 @@ discrete-mathematics/
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Propositional Logic | `propositional-logic` | 50 | yes |
-| 2 | Predicate & First-Order Logic | `predicate-logic` | 25 | yes |
+| 2 | Predicate & First-Order Logic | `predicate-logic` | 50 | yes |
 | 3 | Set Theory | `set-theory` | 0 | — |
 | 4 | Relations | `relations` | 0 | — |
 | 5 | Functions | `functions` | 0 | — |
@@ -107,7 +110,9 @@ review interface.
   be corrected by re-issuing all papers together, so it is recorded here rather than fixed in one file and breaking
   shell parity.
 - The `index.html` archive prints an answer line from `answer_display` and, for records created before 2026-10-25, a
-  second identical line inside `solution_html`. The 25 Unit 2 records carry it once; the older records still carry it
-  twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
-- `6.1` requires an archived paper to be rebuilt on the current shell. The archived Unit 1 Set 1 file is frozen exactly
-  as it shipped; it already uses the current shell, so no rebuild was needed.
+  second identical line inside `solution_html`. The 50 Unit 2 records and the 25 Unit 1 Set 2 records carry it once; the
+  older records still carry it twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
+- `6.1` requires an archived paper to be rebuilt on the current shell. The archived papers are frozen exactly as they
+  shipped; they already use the current shell, so no rebuild was needed. Shell parity between the archived Unit 2 Set 1
+  file and the new Unit 2 Set 2 file was checked this run: identical `<style>` block, identical `<script>` block,
+  identical structural markup.
