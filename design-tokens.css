@@ -1,0 +1,133 @@
+/* ============================================================================
+   GATE CSE Mock Test Series — canonical design tokens
+   ----------------------------------------------------------------------------
+   This file is the design system the project did not have. Every generated
+   paper and the dashboard must paste this :root block VERBATIM into its own
+   <style>. Do not <link> it: the papers are deliberately self-contained single
+   files (see README, "self-contained HTML mock tests"), so a shared external
+   stylesheet would break offline use and portability.
+
+   Provenance: these values are the union of the two :root blocks already
+   shipping in index.html (6 tokens) and gate_dm_mock_16_2026-10-25.html
+   (16 tokens). The six core tokens already agree across both files and are
+   kept byte-identical here. Everything added is a value that was previously
+   hardcoded inline, promoted to a name.
+
+   Changed from what ships today, and why:
+     --amber        #9a6a00 -> #8a5a00   #9a6a00 on --amber-bg is 4.40:1,
+                                          under AA 4.5 for 11px text.
+     --amber-solid  new, #8a5a00          replaces the hardcoded #d68910 used
+                                          for the "partially correct" palette
+                                          state (white on #d68910 = 2.82:1).
+     --green-ink    new, #145a32          collapses 4 hardcoded uses of
+                                          #145a32 and removes #186a3b.
+     --red-ink      new, #922b21          collapses hardcoded #922b21 /
+                                          #a93226.
+     --green-bg     #e8f6ee (unchanged)   retires the near-duplicates
+                                          #eafaf1, #f7fcf9, #e9f7ea.
+   ========================================================================== */
+
+:root{
+  /* --- core surfaces (identical in every file today) --- */
+  --ink:#12232e;          /* body text */
+  --muted:#5b6b7a;        /* secondary text, meta, captions */
+  --line:#d5dde5;         /* every border and divider */
+  --bg:#eef2f6;           /* page background */
+  --hdr:#0b3c5d;          /* deep header / heading ink */
+  --hdr2:#12608f;         /* primary brand, links, selected states */
+
+  /* --- surface fills --- */
+  --card:#ffffff;
+  --surface-alt:#f8fafc;  /* table headers, card sub-headers, stat tiles */
+  --surface-sunken:#e6ebf0;/* palette buttons at rest, progress tracks */
+  --code-bg:#f4f7fa;
+
+  /* --- semantic: accent (destructive / submit) --- */
+  --accent:#c0392b;
+  --accent-hover:#a5342a;
+
+  /* --- semantic: correct / answered --- */
+  --green:#1e8449;        /* fills, borders, white-on-green at 4.72:1 */
+  --green-ink:#145a32;    /* green TEXT on light fills (7.5:1 on --green-bg) */
+  --green-bg:#e8f6ee;
+  --green-line:#b7e1c8;
+
+  /* --- semantic: wrong / unattempted --- */
+  --red:#b03a2e;
+  --red-ink:#922b21;      /* red TEXT on light fills */
+  --red-bg:#fdecea;
+  --red-line:#f2b8b1;
+
+  /* --- semantic: caution / partial / moderate --- */
+  --amber:#8a5a00;        /* amber TEXT and amber FILL (5.93:1 white-on) */
+  --amber-bg:#fff6e0;
+  --amber-line:#f0dca8;
+
+  /* --- semantic: marked for review --- */
+  --purple:#6c3483;
+  --purple-bg:#f4ecf7;
+  --purple-line:#dcc6e8;
+
+  /* --- semantic: type tags / informational --- */
+  --blue:#1a5276;
+  --blue-bg:#eaf2f8;
+  --blue-line:#b9d3e4;
+
+  /* --- radii: four steps, nothing in between --- */
+  --r-sm:4px;             /* tags, code spans, small chips */
+  --r-md:6px;             /* buttons, option rows, inputs */
+  --r-lg:8px;             /* cards, panels, modal boxes */
+  --r-pill:20px;          /* filter chips only */
+
+  /* --- type scale: five sizes for body copy, two for headings --- */
+  --fs-xs:11.5px;         /* uppercase labels, tag text */
+  --fs-sm:12.5px;         /* meta, captions, table body */
+  --fs-md:13.5px;         /* buttons, table headers, dense UI */
+  --fs-body:15px;         /* question text and prose */
+  --fs-lg:16px;           /* card headings, brand */
+  --fs-xl:21px;           /* page h1 */
+
+  /* --- layout --- */
+  --w-dashboard:1180px;
+  --w-paper:1420px;       /* must equal the dashboard's, or the paper reflows
+                             between "Open" and "Load here" */
+  --bp-wide:960px;
+  --bp-narrow:760px;
+}
+
+/* ============================================================================
+   Component contract — the rules the tokens imply.
+   These are the things that drifted. State them once, here.
+   ========================================================================== */
+
+/* 1. Colour carries ONE meaning per semantic axis.
+      type tags  (mcq/msq/nat) -> --blue-* / --purple-* / --green-*
+      difficulty (easy/moderate/difficult) -> --green-* / --amber-* / --red-*
+      A type tag and a difficulty tag must never share a fill.
+      (.tag.nat and .tag.easy were byte-identical: #186a3b on #eafaf1.) */
+
+/* 2. Every interactive element ships all five states:
+      rest, :hover, :focus-visible, :disabled, and (where it can be waiting)
+      a loading state. Focus is always visible:
+        :focus-visible{ outline:2px solid var(--hdr2); outline-offset:2px }
+      Never `outline:none` without a replacement ring. */
+
+/* 3. Navigation comes in exactly two documented shapes:
+      - .filters  — pill row, radius --r-pill, switches a VIEW of one dataset
+                    (dashboard: by date / by subject / by topic).
+      - .tabs     — attached tab bar, radius --r-lg --r-lg 0 0, switches
+                    SECTIONS of one document (paper: test / key / bank).
+      Both use the SAME active-state class: .active.
+      (They drifted because both were called .tabs and one used .on.) */
+
+/* 4. One card primitive: background --card, border 1px --line,
+      radius --r-lg, box-shadow 0 1px 3px rgba(18,35,46,.06).
+      A card never re-declares its own radius or shadow. */
+
+/* 5. Dates render as dd-mm-yyyy in the UI (India convention) and ISO
+      8601 in data attributes and filenames. Never both in a label.
+      (index.html shows 2026-10-25; the archived paper's header shows
+      25-10-2026 for the same paper.) */
+
+/* 6. Container widths come from --w-dashboard / --w-paper. Breakpoints
+      come from --bp-wide / --bp-narrow. No component picks its own. */
