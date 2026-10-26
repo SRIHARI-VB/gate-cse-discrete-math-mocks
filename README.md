@@ -7,7 +7,19 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 1 of 2**, 2026-10-27 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html)
+- **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 1 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
+- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
+- Subtopics: pointer arithmetic (7) · pointers to functions (6) · dynamic memory allocation (6) · macro expansion,
+  scope & lifetime (6)
+- Rotation: MODE A drew **Programming and Data Structures** at random from the nine subjects that had not already
+  produced a paper dated 2026-10-27 (`random.Random(20261027).choice`; Digital Logic and Computer Architecture were
+  excluded because each had already run today). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of
+  2"}` with **50** questions banked on Unit 1, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
+  step B4 advanced exactly one unit: `(index_of(c-programming-core) + 1) mod 7 = (0 + 1) mod 7 = 1` → **Unit 2,
+  Pointers, Memory & Preprocessors**. This is Set 1 of 2, so the unit stands at 25 questions and the next
+  Programming and Data Structures run repeats Unit 2 under step B3 (25 < 50, 0 days current) to close it at 50. No
+  override was used, no cap was breached and no second pass has started.
+- Previous test: **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 1 of 2**, 2026-10-27 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: hardwired control (7) · microprogrammed control (6) · ALU & datapath timing (6) · bus architectures (6)
 - Rotation: MODE A drew **Computer Architecture** at random from the 11 subjects (`random.Random(20261027).choice` over the
@@ -29,9 +41,9 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Papers published | 37 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 925 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published | 38 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 950 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 15 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic) |
 
@@ -46,6 +58,66 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 33 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Programming and Data Structures → Unit 2 (Pointers, Memory & Preprocessors), Set 1 of 2.** MODE A:
+  one subject was drawn from the nine that had not already produced a paper dated 2026-10-27, with
+  `random.Random(20261027).choice` over the list in syllabus order minus Digital Logic and Computer Architecture
+  (both already ran today). The draw gave **Programming and Data Structures**. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}`; Unit 1 stood at **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(c-programming-core) + 1) mod 7 = (0 + 1) mod 7 = 1` → **Unit 2, Pointers, Memory & Preprocessors**
+  (`pointers-memory`). This is Set 1 of 2; 25 questions are now banked on Unit 2 and the next Programming and Data
+  Structures run generates Unit 2 again before advancing to Unit 3. No override was used, no unit exceeded 50
+  questions and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — pointer arithmetic (7), pointers to functions (6), dynamic memory
+  allocation (6), macro expansion, scope & lifetime (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: no stem, code listing, option set or numeric answer repeats a Unit 1 question. The paper is
+  filed only at `programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`; Unit 2 had no earlier
+  paper, so nothing was archived, no root copy was written and the unit folder holds exactly one current paper.
+- **Every program-output answer was compiled and executed, not reasoned about by hand.** All thirteen C listings on
+  the paper were built with `zig cc 0.17.0 -std=c11 -O0` and run. Confirmed: `*(p-1) + p[1]` = **60** (Q1);
+  `(char*)(p+3) - (char*)p` over a `sizeof`-8 struct = **24** bytes (Q2); the pointer-to-pointer trace prints
+  **`2 3 14`** (Q6); the pre-decrement loop prints **`43210`** (Q7); the dispatch table over `(7,3)` sums to **35**
+  (Q10); the nested `typedef` table prints **20** (Q11); `SQR(2+3)` with `#define SQR(x) x*x` prints **11** (Q20);
+  the `static` local prints **`1 2 3`** (Q22); `CUBE(1+2)` with unparenthesised `SQ`/`CUBE` prints **7** (Q23); the
+  block-scope `extern int x` prints **`10 20`** (Q24); `calloc(6, sizeof(struct rec))` with `sizeof` 16 requests
+  **96** bytes (Q15); the overwritten `malloc` handle leaks **20** bytes (Q19). `sizeof(*(a+1))` for `int a[3][4]`
+  evaluates to 16, which is what fixes the type in Q5 as `int (*)[4]`. Two declaration questions were checked by
+  compilation rather than by eye: `int (*f)(int, int)` and `typedef char (*F)(int)` are the only options of Q8 and
+  Q13 that declare a pointer to a function.
+- The conceptual items were settled by the standard rather than by taste: `a + n` is a legal one-past-the-end value
+  but must not be dereferenced; `p - q` has type `ptrdiff_t`, not `int`; function pointers compare for equality but
+  not for order; `fp()` and `(*fp)()` are both valid calls; a function pointer does not convert to `void *` by
+  guarantee; `realloc(p, 0)` is implementation-defined in C99 and is not a portable free; `malloc(0)` may return
+  `NULL` or a unique freeable pointer; `free` on a non-heap pointer is undefined behaviour; an identical macro
+  redefinition is allowed while a different one must be diagnosed; `const` does not imply static storage duration;
+  and file-scope `static` gives internal linkage.
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 5 times, (B) 4,
+  (C) 3 and (D) 3, and the five MSQ answer sets are (A,C), (A,B), (A,B,D), (A,C,D) and (A,C,D). Option order was
+  fixed at drafting time so the letter distribution was balanced before the solutions were written.
+- No verified PYQ exists for this unit: `verified_pyqs` stays empty for this subject, the Question Bank tab shows
+  **50 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **50** solved Unit 1 questions under four subtopic accordions
+  inside one unit accordion, every solution collapsed, and the 25 active Unit 2 questions do not appear there.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 235 bytes), the exam `<script>` (9 419 bytes) and the `:root` block are byte-for-byte identical
+  to the Computer Architecture Unit 2 paper, and the `:root` block also matches `design-tokens.css` and
+  `index.html`. No new literal hex value was introduced; the paper carries 81 hex occurrences outside `:root`,
+  the same count as the reference shell, so the known Section 6.4 deviation below is unchanged and was not
+  partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**146 checks, all passing**): nothing is revealed
+  pre-submit (every `.sol` empty and hidden, no option mark, no mark text, key tab disabled, key pane empty, summary
+  hidden, timer at 60:00); the palette reaches `ans` / `amr` / `na` / `cur` and falls back correctly on Clear
+  Response; all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong and 25 `ok` palette buttons; every
+  card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and
+  `data-source`; all four subtopics appear; and the Question Bank tab renders 50 cards with no active question
+  repeated.
+- `index.html` holds all **950** questions; the new Programming and Data Structures Unit 2 card reads "25 solved"
+  with four subtopic pills and one "Practise Set 1 →" button, and its data block was updated in place so the newest
+  paper renders first. Its static header strings were recomputed from the data block: 11 subjects, 61 units,
+  950 solved, 49 sets published, 950 records, 264 subtopics.
 
 - **2026-10-27, Computer Architecture → Unit 2 (CPU Control Design & Data Path), Set 1 of 2.** MODE A: the subject was
   drawn with `random.Random(20261027).choice` from the ten subjects that had not already produced a paper today
@@ -1179,7 +1251,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 25 | yes |
+| 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
 | 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 0 | — |
 | 3 | Greedy Algorithms | `greedy-algorithms` | 0 | — |
 | 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
@@ -1191,8 +1263,8 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | C Programming Foundations | `c-programming-core` | 25 | yes |
-| 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 0 | — |
+| 1 | C Programming Foundations | `c-programming-core` | 50 | yes |
+| 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 25 | yes |
 | 3 | Linear Data Structures | `linear-data-structures` | 0 | — |
 | 4 | Binary Trees & Tree Traversals | `trees-traversals` | 0 | — |
 | 5 | Binary Search Trees & Balanced Trees | `search-trees` | 0 | — |
@@ -1203,8 +1275,8 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | ER Models & Relational Algebra | `er-relational-algebra` | 25 | yes |
-| 2 | SQL & Advanced Querying | `sql-querying` | 0 | — |
+| 1 | ER Models & Relational Algebra | `er-relational-algebra` | 50 | yes |
+| 2 | SQL & Advanced Querying | `sql-querying` | 25 | yes |
 | 3 | Database Normalization | `normalization` | 0 | — |
 | 4 | Transactions & Concurrency Control | `transactions-concurrency` | 0 | — |
 | 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
@@ -1213,7 +1285,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Lexical Analysis | `lexical-analysis` | 25 | yes |
+| 1 | Lexical Analysis | `lexical-analysis` | 50 | yes |
 | 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 0 | — |
 | 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 0 | — |
 | 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 0 | — |
@@ -1255,8 +1327,8 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 25 | yes |
-| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 0 | — |
+| 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 50 | yes |
+| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 25 | yes |
 | 3 | Pushdown Automata | `pushdown-automata` | 0 | — |
 | 4 | Turing Machines & Decidability | `turing-machines-decidability` | 0 | — |
 
@@ -1265,7 +1337,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Number Systems & Representation | `number-systems` | 50 | yes |
-| 2 | Combinational Circuit Design | `combinational-circuits` | 25 | yes |
+| 2 | Combinational Circuit Design | `combinational-circuits` | 50 | yes |
 | 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
 | 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
 
