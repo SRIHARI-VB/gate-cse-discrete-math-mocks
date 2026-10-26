@@ -7,28 +7,68 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 2 — SQL & Advanced Querying, Set 1 of 2**, 2026-10-26 → [`databases/sql-querying/gate_db_mock_2_2026-10-26.html`](databases/sql-querying/gate_db_mock_2_2026-10-26.html)
+- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DDL, DML & DCL (5) · nested & correlated subqueries (5) · aggregates, GROUP BY & HAVING (5) · joins & outer joins (5) · views, triggers & constraints (5)
-- Rotation: MODE A drew Databases at random from the 11 subjects (draw index 9 of 11). The bank read back
-  `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1 — exactly
+- Subtopics: CFG derivation trees (7) · ambiguity in grammars (6) · CNF & GNF normal forms (6) · closure properties of CFLs (6)
+- Rotation: MODE A drew Theory of Computation at random from the 11 subjects (draw index 6 of 11). The bank read
+  back `runs[-1] = {date 2026-10-26, unit 1, set "Set 2 of 2"}` with **50** questions banked on Unit 1 — exactly
   `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
-  `(0 + 1) mod 5` = Unit 2, SQL & Advanced Querying. This is Set 1 of 2; 25 questions are banked, so a second
-  Databases run today would re-select Unit 2. No override was used and no second pass has started.
-- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 2 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
+  `(0 + 1) mod 4` = Unit 2, Grammars & Context-Free Languages. This is Set 1 of 2; 25 questions are banked, so a
+  second Theory of Computation run today would re-select Unit 2. No override was used and no second pass has started.
+- Previous test: **Databases · Unit 2 — SQL & Advanced Querying, Set 1 of 2**, 2026-10-26 → [`databases/sql-querying/gate_db_mock_2_2026-10-26.html`](databases/sql-querying/gate_db_mock_2_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 31 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 775 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
+| Papers published | 32 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
+| Questions in the subject banks | 800 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 25 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
 ## Rotation log
 
+- **2026-10-26, Theory of Computation → Unit 2 (Grammars & Context-Free Languages), Set 1 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (seed 2455681511, draw index 6 of 11) and it gave **Theory of Computation**. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "Set 2 of 2"}` with **50** questions banked on Unit 1
+  (`regular-languages-fa`). Since 50 >= `UNIT_QUESTION_CAP = 50`, step B3 failed on the cap and step B4 advanced
+  exactly one unit: `(index_of(1) + 1) mod 4 = (0 + 1) mod 4 = 1` → **Unit 2, Grammars & Context-Free Languages**.
+  This is Set 1 of 2 for the unit; a second Theory of Computation run today would re-select Unit 2, since 25 < 50 and
+  the unit is current for 0 days. No override was used and no second pass has started for this subject.
+- All 25 items are new: each question body was compared as an exact string against the 50 Unit 1 questions already in
+  `master_bank.json`; none repeats. Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium /
+  5 hard split, and marks total 15 × 1 + 10 × 2 = 35. Coverage is 7 / 6 / 6 / 6 across CFG derivation trees, ambiguity,
+  CNF & GNF normal forms, and CFL closure properties, so all four subtopics are represented.
+- **Every answer that can be computed was recomputed by script, not by hand.** The Catalan counts were evaluated by
+  the recurrence — `C2 = 2` for `aaa` (Q9) and `C4 = 14` for `a⁵` (Q10); the derivation-tree node counts were
+  simulated — **4** internal nodes for `aaab` under `S → aS | b` (Q1) and **6** for `a³b²` under
+  `S → AB, A → aA | a, B → bB | b` (Q6); the language of `S → aSc | T, T → bTc | ε` was enumerated and only
+  `a²bc³` of the four offered strings is a member (Q7); the four candidate grammars of Q15 were each tested against
+  the two CNF production shapes and only `S → AB, A → a, B → b` passes; and the standard ε-elimination procedure was
+  run on Q18's grammar, giving nullable set `{A, B, S}` and exactly **8** productions
+  (`S → AB | A | B | ε`, `A → aA | a`, `B → bB | b`). The full-tree bound in Q4 was re-derived after a first draft
+  shipped the wrong answer: with no ε- and no unit productions the maximum is **3n − 1** total nodes, not `2n − 1`,
+  because terminal-production nodes are unary and were being forgotten; `2n − 1` is the *internal*-node count. The
+  question, its options and its solution were rewritten to match.
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,B,C), (A,C), (A,B,C), (A,B,C) and (A,C,D). Option order was fixed at
+  drafting time so that the letter distribution was balanced before the solutions were written.
+- No `GATE_PYQ_VARIATION` item ships: no context-free-grammar previous-year question has been verified against an
+  official paper and answer key for this unit, so none is claimed and `verified_pyqs` for this subject stays empty.
+  Every item is `STANDARD_TEXTBOOK` (13) or `ORIGINAL_SYNTHESIS` (12). The About tab and the Question Bank tab both
+  say so.
+- Unit 2 had no earlier paper, so nothing was archived: `theory-of-computation/cfl-grammars/` holds exactly one
+  current paper and the Theory of Computation Unit 1 paper was not touched. No root copy was written and no unit
+  folder holds two current papers.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 243 bytes), the exam `<script>` and the `:root` block (521 bytes, identical to
+  `design-tokens.css` and to `index.html`) are byte-for-byte identical to the Theory of Computation Unit 1 paper. No
+  new literal hex value was introduced.
+- The Question Bank tab inside the paper lists the **50** previously banked Unit 1 questions and deliberately omits
+  the 25 active Unit 2 questions, so no question appears twice in one paper. The tab label reads
+  `Question Bank (50 solved)`.
 - **2026-10-26, Databases → Unit 2 (SQL & Advanced Querying), Set 1 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (seed 1450085313,
   draw index 9 of 11) and it gave **Databases**. The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of
