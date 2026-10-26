@@ -1,32 +1,59 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Five subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units) and Operating Systems (6 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Six subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units) and Engineering Mathematics (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 1 — Lexical Analysis, Set 2 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
+- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: tokens, lexemes & patterns (7) · regular expressions to lexers (8) · Lex input structure (5) ·
-  input buffering & lookahead (5)
-- Rotation: `compiler-design/question-bank/master_bank.json` held 25 questions on Unit 1 with the most recent paper
-  dated 2026-10-26, so Unit 1 was still under the 50-question cap and was generated again — Set 2 of 2. Unit 1 is now
-  at the cap; the next Compiler Design run advances to `(0 + 1) mod 5` → Unit 2, Top-Down Parsing.
-- Previous test: **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 1 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
+- Subtopics: matrix operations (8) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (4)
+- Rotation: this is a new subject. `engineering-mathematics/question-bank/master_bank.json` did not exist, so there was
+  no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
+  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Engineering
+  Mathematics run re-selects Unit 1 for Set 2 of 2.
+- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 2 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 18 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems |
-| Questions in the subject banks | 450 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems) |
+| Papers published | 19 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics |
+| Questions in the subject banks | 475 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 8 (7 Discrete Mathematics, 1 Compiler Design) |
 
 ## Rotation log
+
+- **2026-10-26, Engineering Mathematics → Unit 1 (Linear Algebra: Matrices & Systems).** MODE A: the subject was drawn
+  at random from the 11 GATE CSE subjects and came out Engineering Mathematics. No bank existed for it, so step B6's
+  fallback applied: `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. No override was used and no second pass has started.
+- 25 questions, all new: 15 MCQ / 5 MSQ / 5 NAT, difficulty 10 easy / 10 medium / 5 hard. Coverage is 8 / 7 / 6 / 4
+  across matrix operations, rank & nullity, systems of linear equations and Gauss elimination, so every one of the
+  unit's four subtopics is represented.
+- Filed only at `engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`. No earlier paper
+  existed for this unit, so nothing was archived and no root copy was written.
+- Shell parity: the paper was produced by splicing a new payload into the shipped shell rather than re-typing it. After
+  normalising the title, the header brand and sub-line, the candidate block, the metadata chips, `#qhost`, the payload,
+  the Question Bank pane and the About pane, the remaining bytes are identical to the Algorithms, Databases and
+  Operating Systems papers (27 761 bytes on all four sides). The `:root` block still matches `design-tokens.css` and
+  `index.html` byte for byte.
+- The payload is base64 and every `.sol` div is empty until submit. A jsdom harness was run before shipping: no solution
+  text, option mark, mark text, key content or summary is present pre-submit; all 25 answered correctly scores
+  **35/35** with 25 correct and the key unlocks with 25 solutions; a mixed paper (1 correct MCQ, 1 wrong MCQ, 1
+  exactly-selected MSQ, 1 partially-selected MSQ, 1 correct NAT, 1 wrong NAT) scores **5/35** with 3 correct, 3 wrong
+  and 19 unattempted — confirming an MSQ pays nothing unless the exact option set is chosen; the palette reaches
+  `amr` / `na` / `cur` / unvisited and Save & Next advances the position.
+- Every numeric answer was recomputed independently with NumPy before shipping: `det(adj A) = 4` for a 3×3 matrix with
+  determinant 2; `rank([[1,2,3],[2,4,7],[3,6,10]]) = 2`; the elimination of `[[2,1,1],[4,3,3],[8,7,9]]` gives
+  `U₃₃ = 2`; the parameterised system is consistent with infinitely many solutions at exactly `k = 5`; and a 4×4
+  idempotent matrix of rank 3 has trace 3.
+- Engineering Mathematics contains no `GATE_PYQ_VARIATION` item: no linear-algebra previous-year question has been
+  verified against an official paper and key, so none is claimed. Every item is `STANDARD_TEXTBOOK` (11) or
+  `ORIGINAL_SYNTHESIS` (14).
 
 - **2026-10-26, Compiler Design → Unit 1 (Lexical Analysis), Set 2 of 2.** MODE A: the subject was drawn at random
   from the 11 GATE CSE subjects and came out Compiler Design. The bank read back
@@ -343,6 +370,9 @@ compiler-design/
 operating-systems/
   process-scheduling/gate_os_mock_1_<date>.html      current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+engineering-mathematics/
+  linear-algebra-matrices/gate_em_mock_1_<date>.html current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -409,6 +439,16 @@ Algorithms:
 | 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
 | 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
 
+### Engineering Mathematics
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Linear Algebra: Matrices & Systems | `linear-algebra-matrices` | 25 | yes |
+| 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 0 | — |
+| 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 0 | — |
+| 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 0 | — |
+| 5 | Continuous Probability & Distributions | `probability-distributions` | 0 | — |
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
@@ -432,8 +472,8 @@ review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
 
-- `6.4 No raw hex outside :root` is not yet met (the Unit 5 paper carries exactly the same literal hex
-  occurrences — 114 — as the shell it was built from, so nothing new was added): the shipped shell uses literal hex
+- `6.4 No raw hex outside :root` is not yet met (the Engineering Mathematics Unit 1 paper carries 115 literal hex
+  occurrences, exactly as the shell it was spliced from, so nothing new was added): the shipped shell uses literal hex
   values for a handful of tints and borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one
   byte-identical shell, this can only be corrected by re-issuing all papers together, so it is recorded here rather than
   fixed in one file and breaking shell parity.
