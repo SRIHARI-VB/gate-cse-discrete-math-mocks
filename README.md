@@ -7,7 +7,17 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 1 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
+- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 2 of 2**, 2026-10-27 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html)
+- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
+- Subtopics: OSI & TCP/IP models (6) · delays & bandwidth-delay product (6) · framing: bit & byte stuffing (6) ·
+  CRC, checksum & Hamming (7)
+- Rotation: MODE A drew **Computer Networks** with an unseeded `random.SystemRandom()` draw over the 11 subjects
+  (draw index 10 of 11). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with **25**
+  questions banked on Unit 1; 25 < `UNIT_QUESTION_CAP = 50` and the unit had been current for 1 day, so step B3 held
+  and step B4 was never reached — Unit 1 was generated again. This is Set 2 of 2, so the unit now stands at exactly
+  50 questions and the next Computer Networks run advances to `(0 + 1) mod 6 = 1` → Unit 2, Data Link Protocols & MAC.
+  No override was used, no cap was breached and no second pass has started.
+- Previous test: **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 1 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: pointer arithmetic (7) · pointers to functions (6) · dynamic memory allocation (6) · macro expansion,
   scope & lifetime (6)
@@ -41,11 +51,11 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Papers published | 38 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Papers published | 39 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 950 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 975 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 15 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic) |
+| Archived sets (earlier runs) | 16 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -53,11 +63,59 @@ The verification checklist item "no hex colour outside `:root`" **fails in the s
 first paper: the locked `<style>` block carries 33 raw hex values outside `:root` (`#f8fafc`, `#9fb8cc`, `#eaf4fb`
 and others, mostly hover, focus and border shades that have no token name yet). Because one shell serves all papers and
 `6.8` treats shell parity as the hard gate, the block was not edited for this run — editing it would have changed all
-33 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
+24 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
 which is the part the token contract actually pins. Closing the deviation needs one coordinated pass: add the missing
-shades to `:root`, replace the literals, then re-verify all 33 papers together.
+shades to `:root`, replace the literals, then re-verify all 24 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Computer Networks → Unit 1 (Layering, Physical & Framing), Set 2 of 2.** MODE A: one subject was
+  drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw; the draw
+  index was 10 of 11 and gave **Computer Networks**. The bank read back `runs[-1] = {date 2026-10-26, unit 1, set
+  "Set 1 of 2"}`; Unit 1 stood at **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 1 day,
+  so step B3 held and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 1
+  now holds exactly 50 questions and the next Computer Networks run advances to `(index_of(network-fundamentals-framing)
+  + 1) mod 6 = 1` → **Unit 2, Data Link Protocols & MAC**. No override was used, no unit exceeded 50 questions and no
+  second pass has started.
+- Coverage this run: all four Unit 1 subtopics — OSI & TCP/IP models (6), delays & bandwidth-delay product (6),
+  framing: bit & byte stuffing (6), CRC, checksum & Hamming (7). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: no stem, option set or numeric answer repeats a Set 1 question. The Set 1 paper was moved to
+  `computer-networks/network-fundamentals-framing/archive/gate_cn_mock_1_2026-10-26_run1.html` before this one was
+  written, so the unit folder holds exactly one current paper, no root copy was written, and the archived paper's
+  content is frozen (same questions, options, answers, solutions and duration).
+- Every numeric answer was recomputed by script, not by hand: traffic intensity 60 × 1500 × 8 / 10⁶ = **0.72** (Q8);
+  bandwidth-delay product 10⁷ × 0.025 = **250000 bits** (Q9); one-way delay 4000/10⁶ + 10⁶/(2×10⁸) = **9 ms** (Q12);
+  worst-case bit stuffing ⌊1024/5⌋ = **204** (Q14); de-stuffing `0111110011111001` → **01111101111101** (Q15), checked
+  by re-stuffing the result back to the received stream; byte-stuffing overhead 300 + 12 + 5 = **317** (Q18); CRC
+  `1100` ÷ `1011` leaves remainder `010` = **2** (Q21); Hamming capacity 2⁶ − 6 − 1 = **57** (Q25).
+- No verified PYQ exists for this unit: `verified_pyqs` stays empty for this subject, the Question Bank tab shows
+  **25 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (8) or `ORIGINAL_SYNTHESIS` (17), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **25** solved Set 1 questions under four subtopic accordions,
+  every solution collapsed, and the 25 active Set 2 questions do not appear there (verified: zero overlap between
+  the 25 active stems and the 25 banked stems).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 243 bytes), the exam `<script>` (9 428 bytes) and the `:root` block are byte-for-byte identical
+  to the Computer Architecture Unit 2 paper and to the archived Computer Networks Set 1 paper, and the `:root` block
+  also matches `design-tokens.css` and `index.html`. The paper carries 114 literal hex occurrences outside `:root`,
+  the same count as the Set 1 paper it replaces, so the known Section 6.4 deviation below is unchanged and was not
+  partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**285 checks, all passing**): nothing is revealed
+  pre-submit (every `.sol` empty and hidden, no option mark, no mark text, key tab disabled, key pane empty, summary
+  hidden, timer at 60:00, every input enabled); the palette reaches `na` / `ans` / `amr` / `cur` and falls back
+  correctly on Clear Response; all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong and 25 `ok`
+  palette buttons; a deliberately wrong MCQ, a partial MSQ and a wrong NAT score **30 / 35** with 3 wrong and 22
+  correct, confirming MSQ earns nothing unless the exact set is selected and that there is no negative marking; every
+  card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and
+  `data-source`; all four subtopics appear; and the Question Bank tab renders 25 cards with no active question
+  repeated.
+- `index.html` holds all **975** questions; the Computer Networks Unit 1 card reads "50 solved" in the archive view
+  with four subtopic pills and two launch buttons ("Practise Set 1 →" for the archived 2026-10-26 paper and
+  "Practise Set 2 →" for today's), and its data block was updated in place so the newest paper renders first. The
+  2026-10-26 card's link was retargeted at the archived copy, so every `href` on the portal resolves. Static header
+  strings were recomputed from the data block: 11 subjects, 61 units, 975 solved, 24 sets published, 975 records,
+  264 subtopics.
 
 - **2026-10-27, Programming and Data Structures → Unit 2 (Pointers, Memory & Preprocessors), Set 1 of 2.** MODE A:
   one subject was drawn from the nine that had not already produced a paper dated 2026-10-27, with
@@ -1316,7 +1374,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 25 | yes |
+| 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
 | 2 | Data Link Protocols & MAC | `data-link-mac` | 0 | — |
 | 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 0 | — |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
@@ -1380,6 +1438,12 @@ review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
 
+- **Two current papers in one unit folder (found 2026-10-27, not fixed).** `digital-logic/number-systems/` holds both
+  `gate_dl_mock_1_2026-10-26.html` and `gate_dl_mock_1_2026-10-27.html`, so a single unit folder carries two files that
+  both claim to be current, which `4.1` forbids. Both are reachable from `index.html` and both are correct; the fault is
+  filing only. Fixing it means moving the 2026-10-26 paper into `archive/` as `..._run1.html`, retargeting its portal
+  card and re-running the link check, i.e. the same one-pass repair as the items below. It was not touched by the
+  2026-10-27 Computer Networks run, which confined itself to `computer-networks/network-fundamentals-framing/`.
 - `6.4 No raw hex outside :root` is not yet met (the Engineering Mathematics Unit 1 Set 2 paper carries 84 literal hex
   occurrences, against the reference shell's 86 — no new value was added, because the new cards use `var(--muted)`):
   the shipped shell uses literal hex
