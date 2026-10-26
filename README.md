@@ -1,31 +1,57 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Eight subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units) and Computer Networks (6 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Nine subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units), Computer Networks (6 units) and Theory of Computation (4 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2**, 2026-10-26 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html)
+- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: critical section & Peterson's solution (5) · hardware primitives test-and-set & swap (6) · binary & counting semaphores (8) · producer–consumer, dining philosophers & readers–writers (6)
-- Rotation: MODE A drew Operating Systems (the same date-seeded draw as the earlier run today). `runs[-1]` was Unit 1
-  holding 50 questions — exactly `UNIT_QUESTION_CAP` — so step B4 advanced: `(0 + 1) mod 6` = 1 → **Unit 2**. No
-  override was used and no second pass has started.
-- Previous test: **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 2 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
+- Subtopics: DFA construction & minimisation (7) · NFA to DFA, subset construction (6) · regular expressions (6) · pumping lemma for regular languages (6)
+- Rotation: MODE A drew Theory of Computation at random from the 11 subjects. The subject had **no** `question-bank/master_bank.json`
+  at all, so step B6 applied: `(2026-10-26 − 2026-10-26) mod 4` = 0 → **Unit 1**. First paper for this subject, Set 1 of 2.
+- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2**, 2026-10-26 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 23 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks |
-| Questions in the subject banks | 575 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
+| Papers published | 24 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 1 Theory of Computation) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation |
+| Questions in the subject banks | 600 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 25 Theory of Computation) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 9 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems) |
 
 ## Rotation log
+
+- **2026-10-26, Theory of Computation → Unit 1 (Regular Languages & Finite Automata), Set 1 of 2.** MODE A: the
+  subject was drawn at random from the 11 GATE CSE subjects with an unseeded `random.choice` this run (the two earlier
+  runs today used a date-seeded draw, which both returned Operating Systems); the draw gave **Theory of Computation**, a
+  subject with no bank yet. `theory-of-computation/question-bank/master_bank.json` did not exist, so there was no
+  `runs[]` to read and step B6 applied: `(2026-10-26 − 2026-10-26) mod 4 = 0` → **Unit 1, `regular-languages-fa`**.
+  This is Set 1 of 2; 25 questions are banked, so a second Theory of Computation run today would re-select Unit 1
+  (25 < `UNIT_QUESTION_CAP = 50`, unit current for 0 days). No override was used and no second pass has started.
+- Coverage is 7 / 6 / 6 / 6 across DFA construction & minimisation, NFA to DFA (subset construction), regular
+  expressions, and the pumping lemma, so all four of the unit's subtopics are represented. Composition is the standard
+  15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium / 5 hard split; marks total 15 × 1 + 10 × 2 = 35.
+- **Every numerical and state-count answer was recomputed by an independent simulator, not by hand.** A script built
+  each automaton, ran the language against brute-force enumeration, then minimised it by reachability pruning plus table
+  filling. Confirmed: minimal complete DFA for even number of `a`'s = **2** states; for `#0 ≡ 0 (mod 3) ∧ #1 ≡ 0 (mod 2)`
+  = **6**; for binary strings divisible by 5 = **5**; for `{a^n b^m : n ≥ 1, m ≥ 2}` = **5**; for `a(a+b)*` = **3**;
+  for the 5-state DFA of Question 12 = **4** (states `A` and `E` merge, and the language really is "even `0`'s and even
+  `1`'s"); the 3-state NFA of Question 23 yields exactly **4** reachable subset states; the 4-state NFA of Question 13
+  yields **8** reachable subsets that survive minimisation; length-4 strings containing `ab` = **11** (16 total minus the
+  5 strings of the form `b*a*`); and the regex `b*(ab*ab*)*ab*` matches exactly the odd-`a` strings for all lengths ≤ 6.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. After
+  normalising the title, the header brand/sub lines, the candidate block, the metadata chips, `#qhost`, the payload, the
+  Question Bank pane and the About pane, the remaining bytes are identical to the Algorithms Unit 1 paper — **27 933
+  bytes on both**. The `<style>` block and the exam `<script>` are byte-for-byte identical, and the `:root` token block
+  matches `design-tokens.css`.
+- Every card carries `data-subject="theory-of-computation"`, `data-unit="regular-languages-fa"`, `data-unit-number="1"`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`. Unit 1 had no earlier paper, so nothing was
+  archived: the unit folder holds exactly one current paper, and no root copy was written.
 
 - **2026-10-26, Operating Systems → Unit 2 (Inter-Process Communication & Synchronization), Set 1 of 2.** MODE A: the
   subject came from the same date-seeded draw as the earlier run today (seed 852190219, the SHA-256 of
@@ -550,6 +576,9 @@ programming-data-structures/
 computer-networks/
   network-fundamentals-framing/gate_cn_mock_1_<date>.html  current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+theory-of-computation/
+  regular-languages-fa/gate_toc_mock_1_<date>.html   current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -648,6 +677,15 @@ Algorithms:
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
 | 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
+
+### Theory of Computation
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 25 | yes |
+| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 0 | — |
+| 3 | Pushdown Automata | `pushdown-automata` | 0 | — |
+| 4 | Turing Machines & Decidability | `turing-machines-decidability` | 0 | — |
 
 ## Provenance rules used in every test
 
