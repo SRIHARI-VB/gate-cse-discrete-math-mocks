@@ -7,28 +7,71 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html)
+- **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: CFG derivation trees (7) · ambiguity in grammars (6) · CNF & GNF normal forms (6) · closure properties of CFLs (6)
-- Rotation: MODE A drew Theory of Computation at random from the 11 subjects (draw index 6 of 11). The bank read
-  back `runs[-1] = {date 2026-10-26, unit 1, set "Set 2 of 2"}` with **50** questions banked on Unit 1 — exactly
+- Subtopics: characteristic equations (6) · eigenvalue properties (7) · Cayley–Hamilton theorem (5) · diagonalization (7)
+- Rotation: MODE A drew Engineering Mathematics at random from the 11 subjects (`random.Random(20261026).choice`). The
+  bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1 — exactly
   `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
-  `(0 + 1) mod 4` = Unit 2, Grammars & Context-Free Languages. This is Set 1 of 2; 25 questions are banked, so a
-  second Theory of Computation run today would re-select Unit 2. No override was used and no second pass has started.
-- Previous test: **Databases · Unit 2 — SQL & Advanced Querying, Set 1 of 2**, 2026-10-26 → [`databases/sql-querying/gate_db_mock_2_2026-10-26.html`](databases/sql-querying/gate_db_mock_2_2026-10-26.html)
+  `(0 + 1) mod 5` = Unit 2, Linear Algebra: Eigenvalues & Vectors. This is Set 1 of 2; 25 questions are banked, so a
+  second Engineering Mathematics run today would re-select Unit 2. No override was used and no second pass has started.
+- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 32 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 800 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 25 Digital Logic) |
+| Papers published | 33 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
+| Questions in the subject banks | 825 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 25 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
+### Known deviation from the Section 6.4 token rule
+
+The verification checklist item "no hex colour outside `:root`" **fails in the shared shell** and has done since the
+first paper: the locked `<style>` block carries 33 raw hex values outside `:root` (`#f8fafc`, `#9fb8cc`, `#eaf4fb`
+and others, mostly hover, focus and border shades that have no token name yet). Because one shell serves all papers and
+`6.8` treats shell parity as the hard gate, the block was not edited for this run — editing it would have changed all
+33 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
+which is the part the token contract actually pins. Closing the deviation needs one coordinated pass: add the missing
+shades to `:root`, replace the literals, then re-verify all 33 papers together.
+
 ## Rotation log
 
+- **2026-10-26, Engineering Mathematics → Unit 2 (Linear Algebra: Eigenvalues & Vectors), Set 1 of 2.** MODE A: one
+  subject was drawn at random from the 11 GATE CSE subjects with `random.Random(20261026).choice`, a date-derived
+  reproducible seed, and the draw gave **Engineering Mathematics**. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1
+  (`linear-algebra-matrices`). Since 50 >= `UNIT_QUESTION_CAP = 50`, step B3 failed on the cap and step B4 advanced
+  exactly one unit: `(index_of(1) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, Linear Algebra: Eigenvalues & Vectors**.
+  This is Set 1 of 2 for the unit; a second Engineering Mathematics run today would re-select Unit 2, since 25 < 50 and
+  the unit is current for 0 days. No override was used and no second pass has started for this subject.
+- All 25 items are new: no stem repeats a question already banked on Unit 1. Composition is the standard 15 MCQ /
+  5 MSQ / 5 NAT with the 10 easy / 10 medium / 5 hard split, and marks total 15 × 1 + 10 × 2 = 35. Coverage is
+  6 / 7 / 5 / 7 across characteristic equations, eigenvalue properties, the Cayley–Hamilton theorem and
+  diagonalization, so all four subtopics are represented.
+- **Every numeric answer was recomputed by script with sympy, not by hand.** The characteristic polynomial of
+  `[[2,1],[1,2]]` is `λ² − 4λ + 3` with eigenvalues 1 and 3 (Q1); the polynomial of `A⁻¹` was rebuilt from
+  `(λ−1)(λ−2)(λ−3)` as `μ³ − (11/6)μ² + μ − 1/6` (Q7); `A⁴ = 145A + 54I` was confirmed against the direct product
+  `A⁴ = [[199,290],[435,634]]` for `A = [[1,2],[3,4]]` (Q13); the `(1,1)` entry of `[[2,1],[1,2]]¹⁰` was confirmed as
+  `(3¹⁰+1)/2 = 29525` (Q14); `A⁻¹ = 4I − A = [[2,−3],[−1,2]]` for `A = [[2,3],[1,2]]` (Q10); `A³ = [[37,54],[81,118]]`,
+  so the `(2,2)` entry is 118 (N3); `[[1,1],[0,2]]¹⁰ = [[1,1023],[0,1024]]` (N4); `rank(diag(1,1,2) − I) = 1` (Q12);
+  `det(A²+A+I) = 3·1·7 = 21` for eigenvalues 1, −1, 2 (Q4); `tr(A⁻¹) = 25/12` for eigenvalues 1, 2, 3, 4 (Q8); and the
+  3-cycle permutation matrix `[[0,1,0],[0,0,1],[1,0,0]]` was confirmed to satisfy `A³ = I` with eigenvalues
+  `{1, ω, ω²}` and trace 0 (N5). The four candidate matrices of the diagonalizability MSQ were each tested with
+  sympy rather than by inspection.
+- No `GATE_PYQ_VARIATION` item is present. No eigenvalues-and-eigenvectors previous-year question has been verified
+  against an official paper and key, so none is claimed as an official GATE question; the paper says this in its
+  Question Bank tab and in the About tab.
+- The new paper is filed only at `engineering-mathematics/eigenvalues-eigenvectors/`. No previous current paper existed
+  for Unit 2, so nothing was archived and the unit folder holds exactly one current paper. The Unit 1 paper stays where
+  it is; it is still current for its own unit.
+- Bank and dashboard hygiene: `meta.total_questions` in the Engineering Mathematics bank had drifted to 25 while 50
+  records were present after the previous run. It is now recomputed from `len(questions)` on every append and stands at
+  75. The portal's embedded question data had also drifted (800 records against 825 in the banks, and stale per-subject
+  splits for Discrete Mathematics and Theory of Computation); `index.html` was regenerated from all ten master banks,
+  so every dashboard count now matches its bank.
 - **2026-10-26, Theory of Computation → Unit 2 (Grammars & Context-Free Languages), Set 1 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
   (seed 2455681511, draw index 6 of 11) and it gave **Theory of Computation**. The bank read back
@@ -979,6 +1022,7 @@ operating-systems/
   question-bank/master_bank.json                     append-only master question bank
 engineering-mathematics/
   linear-algebra-matrices/gate_em_mock_1_<date>.html current paper for Unit 1
+  eigenvalues-eigenvectors/gate_em_mock_2_<date>.html current paper for Unit 2
   question-bank/master_bank.json                     append-only master question bank
 programming-data-structures/
   c-programming-core/gate_ds_mock_1_<date>.html      current paper for Unit 1
@@ -1075,7 +1119,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Linear Algebra: Matrices & Systems | `linear-algebra-matrices` | 50 | yes |
-| 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 0 | — |
+| 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 25 | yes |
 | 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 0 | — |
 | 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 0 | — |
 | 5 | Continuous Probability & Distributions | `probability-distributions` | 0 | — |
