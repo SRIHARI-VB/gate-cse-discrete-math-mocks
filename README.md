@@ -7,27 +7,90 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 1 — Asymptotic Analysis & Recurrences, Set 2 of 2**, 2026-10-26 → [`algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`](algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html)
+- **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 2 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Big-O / Ω / Θ (8) · Master Theorem cases (6) · recursion tree (7) · substitution method (4)
-- Rotation: MODE A drew Algorithms at random from the 11 subjects (unseeded draw, index 5, the sixth of the 11 subjects). The bank read back
+- Subtopics: data types & operators (7) · control structures (6) · functions & parameter passing (6) · recursion & stack execution (6)
+- Rotation: MODE A drew Programming and Data Structures at random from the 11 subjects (unseeded `random.SystemRandom().choice`, draw index 4, the fifth of the 11 subjects). The bank read back
   `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1 — under
   `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1. This is Set 2 of 2;
-  25 + 25 = 50 closes the unit at the cap, and the next Algorithms run advances to `(0 + 1) mod 7` = Unit 2,
-  Divide and Conquer & Sorting. No override was used and no second pass has started.
-- Previous test: **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 2 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
+  25 + 25 = 50 closes the unit at the cap, and the next Programming and Data Structures run advances to
+  `(0 + 1) mod 7` = Unit 2, Pointers, Memory & Preprocessors. No override was used and no second pass has started.
+- Previous test: **Algorithms · Unit 1 — Asymptotic Analysis & Recurrences, Set 2 of 2**, 2026-10-26 → [`algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`](algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 27 (14 Discrete Mathematics, 2 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
+| Papers published | 28 (14 Discrete Mathematics, 2 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 675 (325 Discrete Mathematics, 50 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
-| Verified official PYQs | 5 (2 Discrete Mathematics, 1 Databases, 2 Digital Logic) |
-| Archived sets (earlier runs) | 11 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Algorithms) |
+| Questions in the subject banks | 700 (325 Discrete Mathematics, 50 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
+| Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) — the table previously read 5, which did not match the four `verified_pyqs` lists (2 + 1 + 1 + 2 = 6); corrected here against the banks |
+| Archived sets (earlier runs) | 12 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures) |
 
 ## Rotation log
+
+- **2026-10-26, Programming and Data Structures → Unit 1 (C Programming Foundations), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom().choice` (draw index 4 of 11) and it gave **Programming and Data Structures**. The bank read
+  back `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1. Since 25 <
+  `UNIT_QUESTION_CAP = 50` and the unit had been current for 0 days, step B3 regenerated Unit 1 rather than
+  advancing. This is the second and final set for the unit: 25 + 25 = 50, exactly the cap, so no partial set was
+  added and the unit ends at 50, not 60. The next Programming and Data Structures run advances to
+  `(0 + 1) mod 7` = Unit 2, Pointers, Memory & Preprocessors. No override was used and no second pass has started.
+- All 25 items are new: no question text, code listing, option set or numeric answer is shared with Set 1 (checked
+  by exact-string comparison of each full question body — stem, code block and options — against the 25 questions
+  already in `master_bank.json`; the shared stem "What does this program print?" appears in both sets, but the
+  program under it never repeats). Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium /
+  5 hard split; marks total 15 × 1 + 10 × 2 = 35. Coverage is 7 / 6 / 6 / 6 across data types & operators, control
+  structures, functions & parameter passing, and recursion & stack execution, so all four of the unit's subtopics
+  are represented.
+- **Every program-output answer was compiled and executed, not reasoned about by hand.** All twenty program listings
+  were built into one C11 translation unit and run on a 32-bit-`int` target (zig cc 0.17.0, `-std=c11 -O0`). Confirmed
+  outputs: `sizeof(1.0f + 1) = 4`; `017, 0x1F → 15 31`; `-1 < 1u → 0`; `x <<= 3; x |= 1; x ^= 5 → 12`;
+  `(5>3)+(2==2)+(1!=1) → 2`; `3000000000u * 2u → 1705032704`; `while + continue → 12`; nested `break → 3`;
+  the switch with `default` written first `→ 4`; `do-while → 4`; the stride-2 nested loop `→ 30`; the by-value
+  array element `→ 2`; the static accumulator `→ "2 5"`; the re-pointed pointer parameter `→ 5`; the nested
+  maximum `→ 9`; the call counter `→ 5`; the digit printer `→ "704"`; the odd-only recurrence `→ 16`; the binary
+  bit counter `→ 3`; and a stack-depth probe on `f(16)` reporting a maximum depth of **5**. One item was **corrected
+  by the compiler**: the signed/unsigned comparison in Q28 was drafted with the answer 1 and the run printed 0, so
+  the option set and the solution were rewritten around 0 before the paper was built.
+- The MSQ items were settled by the same rules rather than by taste: character constants have type `int` in C
+  (`sizeof('a') == 4` confirmed by the same run), `011` is octal 9, a `do-while` body always runs once, `break`
+  binds to the nearest loop or switch, `continue` in a `while` re-tests the condition, empty parentheses in a
+  declaration are not a prototype, a static local is initialised once, and the standard fixes no recursion depth.
+- No `GATE_PYQ_VARIATION` item ships: no C-programming previous-year question has been verified against an official
+  paper and answer key, so none is claimed and `verified_pyqs` stays empty for this subject. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10). The About tab and the Question Bank tab both say so.
+- The Set 1 paper moved to `programming-data-structures/c-programming-core/archive/gate_ds_mock_1_2026-10-26_run1.html`
+  with its questions, options, answers, solutions and duration frozen — it is byte-for-byte the file that was current
+  before this run (130 868 bytes). The new Set 2 paper is filed only at `programming-data-structures/c-programming-core/`;
+  no root copy was written and the unit folder never held two current papers.
+- Shell parity: the paper was produced by splicing new content into the shipped shell. After normalising the title,
+  the brand and sub-line, the candidate block, the tab labels, the meta strip, `#qhost`, the payload, the Question
+  Bank pane and the About pane, the remaining bytes are **identical to this unit's Set 1 and to the Algorithms
+  Unit 1 paper — 27 568 bytes on all three sides**. The `<style>` block (13 243 bytes) and the exam `<script>`
+  (9 428 bytes) are byte-for-byte identical, and the `:root` block (521 bytes) matches `design-tokens.css` and
+  `index.html` exactly. No new literal hex value was introduced: the paper carries the same 34 literal hex
+  occurrences outside `:root` as the shell (33 × `#5b6b7a`, 1 × `#1e8449`).
+- The paper was exercised in a jsdom harness before shipping (**50 checks, all passing**): nothing is revealed
+  pre-submit (no solution text or `Answer:` string in the test pane, every `.sol` empty and hidden, no option mark,
+  no mark text, key tab disabled, key pane empty, summary hidden, timer at 60:00); the palette reaches
+  `ans` / `na` / `mrk` / `amr` and falls back to `na` on Clear Response; Save & Next and Previous work from a card
+  other than Question 1; all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette
+  buttons and 25 key entries; an MSQ with one option short pays nothing, giving **1 / 35** with 1 wrong and 23
+  skipped; a blank paper scores **0 / 35** with 25 skipped; each tab shows exactly one view; and the Question Bank
+  pane holds 25 cards with no active question repeated.
+- The Question Bank tab inside the paper lists the **25** solved questions of Set 1 under four subtopic accordions
+  (7 / 6 / 6 / 6), every solution collapsed; the active 25 are not repeated there. `index.html` holds all **700**
+  questions; the Programming and Data Structures Unit 1 card now reads "50 solved" with subtopic pills
+  14 / 12 / 12 / 12 and both "Practise Set 1 →" (the archived paper) and "Practise Set 2 →". Its data block was
+  updated in place — the Programming and Data Structures record moved to the end so the newest paper renders first —
+  and its static header strings were recomputed from it: 10 subjects, 59 units, 700 solved, 28 sets published,
+  700 records, 255 subtopics. A second jsdom harness on the portal (**20 checks, all passing**) confirms 16 test
+  cards with the new one first, 16 archive cards, "50 solved" and both practise buttons on the new card, 50 banked
+  cards under the expander, every `href` resolving, and every per-subject count matching its `master_bank.json`.
+- No unit exceeds 50 questions: Programming and Data Structures Unit 1 closes at exactly 50 with this set, and the
+  rotation advances to Unit 2 on the next run for this subject.
 
 - **2026-10-26, Algorithms → Unit 1 (Asymptotic Analysis & Recurrences), Set 2 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom().choice` (draw index 5 of
@@ -909,3 +972,11 @@ review interface.
   fills `.pal button.ans/.na/.mrk` with `--green`/`--red`/`--violet` instead of `--green-d`/`--red-d`/`--violet-d`, which
   fails that ratio. The Operating Systems paper inherits the shell unchanged so that parity holds; the correction is a
   four-line CSS change and belongs to the same one-pass re-issue as the raw-hex item.
+- The Programming and Data Structures Unit 1 Set 2 paper inherits the three open shell items above unchanged
+  (literal hex outside `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet`
+  tokens rather than their `-d` variants). Re-typing any of them in one paper would break shell parity, so they stay
+  recorded here for the one-pass re-issue across every paper.
+- Discrete Mathematics Unit 16 (Logic & Proof Techniques) still carries **75** questions — three sets, written
+  before the 50-question cap existed. The rotation has already moved past it (Unit 5 was the most recent Discrete
+  Mathematics unit), so the over-cap state is frozen history rather than an active breach; it is recorded here so the
+  status table and the banks agree.
