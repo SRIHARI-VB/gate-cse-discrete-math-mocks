@@ -1,0 +1,759 @@
+{
+ "meta": {
+  "title": "GATE CSE Operating Systems - Master Question Bank",
+  "owner": "SRIHARI V B",
+  "exam": "GATE CSE 2027",
+  "created": "2026-10-26",
+  "last_updated": "2026-10-26",
+  "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
+  "total_questions": 25,
+  "units_with_questions": [
+   1
+  ]
+ },
+ "runs": [
+  {
+   "run": 1,
+   "date": "2026-10-26",
+   "subject": "operating-systems",
+   "subject_name": "Operating Systems",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "set": "1 of 2",
+   "file": "operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "question_ids": [
+    "OS-U1-Q01",
+    "OS-U1-Q02",
+    "OS-U1-Q03",
+    "OS-U1-Q04",
+    "OS-U1-Q05",
+    "OS-U1-Q06",
+    "OS-U1-Q07",
+    "OS-U1-Q08",
+    "OS-U1-Q09",
+    "OS-U1-Q10",
+    "OS-U1-Q11",
+    "OS-U1-Q12",
+    "OS-U1-Q13",
+    "OS-U1-Q14",
+    "OS-U1-Q15",
+    "OS-U1-Q16",
+    "OS-U1-Q17",
+    "OS-U1-Q18",
+    "OS-U1-Q19",
+    "OS-U1-Q20",
+    "OS-U1-Q21",
+    "OS-U1-Q22",
+    "OS-U1-Q23",
+    "OS-U1-Q24",
+    "OS-U1-Q25"
+   ],
+   "selection": "MODE A, random subject selection drew Operating Systems. operating-systems/question-bank/master_bank.json did not exist, so there was no runs[] entry and no cap to check; the starting unit came from the documented fallback (2026-10-26 - 2026-10-26) mod 6 = 0, unit index 0, Unit 1. No override used."
+  }
+ ],
+ "verified_pyqs": [
+  {
+   "id": "PYQ-GATE2021S1-Q25",
+   "exam": "GATE CSE 2021, Set 1",
+   "question": 25,
+   "type": "NAT",
+   "marks": 1,
+   "topic": "CPU scheduling, minimum average waiting time under a non-preemptive scheduler",
+   "statement": "Three processes arrive at time zero with CPU bursts of 16, 20 and 10 ms. With prior knowledge of burst lengths, the minimum achievable average waiting time in a non-preemptive scheduler is ___ ms.",
+   "answer": 12,
+   "verification": "Answer follows from SJF optimality for average waiting time among non-preemptive algorithms: order 10, 16, 20 gives waiting times 0, 10, 26, average 12. Used only as the basis of a re-worded variation (OS-U1-Q21); the original text is not reproduced.",
+   "used_in": [
+    "OS-U1-Q21"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "OS-U1-Q01",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "In the classic five-state process model — New, Ready, Running, Waiting and Terminated — and assuming that no preemption occurs, which one of the following transitions is NOT part of the model?",
+   "options": [
+    "New → Ready",
+    "Waiting → Ready",
+    "Running → Waiting",
+    "Running → Ready"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The five-state diagram has exactly these edges: New→Ready (admitted), Ready→Running (dispatched), Running→Waiting (a blocking request), Waiting→Ready (the event completes), Running→Terminated (exit). A process leaves the CPU only by blocking or by finishing.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>From Running the process either blocks (Running→Waiting) or exits (Running→Terminated).</li><li>Without preemption nothing else can take the CPU away from a running process.</li><li>So there is no edge from Running back to Ready.</li><li>The edge Running→Ready appears only once preemption is added, giving the preemptive model.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — Running → Ready is not an edge of the non-preemptive five-state model.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) New→Ready is the admission transition.</li><li>(B) Waiting→Ready happens when the awaited event or I/O completes.</li><li>(C) Running→Waiting happens on a blocking request.</li></ul><p class=\"row\"><b>Common misconception.</b> Students answer (B) because they think a blocked process resumes straight on the CPU. It always returns to Ready first and waits to be dispatched.</p><p class=\"row\"><b>Takeaway.</b> In the non-preemptive model the only exits from Running are Waiting and Terminated; Running→Ready exists only in a preemptive model.</p>"
+  },
+  {
+   "id": "OS-U1-Q02",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following is NOT stored in the process control block (PCB) of a process?",
+   "options": [
+    "The program counter and the saved contents of the CPU registers",
+    "The process state and the scheduling priority",
+    "The source code of the program",
+    "The list of open files and the memory-management information"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A PCB is the kernel's record of a process: it holds everything the kernel needs to stop the process and later restart it. The program's code lives in the process's address space, not in the PCB.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The PCB holds process identification (PID, parent PID) and process state.</li><li>It holds saved CPU context: program counter, stack pointer and general-purpose registers.</li><li>It holds scheduling information, memory-management information (page tables, base and limit registers) and I/O status such as the open-file table.</li><li>The executable code and its data are mapped in the process's own address space, so the source code (or even the machine code) is not a PCB field.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — the source code is not part of the PCB.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) The saved register state is the heart of a PCB.</li><li>(B) Process state and priority are standard PCB fields.</li><li>(D) Open files and memory-management data are standard PCB fields.</li></ul><p class=\"row\"><b>Common misconception.</b> The PCB is confused with the process image. The process image contains the code, the data and the stack; the PCB is a small kernel structure that points at them.</p><p class=\"row\"><b>Takeaway.</b> PCB = kernel bookkeeping (identity, state, context, scheduling, memory, I/O). The code and data belong to the address space.</p>"
+  },
+  {
+   "id": "OS-U1-Q03",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "A process in the <span class=\"mm\">Running</span> state issues a blocking read on a disk file. In the five-state model, which sequence of transitions does it make before it can execute again?",
+   "options": [
+    "Running → Waiting, then Waiting → Ready",
+    "Running → Ready, then Ready → Running",
+    "Running → Waiting, then Waiting → Running",
+    "Running → Terminated, then New → Ready"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A blocking system call moves the process from Running to Waiting. When the I/O completes the process is moved to Ready, and only the scheduler can then move it to Running.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The read cannot complete immediately, so the process cannot keep the CPU: Running → Waiting.</li><li>The disk controller interrupts when the data has arrived, and the interrupt handler moves the process from Waiting to Ready.</li><li>The process now competes for the CPU like any other ready process; the dispatcher moves it Ready → Running.</li><li>So the sequence is Running → Waiting → Ready → Running, which is option (A).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — Running → Waiting, then Waiting → Ready.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) skips the Waiting state altogether.</li><li>(C) has Waiting → Running, which never happens: a woken process must pass through Ready.</li><li>(D) terminates the process, but a completed read is not a failure.</li></ul><p class=\"row\"><b>Common misconception.</b> The single most common error is Waiting → Running. There is no direct edge: every resumption goes through Ready, because the CPU may now be running something else.</p><p class=\"row\"><b>Takeaway.</b> Two rules to keep: a process enters Waiting only by its own blocking request, and it reaches Running only from Ready.</p>"
+  },
+  {
+   "id": "OS-U1-Q04",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following statements about a context switch is TRUE?",
+   "options": [
+    "It is pure overhead: no useful work of any user process is done while it executes.",
+    "It saves the state of the outgoing process in the ready queue rather than in its PCB.",
+    "It is needed every time a process makes a system call, even if no other process runs.",
+    "Its cost is independent of the number of registers the CPU has."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A context switch saves the CPU context of the outgoing process into its PCB and loads the context of the incoming process from its PCB. While the kernel does this, no user instruction executes, so the time is pure overhead.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The kernel copies the program counter, stack pointer and registers into the PCB of the outgoing process.</li><li>It then restores the same set of values from the PCB of the incoming process.</li><li>During this interval no user process makes progress, so the cost is overhead, not work.</li><li>The more registers the machine has, the more values must be copied, so the cost grows with the register file.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — a context switch is pure overhead.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) The saved state is written to the PCB; the ready queue only holds pointers to PCBs.</li><li>(C) A system call that does not cause a switch — a fast read from the page cache, for example — needs no context switch.</li><li>(D) Cost rises with the number of registers, not independently of it.</li></ul><p class=\"row\"><b>Common misconception.</b> Students conflate a mode switch (user → kernel) with a context switch. A system call always causes a mode switch but only sometimes a context switch.</p><p class=\"row\"><b>Takeaway.</b> Context switch = save one PCB, restore another, no user work done. Mode switch alone is cheaper and much more frequent.</p>"
+  },
+  {
+   "id": "OS-U1-Q05",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "In the seven-state process model, which adds <span class=\"mm\">Ready/Suspend</span> and <span class=\"mm\">Blocked/Suspend</span>, a process moves from <span class=\"mm\">Ready/Suspend</span> to <span class=\"mm\">Ready</span> when",
+   "options": [
+    "the event it was waiting for finally occurs.",
+    "the scheduler dispatches it to the CPU.",
+    "it is brought back from secondary storage into main memory.",
+    "its parent process calls wait()."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The two suspended states describe a process that has been swapped out to secondary storage. Leaving a suspended state always means being swapped back into main memory; the suspend/activate transitions are about memory residency, not about events or scheduling.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Ready/Suspend means the process is ready to run but its image is on disk.</li><li>It cannot run until its image is back in main memory, so the transition Ready/Suspend → Ready is the activate operation performed by the swapper.</li><li>Blocked/Suspend → Blocked is the same activate operation for a blocked process.</li><li>The reverse transitions, Ready → Ready/Suspend and Blocked → Blocked/Suspend, are the suspend (swap-out) operations.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — it is brought back from secondary storage into main memory.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) The event completing moves Blocked/Suspend → Ready/Suspend, not Ready/Suspend → Ready.</li><li>(B) Dispatch is the Ready → Running transition.</li><li>(D) A parent's wait() has nothing to do with swapping a child back in.</li></ul><p class=\"row\"><b>Common misconception.</b> The suspended states are read as 'waiting' states. They are not: they are memory-residency states. A ready process can be suspended, which is exactly why the state exists.</p><p class=\"row\"><b>Takeaway.</b> Suspended = swapped out. Leaving a suspended state = being swapped in. The event logic is carried entirely by the Blocked pair.</p>"
+  },
+  {
+   "id": "OS-U1-Q06",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which of the following statements about the process control block and process states are TRUE? (Select all that apply.)",
+   "options": [
+    "A PCB is created when the process is created and is kept in kernel memory.",
+    "A process can move directly from the Waiting state to the Running state.",
+    "The saved register state of a blocked process is kept in its PCB.",
+    "The PCB of a process that is currently running must be in main memory."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The PCB is the kernel's per-process record. It is allocated at creation, resides in kernel memory, and holds the saved context. State transitions always respect the diagram, so Waiting never goes straight to Running.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: the PCB is created by the kernel when the process is admitted, and the kernel keeps it until the process is reaped.</li><li>(B) False: a woken process goes Waiting → Ready and must then be dispatched Ready → Running.</li><li>(C) True: the program counter, stack pointer and registers of a blocked process are exactly what the PCB stores so the process can be restarted later.</li><li>(D) True: the running process is executing from main memory and its PCB is the kernel's live record of it, so that PCB is resident.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is the classic invalid edge: Waiting → Running does not exist in any standard model.</li></ul><p class=\"row\"><b>Common misconception.</b> Option (D) is often marked false by students who think PCBs can be paged out. A PCB may be swapped for a non-running process, but the PCB of the process that is executing right now is in main memory, because the kernel is using it.</p><p class=\"row\"><b>Takeaway.</b> Three facts worth memorising: one PCB per process, allocated at creation in kernel memory, holding the saved context that makes resumption possible.</p>"
+  },
+  {
+   "id": "OS-U1-Q07",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "process-states-pcb",
+   "subtopic": "process-states-pcb",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "A process executes the following two statements, with no other process creation and no process terminating before the program ends:<br/><code>fork();</code><br/><code>fork();</code><br/>Assuming both calls succeed, how many processes exist when the program reaches its end?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> fork() creates one child that is an exact copy of the caller, so every fork() call doubles the number of processes running that same code.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Before the first call there is 1 process.</li><li>The first fork() turns 1 process into 2; both continue to the second statement.</li><li>The second fork() is executed by each of those 2 processes, so each creates one more: 2 + 2 = 4.</li><li>Hence 4 processes exist at the end.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4.</span></p><p class=\"row\"><b>Common misconception.</b> Counting only the children (3) instead of all processes (4). After n fork() calls there are 2ⁿ processes in total, not 2ⁿ − 1.</p><p class=\"row\"><b>Takeaway.</b> Each fork() doubles the process count: 1, 2, 4, 8 … for 1, 2, 3 successive calls.</p>"
+  },
+  {
+   "id": "OS-U1-Q08",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following is TRUE of user-level threads?",
+   "options": [
+    "The kernel schedules each thread of the process separately.",
+    "A blocking system call made by one thread blocks every thread in that process.",
+    "They cannot be created unless the operating system provides a thread library in the kernel.",
+    "Each thread has its own private address space."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With user-level threads the kernel sees only one process and one schedulable entity. The thread library multiplexes several threads onto that single kernel entity, so the kernel cannot tell them apart.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Because the kernel knows only the process, it schedules the process, not the threads.</li><li>When one user-level thread makes a blocking system call, the kernel blocks the whole process, so every thread in it stops.</li><li>No kernel thread support is needed at all — that is the point of user-level threads.</li><li>Threads of one process share the address space; only their stacks and registers differ.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — a blocking call by one user-level thread blocks the whole process.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) The kernel schedules the process as a single entity.</li><li>(C) User-level threads need no kernel support; the library does all the work.</li><li>(D) Threads share one address space; that is what makes them cheap.</li></ul><p class=\"row\"><b>Common misconception.</b> Students assume threads are always independently schedulable. That is only true when the threads are kernel-level.</p><p class=\"row\"><b>Takeaway.</b> User-level threads: fast, no kernel involvement, but one blocking call stalls them all. Kernel-level threads: independently schedulable, but heavier.</p>"
+  },
+  {
+   "id": "OS-U1-Q09",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following is shared by all threads of the same process?",
+   "options": [
+    "The stack",
+    "The program counter",
+    "The set of CPU registers",
+    "The heap and the global data segment"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Threads are the unit of execution; a process is the unit of resource ownership. Everything that is a resource — code, global data, heap, open files — is shared; everything that is execution state — stack, registers, program counter — is private.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each thread needs its own stack to hold its own local variables and call frames.</li><li>Each thread needs its own program counter, because the threads are at different points in the code.</li><li>Each thread needs its own register set for the same reason.</li><li>The heap and global data are resources of the process and are shared by every thread, which is why unsynchronised access to them causes data races.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — the heap and the global data segment.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A), (B) and (C) are all per-thread execution state.</li></ul><p class=\"row\"><b>Common misconception.</b> The heap is often assumed to be per-thread because malloc is called per thread. malloc is thread-safe but the heap itself is one shared arena.</p><p class=\"row\"><b>Takeaway.</b> Shared: code, globals, heap, files. Private: stack, registers, program counter. That single split answers most thread questions.</p>"
+  },
+  {
+   "id": "OS-U1-Q10",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which threading model cannot exploit a multicore processor, however many threads the process creates?",
+   "options": [
+    "Many-to-one",
+    "One-to-one",
+    "Many-to-many",
+    "Both many-to-one and many-to-many"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Parallel execution on several cores requires several kernel-schedulable entities. The many-to-one model maps every user thread onto a single kernel thread, so at most one thread can be on a CPU at any instant.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Many-to-one: all user threads share one kernel thread, so the kernel can place that one entity on at most one core.</li><li>One-to-one: each user thread has its own kernel thread, so the kernel can spread them across cores.</li><li>Many-to-many: several user threads map onto a smaller set of kernel threads, but that set can still be larger than one, so parallelism is possible.</li><li>Only many-to-one is strictly limited to a single core.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — many-to-one.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) One-to-one supports true parallelism.</li><li>(C) Many-to-many supports parallelism as long as more than one kernel thread is used.</li><li>(D) is wrong because many-to-many can use several cores.</li></ul><p class=\"row\"><b>Common misconception.</b> Students pick many-to-many because they reason that the multiplexing must serialise the threads. Multiplexing limits the degree of parallelism; it does not force it to one.</p><p class=\"row\"><b>Takeaway.</b> Parallelism needs more than one kernel thread. Many-to-one has exactly one, so it is confined to a single core.</p>"
+  },
+  {
+   "id": "OS-U1-Q11",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which of the following statements about user-level and kernel-level threads are TRUE? (Select all that apply.)",
+   "options": [
+    "Kernel-level threads of one process can execute in parallel on different cores of a multiprocessor.",
+    "Creating a user-level thread is typically cheaper than creating a kernel-level thread.",
+    "If one kernel-level thread of a process blocks in a system call, all the other threads of that process block as well.",
+    "Switching between two user-level threads of the same process does not require a switch to kernel mode."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Kernel-level threads are separate schedulable entities, so the kernel can run them on different cores and block one without blocking the others. User-level threads are managed entirely inside the process, which makes creation and switching cheap.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: each kernel thread can be dispatched to a different core.</li><li>(B) True: a user-level thread needs only a stack and a small control block allocated by the library, with no kernel trap.</li><li>(C) False: the kernel blocks only the thread that made the call; the other threads of the process stay runnable.</li><li>(D) True: the library saves and restores registers in user space, so no trap occurs.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(C) describes the many-to-one, user-level situation, not kernel-level threads.</li></ul><p class=\"row\"><b>Common misconception.</b> Option (C) is the exact property that separates the two kinds of thread, and it is sometimes attached to the wrong kind.</p><p class=\"row\"><b>Takeaway.</b> Kernel-level: block one, the others run. User-level: block one, block all — but creation and switching are much cheaper.</p>"
+  },
+  {
+   "id": "OS-U1-Q12",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "A process uses a many-to-one user-level thread library whose scheduler is non-preemptive. It has three threads, and one of them enters a long computation that contains no system call and never yields. Which one of the following is TRUE?",
+   "options": [
+    "All three threads continue to make progress, because the kernel time-slices them.",
+    "The computing thread keeps the CPU and the other two threads never run.",
+    "The kernel preempts the computing thread after one time quantum and schedules another thread of the process.",
+    "The other two threads run on other cores of the processor."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In many-to-one, the kernel schedules one entity — the process. The thread library schedules the threads inside that entity, and a non-preemptive library can only switch when the running thread yields or blocks.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The kernel sees a single schedulable entity and can only preempt that entity, not the individual threads inside it.</li><li>A timer interrupt therefore returns control to the same thread, because the library's dispatcher is never entered.</li><li>The computing thread makes no system call and never yields, so the library never gets a chance to switch.</li><li>The other two threads remain ready inside the library and never execute.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — the computing thread keeps the CPU and the other two threads never run.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) The kernel cannot time-slice threads it does not know about.</li><li>(C) A quantum expiry re-enters the same thread; the library scheduler is not invoked.</li><li>(D) Many-to-one uses one kernel thread, so only one core can be used.</li></ul><p class=\"row\"><b>Common misconception.</b> Students assume a non-preemptive library is safe because the OS preempts the process. The OS does preempt the process, but it resumes the same thread.</p><p class=\"row\"><b>Takeaway.</b> A non-preemptive user-level scheduler makes cooperative multitasking mandatory: a thread that never yields starves its siblings.</p>"
+  },
+  {
+   "id": "OS-U1-Q13",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "threads-user-vs-kernel",
+   "subtopic": "threads-user-vs-kernel",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "A process starts with a single thread and then creates four more threads with <code>pthread_create</code>. Each thread, including the original one, is given its own stack by the thread library. How many distinct thread stacks exist in the process?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 5,
+   "answer_display": "5",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every thread of a process has a private stack, because each needs its own call frames and local variables. The count of stacks therefore equals the count of threads.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The process begins with 1 thread, which already has a stack.</li><li>Four more threads are created, each with a new stack.</li><li>Total threads = 1 + 4 = 5.</li><li>Total stacks = 5, one per thread.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 by counting only the newly created threads. The original thread has a stack too, so the total is threads, not creations.</p><p class=\"row\"><b>Takeaway.</b> Stacks are per thread; the heap and the code are per process. One stack per thread, always.</p>"
+  },
+  {
+   "id": "OS-U1-Q14",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "preemptive-nonpreemptive-scheduling",
+   "subtopic": "preemptive-nonpreemptive-scheduling",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following CPU scheduling algorithms is inherently non-preemptive?",
+   "options": [
+    "Round robin",
+    "Shortest remaining time first",
+    "First come first served",
+    "Preemptive priority scheduling"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Preemption needs a rule that can remove a running process. FCFS has none: it dispatches the oldest ready process and lets it run until it blocks or terminates.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>FCFS hands the CPU to the process that arrived earliest and never takes it back; the only exits are blocking and termination.</li><li>Round robin preempts on quantum expiry — that is its whole mechanism.</li><li>SRTF preempts whenever a new arrival has a shorter remaining time.</li><li>Preemptive priority preempts whenever a higher-priority process becomes ready.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — first come first served.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A), (B) and (D) are all defined by their preemption rule.</li></ul><p class=\"row\"><b>Common misconception.</b> Students sometimes call FCFS preemptive because an arriving process with a short burst 'should' run first. FCFS ignores burst lengths entirely.</p><p class=\"row\"><b>Takeaway.</b> Non-preemptive algorithms in the GATE syllabus: FCFS and non-preemptive SJF. Everything with 'remaining time', a quantum, or a preemptive priority is preemptive.</p>"
+  },
+  {
+   "id": "OS-U1-Q15",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "preemptive-nonpreemptive-scheduling",
+   "subtopic": "preemptive-nonpreemptive-scheduling",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which one of the following does NOT by itself cause the running process to be preempted?",
+   "options": [
+    "The interval timer expires the running process's time quantum.",
+    "A process with a higher priority becomes ready.",
+    "The I/O request of a blocked process completes, so that process becomes ready.",
+    "Under SRTF, a newly arrived process has a shorter remaining burst than the running process."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Preemption means the running process is displaced by the scheduler's policy. A process merely becoming ready is not enough; the policy must also rank it above the running one.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Quantum expiry is the round-robin preemption trigger.</li><li>(B) Under preemptive priority a higher-priority arrival outranks the running process, so it preempts.</li><li>(C) I/O completion only moves a process from Waiting to Ready. Whether it then preempts depends on the policy; in FCFS or non-preemptive SJF it simply waits.</li><li>(D) SRTF compares remaining times, so a shorter newcomer does preempt.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — an I/O completion by itself does not preempt.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A), (B) and (D) are each a defined preemption trigger under the stated policy.</li></ul><p class=\"row\"><b>Common misconception.</b> Students treat 'becomes ready' as synonymous with 'preempts'. Becoming ready is a state change; preemption is a scheduling decision on top of it.</p><p class=\"row\"><b>Takeaway.</b> Ask which policy is in force. A ready process preempts only if that policy ranks it above the running one.</p>"
+  },
+  {
+   "id": "OS-U1-Q16",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "preemptive-nonpreemptive-scheduling",
+   "subtopic": "preemptive-nonpreemptive-scheduling",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which of the following scheduling algorithms can be preemptive? (Select all that apply.)",
+   "options": [
+    "Shortest remaining time first (SRTF)",
+    "Round robin",
+    "Non-preemptive shortest job first (SJF)",
+    "Priority scheduling in its preemptive form"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An algorithm is preemptive if it can remove a running process before that process blocks or finishes. SRTF compares remaining times, round robin uses a quantum, and preemptive priority compares priorities — all three can displace a running process.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) SRTF is preemptive by definition: the shortest remaining time always runs.</li><li>(B) Round robin preempts on quantum expiry.</li><li>(C) Non-preemptive SJF, as its name states, lets the chosen job run to completion.</li><li>(D) The preemptive form of priority scheduling displaces the running process when a higher-priority process becomes ready.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(C) is explicitly non-preemptive; SJF has a separate preemptive version called SRTF.</li></ul><p class=\"row\"><b>Common misconception.</b> SJF and SRTF are treated as one algorithm, so SJF is marked preemptive. They are two algorithms: SJF is non-preemptive, SRTF is its preemptive counterpart.</p><p class=\"row\"><b>Takeaway.</b> SJF ↔ SRTF is the standard non-preemptive/preemptive pair. Priority scheduling has the same pair, and round robin is preemptive by construction.</p>"
+  },
+  {
+   "id": "OS-U1-Q17",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "preemptive-nonpreemptive-scheduling",
+   "subtopic": "preemptive-nonpreemptive-scheduling",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Under non-preemptive scheduling, which of the following can take the CPU away from the running process? (Select all that apply.)",
+   "options": [
+    "The process terminates.",
+    "The process issues a blocking I/O request.",
+    "A process with a higher priority arrives in the ready queue.",
+    "The process's time quantum expires."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a non-preemptive scheme the running process gives up the CPU voluntarily. Only two events are voluntary: finishing, and blocking on something.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Termination releases the CPU, so the scheduler picks the next process.</li><li>(B) A blocking request moves the process to Waiting and releases the CPU.</li><li>(C) A higher-priority arrival is exactly what preemption would act on — and non-preemptive scheduling refuses to act.</li><li>(D) There is no time quantum to expire in a non-preemptive algorithm.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(C) is the definition of preemption, which is absent here.</li><li>(D) A quantum belongs to round robin, which is preemptive.</li></ul><p class=\"row\"><b>Common misconception.</b> Option (D) is chosen because students think every algorithm has a quantum. A quantum is a round-robin parameter, not a universal one.</p><p class=\"row\"><b>Takeaway.</b> Non-preemptive = the process keeps the CPU until it blocks or exits. Nothing else can take it away.</p>"
+  },
+  {
+   "id": "OS-U1-Q18",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "preemptive-nonpreemptive-scheduling",
+   "subtopic": "preemptive-nonpreemptive-scheduling",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Four processes are scheduled on one CPU by preemptive priority scheduling, where a <b>smaller</b> priority number means a higher priority. All times are in milliseconds.<div style=\"overflow-x:auto;margin:2px 0 12px\"><table style=\"border-collapse:collapse;font-size:14px;min-width:300px\"><thead><tr><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Process</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Arrival</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Burst</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Priority</th></tr></thead><tbody><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">0</td><td style=\"border:1px solid var(--line);padding:5px 12px\">20</td><td style=\"border:1px solid var(--line);padding:5px 12px\">5</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">4</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P4</td><td style=\"border:1px solid var(--line);padding:5px 12px\">6</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">3</td></tr></tbody></table></div>How many times is a <i>running</i> process preempted by a newly arrived process?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Preemptive priority compares the priority of the running process with that of every ready process, at every arrival. A preemption happens only when the newcomer outranks the process currently on the CPU.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>t = 0: only P1 has arrived, so P1 runs.</li><li>t = 2: P2 (priority 1) arrives and outranks P1 (priority 5) — P1 is preempted. <b>Preemption 1.</b> P2 runs for its 1 ms and finishes at t = 3.</li><li>t = 3: P1 is the only ready process, so P1 resumes and runs from t = 3.</li><li>t = 4: P3 (priority 2) arrives and outranks P1 (priority 5) — P1 is preempted. <b>Preemption 2.</b> P3 runs 1 ms and finishes at t = 5; P1 resumes.</li><li>t = 6: P4 (priority 3) arrives and outranks P1 (priority 5) — P1 is preempted. <b>Preemption 3.</b> P4 runs 1 ms and finishes at t = 7.</li><li>t = 7: P1 runs its remaining 17 ms and finishes at t = 23.</li><li>Total preemptions = 3.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3.</span></p><p class=\"row\"><b>Common misconception.</b> Counting the dispatches of P3 and P4 as preemptions is right here only because P1 happened to be running each time. The trap is the opposite error: counting a preemption when the CPU was idle or when a process had just finished, which is a fresh dispatch, not a preemption.</p><p class=\"row\"><b>Takeaway.</b> A preemption needs a victim that is actually running. Trace the timeline second by second and ask, at each arrival, whether the newcomer outranks whoever holds the CPU.</p>"
+  },
+  {
+   "id": "OS-U1-Q19",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Three processes arrive as shown and are scheduled by first come first served. All times are in milliseconds.<div style=\"overflow-x:auto;margin:2px 0 12px\"><table style=\"border-collapse:collapse;font-size:14px;min-width:300px\"><thead><tr><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Process</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Arrival</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Burst</th></tr></thead><tbody><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">0</td><td style=\"border:1px solid var(--line);padding:5px 12px\">3</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">6</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">4</td></tr></tbody></table></div>What is the average waiting time?",
+   "options": [
+    "3 ms",
+    "4 ms",
+    "5 ms",
+    "7 ms"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Under FCFS the processes run in arrival order without interruption. Waiting time is turnaround time minus burst time, and turnaround time is completion time minus arrival time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>P1 runs from 0 to 3: completion 3, waiting time 3 − 0 − 3 = 0.</li><li>P2 runs from 3 to 9: completion 9, waiting time 9 − 1 − 6 = 2.</li><li>P3 runs from 9 to 13: completion 13, waiting time 13 − 2 − 4 = 7.</li><li>Average = (0 + 2 + 7) / 3 = 9 / 3 = 3 ms.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 3 ms.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) comes from forgetting to subtract the arrival time of P2 and P3.</li><li>(C) and (D) come from adding arrival times instead of subtracting them.</li></ul><p class=\"row\"><b>Common misconception.</b> Using arrival time as the start time for every process. P2 does not start at t = 1; it starts when P1 releases the CPU.</p><p class=\"row\"><b>Takeaway.</b> Waiting time = completion − arrival − burst. Always compute completion times first.</p>"
+  },
+  {
+   "id": "OS-U1-Q20",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "The convoy effect — several short CPU-bound processes queued behind one long CPU-bound process, producing a poor average waiting time — is most closely associated with which algorithm?",
+   "options": [
+    "Round robin",
+    "First come first served",
+    "Shortest remaining time first",
+    "Multilevel feedback queue"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The convoy effect is a direct consequence of serving processes in arrival order regardless of length, which is exactly what FCFS does.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Under FCFS one long job at the head of the queue makes every short job behind it wait.</li><li>The short jobs also hold up the I/O device they use only briefly, so device utilisation suffers too.</li><li>SRTF would move the short jobs ahead, and round robin would interleave them, so neither produces the convoy.</li><li>Hence the convoy effect belongs to FCFS.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — first come first served.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) Round robin interleaves jobs and bounds the wait by the quantum.</li><li>(C) SRTF always runs the shortest remaining job, which dissolves the convoy.</li><li>(D) Multilevel feedback queues promote short jobs, which also dissolves it.</li></ul><p class=\"row\"><b>Common misconception.</b> The convoy effect is sometimes attached to SJF because SJF is 'the fix'. SJF avoids the convoy; FCFS causes it.</p><p class=\"row\"><b>Takeaway.</b> Convoy effect = FCFS + one long job at the head. The standard remedies are SJF, SRTF and round robin.</p>"
+  },
+  {
+   "id": "OS-U1-Q21",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "PYQ variation",
+   "source": "GATE_PYQ_VARIATION",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Three processes arrive at time <span class=\"mm\">t = 0</span> with CPU bursts of 12 ms, 18 ms and 30 ms. The scheduler knows the burst lengths in advance. What is the minimum achievable average waiting time for these three processes under a <b>non-preemptive</b> scheduler?",
+   "options": [
+    "12 ms",
+    "14 ms",
+    "16 ms",
+    "18 ms"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a fixed set of processes with no arrival spread, the non-preemptive algorithm that minimises average waiting time is shortest job first: run the shortest burst first and the longest last.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Order the bursts: 12, 18, 30.</li><li>SJF runs them in that order. Waiting times: first job 0, second 12, third 12 + 18 = 30.</li><li>Average = (0 + 12 + 30) / 3 = 42 / 3 = 14 ms.</li><li>Any other order increases the sum, so 14 ms is the minimum.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 14 ms.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 12 ms is the waiting time of the second job alone.</li><li>(C) and (D) come from averaging turnaround times, or from running the jobs in arrival order and dividing incorrectly.</li></ul><p class=\"row\"><b>Common misconception.</b> Averaging turnaround times instead of waiting times. With all arrivals at t = 0 the turnaround times are 12, 30, 60, whose average is 34 ms — a different quantity.</p><p class=\"row\"><b>Takeaway.</b> All arriving together + non-preemptive + 'minimum average waiting time' means sort the bursts ascending and accumulate: 0, b₁, b₁ + b₂.</p>"
+  },
+  {
+   "id": "OS-U1-Q22",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Three processes arrive as shown and are scheduled by round robin with a time quantum of 2 ms. Processes that arrive together join the ready queue in arrival order, and a process whose quantum expires joins the back of the queue. All times are in milliseconds.<div style=\"overflow-x:auto;margin:2px 0 12px\"><table style=\"border-collapse:collapse;font-size:14px;min-width:300px\"><thead><tr><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Process</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Arrival</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Burst</th></tr></thead><tbody><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">0</td><td style=\"border:1px solid var(--line);padding:5px 12px\">5</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">3</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td></tr></tbody></table></div>What is the completion time of P1?",
+   "options": [
+    "7 ms",
+    "8 ms",
+    "9 ms",
+    "11 ms"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Simulate round robin one quantum at a time. Keep a FIFO ready queue and note that the completion time is the instant the last unit of a process's burst finishes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>t = 0–2: P1 runs its first quantum, 2 ms, leaving 3 ms. P2 arrived at t = 1 and is already queued.</li><li>t = 2–4: P1's quantum has expired and it goes to the back, so P2 runs 2 ms, leaving 1 ms. P3 arrived at t = 2 and is queued behind P1.</li><li>t = 4–6: P1 runs its second quantum, 2 ms, leaving 1 ms.</li><li>t = 6–7: P3 runs its 1 ms and completes at t = 7.</li><li>t = 7–8: P2 runs its last 1 ms and completes at t = 8.</li><li>t = 8–9: P1 runs its last 1 ms and completes at t = 9.</li><li>Completion time of P1 = 9 ms.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 9 ms.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 7 ms is the completion time of P3.</li><li>(B) 8 ms is the completion time of P2.</li><li>(D) 11 ms comes from giving P1 an extra quantum somewhere in the trace.</li></ul><p class=\"row\"><b>Common misconception.</b> Charging the first quantum from t = 0 to t = 1 for P1. The quantum is 2 ms, so P1 runs from 0 to 2, and P2 — which arrives at t = 1 — must wait.</p><p class=\"row\"><b>Takeaway.</b> Write the queue state after every quantum. For round robin, the answer is in the bookkeeping, not in the formula.</p>"
+  },
+  {
+   "id": "OS-U1-Q23",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Which of the following statements about CPU scheduling algorithms are TRUE? (Select all that apply.)",
+   "options": [
+    "SRTF can starve a long process indefinitely if short processes keep arriving.",
+    "Increasing the time quantum of round robin increases the number of context switches.",
+    "Among non-preemptive algorithms, SJF minimises the average waiting time.",
+    "FCFS always gives the minimum average turnaround time for a given set of processes."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation, quantum size and SJF optimality are the three classic scheduling properties; FCFS optimality is the classic false claim.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: SRTF always picks the shortest remaining time, so a long job loses to every short arrival and may never run.</li><li>(B) False: a larger quantum means fewer expiries, hence fewer context switches — with a quantum larger than every burst, round robin degenerates into FCFS.</li><li>(C) True: SJF is provably optimal for average waiting time among non-preemptive algorithms, by an exchange argument on adjacent jobs.</li><li>(D) False: FCFS can be arbitrarily bad — the convoy effect — so it cannot be optimal.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) reverses the relationship: the number of switches falls as the quantum grows.</li><li>(D) is false; SJF, not FCFS, is the optimal non-preemptive rule for waiting time.</li></ul><p class=\"row\"><b>Common misconception.</b> Option (B) is chosen because a smaller quantum is associated with 'more responsive', which students turn into 'more switches when the quantum grows'. It is the other way round.</p><p class=\"row\"><b>Takeaway.</b> Quantum up → switches down, response worse. Quantum down → switches up, overhead up. SJF is optimal for waiting time; nothing is optimal for turnaround in general except in special cases.</p>"
+  },
+  {
+   "id": "OS-U1-Q24",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Four processes arrive as shown and are scheduled by preemptive shortest remaining time first (SRTF). All times are in milliseconds.<div style=\"overflow-x:auto;margin:2px 0 12px\"><table style=\"border-collapse:collapse;font-size:14px;min-width:300px\"><thead><tr><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Process</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Arrival</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Burst</th></tr></thead><tbody><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">0</td><td style=\"border:1px solid var(--line);padding:5px 12px\">7</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">4</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">4</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P4</td><td style=\"border:1px solid var(--line);padding:5px 12px\">5</td><td style=\"border:1px solid var(--line);padding:5px 12px\">4</td></tr></tbody></table></div>What is the average waiting time?<br/>(Enter a number; decimals are allowed.)",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Under SRTF the process with the smallest remaining burst always holds the CPU, and the comparison is repeated at every arrival. Waiting time = completion − arrival − burst.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>t = 0: P1 runs. At t = 2 its remaining time is 5.</li><li>t = 2: P2 arrives with burst 4 &lt; 5, so P2 preempts P1.</li><li>t = 4: P3 arrives with burst 1 &lt; P2's remaining 2, so P3 preempts P2.</li><li>t = 5: P3 completes. Remaining: P2 = 2, P1 = 5, P4 = 4 (P4 arrived at t = 5). P2 runs.</li><li>t = 7: P2 completes. Remaining: P4 = 4, P1 = 5. P4 runs.</li><li>t = 11: P4 completes. P1 runs its remaining 5 ms and completes at t = 16.</li><li>Completion times: P1 = 16, P2 = 7, P3 = 5, P4 = 11.</li><li>Waiting times: P1 = 16 − 0 − 7 = 9; P2 = 7 − 2 − 4 = 1; P3 = 5 − 4 − 1 = 0; P4 = 11 − 5 − 4 = 2.</li><li>Average = (9 + 1 + 0 + 2) / 4 = 12 / 4 = 3 ms.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3 ms.</span></p><p class=\"row\"><b>Common misconception.</b> Letting P1 finish its first stretch because it started first. SRTF is preemptive: P2's burst of 4 beats P1's remaining 5 at t = 2, so P1 is displaced.</p><p class=\"row\"><b>Takeaway.</b> Re-evaluate the shortest remaining time at every arrival instant, not only at completions.</p>"
+  },
+  {
+   "id": "OS-U1-Q25",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "process-scheduling",
+   "unit_name": "Process Management & CPU Scheduling",
+   "topic": "Process Management & CPU Scheduling",
+   "sub": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "subtopic": "fcfs-sjf-srtf-roundrobin-priority-multilevel",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "set": "1 of 2",
+   "question": "Four processes arrive as shown and are scheduled by preemptive shortest remaining time first (SRTF). All times are in milliseconds.<div style=\"overflow-x:auto;margin:2px 0 12px\"><table style=\"border-collapse:collapse;font-size:14px;min-width:300px\"><thead><tr><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Process</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Arrival</th><th style=\"border:1px solid var(--line);padding:5px 12px;background:var(--bg);text-align:left;font-weight:600\">Burst</th></tr></thead><tbody><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">0</td><td style=\"border:1px solid var(--line);padding:5px 12px\">6</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">2</td><td style=\"border:1px solid var(--line);padding:5px 12px\">1</td></tr><tr><td style=\"border:1px solid var(--line);padding:5px 12px\">P4</td><td style=\"border:1px solid var(--line);padding:5px 12px\">3</td><td style=\"border:1px solid var(--line);padding:5px 12px\">3</td></tr></tbody></table></div>What is the average <b>turnaround</b> time?<br/>(Enter a number; decimals are allowed.)",
+   "options": [],
+   "answer": 5,
+   "answer_display": "5",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Turnaround time is completion time minus arrival time; it includes both the waiting and the execution of the process. Under SRTF the schedule is rebuilt at every arrival.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>t = 0: P1 runs. At t = 1 its remaining time is 5.</li><li>t = 1: P2 arrives with burst 2 &lt; 5, so P2 preempts P1.</li><li>t = 2: P3 arrives with burst 1, which ties P2's remaining time of 1. The running process P2 continues (the tie does not change the totals either way).</li><li>t = 3: P2 completes. Ready: P3 = 1, P4 = 3 (arrived at t = 3), P1 = 5. P3 runs.</li><li>t = 4: P3 completes. P4 = 3 &lt; P1 = 5, so P4 runs from t = 4 to t = 7.</li><li>t = 7: P4 completes. P1 runs its remaining 5 ms and completes at t = 12.</li><li>Completion times: P1 = 12, P2 = 3, P3 = 4, P4 = 7.</li><li>Turnaround times: P1 = 12 − 0 = 12; P2 = 3 − 1 = 2; P3 = 4 − 2 = 2; P4 = 7 − 3 = 4.</li><li>Average = (12 + 2 + 2 + 4) / 4 = 20 / 4 = 5 ms.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5 ms.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the average waiting time instead. Here the waiting times are 6, 0, 1, 1, whose average is 2 ms — a different number, and the usual wrong answer.</p><p class=\"row\"><b>Takeaway.</b> Turnaround = completion − arrival. Waiting = turnaround − burst. Read which one the question asks for before dividing.</p>"
+  }
+ ]
+}

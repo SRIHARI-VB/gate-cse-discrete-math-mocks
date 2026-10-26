@@ -1,30 +1,63 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Four subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units) and Compiler Design (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Five subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units) and Operating Systems (6 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
+- **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 1 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: tokens, lexemes & patterns · regular expressions to lexers · Lex input structure · input buffering & lookahead
-- Compiler Design had no `runs[]` entry, so the rotation fell back to the day-offset formula:
-  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. This is the first paper for this subject.
-- Previous test: **Databases · Unit 1 — ER Models & Relational Algebra, Set 1 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
+- Subtopics: process states & PCB (7) · threads, user vs kernel (6) · preemptive vs non-preemptive (5) ·
+  FCFS, SJF, SRTF, RR & priority (7)
+- Operating Systems had no `runs[]` entry, so the rotation fell back to the day-offset formula:
+  `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. This is the first paper for this subject.
+- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 16 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design |
-| Questions in the subject banks | 400 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 25 Compiler Design) |
+| Papers published | 17 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 1 Operating Systems) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems |
+| Questions in the subject banks | 425 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 25 Compiler Design, 25 Operating Systems) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 7 (all Discrete Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Operating Systems → Unit 1 (Process Management & CPU Scheduling).** MODE A: the subject was drawn at
+  random from the 11 GATE CSE subjects and came out Operating Systems. `operating-systems/question-bank/master_bank.json`
+  did not exist, so there was no `runs[]` entry to read and no cap to check; the starting unit came from the documented
+  fallback, `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. No override was used and no second pass has started.
+- The 25 questions cover all four of the unit's subtopics (7 / 6 / 5 / 7 by subtopic) with the standard 10 easy /
+  10 medium / 5 hard split and the standard 15 MCQ / 5 MSQ / 5 NAT composition.
+- Every scheduling number was recomputed with an independent unit-step simulator rather than by hand:
+  preemptive priority on the Q18 table gives **3** preemptions (P1 displaced at t = 2, 4 and 6); FCFS on the Q19 table
+  gives an average waiting time of **3 ms**; non-preemptive SJF on bursts 12/18/30 gives **14 ms**; round robin with
+  q = 2 on the Q22 table completes P1 at **9 ms** (checked under both arrival-vs-requeue tie-breaks); SRTF on the Q24
+  table gives an average waiting time of **3 ms**; SRTF on the Q25 table gives an average turnaround time of **5 ms**
+  (tie-break independent). `fork()` twice gives **4** processes and 1 + 4 threads give **5** stacks.
+- The set carries one `GATE_PYQ_VARIATION` item, `OS-U1-Q21`, built on GATE CSE 2021, Set 1, Question 25 (1-mark NAT;
+  minimum achievable average waiting time of three processes with bursts 16, 20 and 10 ms arriving at time zero, whose
+  value is 12 ms by SJF optimality). It is a re-worded variation with different burst lengths, not the original text,
+  and it is not presented as an official question. `verified_pyqs` records the source paper and the derivation.
+- This is the first paper for a unit with no earlier paper, so nothing was moved into `archive/`. The paper is filed
+  only at `operating-systems/process-scheduling/`; no root copy was written.
+- A new subject folder and bank were created: `operating-systems/question-bank/master_bank.json` holds 25 questions on
+  Unit 1. `index.html` gained the six Operating Systems units, one test card and the 25 banked questions.
+- Shell parity checked this run: the paper was generated from the existing exam shell by slicing the shell out of an
+  existing paper rather than re-typing it, and after normalising the question payload, the Question Bank pane, the About
+  pane and the metadata block, the remaining bytes are identical to
+  `databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html` (27 632 bytes on both sides). The `:root` block
+  matches `design-tokens.css` and `index.html` byte for byte.
+- The paper was exercised in a jsdom harness before shipping: nothing is revealed before submit (no solution text, no
+  option mark, no answer-key content, and the payload is base64 rather than plain JSON); all 25 answered correctly
+  scores 35/35 with 25 correct; a mixed paper (1 correct MCQ, 1 wrong MCQ, 1 partially-selected MSQ, 1 exact MSQ,
+  1 correct NAT, 1 wrong NAT) scores 5/35 with 3 correct, 3 wrong and 19 unattempted; the palette reaches
+  `na`/`ans`/`mrk`/`amr`/`cur` and switches to `ok`/`bad`/`skip` after submit; the answer key unlocks with all 25
+  solutions; each tab shows exactly one view.
 
 - **2026-10-26, Compiler Design → Unit 1 (Lexical Analysis).** MODE A: the subject was drawn at random from the
   11 GATE CSE subjects and came out Compiler Design. `compiler-design/question-bank/master_bank.json` did not exist, so
@@ -271,6 +304,9 @@ databases/
 compiler-design/
   lexical-analysis/gate_cd_mock_1_<date>.html        current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+operating-systems/
+  process-scheduling/gate_os_mock_1_<date>.html      current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -326,6 +362,17 @@ Algorithms:
 | 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 0 | — |
 | 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
 
+### Operating Systems
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Process Management & CPU Scheduling | `process-scheduling` | 25 | yes |
+| 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 0 | — |
+| 3 | Deadlocks | `deadlocks` | 0 | — |
+| 4 | Memory Management & Paging | `memory-paging` | 0 | — |
+| 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
+| 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
@@ -333,7 +380,9 @@ Algorithms:
 2. Questions built on a verified PYQ pattern are tagged `GATE_PYQ_VARIATION` and are explicitly *not* official questions.
    Discrete Mathematics Unit 1's single variation is built on the GATE CSE 2014 Set 1 Q53 pattern (formula true exactly
    when a stated number of p, q, r are TRUE; official key B). Databases Unit 1's single variation is built on the
-   GATE CSE 2014 Set 3 Q30 pattern (difference of projections over a join; official key D).
+   GATE CSE 2014 Set 3 Q30 pattern (difference of projections over a join; official key D). Operating Systems Unit 1's
+   single variation is built on GATE CSE 2021 Set 1 Q25 (minimum achievable average waiting time under a non-preemptive
+   scheduler for bursts 16, 20 and 10 arriving at time zero; value 12 ms, which follows from SJF optimality).
 3. Everything else is tagged `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS` and is practice material written for this series.
 4. Historical questions are never deleted, never counted towards an active test, and are always filed under their
    `data-subtopic` slug.
@@ -355,14 +404,20 @@ review interface.
 - The `index.html` archive prints an answer line from `answer_display` and, for records created before 2026-10-25, a
   second identical line inside `solution_html`. The 50 Unit 2 records and the 25 Unit 1 Set 2 records carry it once; the
   older records still carry it twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
-- The exam shell binds `btnNext`, `btnPrev`, `btnMark` and `btnClear` with `document.getElementById`, and every
-  question card carries the same four ids, so those handlers attach only to Question 1's buttons. Palette navigation
-  and the submit flow are unaffected, and the visible footer buttons on cards 2–25 are inert. The fix is to scope the
-  lookup to the current card; because every paper must share one byte-identical `<script>`, it belongs to the same
-  one-pass re-issue as the two items above rather than to a single file.
-- `6.1` requires an archived paper to be rebuilt on the current shell. Twelve of the thirteen papers share one shell:
-  this run confirmed the `<style>` block and the `<script>` block of every current and archived paper are byte-identical
-  to each other. The exception is `proof-techniques/archive/gate_dm_mock_16_2026-10-25_run1.html` and `..._run2.html`,
-  which were produced before the shell was fixed and still use the earlier layout (no `.qcard` cards, different style
-  block). Their content is frozen and correct; they need rebuilding on the current shell in the same one-pass re-issue
-  as the items above.
+- ~~The exam shell bound `btnNext`, `btnPrev`, `btnMark` and `btnClear` with `document.getElementById` while every
+  question card carried the same four ids, so those handlers attached only to Question 1's buttons and the footer
+  buttons on cards 2–25 were inert.~~ **Fixed 2026-10-26, across all 15 papers that share the current shell.** The
+  handlers are now delegated to the `#qhost` container and act on the card that owns the clicked button, so Save &
+  Next, Previous, Mark for review and Clear response work on every question. Verified in a jsdom harness on the
+  Operating Systems paper, the Databases paper and an archived Discrete Mathematics set. The two older
+  `proof-techniques/archive/..._run1/_run2` files do not use this shell and were left untouched.
+- `6.1` requires an archived paper to be rebuilt on the current shell. Fifteen of the seventeen papers now share one
+  shell: the `<style>` block and the `<script>` block of every current and archived paper that uses the card layout are
+  byte-identical to each other (confirmed after the button fix above). The exception remains
+  `proof-techniques/archive/gate_dm_mock_16_2026-10-25_run1.html` and `..._run2.html`, which were produced before the
+  shell was fixed and still use the earlier layout (no `.qcard` cards, different style block). Their content is frozen
+  and correct; they need rebuilding on the current shell in the same one-pass re-issue as the raw-hex item above.
+- `6.4` also asks for the palette fills to use the `-d` token variants so white numerals clear 4.5:1. The shipped shell
+  fills `.pal button.ans/.na/.mrk` with `--green`/`--red`/`--violet` instead of `--green-d`/`--red-d`/`--violet-d`, which
+  fails that ratio. The Operating Systems paper inherits the shell unchanged so that parity holds; the correction is a
+  four-line CSS change and belongs to the same one-pass re-issue as the raw-hex item.
