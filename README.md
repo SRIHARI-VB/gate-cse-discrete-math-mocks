@@ -53,6 +53,11 @@ and no answer, option mark or hint visible until the test is submitted.
   is **18**; the anti-join returns **1**; the three-table CSE/credits join returns **6**; and the aggregate view
   yields **2** groups with n > 1. The verifier ran **38 checks, all passing**, including the structural ones
   (25 questions, 15/5/5, 10/10/5, 35 marks, 5 questions per subtopic, one answer per MCQ, at least two per MSQ).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4,
+  (C) 4 and (D) 3, and the five MSQ answer sets are (B,C), (A,B,C), (A,B,D), (B,C,D) and (A,C). As first drafted
+  12 of the 15 MCQs had their answer at (A), which would have let a candidate score about 28/35 by always choosing
+  A; the option order of ten questions was rebalanced and every letter reference in the solutions remapped with the
+  same transposition, so option text and solution still agree.
 - The conceptual items were settled by the standard rather than by taste: `TRUNCATE` is DDL; `ON DELETE SET NULL`
   keeps the child rows and nulls the key; a `CHECK` rejects only FALSE, so UNKNOWN passes; the SQL standard permits
   several NULLs in a `UNIQUE` column (SQL Server is the known deviation); `= ANY` is `IN` and `> ALL` over an empty

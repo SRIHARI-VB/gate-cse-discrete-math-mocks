@@ -2157,26 +2157,26 @@
    "date": "2026-10-26",
    "question": "Which of the following sets contains <b>only</b> Data Definition Language (DDL) statements?",
    "options": [
-    "<code class=\"mm\">CREATE</code>, <code class=\"mm\">ALTER</code>, <code class=\"mm\">DROP</code>, <code class=\"mm\">TRUNCATE</code>",
     "<code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code>, <code class=\"mm\">DELETE</code>, <code class=\"mm\">MERGE</code>",
+    "<code class=\"mm\">CREATE</code>, <code class=\"mm\">ALTER</code>, <code class=\"mm\">DROP</code>, <code class=\"mm\">TRUNCATE</code>",
     "<code class=\"mm\">GRANT</code>, <code class=\"mm\">REVOKE</code>, <code class=\"mm\">DENY</code>",
     "<code class=\"mm\">SELECT</code>, <code class=\"mm\">COMMIT</code>, <code class=\"mm\">ROLLBACK</code>"
    ],
    "answer": [
-    0
+    1
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (B)",
    "solution": {
     "concept": "SQL statements are grouped by what they act on. <b>DDL</b> defines and changes the <i>schema</i> (<code class=\"mm\">CREATE</code>, <code class=\"mm\">ALTER</code>, <code class=\"mm\">DROP</code>, <code class=\"mm\">TRUNCATE</code>, <code class=\"mm\">RENAME</code>). <b>DML</b> changes the <i>data</i> inside the objects (<code class=\"mm\">SELECT</code>, <code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code>, <code class=\"mm\">DELETE</code>, <code class=\"mm\">MERGE</code>). <b>DCL</b> controls privileges (<code class=\"mm\">GRANT</code>, <code class=\"mm\">REVOKE</code>). <b>TCL</b> controls transactions (<code class=\"mm\">COMMIT</code>, <code class=\"mm\">ROLLBACK</code>, <code class=\"mm\">SAVEPOINT</code>).",
     "steps": [
      "Check each word against the four groups: definition, manipulation, control, transaction.",
-     "Option (A) lists four schema-changing statements only — all DDL.",
-     "Option (B) is the DML family; (C) is DCL; (D) mixes a DML query with two transaction-control statements."
+     "Option (B) lists four schema-changing statements only — all DDL.",
+     "Option (A) is the DML family; (C) is DCL; (D) mixes a DML query with two transaction-control statements."
     ],
-    "final": "Option (A) — CREATE, ALTER, DROP, TRUNCATE are all DDL.",
+    "final": "Option (B) — CREATE, ALTER, DROP, TRUNCATE are all DDL.",
     "trap": "<code class=\"mm\">TRUNCATE</code> looks like a row operation, so it is often filed under DML. In the SQL standard it is a DDL statement: it drops and re-creates the table's storage rather than deleting rows one at a time, which is why it is far faster than an unqualified <code class=\"mm\">DELETE</code>."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SQL statements are grouped by what they act on. <b>DDL</b> defines and changes the <i>schema</i> (<code class=\"mm\">CREATE</code>, <code class=\"mm\">ALTER</code>, <code class=\"mm\">DROP</code>, <code class=\"mm\">TRUNCATE</code>, <code class=\"mm\">RENAME</code>). <b>DML</b> changes the <i>data</i> inside the objects (<code class=\"mm\">SELECT</code>, <code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code>, <code class=\"mm\">DELETE</code>, <code class=\"mm\">MERGE</code>). <b>DCL</b> controls privileges (<code class=\"mm\">GRANT</code>, <code class=\"mm\">REVOKE</code>). <b>TCL</b> controls transactions (<code class=\"mm\">COMMIT</code>, <code class=\"mm\">ROLLBACK</code>, <code class=\"mm\">SAVEPOINT</code>).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Check each word against the four groups: definition, manipulation, control, transaction.</li><li>Option (A) lists four schema-changing statements only — all DDL.</li><li>Option (B) is the DML family; (C) is DCL; (D) mixes a DML query with two transaction-control statements.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — CREATE, ALTER, DROP, TRUNCATE are all DDL.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) INSERT, UPDATE, DELETE and MERGE act on rows, so they are DML.</li><li>(C) GRANT and REVOKE hand out or take back privileges, so they are DCL (DENY is the same family).</li><li>(D) SELECT reads rows (DML/DQL), while COMMIT and ROLLBACK end or undo a transaction (TCL).</li></ul><p class=\"row\"><b>Common misconception.</b> <code class=\"mm\">TRUNCATE</code> looks like a row operation, so it is often filed under DML. In the SQL standard it is a DDL statement: it drops and re-creates the table's storage rather than deleting rows one at a time, which is why it is far faster than an unqualified <code class=\"mm\">DELETE</code>.</p><p class=\"row\"><b>Takeaway.</b> DDL = definition, DML = data, DCL = privileges, TCL = transactions.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SQL statements are grouped by what they act on. <b>DDL</b> defines and changes the <i>schema</i> (<code class=\"mm\">CREATE</code>, <code class=\"mm\">ALTER</code>, <code class=\"mm\">DROP</code>, <code class=\"mm\">TRUNCATE</code>, <code class=\"mm\">RENAME</code>). <b>DML</b> changes the <i>data</i> inside the objects (<code class=\"mm\">SELECT</code>, <code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code>, <code class=\"mm\">DELETE</code>, <code class=\"mm\">MERGE</code>). <b>DCL</b> controls privileges (<code class=\"mm\">GRANT</code>, <code class=\"mm\">REVOKE</code>). <b>TCL</b> controls transactions (<code class=\"mm\">COMMIT</code>, <code class=\"mm\">ROLLBACK</code>, <code class=\"mm\">SAVEPOINT</code>).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Check each word against the four groups: definition, manipulation, control, transaction.</li><li>Option (B) lists four schema-changing statements only — all DDL.</li><li>Option (A) is the DML family; (C) is DCL; (D) mixes a DML query with two transaction-control statements.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — CREATE, ALTER, DROP, TRUNCATE are all DDL.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) INSERT, UPDATE, DELETE and MERGE act on rows, so they are DML.</li><li>(C) GRANT and REVOKE hand out or take back privileges, so they are DCL (DENY is the same family).</li><li>(D) SELECT reads rows (DML/DQL), while COMMIT and ROLLBACK end or undo a transaction (TCL).</li></ul><p class=\"row\"><b>Common misconception.</b> <code class=\"mm\">TRUNCATE</code> looks like a row operation, so it is often filed under DML. In the SQL standard it is a DDL statement: it drops and re-creates the table's storage rather than deleting rows one at a time, which is why it is far faster than an unqualified <code class=\"mm\">DELETE</code>.</p><p class=\"row\"><b>Takeaway.</b> DDL = definition, DML = data, DCL = privileges, TCL = transactions.</p>"
   },
   {
    "id": "DB-U2-Q02",
@@ -2195,15 +2195,15 @@
    "date": "2026-10-26",
    "question": "Table <code class=\"mm\">enroll</code> holds 8 rows. Compare <code class=\"mm\">DELETE FROM enroll;</code> with <code class=\"mm\">DROP TABLE enroll;</code>. Which statement is TRUE?",
    "options": [
-    "<code class=\"mm\">DELETE</code> removes every row but keeps the table definition; <code class=\"mm\">DROP</code> removes the rows together with the table definition.",
-    "Both statements remove the rows and the table definition.",
     "<code class=\"mm\">DELETE</code> removes the table definition but leaves the rows; <code class=\"mm\">DROP</code> removes the rows.",
+    "Both statements remove the rows and the table definition.",
+    "<code class=\"mm\">DELETE</code> removes every row but keeps the table definition; <code class=\"mm\">DROP</code> removes the rows together with the table definition.",
     "<code class=\"mm\">DROP</code> removes only the rows and leaves the definition; <code class=\"mm\">DELETE</code> removes the definition."
    ],
    "answer": [
-    0
+    2
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (C)",
    "solution": {
     "concept": "The row set and the schema object are separate things. <code class=\"mm\">DELETE</code> is DML: it removes rows from an existing table, and the table keeps its columns, constraints, indexes and privileges. <code class=\"mm\">DROP</code> is DDL: it removes the table object itself from the catalogue, so the rows go with it and any later reference to the name fails.",
     "steps": [
@@ -2211,10 +2211,10 @@
      "<code class=\"mm\">DROP TABLE enroll;</code> deletes the definition; the 8 rows disappear because the object that held them is gone.",
      "A re-created table has no rows and no old constraints — nothing is restored."
     ],
-    "final": "Option (A).",
+    "final": "Option (C).",
     "trap": "Treating <code class=\"mm\">DROP</code> as \"delete the rows\". The distinction is testable: after <code class=\"mm\">DELETE</code>, <code class=\"mm\">SELECT * FROM enroll</code> returns an empty result set; after <code class=\"mm\">DROP</code>, the same query raises a \"no such table\" error."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The row set and the schema object are separate things. <code class=\"mm\">DELETE</code> is DML: it removes rows from an existing table, and the table keeps its columns, constraints, indexes and privileges. <code class=\"mm\">DROP</code> is DDL: it removes the table object itself from the catalogue, so the rows go with it and any later reference to the name fails.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">DELETE FROM enroll;</code> with no <code class=\"mm\">WHERE</code> deletes all 8 rows; the table still exists and accepts new inserts.</li><li><code class=\"mm\">DROP TABLE enroll;</code> deletes the definition; the 8 rows disappear because the object that held them is gone.</li><li>A re-created table has no rows and no old constraints — nothing is restored.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is wrong because <code class=\"mm\">DELETE</code> never touches the definition.</li><li>(C) and (D) invert the two statements.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating <code class=\"mm\">DROP</code> as \"delete the rows\". The distinction is testable: after <code class=\"mm\">DELETE</code>, <code class=\"mm\">SELECT * FROM enroll</code> returns an empty result set; after <code class=\"mm\">DROP</code>, the same query raises a \"no such table\" error.</p><p class=\"row\"><b>Takeaway.</b> DELETE empties, DROP erases.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The row set and the schema object are separate things. <code class=\"mm\">DELETE</code> is DML: it removes rows from an existing table, and the table keeps its columns, constraints, indexes and privileges. <code class=\"mm\">DROP</code> is DDL: it removes the table object itself from the catalogue, so the rows go with it and any later reference to the name fails.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">DELETE FROM enroll;</code> with no <code class=\"mm\">WHERE</code> deletes all 8 rows; the table still exists and accepts new inserts.</li><li><code class=\"mm\">DROP TABLE enroll;</code> deletes the definition; the 8 rows disappear because the object that held them is gone.</li><li>A re-created table has no rows and no old constraints — nothing is restored.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is wrong because <code class=\"mm\">DELETE</code> never touches the definition.</li><li>(A) and (D) invert the two statements.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating <code class=\"mm\">DROP</code> as \"delete the rows\". The distinction is testable: after <code class=\"mm\">DELETE</code>, <code class=\"mm\">SELECT * FROM enroll</code> returns an empty result set; after <code class=\"mm\">DROP</code>, the same query raises a \"no such table\" error.</p><p class=\"row\"><b>Takeaway.</b> DELETE empties, DROP erases.</p>"
   },
   {
    "id": "DB-U2-Q03",
@@ -2234,14 +2234,14 @@
    "question": "In the schema below, <code class=\"mm\">enroll.roll</code> is declared <code class=\"mm\">REFERENCES student(roll) ON DELETE SET NULL</code>. Student 4 has two rows in <code class=\"mm\">enroll</code>. After <code class=\"mm\">DELETE FROM student WHERE roll = 4;</code> what happens to those two rows?<span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">student(roll, name, dept, cgpa)   -- roll is the primary key\ncourse(cid, title, credits)       -- cid is the primary key\nenroll(roll, cid, marks)          -- marks is NULL while a course is ungraded</span>",
    "options": [
     "Both <code class=\"mm\">enroll</code> rows are deleted with the student.",
-    "Both <code class=\"mm\">enroll</code> rows remain, with their <code class=\"mm\">roll</code> value set to NULL.",
+    "One row is deleted and the other is set to NULL.",
     "The delete is rejected, because two rows still reference student 4.",
-    "One row is deleted and the other is set to NULL."
+    "Both <code class=\"mm\">enroll</code> rows remain, with their <code class=\"mm\">roll</code> value set to NULL."
    ],
    "answer": [
-    1
+    3
    ],
-   "answer_display": "Option (B)",
+   "answer_display": "Option (D)",
    "solution": {
     "concept": "A foreign key with a referential action decides what happens to <i>referencing</i> rows when the <i>referenced</i> row is deleted. The four standard actions are <code class=\"mm\">CASCADE</code> (delete the children), <code class=\"mm\">SET NULL</code> (keep the children, null out the key), <code class=\"mm\">SET DEFAULT</code>, and <code class=\"mm\">NO ACTION</code>/<code class=\"mm\">RESTRICT</code> (reject the delete).",
     "steps": [
@@ -2250,10 +2250,10 @@
      "Their <code class=\"mm\">roll</code> becomes NULL; the <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> values are untouched.",
      "The student row itself is removed, so the two orphaned enrollments now have no owner."
     ],
-    "final": "Option (B).",
+    "final": "Option (D).",
     "trap": "Confusing \"the delete is refused\" with \"the children are removed\". A foreign key by itself does not prevent a delete; it only prevents leaving a <i>dangling</i> reference. <code class=\"mm\">SET NULL</code> avoids the dangling reference by erasing the value, so the delete is allowed and the child rows survive. Note the column must be nullable for this action to be legal."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A foreign key with a referential action decides what happens to <i>referencing</i> rows when the <i>referenced</i> row is deleted. The four standard actions are <code class=\"mm\">CASCADE</code> (delete the children), <code class=\"mm\">SET NULL</code> (keep the children, null out the key), <code class=\"mm\">SET DEFAULT</code>, and <code class=\"mm\">NO ACTION</code>/<code class=\"mm\">RESTRICT</code> (reject the delete).</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">ON DELETE SET NULL</code> keeps every referencing row and overwrites only the foreign-key column.</li><li>Both of student 4's enrollment rows are referencing rows, so both are kept.</li><li>Their <code class=\"mm\">roll</code> becomes NULL; the <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> values are untouched.</li><li>The student row itself is removed, so the two orphaned enrollments now have no owner.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) describes <code class=\"mm\">ON DELETE CASCADE</code>.</li><li>(C) describes <code class=\"mm\">NO ACTION</code> or <code class=\"mm\">RESTRICT</code>, the default when no action is written.</li><li>(D) is not an action any standard system performs.</li></ul><p class=\"row\"><b>Common misconception.</b> Confusing \"the delete is refused\" with \"the children are removed\". A foreign key by itself does not prevent a delete; it only prevents leaving a <i>dangling</i> reference. <code class=\"mm\">SET NULL</code> avoids the dangling reference by erasing the value, so the delete is allowed and the child rows survive. Note the column must be nullable for this action to be legal.</p><p class=\"row\"><b>Takeaway.</b> Foreign key actions: CASCADE deletes children, SET NULL orphans them, RESTRICT refuses the parent delete.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A foreign key with a referential action decides what happens to <i>referencing</i> rows when the <i>referenced</i> row is deleted. The four standard actions are <code class=\"mm\">CASCADE</code> (delete the children), <code class=\"mm\">SET NULL</code> (keep the children, null out the key), <code class=\"mm\">SET DEFAULT</code>, and <code class=\"mm\">NO ACTION</code>/<code class=\"mm\">RESTRICT</code> (reject the delete).</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">ON DELETE SET NULL</code> keeps every referencing row and overwrites only the foreign-key column.</li><li>Both of student 4's enrollment rows are referencing rows, so both are kept.</li><li>Their <code class=\"mm\">roll</code> becomes NULL; the <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> values are untouched.</li><li>The student row itself is removed, so the two orphaned enrollments now have no owner.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) describes <code class=\"mm\">ON DELETE CASCADE</code>.</li><li>(C) describes <code class=\"mm\">NO ACTION</code> or <code class=\"mm\">RESTRICT</code>, the default when no action is written.</li><li>(B) is not an action any standard system performs.</li></ul><p class=\"row\"><b>Common misconception.</b> Confusing \"the delete is refused\" with \"the children are removed\". A foreign key by itself does not prevent a delete; it only prevents leaving a <i>dangling</i> reference. <code class=\"mm\">SET NULL</code> avoids the dangling reference by erasing the value, so the delete is allowed and the child rows survive. Note the column must be nullable for this action to be legal.</p><p class=\"row\"><b>Takeaway.</b> Foreign key actions: CASCADE deletes children, SET NULL orphans them, RESTRICT refuses the parent delete.</p>"
   },
   {
    "id": "DB-U2-Q04",
@@ -2382,15 +2382,15 @@
    "date": "2026-10-26",
    "question": "A subquery refers to a column of the table named in the enclosing query. Which statement about such a subquery is TRUE?",
    "options": [
-    "It is a correlated subquery, and conceptually it is evaluated again for each candidate row of the outer query.",
-    "It is an independent subquery, evaluated exactly once and then reused for every outer row.",
     "It must appear in the <code class=\"mm\">FROM</code> clause; a correlated reference is illegal in <code class=\"mm\">WHERE</code>.",
+    "It is an independent subquery, evaluated exactly once and then reused for every outer row.",
+    "It is a correlated subquery, and conceptually it is evaluated again for each candidate row of the outer query.",
     "It cannot contain an aggregate function."
    ],
    "answer": [
-    0
+    2
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (C)",
    "solution": {
     "concept": "A subquery that mentions an outer column is <b>correlated</b>. Its result depends on the current outer row, so the conceptual model is: for each candidate outer row, bind the outer columns, run the inner query, then test the predicate. An <b>uncorrelated</b> subquery mentions only its own tables, so it can be computed once and its result reused — which is why optimisers try to decorrelate.",
     "steps": [
@@ -2398,10 +2398,10 @@
      "Because the inner result changes with each outer row, it is re-evaluated per row in the conceptual model.",
      "That is the definition of a correlated subquery."
     ],
-    "final": "Option (A).",
+    "final": "Option (C).",
     "trap": "Believing a correlated subquery always costs one full scan per row. That is the naive plan; most engines rewrite it into a semi-join or an index lookup, so the practical cost can be close to a single join."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A subquery that mentions an outer column is <b>correlated</b>. Its result depends on the current outer row, so the conceptual model is: for each candidate outer row, bind the outer columns, run the inner query, then test the predicate. An <b>uncorrelated</b> subquery mentions only its own tables, so it can be computed once and its result reused — which is why optimisers try to decorrelate.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Spot the outer reference: here <code class=\"mm\">s.roll</code> inside the inner query.</li><li>Because the inner result changes with each outer row, it is re-evaluated per row in the conceptual model.</li><li>That is the definition of a correlated subquery.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) describes an uncorrelated (independent) subquery.</li><li>(C) is false: correlation is legal in <code class=\"mm\">WHERE</code>, in the <code class=\"mm\">SELECT</code> list and in <code class=\"mm\">HAVING</code>.</li><li>(D) is false: a correlated aggregate such as <code class=\"mm\">(SELECT AVG(marks) FROM enroll e WHERE e.roll = s.roll)</code> is perfectly legal.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing a correlated subquery always costs one full scan per row. That is the naive plan; most engines rewrite it into a semi-join or an index lookup, so the practical cost can be close to a single join.</p><p class=\"row\"><b>Takeaway.</b> Outer reference present = correlated = per-row semantics; absent = uncorrelated = compute once.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A subquery that mentions an outer column is <b>correlated</b>. Its result depends on the current outer row, so the conceptual model is: for each candidate outer row, bind the outer columns, run the inner query, then test the predicate. An <b>uncorrelated</b> subquery mentions only its own tables, so it can be computed once and its result reused — which is why optimisers try to decorrelate.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Spot the outer reference: here <code class=\"mm\">s.roll</code> inside the inner query.</li><li>Because the inner result changes with each outer row, it is re-evaluated per row in the conceptual model.</li><li>That is the definition of a correlated subquery.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) describes an uncorrelated (independent) subquery.</li><li>(A) is false: correlation is legal in <code class=\"mm\">WHERE</code>, in the <code class=\"mm\">SELECT</code> list and in <code class=\"mm\">HAVING</code>.</li><li>(D) is false: a correlated aggregate such as <code class=\"mm\">(SELECT AVG(marks) FROM enroll e WHERE e.roll = s.roll)</code> is perfectly legal.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing a correlated subquery always costs one full scan per row. That is the naive plan; most engines rewrite it into a semi-join or an index lookup, so the practical cost can be close to a single join.</p><p class=\"row\"><b>Takeaway.</b> Outer reference present = correlated = per-row semantics; absent = uncorrelated = compute once.</p>"
   },
   {
    "id": "DB-U2-Q08",
@@ -2535,15 +2535,15 @@
    "date": "2026-10-26",
    "question": "Using the data below, what does the query return?<span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">SELECT COUNT(*), COUNT(marks) FROM enroll;</span><span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">student: (1,Aarav,CSE,9.1)  (2,Bhavna,CSE,8.4)  (3,Chirag,ECE,7.8)\n         (4,Divya,CSE,8.9)  (5,Esha,MECH,6.9)  (6,Farhan,ECE,7.2)\ncourse:  (CS101,DBMS,4)  (CS102,OS,4)  (EC201,Signals,3)\nenroll:  (1,CS101,88)  (1,CS102,74)  (2,CS101,NULL)  (2,CS102,65)\n         (3,EC201,91)  (4,CS101,95)  (4,CS102,80)  (5,EC201,NULL)</span>",
    "options": [
-    "8 and 6",
+    "8 and 2",
     "8 and 8",
     "6 and 6",
-    "8 and 2"
+    "8 and 6"
    ],
    "answer": [
-    0
+    3
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (D)",
    "solution": {
     "concept": "<code class=\"mm\">COUNT(*)</code> counts <i>rows</i> and never looks at column values, so NULLs are included. <code class=\"mm\">COUNT(expr)</code> counts only the rows where <code class=\"mm\">expr</code> is not NULL. Every other aggregate (<code class=\"mm\">SUM</code>, <code class=\"mm\">AVG</code>, <code class=\"mm\">MIN</code>, <code class=\"mm\">MAX</code>) also ignores NULLs; only <code class=\"mm\">COUNT(*)</code> counts them.",
     "steps": [
@@ -2551,10 +2551,10 @@
      "Two rows have <code class=\"mm\">marks</code> NULL — (2,CS101) and (5,EC201) — so <code class=\"mm\">COUNT(marks)</code> = 8 − 2 = 6.",
      "The pair is therefore (8, 6)."
     ],
-    "final": "Option (A) — 8 and 6.",
+    "final": "Option (D) — 8 and 6.",
     "trap": "Assuming <code class=\"mm\">COUNT(marks)</code> and <code class=\"mm\">COUNT(*)</code> are the same. The gap between them is precisely the number of NULLs, which is why <code class=\"mm\">COUNT(*) - COUNT(col)</code> is a standard idiom for counting missing values."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">COUNT(*)</code> counts <i>rows</i> and never looks at column values, so NULLs are included. <code class=\"mm\">COUNT(expr)</code> counts only the rows where <code class=\"mm\">expr</code> is not NULL. Every other aggregate (<code class=\"mm\">SUM</code>, <code class=\"mm\">AVG</code>, <code class=\"mm\">MIN</code>, <code class=\"mm\">MAX</code>) also ignores NULLs; only <code class=\"mm\">COUNT(*)</code> counts them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">enroll</code> holds 8 rows, so <code class=\"mm\">COUNT(*)</code> = 8.</li><li>Two rows have <code class=\"mm\">marks</code> NULL — (2,CS101) and (5,EC201) — so <code class=\"mm\">COUNT(marks)</code> = 8 − 2 = 6.</li><li>The pair is therefore (8, 6).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 8 and 6.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) would need every row to be graded.</li><li>(C) would be the answer if <code class=\"mm\">COUNT(*)</code> also skipped NULL rows.</li><li>(D) reports the number of NULL marks instead of the number of non-NULL ones.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming <code class=\"mm\">COUNT(marks)</code> and <code class=\"mm\">COUNT(*)</code> are the same. The gap between them is precisely the number of NULLs, which is why <code class=\"mm\">COUNT(*) - COUNT(col)</code> is a standard idiom for counting missing values.</p><p class=\"row\"><b>Takeaway.</b> COUNT(*) counts rows; COUNT(col) counts non-NULL values of col.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">COUNT(*)</code> counts <i>rows</i> and never looks at column values, so NULLs are included. <code class=\"mm\">COUNT(expr)</code> counts only the rows where <code class=\"mm\">expr</code> is not NULL. Every other aggregate (<code class=\"mm\">SUM</code>, <code class=\"mm\">AVG</code>, <code class=\"mm\">MIN</code>, <code class=\"mm\">MAX</code>) also ignores NULLs; only <code class=\"mm\">COUNT(*)</code> counts them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">enroll</code> holds 8 rows, so <code class=\"mm\">COUNT(*)</code> = 8.</li><li>Two rows have <code class=\"mm\">marks</code> NULL — (2,CS101) and (5,EC201) — so <code class=\"mm\">COUNT(marks)</code> = 8 − 2 = 6.</li><li>The pair is therefore (8, 6).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — 8 and 6.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) would need every row to be graded.</li><li>(C) would be the answer if <code class=\"mm\">COUNT(*)</code> also skipped NULL rows.</li><li>(A) reports the number of NULL marks instead of the number of non-NULL ones.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming <code class=\"mm\">COUNT(marks)</code> and <code class=\"mm\">COUNT(*)</code> are the same. The gap between them is precisely the number of NULLs, which is why <code class=\"mm\">COUNT(*) - COUNT(col)</code> is a standard idiom for counting missing values.</p><p class=\"row\"><b>Takeaway.</b> COUNT(*) counts rows; COUNT(col) counts non-NULL values of col.</p>"
   },
   {
    "id": "DB-U2-Q12",
@@ -2611,15 +2611,15 @@
    "date": "2026-10-26",
    "question": "Using the data below, what does the query return (averages shown to one decimal place)?<span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">SELECT dept, AVG(cgpa) FROM student\n GROUP BY dept\nHAVING COUNT(*) > 1;</span><span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">student: (1,Aarav,CSE,9.1)  (2,Bhavna,CSE,8.4)  (3,Chirag,ECE,7.8)\n         (4,Divya,CSE,8.9)  (5,Esha,MECH,6.9)  (6,Farhan,ECE,7.2)\ncourse:  (CS101,DBMS,4)  (CS102,OS,4)  (EC201,Signals,3)\nenroll:  (1,CS101,88)  (1,CS102,74)  (2,CS101,NULL)  (2,CS102,65)\n         (3,EC201,91)  (4,CS101,95)  (4,CS102,80)  (5,EC201,NULL)</span>",
    "options": [
-    "Two rows: CSE 8.8 and ECE 7.5",
     "Three rows: CSE, ECE and MECH",
+    "Two rows: CSE 8.8 and ECE 7.5",
     "One row: CSE 8.8",
     "Two rows: CSE 9.1 and ECE 7.8"
    ],
    "answer": [
-    0
+    1
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (B)",
    "solution": {
     "concept": "The query groups by department, computes each group's average, and then keeps only the groups whose <code class=\"mm\">COUNT(*)</code> exceeds 1. The <code class=\"mm\">HAVING</code> test is applied to the group, so a department with a single student disappears even though its average is perfectly well defined.",
     "steps": [
@@ -2629,10 +2629,10 @@
      "ECE average = (7.8 + 7.2)/2 = 15.0/2 = 7.5.",
      "Two rows are returned."
     ],
-    "final": "Option (A) — CSE 8.8 and ECE 7.5.",
+    "final": "Option (B) — CSE 8.8 and ECE 7.5.",
     "trap": "Thinking <code class=\"mm\">HAVING</code> filters rows. It filters groups: a department with one student is removed as a group, not the student removed from the average."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The query groups by department, computes each group's average, and then keeps only the groups whose <code class=\"mm\">COUNT(*)</code> exceeds 1. The <code class=\"mm\">HAVING</code> test is applied to the group, so a department with a single student disappears even though its average is perfectly well defined.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Group and count: CSE has 3 students, ECE has 2, MECH has 1.</li><li><code class=\"mm\">HAVING COUNT(*) &gt; 1</code> keeps CSE and ECE and drops MECH.</li><li>CSE average = (9.1 + 8.4 + 8.9)/3 = 26.4/3 = 8.8.</li><li>ECE average = (7.8 + 7.2)/2 = 15.0/2 = 7.5.</li><li>Two rows are returned.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — CSE 8.8 and ECE 7.5.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) keeps MECH, whose group has only one row and therefore fails the <code class=\"mm\">HAVING</code> test.</li><li>(C) drops ECE, whose count is 2 and so satisfies <code class=\"mm\">&gt; 1</code>.</li><li>(D) reports the first value of each group instead of the group average.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking <code class=\"mm\">HAVING</code> filters rows. It filters groups: a department with one student is removed as a group, not the student removed from the average.</p><p class=\"row\"><b>Takeaway.</b> GROUP BY partitions, aggregates summarise, HAVING keeps or drops whole partitions.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The query groups by department, computes each group's average, and then keeps only the groups whose <code class=\"mm\">COUNT(*)</code> exceeds 1. The <code class=\"mm\">HAVING</code> test is applied to the group, so a department with a single student disappears even though its average is perfectly well defined.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Group and count: CSE has 3 students, ECE has 2, MECH has 1.</li><li><code class=\"mm\">HAVING COUNT(*) &gt; 1</code> keeps CSE and ECE and drops MECH.</li><li>CSE average = (9.1 + 8.4 + 8.9)/3 = 26.4/3 = 8.8.</li><li>ECE average = (7.8 + 7.2)/2 = 15.0/2 = 7.5.</li><li>Two rows are returned.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — CSE 8.8 and ECE 7.5.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) keeps MECH, whose group has only one row and therefore fails the <code class=\"mm\">HAVING</code> test.</li><li>(C) drops ECE, whose count is 2 and so satisfies <code class=\"mm\">&gt; 1</code>.</li><li>(D) reports the first value of each group instead of the group average.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking <code class=\"mm\">HAVING</code> filters rows. It filters groups: a department with one student is removed as a group, not the student removed from the average.</p><p class=\"row\"><b>Takeaway.</b> GROUP BY partitions, aggregates summarise, HAVING keeps or drops whole partitions.</p>"
   },
   {
    "id": "DB-U2-Q14",
@@ -2723,15 +2723,15 @@
    "date": "2026-10-26",
    "question": "Using the data below, how many rows does the following query return?<span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">SELECT * FROM student s LEFT JOIN enroll e ON s.roll = e.roll;</span><span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">student: (1,Aarav,CSE,9.1)  (2,Bhavna,CSE,8.4)  (3,Chirag,ECE,7.8)\n         (4,Divya,CSE,8.9)  (5,Esha,MECH,6.9)  (6,Farhan,ECE,7.2)\ncourse:  (CS101,DBMS,4)  (CS102,OS,4)  (EC201,Signals,3)\nenroll:  (1,CS101,88)  (1,CS102,74)  (2,CS101,NULL)  (2,CS102,65)\n         (3,EC201,91)  (4,CS101,95)  (4,CS102,80)  (5,EC201,NULL)</span>",
    "options": [
-    "9",
-    "8",
     "6",
+    "8",
+    "9",
     "14"
    ],
    "answer": [
-    0
+    2
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (C)",
    "solution": {
     "concept": "A <b>left outer join</b> emits one row for every matching pair, plus one <i>NULL-extended</i> row for each left row that found no match. So the count is (number of matching pairs) + (number of unmatched left rows).",
     "steps": [
@@ -2739,10 +2739,10 @@
      "Unmatched left rows: roll 6 (Farhan) has no enrollment, so it contributes 1 row with <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> NULL.",
      "8 + 1 = 9 rows."
     ],
-    "final": "Option (A) — 9 rows.",
+    "final": "Option (C) — 9 rows.",
     "trap": "Assuming an outer join adds one row per left row. It adds one row only for <i>unmatched</i> left rows; matched rows are duplicated exactly as an inner join would duplicate them."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A <b>left outer join</b> emits one row for every matching pair, plus one <i>NULL-extended</i> row for each left row that found no match. So the count is (number of matching pairs) + (number of unmatched left rows).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Matching pairs: roll 1 contributes 2, roll 2 contributes 2, roll 3 contributes 1, roll 4 contributes 2, roll 5 contributes 1 — 8 pairs in total, the whole of <code class=\"mm\">enroll</code>.</li><li>Unmatched left rows: roll 6 (Farhan) has no enrollment, so it contributes 1 row with <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> NULL.</li><li>8 + 1 = 9 rows.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 9 rows.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is the inner-join count: an inner join returns only the 8 matched pairs and silently drops roll 6.</li><li>(C) is the number of students, not the number of joined rows.</li><li>(D) would be the count if the join were many-to-many across a larger table; here the total is bounded by 8 + 6 = 14 only in the degenerate case where every enrollment failed to match.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming an outer join adds one row per left row. It adds one row only for <i>unmatched</i> left rows; matched rows are duplicated exactly as an inner join would duplicate them.</p><p class=\"row\"><b>Takeaway.</b> LEFT JOIN row count = matched pairs + unmatched left rows.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A <b>left outer join</b> emits one row for every matching pair, plus one <i>NULL-extended</i> row for each left row that found no match. So the count is (number of matching pairs) + (number of unmatched left rows).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Matching pairs: roll 1 contributes 2, roll 2 contributes 2, roll 3 contributes 1, roll 4 contributes 2, roll 5 contributes 1 — 8 pairs in total, the whole of <code class=\"mm\">enroll</code>.</li><li>Unmatched left rows: roll 6 (Farhan) has no enrollment, so it contributes 1 row with <code class=\"mm\">cid</code> and <code class=\"mm\">marks</code> NULL.</li><li>8 + 1 = 9 rows.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 9 rows.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is the inner-join count: an inner join returns only the 8 matched pairs and silently drops roll 6.</li><li>(A) is the number of students, not the number of joined rows.</li><li>(D) would be the count if the join were many-to-many across a larger table; here the total is bounded by 8 + 6 = 14 only in the degenerate case where every enrollment failed to match.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming an outer join adds one row per left row. It adds one row only for <i>unmatched</i> left rows; matched rows are duplicated exactly as an inner join would duplicate them.</p><p class=\"row\"><b>Takeaway.</b> LEFT JOIN row count = matched pairs + unmatched left rows.</p>"
   },
   {
    "id": "DB-U2-Q17",
@@ -2799,15 +2799,15 @@
    "date": "2026-10-26",
    "question": "Using the data below, what does the following query return?<span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">SELECT COUNT(*) FROM student s\n  LEFT JOIN enroll e ON s.roll = e.roll\n WHERE e.roll IS NULL;</span><span style=\"display:block;font-family:\"Consolas\",\"DejaVu Sans Mono\",monospace;font-size:12.9px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;margin:9px 0;white-space:pre-wrap;overflow-x:auto\">student: (1,Aarav,CSE,9.1)  (2,Bhavna,CSE,8.4)  (3,Chirag,ECE,7.8)\n         (4,Divya,CSE,8.9)  (5,Esha,MECH,6.9)  (6,Farhan,ECE,7.2)\ncourse:  (CS101,DBMS,4)  (CS102,OS,4)  (EC201,Signals,3)\nenroll:  (1,CS101,88)  (1,CS102,74)  (2,CS101,NULL)  (2,CS102,65)\n         (3,EC201,91)  (4,CS101,95)  (4,CS102,80)  (5,EC201,NULL)</span>",
    "options": [
-    "1",
+    "8",
     "0",
     "6",
-    "8"
+    "1"
    ],
    "answer": [
-    0
+    3
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (D)",
    "solution": {
     "concept": "This is the standard <b>anti-join</b> idiom: left-join, then keep only the NULL-extended rows. After the outer join, <code class=\"mm\">e.roll</code> is NULL exactly for the left rows that found no match, so the <code class=\"mm\">WHERE</code> predicate isolates the students with no enrollment.",
     "steps": [
@@ -2815,10 +2815,10 @@
      "<code class=\"mm\">e.roll IS NULL</code> is true only on that single row.",
      "<code class=\"mm\">COUNT(*)</code> = 1."
     ],
-    "final": "Option (A) — 1 (only roll 6).",
+    "final": "Option (D) — 1 (only roll 6).",
     "trap": "Writing <code class=\"mm\">WHERE e.roll IS NULL</code> inside an <i>inner</i> join and expecting the same answer. With an inner join the NULL-extended rows never exist, so the predicate can never be true and the result is always empty — the outer join is what makes the test meaningful."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This is the standard <b>anti-join</b> idiom: left-join, then keep only the NULL-extended rows. After the outer join, <code class=\"mm\">e.roll</code> is NULL exactly for the left rows that found no match, so the <code class=\"mm\">WHERE</code> predicate isolates the students with no enrollment.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The left join produces 9 rows, of which 8 are matched and 1 is the NULL-extended row for roll 6.</li><li><code class=\"mm\">e.roll IS NULL</code> is true only on that single row.</li><li><code class=\"mm\">COUNT(*)</code> = 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 1 (only roll 6).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) would be the answer if every student had at least one enrollment.</li><li>(C) counts all students, ignoring the join.</li><li>(D) is the size of <code class=\"mm\">enroll</code>.</li></ul><p class=\"row\"><b>Common misconception.</b> Writing <code class=\"mm\">WHERE e.roll IS NULL</code> inside an <i>inner</i> join and expecting the same answer. With an inner join the NULL-extended rows never exist, so the predicate can never be true and the result is always empty — the outer join is what makes the test meaningful.</p><p class=\"row\"><b>Takeaway.</b> Anti-join = LEFT JOIN … WHERE right.key IS NULL.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This is the standard <b>anti-join</b> idiom: left-join, then keep only the NULL-extended rows. After the outer join, <code class=\"mm\">e.roll</code> is NULL exactly for the left rows that found no match, so the <code class=\"mm\">WHERE</code> predicate isolates the students with no enrollment.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The left join produces 9 rows, of which 8 are matched and 1 is the NULL-extended row for roll 6.</li><li><code class=\"mm\">e.roll IS NULL</code> is true only on that single row.</li><li><code class=\"mm\">COUNT(*)</code> = 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — 1 (only roll 6).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) would be the answer if every student had at least one enrollment.</li><li>(C) counts all students, ignoring the join.</li><li>(A) is the size of <code class=\"mm\">enroll</code>.</li></ul><p class=\"row\"><b>Common misconception.</b> Writing <code class=\"mm\">WHERE e.roll IS NULL</code> inside an <i>inner</i> join and expecting the same answer. With an inner join the NULL-extended rows never exist, so the predicate can never be true and the result is always empty — the outer join is what makes the test meaningful.</p><p class=\"row\"><b>Takeaway.</b> Anti-join = LEFT JOIN … WHERE right.key IS NULL.</p>"
   },
   {
    "id": "DB-U2-Q19",
@@ -2837,29 +2837,29 @@
    "date": "2026-10-26",
    "question": "Which of the following statements about outer joins are TRUE? (Select all that apply.)",
    "options": [
-    "<code class=\"mm\">A LEFT JOIN B</code> and <code class=\"mm\">B RIGHT JOIN A</code> produce the same set of result rows (with the same column pairs) when written with the same join condition.",
+    "The <code class=\"mm\">ON</code> condition of a left outer join also filters out left rows that fail to match.",
     "A predicate on a right-table column placed in the <code class=\"mm\">WHERE</code> clause of a left outer join can remove the NULL-extended rows and so reduce the result to that of an inner join.",
     "A <code class=\"mm\">FULL OUTER JOIN</code> returns unmatched rows from both sides, padding the other side with NULLs.",
-    "The <code class=\"mm\">ON</code> condition of a left outer join also filters out left rows that fail to match."
+    "<code class=\"mm\">A LEFT JOIN B</code> and <code class=\"mm\">B RIGHT JOIN A</code> produce the same set of result rows (with the same column pairs) when written with the same join condition."
    ],
    "answer": [
-    0,
     1,
-    2
+    2,
+    3
    ],
-   "answer_display": "Options (A), (B), (C)",
+   "answer_display": "Options (B), (C), (D)",
    "solution": {
     "concept": "An outer join preserves one or both sides. <code class=\"mm\">LEFT</code> preserves the left input, <code class=\"mm\">RIGHT</code> preserves the right, <code class=\"mm\">FULL</code> preserves both. Swapping the operands therefore swaps which side is preserved, and the two results describe the same pairs. The <code class=\"mm\">ON</code> condition decides <i>matching</i>; the <code class=\"mm\">WHERE</code> clause is applied <i>after</i> the NULL extension, so a WHERE predicate can undo the preservation.",
     "steps": [
-     "(A) swapping the operands of a left join turns it into the mirror-image right join with identical pairs. True.",
+     "(A) false: a left row that fails the <code class=\"mm\">ON</code> condition is precisely the row that is kept, padded with NULLs.",
      "(B) if the WHERE clause requires, say, <code class=\"mm\">e.marks &gt; 70</code>, the NULL-extended rows evaluate to UNKNOWN and are discarded, leaving exactly the inner-join rows. True — this is the classic \"outer join that is really an inner join\" bug.",
      "(C) is the definition of a full outer join. True.",
-     "(D) false: a left row that fails the <code class=\"mm\">ON</code> condition is precisely the row that is kept, padded with NULLs."
+     "(D) swapping the operands of a left join turns it into the mirror-image right join with identical pairs. True."
     ],
-    "final": "Options (A), (B) and (C) are true; (D) is false.",
+    "final": "Options (D), (B) and (C) are true; (A) is false.",
     "trap": "Putting a right-table predicate in <code class=\"mm\">WHERE</code> and expecting NULL-padded rows to survive. They cannot: a NULL never satisfies a comparison. To filter the <i>matching</i> without losing the unmatched rows, the predicate must move into the <code class=\"mm\">ON</code> clause."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An outer join preserves one or both sides. <code class=\"mm\">LEFT</code> preserves the left input, <code class=\"mm\">RIGHT</code> preserves the right, <code class=\"mm\">FULL</code> preserves both. Swapping the operands therefore swaps which side is preserved, and the two results describe the same pairs. The <code class=\"mm\">ON</code> condition decides <i>matching</i>; the <code class=\"mm\">WHERE</code> clause is applied <i>after</i> the NULL extension, so a WHERE predicate can undo the preservation.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) swapping the operands of a left join turns it into the mirror-image right join with identical pairs. True.</li><li>(B) if the WHERE clause requires, say, <code class=\"mm\">e.marks &gt; 70</code>, the NULL-extended rows evaluate to UNKNOWN and are discarded, leaving exactly the inner-join rows. True — this is the classic \"outer join that is really an inner join\" bug.</li><li>(C) is the definition of a full outer join. True.</li><li>(D) false: a left row that fails the <code class=\"mm\">ON</code> condition is precisely the row that is kept, padded with NULLs.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C) are true; (D) is false.</span></p><p class=\"row\"><b>Common misconception.</b> Putting a right-table predicate in <code class=\"mm\">WHERE</code> and expecting NULL-padded rows to survive. They cannot: a NULL never satisfies a comparison. To filter the <i>matching</i> without losing the unmatched rows, the predicate must move into the <code class=\"mm\">ON</code> clause.</p><p class=\"row\"><b>Takeaway.</b> ON decides matches, WHERE prunes the final rows — and that is how a left join silently becomes an inner join.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An outer join preserves one or both sides. <code class=\"mm\">LEFT</code> preserves the left input, <code class=\"mm\">RIGHT</code> preserves the right, <code class=\"mm\">FULL</code> preserves both. Swapping the operands therefore swaps which side is preserved, and the two results describe the same pairs. The <code class=\"mm\">ON</code> condition decides <i>matching</i>; the <code class=\"mm\">WHERE</code> clause is applied <i>after</i> the NULL extension, so a WHERE predicate can undo the preservation.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(D) swapping the operands of a left join turns it into the mirror-image right join with identical pairs. True.</li><li>(B) if the WHERE clause requires, say, <code class=\"mm\">e.marks &gt; 70</code>, the NULL-extended rows evaluate to UNKNOWN and are discarded, leaving exactly the inner-join rows. True — this is the classic \"outer join that is really an inner join\" bug.</li><li>(C) is the definition of a full outer join. True.</li><li>(A) false: a left row that fails the <code class=\"mm\">ON</code> condition is precisely the row that is kept, padded with NULLs.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (D), (B) and (C) are true; (A) is false.</span></p><p class=\"row\"><b>Common misconception.</b> Putting a right-table predicate in <code class=\"mm\">WHERE</code> and expecting NULL-padded rows to survive. They cannot: a NULL never satisfies a comparison. To filter the <i>matching</i> without losing the unmatched rows, the predicate must move into the <code class=\"mm\">ON</code> clause.</p><p class=\"row\"><b>Takeaway.</b> ON decides matches, WHERE prunes the final rows — and that is how a left join silently becomes an inner join.</p>"
   },
   {
    "id": "DB-U2-Q20",
@@ -2910,15 +2910,15 @@
    "date": "2026-10-26",
    "question": "Which statement about an SQL view is TRUE?",
    "options": [
-    "A view is a named query: it stores no rows of its own (unless it is a materialised view) and its rows are recomputed from the base tables when the view is queried.",
     "A view always stores a private copy of the rows it returns, refreshed on every insert into the base table.",
+    "A view is a named query: it stores no rows of its own (unless it is a materialised view) and its rows are recomputed from the base tables when the view is queried.",
     "A view must be defined over exactly one base table.",
     "Dropping a view deletes the rows of the underlying table."
    ],
    "answer": [
-    0
+    1
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (B)",
    "solution": {
     "concept": "In standard SQL a view is a <i>derived</i> table: the catalogue stores only the defining query. Every reference to the view expands to that query, so the view always reflects the current base tables. A <b>materialised</b> view is the exception — it does keep a stored copy and must be refreshed — but that is an optimisation feature, not what a plain <code class=\"mm\">CREATE VIEW</code> gives you.",
     "steps": [
@@ -2926,10 +2926,10 @@
      "Querying the view runs (or rewrites) the defining query against the base tables.",
      "Therefore the view is always consistent with the base data, with no refresh step."
     ],
-    "final": "Option (A).",
+    "final": "Option (B).",
     "trap": "Believing a view is a snapshot. Because it is recomputed, a view over <code class=\"mm\">student</code> immediately shows a newly inserted student — there is nothing to refresh."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In standard SQL a view is a <i>derived</i> table: the catalogue stores only the defining query. Every reference to the view expands to that query, so the view always reflects the current base tables. A <b>materialised</b> view is the exception — it does keep a stored copy and must be refreshed — but that is an optimisation feature, not what a plain <code class=\"mm\">CREATE VIEW</code> gives you.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The definition is stored as text; no tuples are copied.</li><li>Querying the view runs (or rewrites) the defining query against the base tables.</li><li>Therefore the view is always consistent with the base data, with no refresh step.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) describes a materialised view, and even then the refresh is explicit or scheduled, not automatic on every insert.</li><li>(C) is false: a view may join any number of tables, as the aggregate view in this unit does.</li><li>(D) is false: <code class=\"mm\">DROP VIEW</code> removes only the definition; the base tables and their rows are untouched.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing a view is a snapshot. Because it is recomputed, a view over <code class=\"mm\">student</code> immediately shows a newly inserted student — there is nothing to refresh.</p><p class=\"row\"><b>Takeaway.</b> A view is stored logic, not stored data.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In standard SQL a view is a <i>derived</i> table: the catalogue stores only the defining query. Every reference to the view expands to that query, so the view always reflects the current base tables. A <b>materialised</b> view is the exception — it does keep a stored copy and must be refreshed — but that is an optimisation feature, not what a plain <code class=\"mm\">CREATE VIEW</code> gives you.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The definition is stored as text; no tuples are copied.</li><li>Querying the view runs (or rewrites) the defining query against the base tables.</li><li>Therefore the view is always consistent with the base data, with no refresh step.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) describes a materialised view, and even then the refresh is explicit or scheduled, not automatic on every insert.</li><li>(C) is false: a view may join any number of tables, as the aggregate view in this unit does.</li><li>(D) is false: <code class=\"mm\">DROP VIEW</code> removes only the definition; the base tables and their rows are untouched.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing a view is a snapshot. Because it is recomputed, a view over <code class=\"mm\">student</code> immediately shows a newly inserted student — there is nothing to refresh.</p><p class=\"row\"><b>Takeaway.</b> A view is stored logic, not stored data.</p>"
   },
   {
    "id": "DB-U2-Q22",
@@ -2948,15 +2948,15 @@
    "date": "2026-10-26",
    "question": "Which statement about an SQL trigger is TRUE?",
    "options": [
-    "A trigger fires automatically when its specified event (such as an <code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code> or <code class=\"mm\">DELETE</code>) occurs; it cannot be invoked directly by a statement.",
-    "A trigger must be called explicitly, for example with <code class=\"mm\">EXECUTE TRIGGER</code>, after the statement it is meant to guard.",
     "A trigger fires only for <code class=\"mm\">SELECT</code> statements.",
+    "A trigger must be called explicitly, for example with <code class=\"mm\">EXECUTE TRIGGER</code>, after the statement it is meant to guard.",
+    "A trigger fires automatically when its specified event (such as an <code class=\"mm\">INSERT</code>, <code class=\"mm\">UPDATE</code> or <code class=\"mm\">DELETE</code>) occurs; it cannot be invoked directly by a statement.",
     "A table that has triggers may not also have constraints."
    ],
    "answer": [
-    0
+    2
    ],
-   "answer_display": "Option (A)",
+   "answer_display": "Option (C)",
    "solution": {
     "concept": "A trigger is an <b>event–condition–action</b> rule attached to a table or view. The database fires it as a side effect of the triggering statement; there is no SQL statement that calls a trigger by name. Triggers are declared <code class=\"mm\">BEFORE</code> or <code class=\"mm\">AFTER</code> the event, and <code class=\"mm\">FOR EACH ROW</code> or <code class=\"mm\">FOR EACH STATEMENT</code>.",
     "steps": [
@@ -2964,10 +2964,10 @@
      "The action is a block of SQL executed by the engine when the event occurs.",
      "No user statement names the trigger, so it cannot be called directly."
     ],
-    "final": "Option (A).",
+    "final": "Option (C).",
     "trap": "Thinking a trigger replaces a foreign key. Triggers can enforce rules that constraints cannot express, but they are procedural, harder to reason about, and a well-modelled schema uses constraints first."
    },
-   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A trigger is an <b>event–condition–action</b> rule attached to a table or view. The database fires it as a side effect of the triggering statement; there is no SQL statement that calls a trigger by name. Triggers are declared <code class=\"mm\">BEFORE</code> or <code class=\"mm\">AFTER</code> the event, and <code class=\"mm\">FOR EACH ROW</code> or <code class=\"mm\">FOR EACH STATEMENT</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The event is a DML change (in standard SQL), optionally restricted with <code class=\"mm\">WHEN</code> to specific columns.</li><li>The action is a block of SQL executed by the engine when the event occurs.</li><li>No user statement names the trigger, so it cannot be called directly.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) there is no such statement in standard SQL.</li><li>(C) triggers are defined on data-changing events; some systems add <code class=\"mm\">INSTEAD OF</code> triggers on views, but a plain <code class=\"mm\">SELECT</code> does not fire one.</li><li>(D) triggers and constraints are independent mechanisms and routinely coexist; constraints are usually preferred for declarative rules because they are cheaper.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking a trigger replaces a foreign key. Triggers can enforce rules that constraints cannot express, but they are procedural, harder to reason about, and a well-modelled schema uses constraints first.</p><p class=\"row\"><b>Takeaway.</b> Triggers are fired by the engine, never called by the user.</p>"
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A trigger is an <b>event–condition–action</b> rule attached to a table or view. The database fires it as a side effect of the triggering statement; there is no SQL statement that calls a trigger by name. Triggers are declared <code class=\"mm\">BEFORE</code> or <code class=\"mm\">AFTER</code> the event, and <code class=\"mm\">FOR EACH ROW</code> or <code class=\"mm\">FOR EACH STATEMENT</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The event is a DML change (in standard SQL), optionally restricted with <code class=\"mm\">WHEN</code> to specific columns.</li><li>The action is a block of SQL executed by the engine when the event occurs.</li><li>No user statement names the trigger, so it cannot be called directly.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) there is no such statement in standard SQL.</li><li>(A) triggers are defined on data-changing events; some systems add <code class=\"mm\">INSTEAD OF</code> triggers on views, but a plain <code class=\"mm\">SELECT</code> does not fire one.</li><li>(D) triggers and constraints are independent mechanisms and routinely coexist; constraints are usually preferred for declarative rules because they are cheaper.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking a trigger replaces a foreign key. Triggers can enforce rules that constraints cannot express, but they are procedural, harder to reason about, and a well-modelled schema uses constraints first.</p><p class=\"row\"><b>Takeaway.</b> Triggers are fired by the engine, never called by the user.</p>"
   },
   {
    "id": "DB-U2-Q23",
