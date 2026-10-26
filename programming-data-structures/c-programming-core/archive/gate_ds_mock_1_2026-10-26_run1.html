@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GATE CSE 2027 · Programming and Data Structures · Unit 1 — C Programming Foundations · Mock Test 2026-10-26 · Set 1</title>
+<style>
+:root{
+  --hdr:#286090; --hdr-d:#1f4e73; --hdr-l:#3a7bb0;
+  --ink:#12232e; --muted:#5b6b7a; --line:#d5dde5; --bg:#eef2f6; --card:#fff;
+  --green:#2e8b57; --green-d:#1e8449; --green-bg:#e9f7ef; --green-line:#b7e1c8;
+  --red:#e05a4f; --red-d:#b03a2e; --red-bg:#fdecea; --red-line:#f2b8b1;
+  --violet:#8e6bbf; --violet-d:#6c3483; --violet-bg:#f4ecf7; --violet-line:#dcc6e8;
+  --amber:#8a5a00; --amber-bg:#fff6e0; --amber-line:#f0dca8;
+  --grey:#d6d6d6; --blue:#1a5276; --teal:#0d6a63; --tealbg:#e7f5f3; --tealline:#a9d8d2;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%}
+a{color:var(--hdr);text-decoration:none}
+a:hover{text-decoration:underline}
+.mm{font-family:"Cambria Math","Latin Modern Math",Cambria,Georgia,"Times New Roman",serif;font-style:italic;font-size:1.03em;white-space:normal;overflow-wrap:break-word}
+code.mm{font-style:normal;background:#f4f7fa;border:1px solid #e3eaf1;border-radius:3px;padding:0 4px;white-space:normal}
+header.top{background:linear-gradient(180deg,var(--hdr-l),var(--hdr));color:#fff;padding:9px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:80;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+header.top .brand{font-weight:700;font-size:15.5px;letter-spacing:.3px}
+header.top .sub{font-size:12.5px;opacity:.92}
+header.top .spacer{flex:1}
+.timer{background:#fff;color:var(--hdr);border-radius:6px;padding:5px 12px;font-weight:700;font-variant-numeric:tabular-nums;font-size:16px;display:flex;align-items:center;gap:8px;min-width:140px;justify-content:center}
+.timer .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;opacity:.72}
+.timer.low{background:#fdecea;color:#b03a2e;animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.candidate{font-size:12px;line-height:1.32;text-align:right}
+.candidate b{display:block;font-size:13.5px}
+.tabs{display:flex;gap:4px;background:#dbe3ea;padding:0 16px;border-bottom:1px solid var(--line);flex-wrap:wrap;position:sticky;top:52px;z-index:70}
+.tabs button{background:transparent;border:1px solid transparent;border-bottom:none;padding:9px 15px;font-size:13.5px;font-weight:600;color:#3d4d5c;cursor:pointer;border-radius:6px 6px 0 0;font-family:inherit}
+.tabs button.active{background:var(--bg);border-color:var(--line);color:var(--hdr)}
+.tabs button:disabled{opacity:.45;cursor:not-allowed}
+.wrap{max-width:1200px;margin:0 auto;padding:14px 16px 70px}
+.meta-strip{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--muted)}
+.chip b{color:var(--ink)}
+.chip.amber{background:var(--amber-bg);border-color:var(--amber-line);color:var(--amber)}
+.layout{display:grid;grid-template-columns:1fr 300px;gap:14px;align-items:start}
+@media(max-width:980px){.layout{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 3px rgba(18,35,46,.06)}
+.qhead{display:flex;align-items:center;gap:9px;padding:10px 15px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:#f8fafc;border-radius:8px 8px 0 0}
+.qno{font-weight:700;font-size:15px}
+.tag{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:4px;border:1px solid}
+.tag.mcq{color:var(--blue);background:#eaf2f8;border-color:#b9d3e4}
+.tag.msq{color:#7d3c98;background:var(--violet-bg);border-color:var(--violet-line)}
+.tag.nat{color:var(--teal);background:var(--tealbg);border-color:var(--tealline)}
+.tag.easy{color:var(--green-d);background:var(--green-bg);border-color:var(--green-line)}
+.tag.medium{color:var(--amber);background:var(--amber-bg);border-color:var(--amber-line)}
+.tag.hard{color:var(--red-d);background:var(--red-bg);border-color:var(--red-line)}
+.tag.src{color:#4a5568;background:#eef1f4;border-color:#d5dde5;text-transform:none;letter-spacing:0;font-weight:600}
+.qbody{padding:15px 17px 17px}
+.qtext{font-size:15.5px;line-height:1.7;margin:0 0 13px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:11px;align-items:flex-start;border:1px solid var(--line);border-radius:6px;padding:9px 13px;cursor:pointer;transition:.12s;background:#fff}
+.opt:hover{border-color:#9fb8cc;background:#f9fbfd}
+.opt.sel{border-color:var(--hdr);background:#eaf4fb;box-shadow:inset 0 0 0 1px var(--hdr)}
+.opt input{margin:3px 0 0;accent-color:var(--hdr);width:16px;height:16px;flex:none}
+.opt .lbl{font-weight:700;color:var(--hdr);flex:none;width:20px}
+.opt .txt{flex:1}
+.opt.correct{border-color:var(--green-d);background:var(--green-bg)}
+.opt.wrongpick{border-color:var(--red-d);background:var(--red-bg)}
+.opt .mark{margin-left:auto;font-weight:700;font-size:11.5px;white-space:nowrap;color:var(--muted)}
+.natrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.natrow input[type=text]{font-family:"Consolas","DejaVu Sans Mono",monospace;font-size:16px;padding:8px 12px;width:220px;border:1px solid #9fb8cc;border-radius:6px;background:#fff}
+.natrow input[type=text]:focus{outline:2px solid var(--hdr);outline-offset:1px}
+.hintline{font-size:12.5px;color:var(--muted);margin-top:8px}
+.qfoot{display:flex;gap:8px;padding:11px 15px;border-top:1px solid var(--line);flex-wrap:wrap;background:#f8fafc;border-radius:0 0 8px 8px}
+button.btn{font-family:inherit;font-size:13px;font-weight:600;padding:7px 14px;border-radius:5px;border:1px solid #b9c6d2;background:#fff;color:var(--ink);cursor:pointer}
+button.btn:hover{background:#f0f4f8}
+button.btn.primary{background:var(--hdr);border-color:var(--hdr);color:#fff}
+button.btn.primary:hover{background:var(--hdr-d)}
+button.btn.warn{background:#fff;border-color:#d9a3a3;color:var(--red-d)}
+button.btn.submit{background:#c0392b;border-color:#c0392b;color:#fff}
+button.btn.submit:hover{background:#a5342a}
+button.btn:disabled{opacity:.5;cursor:not-allowed}
+button.btn.sm{font-size:12px;padding:5px 10px}
+aside.side{position:sticky;top:112px}
+.palhead{padding:9px 14px;border-bottom:1px solid var(--line);font-weight:700;font-size:13px;background:#f8fafc;border-radius:8px 8px 0 0;display:flex;justify-content:space-between}
+.palbody{padding:11px 13px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pal button{aspect-ratio:1/1;border-radius:5px;border:1px solid #b9c6d2;background:var(--grey);color:#333;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;position:relative;padding:0}
+.pal button.na{background:var(--red);color:#fff;border-color:#c9503f}
+.pal button.ans{background:var(--green);color:#fff;border-color:#257048}
+.pal button.mrk{background:var(--violet);color:#fff;border-color:#7a5aa8}
+.pal button.amr{background:var(--violet);color:#fff;border-color:#7a5aa8}
+.pal button.amr:after{content:"";position:absolute;right:3px;bottom:3px;width:7px;height:7px;border-radius:50%;background:#39d353;border:1px solid #fff}
+.pal button.cur{outline:2px solid #12232e;outline-offset:1px}
+.pal button.ok{background:var(--green-d);color:#fff;border-color:#145a32}
+.pal button.bad{background:var(--red-d);color:#fff;border-color:#922b21}
+.pal button.skip{background:var(--grey);color:#666;border-color:#b9c6d2}
+.legend{margin-top:12px;font-size:11.8px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.legend span.k{display:inline-block;width:13px;height:13px;border-radius:3px;margin-right:7px;vertical-align:-2px;border:1px solid #b9c6b2;position:relative}
+.legend .k.nv{background:var(--grey);border-color:#b9c6d2}
+.legend .k.na{background:var(--red);border-color:#c9503f}
+.legend .k.ans{background:var(--green);border-color:#257048}
+.legend .k.mrk{background:var(--violet);border-color:#7a5aa8}
+.legend .k.amr{background:var(--violet);border-color:#7a5aa8}
+.legend .k.amr:after{content:"";position:absolute;right:1px;bottom:1px;width:5px;height:5px;border-radius:50%;background:#39d353}
+.sidefoot{padding:11px 13px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.sol{border-top:1px dashed #c7d3de;background:#fbfdfe;padding:14px 17px;border-radius:0 0 8px 8px}
+.sol h4{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--hdr)}
+.sol .row{margin:0 0 9px;font-size:14.2px}
+.sol .row b{color:var(--ink)}
+.sol ol{margin:6px 0 9px 20px;padding:0}
+.sol ol li{margin-bottom:5px;font-size:14.2px}
+.sol ul{margin:6px 0 9px 20px;padding:0}
+.sol ul li{margin-bottom:4px;font-size:14.2px}
+.sol .ansline{display:inline-block;background:var(--green-bg);border:1px solid var(--green-line);color:var(--green-d);font-weight:700;padding:3px 10px;border-radius:5px;font-size:14px}
+.banner{border-radius:8px;padding:12px 15px;margin-bottom:12px;font-size:14px;border:1px solid}
+.banner.info{background:#eaf4fb;border-color:#b9d3e4;color:#1a4b6e}
+.banner.warn{background:var(--amber-bg);border-color:var(--amber-line);color:#6b4700}
+.banner.ok{background:var(--green-bg);border-color:var(--green-line);color:#145a32}
+.scorebox{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:6px 0 4px}
+.scorebox .cell{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;text-align:center}
+.scorebox .cell .v{font-size:21px;font-weight:700;color:var(--hdr)}
+.scorebox .cell .k{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+h2.sec{font-size:17px;margin:22px 0 10px;color:var(--hdr)}
+h3.sec{font-size:14.5px;margin:16px 0 8px;color:var(--ink)}
+details.unit{border:1px solid var(--line);border-radius:8px;background:#fff;margin-bottom:10px;overflow:hidden}
+details.unit>summary{cursor:pointer;padding:11px 15px;font-weight:700;font-size:14.5px;background:#f8fafc;list-style:none;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+details.unit>summary::-webkit-details-marker{display:none}
+details.unit>summary:before{content:"\25B8";color:var(--hdr);font-size:12px;transition:.15s}
+details.unit[open]>summary:before{transform:rotate(90deg)}
+details.sub{border:1px solid #e4eaf0;border-radius:7px;margin:10px 14px;background:#fdfefe}
+details.sub>summary{cursor:pointer;padding:9px 13px;font-weight:600;font-size:13.5px;list-style:none;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+details.sub>summary::-webkit-details-marker{display:none}
+details.sub>summary:before{content:"\25B8";color:var(--muted);font-size:11px}
+details.sub[open]>summary:before{transform:rotate(90deg)}
+.qbank{padding:6px 13px 13px}
+.hcard{border:1px solid var(--line);border-radius:7px;background:#fff;margin:10px 0;padding:0;overflow:hidden}
+.hcard .hh{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#f8fafc;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.hcard .hh .id{font-weight:700;color:var(--ink);font-size:12.5px}
+.hcard .hb{padding:11px 13px}
+.hcard .hq{font-size:14.3px;line-height:1.65;margin:0 0 8px}
+.hcard ol.ho{margin:0 0 4px 20px;padding:0;font-size:14px}
+.hcard ol.ho li{margin-bottom:4px}
+details.rev>summary{cursor:pointer;color:var(--hdr);font-weight:600;font-size:13px;padding:6px 0;list-style:none}
+details.rev>summary::-webkit-details-marker{display:none}
+details.rev>summary:before{content:"\25B8 ";color:var(--hdr)}
+details.rev[open]>summary:before{content:"\25BE "}
+.count{background:#eef1f4;border:1px solid #d5dde5;border-radius:12px;padding:1px 8px;font-size:11.5px;color:var(--muted);font-weight:600}
+.count.zero{opacity:.55}
+.empty{color:var(--muted);font-size:13px;padding:8px 14px;font-style:italic}
+footer.foot{max-width:1200px;margin:0 auto;padding:18px 16px 40px;color:var(--muted);font-size:12.5px;line-height:1.6}
+footer.foot p{margin:6px 0}
+.srcbox{background:#fff;border:1px solid var(--line);border-radius:8px;padding:13px 16px;font-size:13.5px;margin-bottom:12px}
+.srcbox b{color:var(--hdr)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.testcard{background:#fff;border:1px solid var(--line);border-radius:9px;padding:14px 16px;box-shadow:0 1px 3px rgba(18,35,46,.06)}
+.testcard h3{margin:0 0 4px;font-size:16px;color:var(--hdr)}
+.testcard .dt{font-size:12.5px;color:var(--muted);margin-bottom:9px}
+.testcard .row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.pill{font-size:11.5px;padding:2px 9px;border-radius:11px;border:1px solid var(--line);background:#f8fafc;color:var(--muted)}
+.pill.e{background:var(--green-bg);border-color:var(--green-line);color:var(--green-d)}
+.pill.m{background:var(--amber-bg);border-color:var(--amber-line);color:var(--amber)}
+.pill.h{background:var(--red-bg);border-color:var(--red-line);color:var(--red-d)}
+.pill.u{background:#eaf2f8;border-color:#b9d3e4;color:var(--blue)}
+.hidden{display:none !important}
+@media(max-width:720px){header.top{position:static}.tabs{position:static}.qhead .tag{font-size:10px}.wrap{padding:10px 10px 50px}.qbody{padding:12px 12px 14px}.qtext{font-size:14.8px}.qfoot{gap:6px}button.btn{font-size:12.5px;padding:6px 10px}.natrow input[type=text]{width:100%}aside.side{position:static}}
+@media print{header.top,.tabs,aside.side,.qfoot{display:none}}
+</style><body>
+<header class="top">
+<div class="brand">GATE CSE 2027 · Programming and Data Structures</div>
+<div class="sub">Unit 1 — C Programming Foundations · Mock Test 2026-10-26 · Set 1 of 2</div>
+<div class="spacer"></div>
+<div class="timer" id="timerBox"><span class="lbl">Time left</span><span id="timerVal">60:00</span></div>
+<div class="candidate"><b>SRIHARI V B</b>Candidate ID: GATE2027-DS-01</div>
+</header>
+<nav class="tabs">
+<button class="active" data-view="test">Mock Test (25 questions)</button>
+<button data-view="key" disabled="" id="keyTab"><span id="tabKeyLabel">Answer Key &amp; Solutions (locked)</span></button>
+<button data-view="bank">Question Bank (0 solved)</button>
+<button data-view="about">About &amp; Concept Map</button>
+</nav>
+<div class="wrap">
+<div id="view-test">
+<div class="meta-strip">
+<span class="chip">Date <b>2026-10-26</b></span>
+<span class="chip">Unit <b>1 — C Programming Foundations</b></span>
+<span class="chip">Set <b>Set 1 of 2</b></span>
+<span class="chip">Questions <b>25</b></span>
+<span class="chip">15 MCQ · 5 MSQ · 5 NAT</span>
+<span class="chip amber">Easy 10 · Medium 10 · Hard 5</span>
+<span class="chip">Duration <b>60 min</b> · <b>35 marks</b></span>
+</div>
+<div class="banner warn"><b>Mock Test Mode.</b> No answer, option mark, hint or explanation is shown until you press
+  <b>Submit</b>. MCQ and MSQ answers are radio/checkbox selections; NAT answers are typed numeric values. There is no
+  negative marking in this practice test: MCQ carries 1 mark, MSQ and NAT carry 2 marks each, and an MSQ earns marks only
+  if the exact set of correct options is selected.</div>
+<div class="card hidden" id="summary" style="padding:14px 16px;margin-bottom:12px">
+<h2 class="sec" style="margin-top:0">Result summary</h2>
+<div class="scorebox">
+<div class="cell"><div class="v" id="sumScore">—</div><div class="k">Score</div></div>
+<div class="cell"><div class="v" id="sumRight">—</div><div class="k">Correct</div></div>
+<div class="cell"><div class="v" id="sumWrong">—</div><div class="k">Incorrect</div></div>
+<div class="cell"><div class="v" id="sumSkip">—</div><div class="k">Unattempted</div></div>
+</div>
+<p style="margin:10px 0 0;font-size:13.5px;color:#5b6b7a">Every question now shows its marked options and full
+    solution below the question text. The <b>Answer Key &amp; Solutions</b> tab is unlocked as well.</p>
+</div>
+<div class="layout">
+<div id="qhost"><div class="qcard hidden" data-n="1" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 1</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">data-types-operators</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">Compiled with a C99-or-later compiler on a machine where <code class="mm">int</code> is 32 bits, what does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf(&quot;%d %d\n&quot;, 7 / 2 * 2, -7 / 2);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="1" data-typ="MCQ" name="q1" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">6 -3</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="1" data-typ="MCQ" name="q1" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">7 -3</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="1" data-typ="MCQ" name="q1" type="radio" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">6 -4</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="1" data-typ="MCQ" name="q1" type="radio" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">7 -4</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="2" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 2</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">data-types-operators</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">On an implementation where <code class="mm">sizeof(int)</code> is 4, what is the value of <code class="mm">sizeof('A')</code> in C?</p><div class="opts"><label class="opt" data-i="0"><input data-n="2" data-typ="MCQ" name="q2" type="radio" value="0"/><span class="lbl">A</span><span class="txt">1</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="2" data-typ="MCQ" name="q2" type="radio" value="1"/><span class="lbl">B</span><span class="txt">2</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="2" data-typ="MCQ" name="q2" type="radio" value="2"/><span class="lbl">C</span><span class="txt">4</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="2" data-typ="MCQ" name="q2" type="radio" value="3"/><span class="lbl">D</span><span class="txt">It depends on the character encoding used by the compiler</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="3" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 3</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">data-types-operators</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 6, b = 3;
+    printf(&quot;%d\n&quot;, a ^ b | a &amp; b);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="3" data-typ="MCQ" name="q3" type="radio" value="0"/><span class="lbl">A</span><span class="txt">7</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="3" data-typ="MCQ" name="q3" type="radio" value="1"/><span class="lbl">B</span><span class="txt">5</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="3" data-typ="MCQ" name="q3" type="radio" value="2"/><span class="lbl">C</span><span class="txt">2</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="3" data-typ="MCQ" name="q3" type="radio" value="3"/><span class="lbl">D</span><span class="txt">1</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="4" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 4</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">data-types-operators</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print, assuming <code class="mm">CHAR_BIT == 8</code>?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    unsigned char c = 250;
+    c = c + 10;
+    printf(&quot;%u\n&quot;, c);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="4" data-typ="MCQ" name="q4" type="radio" value="0"/><span class="lbl">A</span><span class="txt">260</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="4" data-typ="MCQ" name="q4" type="radio" value="1"/><span class="lbl">B</span><span class="txt">4</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="4" data-typ="MCQ" name="q4" type="radio" value="2"/><span class="lbl">C</span><span class="txt">0</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="4" data-typ="MCQ" name="q4" type="radio" value="3"/><span class="lbl">D</span><span class="txt">10</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="5" data-type="MSQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 5</span><span class="tag msq">MSQ</span><span class="tag medium">medium</span><span class="tag src">data-types-operators</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">Which of the following statements about the standard C integer types are TRUE?</p><div class="opts"><label class="opt" data-i="0"><input data-n="5" data-typ="MSQ" name="q5" type="checkbox" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">sizeof(short) &lt;= sizeof(int)</code> on every conforming implementation</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="5" data-typ="MSQ" name="q5" type="checkbox" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">sizeof(char)</code> is 1 on every conforming implementation</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="5" data-typ="MSQ" name="q5" type="checkbox" value="2"/><span class="lbl">C</span><span class="txt">Signed integer overflow is defined to wrap around, exactly as it does for unsigned types</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="5" data-typ="MSQ" name="q5" type="checkbox" value="3"/><span class="lbl">D</span><span class="txt">Plain <code class="mm">char</code> is signed on every conforming implementation</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="6" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 6</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">data-types-operators</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x, y = 2;
+    x = (y += 3, y * 2);
+    printf(&quot;%d\n&quot;, x);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="6" data-typ="MCQ" name="q6" type="radio" value="0"/><span class="lbl">A</span><span class="txt">5</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="6" data-typ="MCQ" name="q6" type="radio" value="1"/><span class="lbl">B</span><span class="txt">10</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="6" data-typ="MCQ" name="q6" type="radio" value="2"/><span class="lbl">C</span><span class="txt">8</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="6" data-typ="MCQ" name="q6" type="radio" value="3"/><span class="lbl">D</span><span class="txt">2</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="7" data-type="NAT" data-difficulty="hard" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="data-types-operators" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 7</span><span class="tag nat">NAT</span><span class="tag hard">hard</span><span class="tag src">data-types-operators</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    unsigned char c = 0xF0;
+    int r = c &lt;&lt; 4;
+    printf(&quot;%d\n&quot;, r);
+    return 0;
+}</div><div class="natrow"><label style="font-size:13.5px;color:#5b6b7a">Your answer:</label><input aria-label="Numerical answer for question 7" autocomplete="off" class="natinput" data-n="7" inputmode="decimal" placeholder="numeric value" type="text"/></div><div class="hintline">Answer format: a single integer.</div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="8" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 8</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">control-structures</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print? (It compiles; the compiler only warns.)</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 0;
+    if (x = 0) printf(&quot;A\n&quot;);
+    else       printf(&quot;B\n&quot;);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="8" data-typ="MCQ" name="q8" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">A</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="8" data-typ="MCQ" name="q8" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">B</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="8" data-typ="MCQ" name="q8" type="radio" value="2"/><span class="lbl">C</span><span class="txt">Nothing is printed</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="8" data-typ="MCQ" name="q8" type="radio" value="3"/><span class="lbl">D</span><span class="txt">It does not compile</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="9" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 9</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">control-structures</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i, j;
+    for (i = 0, j = 10; i &lt; j; i++, j--)
+        ;
+    printf(&quot;%d %d\n&quot;, i, j);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="9" data-typ="MCQ" name="q9" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">4 6</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="9" data-typ="MCQ" name="q9" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">5 5</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="9" data-typ="MCQ" name="q9" type="radio" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">6 4</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="9" data-typ="MCQ" name="q9" type="radio" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">10 0</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="10" data-type="NAT" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 10</span><span class="tag nat">NAT</span><span class="tag easy">easy</span><span class="tag src">control-structures</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int c = 0;
+    for (int i = 0; i &lt; 5; i++)
+        for (int j = i; j &lt; 5; j++)
+            c++;
+    printf(&quot;%d\n&quot;, c);
+    return 0;
+}</div><div class="natrow"><label style="font-size:13.5px;color:#5b6b7a">Your answer:</label><input aria-label="Numerical answer for question 10" autocomplete="off" class="natinput" data-n="10" inputmode="decimal" placeholder="numeric value" type="text"/></div><div class="hintline">Answer format: a single integer.</div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="11" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 11</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">control-structures</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 2;
+    switch (x) {
+        case 1: printf(&quot;one&quot;);
+        case 2: printf(&quot;two&quot;);
+        case 3: printf(&quot;three&quot;); break;
+        default: printf(&quot;other&quot;);
+    }
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="11" data-typ="MCQ" name="q11" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">two</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="11" data-typ="MCQ" name="q11" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">twothree</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="11" data-typ="MCQ" name="q11" type="radio" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">onetwothree</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="11" data-typ="MCQ" name="q11" type="radio" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">twoother</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="12" data-type="MSQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 12</span><span class="tag msq">MSQ</span><span class="tag medium">medium</span><span class="tag src">control-structures</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">On a typical 32-bit implementation, which of these loops TERMINATE?</p><div class="opts"><label class="opt" data-i="0"><input data-n="12" data-typ="MSQ" name="q12" type="checkbox" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">for (unsigned int i = 10; i &gt;= 0; i--) { }</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="12" data-typ="MSQ" name="q12" type="checkbox" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">int i = 0; while (i &lt; 5) i += 2;</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="12" data-typ="MSQ" name="q12" type="checkbox" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">int i = 0; do { i++; } while (i &lt; 0);</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="12" data-typ="MSQ" name="q12" type="checkbox" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">for (int i = 0; i != 10; i += 3) { }</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="13" data-type="MCQ" data-difficulty="hard" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="control-structures" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 13</span><span class="tag mcq">MCQ</span><span class="tag hard">hard</span><span class="tag src">control-structures</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int s = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        switch (i) {
+            case 0: continue;
+            case 1: s += 1;
+            case 2: s += 2; break;
+            case 3: s += 4;
+            default: s += 8;
+        }
+        s += 100;
+    }
+    printf(&quot;%d\n&quot;, s);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="13" data-typ="MCQ" name="q13" type="radio" value="0"/><span class="lbl">A</span><span class="txt">425</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="13" data-typ="MCQ" name="q13" type="radio" value="1"/><span class="lbl">B</span><span class="txt">325</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="13" data-typ="MCQ" name="q13" type="radio" value="2"/><span class="lbl">C</span><span class="txt">417</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="13" data-typ="MCQ" name="q13" type="radio" value="3"/><span class="lbl">D</span><span class="txt">405</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="14" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 14</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+void swap(int a, int b) {
+    int t = a;
+    a = b;
+    b = t;
+}
+
+int main(void) {
+    int x = 1, y = 2;
+    swap(x, y);
+    printf(&quot;%d %d\n&quot;, x, y);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="14" data-typ="MCQ" name="q14" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">1 2</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="14" data-typ="MCQ" name="q14" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">2 1</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="14" data-typ="MCQ" name="q14" type="radio" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">2 2</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="14" data-typ="MCQ" name="q14" type="radio" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">1 1</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="15" data-type="NAT" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 15</span><span class="tag nat">NAT</span><span class="tag easy">easy</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int sq(int x) { return x * x; }
+
+int main(void) {
+    int s = 0;
+    for (int i = 1; i &lt;= 4; i++)
+        s += sq(i);
+    printf(&quot;%d\n&quot;, s);
+    return 0;
+}</div><div class="natrow"><label style="font-size:13.5px;color:#5b6b7a">Your answer:</label><input aria-label="Numerical answer for question 15" autocomplete="off" class="natinput" data-n="15" inputmode="decimal" placeholder="numeric value" type="text"/></div><div class="hintline">Answer format: a single integer.</div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="16" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 16</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int f(void) {
+    static int c = 0;
+    c++;
+    return c;
+}
+
+int main(void) {
+    f();
+    f();
+    printf(&quot;%d\n&quot;, f());
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="16" data-typ="MCQ" name="q16" type="radio" value="0"/><span class="lbl">A</span><span class="txt">1</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="16" data-typ="MCQ" name="q16" type="radio" value="1"/><span class="lbl">B</span><span class="txt">2</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="16" data-typ="MCQ" name="q16" type="radio" value="2"/><span class="lbl">C</span><span class="txt">3</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="16" data-typ="MCQ" name="q16" type="radio" value="3"/><span class="lbl">D</span><span class="txt">0</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="17" data-type="MSQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 17</span><span class="tag msq">MSQ</span><span class="tag medium">medium</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">An array declared as <code class="mm">int a[10]</code> is passed to a function declared as <code class="mm">void g(int a[])</code> and called as <code class="mm">g(a)</code>. Which statements are TRUE?</p><div class="opts"><label class="opt" data-i="0"><input data-n="17" data-typ="MSQ" name="q17" type="checkbox" value="0"/><span class="lbl">A</span><span class="txt">Inside <code class="mm">g</code> the parameter is a pointer, so <code class="mm">sizeof a</code> gives the size of a pointer, not 40</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="17" data-typ="MSQ" name="q17" type="checkbox" value="1"/><span class="lbl">B</span><span class="txt">The call copies all ten elements into the activation record of <code class="mm">g</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="17" data-typ="MSQ" name="q17" type="checkbox" value="2"/><span class="lbl">C</span><span class="txt">An assignment to <code class="mm">a[i]</code> inside <code class="mm">g</code> is visible to the caller</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="17" data-typ="MSQ" name="q17" type="checkbox" value="3"/><span class="lbl">D</span><span class="txt">The number of elements cannot be recovered from the parameter alone</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="18" data-type="MCQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 18</span><span class="tag mcq">MCQ</span><span class="tag medium">medium</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+void inc(int *p)  { *p = *p + 1; }
+void bump(int p)  { p = p + 1; }
+
+int main(void) {
+    int a = 5;
+    inc(&amp;a);
+    bump(a);
+    printf(&quot;%d\n&quot;, a);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="18" data-typ="MCQ" name="q18" type="radio" value="0"/><span class="lbl">A</span><span class="txt">5</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="18" data-typ="MCQ" name="q18" type="radio" value="1"/><span class="lbl">B</span><span class="txt">6</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="18" data-typ="MCQ" name="q18" type="radio" value="2"/><span class="lbl">C</span><span class="txt">7</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="18" data-typ="MCQ" name="q18" type="radio" value="3"/><span class="lbl">D</span><span class="txt">8</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="19" data-type="NAT" data-difficulty="hard" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="functions-and-parameter-passing" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 19</span><span class="tag nat">NAT</span><span class="tag hard">hard</span><span class="tag src">functions-and-parameter-passing</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int f(int n) {
+    static int s = 0;
+    s = s + n;
+    return s;
+}
+
+int main(void) {
+    int i, t = 0;
+    for (i = 1; i &lt;= 4; i++)
+        t += f(i);
+    printf(&quot;%d\n&quot;, t);
+    return 0;
+}</div><div class="natrow"><label style="font-size:13.5px;color:#5b6b7a">Your answer:</label><input aria-label="Numerical answer for question 19" autocomplete="off" class="natinput" data-n="19" inputmode="decimal" placeholder="numeric value" type="text"/></div><div class="hintline">Answer format: a single integer.</div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="20" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 20</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">recursion-stack-execution</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int f(int n) {
+    if (n == 0) return 0;
+    return n + f(n - 1);
+}
+
+int main(void) {
+    printf(&quot;%d\n&quot;, f(4));
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="20" data-typ="MCQ" name="q20" type="radio" value="0"/><span class="lbl">A</span><span class="txt">4</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="20" data-typ="MCQ" name="q20" type="radio" value="1"/><span class="lbl">B</span><span class="txt">10</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="20" data-typ="MCQ" name="q20" type="radio" value="2"/><span class="lbl">C</span><span class="txt">24</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="20" data-typ="MCQ" name="q20" type="radio" value="3"/><span class="lbl">D</span><span class="txt">6</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="21" data-type="MSQ" data-difficulty="medium" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 21</span><span class="tag msq">MSQ</span><span class="tag medium">medium</span><span class="tag src">recursion-stack-execution</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">The program below prints a sequence of digits. Which statements about that output are TRUE?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+void f(int n) {
+    if (n &gt; 0) {
+        printf(&quot;%d&quot;, n % 2);
+        f(n / 2);
+    }
+}
+
+int main(void) {
+    f(13);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="21" data-typ="MSQ" name="q21" type="checkbox" value="0"/><span class="lbl">A</span><span class="txt">The digits are printed in the order 1, 0, 1, 1</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="21" data-typ="MSQ" name="q21" type="checkbox" value="1"/><span class="lbl">B</span><span class="txt">The first digit printed is the least significant bit of 13</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="21" data-typ="MSQ" name="q21" type="checkbox" value="2"/><span class="lbl">C</span><span class="txt">The program prints the binary numeral of 13 in the usual most-significant-first order</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="21" data-typ="MSQ" name="q21" type="checkbox" value="3"/><span class="lbl">D</span><span class="txt">The last digit printed is the most significant bit of 13</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="22" data-type="MCQ" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 22</span><span class="tag mcq">MCQ</span><span class="tag easy">easy</span><span class="tag src">recursion-stack-execution</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+void f(int n) {
+    if (n == 0) return;
+    f(n - 1);
+    printf(&quot;%d&quot;, n);
+}
+
+int main(void) {
+    f(3);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="22" data-typ="MCQ" name="q22" type="radio" value="0"/><span class="lbl">A</span><span class="txt"><code class="mm">321</code></span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="22" data-typ="MCQ" name="q22" type="radio" value="1"/><span class="lbl">B</span><span class="txt"><code class="mm">123</code></span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="22" data-typ="MCQ" name="q22" type="radio" value="2"/><span class="lbl">C</span><span class="txt"><code class="mm">0123</code></span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="22" data-typ="MCQ" name="q22" type="radio" value="3"/><span class="lbl">D</span><span class="txt"><code class="mm">3</code></span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="23" data-type="MSQ" data-difficulty="hard" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 23</span><span class="tag msq">MSQ</span><span class="tag hard">hard</span><span class="tag src">recursion-stack-execution</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">Which statements about recursion and the run-time stack in C are TRUE?</p><div class="opts"><label class="opt" data-i="0"><input data-n="23" data-typ="MSQ" name="q23" type="checkbox" value="0"/><span class="lbl">A</span><span class="txt">Any recursive function can be rewritten iteratively with an explicit stack that mimics the activation records</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="23" data-typ="MSQ" name="q23" type="checkbox" value="1"/><span class="lbl">B</span><span class="txt">A tail-recursive call can reuse the caller's activation record when the compiler performs tail-call optimisation</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="23" data-typ="MSQ" name="q23" type="checkbox" value="2"/><span class="lbl">C</span><span class="txt">The C standard guarantees that recursion depth is limited only by available memory</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="23" data-typ="MSQ" name="q23" type="checkbox" value="3"/><span class="lbl">D</span><span class="txt">Each active call has its own copy of the parameters and of the automatic local variables</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="24" data-type="NAT" data-difficulty="easy" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="ORIGINAL_SYNTHESIS"><div class="card"><div class="qhead"><span class="qno">Question 24</span><span class="tag nat">NAT</span><span class="tag easy">easy</span><span class="tag src">recursion-stack-execution</span><span class="tag src">original synthesis</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 2</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int f(int n) {
+    return (n &lt; 2) ? n : f(n - 1) + f(n - 2);
+}
+
+int main(void) {
+    printf(&quot;%d\n&quot;, f(6));
+    return 0;
+}</div><div class="natrow"><label style="font-size:13.5px;color:#5b6b7a">Your answer:</label><input aria-label="Numerical answer for question 24" autocomplete="off" class="natinput" data-n="24" inputmode="decimal" placeholder="numeric value" type="text"/></div><div class="hintline">Answer format: a single integer.</div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div><div class="qcard hidden" data-n="25" data-type="MCQ" data-difficulty="hard" data-subject="programming-data-structures" data-unit="c-programming-core" data-unit-number="1" data-subtopic="recursion-stack-execution" data-source="STANDARD_TEXTBOOK"><div class="card"><div class="qhead"><span class="qno">Question 25</span><span class="tag mcq">MCQ</span><span class="tag hard">hard</span><span class="tag src">recursion-stack-execution</span><span class="tag src">standard textbook</span><span style="margin-left:auto;font-size:12.5px;color:#5b6b7a">Marks: 1</span></div><div class="qbody"><p class="qtext">What does this program print?</p><div style="font-family:Consolas,'DejaVu Sans Mono',monospace;font-size:13.4px;line-height:1.55;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 12px;white-space:pre;overflow-x:auto">#include &lt;stdio.h&gt;
+
+int f(int n, int *c) {
+    (*c)++;
+    if (n &lt;= 1) return 1;
+    return f(n - 1, c) + f(n - 2, c);
+}
+
+int main(void) {
+    int c = 0;
+    f(5, &amp;c);
+    printf(&quot;%d\n&quot;, c);
+    return 0;
+}</div><div class="opts"><label class="opt" data-i="0"><input data-n="25" data-typ="MCQ" name="q25" type="radio" value="0"/><span class="lbl">A</span><span class="txt">9</span><span class="mark"></span></label><label class="opt" data-i="1"><input data-n="25" data-typ="MCQ" name="q25" type="radio" value="1"/><span class="lbl">B</span><span class="txt">15</span><span class="mark"></span></label><label class="opt" data-i="2"><input data-n="25" data-typ="MCQ" name="q25" type="radio" value="2"/><span class="lbl">C</span><span class="txt">25</span><span class="mark"></span></label><label class="opt" data-i="3"><input data-n="25" data-typ="MCQ" name="q25" type="radio" value="3"/><span class="lbl">D</span><span class="txt">8</span><span class="mark"></span></label></div></div><div class="qfoot"><button class="btn warn sm" id="btnMark">Mark for review</button><button class="btn sm" id="btnClear">Clear response</button><span style="flex:1"></span><button class="btn sm" id="btnPrev">&larr; Previous</button><button class="btn primary sm" id="btnNext">Save &amp; Next &rarr;</button></div><div class="sol hidden"></div></div></div></div>
+<aside class="side">
+<div class="card">
+<div class="palhead"><span>Question palette</span><span class="hint" id="palHint"><span id="cntAns">0 answered</span> · <span id="cntLeft">25 left</span></span></div>
+<div class="palbody">
+<div class="pal"><button aria-label="Go to question 1" data-n="1" type="button">1</button><button aria-label="Go to question 2" data-n="2" type="button">2</button><button aria-label="Go to question 3" data-n="3" type="button">3</button><button aria-label="Go to question 4" data-n="4" type="button">4</button><button aria-label="Go to question 5" data-n="5" type="button">5</button><button aria-label="Go to question 6" data-n="6" type="button">6</button><button aria-label="Go to question 7" data-n="7" type="button">7</button><button aria-label="Go to question 8" data-n="8" type="button">8</button><button aria-label="Go to question 9" data-n="9" type="button">9</button><button aria-label="Go to question 10" data-n="10" type="button">10</button><button aria-label="Go to question 11" data-n="11" type="button">11</button><button aria-label="Go to question 12" data-n="12" type="button">12</button><button aria-label="Go to question 13" data-n="13" type="button">13</button><button aria-label="Go to question 14" data-n="14" type="button">14</button><button aria-label="Go to question 15" data-n="15" type="button">15</button><button aria-label="Go to question 16" data-n="16" type="button">16</button><button aria-label="Go to question 17" data-n="17" type="button">17</button><button aria-label="Go to question 18" data-n="18" type="button">18</button><button aria-label="Go to question 19" data-n="19" type="button">19</button><button aria-label="Go to question 20" data-n="20" type="button">20</button><button aria-label="Go to question 21" data-n="21" type="button">21</button><button aria-label="Go to question 22" data-n="22" type="button">22</button><button aria-label="Go to question 23" data-n="23" type="button">23</button><button aria-label="Go to question 24" data-n="24" type="button">24</button><button aria-label="Go to question 25" data-n="25" type="button">25</button></div>
+<div class="legend">
+<div><span class="k nv"></span>Not visited</div>
+<div><span class="k na"></span>Visited, not answered</div>
+<div><span class="k ans"></span>Answered</div>
+<div><span class="k mrk"></span>Marked for review</div>
+<div><span class="k amr"></span>Answered &amp; marked for review</div>
+</div>
+</div>
+<div class="sidefoot">
+<button class="btn submit" id="btnSubmit">Submit test</button>
+<span style="font-size:12px;color:#5b6b7a">Question <b id="qpos">1</b> of 25</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<div class="hidden" id="view-key">
+<div class="banner ok"><b>Answer key unlocked.</b> Every answer and its full solution, in question order.</div>
+<div id="keyList"></div>
+</div>
+<div class="hidden" id="view-bank">
+<div class="meta-strip"><span class="chip"><b>0</b> solved questions</span><span class="chip"><b>0</b> verified GATE PYQs</span></div>
+<p class="dt">No verified GATE PYQ is banked for Programming and Data Structures. Nothing in this paper is claimed as an official GATE question.</p>
+<p class="dt">The 25 questions in this test are the first set for Unit 1 and are not repeated here.</p>
+<p class="dt">Units 2&ndash;7 have no questions yet.</p>
+</div>
+<div class="hidden" id="view-about">
+<div class="card" style="padding:16px 18px;margin-bottom:12px">
+<h2 class="sec" style="margin-top:0">What this test contains</h2>
+<p style="font-size:14.2px">25 questions on Unit 1 (C Programming Foundations), Set 1 of 2. All four
+    subtopics are covered: data types and operators, control structures, functions and parameter passing,
+    and recursion with stack execution. Composition: 15 MCQ, 5 MSQ, 5 NAT; difficulty 10 easy, 10 medium,
+    5 hard; 60 minutes, 35 marks. MCQ carries 1 mark, MSQ and NAT carry 2 marks, there is no negative
+    marking, and an MSQ scores only when the exact set of correct options is selected. This is a practice
+    marking scheme, not the official GATE scheme.</p>
+<h3 class="sec">Concept map used to build the questions</h3>
+<ul style="font-size:14.2px;margin:6px 0 0 18px">
+<li><b>Data types &amp; operators.</b> Integer division truncating towards zero; character constants having
+        type <span class="mm">int</span>; bitwise precedence <span class="mm">&amp; &gt; ^ &gt; |</span>;
+        unsigned arithmetic modulo <span class="mm">2ⁿ</span> against undefined signed overflow; integer
+        promotion before a shift; the comma operator; and implementation-defined signedness of plain
+        <span class="mm">char</span>.</li>
+<li><b>Control structures.</b> Assignment inside an <span class="mm">if</span>; comma expressions in a
+        <span class="mm">for</span> header; nested loops and arithmetic-series counts; switch fall-through
+        and the scope of <span class="mm">break</span> and <span class="mm">continue</span>; and the two
+        classic non-terminating loops — an unsigned counter tested with <span class="mm">&gt;= 0</span> and
+        an equality test with a stride that never hits its target.</li>
+<li><b>Functions &amp; parameter passing.</b> Call by value, and why a swap needs addresses; array
+        parameters decaying to pointers, so <span class="mm">sizeof</span> and the element count are lost;
+        <span class="mm">static</span> locals keeping state between calls; and which writes through a
+        parameter are visible to the caller.</li>
+<li><b>Recursion &amp; stack execution.</b> Unwinding order, so code before a recursive call runs on the way
+        down and code after it runs on the way up; counting calls with
+        <span class="mm">C(n) = C(n−1) + C(n−2) + 1</span>; per-frame copies of parameters and automatic
+        locals; tail-call optimisation; and the finite stack depth that the standard does not bound.</li>
+</ul>
+<h3 class="sec">Source categories</h3>
+<ul style="font-size:14.2px;margin:6px 0 0 18px">
+<li><b>standard textbook</b> — questions built on the canonical treatment of C and data structures in the
+        standard references. Wording is original throughout.</li>
+<li><b>original synthesis</b> — independently designed practice questions in GATE style.</li>
+<li><b>gate pyq variation</b> — a question written in the pattern of a previous-year question. Not used in
+        this set: no C-programming PYQ has been verified against an official paper and key.</li>
+</ul>
+<p style="font-size:13.5px;color:#5b6b7a;margin-top:12px">Only questions whose year, paper and official answer key are
+    recorded are presented as official GATE questions, with their year, paper and official key. This unit contains none.</p>
+</div>
+<footer class="foot">
+
+<p>Provenance: no question here is presented as an official GATE question unless its year, paper and official answer
+  key are recorded in the Question Bank tab. All other items are practice questions written for this series.</p>
+</footer>
+<script id="payload" type="text/plain">
+eyJhbnMiOiB7IjEiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwg
+IjIiOiB7ImNvcnJlY3QiOiBbMl0sICJkaXNwbGF5IjogIk9wdGlvbiAoQykifSwgIjMiOiB7ImNv
+cnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwgIjQiOiB7ImNvcnJlY3QiOiBb
+MV0sICJkaXNwbGF5IjogIk9wdGlvbiAoQikifSwgIjUiOiB7ImNvcnJlY3QiOiBbMCwgMV0sICJk
+aXNwbGF5IjogIk9wdGlvbnMgKEEpIGFuZCAoQikifSwgIjYiOiB7ImNvcnJlY3QiOiBbMV0sICJk
+aXNwbGF5IjogIk9wdGlvbiAoQikifSwgIjciOiB7ImNvcnJlY3QiOiAzODQwLCAiZGlzcGxheSI6
+ICIzODQwIn0sICI4IjogeyJjb3JyZWN0IjogWzFdLCAiZGlzcGxheSI6ICJPcHRpb24gKEIpIn0s
+ICI5IjogeyJjb3JyZWN0IjogWzFdLCAiZGlzcGxheSI6ICJPcHRpb24gKEIpIn0sICIxMCI6IHsi
+Y29ycmVjdCI6IDE1LCAiZGlzcGxheSI6ICIxNSJ9LCAiMTEiOiB7ImNvcnJlY3QiOiBbMV0sICJk
+aXNwbGF5IjogIk9wdGlvbiAoQikifSwgIjEyIjogeyJjb3JyZWN0IjogWzEsIDJdLCAiZGlzcGxh
+eSI6ICJPcHRpb25zIChCKSBhbmQgKEMpIn0sICIxMyI6IHsiY29ycmVjdCI6IFswXSwgImRpc3Bs
+YXkiOiAiT3B0aW9uIChBKSJ9LCAiMTQiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9w
+dGlvbiAoQSkifSwgIjE1IjogeyJjb3JyZWN0IjogMzAsICJkaXNwbGF5IjogIjMwIn0sICIxNiI6
+IHsiY29ycmVjdCI6IFsyXSwgImRpc3BsYXkiOiAiT3B0aW9uIChDKSJ9LCAiMTciOiB7ImNvcnJl
+Y3QiOiBbMCwgMiwgM10sICJkaXNwbGF5IjogIk9wdGlvbnMgKEEpLCAoQykgYW5kIChEKSJ9LCAi
+MTgiOiB7ImNvcnJlY3QiOiBbMV0sICJkaXNwbGF5IjogIk9wdGlvbiAoQikifSwgIjE5IjogeyJj
+b3JyZWN0IjogMjAsICJkaXNwbGF5IjogIjIwIn0sICIyMCI6IHsiY29ycmVjdCI6IFsxXSwgImRp
+c3BsYXkiOiAiT3B0aW9uIChCKSJ9LCAiMjEiOiB7ImNvcnJlY3QiOiBbMCwgMSwgM10sICJkaXNw
+bGF5IjogIk9wdGlvbnMgKEEpLCAoQikgYW5kIChEKSJ9LCAiMjIiOiB7ImNvcnJlY3QiOiBbMV0s
+ICJkaXNwbGF5IjogIk9wdGlvbiAoQikifSwgIjIzIjogeyJjb3JyZWN0IjogWzAsIDEsIDNdLCAi
+ZGlzcGxheSI6ICJPcHRpb25zIChBKSwgKEIpIGFuZCAoRCkifSwgIjI0IjogeyJjb3JyZWN0Ijog
+OCwgImRpc3BsYXkiOiAiOCJ9LCAiMjUiOiB7ImNvcnJlY3QiOiBbMV0sICJkaXNwbGF5IjogIk9w
+dGlvbiAoQikifX0sICJzb2wiOiB7IjEiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9uPC9oND48cCBj
+bGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBJbiBDOTkgYW5kIGxhdGVyLCBpbnRlZ2VyIGRp
+dmlzaW9uIHRydW5jYXRlcyB0b3dhcmRzIHplcm8sIHNvIDxjb2RlIGNsYXNzPVwibW1cIj4tNyAv
+IDI8L2NvZGU+IGlzIDxjb2RlIGNsYXNzPVwibW1cIj4tMzwvY29kZT4sIG5vdCA8Y29kZSBjbGFz
+cz1cIm1tXCI+LTQ8L2NvZGU+LiBNdWx0aXBsaWNhdGlvbiBhbmQgZGl2aXNpb24gaGF2ZSBlcXVh
+bCBwcmVjZWRlbmNlIGFuZCBhc3NvY2lhdGUgbGVmdCB0byByaWdodC48L3A+PHAgY2xhc3M9XCJy
+b3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9iPjwvcD48b2w+PGxpPjxjb2RlIGNsYXNzPVwibW1cIj43
+IC8gMjwvY29kZT4gaXMgaW50ZWdlciBkaXZpc2lvbjogYm90aCBvcGVyYW5kcyBhcmUgPGNvZGUg
+Y2xhc3M9XCJtbVwiPmludDwvY29kZT4sIHNvIHRoZSByZXN1bHQgaXMgPGNvZGUgY2xhc3M9XCJt
+bVwiPjM8L2NvZGU+LjwvbGk+PGxpPlRoZW4gPGNvZGUgY2xhc3M9XCJtbVwiPjMgKiAyPC9jb2Rl
+PiBnaXZlcyA8Y29kZSBjbGFzcz1cIm1tXCI+NjwvY29kZT4g4oCUIHRoZSBtdWx0aXBseSBoYXBw
+ZW5zIGFmdGVyIHRoZSBkaXZpc2lvbiBiZWNhdXNlIG9mIGxlZnQtdG8tcmlnaHQgYXNzb2NpYXRp
+dml0eS48L2xpPjxsaT48Y29kZSBjbGFzcz1cIm1tXCI+LTcgLyAyPC9jb2RlPiBkaXNjYXJkcyB0
+aGUgZnJhY3Rpb25hbCBwYXJ0IHRvd2FyZHMgemVybzogdGhlIGV4YWN0IHF1b3RpZW50IGlzIDxj
+b2RlIGNsYXNzPVwibW1cIj4tMy41PC9jb2RlPiwgdHJ1bmNhdGVkIHRvIDxjb2RlIGNsYXNzPVwi
+bW1cIj4tMzwvY29kZT4uPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwgYW5zd2Vy
+LjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+NiAtMzwvc3Bhbj48L3A+PHAgY2xhc3M9XCJy
+b3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFB5dGhvbiBhbmQgbWFueSBwb2NrZXQgY2FsY3VsYXRv
+cnMgdXNlIGZsb29yIGRpdmlzaW9uLCB3aGVyZSA8Y29kZSBjbGFzcz1cIm1tXCI+LTcgLyAyPC9j
+b2RlPiBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+LTQ8L2NvZGU+LiBDIHRydW5jYXRlcyB0b3dhcmRz
+IHplcm8sIHNvIHRoZSBzZWNvbmQgdmFsdWUgaXMgPGNvZGUgY2xhc3M9XCJtbVwiPi0zPC9jb2Rl
+Pi4gVGhlIGZpcnN0IHRyYXAgaXMgcmVhZGluZyA8Y29kZSBjbGFzcz1cIm1tXCI+NyAvIDIgKiAy
+PC9jb2RlPiBhcyA8Y29kZSBjbGFzcz1cIm1tXCI+NyAvICgyICogMik8L2NvZGU+ID0gMSBvciBh
+cyBmbG9hdGluZyBwb2ludCA3LjwvcD4iLCAiMiI6ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248L2g0
+PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48L2I+IEluIEMgYSBjaGFyYWN0ZXIgY29uc3Rh
+bnQgc3VjaCBhcyA8Y29kZSBjbGFzcz1cIm1tXCI+J0EnPC9jb2RlPiBoYXMgdHlwZSA8Y29kZSBj
+bGFzcz1cIm1tXCI+aW50PC9jb2RlPiwgbm90IDxjb2RlIGNsYXNzPVwibW1cIj5jaGFyPC9jb2Rl
+Pi4gSXRzIHNpemUgaXMgdGhlcmVmb3JlIHRoZSBzaXplIG9mIGFuIDxjb2RlIGNsYXNzPVwibW1c
+Ij5pbnQ8L2NvZGU+LjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9w
+PjxvbD48bGk+VGhlIGxpdGVyYWwgPGNvZGUgY2xhc3M9XCJtbVwiPidBJzwvY29kZT4gaXMgYSBj
+aGFyYWN0ZXIgY29uc3RhbnQgd2hvc2UgdHlwZSBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+aW50PC9j
+b2RlPiAoQzExIMKnNi40LjQuNCkuPC9saT48bGk+Tm8gY29udmVyc2lvbiB0byA8Y29kZSBjbGFz
+cz1cIm1tXCI+Y2hhcjwvY29kZT4gdGFrZXMgcGxhY2UgaW5zaWRlIDxjb2RlIGNsYXNzPVwibW1c
+Ij5zaXplb2Y8L2NvZGU+LCBiZWNhdXNlIHRoZSBvcGVyYW5kIG9mIDxjb2RlIGNsYXNzPVwibW1c
+Ij5zaXplb2Y8L2NvZGU+IGlzIG5vdCBldmFsdWF0ZWQgb3IgY29udmVydGVkIHRvIGEgbmFycm93
+ZXIgdHlwZS48L2xpPjxsaT5IZW5jZSA8Y29kZSBjbGFzcz1cIm1tXCI+c2l6ZW9mKCdBJykgPT0g
+c2l6ZW9mKGludCkgPT0gNDwvY29kZT4uPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+Rmlu
+YWwgYW5zd2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+NDwvc3Bhbj48L3A+PHAgY2xh
+c3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFRoaXMgaXMgdGhlIGNsYXNzaWMgQy12ZXJz
+dXMtQysrIGNvbmZ1c2lvbjogaW4gQysrIDxjb2RlIGNsYXNzPVwibW1cIj4nQSc8L2NvZGU+IGhh
+cyB0eXBlIDxjb2RlIGNsYXNzPVwibW1cIj5jaGFyPC9jb2RlPiBhbmQgdGhlIGFuc3dlciB3b3Vs
+ZCBiZSAxLiBUaGUgY2hhcmFjdGVyIGVuY29kaW5nIG5ldmVyIGNoYW5nZXMgdGhlIHNpemUgb2Yg
+YW4gPGNvZGUgY2xhc3M9XCJtbVwiPmludDwvY29kZT4uPC9wPiIsICIzIjogIjxoND5EZXRhaWxl
+ZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db25jZXB0LjwvYj4gQml0d2lzZSBB
+TkQgYmluZHMgdGlnaHRlciB0aGFuIFhPUiwgd2hpY2ggYmluZHMgdGlnaHRlciB0aGFuIE9SLCBz
+byB0aGUgZXhwcmVzc2lvbiBncm91cHMgYXMgPGNvZGUgY2xhc3M9XCJtbVwiPihhIF4gYikgfCAo
+YSAmIGIpPC9jb2RlPi48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9iPjwv
+cD48b2w+PGxpPjxjb2RlIGNsYXNzPVwibW1cIj5hICZhbXA7IGI8L2NvZGU+IHdpdGggPGNvZGUg
+Y2xhc3M9XCJtbVwiPmEgPSA2ICgxMTDigoIpPC9jb2RlPiBhbmQgPGNvZGUgY2xhc3M9XCJtbVwi
+PmIgPSAzICgwMTHigoIpPC9jb2RlPiBnaXZlcyA8Y29kZSBjbGFzcz1cIm1tXCI+MDEw4oKCID0g
+MjwvY29kZT4uPC9saT48bGk+PGNvZGUgY2xhc3M9XCJtbVwiPmEgXiBiPC9jb2RlPiBnaXZlcyA8
+Y29kZSBjbGFzcz1cIm1tXCI+MTAx4oKCID0gNTwvY29kZT4uPC9saT48bGk+PGNvZGUgY2xhc3M9
+XCJtbVwiPjUgfCAyPC9jb2RlPiBnaXZlcyA8Y29kZSBjbGFzcz1cIm1tXCI+MTAx4oKCIHwgMDEw
+4oKCID0gMTEx4oKCID0gNzwvY29kZT4uPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+Rmlu
+YWwgYW5zd2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+Nzwvc3Bhbj48L3A+PHAgY2xh
+c3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFJlYWRpbmcgdGhlIGV4cHJlc3Npb24gbGVm
+dCB0byByaWdodCBhbmQgY29tcHV0aW5nIDxjb2RlIGNsYXNzPVwibW1cIj4oNiBeIDMpIHwgNjwv
+Y29kZT4gZmlyc3QsIG9yIGFzc3VtaW5nIGFsbCB0aHJlZSBiaXR3aXNlIG9wZXJhdG9ycyBzaGFy
+ZSBwcmVjZWRlbmNlLiBUaGUgcHJlY2VkZW5jZSBvcmRlciBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+
+JmFtcDs8L2NvZGU+IGFib3ZlIDxjb2RlIGNsYXNzPVwibW1cIj5ePC9jb2RlPiBhYm92ZSA8Y29k
+ZSBjbGFzcz1cIm1tXCI+fDwvY29kZT4uIE9wdGlvbiA1IGNvbWVzIGZyb20gZXZhbHVhdGluZyBv
+bmx5IDxjb2RlIGNsYXNzPVwibW1cIj5hIF4gYjwvY29kZT4gYW5kIHN0b3BwaW5nLjwvcD4iLCAi
+NCI6ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2Vw
+dC48L2I+IFVuc2lnbmVkIGFyaXRobWV0aWMgaXMgcGVyZm9ybWVkIG1vZHVsbyA8Y29kZSBjbGFz
+cz1cIm1tXCI+MuKBvzwvY29kZT4gZm9yIGFuIDxjb2RlIGNsYXNzPVwibW1cIj5uPC9jb2RlPi1i
+aXQgdHlwZS4gQXNzaWdubWVudCB0byBhbiB1bnNpZ25lZCB0eXBlIHJlZHVjZXMgdGhlIHZhbHVl
+IG1vZHVsbyA8Y29kZSBjbGFzcz1cIm1tXCI+MuKBvzwvY29kZT47IGl0IG5ldmVyIHRyYXBzIGFu
+ZCBuZXZlciB3cmFwcyBpbnRvIGEgbmVnYXRpdmUgbnVtYmVyLjwvcD48cCBjbGFzcz1cInJvd1wi
+PjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+SW4gPGNvZGUgY2xhc3M9XCJtbVwiPmMg
+KyAxMDwvY29kZT4gdGhlIDxjb2RlIGNsYXNzPVwibW1cIj51bnNpZ25lZCBjaGFyPC9jb2RlPiBp
+cyBwcm9tb3RlZCB0byA8Y29kZSBjbGFzcz1cIm1tXCI+aW50PC9jb2RlPiwgc28gdGhlIHN1bSBp
+cyB0aGUgb3JkaW5hcnkgaW50ZWdlciA8Y29kZSBjbGFzcz1cIm1tXCI+MjYwPC9jb2RlPi48L2xp
+PjxsaT5UaGUgYXNzaWdubWVudCBiYWNrIHRvIDxjb2RlIGNsYXNzPVwibW1cIj51bnNpZ25lZCBj
+aGFyPC9jb2RlPiBjb252ZXJ0cyB0aGUgdmFsdWUgbW9kdWxvIDxjb2RlIGNsYXNzPVwibW1cIj4y
+4oG4ID0gMjU2PC9jb2RlPjogPGNvZGUgY2xhc3M9XCJtbVwiPjI2MCBtb2QgMjU2ID0gNDwvY29k
+ZT4uPC9saT48bGk+U28gPGNvZGUgY2xhc3M9XCJtbVwiPmM8L2NvZGU+IGhvbGRzIDQgYW5kIDxj
+b2RlIGNsYXNzPVwibW1cIj4ldTwvY29kZT4gcHJpbnRzIDQuPC9saT48L29sPjxwIGNsYXNzPVwi
+cm93XCI+PGI+RmluYWwgYW5zd2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+NDwvc3Bh
+bj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IEFuc3dlcmluZyAyNjAg
+aWdub3JlcyB0aGUgY29udmVyc2lvbiBvbiBhc3NpZ25tZW50OyBhbnN3ZXJpbmcgMCBhc3N1bWVz
+IHRoZSB2YWx1ZSB3cmFwcyB0byBhIHNpZ25lZCBuZWdhdGl2ZSBhbmQgaXMgdGhlbiByZWFkIGFz
+IHVuc2lnbmVkLiBOZWl0aGVyIGhhcHBlbnMg4oCUIHRoZSByZWR1Y3Rpb24gaXMgbW9kdWxvIDI1
+NiBhbmQgdGhlIHJlc3VsdCBpcyA0LjwvcD4iLCAiNSI6ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248
+L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48L2I+IFRoZSBDIHN0YW5kYXJkIGZpeGVz
+IG1pbmltdW0gcmFuZ2VzIGFuZCBhIHJhbmsgb3JkZXIgZm9yIHRoZSBpbnRlZ2VyIHR5cGVzLCBi
+dXQgbGVhdmVzIHRoZSBzaXplIG9mIG1vc3Qgb2YgdGhlbSB0byB0aGUgaW1wbGVtZW50YXRpb24u
+IEl0IGFsc28gbGVhdmVzIHNpZ25lZCBvdmVyZmxvdyB1bmRlZmluZWQgYW5kIHRoZSBzaWduZWRu
+ZXNzIG9mIHBsYWluIDxjb2RlIGNsYXNzPVwibW1cIj5jaGFyPC9jb2RlPiBpbXBsZW1lbnRhdGlv
+bi1kZWZpbmVkLjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxv
+bD48bGk+KEEpIGlzIHRydWU6IHRoZSBzdGFuZGFyZCByZXF1aXJlcyA8Y29kZSBjbGFzcz1cIm1t
+XCI+c2l6ZW9mKHNob3J0KSAmbHQ7PSBzaXplb2YoaW50KSAmbHQ7PSBzaXplb2YobG9uZyk8L2Nv
+ZGU+LCBzbyBhIDxjb2RlIGNsYXNzPVwibW1cIj5zaG9ydDwvY29kZT4gY2FuIG5ldmVyIGJlIGxh
+cmdlciB0aGFuIGFuIDxjb2RlIGNsYXNzPVwibW1cIj5pbnQ8L2NvZGU+LjwvbGk+PGxpPihCKSBp
+cyB0cnVlOiA8Y29kZSBjbGFzcz1cIm1tXCI+c2l6ZW9mKGNoYXIpID09IDE8L2NvZGU+IGJ5IGRl
+ZmluaXRpb24g4oCUIGEgYnl0ZSBpbiBDIGlzIGV4YWN0bHkgb25lIDxjb2RlIGNsYXNzPVwibW1c
+Ij5jaGFyPC9jb2RlPiwgd2hhdGV2ZXIgaXRzIGJpdCB3aWR0aC48L2xpPjxsaT4oQykgaXMgZmFs
+c2U6IHVuc2lnbmVkIGFyaXRobWV0aWMgaXMgZGVmaW5lZCBtb2R1bG8gPGNvZGUgY2xhc3M9XCJt
+bVwiPjLigb88L2NvZGU+LCBidXQgc2lnbmVkIG92ZXJmbG93IGlzIHVuZGVmaW5lZCBiZWhhdmlv
+dXIuIEFuIG9wdGltaXNlciBtYXkgYXNzdW1lIGl0IG5ldmVyIGhhcHBlbnMuPC9saT48bGk+KEQp
+IGlzIGZhbHNlOiB3aGV0aGVyIHBsYWluIDxjb2RlIGNsYXNzPVwibW1cIj5jaGFyPC9jb2RlPiBi
+ZWhhdmVzIGFzIDxjb2RlIGNsYXNzPVwibW1cIj5zaWduZWQgY2hhcjwvY29kZT4gb3IgPGNvZGUg
+Y2xhc3M9XCJtbVwiPnVuc2lnbmVkIGNoYXI8L2NvZGU+IGlzIGltcGxlbWVudGF0aW9uLWRlZmlu
+ZWQ7IG9ubHkgPGNvZGUgY2xhc3M9XCJtbVwiPnNpZ25lZCBjaGFyPC9jb2RlPiBhbmQgPGNvZGUg
+Y2xhc3M9XCJtbVwiPnVuc2lnbmVkIGNoYXI8L2NvZGU+IGFyZSBkaXN0aW5jdCB0eXBlcyB3aXRo
+IGZpeGVkIHNpZ25lZG5lc3MuPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwgYW5z
+d2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+T3B0aW9ucyAoQSkgYW5kIChCKTwvc3Bh
+bj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFRoZSB0ZW1wdGluZyBl
+cnJvciBpcyAoQyk6IHN0dWRlbnRzIHNlZSB1bnNpZ25lZCB3cmFwLWFyb3VuZCBhbmQgYXNzdW1l
+IHNpZ25lZCB0eXBlcyBkbyB0aGUgc2FtZS4gVGhleSBkbyBub3Qg4oCUIHNpZ25lZCBvdmVyZmxv
+dyBpcyB1bmRlZmluZWQsIGFuZCBhIHByb2dyYW0gdGhhdCByZWxpZXMgb24gaXQgY2FuIGJlaGF2
+ZSBkaWZmZXJlbnRseSBhdCA8Y29kZSBjbGFzcz1cIm1tXCI+LU8wPC9jb2RlPiBhbmQgPGNvZGUg
+Y2xhc3M9XCJtbVwiPi1PMjwvY29kZT4uIE9wdGlvbiAoRCkgaXMgdGhlIG90aGVyIGNsYXNzaWM6
+IDxjb2RlIGNsYXNzPVwibW1cIj5jaGFyPC9jb2RlPiBpcyBub3QgZ3VhcmFudGVlZCBzaWduZWQu
+PC9wPiIsICI2IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9XCJyb3dcIj48
+Yj5Db25jZXB0LjwvYj4gVGhlIGNvbW1hIG9wZXJhdG9yIGV2YWx1YXRlcyBpdHMgbGVmdCBvcGVy
+YW5kLCBkaXNjYXJkcyB0aGF0IHZhbHVlLCB0aGVuIGV2YWx1YXRlcyB0aGUgcmlnaHQgb3BlcmFu
+ZCBhbmQgeWllbGRzIGl0cyB2YWx1ZS4gVGhlIHBhcmVudGhlc2VzIG1ha2UgdGhlIHdob2xlIGNv
+bW1hIGV4cHJlc3Npb24gdGhlIHJpZ2h0LWhhbmQgc2lkZSBvZiB0aGUgYXNzaWdubWVudCB0byA8
+Y29kZSBjbGFzcz1cIm1tXCI+eDwvY29kZT4uPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+U3RlcCBi
+eSBzdGVwLjwvYj48L3A+PG9sPjxsaT5UaGUgbGVmdCBvcGVyYW5kIDxjb2RlIGNsYXNzPVwibW1c
+Ij55ICs9IDM8L2NvZGU+IHJ1bnMgZmlyc3Q6IDxjb2RlIGNsYXNzPVwibW1cIj55PC9jb2RlPiBi
+ZWNvbWVzIDxjb2RlIGNsYXNzPVwibW1cIj4yICsgMyA9IDU8L2NvZGU+OyBpdHMgdmFsdWUgNSBp
+cyBkaXNjYXJkZWQuPC9saT48bGk+VGhlIHJpZ2h0IG9wZXJhbmQgPGNvZGUgY2xhc3M9XCJtbVwi
+PnkgKiAyPC9jb2RlPiBpcyB0aGVuIGV2YWx1YXRlZCB3aXRoIHRoZSB1cGRhdGVkIDxjb2RlIGNs
+YXNzPVwibW1cIj55PC9jb2RlPjogPGNvZGUgY2xhc3M9XCJtbVwiPjUgKiAyID0gMTA8L2NvZGU+
+LjwvbGk+PGxpPlRoZSBjb21tYSBleHByZXNzaW9uIHlpZWxkcyAxMCwgd2hpY2ggaXMgYXNzaWdu
+ZWQgdG8gPGNvZGUgY2xhc3M9XCJtbVwiPng8L2NvZGU+LjwvbGk+PC9vbD48cCBjbGFzcz1cInJv
+d1wiPjxiPkZpbmFsIGFuc3dlci48L2I+IDxzcGFuIGNsYXNzPVwiYW5zbGluZVwiPjEwPC9zcGFu
+PjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPkNvbW1vbiB0cmFwLjwvYj4gVHdvIHRyYXBzLiBGaXJz
+dCwgZm9yZ2V0dGluZyB0aGF0IHRoZSBsZWZ0IG9wZXJhbmQgaGFzIGFscmVhZHkgY2hhbmdlZCA8
+Y29kZSBjbGFzcz1cIm1tXCI+eTwvY29kZT4sIHNvIHRoZSBzZWNvbmQgb3BlcmFuZCB1c2VzIDUg
+cmF0aGVyIHRoYW4gMiDigJQgdGhhdCBnaXZlcyB0aGUgZGlzdHJhY3RvciA0IG9yIDUuIFNlY29u
+ZCwgcmVhZGluZyB0aGUgY29tbWEgYXMgYSBkZWNsYXJhdGlvbiBzZXBhcmF0b3I7IGluc2lkZSBh
+biBleHByZXNzaW9uIGl0IGlzIHRoZSBjb21tYSBvcGVyYXRvci4gTm90ZSBhbHNvIHRoYXQgPGNv
+ZGUgY2xhc3M9XCJtbVwiPmludCB4LCB5ID0gMjs8L2NvZGU+IGluaXRpYWxpc2VzIG9ubHkgPGNv
+ZGUgY2xhc3M9XCJtbVwiPnk8L2NvZGU+LjwvcD4iLCAiNyI6ICI8aDQ+RGV0YWlsZWQgc29sdXRp
+b248L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48L2I+IEluIGEgc2hpZnQgZXhwcmVz
+c2lvbiB0aGUgb3BlcmFuZHMgYXJlIHByb21vdGVkIHRvIDxjb2RlIGNsYXNzPVwibW1cIj5pbnQ8
+L2NvZGU+IGZpcnN0ICh0aGUgdXN1YWwgYXJpdGhtZXRpYyBjb252ZXJzaW9ucyksIHNvIHRoZSBs
+ZWZ0IHNoaWZ0IGhhcHBlbnMgb24gYSAzMi1iaXQgdmFsdWUsIG5vdCBvbiBhbiA4LWJpdCBvbmUu
+IFRoZSByZXN1bHQgb2YgPGNvZGUgY2xhc3M9XCJtbVwiPmMgJmx0OyZsdDsgNDwvY29kZT4gaXMg
+dGhlcmVmb3JlIG5vdCByZWR1Y2VkIG1vZHVsbyAyNTYuPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+
+U3RlcCBieSBzdGVwLjwvYj48L3A+PG9sPjxsaT48Y29kZSBjbGFzcz1cIm1tXCI+YzwvY29kZT4g
+aG9sZHMgPGNvZGUgY2xhc3M9XCJtbVwiPjB4RjAgPSAyNDA8L2NvZGU+LjwvbGk+PGxpPkludGVn
+ZXIgcHJvbW90aW9uIGNvbnZlcnRzIDxjb2RlIGNsYXNzPVwibW1cIj5jPC9jb2RlPiB0byB0aGUg
+PGNvZGUgY2xhc3M9XCJtbVwiPmludDwvY29kZT4gdmFsdWUgMjQwIGJlZm9yZSB0aGUgc2hpZnQu
+PC9saT48bGk+PGNvZGUgY2xhc3M9XCJtbVwiPjI0MCAmbHQ7Jmx0OyA0PC9jb2RlPiA9IDxjb2Rl
+IGNsYXNzPVwibW1cIj4yNDAgw5cgMTYgPSAzODQwPC9jb2RlPiwgd2hpY2ggaXMgPGNvZGUgY2xh
+c3M9XCJtbVwiPjB4RjAwPC9jb2RlPiBhbmQgc3RpbGwgZml0cyBpbiBhIDMyLWJpdCA8Y29kZSBj
+bGFzcz1cIm1tXCI+aW50PC9jb2RlPi48L2xpPjxsaT5UaGUgYXNzaWdubWVudCB0byA8Y29kZSBj
+bGFzcz1cIm1tXCI+cjwvY29kZT4gaXMgYSBwbGFpbiA8Y29kZSBjbGFzcz1cIm1tXCI+aW50PC9j
+b2RlPiBhc3NpZ25tZW50LCBzbyBubyB0cnVuY2F0aW9uIG9jY3VycyBhbmQgPGNvZGUgY2xhc3M9
+XCJtbVwiPiVkPC9jb2RlPiBwcmludHMgMzg0MC48L2xpPjwvb2w+PHAgY2xhc3M9XCJyb3dcIj48
+Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4zODQwPC9zcGFuPjwv
+cD48cCBjbGFzcz1cInJvd1wiPjxiPkNvbW1vbiB0cmFwLjwvYj4gVGhlIGNsYXNzaWMgZXJyb3Ig
+aXMgdG8ga2VlcCB0aGUgdmFsdWUgOCBiaXRzIHdpZGUgYW5kIGFuc3dlciAwOiA8Y29kZSBjbGFz
+cz1cIm1tXCI+MHhGMCAmbHQ7Jmx0OyA0PC9jb2RlPiB0cnVuY2F0ZWQgdG8gOCBiaXRzIGlzIDxj
+b2RlIGNsYXNzPVwibW1cIj4weDAwPC9jb2RlPi4gVGhhdCB3b3VsZCBiZSB0cnVlIG9ubHkgaWYg
+dGhlIHNoaWZ0IHdlcmUgcGVyZm9ybWVkIGluIDxjb2RlIGNsYXNzPVwibW1cIj51bnNpZ25lZCBj
+aGFyPC9jb2RlPiBhcml0aG1ldGljLCB3aGljaCBDIGRvZXMgbm90IGRvLiBSZW1lbWJlciB0aGF0
+IHNoaWZ0cyBkbyBub3QgdHJ1bmNhdGUgdG8gdGhlIGxlZnQgb3BlcmFuZCdzIHR5cGUuPC9wPiIs
+ICI4IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db25j
+ZXB0LjwvYj4gVGhlIGNvbmRpdGlvbiBvZiBhbiA8Y29kZSBjbGFzcz1cIm1tXCI+aWY8L2NvZGU+
+IGlzIGFueSBzY2FsYXIgZXhwcmVzc2lvbjsgaGVyZSBpdCBpcyBhbiBhc3NpZ25tZW50IGV4cHJl
+c3Npb24sIHdob3NlIHZhbHVlIGlzIHRoZSB2YWx1ZSBzdG9yZWQuIFN0b3JpbmcgMCBtYWtlcyB0
+aGUgY29uZGl0aW9uIGZhbHNlLjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48
+L2I+PC9wPjxvbD48bGk+PGNvZGUgY2xhc3M9XCJtbVwiPnggPSAwPC9jb2RlPiBhc3NpZ25zIDAg
+dG8gPGNvZGUgY2xhc3M9XCJtbVwiPng8L2NvZGU+IGFuZCB5aWVsZHMgdGhlIHZhbHVlIDAuPC9s
+aT48bGk+QSB6ZXJvIHZhbHVlIGlzIGZhbHNlLCBzbyB0aGUgPGNvZGUgY2xhc3M9XCJtbVwiPmVs
+c2U8L2NvZGU+IGJyYW5jaCBydW5zLjwvbGk+PGxpPlRoZSBwcm9ncmFtIHByaW50cyA8Y29kZSBj
+bGFzcz1cIm1tXCI+QjwvY29kZT4uPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwg
+YW5zd2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+Qjwvc3Bhbj48L3A+PHAgY2xhc3M9
+XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFJlYWRpbmcgPGNvZGUgY2xhc3M9XCJtbVwiPngg
+PSAwPC9jb2RlPiBhcyB0aGUgY29tcGFyaXNvbiA8Y29kZSBjbGFzcz1cIm1tXCI+eCA9PSAwPC9j
+b2RlPi4gVGhhdCBjb21wYXJpc29uIHdvdWxkIGJlIHRydWUgYW5kIHByaW50IDxjb2RlIGNsYXNz
+PVwibW1cIj5BPC9jb2RlPi4gVGhpcyBpcyB3aHkgZ29vZCBjb21waWxlcnMgd2FybiBhYm91dCBh
+biBhc3NpZ25tZW50IHVzZWQgYXMgYSBjb25kaXRpb24uIFdpdGggPGNvZGUgY2xhc3M9XCJtbVwi
+PnggPSAxPC9jb2RlPiB0aGUgcHJvZ3JhbSB3b3VsZCBwcmludCA8Y29kZSBjbGFzcz1cIm1tXCI+
+QTwvY29kZT4uPC9wPiIsICI5IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9
+XCJyb3dcIj48Yj5Db25jZXB0LjwvYj4gQSA8Y29kZSBjbGFzcz1cIm1tXCI+Zm9yPC9jb2RlPiBo
+ZWFkZXIgaGFzIHRocmVlIHBhcnRzIHNlcGFyYXRlZCBieSBzZW1pY29sb25zOiBpbml0aWFsaXNh
+dGlvbiwgY29uZGl0aW9uIGFuZCB1cGRhdGUuIFRoZSB1cGRhdGUgaGVyZSBpcyBhIHNpbmdsZSBj
+b21tYSBleHByZXNzaW9uLCBzbyBib3RoIDxjb2RlIGNsYXNzPVwibW1cIj5pKys8L2NvZGU+IGFu
+ZCA8Y29kZSBjbGFzcz1cIm1tXCI+ai0tPC9jb2RlPiBydW4gYXQgdGhlIGVuZCBvZiBldmVyeSBp
+dGVyYXRpb24uPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+U3RlcCBieSBzdGVwLjwvYj48L3A+PG9s
+PjxsaT5TdGFydDogPGNvZGUgY2xhc3M9XCJtbVwiPmkgPSAwLCBqID0gMTA8L2NvZGU+OyBjb25k
+aXRpb24gPGNvZGUgY2xhc3M9XCJtbVwiPjAgJmx0OyAxMDwvY29kZT4gdHJ1ZS48L2xpPjxsaT5B
+ZnRlciBlYWNoIGl0ZXJhdGlvbiBib3RoIGNvdW50ZXJzIG1vdmU6IDxjb2RlIGNsYXNzPVwibW1c
+Ij4oMSwgOSksICgyLCA4KSwgKDMsIDcpLCAoNCwgNik8L2NvZGU+LjwvbGk+PGxpPkF0IDxjb2Rl
+IGNsYXNzPVwibW1cIj4oNSwgNSk8L2NvZGU+IHRoZSBjb25kaXRpb24gPGNvZGUgY2xhc3M9XCJt
+bVwiPjUgJmx0OyA1PC9jb2RlPiBpcyBmYWxzZSwgc28gdGhlIGxvb3Agc3RvcHMgd2l0aCA8Y29k
+ZSBjbGFzcz1cIm1tXCI+aSA9IDU8L2NvZGU+IGFuZCA8Y29kZSBjbGFzcz1cIm1tXCI+aiA9IDU8
+L2NvZGU+LjwvbGk+PC9vbD48cCBjbGFzcz1cInJvd1wiPjxiPkZpbmFsIGFuc3dlci48L2I+IDxz
+cGFuIGNsYXNzPVwiYW5zbGluZVwiPjUgNTwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5D
+b21tb24gdHJhcC48L2I+IFN0b3BwaW5nIGF0IDxjb2RlIGNsYXNzPVwibW1cIj40IDY8L2NvZGU+
+IOKAlCB0aGF0IGlzIHRoZSBzdGF0ZSBhdCB0aGUgc3RhcnQgb2YgdGhlIGxhc3Qgc3VjY2Vzc2Z1
+bCBpdGVyYXRpb24sIG5vdCB0aGUgc3RhdGUgYWZ0ZXIgdGhlIGZhaWxpbmcgdGVzdC4gVGhlIHVw
+ZGF0ZSBjbGF1c2UgYWx3YXlzIHJ1bnMgYmVmb3JlIHRoZSBjb25kaXRpb24gaXMgcmUtdGVzdGVk
+LCBzbyB0aGUgY291bnRlcnMgbWVldCBhdCA1LjwvcD4iLCAiMTAiOiAiPGg0PkRldGFpbGVkIHNv
+bHV0aW9uPC9oND48cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBUaGUgaW5uZXIgbG9v
+cCBzdGFydHMgYXQgPGNvZGUgY2xhc3M9XCJtbVwiPmogPSBpPC9jb2RlPiwgc28gaXQgcnVucyA8
+Y29kZSBjbGFzcz1cIm1tXCI+NSAtIGk8L2NvZGU+IHRpbWVzIGZvciBlYWNoIHZhbHVlIG9mIDxj
+b2RlIGNsYXNzPVwibW1cIj5pPC9jb2RlPi4gVGhlIHRvdGFsIGlzIHRoZSBzdW0gb2YgYW4gYXJp
+dGhtZXRpYyBzZXJpZXMuPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+U3RlcCBieSBzdGVwLjwvYj48
+L3A+PG9sPjxsaT5Gb3IgPGNvZGUgY2xhc3M9XCJtbVwiPmkgPSAwLCAxLCAyLCAzLCA0PC9jb2Rl
+PiB0aGUgaW5uZXIgbG9vcCBydW5zIDUsIDQsIDMsIDIsIDEgdGltZXMuPC9saT48bGk+VG90YWw6
+IDxjb2RlIGNsYXNzPVwibW1cIj41ICsgNCArIDMgKyAyICsgMSA9IDE1PC9jb2RlPi48L2xpPjxs
+aT5FcXVpdmFsZW50bHkgPGNvZGUgY2xhc3M9XCJtbVwiPm4obiArIDEpLzI8L2NvZGU+IHdpdGgg
+PGNvZGUgY2xhc3M9XCJtbVwiPm4gPSA1PC9jb2RlPiwgaS5lLiB0aGUgbnVtYmVyIG9mIHBhaXJz
+IDxjb2RlIGNsYXNzPVwibW1cIj4oaSwgaik8L2NvZGU+IHdpdGggPGNvZGUgY2xhc3M9XCJtbVwi
+PjAg4omkIGkg4omkIGogJmx0OyA1PC9jb2RlPi48L2xpPjwvb2w+PHAgY2xhc3M9XCJyb3dcIj48
+Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4xNTwvc3Bhbj48L3A+
+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IEFzc3VtaW5nIGJvdGggbG9vcHMg
+YWx3YXlzIHJ1biA1IHRpbWVzIGFuZCBhbnN3ZXJpbmcgMjUsIG9yIGNvdW50aW5nIG9ubHkgdGhl
+IHN0cmljdGx5IHVwcGVyLXRyaWFuZ3VsYXIgcGFpcnMgKDEwKSBieSBzdGFydGluZyB0aGUgaW5u
+ZXIgbG9vcCBhdCA8Y29kZSBjbGFzcz1cIm1tXCI+aiA9IGkgKyAxPC9jb2RlPi4gVGhlIGNvbmRp
+dGlvbiBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+aiAmbHQ7IDU8L2NvZGU+IHdpdGggPGNvZGUgY2xh
+c3M9XCJtbVwiPmo8L2NvZGU+IHN0YXJ0aW5nIGF0IDxjb2RlIGNsYXNzPVwibW1cIj5pPC9jb2Rl
+Piwgc28gdGhlIGRpYWdvbmFsIGlzIGluY2x1ZGVkLjwvcD4iLCAiMTEiOiAiPGg0PkRldGFpbGVk
+IHNvbHV0aW9uPC9oND48cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBBIDxjb2RlIGNs
+YXNzPVwibW1cIj5zd2l0Y2g8L2NvZGU+IHRyYW5zZmVycyBjb250cm9sIHRvIHRoZSBtYXRjaGlu
+ZyA8Y29kZSBjbGFzcz1cIm1tXCI+Y2FzZTwvY29kZT4gbGFiZWwgYW5kIHRoZW4gc2ltcGx5IGZh
+bGxzIHRocm91Z2ggdGhlIGZvbGxvd2luZyBzdGF0ZW1lbnRzIHVudGlsIGEgPGNvZGUgY2xhc3M9
+XCJtbVwiPmJyZWFrPC9jb2RlPiBvciB0aGUgZW5kIG9mIHRoZSBibG9jay4gTGFiZWxzIGRvIG5v
+dCBhY3QgYXMgaW1wbGljaXQgZXhpdHMuPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+U3RlcCBieSBz
+dGVwLjwvYj48L3A+PG9sPjxsaT5UaGUgY29udHJvbGxpbmcgdmFsdWUgaXMgMiwgc28gY29udHJv
+bCBqdW1wcyB0byA8Y29kZSBjbGFzcz1cIm1tXCI+Y2FzZSAyOjwvY29kZT4uPC9saT48bGk+VGhl
+IHN0YXRlbWVudCA8Y29kZSBjbGFzcz1cIm1tXCI+cHJpbnRmKFwidHdvXCIpPC9jb2RlPiBydW5z
+LjwvbGk+PGxpPlRoZXJlIGlzIG5vIDxjb2RlIGNsYXNzPVwibW1cIj5icmVhazwvY29kZT4gYWZ0
+ZXIgaXQsIHNvIGV4ZWN1dGlvbiBjb250aW51ZXMgaW50byA8Y29kZSBjbGFzcz1cIm1tXCI+Y2Fz
+ZSAzOjwvY29kZT4gYW5kIHByaW50cyA8Y29kZSBjbGFzcz1cIm1tXCI+dGhyZWU8L2NvZGU+Ljwv
+bGk+PGxpPlRoZSA8Y29kZSBjbGFzcz1cIm1tXCI+YnJlYWs8L2NvZGU+IGFmdGVyIDxjb2RlIGNs
+YXNzPVwibW1cIj5jYXNlIDM6PC9jb2RlPiBlbmRzIHRoZSBzd2l0Y2gsIHNvIHRoZSA8Y29kZSBj
+bGFzcz1cIm1tXCI+ZGVmYXVsdDwvY29kZT4gaXMgbmV2ZXIgcmVhY2hlZC48L2xpPjwvb2w+PHAg
+Y2xhc3M9XCJyb3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVc
+Ij50d290aHJlZTwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+
+IEFzc3VtaW5nIGVhY2ggPGNvZGUgY2xhc3M9XCJtbVwiPmNhc2U8L2NvZGU+IGlzIGV4Y2x1c2l2
+ZSwgYXMgaW4gYW4gaWYtZWxzZSBjaGFpbiwgYW5kIGFuc3dlcmluZyA8Y29kZSBjbGFzcz1cIm1t
+XCI+dHdvPC9jb2RlPi4gRmFsbC10aHJvdWdoIGlzIHRoZSBkZWZhdWx0IGluIEM7IGEgPGNvZGUg
+Y2xhc3M9XCJtbVwiPmJyZWFrPC9jb2RlPiBpcyByZXF1aXJlZCBhdCB0aGUgZW5kIG9mIGV2ZXJ5
+IGNhc2UgeW91IHdhbnQgdG8gZW5kLiBOb3RlIGFsc28gdGhhdCB0aGUgPGNvZGUgY2xhc3M9XCJt
+bVwiPmRlZmF1bHQ8L2NvZGU+IGlzIHNraXBwZWQgaGVyZSBvbmx5IGJlY2F1c2UgYSA8Y29kZSBj
+bGFzcz1cIm1tXCI+YnJlYWs8L2NvZGU+IGludGVydmVuZWQuPC9wPiIsICIxMiI6ICI8aDQ+RGV0
+YWlsZWQgc29sdXRpb248L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48L2I+IEEgbG9v
+cCB0ZXJtaW5hdGVzIHdoZW4gaXRzIGNvbmRpdGlvbiBldmVudHVhbGx5IGJlY29tZXMgZmFsc2Uu
+IEZvciB1bnNpZ25lZCBjb3VudGVycyBhbmQgZm9yIGVxdWFsaXR5IHRlc3RzIHdpdGggYSBzdHJp
+ZGUgdGhhdCBkb2VzIG5vdCBkaXZpZGUgdGhlIGdhcCwgdGhlIGNvbmRpdGlvbiBjYW4gYmUgcGVy
+bWFuZW50bHkgdHJ1ZS48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9iPjwv
+cD48b2w+PGxpPihBKSBBbiA8Y29kZSBjbGFzcz1cIm1tXCI+dW5zaWduZWQgaW50PC9jb2RlPiBp
+cyBuZXZlciBuZWdhdGl2ZSwgc28gPGNvZGUgY2xhc3M9XCJtbVwiPmkgJmd0Oz0gMDwvY29kZT4g
+aXMgYWx3YXlzIHRydWUuIFdoZW4gPGNvZGUgY2xhc3M9XCJtbVwiPmk8L2NvZGU+IGlzIDAgdGhl
+IGRlY3JlbWVudCB3cmFwcyB0byA8Y29kZSBjbGFzcz1cIm1tXCI+NDI5NDk2NzI5NTwvY29kZT4g
+YW5kIHRoZSBsb29wIG5ldmVyIGVuZHMuPC9saT48bGk+KEIpIDxjb2RlIGNsYXNzPVwibW1cIj5p
+PC9jb2RlPiB0YWtlcyAwLCAyLCA0IGFuZCB0aGVuIDYsIGF0IHdoaWNoIHBvaW50IDxjb2RlIGNs
+YXNzPVwibW1cIj42ICZsdDsgNTwvY29kZT4gaXMgZmFsc2UuIEl0IHRlcm1pbmF0ZXMuPC9saT48
+bGk+KEMpIFRoZSBib2R5IHJ1bnMgb25jZSAoPGNvZGUgY2xhc3M9XCJtbVwiPmk8L2NvZGU+IGJl
+Y29tZXMgMSkgYW5kIHRoZW4gPGNvZGUgY2xhc3M9XCJtbVwiPjEgJmx0OyAwPC9jb2RlPiBpcyBm
+YWxzZS4gQSA8Y29kZSBjbGFzcz1cIm1tXCI+ZG8td2hpbGU8L2NvZGU+IGFsd2F5cyBleGVjdXRl
+cyBpdHMgYm9keSBhdCBsZWFzdCBvbmNlLiBJdCB0ZXJtaW5hdGVzLjwvbGk+PGxpPihEKSA8Y29k
+ZSBjbGFzcz1cIm1tXCI+aTwvY29kZT4gdGFrZXMgMCwgMywgNiwgOSwgMTIsIOKApiBhbmQgbmV2
+ZXIgZXF1YWxzIDEwLCBzbyB0aGUgdGVzdCBpcyBuZXZlciBmYWxzZS4gSXQgZG9lcyBub3QgdGVy
+bWluYXRlLjwvbGk+PC9vbD48cCBjbGFzcz1cInJvd1wiPjxiPkZpbmFsIGFuc3dlci48L2I+IDxz
+cGFuIGNsYXNzPVwiYW5zbGluZVwiPk9wdGlvbnMgKEIpIGFuZCAoQyk8L3NwYW4+PC9wPjxwIGNs
+YXNzPVwicm93XCI+PGI+Q29tbW9uIHRyYXAuPC9iPiBPcHRpb24gKEEpIGlzIHRoZSB0cmFwOiB0
+aGUgbG9vcCBsb29rcyBleGFjdGx5IGxpa2UgYSBzaWduZWQgY291bnRkb3duIHRoYXQgZW5kcyBh
+dCAwLCBidXQgb24gYW4gdW5zaWduZWQgdHlwZSB0aGUgZmluYWwgZGVjcmVtZW50IHdyYXBzIGlu
+c3RlYWQgb2YgZ29pbmcgbmVnYXRpdmUuIE9wdGlvbiAoRCkgc2hvd3MgdGhlIHNlY29uZCB0cmFw
+IOKAlCA8Y29kZSBjbGFzcz1cIm1tXCI+IT08L2NvZGU+IGlzIHNhZmUgb25seSB3aGVuIHRoZSBz
+dHJpZGUgZGl2aWRlcyB0aGUgdGFyZ2V0LjwvcD4iLCAiMTMiOiAiPGg0PkRldGFpbGVkIHNvbHV0
+aW9uPC9oND48cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBJbnNpZGUgYSA8Y29kZSBj
+bGFzcz1cIm1tXCI+c3dpdGNoPC9jb2RlPiB0aGF0IGlzIGluc2lkZSBhIGxvb3AsIDxjb2RlIGNs
+YXNzPVwibW1cIj5jb250aW51ZTwvY29kZT4gYmVsb25ncyB0byB0aGUgbG9vcDogaXQgYWJhbmRv
+bnMgdGhlIHJlc3Qgb2YgdGhlIHN3aXRjaCBhbmQgdGhlIHJlc3Qgb2YgdGhlIGxvb3AgYm9keSwg
+YW5kIGp1bXBzIHRvIHRoZSBsb29wJ3MgdXBkYXRlIHN0ZXAuIEZhbGwtdGhyb3VnaCBzdGlsbCBh
+cHBsaWVzIGJldHdlZW4gY2FzZSBsYWJlbHMuPC9wPjxwIGNsYXNzPVwicm93XCI+PGI+U3RlcCBi
+eSBzdGVwLjwvYj48L3A+PG9sPjxsaT5pID0gMDogPGNvZGUgY2xhc3M9XCJtbVwiPmNhc2UgMDwv
+Y29kZT4gZXhlY3V0ZXMgPGNvZGUgY2xhc3M9XCJtbVwiPmNvbnRpbnVlPC9jb2RlPiwgc28gbmVp
+dGhlciB0aGUgc3dpdGNoIG5vciB0aGUgdHJhaWxpbmcgPGNvZGUgY2xhc3M9XCJtbVwiPnMgKz0g
+MTAwPC9jb2RlPiBydW5zLiA8Y29kZSBjbGFzcz1cIm1tXCI+cyA9IDA8L2NvZGU+LjwvbGk+PGxp
+PmkgPSAxOiA8Y29kZSBjbGFzcz1cIm1tXCI+Y2FzZSAxPC9jb2RlPiBhZGRzIDEsIGZhbGxzIGlu
+dG8gPGNvZGUgY2xhc3M9XCJtbVwiPmNhc2UgMjwvY29kZT4gYW5kIGFkZHMgMiwgdGhlbiA8Y29k
+ZSBjbGFzcz1cIm1tXCI+YnJlYWs8L2NvZGU+IGV4aXRzIHRoZSBzd2l0Y2guIDxjb2RlIGNsYXNz
+PVwibW1cIj5zICs9IDEwMDwvY29kZT4gcnVuczogPGNvZGUgY2xhc3M9XCJtbVwiPnMgPSAzICsg
+MTAwID0gMTAzPC9jb2RlPi48L2xpPjxsaT5pID0gMjogPGNvZGUgY2xhc3M9XCJtbVwiPmNhc2Ug
+MjwvY29kZT4gYWRkcyAyIGFuZCBicmVha3MsIHRoZW4gPGNvZGUgY2xhc3M9XCJtbVwiPnMgKz0g
+MTAwPC9jb2RlPjogPGNvZGUgY2xhc3M9XCJtbVwiPnMgPSAxMDUgKyAxMDAgPSAyMDU8L2NvZGU+
+LjwvbGk+PGxpPmkgPSAzOiA8Y29kZSBjbGFzcz1cIm1tXCI+Y2FzZSAzPC9jb2RlPiBhZGRzIDQg
+YW5kIGZhbGxzIHRocm91Z2ggaW50byA8Y29kZSBjbGFzcz1cIm1tXCI+ZGVmYXVsdDwvY29kZT4s
+IGFkZGluZyA4OiA8Y29kZSBjbGFzcz1cIm1tXCI+cyA9IDIwOSArIDggPSAyMTc8L2NvZGU+OyB0
+aGVuIDxjb2RlIGNsYXNzPVwibW1cIj5zICs9IDEwMDwvY29kZT4gZ2l2ZXMgMzE3LjwvbGk+PGxp
+PmkgPSA0OiA8Y29kZSBjbGFzcz1cIm1tXCI+ZGVmYXVsdDwvY29kZT4gYWRkcyA4OiA8Y29kZSBj
+bGFzcz1cIm1tXCI+cyA9IDMyNTwvY29kZT47IHRoZW4gPGNvZGUgY2xhc3M9XCJtbVwiPnMgKz0g
+MTAwPC9jb2RlPiBnaXZlcyA0MjUuPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwg
+YW5zd2VyLjwvYj4gPHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+NDI1PC9zcGFuPjwvcD48cCBjbGFz
+cz1cInJvd1wiPjxiPkNvbW1vbiB0cmFwLjwvYj4gVHdvIG1pc3Rha2VzIHByb2R1Y2UgdGhlIGRp
+c3RyYWN0b3JzLiBUcmVhdGluZyA8Y29kZSBjbGFzcz1cIm1tXCI+Y29udGludWU8L2NvZGU+IGFz
+IDxjb2RlIGNsYXNzPVwibW1cIj5icmVhazwvY29kZT4g4oCUIHRoYXQgaXMsIGxldHRpbmcgdGhl
+IGxvb3AgY2Fycnkgb24gdG8gPGNvZGUgY2xhc3M9XCJtbVwiPnMgKz0gMTAwPC9jb2RlPiBmb3Ig
+PGNvZGUgY2xhc3M9XCJtbVwiPmkgPSAwPC9jb2RlPiDigJQgZ2l2ZXMgMzI1LiBGb3JnZXR0aW5n
+IHRoZSBmYWxsLXRocm91Z2ggZnJvbSA8Y29kZSBjbGFzcz1cIm1tXCI+Y2FzZSAxPC9jb2RlPiBp
+bnRvIDxjb2RlIGNsYXNzPVwibW1cIj5jYXNlIDI8L2NvZGU+LCBvciBmcm9tIDxjb2RlIGNsYXNz
+PVwibW1cIj5jYXNlIDM8L2NvZGU+IGludG8gPGNvZGUgY2xhc3M9XCJtbVwiPmRlZmF1bHQ8L2Nv
+ZGU+LCBnaXZlcyA0MTcgb3IgNDA1LiBOb3RlIHRoYXQgaW4gQywgdW5saWtlIEphdmEsIDxjb2Rl
+IGNsYXNzPVwibW1cIj5jb250aW51ZTwvY29kZT4gaW5zaWRlIGEgc3dpdGNoIGFjdHMgb24gdGhl
+IGVuY2xvc2luZyBsb29wLjwvcD4iLCAiMTQiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9uPC9oND48
+cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBDIGhhcyBvbmx5IGNhbGwgYnkgdmFsdWUu
+IFRoZSBwYXJhbWV0ZXJzIDxjb2RlIGNsYXNzPVwibW1cIj5hPC9jb2RlPiBhbmQgPGNvZGUgY2xh
+c3M9XCJtbVwiPmI8L2NvZGU+IGFyZSBmcmVzaCBvYmplY3RzIGluc2lkZSA8Y29kZSBjbGFzcz1c
+Im1tXCI+c3dhcDwvY29kZT4sIGluaXRpYWxpc2VkIHdpdGggY29waWVzIG9mIHRoZSBhcmd1bWVu
+dHMsIHNvIHN3YXBwaW5nIHRoZW0gY2hhbmdlcyBub3RoaW5nIGluIHRoZSBjYWxsZXIuPC9wPjxw
+IGNsYXNzPVwicm93XCI+PGI+U3RlcCBieSBzdGVwLjwvYj48L3A+PG9sPjxsaT5UaGUgY2FsbCBj
+b3BpZXMgPGNvZGUgY2xhc3M9XCJtbVwiPng8L2NvZGU+IGludG8gPGNvZGUgY2xhc3M9XCJtbVwi
+PmE8L2NvZGU+IGFuZCA8Y29kZSBjbGFzcz1cIm1tXCI+eTwvY29kZT4gaW50byA8Y29kZSBjbGFz
+cz1cIm1tXCI+YjwvY29kZT4uPC9saT48bGk+VGhlIGJvZHkgZXhjaGFuZ2VzIHRoZSBjb3BpZXM6
+IDxjb2RlIGNsYXNzPVwibW1cIj5hID0gMjwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1cIj5iID0g
+MTwvY29kZT4uPC9saT48bGk+T24gcmV0dXJuIHRob3NlIGNvcGllcyBhcmUgZGVzdHJveWVkOyA8
+Y29kZSBjbGFzcz1cIm1tXCI+eDwvY29kZT4gYW5kIDxjb2RlIGNsYXNzPVwibW1cIj55PC9jb2Rl
+PiBhcmUgdW50b3VjaGVkLjwvbGk+PGxpPlRoZSBwcm9ncmFtIHByaW50cyA8Y29kZSBjbGFzcz1c
+Im1tXCI+MSAyPC9jb2RlPi48L2xpPjwvb2w+PHAgY2xhc3M9XCJyb3dcIj48Yj5GaW5hbCBhbnN3
+ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4xIDI8L3NwYW4+PC9wPjxwIGNsYXNzPVwi
+cm93XCI+PGI+Q29tbW9uIHRyYXAuPC9iPiBFeHBlY3RpbmcgdGhlIHN3YXAgdG8gd29yaywgYXMg
+aXQgd291bGQgaW4gYSBsYW5ndWFnZSB3aXRoIGNhbGwgYnkgcmVmZXJlbmNlLiBUbyBtYWtlIGl0
+IHdvcmsgaW4gQyB5b3UgbXVzdCBwYXNzIGFkZHJlc3NlcyDigJQgPGNvZGUgY2xhc3M9XCJtbVwi
+PnZvaWQgc3dhcChpbnQgKmEsIGludCAqYik8L2NvZGU+IGNhbGxlZCBhcyA8Y29kZSBjbGFzcz1c
+Im1tXCI+c3dhcCgmYW1wO3gsICZhbXA7eSk8L2NvZGU+IOKAlCBhbmQgZGVyZWZlcmVuY2UgaW5z
+aWRlLjwvcD4iLCAiMTUiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9uPC9oND48cCBjbGFzcz1cInJv
+d1wiPjxiPkNvbmNlcHQuPC9iPiBUaGUgZnVuY3Rpb24gaXMgY2FsbGVkIG9uY2UgcGVyIGl0ZXJh
+dGlvbiB3aXRoIHRoZSBjdXJyZW50IHZhbHVlIG9mIDxjb2RlIGNsYXNzPVwibW1cIj5pPC9jb2Rl
+PiwgYW5kIGl0cyByZXR1cm4gdmFsdWUgaXMgYWRkZWQgdG8gdGhlIGFjY3VtdWxhdG9yLjwvcD48
+cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+Q2FsbHM6IDxj
+b2RlIGNsYXNzPVwibW1cIj5zcSgxKSA9IDE8L2NvZGU+LCA8Y29kZSBjbGFzcz1cIm1tXCI+c3Eo
+MikgPSA0PC9jb2RlPiwgPGNvZGUgY2xhc3M9XCJtbVwiPnNxKDMpID0gOTwvY29kZT4sIDxjb2Rl
+IGNsYXNzPVwibW1cIj5zcSg0KSA9IDE2PC9jb2RlPi48L2xpPjxsaT5TdW06IDxjb2RlIGNsYXNz
+PVwibW1cIj4xICsgNCArIDkgKyAxNiA9IDMwPC9jb2RlPi48L2xpPjxsaT5DbG9zZWQgZm9ybTog
+PGNvZGUgY2xhc3M9XCJtbVwiPm4obiArIDEpKDJuICsgMSkvNiA9IDTCtzXCtzkvNiA9IDMwPC9j
+b2RlPiBmb3IgPGNvZGUgY2xhc3M9XCJtbVwiPm4gPSA0PC9jb2RlPi48L2xpPjwvb2w+PHAgY2xh
+c3M9XCJyb3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4z
+MDwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFN1bW1pbmcg
+MSArIDIgKyAzICsgNCA9IDEwIGJ5IHJlYWRpbmcgdGhlIGNhbGwgYXMgPGNvZGUgY2xhc3M9XCJt
+bVwiPnNxKGkpID0gaTwvY29kZT4sIG9yIHN0b3BwaW5nIHRoZSBsb29wIGF0IDxjb2RlIGNsYXNz
+PVwibW1cIj5pICZsdDsgNDwvY29kZT4gYW5kIGxvc2luZyB0aGUgMTYuIFRoZSB1cHBlciBib3Vu
+ZCBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+aSAmbHQ7PSA0PC9jb2RlPiwgc28gZm91ciBjYWxscyBh
+cmUgbWFkZS48L3A+IiwgIjE2IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9
+XCJyb3dcIj48Yj5Db25jZXB0LjwvYj4gQSA8Y29kZSBjbGFzcz1cIm1tXCI+c3RhdGljPC9jb2Rl
+PiBsb2NhbCB2YXJpYWJsZSBpcyBjcmVhdGVkIG9uY2UsIGJlZm9yZSB0aGUgcHJvZ3JhbSBzdGFy
+dHMsIGFuZCBsaXZlcyBmb3IgdGhlIHdob2xlIGV4ZWN1dGlvbi4gSXQga2VlcHMgaXRzIHZhbHVl
+IGJldHdlZW4gY2FsbHM7IG9ubHkgaXRzIG5hbWUgaXMgc2NvcGVkIHRvIHRoZSBmdW5jdGlvbi48
+L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9iPjwvcD48b2w+PGxpPlRoZSBp
+bml0aWFsaXNlciA8Y29kZSBjbGFzcz1cIm1tXCI+YyA9IDA8L2NvZGU+IGlzIGFwcGxpZWQgb25j
+ZSwgYXQgcHJvZ3JhbSBzdGFydCDigJQgbm90IG9uIGV2ZXJ5IGNhbGwuPC9saT48bGk+Rmlyc3Qg
+Y2FsbDogPGNvZGUgY2xhc3M9XCJtbVwiPmM8L2NvZGU+IGJlY29tZXMgMSwgcmV0dXJucyAxLiBT
+ZWNvbmQgY2FsbDogYmVjb21lcyAyLCByZXR1cm5zIDIuPC9saT48bGk+VGhlIHRoaXJkIGNhbGwg
+KHRoZSBvbmUgaW5zaWRlIDxjb2RlIGNsYXNzPVwibW1cIj5wcmludGY8L2NvZGU+KSBtYWtlcyA8
+Y29kZSBjbGFzcz1cIm1tXCI+YyA9IDM8L2NvZGU+IGFuZCByZXR1cm5zIDMsIHdoaWNoIGlzIHBy
+aW50ZWQuPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwgYW5zd2VyLjwvYj4gPHNw
+YW4gY2xhc3M9XCJhbnNsaW5lXCI+Mzwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21t
+b24gdHJhcC48L2I+IEFzc3VtaW5nIHRoZSBsb2NhbCBpcyByZS1pbml0aWFsaXNlZCBvbiBldmVy
+eSBjYWxsIGFuZCBhbnN3ZXJpbmcgMS4gVGhhdCB3b3VsZCBiZSB0cnVlIGZvciBhbiBhdXRvbWF0
+aWMgbG9jYWwgc3VjaCBhcyA8Y29kZSBjbGFzcz1cIm1tXCI+aW50IGMgPSAwOzwvY29kZT4uIDxj
+b2RlIGNsYXNzPVwibW1cIj5zdGF0aWM8L2NvZGU+IGNoYW5nZXMgc3RvcmFnZSBkdXJhdGlvbiwg
+bm90IHNjb3BlOiA8Y29kZSBjbGFzcz1cIm1tXCI+YzwvY29kZT4gaXMgc3RpbGwgaW52aXNpYmxl
+IG91dHNpZGUgPGNvZGUgY2xhc3M9XCJtbVwiPmY8L2NvZGU+LjwvcD4iLCAiMTciOiAiPGg0PkRl
+dGFpbGVkIHNvbHV0aW9uPC9oND48cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBJbiBh
+IHBhcmFtZXRlciBsaXN0LCBhbiBhcnJheSBkZWNsYXJhdG9yIGlzIGFkanVzdGVkIHRvIGEgcG9p
+bnRlciB0eXBlOiA8Y29kZSBjbGFzcz1cIm1tXCI+aW50IGFbXTwvY29kZT4gYW5kIDxjb2RlIGNs
+YXNzPVwibW1cIj5pbnQgYVsxMF08L2NvZGU+IGJvdGggbWVhbiA8Y29kZSBjbGFzcz1cIm1tXCI+
+aW50ICphPC9jb2RlPi4gV2hhdCBpcyBwYXNzZWQgaXMgdGhlIGFkZHJlc3Mgb2YgdGhlIGZpcnN0
+IGVsZW1lbnQsIG5vdCBhIGNvcHkgb2YgdGhlIGFycmF5LjwvcD48cCBjbGFzcz1cInJvd1wiPjxi
+PlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+KEEpIGlzIHRydWU6IGFmdGVyIGFkanVzdG1l
+bnQgdGhlIHBhcmFtZXRlciBoYXMgdHlwZSA8Y29kZSBjbGFzcz1cIm1tXCI+aW50ICo8L2NvZGU+
+LCBzbyA8Y29kZSBjbGFzcz1cIm1tXCI+c2l6ZW9mIGE8L2NvZGU+IGlzIHRoZSBwb2ludGVyIHNp
+emUgKDQgb3IgOCBieXRlcyksIG5ldmVyIDQwLjwvbGk+PGxpPihCKSBpcyBmYWxzZTogQyBuZXZl
+ciBjb3BpZXMgYW4gYXJyYXkgb24gYSBjYWxsLiBPbmx5IHRoZSBwb2ludGVyIHZhbHVlIGlzIGNv
+cGllZC48L2xpPjxsaT4oQykgaXMgdHJ1ZTogPGNvZGUgY2xhc3M9XCJtbVwiPmFbaV08L2NvZGU+
+IGRlc2lnbmF0ZXMgdGhlIGNhbGxlcidzIGVsZW1lbnQgdGhyb3VnaCB0aGUgcG9pbnRlciwgc28g
+d3JpdGVzIGFyZSB2aXNpYmxlIGFmdGVyIHJldHVybi48L2xpPjxsaT4oRCkgaXMgdHJ1ZTogdGhl
+IHBvaW50ZXIgY2FycmllcyBubyBsZW5ndGgsIHdoaWNoIGlzIHdoeSBzdWNoIGZ1bmN0aW9ucyB0
+YWtlIGEgc2VwYXJhdGUgY291bnQgcGFyYW1ldGVyLjwvbGk+PC9vbD48cCBjbGFzcz1cInJvd1wi
+PjxiPkZpbmFsIGFuc3dlci48L2I+IDxzcGFuIGNsYXNzPVwiYW5zbGluZVwiPk9wdGlvbnMgKEEp
+LCAoQykgYW5kIChEKTwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48
+L2I+IFRoZSBuYXR1cmFsIGJ1dCB3cm9uZyByZWFkaW5nIGlzIChCKSDigJQgXCJhcnJheXMgYXJl
+IHBhc3NlZCBieSB2YWx1ZSBsaWtlIGV2ZXJ5dGhpbmcgZWxzZVwiLiBUaGUgdmFsdWUgdGhhdCBp
+cyBjb3BpZWQgaXMgdGhlIGFkZHJlc3MsIHNvIGVsZW1lbnQgY2hhbmdlcyBwcm9wYWdhdGUgd2hp
+bGUgcmVhc3NpZ25pbmcgdGhlIHBvaW50ZXIgaXRzZWxmIGRvZXMgbm90LiBBbmQgYmVjYXVzZSB0
+aGUgbGVuZ3RoIGlzIGxvc3QsIDxjb2RlIGNsYXNzPVwibW1cIj5zaXplb2Y8L2NvZGU+IGluc2lk
+ZSB0aGUgY2FsbGVlIGlzIHRoZSBjbGFzc2ljIHdheSB0byBnZXQgYSB3cm9uZyBieXRlIGNvdW50
+LjwvcD4iLCAiMTgiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9uPC9oND48cCBjbGFzcz1cInJvd1wi
+PjxiPkNvbmNlcHQuPC9iPiBPbmx5IHRoZSBjYWxsZWUgdGhhdCByZWNlaXZlcyBhbiBhZGRyZXNz
+IGNhbiBjaGFuZ2UgdGhlIGNhbGxlcidzIG9iamVjdC4gPGNvZGUgY2xhc3M9XCJtbVwiPmluYzwv
+Y29kZT4gZGVyZWZlcmVuY2VzIGl0cyBwb2ludGVyIGFuZCB3cml0ZXMgdGhyb3VnaCBpdDsgPGNv
+ZGUgY2xhc3M9XCJtbVwiPmJ1bXA8L2NvZGU+IGluY3JlbWVudHMgaXRzIG93biBsb2NhbCBjb3B5
+LjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+PGNv
+ZGUgY2xhc3M9XCJtbVwiPmluYygmYW1wO2EpPC9jb2RlPiBwYXNzZXMgdGhlIGFkZHJlc3Mgb2Yg
+PGNvZGUgY2xhc3M9XCJtbVwiPmE8L2NvZGU+OyA8Y29kZSBjbGFzcz1cIm1tXCI+KnAgPSAqcCAr
+IDE8L2NvZGU+IHN0b3JlcyA2IGluIDxjb2RlIGNsYXNzPVwibW1cIj5hPC9jb2RlPiBpdHNlbGYu
+PC9saT48bGk+PGNvZGUgY2xhc3M9XCJtbVwiPmJ1bXAoYSk8L2NvZGU+IHBhc3NlcyB0aGUgdmFs
+dWUgNiBpbnRvIGEgbmV3IGxvY2FsIDxjb2RlIGNsYXNzPVwibW1cIj5wPC9jb2RlPjsgPGNvZGUg
+Y2xhc3M9XCJtbVwiPnAgPSBwICsgMTwvY29kZT4gbWFrZXMgdGhhdCBsb2NhbCA3IGFuZCBpdCBp
+cyBkaXNjYXJkZWQgb24gcmV0dXJuLjwvbGk+PGxpPlNvIDxjb2RlIGNsYXNzPVwibW1cIj5hPC9j
+b2RlPiBpcyA2IGFuZCB0aGUgcHJvZ3JhbSBwcmludHMgNi48L2xpPjwvb2w+PHAgY2xhc3M9XCJy
+b3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj42PC9zcGFu
+PjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPkNvbW1vbiB0cmFwLjwvYj4gQWRkaW5nIGJvdGggaW5j
+cmVtZW50cyBhbmQgYW5zd2VyaW5nIDcsIG9uIHRoZSBhc3N1bXB0aW9uIHRoYXQgPGNvZGUgY2xh
+c3M9XCJtbVwiPmJ1bXA8L2NvZGU+IGFsc28gY2hhbmdlcyB0aGUgY2FsbGVyLiBBIHZhbHVlIHBh
+cmFtZXRlciBpcyBhIGNvcHk7IG9ubHkgd3JpdGVzIHRocm91Z2ggYSBwb2ludGVyIHJlYWNoIHRo
+ZSBjYWxsZXIuIEEgcmVsYXRlZCB0cmFwIGlzIHdyaXRpbmcgPGNvZGUgY2xhc3M9XCJtbVwiPnZv
+aWQgaW5jKGludCBwKTwvY29kZT4gYW5kIGV4cGVjdGluZyB0aGUgY2FsbGVyIHRvIGNoYW5nZS48
+L3A+IiwgIjE5IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xhc3M9XCJyb3dcIj48
+Yj5Db25jZXB0LjwvYj4gQSA8Y29kZSBjbGFzcz1cIm1tXCI+c3RhdGljPC9jb2RlPiBsb2NhbCBr
+ZWVwcyBpdHMgdmFsdWUgYWNyb3NzIGNhbGxzLCBzbyA8Y29kZSBjbGFzcz1cIm1tXCI+ZjwvY29k
+ZT4gcmV0dXJucyBhIHJ1bm5pbmcgdG90YWwgcmF0aGVyIHRoYW4ganVzdCA8Y29kZSBjbGFzcz1c
+Im1tXCI+bjwvY29kZT4uIFRoZSBjYWxscyBoZXJlIGFyZSBzZXF1ZW50aWFsLCBzbyB0aGUgb3Jk
+ZXIgb2YgZXZhbHVhdGlvbiBpcyBmdWxseSBkZXRlcm1pbmVkLjwvcD48cCBjbGFzcz1cInJvd1wi
+PjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+Q2FsbCA8Y29kZSBjbGFzcz1cIm1tXCI+
+ZigxKTwvY29kZT46IDxjb2RlIGNsYXNzPVwibW1cIj5zID0gMCArIDEgPSAxPC9jb2RlPiwgcmV0
+dXJucyAxLiA8Y29kZSBjbGFzcz1cIm1tXCI+dCA9IDE8L2NvZGU+LjwvbGk+PGxpPkNhbGwgPGNv
+ZGUgY2xhc3M9XCJtbVwiPmYoMik8L2NvZGU+OiA8Y29kZSBjbGFzcz1cIm1tXCI+cyA9IDEgKyAy
+ID0gMzwvY29kZT4sIHJldHVybnMgMy4gPGNvZGUgY2xhc3M9XCJtbVwiPnQgPSA0PC9jb2RlPi48
+L2xpPjxsaT5DYWxsIDxjb2RlIGNsYXNzPVwibW1cIj5mKDMpPC9jb2RlPjogPGNvZGUgY2xhc3M9
+XCJtbVwiPnMgPSAzICsgMyA9IDY8L2NvZGU+LCByZXR1cm5zIDYuIDxjb2RlIGNsYXNzPVwibW1c
+Ij50ID0gMTA8L2NvZGU+LjwvbGk+PGxpPkNhbGwgPGNvZGUgY2xhc3M9XCJtbVwiPmYoNCk8L2Nv
+ZGU+OiA8Y29kZSBjbGFzcz1cIm1tXCI+cyA9IDYgKyA0ID0gMTA8L2NvZGU+LCByZXR1cm5zIDEw
+LiA8Y29kZSBjbGFzcz1cIm1tXCI+dCA9IDIwPC9jb2RlPi48L2xpPjwvb2w+PHAgY2xhc3M9XCJy
+b3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4yMDwvc3Bh
+bj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IFR3byBlcnJvcnMuIEln
+bm9yaW5nIDxjb2RlIGNsYXNzPVwibW1cIj5zdGF0aWM8L2NvZGU+IGFuZCBjb21wdXRpbmcgPGNv
+ZGUgY2xhc3M9XCJtbVwiPjEgKyAyICsgMyArIDQgPSAxMDwvY29kZT4gZ2l2ZXMgdGhlIGRpc3Ry
+YWN0b3IgMTAuIFN1bW1pbmcgdGhlIHJldHVybmVkIHZhbHVlcyBidXQgZm9yZ2V0dGluZyB0aGF0
+IDxjb2RlIGNsYXNzPVwibW1cIj5zPC9jb2RlPiBhbHNvIGFjY3VtdWxhdGVzIHRoZW0gKGFuc3dl
+cmluZyA8Y29kZSBjbGFzcz1cIm1tXCI+MTAgKyAxMCA9IDIwPC9jb2RlPiBieSBhIHdyb25nIHJv
+dXRlKSBpcyBoYXJtbGVzcyBoZXJlLCBidXQgdGhlIHJlbGlhYmxlIG1ldGhvZCBpcyB0byB0cmFj
+ayA8Y29kZSBjbGFzcz1cIm1tXCI+czwvY29kZT4gY2FsbCBieSBjYWxsLiBOb3RlIHRoZSBpbml0
+aWFsaXNlciBydW5zIG9ubHkgb25jZSBmb3IgdGhlIHdob2xlIHByb2dyYW0uPC9wPiIsICIyMCI6
+ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48
+L2I+IFRoZSByZWN1cnNpdmUgY2FsbCBpcyBpbnNpZGUgYW4gYWRkaXRpb24sIHNvIGVhY2ggZnJh
+bWUgbXVzdCB3YWl0IGZvciB0aGUgdmFsdWUgcmV0dXJuZWQgYnkgdGhlIGZyYW1lIGJlbG93IGl0
+IGJlZm9yZSBpdCBjYW4gZmluaXNoLiBUaGUgcmVzdWx0cyBhcmUgYWRkZWQgb24gdGhlIHdheSBi
+YWNrIHVwIHRoZSBzdGFjay48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9i
+PjwvcD48b2w+PGxpPkNhbGxzIGRlc2NlbmQ6IDxjb2RlIGNsYXNzPVwibW1cIj5mKDQpIOKGkiBm
+KDMpIOKGkiBmKDIpIOKGkiBmKDEpIOKGkiBmKDApPC9jb2RlPi48L2xpPjxsaT5UaGUgYmFzZSBj
+YXNlIHJldHVybnMgMC4gVW53aW5kaW5nOiA8Y29kZSBjbGFzcz1cIm1tXCI+ZigxKSA9IDEgKyAw
+ID0gMTwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1cIj5mKDIpID0gMiArIDEgPSAzPC9jb2RlPiwg
+PGNvZGUgY2xhc3M9XCJtbVwiPmYoMykgPSAzICsgMyA9IDY8L2NvZGU+LCA8Y29kZSBjbGFzcz1c
+Im1tXCI+Zig0KSA9IDQgKyA2ID0gMTA8L2NvZGU+LjwvbGk+PGxpPlRoaXMgaXMgdGhlIHN1bSA8
+Y29kZSBjbGFzcz1cIm1tXCI+MSArIDIgKyAzICsgNCA9IDEwPC9jb2RlPi48L2xpPjwvb2w+PHAg
+Y2xhc3M9XCJyb3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVc
+Ij4xMDwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJhcC48L2I+IEFuc3dl
+cmluZyAyNCB0cmVhdHMgdGhlIGZ1bmN0aW9uIGFzIGEgZmFjdG9yaWFsICg8Y29kZSBjbGFzcz1c
+Im1tXCI+NCEgPSAyNDwvY29kZT4pOyB0aGUgbXVsdGlwbGljYXRpb24gaXMgbm93aGVyZSBpbiB0
+aGUgY29kZS4gQW5zd2VyaW5nIDQgcmVhZHMgdGhlIHJldHVybiBhcyBqdXN0IDxjb2RlIGNsYXNz
+PVwibW1cIj5uPC9jb2RlPi4gVGhlIGFkZGl0aW9uIG9mIHRoZSByZXR1cm5lZCB2YWx1ZSBpcyB3
+aGF0IG1ha2VzIHRoaXMgYSBzdW0uPC9wPiIsICIyMSI6ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248
+L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48L2I+IEVhY2ggZnJhbWUgcHJpbnRzIHRo
+ZSBsZWFzdCBzaWduaWZpY2FudCByZW1haW5pbmcgYml0IGFuZCBvbmx5IHRoZW4gcmVjdXJzZXMg
+b24gdGhlIHF1b3RpZW50LCBzbyB0aGUgYml0cyBlbWVyZ2UgbGVhc3Qgc2lnbmlmaWNhbnQgZmly
+c3QuIENvZGUgcGxhY2VkIGJlZm9yZSBhIHJlY3Vyc2l2ZSBjYWxsIHJ1bnMgb24gdGhlIHdheSBk
+b3duIHRoZSBzdGFjay48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5TdGVwIGJ5IHN0ZXAuPC9iPjwv
+cD48b2w+PGxpPjxjb2RlIGNsYXNzPVwibW1cIj5mKDEzKTwvY29kZT46IDxjb2RlIGNsYXNzPVwi
+bW1cIj4xMyBtb2QgMiA9IDE8L2NvZGU+LCBwcmludCAxLCByZWN1cnNlIG9uIDxjb2RlIGNsYXNz
+PVwibW1cIj4xMyAvIDIgPSA2PC9jb2RlPi48L2xpPjxsaT48Y29kZSBjbGFzcz1cIm1tXCI+Zig2
+KTwvY29kZT46IDxjb2RlIGNsYXNzPVwibW1cIj42IG1vZCAyID0gMDwvY29kZT4sIHByaW50IDAs
+IHJlY3Vyc2Ugb24gMy4gPGNvZGUgY2xhc3M9XCJtbVwiPmYoMyk8L2NvZGU+OiBwcmludCAxLCBy
+ZWN1cnNlIG9uIDEuIDxjb2RlIGNsYXNzPVwibW1cIj5mKDEpPC9jb2RlPjogcHJpbnQgMSwgcmVj
+dXJzZSBvbiAwLCB3aGljaCBzdG9wcy48L2xpPjxsaT5EaWdpdHMgcHJpbnRlZDogMSwgMCwgMSwg
+MS4gVGhlIGZpcnN0IGlzIHRoZSBsb3ctb3JkZXIgYml0IG9mIDEzOyB0aGUgbGFzdCwgcHJpbnRl
+ZCBieSB0aGUgZGVlcGVzdCBmcmFtZSB0aGF0IHByaW50cyBhbnl0aGluZywgaXMgdGhlIGhpZ2gt
+b3JkZXIgYml0LiAxMyBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+MTEwMeKCgjwvY29kZT4sIHNvIHRo
+ZSBvdXRwdXQgaXMgdGhhdCBudW1lcmFsIHJldmVyc2VkLjwvbGk+PC9vbD48cCBjbGFzcz1cInJv
+d1wiPjxiPkZpbmFsIGFuc3dlci48L2I+IDxzcGFuIGNsYXNzPVwiYW5zbGluZVwiPk9wdGlvbnMg
+KEEpLCAoQikgYW5kIChEKTwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5Db21tb24gdHJh
+cC48L2I+IE9wdGlvbiAoQykgaXMgdGhlIHRyYXA6IHN0dWRlbnRzIGFzc3VtZSBhIGJpdC1wcmlu
+dGluZyByZWN1cnNpb24gcHJpbnRzIHRoZSBudW1lcmFsIGluIHJlYWRpbmcgb3JkZXIuIE1vdmlu
+ZyB0aGUgPGNvZGUgY2xhc3M9XCJtbVwiPnByaW50ZjwvY29kZT4gYWZ0ZXIgdGhlIHJlY3Vyc2l2
+ZSBjYWxsIHdvdWxkIGRvIGV4YWN0bHkgdGhhdCBhbmQgcHJvZHVjZSA8Y29kZSBjbGFzcz1cIm1t
+XCI+MTEwMTwvY29kZT4uIE9wdGlvbiAoRCkgaXMgZWFzeSB0byBnZXQgd3JvbmcgYnkgYXNzdW1p
+bmcgdGhlIGxhc3QgZnJhbWUgaXMgPGNvZGUgY2xhc3M9XCJtbVwiPmYoMTMpPC9jb2RlPiDigJQg
+aXQgaXMgdGhlIGRlZXBlc3Qgb25lLjwvcD4iLCAiMjIiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9u
+PC9oND48cCBjbGFzcz1cInJvd1wiPjxiPkNvbmNlcHQuPC9iPiBUaGUgPGNvZGUgY2xhc3M9XCJt
+bVwiPnByaW50ZjwvY29kZT4gaXMgcGxhY2VkIGFmdGVyIHRoZSByZWN1cnNpdmUgY2FsbCwgc28g
+aXQgcnVucyB3aGlsZSB0aGUgc3RhY2sgdW53aW5kcyDigJQgZnJvbSB0aGUgZGVlcGVzdCBmcmFt
+ZSBiYWNrIHRvIHRoZSBzaGFsbG93ZXN0LjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkg
+c3RlcC48L2I+PC9wPjxvbD48bGk+Q2FsbHMgZGVzY2VuZCA8Y29kZSBjbGFzcz1cIm1tXCI+Zigz
+KSDihpIgZigyKSDihpIgZigxKSDihpIgZigwKTwvY29kZT47IDxjb2RlIGNsYXNzPVwibW1cIj5m
+KDApPC9jb2RlPiByZXR1cm5zIGltbWVkaWF0ZWx5LjwvbGk+PGxpPlVud2luZGluZywgPGNvZGUg
+Y2xhc3M9XCJtbVwiPmYoMSk8L2NvZGU+IHByaW50cyAxLCB0aGVuIDxjb2RlIGNsYXNzPVwibW1c
+Ij5mKDIpPC9jb2RlPiBwcmludHMgMiwgdGhlbiA8Y29kZSBjbGFzcz1cIm1tXCI+ZigzKTwvY29k
+ZT4gcHJpbnRzIDMuPC9saT48bGk+VGhlIG91dHB1dCBpcyA8Y29kZSBjbGFzcz1cIm1tXCI+MTIz
+PC9jb2RlPi48L2xpPjwvb2w+PHAgY2xhc3M9XCJyb3dcIj48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8
+c3BhbiBjbGFzcz1cImFuc2xpbmVcIj4xMjM8L3NwYW4+PC9wPjxwIGNsYXNzPVwicm93XCI+PGI+
+Q29tbW9uIHRyYXAuPC9iPiBBbnN3ZXJpbmcgPGNvZGUgY2xhc3M9XCJtbVwiPjMyMTwvY29kZT4g
+YXNzdW1lcyB0aGUgcHJpbnQgaGFwcGVucyBiZWZvcmUgdGhlIHJlY3Vyc2lvbi4gVGhlIGRpc3Rp
+bmN0aW9uIGlzIHdvcnRoIG1lbW9yaXNpbmc6IGNvZGUgYmVmb3JlIHRoZSByZWN1cnNpdmUgY2Fs
+bCBydW5zIG9uIHRoZSB3YXkgZG93biAobW9zdCBzaWduaWZpY2FudCBmaXJzdCksIGNvZGUgYWZ0
+ZXIgaXQgcnVucyBvbiB0aGUgd2F5IHVwIChsZWFzdCBzaWduaWZpY2FudCBmaXJzdCkuIE5vdGhp
+bmcgcHJpbnRzIDAgYmVjYXVzZSB0aGUgYmFzZSBjYXNlIHJldHVybnMgYmVmb3JlIHByaW50aW5n
+LjwvcD4iLCAiMjMiOiAiPGg0PkRldGFpbGVkIHNvbHV0aW9uPC9oND48cCBjbGFzcz1cInJvd1wi
+PjxiPkNvbmNlcHQuPC9iPiBBIGNhbGwgaW4gQyB1c2VzIGFuIGFjdGl2YXRpb24gcmVjb3JkIChm
+cmFtZSkgb24gdGhlIHJ1bi10aW1lIHN0YWNrLCBob2xkaW5nIHRoZSByZXR1cm4gYWRkcmVzcywg
+dGhlIHNhdmVkIHN0YXRlLCB0aGUgcGFyYW1ldGVycyBhbmQgdGhlIGF1dG9tYXRpYyBsb2NhbHMu
+IFJlY3Vyc2lvbiBpcyB0aGVyZWZvcmUganVzdCBhIHNlcXVlbmNlIG9mIGZyYW1lcywgYW5kIGl0
+IGNhbiBhbHdheXMgYmUgc2ltdWxhdGVkIGV4cGxpY2l0bHkuPC9wPjxwIGNsYXNzPVwicm93XCI+
+PGI+U3RlcCBieSBzdGVwLjwvYj48L3A+PG9sPjxsaT4oQSkgaXMgdHJ1ZTogYSByZWN1cnNpdmUg
+Y2FsbCBkb2VzIG5vdGhpbmcgdGhhdCBhIG1hbnVhbGx5IG1haW50YWluZWQgc3RhY2sgb2YgdGhl
+IHNhbWUgZnJhbWVzIGNhbm5vdCByZXByb2R1Y2UuPC9saT48bGk+KEIpIGlzIHRydWU6IHdoZW4g
+dGhlIGNhbGwgaXMgdGhlIGxhc3Qgb3BlcmF0aW9uIG9mIHRoZSBjYWxsZXIsIHRoZSBjYWxsZWUg
+Y2FuIHJldXNlIHRoZSBmcmFtZTsgdGhpcyBpcyBhIHBlcm1pdHRlZCBvcHRpbWlzYXRpb24sIGFu
+ZCA8Y29kZSBjbGFzcz1cIm1tXCI+LWZvcHRpbWl6ZS1zaWJsaW5nLWNhbGxzPC9jb2RlPiBlbmFi
+bGVzIGl0IGluIEdDQy48L2xpPjxsaT4oQykgaXMgZmFsc2U6IHRoZSBzdGFuZGFyZCBzZXRzIG5v
+IG1pbmltdW0gZGVwdGggYW5kIG5vIGd1YXJhbnRlZS4gVGhlIHN0YWNrIGlzIGZpbml0ZSBhbmQg
+dHlwaWNhbGx5IGEgZmV3IG1lZ2FieXRlcywgc28gZGVlcCByZWN1cnNpb24gb3ZlcmZsb3dzIGl0
+IOKAlCBhIGNyYXNoLCBub3QgYW4gb3V0LW9mLW1lbW9yeSBlcnJvci48L2xpPjxsaT4oRCkgaXMg
+dHJ1ZTogdGhhdCBwZXItY2FsbCBjb3B5IGlzIGV4YWN0bHkgd2h5IGEgdmFsdWUgcGFyYW1ldGVy
+IGNhbm5vdCBiZSBjaGFuZ2VkIGluIHRoZSBjYWxsZXIgYW5kIHdoeSBhdXRvbWF0aWMgbG9jYWxz
+IGRvIG5vdCBpbnRlcmZlcmUgYWNyb3NzIGZyYW1lcy48L2xpPjwvb2w+PHAgY2xhc3M9XCJyb3dc
+Ij48Yj5GaW5hbCBhbnN3ZXIuPC9iPiA8c3BhbiBjbGFzcz1cImFuc2xpbmVcIj5PcHRpb25zIChB
+KSwgKEIpIGFuZCAoRCk8L3NwYW4+PC9wPjxwIGNsYXNzPVwicm93XCI+PGI+Q29tbW9uIHRyYXAu
+PC9iPiBPcHRpb24gKEMpIGlzIHRoZSB0cmFwOiBzdHVkZW50cyBjb25mdXNlIFwidGhlIHN0YWNr
+IGdyb3dzIGFzIG5lZWRlZFwiIHdpdGggYSBzdGFuZGFyZCBndWFyYW50ZWUuIEluIHByYWN0aWNl
+IHRoZSBkZXB0aCBsaW1pdCBpcyBzbWFsbCAodGVucyBvZiB0aG91c2FuZHMgb2YgZnJhbWVzIGF0
+IG1vc3QpIGFuZCBleGNlZWRpbmcgaXQgaXMgdW5kZWZpbmVkIGJlaGF2aW91ci4gQSBzZWNvbmQg
+dHJhcCBpcyBhc3N1bWluZyAoQikgaGFwcGVucyBhdXRvbWF0aWNhbGx5IGluIEMg4oCUIGl0IGlz
+IGFuIG9wdGltaXNhdGlvbiwgbm90IGEgbGFuZ3VhZ2UgcmVxdWlyZW1lbnQuPC9wPiIsICIyNCI6
+ICI8aDQ+RGV0YWlsZWQgc29sdXRpb248L2g0PjxwIGNsYXNzPVwicm93XCI+PGI+Q29uY2VwdC48
+L2I+IFRoaXMgaXMgdGhlIEZpYm9uYWNjaSByZWN1cnJlbmNlIHdpdGggYmFzZSB2YWx1ZXMgPGNv
+ZGUgY2xhc3M9XCJtbVwiPmYoMCkgPSAwPC9jb2RlPiBhbmQgPGNvZGUgY2xhc3M9XCJtbVwiPmYo
+MSkgPSAxPC9jb2RlPi4gRWFjaCB2YWx1ZSBpcyB0aGUgc3VtIG9mIHRoZSB0d28gYmVmb3JlIGl0
+LjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+Q29t
+cHV0ZSB1cHdhcmRzOiA8Y29kZSBjbGFzcz1cIm1tXCI+ZigyKSA9IDEgKyAwID0gMTwvY29kZT4s
+IDxjb2RlIGNsYXNzPVwibW1cIj5mKDMpID0gMSArIDEgPSAyPC9jb2RlPiwgPGNvZGUgY2xhc3M9
+XCJtbVwiPmYoNCkgPSAyICsgMSA9IDM8L2NvZGU+LCA8Y29kZSBjbGFzcz1cIm1tXCI+Zig1KSA9
+IDMgKyAyID0gNTwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1cIj5mKDYpID0gNSArIDMgPSA4PC9j
+b2RlPi48L2xpPjxsaT5UaGUgc2VxdWVuY2UgaXMgMCwgMSwgMSwgMiwgMywgNSwgOCBmb3IgPGNv
+ZGUgY2xhc3M9XCJtbVwiPm4gPSAw4oCmNjwvY29kZT4uPC9saT48bGk+U28gdGhlIHByb2dyYW0g
+cHJpbnRzIDguPC9saT48L29sPjxwIGNsYXNzPVwicm93XCI+PGI+RmluYWwgYW5zd2VyLjwvYj4g
+PHNwYW4gY2xhc3M9XCJhbnNsaW5lXCI+ODwvc3Bhbj48L3A+PHAgY2xhc3M9XCJyb3dcIj48Yj5D
+b21tb24gdHJhcC48L2I+IFNoaWZ0aW5nIHRoZSBpbmRleCBieSBvbmUgYW5kIGFuc3dlcmluZyA1
+ICh0aGUgdmFsdWUgb2YgPGNvZGUgY2xhc3M9XCJtbVwiPmYoNSk8L2NvZGU+KSBvciAxMyAodGhl
+IHZhbHVlIG9mIDxjb2RlIGNsYXNzPVwibW1cIj5mKDcpPC9jb2RlPikuIE5vdGUgYWxzbyB0aGF0
+IHRoaXMgbmFpdmUgcmVjdXJzaW9uIHJlY29tcHV0ZXMgdGhlIHNhbWUgc3VicHJvYmxlbXMgcmVw
+ZWF0ZWRseSDigJQgPGNvZGUgY2xhc3M9XCJtbVwiPmYoNik8L2NvZGU+IG5lZWRzIDI1IGNhbGxz
+IOKAlCB3aGljaCBpcyB3aHkgdGhlIGV4cG9uZW50aWFsIGNvc3Qgb2YgdGhlIG5haXZlIHZlcnNp
+b24gbWF0dGVycy48L3A+IiwgIjI1IjogIjxoND5EZXRhaWxlZCBzb2x1dGlvbjwvaDQ+PHAgY2xh
+c3M9XCJyb3dcIj48Yj5Db25jZXB0LjwvYj4gVGhlIGNvdW50ZXIgaXMgaW5jcmVtZW50ZWQgb25j
+ZSBwZXIgY2FsbCwgaW4gZXZlcnkgZnJhbWUsIHRocm91Z2ggYSBwb2ludGVyIHNoYXJlZCBieSBh
+bGwgb2YgdGhlbS4gVGhlIGFuc3dlciBpcyB0aGUgdG90YWwgbnVtYmVyIG9mIGNhbGxzIG1hZGUg
+YnkgdGhlIHJlY3Vyc2lvbiB0cmVlLCBub3QgdGhlIHZhbHVlIHJldHVybmVkLjwvcD48cCBjbGFz
+cz1cInJvd1wiPjxiPlN0ZXAgYnkgc3RlcC48L2I+PC9wPjxvbD48bGk+TGV0IDxjb2RlIGNsYXNz
+PVwibW1cIj5DKG4pPC9jb2RlPiBiZSB0aGUgbnVtYmVyIG9mIGNhbGxzIG1hZGUgYnkgPGNvZGUg
+Y2xhc3M9XCJtbVwiPmYobik8L2NvZGU+LiBPbmUgY2FsbCBoYXBwZW5zIGF0IHRoZSB0b3AsIHBs
+dXMgdGhlIGNhbGxzIG1hZGUgYnkgaXRzIHR3byBjaGlsZHJlbi48L2xpPjxsaT5CYXNlIGNhc2Vz
+OiA8Y29kZSBjbGFzcz1cIm1tXCI+QygwKSA9IEMoMSkgPSAxPC9jb2RlPi4gRm9yIDxjb2RlIGNs
+YXNzPVwibW1cIj5uIOKJpSAyPC9jb2RlPjogPGNvZGUgY2xhc3M9XCJtbVwiPkMobikgPSAxICsg
+QyhuIOKIkiAxKSArIEMobiDiiJIgMik8L2NvZGU+LjwvbGk+PGxpPkNvbXB1dGU6IDxjb2RlIGNs
+YXNzPVwibW1cIj5DKDIpID0gMSArIDEgKyAxID0gMzwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1c
+Ij5DKDMpID0gMSArIDMgKyAxID0gNTwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1cIj5DKDQpID0g
+MSArIDUgKyAzID0gOTwvY29kZT4sIDxjb2RlIGNsYXNzPVwibW1cIj5DKDUpID0gMSArIDkgKyA1
+ID0gMTU8L2NvZGU+LjwvbGk+PGxpPlNvIDxjb2RlIGNsYXNzPVwibW1cIj5jPC9jb2RlPiBlbmRz
+IGF0IDE1LjwvbGk+PC9vbD48cCBjbGFzcz1cInJvd1wiPjxiPkZpbmFsIGFuc3dlci48L2I+IDxz
+cGFuIGNsYXNzPVwiYW5zbGluZVwiPjE1PC9zcGFuPjwvcD48cCBjbGFzcz1cInJvd1wiPjxiPkNv
+bW1vbiB0cmFwLjwvYj4gQW5zd2VyaW5nIDgsIHRoZSB2YWx1ZSA8Y29kZSBjbGFzcz1cIm1tXCI+
+ZjwvY29kZT4gcmV0dXJucywgaW5zdGVhZCBvZiB0aGUgY291bnQuIEFuc3dlcmluZyA5IGlzIDxj
+b2RlIGNsYXNzPVwibW1cIj5DKDQpPC9jb2RlPiwgdGhlIGNvdW50IG9uZSBsZXZlbCBkb3duLiBU
+aGUgcmVjdXJyZW5jZSA8Y29kZSBjbGFzcz1cIm1tXCI+QyhuKSA9IEMobuKIkjEpICsgQyhu4oiS
+MikgKyAxPC9jb2RlPiBpcyB3b3J0aCByZW1lbWJlcmluZzogZm9yIDxjb2RlIGNsYXNzPVwibW1c
+Ij5uID0gNTwvY29kZT4gaXQgZ2l2ZXMgMTUsIGFuZCBpbiBnZW5lcmFsIGl0IGdyb3dzIGxpa2Ug
+dGhlIEZpYm9uYWNjaSBudW1iZXJzIOKAlCB0aGUgcmVhc29uIG5haXZlIHJlY3Vyc2lvbiBoZXJl
+IGlzIGV4cG9uZW50aWFsLjwvcD4ifX0=
+</script>
+<script>(function(){
+  "use strict";
+  var rawPayload = document.getElementById('payload').textContent.trim();
+  var bytes = Uint8Array.from(atob(rawPayload), function(c){ return c.charCodeAt(0); });
+  var P = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+  var TOTAL = 25, CUR = 1, SUBMITTED = false;
+  var sel = {}, visited = {}, marked = {};
+  var timerEl = document.getElementById('timerVal'), left = 60 * 60;
+
+  function cards(){ return Array.prototype.slice.call(document.querySelectorAll('.qcard')); }
+  function card(n){ return document.querySelector('.qcard[data-n="' + n + '"]'); }
+  function btn(n, id){
+    var c = card(n), out = null;
+    if (!c) return null;
+    Array.prototype.forEach.call(c.querySelectorAll('.qfoot button'), function(b){ if (b.id === id) out = b; });
+    return out;
+  }
+  function attempted(n){
+    var v = sel[n];
+    return Array.isArray(v) ? v.length > 0 : (v !== undefined && v !== '');
+  }
+
+  function setPalette(){
+    var answered = 0;
+    for (var i = 1; i <= TOTAL; i++) if (attempted(i)) answered++;
+    document.getElementById('cntAns').textContent = answered + ' answered';
+    document.getElementById('cntLeft').textContent = (TOTAL - answered) + ' left';
+    if (SUBMITTED) return;
+    document.querySelectorAll('.pal button').forEach(function(b){
+      var n = +b.getAttribute('data-n');
+      b.className = '';
+      if (marked[n] && attempted(n)) b.classList.add('amr');
+      else if (marked[n]) b.classList.add('mrk');
+      else if (attempted(n)) b.classList.add('ans');
+      else if (visited[n]) b.classList.add('na');
+      if (n === CUR) b.classList.add('cur');
+    });
+  }
+
+  function show(n){
+    CUR = n;
+    cards().forEach(function(c){ c.classList.toggle('hidden', +c.getAttribute('data-n') !== n); });
+    visited[n] = true;
+    document.getElementById('qpos').textContent = n;
+    var mb = btn(n, 'btnMark');
+    if (mb) mb.textContent = marked[n] ? 'Unmark review' : 'Mark for review';
+    setPalette();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('.opt input').forEach(function(inp){
+    inp.addEventListener('change', function(){
+      var n = +inp.getAttribute('data-n'), typ = inp.getAttribute('data-typ');
+      if (typ === 'MSQ'){
+        var list = (sel[n] && Array.isArray(sel[n])) ? sel[n].slice() : [];
+        var v = +inp.value;
+        if (inp.checked){ if (list.indexOf(v) < 0) list.push(v); }
+        else { list = list.filter(function(x){ return x !== v; }); }
+        sel[n] = list;
+        inp.closest('.opt').classList.toggle('sel', inp.checked);
+      } else {
+        sel[n] = +inp.value;
+        card(n).querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+        inp.closest('.opt').classList.add('sel');
+      }
+      setPalette();
+    });
+  });
+
+  document.querySelectorAll('.natinput').forEach(function(inp){
+    inp.addEventListener('input', function(){
+      var n = +inp.getAttribute('data-n');
+      sel[n] = inp.value.trim();
+      setPalette();
+    });
+  });
+
+  document.querySelectorAll('.pal button').forEach(function(b){
+    b.addEventListener('click', function(){ if (!SUBMITTED) show(+b.getAttribute('data-n')); });
+  });
+
+  document.getElementById('qhost').addEventListener('click', function(ev){
+    if (SUBMITTED) return;
+    var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
+    if (!b) return;
+    var qc = b.closest ? b.closest('.qcard') : null;
+    var n = qc ? +qc.getAttribute('data-n') : CUR;
+    if (b.id === 'btnPrev'){ if (CUR > 1) show(CUR - 1); }
+    else if (b.id === 'btnNext'){ if (CUR < TOTAL) show(CUR + 1); }
+    else if (b.id === 'btnMark'){
+      marked[n] = !marked[n];
+      b.textContent = marked[n] ? 'Unmark review' : 'Mark for review';
+      setPalette();
+    }
+    else if (b.id === 'btnClear'){
+      delete sel[n];
+      var c = card(n);
+      c.querySelectorAll('input').forEach(function(i){
+        i.checked = false;
+        if (i.classList.contains('natinput')) i.value = '';
+      });
+      c.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+      setPalette();
+    }
+  });
+
+  function grade(){
+    var score = 0, total = 0, right = 0, wrong = 0, skipped = 0;
+    for (var n = 1; n <= TOTAL; n++){
+      var c = card(n), typ = c.getAttribute('data-type');
+      var marks = (typ === 'MCQ') ? 1 : 2;
+      total += marks;
+      var a = P.ans[n], mine = sel[n], ok = false, att = attempted(n);
+      if (typ === 'MSQ'){
+        var m = Array.isArray(mine) ? mine.slice().sort(function(x, y){ return x - y; }) : [];
+        ok = (m.length === a.correct.length) && m.every(function(v, i){ return v === a.correct[i]; });
+      } else if (typ === 'NAT'){
+        var mv = (mine === undefined || mine === '') ? null : parseFloat(mine);
+        ok = (mv !== null) && !isNaN(mv) && Math.abs(mv - a.correct) < 1e-9;
+      } else {
+        ok = (mine !== undefined) && (mine === a.correct[0]);
+      }
+      if (!att) skipped++;
+      else if (ok){ right++; score += marks; }
+      else wrong++;
+
+      c.querySelectorAll('.opt').forEach(function(o){
+        var idx = +o.getAttribute('data-i');
+        var isCorrect = a.correct.indexOf(idx) >= 0;
+        var chosen = Array.isArray(mine) ? mine.indexOf(idx) >= 0 : mine === idx;
+        o.classList.remove('sel');
+        if (isCorrect){ o.classList.add('correct'); o.querySelector('.mark').textContent = 'correct'; }
+        else if (chosen){ o.classList.add('wrongpick'); o.querySelector('.mark').textContent = 'your choice'; }
+        o.querySelector('input').disabled = true;
+        o.style.cursor = 'default';
+      });
+      c.querySelectorAll('.natinput').forEach(function(i){ i.disabled = true; });
+      var sd = c.querySelector('.sol');
+      sd.innerHTML = P.sol[n];
+      sd.classList.remove('hidden');
+
+      var b = document.querySelector('.pal button[data-n="' + n + '"]');
+      b.className = '';
+      if (!att) b.classList.add('skip');
+      else b.classList.add(ok ? 'ok' : 'bad');
+    }
+    return { score: score, total: total, right: right, wrong: wrong, skipped: skipped };
+  }
+
+  function buildKey(){
+    var host = document.getElementById('keyList'), out = '';
+    for (var n = 1; n <= TOTAL; n++){
+      var c = card(n), typ = c.getAttribute('data-type');
+      out += '<div class="card" style="margin-bottom:12px">'
+           + '<div class="qhead"><span class="qno">Q' + n + '</span>'
+           + '<span class="tag ' + typ.toLowerCase() + '">' + typ + '</span>'
+           + '<span class="tag ' + c.getAttribute('data-difficulty') + '">' + c.getAttribute('data-difficulty') + '</span>'
+           + '<span class="tag src">' + c.getAttribute('data-subtopic') + '</span>'
+           + '<span style="margin-left:auto;font-weight:700;color:#1e8449">' + P.ans[n].display + '</span></div>'
+           + '<div class="sol" style="border-top:none">' + P.sol[n] + '</div></div>';
+    }
+    host.innerHTML = out;
+  }
+
+  function doSubmit(force){
+    if (SUBMITTED) return;
+    if (!force){
+      var answered = 0;
+      for (var i = 1; i <= TOTAL; i++) if (attempted(i)) answered++;
+      var msg = 'You have answered ' + answered + ' of ' + TOTAL + ' questions.\n\n'
+              + 'Submit the test now? Answers and detailed solutions will be revealed and cannot be hidden again.';
+      if (!confirm(msg)) return;
+    }
+    SUBMITTED = true;
+    var r = grade();
+    buildKey();
+    document.getElementById('btnSubmit').disabled = true;
+    document.querySelectorAll('#qhost .qfoot button').forEach(function(b){ b.disabled = true; });
+    document.getElementById('summary').classList.remove('hidden');
+    document.getElementById('sumScore').textContent = r.score + ' / ' + r.total;
+    document.getElementById('sumRight').textContent = r.right;
+    document.getElementById('sumWrong').textContent = r.wrong;
+    document.getElementById('sumSkip').textContent = r.skipped;
+    document.getElementById('keyTab').disabled = false;
+    document.getElementById('tabKeyLabel').textContent = 'Answer Key & Solutions';
+    document.getElementById('palHint').textContent = 'green = correct · red = incorrect · grey = skipped';
+    document.getElementById('summary').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.getElementById('btnSubmit').addEventListener('click', function(){ doSubmit(false); });
+
+  var views = { test: 'view-test', bank: 'view-bank', about: 'view-about', key: 'view-key' };
+  document.querySelectorAll('.tabs button[data-view]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (btn.disabled) return;
+      document.querySelectorAll('.tabs button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      Object.keys(views).forEach(function(k){
+        document.getElementById(views[k]).classList.toggle('hidden', k !== btn.getAttribute('data-view'));
+      });
+      window.scrollTo({ top: 0 });
+    });
+  });
+
+  var tick = setInterval(function(){
+    if (SUBMITTED){ clearInterval(tick); return; }
+    left--;
+    if (left <= 0){
+      left = 0;
+      clearInterval(tick);
+      timerEl.textContent = '00:00';
+      doSubmit(true);
+      return;
+    }
+    var m = Math.floor(left / 60), s = left % 60;
+    timerEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    if (left <= 300) document.getElementById('timerBox').classList.add('low');
+  }, 1000);
+
+  show(1);
+})();
+</script>
+</body>
+</html>
