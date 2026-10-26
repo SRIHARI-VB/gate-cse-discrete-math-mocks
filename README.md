@@ -7,27 +7,44 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 2 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
+- **Databases · Unit 1 — ER Models & Relational Algebra, Set 2 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: data types & operators (7) · control structures (6) · functions & parameter passing (6) · recursion & stack execution (6)
-- Rotation: MODE A drew Programming and Data Structures at random from the 11 subjects (unseeded `random.SystemRandom().choice`, draw index 4, the fifth of the 11 subjects). The bank read back
+- Subtopics: ER diagrams, cardinality & weak entities (6) · relational model & constraints (6) · relational algebra: σ, π, join, division (8) · tuple & domain relational calculus (5)
+- Rotation: MODE A drew Databases at random from the 11 subjects. The bank read back
   `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1 — under
   `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1. This is Set 2 of 2;
-  25 + 25 = 50 closes the unit at the cap, and the next Programming and Data Structures run advances to
-  `(0 + 1) mod 7` = Unit 2, Pointers, Memory & Preprocessors. No override was used and no second pass has started.
-- Previous test: **Algorithms · Unit 1 — Asymptotic Analysis & Recurrences, Set 2 of 2**, 2026-10-26 → [`algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html`](algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html)
+  25 + 25 = 50 closes the unit at the cap, and the next Databases run advances to `(0 + 1) mod 5` = Unit 2,
+  SQL & Advanced Querying. No override was used and no second pass has started.
+- Previous test: **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 2 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 28 (14 Discrete Mathematics, 2 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
+| Papers published | 29 (13 Discrete Mathematics, 2 Algorithms, 2 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 700 (325 Discrete Mathematics, 50 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
-| Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) — the table previously read 5, which did not match the four `verified_pyqs` lists (2 + 1 + 1 + 2 = 6); corrected here against the banks |
-| Archived sets (earlier runs) | 12 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures) |
+| Questions in the subject banks | 725 (325 Discrete Mathematics, 50 Algorithms, 50 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
+| Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
+| Archived sets (earlier runs) | 13 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases) |
 
 ## Rotation log
+
+- **2026-10-26, Databases → Unit 1 (ER Models & Relational Algebra), Set 2 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects and it gave **Databases**. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1. Since 25 <
+  `UNIT_QUESTION_CAP = 50` and the unit had been current for 0 days, step B3 regenerated Unit 1 rather than
+  advancing. This is the second and final set for the unit: 25 + 25 = 50, exactly the cap, so no partial set was
+  added and the unit ends at 50, not 60. The next Databases run advances to `(0 + 1) mod 5` = Unit 2,
+  SQL & Advanced Querying. No override was used and no second pass has started.
+- All 25 items are new: no question text, option set or numeric answer is shared with Set 1 (DB-U1-Q01..Q25).
+  Coverage is 6 / 6 / 8 / 5 across the four subtopics, so every subtopic is represented at least once.
+- The previously current paper moved to
+  `databases/er-relational-algebra/archive/gate_db_mock_1_2026-10-26_run1.html` with its content frozen. The new
+  paper is filed at unit level only; no copy was written to the repository root.
+- This set carries no GATE_PYQ_VARIATION. The one verified PYQ recorded for the unit (GATE CSE 2014, Set 3,
+  Question 30, official key D) informed DB-U1-Q17 of Set 1; nothing in Set 2 is presented as an official question.
+- Interface unchanged: the `<style>` block and the exam logic script are byte-identical to Set 1's, so shell
+  parity holds without a rebuild of the archive.
 
 - **2026-10-26, Programming and Data Structures → Unit 1 (C Programming Foundations), Set 2 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
