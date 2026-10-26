@@ -7,26 +7,26 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 2 — Combinational Circuit Design, Set 1 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
+- **Digital Logic · Unit 2 — Combinational Circuit Design, Set 2 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: adders & subtractors (5) · multiplexers & demultiplexers (5) · decoders & encoders (5) · code converters (5) · hazards & glitches (5)
 - Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`). The bank read
-  back `runs[-1] = {date 2026-10-27, unit 1, set "Set 2 of 2"}` with **50** questions banked on Unit 1, exactly
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced the unit:
-  `(index_of(number-systems) + 1) mod 4 = (0 + 1) mod 4 = 1` → **Unit 2, Combinational Circuit Design**. This is
-  Set 1 of 2, so the unit now holds 25 questions and the next Digital Logic run generates Unit 2 again. No override
-  was used and no second pass has started.
-- Previous test: **Digital Logic · Unit 1 — Number Systems & Representation, Set 2 of 2**, 2026-10-27 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html)
+  back `runs[-1] = {date 2026-10-27, unit 2, set "Set 1 of 2"}` with **25** questions banked on Unit 2, below
+  `UNIT_QUESTION_CAP = 50` and current for 0 days, so step B3 held and the current unit was generated again; step B4
+  was not reached. This is Set 2 of 2, so Unit 2 now stands at exactly 50 questions and the next Digital Logic run
+  advances to `(1 + 1) mod 4 = 2` → Unit 3, Sequential Circuits: Flip-Flops & Registers. No override was used and no
+  second pass has started.
+- Previous test: **Digital Logic · Unit 2 — Combinational Circuit Design, Set 1 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/archive/gate_dl_mock_2_2026-10-27_run1.html`](digital-logic/combinational-circuits/archive/gate_dl_mock_2_2026-10-27_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 35 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 3 Digital Logic) |
+| Papers published | 36 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic |
-| Questions in the subject banks | 875 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 75 Digital Logic) |
+| Questions in the subject banks | 900 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
+| Archived sets (earlier runs) | 15 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -39,6 +39,43 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 33 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Digital Logic → Unit 2 (Combinational Circuit Design), Set 2 of 2.** MODE A: one subject was drawn at
+  random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, and the draw gave **Digital Logic** for the
+  third run of the day. The bank read back `runs[-1] = {date 2026-10-27, unit 2, set "Set 1 of 2"}`; Unit 2 stood at
+  **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`.
+  Step B3 therefore held and the current unit was generated again; step B4 was not reached. This is Set 2 of 2, the unit
+  now holds exactly 50 questions, and the next Digital Logic run advances `(index_of(combinational-circuits) + 1) mod 4
+  = (1 + 1) mod 4 = 2` → **Unit 3, Sequential Circuits: Flip-Flops & Registers**. No override was used and no second
+  pass has started.
+- Coverage this run: all five Unit 2 subtopics, five questions each — adders & subtractors, multiplexers &
+  demultiplexers, decoders & encoders, code converters, hazards & glitches. Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: no stem repeats anything banked in Unit 1 or in Unit 2 Set 1. The Set 1 paper was moved to
+  `digital-logic/combinational-circuits/archive/gate_dl_mock_2_2026-10-27_run1.html` with its content frozen, and the
+  new Set 2 took the canonical filename, so the unit folder holds exactly one current paper.
+- **Every answer was checked by script, not by hand.** `1 + 1 + 1 = 11₂` gives Sum 1, Cout 1 (Q1); `2 × 3 + 1 = 7`
+  gate delays to `S3` (Q2); `0110 + 0110 = 1100` with carry into the sign bit 1 and carry out 0, so `V = 1` and
+  `C = 0` (Q3); `7 + 8 = 15` corrects to carry 1 with digit `0101` (Q5); the 4-to-1 multiplexer data inputs were
+  enumerated over all eight minterms of `Σm(0,2,5,7)`, giving `D3 D2 D1 D0 = C, C, C', C'` (Q7);
+  `64/4 + 16/4 + 4/4 = 21` four-input multiplexers, cross-checked as `63 / 3` (Q10); `1 + 4 = 5` decoders (Q12);
+  Gray `1011` decodes to binary `1101` = 13, confirmed by re-encoding (Q17); excess-3 `0101` is `5 − 3 = 2` (Q18);
+  the BCD correction condition `Cout + S3S2 + S3S1` was tested against every binary sum 0–19 and is the only option
+  that matches "sum > 9" exactly, while the distractors fail at 6–7 and 10–11, and at 16–19 (Q20); the consensus term
+  for `AB' + BC` is `AC` (Q22); and the K-map of `A'C' + BC` was enumerated cell by cell, leaving `(m2, m3)` as the only
+  split adjacent pair, so the hazard is `C` changing with `A = 0, B = 1` (Q25).
+- No verified PYQ was added this run, so `verified_pyqs` for Digital Logic stays at two (both Unit 1 items,
+  `PYQ-GATE2019-Q4` and `PYQ-GATE2016S1-Q7`). No Unit 2 item is tagged `GATE_PYQ_VARIATION`; every Unit 2 question is
+  `STANDARD_TEXTBOOK` (11) or `ORIGINAL_SYNTHESIS` (14), so nothing on this paper claims previous-year status.
+- Question-bank tab inside the paper shows the 75 banked items that are not part of the active set — the 50 Unit 1
+  questions and the 25 Unit 2 Set 1 questions. The 25 active Set 2 questions do not appear there.
+- Shell parity: the `:root` block, the `<style>` block, the palette, the answer-key view and the JavaScript are
+  byte-identical to the shipped shell; the only differences from the archived Set 1 are the title, the header sub-line,
+  the set chip and the bank-tab count. One markup repair was made inside the `view-bank` / `view-about` region: both
+  outer `<div>`s were left unclosed in every earlier paper, which nests the About view inside the Question Bank view
+  and makes the About tab render blank when the bank view is hidden. This paper closes both, so its About tab works.
+  The repair is invisible in the shared shell and does not touch CSS or JavaScript, but it does mean the other 35
+  papers still carry the defect — it needs the same coordinated all-papers pass as the open token deviation below.
 
 - **2026-10-27, Digital Logic → Unit 2 (Combinational Circuit Design), Set 1 of 2.** MODE A: one subject was drawn at
   random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, and the draw gave **Digital Logic** for the
