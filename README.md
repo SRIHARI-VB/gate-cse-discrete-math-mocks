@@ -7,24 +7,24 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 1 — Number Systems & Representation, Set 2 of 2**, 2026-10-27 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html)
+- **Digital Logic · Unit 2 — Combinational Circuit Design, Set 1 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: base conversions (7) · one's & two's complement (6) · floating point & IEEE 754 (6) · range & overflow (6)
-- Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`, a
-  date-derived reproducible seed). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with
-  **25** questions banked on Unit 1 and the unit current for 1 day, so step B3 held (25 < 50 and 1 < 7) and Unit 1
-  was generated again rather than advanced. This is Set 2 of 2: the unit now holds 50 questions, exactly
-  `UNIT_QUESTION_CAP = 50`, so the next Digital Logic run advances to `(0 + 1) mod 4` = Unit 2, Combinational Circuit
-  Design. No override was used and no second pass has started.
-- Previous test: **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html)
+- Subtopics: adders & subtractors (5) · multiplexers & demultiplexers (5) · decoders & encoders (5) · code converters (5) · hazards & glitches (5)
+- Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`). The bank read
+  back `runs[-1] = {date 2026-10-27, unit 1, set "Set 2 of 2"}` with **50** questions banked on Unit 1, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced the unit:
+  `(index_of(number-systems) + 1) mod 4 = (0 + 1) mod 4 = 1` → **Unit 2, Combinational Circuit Design**. This is
+  Set 1 of 2, so the unit now holds 25 questions and the next Digital Logic run generates Unit 2 again. No override
+  was used and no second pass has started.
+- Previous test: **Digital Logic · Unit 1 — Number Systems & Representation, Set 2 of 2**, 2026-10-27 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 34 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 850 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 50 Digital Logic) |
+| Papers published | 35 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 3 Digital Logic) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic |
+| Questions in the subject banks | 875 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 75 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
@@ -39,6 +39,27 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 33 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Digital Logic → Unit 2 (Combinational Circuit Design), Set 1 of 2.** MODE A: one subject was drawn at
+  random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, and the draw gave **Digital Logic** for the
+  second run of the day. The bank read back `runs[-1] = {date 2026-10-27, unit 1, set "Set 2 of 2"}`; Unit 1 stood at
+  **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so the cap test in step B3 failed and step B4 advanced exactly one
+  unit: `(0 + 1) mod 4 = 1` → **Unit 2, Combinational Circuit Design**. This is Set 1 of 2; 25 questions are now banked
+  on Unit 2 and the next Digital Logic run generates Unit 2 again before advancing to Unit 3. No override was used, and
+  the modulo has not yet wrapped, so no second pass has started.
+- Coverage this run: all five Unit 2 subtopics, five questions each — adders & subtractors, multiplexers &
+  demultiplexers, decoders & encoders, code converters, hazards & glitches. Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; 35 marks.
+- No verified PYQ was added this run, so `verified_pyqs` for Digital Logic stays at two (both Unit 1 items,
+  `PYQ-GATE2019-Q4` and `PYQ-GATE2016S1-Q7`). No Unit 2 item is tagged `GATE_PYQ_VARIATION`; every Unit 2 question is
+  `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`, so nothing on this paper claims previous-year status.
+- Question-bank tab inside the paper shows the 50 Unit 1 questions, which are the only banked items that are not part
+  of the active set — the 25 active Unit 2 questions do not appear there.
+- Two deliberate deviations from earlier papers, both content-level and not shell-level: the NAT answer-format hint now
+  reads only "Answer format: an integer." with no worked value (earlier papers printed the answer inside the hint), and
+  the `:root` block, `<style>` block and JavaScript are byte-identical to the shipped shell, so shell parity holds
+  against the other papers. The Section 6.4 raw-hex and palette-contrast deviation recorded above is **still open** and
+  still needs the coordinated all-papers pass; it was not partially fixed for one paper.
 
 - **2026-10-27, Digital Logic → Unit 1 (Number Systems & Representation), Set 2 of 2.** MODE A: one subject was drawn
   at random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, a date-derived reproducible seed, and
@@ -1058,6 +1079,7 @@ theory-of-computation/
   question-bank/master_bank.json                     append-only master question bank
 digital-logic/
   number-systems/gate_dl_mock_1_<date>.html          current paper for Unit 1
+  combinational-circuits/gate_dl_mock_2_<date>.html  current paper for Unit 2
   question-bank/master_bank.json                     append-only master question bank
 ```
 
@@ -1172,7 +1194,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Number Systems & Representation | `number-systems` | 50 | yes |
-| 2 | Combinational Circuit Design | `combinational-circuits` | 0 | — |
+| 2 | Combinational Circuit Design | `combinational-circuits` | 25 | yes |
 | 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
 | 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
 

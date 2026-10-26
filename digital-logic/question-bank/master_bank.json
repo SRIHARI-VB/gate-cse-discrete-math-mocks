@@ -6,9 +6,10 @@
     "created": "2026-10-26",
     "last_updated": "2026-10-27",
     "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-    "total_questions": 50,
+    "total_questions": 75,
     "units_with_questions": [
-      1
+      1,
+      2
     ]
   },
   "runs": [
@@ -129,6 +130,66 @@
       ],
       "selection": "MODE A. One subject was drawn at random from the 11 GATE CSE subjects with random.Random(20261027).choice, a date-derived reproducible seed, and it gave Digital Logic. digital-logic/question-bank/master_bank.json read back runs[-1] = {date 2026-10-26, unit 1, set \"Set 1 of 2\"} with 25 questions banked on Unit 1 and the unit current for 1 day. Since 25 < UNIT_QUESTION_CAP = 50 and 1 < DAYS_PER_UNIT_MAX = 7, step B3 held and step B4 was not reached: Unit 1 (Number Systems & Representation) was generated again. No override used.",
       "note": "Set 2 of 2 for Digital Logic Unit 1; the unit now holds 50 questions, exactly UNIT_QUESTION_CAP, so the next Digital Logic run advances to (0 + 1) mod 4 = Unit 2, Combinational Circuit Design. All 25 items are new: no stem repeats a question banked in Set 1. Coverage is 7 base conversions, 6 one's/two's complement, 6 IEEE 754, 6 range and overflow. No verified PYQ was added, so the subject's verified_pyqs list is unchanged; two items are GATE_PYQ_VARIATION built on recurring GATE patterns with no year claimed. Every numeric answer was recomputed by script, not by hand. No paper was archived: Set 1 is a different question set on a different date, not a superseded run of this one."
+    },
+    {
+      "run": 3,
+      "date": "2026-10-27",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "set": "Set 1 of 2",
+      "file": "digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html",
+      "duration_min": 60,
+      "marks": 35,
+      "composition": {
+        "MCQ": 15,
+        "MSQ": 5,
+        "NAT": 5
+      },
+      "difficulty": {
+        "easy": 10,
+        "medium": 10,
+        "hard": 5
+      },
+      "subtopics": [
+        "adders-subtractors",
+        "multiplexers-demultiplexers",
+        "decoders-encoders",
+        "code-converters",
+        "hazard-and-glitches"
+      ],
+      "question_ids": [
+        "DL-U2-Q01",
+        "DL-U2-Q02",
+        "DL-U2-Q03",
+        "DL-U2-Q04",
+        "DL-U2-Q05",
+        "DL-U2-Q06",
+        "DL-U2-Q07",
+        "DL-U2-Q08",
+        "DL-U2-Q09",
+        "DL-U2-Q10",
+        "DL-U2-Q11",
+        "DL-U2-Q12",
+        "DL-U2-Q13",
+        "DL-U2-Q14",
+        "DL-U2-Q15",
+        "DL-U2-Q16",
+        "DL-U2-Q17",
+        "DL-U2-Q18",
+        "DL-U2-Q19",
+        "DL-U2-Q20",
+        "DL-U2-Q21",
+        "DL-U2-Q22",
+        "DL-U2-Q23",
+        "DL-U2-Q24",
+        "DL-U2-Q25"
+      ],
+      "selection": "MODE A. One subject was drawn at random from the 11 GATE CSE subjects with random.Random(20261027).choice and it gave Digital Logic. digital-logic/question-bank/master_bank.json read back runs[-1] = {date 2026-10-27, unit 1, set \"Set 2 of 2\"}. Unit 1 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B3 failed and step B4 applied: (index_of(number-systems) + 1) mod 4 = (0 + 1) mod 4 = 1 -> Unit 2, Combinational Circuit Design. No override used.",
+      "note": "Set 1 of 2 for Digital Logic Unit 2; the unit now holds 25 questions, so a second Digital Logic run generates Unit 2 again before advancing to Unit 3. All 25 items are new: no stem repeats anything banked in Unit 1. Coverage is 5 per subtopic across all five Unit 2 subtopics. No question is an official GATE PYQ and no PYQ was added this run; verified_pyqs stays at 2, both belonging to Unit 1."
     }
   ],
   "verified_pyqs": [
@@ -1978,6 +2039,916 @@
       ],
       "answer_display": "&minus;112",
       "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An 8-bit adder works modulo 2<sup>8</sup>; the stored pattern is the sum reduced mod 256, and reading it as two's complement reinterprets the same pattern.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>200 + 200 = 400.</li><li>400 mod 256 = 144, which is 1001 0000 in binary.</li><li>As an unsigned value that is 144; as two's complement, the sign bit is 1, so subtract 256.</li><li>144 &minus; 256 = &minus;112.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: &minus;112</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 144 answers the unsigned reading; the question fixes the interpretation as two's complement, which turns the same bits into &minus;112.</p>"
+    },
+    {
+      "id": "DL-U2-Q01",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "adders-subtractors",
+      "subtopic": "adders-subtractors",
+      "subtopic_label": "Adders & subtractors",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A half adder has inputs A and B. If A = 1 and B = 1, what are Sum and Carry?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"1\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"adders-subtractors\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 1</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">adders-subtractors</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A half adder has inputs <code class=\"mm\">A</code> and <code class=\"mm\">B</code>. If <code class=\"mm\">A = 1</code> and <code class=\"mm\">B = 1</code>, what are <code class=\"mm\">Sum</code> and <code class=\"mm\">Carry</code>?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 1</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">Sum = 1</code>, <code class=\"mm\">Carry = 0</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">Sum = 1</code>, <code class=\"mm\">Carry = 1</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 0</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "Sum = 0, Carry = 1",
+        "Sum = 1, Carry = 0",
+        "Sum = 1, Carry = 1",
+        "Sum = 0, Carry = 0"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 1</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">Sum = 1</code>, <code class=\"mm\">Carry = 0</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">Sum = 1</code>, <code class=\"mm\">Carry = 1</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 0</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Half-adder truth table: <code class=\"mm\">Sum = A ⊕ B</code>, <code class=\"mm\">Carry = A · B</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The half adder realises <code class=\"mm\">Sum = A ⊕ B</code> and <code class=\"mm\">Carry = A · B</code>.</li><li>With <code class=\"mm\">A = B = 1</code>: <code class=\"mm\">Sum = 1 ⊕ 1 = 0</code>.</li><li><code class=\"mm\">Carry = 1 · 1 = 1</code>.</li><li>So <code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 1</code>, which is the binary sum <code class=\"mm\">1 + 1 = 10</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">Sum = 0</code>, <code class=\"mm\">Carry = 1</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Using OR for the sum instead of XOR. <code class=\"mm\">1 OR 1 = 1</code> looks right for the numeric sum but the sum bit of <code class=\"mm\">1 + 1</code> is <code class=\"mm\">0</code>; only the carry is <code class=\"mm\">1</code>.</p>"
+    },
+    {
+      "id": "DL-U2-Q02",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "adders-subtractors",
+      "subtopic": "adders-subtractors",
+      "subtopic_label": "Adders & subtractors",
+      "type": "MCQ",
+      "difficulty": "medium",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A 4-bit ripple-carry adder is built from four full adders. Each full adder introduces 2 gate delays from Cin to Cout. The initial carry C0 is available at time 0. What is the worst-case delay, in gate delays, before the final carry-out C4 is valid?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"2\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"adders-subtractors\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 2</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">adders-subtractors</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A 4-bit ripple-carry adder is built from four full adders. Each full adder introduces 2 gate delays from <code class=\"mm\">Cin</code> to <code class=\"mm\">Cout</code>. The initial carry <code class=\"mm\">C0</code> is available at time 0. What is the worst-case delay, in gate delays, before the final carry-out <code class=\"mm\">C4</code> is valid?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">2</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">4</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">8</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">9</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "9"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">2</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">4</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">8</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">9</span>"
+      ],
+      "answer": [
+        2
+      ],
+      "answer_display": "Option (C)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a ripple-carry adder the carry is the critical signal: it must pass serially through every stage.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">C0</code> is available at time 0.</li><li><code class=\"mm\">C1</code> is valid after 2 delays, <code class=\"mm\">C2</code> after 4, <code class=\"mm\">C3</code> after 6, <code class=\"mm\">C4</code> after 8.</li><li>In general an n-bit ripple-carry adder needs <code class=\"mm\">2n</code> gate delays for the final carry.</li><li>For <code class=\"mm\">n = 4</code>: <code class=\"mm\">2 × 4 = 8</code> gate delays.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 8 gate delays (option C).</span></p><p class=\"row\"><b>Common misconception.</b> Counting the sum delay instead. The sum outputs settle later than the carry chain, but the question asks only about <code class=\"mm\">C4</code>. A second error is multiplying 4 stages by 3 rather than by 2.</p>"
+    },
+    {
+      "id": "DL-U2-Q03",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "adders-subtractors",
+      "subtopic": "adders-subtractors",
+      "subtopic_label": "Adders & subtractors",
+      "type": "NAT",
+      "difficulty": "easy",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A 4-bit parallel adder adds A3A2A1A0 and B3B2B1B0 and is built from the minimum number of half adders and full adders. How many full adders are required?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"3\" data-type=\"NAT\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"adders-subtractors\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 3</span><span class=\"tag nat\">NAT</span><span class=\"tag easy\">easy</span><span class=\"tag src\">adders-subtractors</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><div class=\"qtext\">A 4-bit parallel adder adds <code class=\"mm\">A3A2A1A0</code> and <code class=\"mm\">B3B2B1B0</code> and is built from the minimum number of half adders and full adders. How many full adders are required?</div><div class=\"natrow\"><label style=\"font-size:13.5px;color:var(--muted)\">Your answer:</label><input aria-label=\"Numerical answer for question 3\" autocomplete=\"off\" class=\"natinput\" data-n=\"3\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer.</div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [],
+      "options_html": [],
+      "answer": [
+        3
+      ],
+      "answer_display": "3",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The least-significant bit position has no incoming carry, so it needs only a half adder; every higher position needs a full adder.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bit position 0 adds <code class=\"mm\">A0</code>, <code class=\"mm\">B0</code> with <code class=\"mm\">Cin = 0</code>. A half adder suffices: it has exactly the two inputs needed.</li><li>Bit positions 1, 2 and 3 each add <code class=\"mm\">Ai</code>, <code class=\"mm\">Bi</code> and the carry from the position below, so each needs a full adder.</li><li>Full adders required = <code class=\"mm\">4 − 1 = 3</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3 full adders (plus 1 half adder).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 by assuming every stage is a full adder. Tying the LSB full adder's <code class=\"mm\">Cin</code> to 0 wastes hardware; the minimum count is 3.</p>"
+    },
+    {
+      "id": "DL-U2-Q04",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "adders-subtractors",
+      "subtopic": "adders-subtractors",
+      "subtopic_label": "Adders & subtractors",
+      "type": "MSQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Which of the following statements about carry-lookahead adders (CLAs) are TRUE?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"4\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"adders-subtractors\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 4</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">adders-subtractors</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about carry-lookahead adders (CLAs) are TRUE?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A CLA reduces the carry propagation delay from <code class=\"mm\">O(n)</code> to <code class=\"mm\">O(log n)</code> compared with a ripple-carry adder.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Generate and propagate are defined as <code class=\"mm\">Gi = Ai · Bi</code> and <code class=\"mm\">Pi = Ai ⊕ Bi</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">The recurrence <code class=\"mm\">Ci+1 = Gi + Pi · Ci</code> lets a single-level CLA derive every carry directly from the primary inputs rather than waiting stage by stage.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A CLA of the same width needs less hardware than a ripple-carry adder.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "A CLA reduces the carry propagation delay from O(n) to O(log n) compared with a ripple-carry adder.",
+        "Generate and propagate are defined as Gi = Ai · Bi and Pi = Ai ⊕ Bi.",
+        "The recurrence Ci+1 = Gi + Pi · Ci lets a single-level CLA derive every carry directly from the primary inputs rather than waiting stage by stage.",
+        "A CLA of the same width needs less hardware than a ripple-carry adder."
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">A CLA reduces the carry propagation delay from <code class=\"mm\">O(n)</code> to <code class=\"mm\">O(log n)</code> compared with a ripple-carry adder.</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">Generate and propagate are defined as <code class=\"mm\">Gi = Ai · Bi</code> and <code class=\"mm\">Pi = Ai ⊕ Bi</code>.</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">The recurrence <code class=\"mm\">Ci+1 = Gi + Pi · Ci</code> lets a single-level CLA derive every carry directly from the primary inputs rather than waiting stage by stage.</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">A CLA of the same width needs less hardware than a ripple-carry adder.</span>"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "answer_display": "Options (A), (B), (C)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Carry-lookahead trades hardware for delay: it computes generate and propagate signals in parallel and expands the carry recurrence in terms of the primary inputs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Statement A is true. Expanding the carry recurrence gives a two-level expression in the <code class=\"mm\">Gi</code> and <code class=\"mm\">Pi</code> signals, so the carry delay grows logarithmically rather than linearly.</li><li>Statement B is true by definition: a stage generates a carry when both bits are 1, and propagates an incoming carry when exactly one bit is 1.</li><li>Statement C is true. <code class=\"mm\">Ci+1 = Gi + Pi·Ci</code> expanded recursively is a sum of products over the primary inputs, so no stage waits for its predecessor.</li><li>Statement D is false. CLA needs extra AND/OR gates to build <code class=\"mm\">Gi</code>, <code class=\"mm\">Pi</code> and the expanded carry expressions; it is strictly larger than a ripple-carry adder of the same width.</li><li>Correct set: A, B and C.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options A, B and C are correct; D is false.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming a faster adder must be a smaller adder. Lookahead buys delay with area — the two always move in opposite directions.</p>"
+    },
+    {
+      "id": "DL-U2-Q05",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "adders-subtractors",
+      "subtopic": "adders-subtractors",
+      "subtopic_label": "Adders & subtractors",
+      "type": "MCQ",
+      "difficulty": "hard",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "An 8-bit two's-complement adder computes 0x7F + 0x01. Let Z, S, V and C be the zero, sign, overflow and carry-out flags respectively. Which set of flags is produced?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"5\" data-type=\"MCQ\" data-difficulty=\"hard\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"adders-subtractors\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 5</span><span class=\"tag mcq\">MCQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">adders-subtractors</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">An 8-bit two's-complement adder computes <code class=\"mm\">0x7F + 0x01</code>. Let <code class=\"mm\">Z</code>, <code class=\"mm\">S</code>, <code class=\"mm\">V</code> and <code class=\"mm\">C</code> be the zero, sign, overflow and carry-out flags respectively. Which set of flags is produced?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 1, V = 1, C = 0</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 1, V = 0, C = 1</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">Z = 1, S = 1, V = 1, C = 0</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 0, V = 1, C = 0</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "Z = 0, S = 1, V = 1, C = 0",
+        "Z = 0, S = 1, V = 0, C = 1",
+        "Z = 1, S = 1, V = 1, C = 0",
+        "Z = 0, S = 0, V = 1, C = 0"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 1, V = 1, C = 0</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 1, V = 0, C = 1</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">Z = 1, S = 1, V = 1, C = 0</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">Z = 0, S = 0, V = 1, C = 0</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four condition flags are independent: <code class=\"mm\">Z</code> tests the whole result, <code class=\"mm\">S</code> copies the MSB, <code class=\"mm\">V</code> is the signed-overflow indicator and <code class=\"mm\">C</code> is the carry out of the MSB.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">0x7F = 0111 1111</code> and <code class=\"mm\">0x01 = 0000 0001</code>.</li><li>Sum <code class=\"mm\">= 1000 0000 = 0x80</code>. The result is non-zero, so <code class=\"mm\">Z = 0</code>.</li><li>The MSB of the result is 1, so <code class=\"mm\">S = 1</code>.</li><li>Both operands are positive (MSB 0) but the result is negative (MSB 1): a positive-plus-positive overflow, so <code class=\"mm\">V = 1</code>.</li><li>Bit 7 produces no carry out of the 8-bit word (<code class=\"mm\">0111 1111 + 1</code> stays inside), so <code class=\"mm\">C = 0</code>.</li><li>Hence <code class=\"mm\">Z = 0, S = 1, V = 1, C = 0</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">Z = 0, S = 1, V = 1, C = 0</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Conflating overflow <code class=\"mm\">V</code> with carry-out <code class=\"mm\">C</code>. Signed overflow is detected by comparing operand and result signs (<code class=\"mm\">V = Cin ⊕ Cout</code> at the MSB); the carry out of the word is a separate, unsigned quantity.</p>"
+    },
+    {
+      "id": "DL-U2-Q06",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "multiplexers-demultiplexers",
+      "subtopic": "multiplexers-demultiplexers",
+      "subtopic_label": "Multiplexers & demultiplexers",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "How many select lines does a 16-to-1 multiplexer require?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"6\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"multiplexers-demultiplexers\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 6</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">multiplexers-demultiplexers</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">How many select lines does a 16-to-1 multiplexer require?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">2</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">3</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">4</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">5</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">2</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">3</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">4</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">5</span>"
+      ],
+      "answer": [
+        2
+      ],
+      "answer_display": "Option (C)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An <code class=\"mm\">m</code>-to-1 multiplexer needs <code class=\"mm\">⌈log2 m⌉</code> select lines.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">m = 16</code>, so select lines <code class=\"mm\">= log2 16 = 4</code>.</li><li>With 4 select lines there are <code class=\"mm\">2^4 = 16</code> distinct address patterns, exactly one per data input.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 select lines (option C).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the number of data inputs with the number of select lines. 16 data lines are addressed by 4 select lines, not 16.</p>"
+    },
+    {
+      "id": "DL-U2-Q07",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "multiplexers-demultiplexers",
+      "subtopic": "multiplexers-demultiplexers",
+      "subtopic_label": "Multiplexers & demultiplexers",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Using only an 8-to-1 multiplexer whose data inputs are tied to 0 or 1, any Boolean function of how many variables can be implemented?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"7\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"multiplexers-demultiplexers\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 7</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">multiplexers-demultiplexers</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">Using only an 8-to-1 multiplexer whose data inputs are tied to 0 or 1, any Boolean function of how many variables can be implemented?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">2</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">3</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">4</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">8</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">2</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">3</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">4</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">8</span>"
+      ],
+      "answer": [
+        1
+      ],
+      "answer_display": "Option (B)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A <code class=\"mm\">2^n</code>-to-1 multiplexer used with constants on its data inputs is a direct lookup table for any <code class=\"mm\">n</code>-variable function.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>An 8-to-1 multiplexer has 8 data inputs and 3 select lines.</li><li>Its truth table for a 3-variable function has <code class=\"mm\">2^3 = 8</code> rows, one per data input.</li><li>Tying each data input to 0 or 1 reproduces that truth table exactly, so any 3-variable function is realisable.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3 variables (option B).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 8 by reading the multiplexer size as the variable count. The variable count is the number of select lines, <code class=\"mm\">log2 8 = 3</code>.</p>"
+    },
+    {
+      "id": "DL-U2-Q08",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "multiplexers-demultiplexers",
+      "subtopic": "multiplexers-demultiplexers",
+      "subtopic_label": "Multiplexers & demultiplexers",
+      "type": "NAT",
+      "difficulty": "medium",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "What is the minimum number of 2-to-1 multiplexers required to construct a 16-to-1 multiplexer?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"8\" data-type=\"NAT\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"multiplexers-demultiplexers\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 8</span><span class=\"tag nat\">NAT</span><span class=\"tag medium\">medium</span><span class=\"tag src\">multiplexers-demultiplexers</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><div class=\"qtext\">What is the minimum number of 2-to-1 multiplexers required to construct a 16-to-1 multiplexer?</div><div class=\"natrow\"><label style=\"font-size:13.5px;color:var(--muted)\">Your answer:</label><input aria-label=\"Numerical answer for question 8\" autocomplete=\"off\" class=\"natinput\" data-n=\"8\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer.</div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [],
+      "options_html": [],
+      "answer": [
+        15
+      ],
+      "answer_display": "15",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A <code class=\"mm\">2^n</code>-to-1 multiplexer built as a binary tree of 2-to-1 multiplexers needs <code class=\"mm\">2^n − 1</code> of them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Level 1 combines the 16 data inputs into 8 outputs, using 8 multiplexers.</li><li>Level 2 combines 8 into 4, using 4 multiplexers.</li><li>Level 3 combines 4 into 2, using 2 multiplexers.</li><li>Level 4 combines 2 into 1, using 1 multiplexer.</li><li>Total <code class=\"mm\">= 8 + 4 + 2 + 1 = 15 = 16 − 1</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 15 multiplexers.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 16 (one per data line) or 4 (one per level). A binary tree of <code class=\"mm\">N</code> leaves always has exactly <code class=\"mm\">N − 1</code> internal nodes.</p>"
+    },
+    {
+      "id": "DL-U2-Q09",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "multiplexers-demultiplexers",
+      "subtopic": "multiplexers-demultiplexers",
+      "subtopic_label": "Multiplexers & demultiplexers",
+      "type": "MSQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Which of the following statements about multiplexers are TRUE?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"9\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"multiplexers-demultiplexers\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 9</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">multiplexers-demultiplexers</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about multiplexers are TRUE?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A 4-to-1 multiplexer with data inputs tied to 0 or 1 can realise any Boolean function of two variables.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">A <code class=\"mm\">2^n</code>-to-1 multiplexer with <code class=\"mm\">n</code> select lines can realise any Boolean function of <code class=\"mm\">n</code> variables without extra gates.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A 4-to-1 multiplexer has 4 select lines.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A multiplexer can be used as a universal logic element.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "A 4-to-1 multiplexer with data inputs tied to 0 or 1 can realise any Boolean function of two variables.",
+        "A 2^n-to-1 multiplexer with n select lines can realise any Boolean function of n variables without extra gates.",
+        "A 4-to-1 multiplexer has 4 select lines.",
+        "A multiplexer can be used as a universal logic element."
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">A 4-to-1 multiplexer with data inputs tied to 0 or 1 can realise any Boolean function of two variables.</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">A <code class=\"mm\">2^n</code>-to-1 multiplexer with <code class=\"mm\">n</code> select lines can realise any Boolean function of <code class=\"mm\">n</code> variables without extra gates.</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">A 4-to-1 multiplexer has 4 select lines.</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">A multiplexer can be used as a universal logic element.</span>"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "answer_display": "Options (A), (B), (D)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A multiplexer with constant data inputs is a truth-table lookup: the select lines are the variables and the data inputs are the function values.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Statement A is true: a 2-variable truth table has 4 rows, matching the 4 data inputs of a 4-to-1 multiplexer.</li><li>Statement B is true by the same argument: <code class=\"mm\">n</code> select lines address <code class=\"mm\">2^n</code> data inputs, which is exactly the number of rows of an <code class=\"mm\">n</code>-variable truth table.</li><li>Statement C is false. A 4-to-1 multiplexer has <code class=\"mm\">log2 4 = 2</code> select lines and 4 data inputs.</li><li>Statement D is true. Because it can realise any Boolean function with suitable data inputs, a multiplexer is a universal logic module.</li><li>Correct set: A, B and D.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options A, B and D are correct; C is false.</span></p><p class=\"row\"><b>Common misconception.</b> Believing the multiplexer size equals the number of select lines. The size counts data inputs; the select lines are <code class=\"mm\">log2</code> of that.</p>"
+    },
+    {
+      "id": "DL-U2-Q10",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "multiplexers-demultiplexers",
+      "subtopic": "multiplexers-demultiplexers",
+      "subtopic_label": "Multiplexers & demultiplexers",
+      "type": "MCQ",
+      "difficulty": "hard",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "The function f(A,B,C) = Σm(1,2,4,7) is implemented on an 8-to-1 multiplexer with A, B, C connected to S2, S1, S0 respectively and data inputs D0 … D7 tied to 0 or 1. Which assignment of D7 D6 D5 D4 D3 D2 D1 D0 is correct?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"10\" data-type=\"MCQ\" data-difficulty=\"hard\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"multiplexers-demultiplexers\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 10</span><span class=\"tag mcq\">MCQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">multiplexers-demultiplexers</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">The function <code class=\"mm\">f(A,B,C) = Σm(1,2,4,7)</code> is implemented on an 8-to-1 multiplexer with <code class=\"mm\">A</code>, <code class=\"mm\">B</code>, <code class=\"mm\">C</code> connected to <code class=\"mm\">S2</code>, <code class=\"mm\">S1</code>, <code class=\"mm\">S0</code> respectively and data inputs <code class=\"mm\">D0 … D7</code> tied to 0 or 1. Which assignment of <code class=\"mm\">D7 D6 D5 D4 D3 D2 D1 D0</code> is correct?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">10010110</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">01101001</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">10101010</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">01011010</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "10010110",
+        "01101001",
+        "10101010",
+        "01011010"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">10010110</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">01101001</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">10101010</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">01011010</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With <code class=\"mm\">A</code> on the most significant select line, data input <code class=\"mm\">Di</code> is selected when <code class=\"mm\">ABC = i</code>, so <code class=\"mm\">Di</code> must equal the function value at minterm <code class=\"mm\">i</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The minterms present are 1 (<code class=\"mm\">001</code>), 2 (<code class=\"mm\">010</code>), 4 (<code class=\"mm\">100</code>) and 7 (<code class=\"mm\">111</code>). These are exactly the 3-bit patterns with an odd number of 1s, so <code class=\"mm\">f = A ⊕ B ⊕ C</code>.</li><li>The select inputs are <code class=\"mm\">S2 = A</code>, <code class=\"mm\">S1 = B</code>, <code class=\"mm\">S0 = C</code>, so <code class=\"mm\">Di</code> is chosen when <code class=\"mm\">ABC</code> equals the binary value <code class=\"mm\">i</code>.</li><li>Therefore <code class=\"mm\">Di = 1</code> for <code class=\"mm\">i ∈ {1, 2, 4, 7}</code> and <code class=\"mm\">Di = 0</code> for <code class=\"mm\">i ∈ {0, 3, 5, 6}</code>.</li><li>Reading from <code class=\"mm\">D7</code> down to <code class=\"mm\">D0</code>: <code class=\"mm\">1, 0, 0, 1, 0, 1, 1, 0</code>, i.e. <code class=\"mm\">10010110</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">10010110</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Reversing the select-line significance, e.g. wiring <code class=\"mm\">C</code> to <code class=\"mm\">S2</code>. That produces the bit-reversed answer <code class=\"mm\">01101001</code>, which is a plausible-looking distractor.</p>"
+    },
+    {
+      "id": "DL-U2-Q11",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "decoders-encoders",
+      "subtopic": "decoders-encoders",
+      "subtopic_label": "Decoders & encoders",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A 3-to-8 decoder has active-high outputs and inputs A B C with A the most significant bit. If A B C = 101, which output line is HIGH?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"11\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"decoders-encoders\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 11</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">decoders-encoders</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A 3-to-8 decoder has active-high outputs and inputs <code class=\"mm\">A B C</code> with <code class=\"mm\">A</code> the most significant bit. If <code class=\"mm\">A B C = 101</code>, which output line is HIGH?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">O3</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">O5</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">O6</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">O7</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "O3",
+        "O5",
+        "O6",
+        "O7"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">O3</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">O5</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">O6</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">O7</code></span>"
+      ],
+      "answer": [
+        1
+      ],
+      "answer_display": "Option (B)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A decoder asserts the output line whose index equals the binary value on its inputs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">ABC = 101</code> in binary equals decimal <code class=\"mm\">1·4 + 0·2 + 1·1 = 5</code>.</li><li>An active-high decoder drives only the line matching that index, so <code class=\"mm\">O5 = 1</code> and all others are 0.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">O5</code> (option B).</span></p><p class=\"row\"><b>Common misconception.</b> Reading <code class=\"mm\">101</code> as decimal 101, or treating <code class=\"mm\">C</code> as the most significant bit and getting <code class=\"mm\">O6</code>.</p>"
+    },
+    {
+      "id": "DL-U2-Q12",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "decoders-encoders",
+      "subtopic": "decoders-encoders",
+      "subtopic_label": "Decoders & encoders",
+      "type": "NAT",
+      "difficulty": "easy",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "What is the minimum number of 3-to-8 decoders with enable inputs required to build a 5-to-32 decoder?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"12\" data-type=\"NAT\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"decoders-encoders\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 12</span><span class=\"tag nat\">NAT</span><span class=\"tag easy\">easy</span><span class=\"tag src\">decoders-encoders</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><div class=\"qtext\">What is the minimum number of 3-to-8 decoders with enable inputs required to build a 5-to-32 decoder?</div><div class=\"natrow\"><label style=\"font-size:13.5px;color:var(--muted)\">Your answer:</label><input aria-label=\"Numerical answer for question 12\" autocomplete=\"off\" class=\"natinput\" data-n=\"12\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer.</div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [],
+      "options_html": [],
+      "answer": [
+        4
+      ],
+      "answer_display": "4",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A larger decoder is built by using the extra input bits to select among smaller decoders through their enable inputs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The 5 inputs split into 2 high-order bits and 3 low-order bits.</li><li>The 3 low-order bits address one of the 8 outputs inside a single 3-to-8 decoder.</li><li>The 2 high-order bits must choose among <code class=\"mm\">2^2 = 4</code> such decoders, each producing 8 outputs, giving <code class=\"mm\">4 × 8 = 32</code> outputs.</li><li>So 4 decoders are needed, each enabled by a distinct combination of the 2 high-order bits.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 decoders.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 8 by dividing 32 by 4, or 5 by confusing input bits with decoder count. The count is <code class=\"mm\">2^(input bits − 3) = 2^2 = 4</code>.</p>"
+    },
+    {
+      "id": "DL-U2-Q13",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "decoders-encoders",
+      "subtopic": "decoders-encoders",
+      "subtopic_label": "Decoders & encoders",
+      "type": "MCQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A 3-to-8 decoder has active-high outputs O0 … O7 and inputs A B C with A the most significant bit. A single OR gate is used to realise f(A,B,C) = Σm(1,2,6,7). Which decoder outputs must feed the OR gate?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"13\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"decoders-encoders\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 13</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">decoders-encoders</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A 3-to-8 decoder has active-high outputs <code class=\"mm\">O0 … O7</code> and inputs <code class=\"mm\">A B C</code> with <code class=\"mm\">A</code> the most significant bit. A single OR gate is used to realise <code class=\"mm\">f(A,B,C) = Σm(1,2,6,7)</code>. Which decoder outputs must feed the OR gate?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">O1, O2, O6, O7</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">O1, O2, O5, O6</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">O0, O3, O6, O7</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">O1, O4, O6, O7</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "O1, O2, O6, O7",
+        "O1, O2, O5, O6",
+        "O0, O3, O6, O7",
+        "O1, O4, O6, O7"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">O1, O2, O6, O7</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">O1, O2, O5, O6</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">O0, O3, O6, O7</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">O1, O4, O6, O7</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A decoder generates every minterm; OR-ing the outputs for the minterms of a function realises its canonical sum-of-products.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The decoder output <code class=\"mm\">Oi</code> is 1 exactly when the input equals the binary value <code class=\"mm\">i</code>, i.e. <code class=\"mm\">Oi</code> is minterm <code class=\"mm\">mi</code>.</li><li>The function is the sum of minterms 1, 2, 6 and 7.</li><li>A sum of minterms is realised by OR-ing precisely those decoder outputs: <code class=\"mm\">f = O1 + O2 + O6 + O7</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">O1, O2, O6, O7</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Taking the complement of the minterm list, or assuming a decoder with active-low outputs. With active-low outputs the same function would need a NAND gate instead of an OR gate.</p>"
+    },
+    {
+      "id": "DL-U2-Q14",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "decoders-encoders",
+      "subtopic": "decoders-encoders",
+      "subtopic_label": "Decoders & encoders",
+      "type": "MSQ",
+      "difficulty": "hard",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Which of the following statements about priority encoders are TRUE?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"14\" data-type=\"MSQ\" data-difficulty=\"hard\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"decoders-encoders\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 14</span><span class=\"tag msq\">MSQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">decoders-encoders</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about priority encoders are TRUE?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">An 8-to-3 priority encoder produces a 3-bit output code and, in a complete design, a valid-output indicator <code class=\"mm\">V</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">In a 4-to-2 priority encoder in which <code class=\"mm\">I3</code> has the highest priority, the input <code class=\"mm\">I3 I2 I1 I0 = 1001</code> produces the output <code class=\"mm\">11</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A priority encoder produces a valid output only when exactly one input line is asserted.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A plain (non-priority) 8-to-3 encoder has undefined behaviour when more than one input line is asserted.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "An 8-to-3 priority encoder produces a 3-bit output code and, in a complete design, a valid-output indicator V.",
+        "In a 4-to-2 priority encoder in which I3 has the highest priority, the input I3 I2 I1 I0 = 1001 produces the output 11.",
+        "A priority encoder produces a valid output only when exactly one input line is asserted.",
+        "A plain (non-priority) 8-to-3 encoder has undefined behaviour when more than one input line is asserted."
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">An 8-to-3 priority encoder produces a 3-bit output code and, in a complete design, a valid-output indicator <code class=\"mm\">V</code>.</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">In a 4-to-2 priority encoder in which <code class=\"mm\">I3</code> has the highest priority, the input <code class=\"mm\">I3 I2 I1 I0 = 1001</code> produces the output <code class=\"mm\">11</code>.</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">A priority encoder produces a valid output only when exactly one input line is asserted.</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">A plain (non-priority) 8-to-3 encoder has undefined behaviour when more than one input line is asserted.</span>"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "answer_display": "Options (A), (B), (D)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A priority encoder resolves simultaneous assertions by encoding the highest-priority active input, so it is defined for every input combination.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Statement A is true. The <code class=\"mm\">V</code> line distinguishes the all-zero input from the case where <code class=\"mm\">I0</code> alone is asserted, since both would otherwise encode as <code class=\"mm\">000</code>.</li><li>Statement B is true. <code class=\"mm\">I3</code> is the highest-priority line and it is asserted, so the output encodes index 3, which is <code class=\"mm\">11</code>; the asserted <code class=\"mm\">I0</code> is ignored.</li><li>Statement C is false. That is the defining weakness of a plain encoder; a priority encoder is precisely the fix, and it accepts any number of asserted inputs.</li><li>Statement D is true. A plain encoder assumes exactly one active input, so multiple assertions produce a meaningless combination of output bits.</li><li>Correct set: A, B and D.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options A, B and D are correct; C is false.</span></p><p class=\"row\"><b>Common misconception.</b> Confusing a priority encoder with a plain encoder. A priority encoder is defined for all <code class=\"mm\">2^n</code> input patterns; only a plain encoder is restricted to one-hot inputs.</p>"
+    },
+    {
+      "id": "DL-U2-Q15",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "decoders-encoders",
+      "subtopic": "decoders-encoders",
+      "subtopic_label": "Decoders & encoders",
+      "type": "NAT",
+      "difficulty": "medium",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "An 8-to-3 priority encoder has inputs I7 … I0 with I7 the highest priority. If I6 = 1, I3 = 1 and I1 = 1 while every other input is 0, what is the decimal value of the 3-bit output?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"15\" data-type=\"NAT\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"decoders-encoders\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 15</span><span class=\"tag nat\">NAT</span><span class=\"tag medium\">medium</span><span class=\"tag src\">decoders-encoders</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><div class=\"qtext\">An 8-to-3 priority encoder has inputs <code class=\"mm\">I7 … I0</code> with <code class=\"mm\">I7</code> the highest priority. If <code class=\"mm\">I6 = 1</code>, <code class=\"mm\">I3 = 1</code> and <code class=\"mm\">I1 = 1</code> while every other input is 0, what is the decimal value of the 3-bit output?</div><div class=\"natrow\"><label style=\"font-size:13.5px;color:var(--muted)\">Your answer:</label><input aria-label=\"Numerical answer for question 15\" autocomplete=\"off\" class=\"natinput\" data-n=\"15\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer.</div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [],
+      "options_html": [],
+      "answer": [
+        6
+      ],
+      "answer_display": "6",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A priority encoder outputs the index of the highest-numbered asserted input.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The asserted inputs are <code class=\"mm\">I1</code>, <code class=\"mm\">I3</code> and <code class=\"mm\">I6</code>.</li><li>Priority runs from <code class=\"mm\">I7</code> down to <code class=\"mm\">I0</code>, so the highest-numbered asserted line wins: <code class=\"mm\">I6</code>.</li><li>The output encodes index 6 as a 3-bit binary value, <code class=\"mm\">110</code>, which is decimal 6.</li><li>The asserted <code class=\"mm\">I3</code> and <code class=\"mm\">I1</code> are masked by the higher-priority <code class=\"mm\">I6</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 6 (binary <code class=\"mm\">110</code>).</span></p><p class=\"row\"><b>Common misconception.</b> OR-ing the indices (<code class=\"mm\">1 + 3 + 6 = 10</code>, truncated) or picking the lowest index. Priority encoders select the highest-priority line and ignore the rest.</p>"
+    },
+    {
+      "id": "DL-U2-Q16",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "code-converters",
+      "subtopic": "code-converters",
+      "subtopic_label": "Code converters",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "The BCD digit 0101 is represented in excess-3 code as:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"16\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"code-converters\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 16</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">code-converters</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">The BCD digit <code class=\"mm\">0101</code> is represented in excess-3 code as:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">0111</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">1000</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">1001</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">1010</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "0111",
+        "1000",
+        "1001",
+        "1010"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">0111</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">1000</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">1001</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">1010</code></span>"
+      ],
+      "answer": [
+        1
+      ],
+      "answer_display": "Option (B)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Excess-3 adds 3 to the BCD value before encoding, so the code word equals the digit plus three.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">0101</code> in BCD is the digit 5.</li><li>Excess-3 code <code class=\"mm\">= BCD + 3 = 5 + 3 = 8</code>.</li><li>8 in 4-bit binary is <code class=\"mm\">1000</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">1000</code> (option B).</span></p><p class=\"row\"><b>Common misconception.</b> Subtracting 3 instead of adding it, which gives <code class=\"mm\">0010</code>. Excess-3 always adds, never subtracts.</p>"
+    },
+    {
+      "id": "DL-U2-Q17",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "code-converters",
+      "subtopic": "code-converters",
+      "subtopic_label": "Code converters",
+      "type": "MCQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "The 4-bit binary number 1101 converted to Gray code is:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"17\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"code-converters\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 17</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">code-converters</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">The 4-bit binary number <code class=\"mm\">1101</code> converted to Gray code is:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">1011</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">1110</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">1010</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">1100</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "1011",
+        "1110",
+        "1010",
+        "1100"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">1011</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">1110</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">1010</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">1100</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Binary-to-Gray: keep the MSB unchanged and set each further Gray bit to the XOR of the adjacent binary bits.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write <code class=\"mm\">b3 b2 b1 b0 = 1 1 0 1</code>.</li><li><code class=\"mm\">g3 = b3 = 1</code>.</li><li><code class=\"mm\">g2 = b3 ⊕ b2 = 1 ⊕ 1 = 0</code>.</li><li><code class=\"mm\">g1 = b2 ⊕ b1 = 1 ⊕ 0 = 1</code>.</li><li><code class=\"mm\">g0 = b1 ⊕ b0 = 0 ⊕ 1 = 1</code>.</li><li>Gray code <code class=\"mm\">= 1011</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">1011</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> XOR-ing the wrong neighbour (e.g. <code class=\"mm\">gi = bi ⊕ b(i−1)</code> instead of <code class=\"mm\">bi ⊕ b(i+1)</code>), which reverses the direction of the conversion and yields <code class=\"mm\">1110</code>.</p>"
+    },
+    {
+      "id": "DL-U2-Q18",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "code-converters",
+      "subtopic": "code-converters",
+      "subtopic_label": "Code converters",
+      "type": "NAT",
+      "difficulty": "medium",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "The 4-bit Gray code word 1110 represents which decimal value in binary?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"18\" data-type=\"NAT\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"code-converters\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 18</span><span class=\"tag nat\">NAT</span><span class=\"tag medium\">medium</span><span class=\"tag src\">code-converters</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><div class=\"qtext\">The 4-bit Gray code word <code class=\"mm\">1110</code> represents which decimal value in binary?</div><div class=\"natrow\"><label style=\"font-size:13.5px;color:var(--muted)\">Your answer:</label><input aria-label=\"Numerical answer for question 18\" autocomplete=\"off\" class=\"natinput\" data-n=\"18\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer.</div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [],
+      "options_html": [],
+      "answer": [
+        11
+      ],
+      "answer_display": "11",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Gray-to-binary: the MSB is copied, then each binary bit is the XOR of the previous binary bit with the current Gray bit.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write <code class=\"mm\">g3 g2 g1 g0 = 1 1 1 0</code>.</li><li><code class=\"mm\">b3 = g3 = 1</code>.</li><li><code class=\"mm\">b2 = b3 ⊕ g2 = 1 ⊕ 1 = 0</code>.</li><li><code class=\"mm\">b1 = b2 ⊕ g1 = 0 ⊕ 1 = 1</code>.</li><li><code class=\"mm\">b0 = b1 ⊕ g0 = 1 ⊕ 0 = 1</code>.</li><li>Binary <code class=\"mm\">= 1011</code>, which is <code class=\"mm\">8 + 2 + 1 = 11</code> in decimal.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 11 (binary <code class=\"mm\">1011</code>).</span></p><p class=\"row\"><b>Common misconception.</b> Applying the binary-to-Gray rule in the wrong direction, which would give <code class=\"mm\">1001 = 9</code>. The two conversions use opposite XOR neighbours and are not symmetric.</p>"
+    },
+    {
+      "id": "DL-U2-Q19",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "code-converters",
+      "subtopic": "code-converters",
+      "subtopic_label": "Code converters",
+      "type": "MSQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Which of the following decimal codes are self-complementing?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"19\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"code-converters\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 19</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">code-converters</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following decimal codes are self-complementing?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">2421 code</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Excess-3 code</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">84-2-1 code</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">8421 BCD</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "2421 code",
+        "Excess-3 code",
+        "84-2-1 code",
+        "8421 BCD"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">2421 code</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">Excess-3 code</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">84-2-1 code</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">8421 BCD</span>"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "answer_display": "Options (A), (B), (C)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A code is self-complementing when the 9's complement of a digit is obtained simply by complementing all four bits.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>2421: digit <code class=\"mm\">d</code> plus digit <code class=\"mm\">9 − d</code> sums bit-wise to 15 in every position, so complementing the bits gives the 9's complement. Self-complementing.</li><li>Excess-3 is 8421 shifted by 3, so <code class=\"mm\">d + 3</code> and <code class=\"mm\">(9 − d) + 3 = 12 − d</code> are bit-wise complements within 4 bits. Self-complementing.</li><li>84-2-1 weights satisfy the same condition, <code class=\"mm\">d</code> and <code class=\"mm\">9 − d</code> giving bit-wise complementary patterns. Self-complementing.</li><li>8421 BCD is not self-complementing: complementing the bits of <code class=\"mm\">0</code> (<code class=\"mm\">0000</code>) gives <code class=\"mm\">1111</code>, which is not a valid BCD digit at all.</li><li>Correct set: A, B and C.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options A, B and C are correct; 8421 BCD is not self-complementing.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming every weighted code is self-complementing. The property depends on the specific weight set, and plain 8421 fails it outright.</p>"
+    },
+    {
+      "id": "DL-U2-Q20",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "code-converters",
+      "subtopic": "code-converters",
+      "subtopic_label": "Code converters",
+      "type": "MCQ",
+      "difficulty": "hard",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "In a 4-bit BCD-to-excess-3 converter with inputs A B C D (A most significant), the input combinations 1010 to 1111 are don't-cares. The minimal sum-of-products expression for the most significant output bit W is:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"20\" data-type=\"MCQ\" data-difficulty=\"hard\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"code-converters\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 20</span><span class=\"tag mcq\">MCQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">code-converters</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In a 4-bit BCD-to-excess-3 converter with inputs <code class=\"mm\">A B C D</code> (<code class=\"mm\">A</code> most significant), the input combinations <code class=\"mm\">1010</code> to <code class=\"mm\">1111</code> are don't-cares. The minimal sum-of-products expression for the most significant output bit <code class=\"mm\">W</code> is:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"20\" data-typ=\"MCQ\" name=\"q20\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">A + BC + BD</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"20\" data-typ=\"MCQ\" name=\"q20\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">A + B + CD</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"20\" data-typ=\"MCQ\" name=\"q20\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">A + C + BD</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"20\" data-typ=\"MCQ\" name=\"q20\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">A + BC + CD</code></span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "A + BC + BD",
+        "A + B + CD",
+        "A + C + BD",
+        "A + BC + CD"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">A + BC + BD</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">A + B + CD</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">A + C + BD</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\"><code class=\"mm\">A + BC + CD</code></span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Excess-3 adds 3 to the BCD digit, so the MSB of the result is 1 for every input of 5 or more, and the invalid inputs are don't-cares that can be grouped freely.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">W</code> is the MSB of <code class=\"mm\">BCD + 3</code>, so <code class=\"mm\">W = 1</code> for inputs 5, 6, 7, 8, 9; inputs 10 to 15 are don't-cares.</li><li>Minterms of <code class=\"mm\">W</code>: 5 (<code class=\"mm\">0101</code>), 6 (<code class=\"mm\">0110</code>), 7 (<code class=\"mm\">0111</code>), 8 (<code class=\"mm\">1000</code>), 9 (<code class=\"mm\">1001</code>), plus don't-cares 10 to 15.</li><li>Group <code class=\"mm\">1000</code>, <code class=\"mm\">1001</code> and all the don't-cares with <code class=\"mm\">A = 1</code> into one implicant: the term <code class=\"mm\">A</code>.</li><li>Remaining uncovered minterms: 5, 6, 7. Grouping 6 and 7 with don't-cares 14 and 15 gives <code class=\"mm\">BC</code>.</li><li>Minterm 5 (<code class=\"mm\">0101</code>) is still uncovered; grouping it with don't-cares 7, 13 and 15 gives <code class=\"mm\">BD</code>.</li><li><code class=\"mm\">W = A + BC + BD</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">A + BC + BD</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Ignoring the don't-cares and minimising over only the true minterms, which yields a larger expression. The invalid BCD inputs are precisely the freedom that makes <code class=\"mm\">A</code> a legal implicant.</p>"
+    },
+    {
+      "id": "DL-U2-Q21",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "hazard-and-glitches",
+      "subtopic": "hazard-and-glitches",
+      "subtopic_label": "Hazards & glitches",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A static-1 hazard in a combinational circuit manifests as:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"21\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"hazard-and-glitches\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 21</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">hazard-and-glitches</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A static-1 hazard in a combinational circuit manifests as:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">a momentary 0 on an output that should remain 1 while a single input changes</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">a momentary 1 on an output that should remain 0 while a single input changes</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">the output changing more than once when it should change exactly once</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">a permanent incorrect steady-state value</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "a momentary 0 on an output that should remain 1 while a single input changes",
+        "a momentary 1 on an output that should remain 0 while a single input changes",
+        "the output changing more than once when it should change exactly once",
+        "a permanent incorrect steady-state value"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">a momentary 0 on an output that should remain 1 while a single input changes</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">a momentary 1 on an output that should remain 0 while a single input changes</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">the output changing more than once when it should change exactly once</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">a permanent incorrect steady-state value</span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Hazards are classified by what the output does when it is supposed to stay put: static-1 dips, static-0 spikes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>'Static' means the steady-state value before and after the input change is the same.</li><li>A static-1 hazard is a transient 0 while the output should hold at 1.</li><li>Option B describes a static-0 hazard, option C a dynamic hazard, and option D a stuck-at fault rather than a hazard.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: A momentary 0 on an output that should remain 1 (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Swapping static-1 and static-0. The number in the name is the value the output is supposed to hold, not the value it glitches to.</p>"
+    },
+    {
+      "id": "DL-U2-Q22",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "hazard-and-glitches",
+      "subtopic": "hazard-and-glitches",
+      "subtopic_label": "Hazards & glitches",
+      "type": "MCQ",
+      "difficulty": "hard",
+      "reference_category": "Original synthesis",
+      "source": "ORIGINAL_SYNTHESIS",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "The two-level sum-of-products realisation F = A'B' + AC' must be made free of static-1 hazards without changing the function. Which single additional product term achieves this?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"22\" data-type=\"MCQ\" data-difficulty=\"hard\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"hazard-and-glitches\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 22</span><span class=\"tag mcq\">MCQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">hazard-and-glitches</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">The two-level sum-of-products realisation <code class=\"mm\">F = A'B' + AC'</code> must be made free of static-1 hazards without changing the function. Which single additional product term achieves this?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">B'C'</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">BC'</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">A'C'</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">No additional term is needed</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "B'C'",
+        "BC'",
+        "A'C'",
+        "No additional term is needed"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\"><code class=\"mm\">B'C'</code></span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\"><code class=\"mm\">BC'</code></span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\"><code class=\"mm\">A'C'</code></span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">No additional term is needed</span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A static-1 hazard exists when two product terms are adjacent in the Karnaugh map but are covered by different implicants; adding their consensus term bridges the gap.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A'B'</code> covers minterms 0 (<code class=\"mm\">000</code>) and 1 (<code class=\"mm\">001</code>). <code class=\"mm\">AC'</code> covers 4 (<code class=\"mm\">100</code>) and 5 (<code class=\"mm\">101</code>).</li><li>Minterm 0 (<code class=\"mm\">000</code>) and minterm 4 (<code class=\"mm\">100</code>) are adjacent — they differ only in <code class=\"mm\">A</code> — yet they lie in different implicants. When <code class=\"mm\">B = C = 0</code> and <code class=\"mm\">A</code> switches, the output can dip: a static-1 hazard.</li><li>The consensus of <code class=\"mm\">A'B'</code> and <code class=\"mm\">AC'</code> is obtained by dropping the complementary literal pair <code class=\"mm\">A</code>/<code class=\"mm\">A'</code> and keeping the rest: <code class=\"mm\">B'C'</code>.</li><li><code class=\"mm\">B'C'</code> covers <code class=\"mm\">000</code>, <code class=\"mm\">001</code>, <code class=\"mm\">100</code>, <code class=\"mm\">101</code> — all already true minterms, so the function is unchanged and the hazard is removed.</li><li>Hence the required term is <code class=\"mm\">B'C'</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <code class=\"mm\">B'C'</code> (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Adding <code class=\"mm\">BC'</code> or <code class=\"mm\">A'C'</code>, which look symmetric but change the function or fail to bridge minterms 0 and 4. Only the consensus term preserves the function while covering the adjacency.</p>"
+    },
+    {
+      "id": "DL-U2-Q23",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "hazard-and-glitches",
+      "subtopic": "hazard-and-glitches",
+      "subtopic_label": "Hazards & glitches",
+      "type": "MCQ",
+      "difficulty": "medium",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "In a product-of-sums (POS) realisation, a static-0 hazard is eliminated by:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"23\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"hazard-and-glitches\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 23</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">hazard-and-glitches</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In a product-of-sums (POS) realisation, a static-0 hazard is eliminated by:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">adding a redundant sum term, namely the consensus of the two adjacent sum terms</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">adding a redundant product term covering the two adjacent minterms</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">adding inverters so that all paths have equal delay</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">nothing — POS realisations cannot contain hazards</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "adding a redundant sum term, namely the consensus of the two adjacent sum terms",
+        "adding a redundant product term covering the two adjacent minterms",
+        "adding inverters so that all paths have equal delay",
+        "nothing — POS realisations cannot contain hazards"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">adding a redundant sum term, namely the consensus of the two adjacent sum terms</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">adding a redundant product term covering the two adjacent minterms</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">adding inverters so that all paths have equal delay</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">nothing — POS realisations cannot contain hazards</span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Hazards are dual in the two standard forms: SOP needs a redundant product term, POS needs a redundant sum term.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A static-0 hazard appears in a POS circuit when two adjacent sum terms are covered by different clauses.</li><li>Adding the consensus of those two sum clauses keeps the function unchanged and holds the output at 0 across the transition.</li><li>Adding a product term is the SOP remedy, not the POS one; delay matching is not a structural guarantee.</li><li>Hence the remedy is the redundant consensus sum term.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Adding a redundant consensus sum term (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Carrying the SOP fix over to POS. The two forms are duals: products bridge SOP hazards, sums bridge POS hazards.</p>"
+    },
+    {
+      "id": "DL-U2-Q24",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "hazard-and-glitches",
+      "subtopic": "hazard-and-glitches",
+      "subtopic_label": "Hazards & glitches",
+      "type": "MSQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "Which of the following statements about hazards and glitches are TRUE?",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"24\" data-type=\"MSQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"hazard-and-glitches\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 24</span><span class=\"tag msq\">MSQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">hazard-and-glitches</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about hazards and glitches are TRUE?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A static-1 hazard produces a momentary 0 when the output should stay at 1.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Static-1 hazards in a two-level SOP circuit are removed by adding redundant consensus terms.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A two-level AND-OR implementation can never contain a static hazard.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A dynamic hazard produces several transitions on an output that should change exactly once.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "A static-1 hazard produces a momentary 0 when the output should stay at 1.",
+        "Static-1 hazards in a two-level SOP circuit are removed by adding redundant consensus terms.",
+        "A two-level AND-OR implementation can never contain a static hazard.",
+        "A dynamic hazard produces several transitions on an output that should change exactly once."
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">A static-1 hazard produces a momentary 0 when the output should stay at 1.</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">Static-1 hazards in a two-level SOP circuit are removed by adding redundant consensus terms.</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">A two-level AND-OR implementation can never contain a static hazard.</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">A dynamic hazard produces several transitions on an output that should change exactly once.</span>"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "answer_display": "Options (A), (B), (D)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Hazard classes are defined by the transient behaviour relative to the required steady-state behaviour.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Statement A is true by definition of a static-1 hazard.</li><li>Statement B is true: the consensus term covers the adjacency between two implicants, so the output holds while the input changes.</li><li>Statement C is false. Two-level AND-OR circuits are exactly where static-1 hazards arise, whenever two implicants are adjacent but not merged.</li><li>Statement D is true; a dynamic hazard shows multiple toggles instead of one clean transition.</li><li>Correct set: A, B and D.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options A, B and D are correct; C is false.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that fewer levels means fewer hazards. Two-level SOP is in fact the classic setting for static-1 hazards; that is why consensus terms exist.</p>"
+    },
+    {
+      "id": "DL-U2-Q25",
+      "subject": "digital-logic",
+      "subject_name": "Digital Logic",
+      "unit": 2,
+      "unit_number": 2,
+      "unit_slug": "combinational-circuits",
+      "unit_name": "Combinational Circuit Design",
+      "topic": "Combinational Circuit Design",
+      "sub": "hazard-and-glitches",
+      "subtopic": "hazard-and-glitches",
+      "subtopic_label": "Hazards & glitches",
+      "type": "MCQ",
+      "difficulty": "easy",
+      "reference_category": "Standard textbook",
+      "source": "STANDARD_TEXTBOOK",
+      "date": "2026-10-27",
+      "set": "Set 1 of 2",
+      "question": "A glitch in a combinational circuit is best described as:",
+      "question_html": "<div class=\"qcard hidden\" data-n=\"25\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"digital-logic\" data-unit=\"combinational-circuits\" data-unit-number=\"2\" data-subtopic=\"hazard-and-glitches\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 25</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">hazard-and-glitches</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A glitch in a combinational circuit is best described as:</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"25\" data-typ=\"MCQ\" name=\"q25\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">a temporary, unwanted output transition caused by unequal propagation delays along different paths</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"25\" data-typ=\"MCQ\" name=\"q25\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">a permanent stuck-at fault in a gate</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"25\" data-typ=\"MCQ\" name=\"q25\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">a race between two flip-flops in a sequential circuit</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"25\" data-typ=\"MCQ\" name=\"q25\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">a violation of the setup time of a flip-flop</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+      "options": [
+        "a temporary, unwanted output transition caused by unequal propagation delays along different paths",
+        "a permanent stuck-at fault in a gate",
+        "a race between two flip-flops in a sequential circuit",
+        "a violation of the setup time of a flip-flop"
+      ],
+      "options_html": [
+        "<span class=\"lbl\">A</span><span class=\"txt\">a temporary, unwanted output transition caused by unequal propagation delays along different paths</span>",
+        "<span class=\"lbl\">B</span><span class=\"txt\">a permanent stuck-at fault in a gate</span>",
+        "<span class=\"lbl\">C</span><span class=\"txt\">a race between two flip-flops in a sequential circuit</span>",
+        "<span class=\"lbl\">D</span><span class=\"txt\">a violation of the setup time of a flip-flop</span>"
+      ],
+      "answer": [
+        0
+      ],
+      "answer_display": "Option (A)",
+      "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A glitch is a timing artefact of reconvergent paths, not a manufacturing or logical fault.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A glitch is transient: it appears when an input changes and disappears once signals settle.</li><li>It is caused by two paths from the changed input to the output having different delays, so the output briefly reflects an intermediate state.</li><li>A stuck-at fault is permanent, a race concerns sequential elements, and a setup violation is a sequential timing constraint — none is a combinational glitch.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: A temporary unwanted output transition from unequal path delays (option A).</span></p><p class=\"row\"><b>Common misconception.</b> Treating a glitch as a fault to be repaired rather than a timing effect to be designed out. Glitches are correct logic with incorrect transient timing.</p>"
     }
   ]
 }
