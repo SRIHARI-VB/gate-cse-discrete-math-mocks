@@ -7,27 +7,98 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 2 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
+- **Databases · Unit 2 — SQL & Advanced Querying, Set 1 of 2**, 2026-10-26 → [`databases/sql-querying/gate_db_mock_2_2026-10-26.html`](databases/sql-querying/gate_db_mock_2_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: matrix operations (7) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (5)
-- Rotation: MODE A drew Engineering Mathematics at random from the 11 subjects. The bank read back
-  `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1 — under
-  `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1. This is Set 2 of 2;
-  25 + 25 = 50 closes the unit at the cap, and the next Engineering Mathematics run advances to `(0 + 1) mod 5` = Unit 2,
-  Linear Algebra: Eigenvalues & Vectors. No override was used and no second pass has started.
-- Previous test: **Databases · Unit 1 — ER Models & Relational Algebra, Set 2 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
+- Subtopics: DDL, DML & DCL (5) · nested & correlated subqueries (5) · aggregates, GROUP BY & HAVING (5) · joins & outer joins (5) · views, triggers & constraints (5)
+- Rotation: MODE A drew Databases at random from the 11 subjects (draw index 9 of 11). The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1 — exactly
+  `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
+  `(0 + 1) mod 5` = Unit 2, SQL & Advanced Querying. This is Set 1 of 2; 25 questions are banked, so a second
+  Databases run today would re-select Unit 2. No override was used and no second pass has started.
+- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 2 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 30 (13 Discrete Mathematics, 2 Algorithms, 2 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 750 (325 Discrete Mathematics, 50 Algorithms, 50 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
+| Papers published | 31 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
+| Questions in the subject banks | 775 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Databases → Unit 2 (SQL & Advanced Querying), Set 1 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (seed 1450085313,
+  draw index 9 of 11) and it gave **Databases**. The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of
+  2"}` with **50** questions banked on Unit 1. Since 50 >= `UNIT_QUESTION_CAP = 50`, step B3 failed on the cap and
+  step B4 advanced exactly one unit: `(index_of(1) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, SQL & Advanced
+  Querying**. This is Set 1 of 2 for the unit; a second Databases run today would re-select Unit 2, since 25 < 50 and
+  the unit is current for 0 days. No override was used and no second pass has started for this subject.
+- All 25 items are new: each question body was compared as an exact string against the 50 Unit 1 questions already in
+  `master_bank.json`; none repeats. Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium /
+  5 hard split, and marks total 15 × 1 + 10 × 2 = 35. Coverage is 5 / 5 / 5 / 5 / 5 across DDL–DML–DCL, nested and
+  correlated subqueries, aggregates with GROUP BY and HAVING, joins and outer joins, and views, triggers and
+  constraints, so all five subtopics are represented.
+- **Every answer that can be executed was recomputed by running it, not by hand.** The schema the questions refer to —
+  `student(roll, name, dept, cgpa)`, `course(cid, title, credits)`, `enroll(roll, cid, marks)` with two ungraded
+  enrollments — was built in SQLite and each query was run against it. Confirmed: the two-step DML trace leaves **4**
+  students (rolls 1–4); `NOT EXISTS` returns only roll **6**, while the `NOT IN` over graded rows returns 5 and 6 and
+  the `<> ALL` over ungraded rows returns 1, 3, 4, 6; `NOT IN` over a subquery containing a NULL returns **no rows**
+  even for a value that matches nothing; the doubly nested correlated count returns **1** student (roll 4, whose
+  CS101 mark 95 exceeds 91.5 and whose CS102 mark 80 exceeds 73); `COUNT(*)`/`COUNT(marks)` gives **(8, 6)**; the
+  `HAVING COUNT(*) > 1` query returns **2** rows, CSE 8.8 and ECE 7.5; `AVG(marks)` for CS101 is **91.5** (the
+  NULL-as-zero error gives 61); the left join returns **9** rows against 8 for the inner join; the Cartesian product
+  is **18**; the anti-join returns **1**; the three-table CSE/credits join returns **6**; and the aggregate view
+  yields **2** groups with n > 1. The verifier ran **38 checks, all passing**, including the structural ones
+  (25 questions, 15/5/5, 10/10/5, 35 marks, 5 questions per subtopic, one answer per MCQ, at least two per MSQ).
+- The conceptual items were settled by the standard rather than by taste: `TRUNCATE` is DDL; `ON DELETE SET NULL`
+  keeps the child rows and nulls the key; a `CHECK` rejects only FALSE, so UNKNOWN passes; the SQL standard permits
+  several NULLs in a `UNIQUE` column (SQL Server is the known deviation); `= ANY` is `IN` and `> ALL` over an empty
+  subquery is vacuously true; `NOT IN` and `NOT EXISTS` diverge exactly when a NULL can appear; `AVG` divides by
+  `COUNT(col)`; an aggregate query without `GROUP BY` always returns one row; a predicate on the NULL-extended side in
+  `WHERE` turns a left join into an inner join; and `CHECK` is a table constraint, not a view constraint.
+- No `GATE_PYQ_VARIATION` item ships: no SQL previous-year question has been verified against an official paper and
+  answer key for this unit, so none is claimed and `verified_pyqs` for this subject stays at the single Unit 1 entry.
+  Every item is `STANDARD_TEXTBOOK` (13) or `ORIGINAL_SYNTHESIS` (12). The About tab and the Question Bank tab both
+  say so.
+- Unit 2 had no earlier paper, so nothing was archived: `databases/sql-querying/` holds exactly one current paper and
+  the Databases Unit 1 paper was not touched. No root copy was written and no unit folder holds two current papers.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. After
+  normalising the title, the header brand and sub-line, the candidate block, the tab labels, the meta strip,
+  `#qhost`, the payload, the Question Bank pane and the About pane, the remaining bytes are **identical to the
+  Databases Unit 1 Set 2 paper — 27 582 bytes on both sides**. The `<style>` block and the exam `<script>` are
+  byte-for-byte identical (9 428 bytes), and the `:root` block (521 bytes) matches `design-tokens.css` and
+  `index.html` exactly. No new literal hex value was introduced: the paper's hex values outside `:root` are a subset
+  of the shell's.
+- The paper was exercised in a jsdom harness before shipping (**64 checks, all passing**): nothing is revealed
+  pre-submit (no solution text or `Answer:` string in the test pane, every `.sol` empty and hidden, no option mark, no
+  mark text, key tab disabled, key pane empty, summary hidden, timer at 60:00); the palette reaches
+  `na` / `ans` / `mrk` / `amr` / `cur` and falls back correctly on Clear Response; all 25 answered correctly scores
+  **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key entries; a paper with one correct MCQ and
+  one MSQ one option short scores **1 / 35** with 1 correct, 1 wrong and 23 skipped, confirming an MSQ pays nothing
+  unless the exact option set is chosen; an MSQ with one extra wrong option also pays nothing; a blank paper scores
+  **0 / 35** with 25 skipped; each tab shows exactly one view; every card carries `data-subject`, `data-unit`,
+  `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; and all five subtopics appear.
+- The Question Bank tab inside the paper lists the **50** solved questions of Unit 1 under four subtopic accordions,
+  every solution collapsed, and no active question is repeated there. `index.html` holds all **775** questions; the
+  new Databases Unit 2 card reads "25 solved" with five subtopic pills and one "Practise Set 1 →" button, and its
+  data block was updated in place — the record was appended so the newest paper renders first — with the derived
+  header strings recomputed from it: 59 units, 775 solved, 31 sets published, 775 records, 255 subtopics. The portal
+  harness (**37 checks, all passing**) confirms 17 test cards with the new one first, every `href` resolving, and
+  every per-subject count matching its `master_bank.json`.
+- **A pre-existing gap in `index.html` was repaired.** The Databases Unit 1 card listed only Set 1 in its launch row
+  even though the bank holds the 50 questions of both sets, so Set 2 had no "Practise" button. Set 2 was added,
+  bringing the card into line with the other subjects' cards.
+- **One known deviation, not introduced by this run.** Two archived papers —
+  `discrete-mathematics/proof-techniques/archive/gate_dm_mock_16_2026-10-25_run1.html` and `..._run2.html` — carry a
+  476-byte `:root` block from an older shell with different token names (`--purple`, `--accent`, `--green-ink`) and a
+  13 449-byte `<style>` block. Their content is frozen and their CSS references their own tokens, so swapping the
+  token block alone would break them; rebuilding them on the current shell is a separate job. Every other paper in
+  the repository, including this one, carries the canonical 521-byte block.
+- No unit exceeds 50 questions: Databases Unit 1 closed at exactly 50, Unit 2 now stands at 25 of its 50, and the
+  rotation will re-select Unit 2 on the next Databases run.
 
 - **2026-10-26, Engineering Mathematics → Unit 1 (Linear Algebra: Matrices & Systems), Set 2 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
