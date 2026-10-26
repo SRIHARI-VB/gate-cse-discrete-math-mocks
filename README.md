@@ -1,29 +1,37 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Three subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units) and Databases (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Four subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units) and Compiler Design (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 1 — ER Models & Relational Algebra, Set 1 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
+- **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: ER diagrams, cardinality & weak entities · relational model & constraints · relational algebra (σ, π, join, division) · tuple & domain relational calculus
-- Databases had no `runs[]` entry, so the rotation fell back to the day-offset formula:
+- Subtopics: tokens, lexemes & patterns · regular expressions to lexers · Lex input structure · input buffering & lookahead
+- Compiler Design had no `runs[]` entry, so the rotation fell back to the day-offset formula:
   `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. This is the first paper for this subject.
+- Previous test: **Databases · Unit 1 — ER Models & Relational Algebra, Set 1 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 15 (13 Discrete Mathematics, 1 Algorithms, 1 Databases) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases |
-| Questions in the subject banks | 375 (325 Discrete Mathematics, 25 Algorithms, 25 Databases) |
+| Papers published | 16 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design |
+| Questions in the subject banks | 400 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 25 Compiler Design) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 7 (all Discrete Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Compiler Design → Unit 1 (Lexical Analysis).** MODE A: the subject was drawn at random from the
+  11 GATE CSE subjects and came out Compiler Design. `compiler-design/question-bank/master_bank.json` did not exist, so
+  there was no `runs[]` entry and no cap to check; the starting unit came from the documented fallback,
+  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. Set 1 of 2, 25 questions, all four subtopics covered. No override.
+- Compiler Design contains no `GATE_PYQ_VARIATION` item: no lexical-analysis previous-year question has been verified
+  against an official paper and key in this run, so none is claimed.
 
 - **2026-10-26, Databases → Unit 1 (ER Models & Relational Algebra).** MODE A: the subject was drawn at random from the
   11 GATE CSE subjects and came out Databases. `databases/question-bank/master_bank.json` did not exist, so there was no
@@ -260,6 +268,9 @@ algorithms/
 databases/
   er-relational-algebra/gate_db_mock_1_<date>.html   current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+compiler-design/
+  lexical-analysis/gate_cd_mock_1_<date>.html        current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -304,6 +315,16 @@ Algorithms:
 | 3 | Database Normalization | `normalization` | 0 | — |
 | 4 | Transactions & Concurrency Control | `transactions-concurrency` | 0 | — |
 | 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
+
+### Compiler Design
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Lexical Analysis | `lexical-analysis` | 25 | yes |
+| 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 0 | — |
+| 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 0 | — |
+| 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 0 | — |
+| 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
 
 ## Provenance rules used in every test
 
