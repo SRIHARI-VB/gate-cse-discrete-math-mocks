@@ -1,15 +1,22 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Ten subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units), Computer Networks (6 units), Theory of Computation (4 units) and Digital Logic (4 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+All eleven subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units), Computer Networks (6 units), Theory of Computation (4 units), Digital Logic (4 units) and Computer Architecture (6 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 2 — Combinational Circuit Design, Set 2 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
+- **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 1 of 2**, 2026-10-27 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: adders & subtractors (5) · multiplexers & demultiplexers (5) · decoders & encoders (5) · code converters (5) · hazards & glitches (5)
+- Subtopics: hardwired control (7) · microprogrammed control (6) · ALU & datapath timing (6) · bus architectures (6)
+- Rotation: MODE A drew **Computer Architecture** at random from the 11 subjects (`random.Random(20261027).choice` over the
+  ten subjects that had no paper yet today). Computer Architecture had no `master_bank.json` and no `runs[]` entry, so
+  the B6 fallback picked the starting unit: `(2026-10-27 − 2026-10-26) mod 6 = 1` → **Unit 2, CPU Control Design & Data
+  Path**. This is Set 1 of 2, so the unit stands at 25 questions and the next Computer Architecture run repeats Unit 2
+  under step B3 (25 < 50, 0 days current) to close it at 50. No override was used, no cap was breached and no second
+  pass has started. This is the eleventh subject in the series and the first paper filed under it.
+- Previous test: **Digital Logic · Unit 2 — Combinational Circuit Design, Set 2 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
 - Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`). The bank read
   back `runs[-1] = {date 2026-10-27, unit 2, set "Set 1 of 2"}` with **25** questions banked on Unit 2, below
   `UNIT_QUESTION_CAP = 50` and current for 0 days, so step B3 held and the current unit was generated again; step B4
@@ -22,9 +29,9 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Papers published | 36 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic |
-| Questions in the subject banks | 900 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic) |
+| Papers published | 37 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 925 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 15 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic) |
 
@@ -39,6 +46,33 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 33 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Computer Architecture → Unit 2 (CPU Control Design & Data Path), Set 1 of 2.** MODE A: the subject was
+  drawn with `random.Random(20261027).choice` from the ten subjects that had not already produced a paper today
+  (Digital Logic had taken three runs of the day and both of its units were at the 50-question cap, so it was excluded
+  from the draw rather than being given a fourth paper). The draw gave **Computer Architecture**, the one subject with
+  no folder, no bank and no `runs[]` history. With no `runs[]` entry there is no `current_unit` to measure against the
+  cap, so the documented fallback applied: `unit_index = (2026-10-27 − 2026-10-26) mod 6 = 1` → **Unit 2, CPU Control
+  Design & Data Path** (`datapath-control-unit`). No override was used, no unit exceeded 50 questions, and no second
+  pass has started.
+- Coverage this run: all four Unit 2 subtopics — hardwired control (7), microprogrammed control (6), ALU & datapath
+  timing (6), bus architectures (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new to the series: `computer-architecture/question-bank/master_bank.json` is created by this run, so
+  there is nothing to collide with. No earlier set exists for this unit, so nothing was archived and the paper is filed
+  at `computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html` and nowhere else.
+- **Every numeric answer was recomputed by script, not by hand.** 6 timing states need 3 counter bits (Q3); a 3-to-8
+  decoder serving 7 states leaves 1 output unused (Q6); 1024 control-store words need a 10-bit microprogram counter
+  (Q10); 512 × (40 + 10) = 25,600 control-store bits (Q11); 3 × ⌈log₂10⌉ + 6 = 3 × 4 + 6 = 18 control-word bits (Q13);
+  2 + 1 + 5 + 1 + 2 = 11 ns single-bus ADD path (Q16); 31 × 2 + 3 = 65 ns to S31 (Q17); 3 + 6 + 2 + 2 = 13 ns clock
+  period (Q19); 4 bytes × 100 MHz = 400 MB/s (Q22); 8 bytes × 66 MHz ÷ 2 = 264 MB/s (Q23). The remaining items are
+  conceptual and their answer sets were checked option by option against the solution text.
+- The paper carries `data-subject="computer-architecture"` on all 25 cards, as the portability attribute requires; it is
+  the first paper in the repository for which that attribute is not `discrete-mathematics` or one of the nine subjects
+  that predate this run.
+- No verified PYQ exists for this unit yet: `verified_pyqs` is empty, the Question Bank tab shows **0 solved** and
+  **0 verified GATE PYQs**, and the three `GATE_PYQ_VARIATION` items (Q7, Q13, Q23) are pattern-built practice questions
+  that claim no year, paper or key.
 
 - **2026-10-27, Digital Logic → Unit 2 (Combinational Circuit Design), Set 2 of 2.** MODE A: one subject was drawn at
   random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, and the draw gave **Digital Logic** for the
@@ -1235,6 +1269,17 @@ Algorithms:
 | 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
 | 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
 
+### Computer Architecture
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Machine Instructions & Addressing Modes | `instructions-addressing` | 0 | — |
+| 2 | CPU Control Design & Data Path | `datapath-control-unit` | 25 | yes |
+| 3 | Memory Hierarchy & Cache Memory | `cache-memory` | 0 | — |
+| 4 | Main Memory & Virtual Memory Interface | `memory-management-unit` | 0 | — |
+| 5 | Instruction Pipelining | `pipelining` | 0 | — |
+| 6 | I/O Interface & Storage | `io-interfaces` | 0 | — |
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
@@ -1247,6 +1292,9 @@ Algorithms:
    scheduler for bursts 16, 20 and 10 arriving at time zero; value 12 ms, which follows from SJF optimality).
    Digital Logic Unit 1 carries two variations: `DL-U1-Q03` on the GATE CSE 2019 Q4 pattern (−28 in 16-bit two's
    complement, key option C) and `DL-U1-Q04` on the GATE CSE 2016 Set 1 Q7 pattern (1111 1111 1111 0101 = −11).
+   Computer Architecture Unit 2 carries three variations (`CO-U2-Q07`, `CO-U2-Q13`, `CO-U2-Q23`) that are built on
+   recurring control-word-width, sequence-counter and bus-bandwidth patterns but claim no year, paper or key, and the
+   subject's `verified_pyqs` list is empty.
 3. Everything else is tagged `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS` and is practice material written for this series.
 4. Historical questions are never deleted, never counted towards an active test, and are always filed under their
    `data-subtopic` slug.
