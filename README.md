@@ -1,32 +1,73 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Seven subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units) and Programming and Data Structures (7 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Eight subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units) and Computer Networks (6 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 1 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
+- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2**, 2026-10-26 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: data types & operators (7) · control structures (6) · functions & parameter passing (6) · recursion & stack execution (6)
-- Rotation: this is a new subject. `programming-data-structures/question-bank/master_bank.json` did not exist, so there
-  was no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
-  `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Programming and
-  Data Structures run re-selects Unit 1 for Set 2 of 2.
-- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
+- Subtopics: OSI & TCP/IP models (7) · transmission delays & bandwidth-delay product (6) · framing: bit & byte stuffing (6) · CRC, checksum & Hamming (6)
+- Rotation: this is a new subject. `computer-networks/question-bank/master_bank.json` did not exist, so there was
+  no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
+  `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Computer
+  Networks run re-selects Unit 1 for Set 2 of 2.
+- Previous test: **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 1 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 20 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures |
-| Questions in the subject banks | 500 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures) |
+| Papers published | 21 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks |
+| Questions in the subject banks | 525 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 8 (7 Discrete Mathematics, 1 Compiler Design) |
 
 ## Rotation log
+
+- **2026-10-26, Computer Networks → Unit 1 (Layering, Physical & Framing).** MODE A: the subject was drawn at random
+  from the 11 GATE CSE subjects and came out Computer Networks. No bank existed for it, so step B6's fallback applied:
+  `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. No override was used and no second pass has started. Unit 1 now
+  holds 25 of its 50 questions, so the next run for this subject re-selects Unit 1 for Set 2 of 2.
+- 25 questions, all new: 15 MCQ / 5 MSQ / 5 NAT, difficulty 10 easy / 10 medium / 5 hard. Coverage is 7 / 6 / 6 / 6
+  across OSI & TCP/IP models, transmission delays & bandwidth-delay product, framing (bit & byte stuffing) and error
+  detection (CRC, checksum, Hamming), so every one of the unit's four subtopics is represented.
+- Filed only at `computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html`. No earlier paper
+  existed for this unit, so nothing was archived and no root copy was written.
+- **Every numeric answer was recomputed in code before shipping**, not by hand: the encapsulated frame is
+  600 + 20 + 20 + 14 + 4 = **658** bytes; the bandwidth-delay product of 100 Mbps × 20 ms is 2 × 10⁶ bits =
+  250 000 bytes = **250 kB**; 3000 km at 3 × 10⁸ m/s is **10 ms**; three store-and-forward hops of 1 Mbps for a
+  1000-byte packet are **24 ms**; the stuffed payload `41 7E 7D 42 7E 43` grows to **9** bytes
+  (`41 7D5E 7D5D 42 7D5E 43`); bit stuffing `011111101111101111110` inserts **3** zeros; the stuffed form of
+  `01111101111110` is `0111110011111010` (16 bits); the Hamming distance of 1011101 and 1001001 is **2**; 16 data
+  bits need **5** parity bits (16 + 5 + 1 ≤ 32); the Internet checksum of 0x1234, 0x5678, 0x9ABC is **0xFC96**
+  (0x68AC + 0x9ABC = 0x10368 → end-around carry 0x0369 → complement); and the CRC remainder for message 1101 with
+  generator 1001 is `100`, i.e. **4**. Each was checked by an independent script, and the byte-stuffing and CRC values
+  by direct simulation of the protocol rule.
+- Shell parity: the paper was produced by splicing a new payload into the shipped shell rather than re-typing it. The
+  `<style>` block (13 243 bytes) and the closing `<script>` block (9 445 bytes) are byte-identical to
+  `operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`, the `:root` block still matches
+  `design-tokens.css` and `index.html` byte for byte, and the document's element nesting matches the template's
+  exactly. No new literal hex value was introduced.
+- The paper was exercised in a DOM harness before shipping (28 checks, all passing): nothing is revealed pre-submit
+  (no solution text, no option mark, no key content, base64 payload, key tab disabled, summary hidden, timer at
+  60:00); all 25 answered correctly scores **35/35** with 25 correct and the key unlocks with 25 solutions; a mixed
+  paper (1 correct MCQ, 1 wrong MCQ, 1 exactly-selected MSQ, 1 partially-selected MSQ, 1 correct NAT, 1 wrong NAT)
+  scores **5/35** with 3 correct, 3 wrong and 19 unattempted — confirming an MSQ pays nothing unless the exact option
+  set is chosen; the palette reaches `na` / `ans` / `mrk` / `amr` / `cur` and switches to `ok` / `bad` / `skip` after
+  submit; and every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`,
+  `data-difficulty` and `data-source`.
+- A new subject folder and bank were created: `computer-networks/question-bank/master_bank.json` holds 25 questions on
+  Unit 1 with all seven `data-*` attributes represented in its records. `index.html` gained the six Computer Networks
+  units, one test card and the 25 banked questions, and its data block now holds 13 tests, 57 units and 525 questions.
+  Its static header strings were recomputed from the data block in the same edit: 8 subjects, 57 units, 525 solved,
+  13 sets published, 525 records, 247 subtopics. Every `href` in the portal still resolves.
+- Computer Networks contains no `GATE_PYQ_VARIATION` item: no layering, framing or error-detection previous-year
+  question has been verified against an official paper and key in this run, so none is claimed. Every item is
+  `STANDARD_TEXTBOOK` (11) or `ORIGINAL_SYNTHESIS` (14).
 
 - **2026-10-26, Programming and Data Structures → Unit 1 (C Programming Foundations).** MODE A: the subject was drawn
   at random from the 11 GATE CSE subjects and came out Programming and Data Structures. No bank existed for it, so step
@@ -428,6 +469,9 @@ engineering-mathematics/
 programming-data-structures/
   c-programming-core/gate_ds_mock_1_<date>.html      current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+computer-networks/
+  network-fundamentals-framing/gate_cn_mock_1_<date>.html  current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -515,6 +559,17 @@ Algorithms:
 | 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 0 | — |
 | 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 0 | — |
 | 5 | Continuous Probability & Distributions | `probability-distributions` | 0 | — |
+
+### Computer Networks
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 25 | yes |
+| 2 | Data Link Protocols & MAC | `data-link-mac` | 0 | — |
+| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 0 | — |
+| 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
+| 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
+| 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
 
 ## Provenance rules used in every test
 
