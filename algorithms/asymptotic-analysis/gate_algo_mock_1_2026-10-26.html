@@ -296,6 +296,12 @@ eyJhbnMiOiB7IjEiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwgIjIi
 
   function cards(){ return Array.prototype.slice.call(document.querySelectorAll('.qcard')); }
   function card(n){ return document.querySelector('.qcard[data-n="' + n + '"]'); }
+  function btn(n, id){
+    var c = card(n), out = null;
+    if (!c) return null;
+    Array.prototype.forEach.call(c.querySelectorAll('.qfoot button'), function(b){ if (b.id === id) out = b; });
+    return out;
+  }
   function attempted(n){
     var v = sel[n];
     return Array.isArray(v) ? v.length > 0 : (v !== undefined && v !== '');
@@ -323,7 +329,8 @@ eyJhbnMiOiB7IjEiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwgIjIi
     cards().forEach(function(c){ c.classList.toggle('hidden', +c.getAttribute('data-n') !== n); });
     visited[n] = true;
     document.getElementById('qpos').textContent = n;
-    document.getElementById('btnMark').textContent = marked[n] ? 'Unmark review' : 'Mark for review';
+    var mb = btn(n, 'btnMark');
+    if (mb) mb.textContent = marked[n] ? 'Unmark review' : 'Mark for review';
     setPalette();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -359,22 +366,29 @@ eyJhbnMiOiB7IjEiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwgIjIi
     b.addEventListener('click', function(){ if (!SUBMITTED) show(+b.getAttribute('data-n')); });
   });
 
-  document.getElementById('btnPrev').addEventListener('click', function(){ if (CUR > 1) show(CUR - 1); });
-  document.getElementById('btnNext').addEventListener('click', function(){ if (CUR < TOTAL) show(CUR + 1); });
-  document.getElementById('btnMark').addEventListener('click', function(){
-    marked[CUR] = !marked[CUR];
-    document.getElementById('btnMark').textContent = marked[CUR] ? 'Unmark review' : 'Mark for review';
-    setPalette();
-  });
-  document.getElementById('btnClear').addEventListener('click', function(){
-    delete sel[CUR];
-    var c = card(CUR);
-    c.querySelectorAll('input').forEach(function(i){
-      i.checked = false;
-      if (i.classList.contains('natinput')) i.value = '';
-    });
-    c.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
-    setPalette();
+  document.getElementById('qhost').addEventListener('click', function(ev){
+    if (SUBMITTED) return;
+    var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
+    if (!b) return;
+    var qc = b.closest ? b.closest('.qcard') : null;
+    var n = qc ? +qc.getAttribute('data-n') : CUR;
+    if (b.id === 'btnPrev'){ if (CUR > 1) show(CUR - 1); }
+    else if (b.id === 'btnNext'){ if (CUR < TOTAL) show(CUR + 1); }
+    else if (b.id === 'btnMark'){
+      marked[n] = !marked[n];
+      b.textContent = marked[n] ? 'Unmark review' : 'Mark for review';
+      setPalette();
+    }
+    else if (b.id === 'btnClear'){
+      delete sel[n];
+      var c = card(n);
+      c.querySelectorAll('input').forEach(function(i){
+        i.checked = false;
+        if (i.classList.contains('natinput')) i.value = '';
+      });
+      c.querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+      setPalette();
+    }
   });
 
   function grade(){
@@ -448,8 +462,7 @@ eyJhbnMiOiB7IjEiOiB7ImNvcnJlY3QiOiBbMF0sICJkaXNwbGF5IjogIk9wdGlvbiAoQSkifSwgIjIi
     var r = grade();
     buildKey();
     document.getElementById('btnSubmit').disabled = true;
-    document.getElementById('btnMark').disabled = true;
-    document.getElementById('btnClear').disabled = true;
+    document.querySelectorAll('#qhost .qfoot button').forEach(function(b){ b.disabled = true; });
     document.getElementById('summary').classList.remove('hidden');
     document.getElementById('sumScore').textContent = r.score + ' / ' + r.total;
     document.getElementById('sumRight').textContent = r.right;
