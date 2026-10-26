@@ -1217,6 +1217,14 @@ review interface.
   Next, Previous, Mark for review and Clear response work on every question. Verified in a jsdom harness on the
   Operating Systems paper, the Databases paper and an archived Discrete Mathematics set. The two older
   `proof-techniques/archive/..._run1/_run2` files do not use this shell and were left untouched.
+- ~~In three papers the question palette sat outside the `.layout` grid.~~ **Fixed 2026-10-27.**
+  `digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html`, `gate_dl_mock_1_2026-10-27.html` and
+  `algorithms/asymptotic-analysis/gate_algo_mock_1_2026-10-26.html` closed `.layout` before `<aside class="side">`,
+  so the palette rendered as a full-width grid under the question instead of a 300px column on its right. In each,
+  one closing `</div>` was moved from before the `<aside>` to after `</aside>`; `<style>`, `<script>` and the payload
+  are byte-identical to the other 28 papers, so shell parity still holds. The remaining paper with a different nesting
+  defect is `operating-systems/process-scheduling/archive/gate_os_mock_1_2026-10-26_run1.html`, which is missing a
+  closing `</div>` inside the card region; it was left untouched rather than guessed at, and needs a proper rebuild.
 - `6.1` requires an archived paper to be rebuilt on the current shell. Fifteen of the seventeen papers now share one
   shell: the `<style>` block and the `<script>` block of every current and archived paper that uses the card layout are
   byte-identical to each other (confirmed after the button fix above). The exception remains
