@@ -1,32 +1,84 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Six subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units) and Engineering Mathematics (5 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Seven subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units) and Programming and Data Structures (7 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
+- **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 1 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: matrix operations (8) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (4)
-- Rotation: this is a new subject. `engineering-mathematics/question-bank/master_bank.json` did not exist, so there was
-  no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
-  `(2026-10-26 − 2026-10-26) mod 5 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Engineering
-  Mathematics run re-selects Unit 1 for Set 2 of 2.
-- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 2 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
+- Subtopics: data types & operators (7) · control structures (6) · functions & parameter passing (6) · recursion & stack execution (6)
+- Rotation: this is a new subject. `programming-data-structures/question-bank/master_bank.json` did not exist, so there
+  was no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
+  `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Programming and
+  Data Structures run re-selects Unit 1 for Set 2 of 2.
+- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 19 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics |
-| Questions in the subject banks | 475 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics) |
+| Papers published | 20 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures |
+| Questions in the subject banks | 500 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 8 (7 Discrete Mathematics, 1 Compiler Design) |
 
 ## Rotation log
+
+- **2026-10-26, Programming and Data Structures → Unit 1 (C Programming Foundations).** MODE A: the subject was drawn
+  at random from the 11 GATE CSE subjects and came out Programming and Data Structures. No bank existed for it, so step
+  B6's fallback applied: `(2026-10-26 − 2026-10-26) mod 7 = 0` → Unit 1. No override was used and no second pass has
+  started. Unit 1 now holds 25 of its 50 questions, so the next run for this subject re-selects Unit 1 for Set 2 of 2.
+- 25 questions, all new: 15 MCQ / 5 MSQ / 5 NAT, difficulty 10 easy / 10 medium / 5 hard. Coverage is 7 / 6 / 6 / 6
+  across data types & operators, control structures, functions & parameter passing, and recursion & stack execution,
+  so every one of the unit's four subtopics is represented.
+- Filed only at `programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`. No earlier paper
+  existed for this unit, so nothing was archived and no root copy was written.
+- **Every answer in this set was produced by compiling and running the snippet**, not by hand. No C compiler was
+  installed in the build environment, so a Zig-based C compiler (`ziglang` from PyPI, `zig cc -std=c99`) was used as
+  the driver and each program was executed; the printed values recorded in the paper are those program outputs.
+  Confirmed: `7/2*2` and `-7/2` give `6 -3`; `sizeof('A')` is 4; `a ^ b | a & b` is 7; `unsigned char c = 250` plus 10
+  prints 4; the comma expression `(y += 3, y * 2)` gives 10; `0xF0 << 4` promotes to 3840; `if (x = 0)` takes the else
+  branch; the paired `for` header stops at `5 5`; the nested loop counts 15; the switch falls through to `twothree`;
+  the switch/continue program accumulates 425; the value-parameter swap leaves `1 2`; `sq` sums to 30; the `static`
+  local returns 3 on the third call; `inc`/`bump` leaves 6; the `static` accumulator returns 20; `f(4)` sums to 10;
+  the bit-printing recursion emits `1 0 1 1` for 13; the post-recursion print gives `123`; `f(6)` of the Fibonacci
+  recurrence is 8; and the call counter for `f(5)` reaches 15 (`C(n) = C(n−1) + C(n−2) + 1`, computed as
+  1, 1, 3, 5, 9, 15). A second compiled program confirmed the remaining code-based items: `sizeof a` inside
+  `g(int a[])` is 8, the pointer size, not 40; the post-recursion print emits `123`; the shared counter of `f(5)` is
+  incremented 15 times; the unsigned `i >= 0` test stays true at `i = 0`, where the value wraps to 4 294 967 295; the
+  `i != 10` stride-3 loop passes 10 without stopping; and the two terminating loops leave `i` at 1 and 6. The five MSQ
+  items are conceptual — their statements were checked against the standard and, where the claim is runnable, against
+  the compiler's behaviour.
+- Shell parity: the paper was produced by splicing a new payload into the shipped shell rather than re-typing it. The
+  `<style>` block (13 243 bytes) and the closing `<script>` block (9 428 bytes) are byte-identical to
+  `engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`, the `:root` block still matches
+  `design-tokens.css` and `index.html` byte for byte, and the document's element nesting matches the template's
+  exactly. No new literal hex value was introduced: the code blocks in the questions use `var(--bg)` and
+  `var(--line)`, never a raw colour.
+- The paper was exercised in a jsdom harness before shipping (46 checks, all passing): nothing is revealed pre-submit
+  (no solution text, no option mark, no key content, base64 payload, key tab disabled, summary hidden, timer at
+  60:00); all 25 answered correctly scores **35/35** with 25 correct and the key unlocks with 25 solutions; a mixed
+  paper (1 correct MCQ, 1 wrong MCQ, 1 exactly-selected MSQ, 1 partially-selected MSQ, 1 correct NAT, 1 wrong NAT)
+  scores **5/35** with 3 correct, 3 wrong and 19 unattempted — confirming an MSQ pays nothing unless the exact option
+  set is chosen; the palette reaches `ans` / `mrk` / `amr` / `na` / `cur` and switches to `ok` / `bad` / `skip` after
+  submit; each tab shows exactly one view; and every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`.
+- A new subject folder and bank were created: `programming-data-structures/question-bank/master_bank.json` holds 25
+  questions on Unit 1 with all seven `data-*` attributes represented in its records. `index.html` gained the seven
+  Programming and Data Structures units, one test card and the 25 banked questions, and its data block now holds
+  12 tests, 51 units and 500 questions.
+- **The portal's static header was stale and has been corrected.** `index.html` still read "2 subjects",
+  "7 units · 350 solved questions banked" and chips of 7 units / 350 / 350 / "23 units · 106 subtopics" while the
+  data block already held 11 tests and 475 questions. The data block was updated in place, as required, and those six
+  static strings were recomputed from it: 7 subjects, 51 units, 500 solved, 12 sets published, 51 units in the
+  series, 222 subtopics. Every `href` in the portal still resolves.
+- Programming and Data Structures contains no `GATE_PYQ_VARIATION` item: no C-programming previous-year question has
+  been verified against an official paper and key in this run, so none is claimed. Every item is `STANDARD_TEXTBOOK`
+  (13) or `ORIGINAL_SYNTHESIS` (12).
 
 - **2026-10-26, Engineering Mathematics → Unit 1 (Linear Algebra: Matrices & Systems).** MODE A: the subject was drawn
   at random from the 11 GATE CSE subjects and came out Engineering Mathematics. No bank existed for it, so step B6's
@@ -373,6 +425,9 @@ operating-systems/
 engineering-mathematics/
   linear-algebra-matrices/gate_em_mock_1_<date>.html current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+programming-data-structures/
+  c-programming-core/gate_ds_mock_1_<date>.html      current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -407,6 +462,18 @@ Algorithms:
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
 | 7 | Complexity Theory & NP-Completeness | `complexity-np-complete` | 0 | — |
+
+### Programming and Data Structures
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | C Programming Foundations | `c-programming-core` | 25 | yes |
+| 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 0 | — |
+| 3 | Linear Data Structures | `linear-data-structures` | 0 | — |
+| 4 | Binary Trees & Tree Traversals | `trees-traversals` | 0 | — |
+| 5 | Binary Search Trees & Balanced Trees | `search-trees` | 0 | — |
+| 6 | Heaps & Priority Queues | `heaps-priority-queues` | 0 | — |
+| 7 | Hashing & Hash Tables | `hashing` | 0 | — |
 
 ### Databases
 
