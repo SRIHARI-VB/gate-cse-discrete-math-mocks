@@ -7,25 +7,91 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2**, 2026-10-26 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html)
+- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 2 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: base conversions (8) · one's and two's complement (7) · IEEE 754 floating point (5) · range and overflow (5)
-- Rotation: MODE A drew Digital Logic at random from the 11 subjects (unseeded draw, seed 1426181344). The subject had
-  **no** `question-bank/master_bank.json` at all, so step B6 applied: `(2026-10-26 − 2026-10-26) mod 4` = 0 → **Unit 1**.
-  First paper for this subject, Set 1 of 2.
-- Previous test: **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
+- Subtopics: DFA construction & minimisation (7) · NFA to DFA by subset construction (6) · regular expressions (6) ·
+  pumping lemma (6)
+- Rotation: MODE A drew Theory of Computation at random from the 11 subjects (unseeded draw, seed 823142602, index 6
+  of 11). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with **25** questions banked on
+  Unit 1 — under `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1. This is Set 2 of 2;
+  25 + 25 = 50 closes the unit at the cap, and the next Theory of Computation run advances to `(0 + 1) mod 4` = Unit 2,
+  Grammars & Context-Free Languages. No override was used and no second pass has started.
+- Previous test: **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2**, 2026-10-26 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 25 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 1 Theory of Computation, 1 Digital Logic) |
+| Papers published | 26 (14 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 625 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 25 Theory of Computation, 25 Digital Logic) |
+| Questions in the subject banks | 650 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
 | Verified official PYQs | 5 (2 Discrete Mathematics, 1 Databases, 2 Digital Logic) |
-| Archived sets (earlier runs) | 9 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems) |
+| Archived sets (earlier runs) | 10 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation) |
 
 ## Rotation log
+
+- **2026-10-26, Theory of Computation → Unit 1 (Regular Languages & Finite Automata), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.Random` draw (seed 823142602,
+  draw index 6 of 11) and it gave **Theory of Computation**. The bank read back `runs[-1] = {date 2026-10-26, unit 1,
+  set "Set 1 of 2"}` with 25 questions banked on Unit 1. Since 25 < `UNIT_QUESTION_CAP = 50` and the unit had been
+  current for 0 days, step B3 regenerated Unit 1 rather than advancing. This is the second and final set for the unit:
+  25 + 25 = 50, exactly the cap, so no partial set was added and the unit ends at 50, not 60. The next Theory of
+  Computation run advances to `(0 + 1) mod 4` = Unit 2, Grammars & Context-Free Languages. No override was used and no
+  second pass has started for this subject.
+- All 25 items are new: no stem, option set or numeric answer is shared with Set 1 (checked by exact-string comparison
+  against the 25 questions already in `master_bank.json`). Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the
+  10 easy / 10 medium / 5 hard split; marks total 15 × 1 + 10 × 2 = 35. Coverage is 7 / 6 / 6 / 6 across DFA
+  construction & minimisation, NFA to DFA by subset construction, regular expressions and the pumping lemma, so all
+  four of the unit's subtopics are represented.
+- **Every answer was recomputed by an independent script, not by hand.** A checker built each automaton, minimised it
+  by reachability pruning plus partition refinement, ran a brute-force enumeration of the language, and evaluated a
+  formal-regex engine written for the purpose. Confirmed: minimal complete DFA for "ends in `ab`" = **3** states; for
+  "contains `aba`" = **4**; for "value ≡ 2 (mod 3)" = **3**; the 6-state table of Q13 has all six states reachable and
+  exactly one equivalent pair (`B ≡ E`), giving **5**; the 4-state NFA of Q14 recognises "the third symbol from the
+  right is 1", whose minimal DFA has **8** states, and its subset construction produces exactly those 8 reachable
+  subsets; the 3-state NFA of Q23 yields **4** reachable subset states; length-5 strings over `{a,b}` with no `aa` =
+  **13**; length-6 strings with an even number of `a`'s = **32**. The regex and MSQ options were settled by exhaustive
+  comparison over all strings up to length 9: `(a*ba*ba*)*a*` equals "even number of `b`'s" while `(a*b)*`,
+  `(ba*ba*)*` and `(a*ba*b)*` do not; `(ab)*a = a(ba)*` and `(a+b)* = (a*b*)*` hold; `(a*b)* ≠ a*b*` (separated by
+  `ba`) and `(ab+ba)*` is not "equal numbers of `a` and `b`" (separated by `aabb`). All 28 checks passed.
+- No `GATE_PYQ_VARIATION` item ships: no regular-language or finite-automata previous-year question has been verified
+  against an official paper and answer key, so none is claimed and `verified_pyqs` stays empty for this subject. Every
+  item is `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11). The About tab and the Question Bank tab both say so.
+- The Set 1 paper moved to `theory-of-computation/regular-languages-fa/archive/gate_toc_mock_1_2026-10-26_run1.html`
+  with its questions, options, answers, solutions and duration frozen. Its header sub-line read "Unit 1 — Asymptotic
+  Analysis & Recurrences", a copy-paste from the Algorithms paper; that one string was repaired to name Regular
+  Languages & Finite Automata, as was done for the Compiler Design paper previously. Nothing else in the archive was
+  touched. The new Set 2 paper is filed only at `theory-of-computation/regular-languages-fa/`; no root copy was
+  written and the unit folder never held two current papers.
+- **A stale count in `index.html` was repaired.** The portal's data block was 25 records short: the whole
+  Digital Logic Unit 1 set (25 questions) had never been added, so the dashboard held 625 of the 650 records in the
+  subject banks and the Digital Logic card was missing from the archive view. Those 25 records were appended in the
+  index record shape, and the id sets now match exactly — 650 banked ids, 650 dashboard ids, no difference in either
+  direction. The three derived strings that count them were recomputed in the same edit.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. After
+  normalising the title, the header brand and sub-line, the candidate block, the metadata chips, `#qhost`, the
+  payload, the Question Bank pane and the About pane, the remaining bytes are identical to the Operating Systems
+  Unit 2 paper — **27 807 bytes on both**. The `<style>` block (13 243 bytes) and the exam `<script>` (9 428 bytes)
+  are byte-for-byte identical, and the `:root` block (521 bytes) matches `design-tokens.css` and `index.html` exactly.
+  No new literal hex value was introduced: the automaton tables use the monospaced `var(--bg)` / `var(--line)` block
+  the Set 1 paper already used, not a `<table>` (the shell has no table styling).
+- The paper was exercised in a jsdom harness before shipping (**52 checks, all passing**): nothing is revealed
+  pre-submit (no solution text, no option mark, no key content, base64 payload, key tab disabled, summary hidden,
+  timer at 60:00); all 25 answered correctly scores **35 / 35** with 25 correct and the key unlocks with 25 solutions;
+  a mixed paper (1 correct MCQ, 1 wrong MCQ, 1 partially-selected MSQ, 1 correct NAT) scores **3 / 35** with 2
+  correct, 2 wrong and 21 unattempted, confirming an MSQ pays nothing unless the exact option set is chosen; dropping
+  a single correct option from one MSQ costs exactly 2 marks (**33 / 35**); a blank paper scores **0 / 35** with 25
+  skipped; the palette reaches `na` / `ans` / `mrk` / `amr` / `cur` and falls back to `mrk` on Clear Response, then
+  switches to `ok` / `bad` / `skip` after submit; each tab shows exactly one view; and every card carries
+  `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`.
+- The Question Bank tab inside the paper lists the **25** solved questions of Set 1 — the active 25 are not repeated
+  there — under four subtopic accordions (7 / 6 / 6 / 6), with every solution collapsed. `index.html` holds all **650**
+  questions, and the Theory of Computation Unit 1 card now carries "50 solved", the four subtopic pill counts and both
+  "Practise Set 1 →" (the archived paper, where those questions live) and "Practise Set 2 →". Its data block was
+  updated in place and its six static header strings were recomputed from it: 10 subjects, 59 units, 650 solved,
+  26 sets published, 650 records, 255 subtopics. A second jsdom harness on the portal (**25 checks, all passing**)
+  confirms 16 test cards with the new one first, 50 banked cards with unique ids `TOC-U1-Q01`–`Q50`, two practise
+  buttons, and that every `href` resolves.
 
 - **2026-10-26, Digital Logic → Unit 1 (Number Systems & Representation), Set 1 of 2.** MODE A: the subject was drawn
   at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom().choice` (draw seed 1426181344, index 2
