@@ -1,30 +1,60 @@
 # gate-cse-mocks — GATE CSE 2027 mock test series
 
 Daily, self-contained mock tests for **GATE CSE 2027**, one unit at a time on a per-subject unit rotation.
-Nine subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units), Computer Networks (6 units) and Theory of Computation (4 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
+Ten subjects are now in the series: Discrete Mathematics (16 units), Algorithms (7 units), Databases (5 units), Compiler Design (5 units), Operating Systems (6 units), Engineering Mathematics (5 units), Programming and Data Structures (7 units), Computer Networks (6 units), Theory of Computation (4 units) and Digital Logic (4 units). Every test is a single HTML file that opens in any browser, offline, in a TCS iON–style exam shell:
 question palette with the standard status colours, a running countdown, radio MCQ, checkbox MSQ and typed NAT answers,
 and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
+- **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2**, 2026-10-26 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DFA construction & minimisation (7) · NFA to DFA, subset construction (6) · regular expressions (6) · pumping lemma for regular languages (6)
-- Rotation: MODE A drew Theory of Computation at random from the 11 subjects. The subject had **no** `question-bank/master_bank.json`
-  at all, so step B6 applied: `(2026-10-26 − 2026-10-26) mod 4` = 0 → **Unit 1**. First paper for this subject, Set 1 of 2.
-- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2**, 2026-10-26 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html)
+- Subtopics: base conversions (8) · one's and two's complement (7) · IEEE 754 floating point (5) · range and overflow (5)
+- Rotation: MODE A drew Digital Logic at random from the 11 subjects (unseeded draw, seed 1426181344). The subject had
+  **no** `question-bank/master_bank.json` at all, so step B6 applied: `(2026-10-26 − 2026-10-26) mod 4` = 0 → **Unit 1**.
+  First paper for this subject, Set 1 of 2.
+- Previous test: **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 24 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 1 Theory of Computation) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation |
-| Questions in the subject banks | 600 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 25 Theory of Computation) |
-| Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
+| Papers published | 25 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 1 Theory of Computation, 1 Digital Logic) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
+| Questions in the subject banks | 625 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks, 25 Theory of Computation, 25 Digital Logic) |
+| Verified official PYQs | 5 (2 Discrete Mathematics, 1 Databases, 2 Digital Logic) |
 | Archived sets (earlier runs) | 9 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems) |
 
 ## Rotation log
+
+- **2026-10-26, Digital Logic → Unit 1 (Number Systems & Representation), Set 1 of 2.** MODE A: the subject was drawn
+  at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom().choice` (draw seed 1426181344, index 2
+  of 11) and the draw gave **Digital Logic**, a subject with no bank yet. `digital-logic/question-bank/master_bank.json`
+  did not exist, so there was no `runs[]` to read and step B6 applied: `(2026-10-26 − 2026-10-26) mod 4 = 0` →
+  **Unit 1, `number-systems`**. This is Set 1 of 2; 25 questions are now banked, so a second Digital Logic run today
+  would re-select Unit 1 (25 < `UNIT_QUESTION_CAP = 50`, unit current for 0 days). No override was used and no second
+  pass has started.
+- Coverage is 8 / 7 / 5 / 5 across base conversions, one's and two's complement, IEEE 754 and range & overflow, so all
+  four of the unit's subtopics are represented. Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy /
+  10 medium / 5 hard split; marks total 15 × 1 + 10 × 2 = 35.
+- **Every numeric answer was recomputed by script, not by hand.** A checker rebuilt each answer independently: octal and
+  base-7 expansions (`(756)₈` = 494 = `111101110₂`; `(2026)₇` = 706), two's complement patterns via modular arithmetic
+  (`−21` in 12 bits = `1111 1110 1011`; `1111 0000` = −16; negating `1000 0000` returns `1000 0000`), one's complement
+  addition with the end-around carry (`(−5)+(−3)` = −8), unsigned wraparound (200 + 100 → 44 with carry 1), 16-bit
+  signed wraparound (30000 + 10000 → −25536), and IEEE 754 decoding with `struct.unpack` (`0x3F000000` = 0.5,
+  `0x41A00000` = 20, smallest subnormal = 2<sup>−149</sup>). The smallest-width questions were solved by search
+  (11 bits for ±1000; 10 bits for 1000 as unsigned). All 23 machine-checkable items passed.
+- Two items are `GATE_PYQ_VARIATION` and carry verified provenance in `master_bank.json`: `DL-U1-Q03` from **GATE CSE
+  2019, Question 4** (official key option C, the 16-bit pattern for −28) and `DL-U1-Q04` from **GATE CSE 2016, Set 1,
+  Question 7** (official key −11). Both attributions were confirmed against two independent public PYQ collections in
+  this run. No other item claims official status.
+- Shell parity: the paper was spliced into the shipped shell, not re-typed. After normalising the title, the header
+  brand/sub/candidate lines, the metadata chips, `#qhost`, the payload, the Question Bank pane and the About pane, the
+  remaining bytes are identical to the Computer Networks Unit 1 paper — **27 840 bytes on both**. The `<style>` block and
+  the exam `<script>` are byte-for-byte identical, and the `:root` token block matches `design-tokens.css`.
+- Every card carries `data-subject="digital-logic"`, `data-unit="number-systems"`, `data-unit-number="1"`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`. Unit 1 had no earlier paper, so nothing was
+  archived: the unit folder holds exactly one current paper, and no root copy was written.
 
 - **2026-10-26, Theory of Computation → Unit 1 (Regular Languages & Finite Automata), Set 1 of 2.** MODE A: the
   subject was drawn at random from the 11 GATE CSE subjects with an unseeded `random.choice` this run (the two earlier
@@ -579,6 +609,9 @@ computer-networks/
 theory-of-computation/
   regular-languages-fa/gate_toc_mock_1_<date>.html   current paper for Unit 1
   question-bank/master_bank.json                     append-only master question bank
+digital-logic/
+  number-systems/gate_dl_mock_1_<date>.html          current paper for Unit 1
+  question-bank/master_bank.json                     append-only master question bank
 ```
 
 ## Syllabus coverage checklist
@@ -687,6 +720,15 @@ Algorithms:
 | 3 | Pushdown Automata | `pushdown-automata` | 0 | — |
 | 4 | Turing Machines & Decidability | `turing-machines-decidability` | 0 | — |
 
+### Digital Logic
+
+| # | Unit | Slug | Questions in bank | Covered |
+| --- | --- | --- | --- | --- |
+| 1 | Number Systems & Representation | `number-systems` | 25 | yes |
+| 2 | Combinational Circuit Design | `combinational-circuits` | 0 | — |
+| 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
+| 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
@@ -697,6 +739,8 @@ Algorithms:
    GATE CSE 2014 Set 3 Q30 pattern (difference of projections over a join; official key D). Operating Systems Unit 1's
    single variation is built on GATE CSE 2021 Set 1 Q25 (minimum achievable average waiting time under a non-preemptive
    scheduler for bursts 16, 20 and 10 arriving at time zero; value 12 ms, which follows from SJF optimality).
+   Digital Logic Unit 1 carries two variations: `DL-U1-Q03` on the GATE CSE 2019 Q4 pattern (−28 in 16-bit two's
+   complement, key option C) and `DL-U1-Q04` on the GATE CSE 2016 Set 1 Q7 pattern (1111 1111 1111 0101 = −11).
 3. Everything else is tagged `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS` and is practice material written for this series.
 4. Historical questions are never deleted, never counted towards an active test, and are always filed under their
    `data-subtopic` slug.
@@ -731,6 +775,11 @@ review interface.
   `proof-techniques/archive/gate_dm_mock_16_2026-10-25_run1.html` and `..._run2.html`, which were produced before the
   shell was fixed and still use the earlier layout (no `.qcard` cards, different style block). Their content is frozen
   and correct; they need rebuilding on the current shell in the same one-pass re-issue as the raw-hex item above.
+- `6.5` asks for an explicit `:focus-visible` ring on every interactive control. The shared shell never sets
+  `outline:none` (so the browser's default ring survives on buttons, tabs, options and accordion summaries) and gives an
+  explicit outline to the NAT input and the current palette button, but it defines no `:focus-visible` selector. The
+  Digital Logic Unit 1 paper inherits the shell unchanged so that parity holds; adding the rule is a one-line CSS change
+  that belongs to the same one-pass re-issue as the raw-hex item.
 - `6.4` also asks for the palette fills to use the `-d` token variants so white numerals clear 4.5:1. The shipped shell
   fills `.pal button.ans/.na/.mrk` with `--green`/`--red`/`--violet` instead of `--green-d`/`--red-d`/`--violet-d`, which
   fails that ratio. The Operating Systems paper inherits the shell unchanged so that parity holds; the correction is a
