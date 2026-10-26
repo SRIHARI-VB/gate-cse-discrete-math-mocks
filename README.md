@@ -7,23 +7,24 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html)
+- **Digital Logic · Unit 1 — Number Systems & Representation, Set 2 of 2**, 2026-10-27 → [`digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: characteristic equations (6) · eigenvalue properties (7) · Cayley–Hamilton theorem (5) · diagonalization (7)
-- Rotation: MODE A drew Engineering Mathematics at random from the 11 subjects (`random.Random(20261026).choice`). The
-  bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1 — exactly
-  `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
-  `(0 + 1) mod 5` = Unit 2, Linear Algebra: Eigenvalues & Vectors. This is Set 1 of 2; 25 questions are banked, so a
-  second Engineering Mathematics run today would re-select Unit 2. No override was used and no second pass has started.
-- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2**, 2026-10-26 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-26.html)
+- Subtopics: base conversions (7) · one's & two's complement (6) · floating point & IEEE 754 (6) · range & overflow (6)
+- Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`, a
+  date-derived reproducible seed). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with
+  **25** questions banked on Unit 1 and the unit current for 1 day, so step B3 held (25 < 50 and 1 < 7) and Unit 1
+  was generated again rather than advanced. This is Set 2 of 2: the unit now holds 50 questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so the next Digital Logic run advances to `(0 + 1) mod 4` = Unit 2, Combinational Circuit
+  Design. No override was used and no second pass has started.
+- Previous test: **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 1 of 2**, 2026-10-26 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 33 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Papers published | 34 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 825 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 25 Digital Logic) |
+| Questions in the subject banks | 850 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 75 Theory of Computation, 50 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
@@ -39,6 +40,28 @@ shades to `:root`, replace the literals, then re-verify all 33 papers together.
 
 ## Rotation log
 
+- **2026-10-27, Digital Logic → Unit 1 (Number Systems & Representation), Set 2 of 2.** MODE A: one subject was drawn
+  at random from the 11 GATE CSE subjects with `random.Random(20261027).choice`, a date-derived reproducible seed, and
+  the draw gave **Digital Logic**. The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with
+  **25** questions banked on Unit 1 (`number-systems`), current for 1 day. Step B3 therefore held — 25 <
+  `UNIT_QUESTION_CAP = 50` and 1 < `DAYS_PER_UNIT_MAX = 7` — so the current unit was generated again and step B4 was
+  not reached. This is Set 2 of 2; the unit now stands at exactly 50 questions, so the next Digital Logic run advances
+  one unit. No override was used and no second pass has started.
+- All 25 items are new: no stem repeats a question already banked on Unit 1. Composition is the standard 15 MCQ /
+  5 MSQ / 5 NAT with the 10 easy / 10 medium / 5 hard split, and marks total 15 × 1 + 10 × 2 = 35. Coverage is
+  7 / 6 / 6 / 6 across base conversions, one's and two's complement, IEEE 754 and range/overflow, so all four
+  subtopics are represented.
+- **Every numeric answer was recomputed by script, not by hand.** `0xB7C = 2940` (Q1); `(1101.101)₂ = 13.625` (Q2);
+  `(27)₈ + (45)₈ = (74)₈`, checked as 23 + 37 = 60 (Q3); `1101 0110 1111 = 0xD6F` (Q4); `(101101)₂ + (1101)₂ = 58`
+  (Q6); `(2E.A)₁₆ = 46.625` (Q7); the one's complement of −37 is `1101 1010` (Q8); `1000 0001` is −127 (Q9);
+  sign-extending `1100 1011` preserves −53 (Q10); a 4-bit one's complement register holds 15 distinct integers (Q11);
+  `0xFF9C = −100` (Q13); `0x40400000 = 3.0` (Q16, decoded with `struct.unpack`); `0x41200000 = 10.0` (Q19);
+  400 mod 256 = 144, which reads back as −112 (Q25).
+- No verified PYQ was added this run, so `verified_pyqs` for Digital Logic is unchanged at two. Two items are tagged
+  `GATE_PYQ_VARIATION` on recurring GATE patterns (octal addition with a carry at the base; the smallest normal
+  IEEE 754 single precision number) with no year claimed.
+- No paper was archived: Set 1 (2026-10-26) is a different question set on a different date, not a superseded run of
+  this one, so it stays at unit level beside Set 2.
 - **2026-10-26, Engineering Mathematics → Unit 2 (Linear Algebra: Eigenvalues & Vectors), Set 1 of 2.** MODE A: one
   subject was drawn at random from the 11 GATE CSE subjects with `random.Random(20261026).choice`, a date-derived
   reproducible seed, and the draw gave **Engineering Mathematics**. The bank read back
@@ -1148,7 +1171,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Number Systems & Representation | `number-systems` | 25 | yes |
+| 1 | Number Systems & Representation | `number-systems` | 50 | yes |
 | 2 | Combinational Circuit Design | `combinational-circuits` | 0 | — |
 | 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
 | 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
@@ -1185,7 +1208,7 @@ review interface.
   byte-identical shell, this can only be corrected by re-issuing all papers together, so it is recorded here rather than
   fixed in one file and breaking shell parity.
 - The `index.html` archive prints an answer line from `answer_display` and, for records created before 2026-10-25, a
-  second identical line inside `solution_html`. The 50 Unit 2 records and the 25 Unit 1 Set 2 records carry it once; the
+  second identical line inside `solution_html`. The 50 Unit 2 records and the 25 Digital Logic Set 2 records carry it once; the
   older records still carry it twice. Normalising them is part of the same one-pass fix as the raw-hex item above.
 - ~~The exam shell bound `btnNext`, `btnPrev`, `btnMark` and `btnClear` with `document.getElementById` while every
   question card carried the same four ids, so those handlers attached only to Question 1's buttons and the footer
