@@ -7,25 +7,61 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 1 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
+- **Compiler Design · Unit 1 — Lexical Analysis, Set 2 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: process states & PCB (7) · threads, user vs kernel (6) · preemptive vs non-preemptive (5) ·
-  FCFS, SJF, SRTF, RR & priority (7)
-- Operating Systems had no `runs[]` entry, so the rotation fell back to the day-offset formula:
-  `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. This is the first paper for this subject.
-- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2**, 2026-10-26 → [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-26.html)
+- Subtopics: tokens, lexemes & patterns (7) · regular expressions to lexers (8) · Lex input structure (5) ·
+  input buffering & lookahead (5)
+- Rotation: `compiler-design/question-bank/master_bank.json` held 25 questions on Unit 1 with the most recent paper
+  dated 2026-10-26, so Unit 1 was still under the 50-question cap and was generated again — Set 2 of 2. Unit 1 is now
+  at the cap; the next Compiler Design run advances to `(0 + 1) mod 5` → Unit 2, Top-Down Parsing.
+- Previous test: **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 1 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 17 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 1 Operating Systems) |
+| Papers published | 18 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems |
-| Questions in the subject banks | 425 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 25 Compiler Design, 25 Operating Systems) |
+| Questions in the subject banks | 450 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
-| Archived sets (earlier runs) | 7 (all Discrete Mathematics) |
+| Archived sets (earlier runs) | 8 (7 Discrete Mathematics, 1 Compiler Design) |
 
 ## Rotation log
+
+- **2026-10-26, Compiler Design → Unit 1 (Lexical Analysis), Set 2 of 2.** MODE A: the subject was drawn at random
+  from the 11 GATE CSE subjects and came out Compiler Design. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` and held 25 questions on Unit 1. 25 < `UNIT_QUESTION_CAP = 50`
+  and the unit had been current for 0 days, so step B3 regenerated Unit 1 rather than advancing. This is the second
+  and final set for the unit: 25 + 25 = 50, exactly the cap, so no partial set was added. The next Compiler Design run
+  will advance to `(0 + 1) mod 5` = Unit 2.
+- All 25 items are new: no stem, option set or answer is shared with Set 1 (checked by exact-string comparison of the
+  two halves of `master_bank.json`). Coverage is 7 / 8 / 5 / 5 across the four subtopics, with the standard
+  15 MCQ / 5 MSQ / 5 NAT composition and the 10 easy / 10 medium / 5 hard split.
+- The Set 1 paper moved to `compiler-design/lexical-analysis/archive/gate_cd_mock_1_2026-10-26_run1.html` with its
+  questions, options, answers, solutions and duration frozen. The new Set 2 paper is filed only at
+  `compiler-design/lexical-analysis/`; no root copy was written.
+- **Two defects in the shipped Compiler Design paper were repaired.** Its header sub-line read
+  "Unit 1 — Asymptotic Analysis & Recurrences", a copy-paste from the Algorithms paper; it now names Lexical Analysis
+  in both the live paper and the archive. Its About pane was missing a closing `</div>`, and the `#qhost` splice used
+  to build this paper dropped the matching `</div>` as well — together these left `#view-bank` nested inside
+  `#view-test`, so the Question Bank tab rendered blank. Both files now close every element except the `.wrap`
+  container, exactly as the Databases paper does. The tab was re-rendered in a headless browser to confirm it draws
+  its 25 solved questions under four subtopic accordions.
+- The payload is base64 rather than plain JSON and the answer key pane is empty until submit. A jsdom harness was run
+  before shipping: nothing is revealed pre-submit (no solution text, no option mark, no key content); all 25 answered
+  correctly scores **35/35** with 25 correct; a mixed paper (1 correct MCQ, 1 wrong MCQ, 1 exactly-selected MSQ,
+  1 partially-selected MSQ, 1 correct NAT, 1 wrong NAT) scores **5/35** with 3 correct, 2 wrong and 20 unattempted;
+  the palette reaches `na` / `ans` / `mrk` / `amr` / `cur` and switches to `ok` / `bad` / `skip` after submit; the
+  answer key unlocks with 25 solutions; the bank tab shows 25 solved cards with every solution collapsed.
+- Shell parity: the paper was produced by splicing a new payload into the shipped shell rather than re-typing it.
+  After normalising the title, the header sub-line, the metadata chips, `#qhost`, the payload, the Question Bank pane
+  and the About pane, the remaining bytes are identical to the archived Set 1 paper (31 186 bytes on both sides).
+  The `:root` block still matches `design-tokens.css` and `index.html` byte for byte.
+- Compiler Design still contains no `GATE_PYQ_VARIATION` item. Two lexical-analysis PYQs were looked at — GATE CSE
+  2000 Q1.18 (number of tokens in a `printf` statement, key 10) and GATE CSE 2011 (machine model needed for lexical
+  analysis, key: finite state automata) — but both were read from secondary question archives, not from an official
+  paper PDF, so neither is recorded as verified and no item is tagged as a PYQ. Several questions exercise the same
+  skills (`CD-U1-Q32` token counting, `CD-U1-Q40` DFA state counting) without claiming PYQ status.
 
 - **2026-10-26, Operating Systems → Unit 1 (Process Management & CPU Scheduling).** MODE A: the subject was drawn at
   random from the 11 GATE CSE subjects and came out Operating Systems. `operating-systems/question-bank/master_bank.json`
