@@ -7,25 +7,50 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 2 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
+- **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2**, 2026-10-26 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: process states & PCB (7) · threads: user vs kernel (6) · preemptive vs non-preemptive (6) · FCFS, SJF, SRTF, RR & priority (6)
-- Rotation: MODE A drew Operating Systems. `runs[-1]` was Unit 1, dated 2026-10-26 and holding 25 questions — under
-  `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1 for Set 2 of 2. 25 + 25 = 50 closes
-  the unit at the cap, and the next Operating Systems run advances to `(0 + 1) mod 6` = Unit 2. No override was used.
-- Previous test: **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2**, 2026-10-26 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html)
+- Subtopics: critical section & Peterson's solution (5) · hardware primitives test-and-set & swap (6) · binary & counting semaphores (8) · producer–consumer, dining philosophers & readers–writers (6)
+- Rotation: MODE A drew Operating Systems (the same date-seeded draw as the earlier run today). `runs[-1]` was Unit 1
+  holding 50 questions — exactly `UNIT_QUESTION_CAP` — so step B4 advanced: `(0 + 1) mod 6` = 1 → **Unit 2**. No
+  override was used and no second pass has started.
+- Previous test: **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 2 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 22 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks |
-| Questions in the subject banks | 550 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 50 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
+| Papers published | 23 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks |
+| Questions in the subject banks | 575 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
 | Archived sets (earlier runs) | 9 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems) |
 
 ## Rotation log
+
+- **2026-10-26, Operating Systems → Unit 2 (Inter-Process Communication & Synchronization), Set 1 of 2.** MODE A: the
+  subject came from the same date-seeded draw as the earlier run today (seed 852190219, the SHA-256 of
+  `2026-10-26-gate-cse-mock` reduced modulo 10⁹) and again gave Operating Systems. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "2 of 2"}` with **50** questions banked on Unit 1, which equals
+  `UNIT_QUESTION_CAP = 50`. Step B3 therefore failed on the cap, and step B4 advanced exactly one unit:
+  `(index_of(1) + 1) mod 6 = (0 + 1) mod 6 = 1` → Unit 2. This is Set 1 of 2 for Unit 2; a second Operating Systems run
+  today would re-select Unit 2, since 25 < 50 and the unit is current for 0 days. No override was used and no second
+  pass has started for this subject.
+- All 25 items are new. Each stem was compared as an exact string against all 50 Unit 1 questions already in
+  `master_bank.json`; none repeats. Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium /
+  5 hard split, and coverage is 5 / 6 / 8 / 6 across critical section & Peterson's solution, hardware primitives,
+  semaphores, and the classic problems, so all four of the unit's subtopics are represented.
+- **Every numerical answer was recomputed by an independent simulator, not by hand.** Confirmed: the semaphore trace
+  `P,P,V,P,P,P,V,V,P` from 3 ends at **0**; 5 with seven P and four V ends at **2**; a capacity-9 buffer with `full` = 4
+  admits **5** more inserts; the swap-based lock leaves `true` in the caller's `key` on **2** of three acquisitions
+  after the first is never released; and the asymmetric dining-philosophers rule admits at most ⌊7/2⌋ = **3**
+  simultaneous eaters. Each value was produced by a script that models the primitive's semantics directly.
+- Shell parity: the paper was produced by splicing new content into the shipped Operating Systems shell rather than
+  re-typing it. After normalising the title, the header sub-line, the metadata chips, `#qhost`, the payload, the
+  Question Bank pane and the About pane, the remaining bytes are identical to the Unit 1 Set 2 paper — **27 756 bytes
+  on both**. The `<style>` block (13 228 bytes) and the exam `<script>` (9 400 bytes) are byte-for-byte identical, and
+  the `:root` token block matches `design-tokens.css`.
+- Unit 2 had no earlier paper, so nothing was archived: the unit folder holds exactly one current paper. The Unit 1
+  paper was not touched. No root copy was written.
 
 - **2026-10-26, Operating Systems → Unit 1 (Process Management & CPU Scheduling), Set 2 of 2.** MODE A: the subject was
   drawn at random from the 11 GATE CSE subjects with a seeded draw for this date (seed 852190219, the SHA-256 of
@@ -597,7 +622,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Process Management & CPU Scheduling | `process-scheduling` | 50 | yes |
-| 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 0 | — |
+| 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 25 | yes |
 | 3 | Deadlocks | `deadlocks` | 0 | — |
 | 4 | Memory Management & Paging | `memory-paging` | 0 | — |
 | 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
