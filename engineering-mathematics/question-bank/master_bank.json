@@ -70,6 +70,66 @@
    ],
    "selection": "MODE A, random subject selection drew Engineering Mathematics. engineering-mathematics/question-bank/master_bank.json did not exist, so there was no runs[] entry and no cap to check; the starting unit came from the documented fallback (2026-10-26 − 2026-10-26) mod 5 = 0, unit index 0, Unit 1 (Linear Algebra: Matrices & Systems). No override used.",
    "note": "First paper for Engineering Mathematics, Unit 1. No earlier paper existed for this unit, so nothing was archived. 25 questions, all new; every one of the four subtopics is represented. No GATE_PYQ_VARIATION item: no linear-algebra PYQ has been verified against an official paper and key in this run."
+  },
+  {
+   "run": 2,
+   "date": "2026-10-26",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "unit_name": "Linear Algebra: Matrices & Systems",
+   "set": "2 of 2",
+   "file": "engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html",
+   "archived_previous": "engineering-mathematics/linear-algebra-matrices/archive/gate_em_mock_1_2026-10-26_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "matrix-operations",
+    "rank-nullity",
+    "systems-of-linear-equations",
+    "gauss-elimination"
+   ],
+   "question_ids": [
+    "EM-U1-Q26",
+    "EM-U1-Q27",
+    "EM-U1-Q28",
+    "EM-U1-Q29",
+    "EM-U1-Q30",
+    "EM-U1-Q31",
+    "EM-U1-Q32",
+    "EM-U1-Q33",
+    "EM-U1-Q34",
+    "EM-U1-Q35",
+    "EM-U1-Q36",
+    "EM-U1-Q37",
+    "EM-U1-Q38",
+    "EM-U1-Q39",
+    "EM-U1-Q40",
+    "EM-U1-Q41",
+    "EM-U1-Q42",
+    "EM-U1-Q43",
+    "EM-U1-Q44",
+    "EM-U1-Q45",
+    "EM-U1-Q46",
+    "EM-U1-Q47",
+    "EM-U1-Q48",
+    "EM-U1-Q49",
+    "EM-U1-Q50"
+   ],
+   "selection": "MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded random.SystemRandom() draw (seed 61724851, draw index 1 of 11) and it gave Engineering Mathematics. runs[-1] read back {date 2026-10-26, unit 1, set '1 of 2'} with 25 questions banked on Unit 1; 25 < UNIT_QUESTION_CAP = 50 and the unit had been current for 0 days, so step B3 regenerated Unit 1 rather than advancing. No override, no second pass.",
+   "note": "Set 2 of 2. 25 + 25 = 50 closes Unit 1 exactly at the cap, so the next Engineering Mathematics run advances to (0 + 1) mod 5 = Unit 2, Linear Algebra: Eigenvalues & Vectors. The Set 1 paper moved to archive/gate_em_mock_1_2026-10-26_run1.html with its content frozen. No GATE_PYQ_VARIATION item: no linear-algebra PYQ has been verified against an official paper and key."
   }
  ],
  "verified_pyqs": [],
@@ -1059,6 +1119,604 @@
     "trap": "Guessing the trace from the diagonal entries of a particular example, or assuming A² = A forces A = I. Projections onto a proper subspace satisfy A² = A with trace strictly less than the order — here 3 < 4, exactly as expected."
    },
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A matrix satisfying <span class=\"mm\">A² = A</span> is a projection: it is diagonalisable with eigenvalues only 0 and 1, so its trace counts the eigenvalues equal to 1, i.e. the rank.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>If <span class=\"mm\">λ</span> is an eigenvalue with eigenvector <span class=\"mm\">v</span>, then <span class=\"mm\">A²v = λ²v</span> and also <span class=\"mm\">A²v = Av = λv</span>, so <span class=\"mm\">λ² = λ</span>, giving <span class=\"mm\">λ ∈ {0, 1}</span>.</li><li><span class=\"mm\">A² = A</span> implies <span class=\"mm\">A</span> is diagonalisable (its minimal polynomial <span class=\"mm\">x² − x</span> has distinct roots), so the algebraic multiplicity of each eigenvalue equals its geometric multiplicity.</li><li>The multiplicity of <span class=\"mm\">λ = 1</span> is <span class=\"mm\">dim(Col A) = rank(A) = 3</span>; the multiplicity of <span class=\"mm\">λ = 0</span> is <span class=\"mm\">nullity(A) = 1</span>.</li><li><span class=\"mm\">trace(A) = 3·1 + 1·0 = 3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Guessing the trace from the diagonal entries of a particular example, or assuming <span class=\"mm\">A² = A</span> forces <span class=\"mm\">A = I</span>. Projections onto a proper subspace satisfy <span class=\"mm\">A² = A</span> with trace strictly less than the order — here <span class=\"mm\">3 &lt; 4</span>, exactly as expected.</p>"
+  },
+  {
+   "id": "EM-U1-Q26",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">4 × 3</span> matrix, <span class=\"mm\">B</span> a <span class=\"mm\">3 × 5</span> matrix and <span class=\"mm\">C</span> a <span class=\"mm\">5 × 2</span> matrix. Which of the following products is defined, and what is its order?",
+   "options": [
+    "<span class=\"mm\">AC</span> is defined and is <span class=\"mm\">4 × 2</span>.",
+    "<span class=\"mm\">CB</span> is defined and is <span class=\"mm\">5 × 3</span>.",
+    "<span class=\"mm\">ABC</span> is defined and is <span class=\"mm\">4 × 2</span>.",
+    "<span class=\"mm\">BA</span> is defined and is <span class=\"mm\">3 × 3</span>."
+   ],
+   "answer_display": "Option (C)",
+   "answer": [
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The product <span class=\"mm\">XY</span> is defined exactly when the number of columns of <span class=\"mm\">X</span> equals the number of rows of <span class=\"mm\">Y</span>, and the result has the row count of <span class=\"mm\">X</span> and the column count of <span class=\"mm\">Y</span>. Conformability chains through a product of three matrices.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">AC</span>: <span class=\"mm\">A</span> has 3 columns, <span class=\"mm\">C</span> has 5 rows — not equal, so <span class=\"mm\">AC</span> is undefined.</li><li><span class=\"mm\">CB</span>: <span class=\"mm\">C</span> has 2 columns, <span class=\"mm\">B</span> has 3 rows — undefined.</li><li><span class=\"mm\">AB</span> is defined, <span class=\"mm\">4 × 5</span>; the inner sizes agree: <span class=\"mm\">(4 × 3)(3 × 5)</span>.</li><li>That product then multiplies <span class=\"mm\">C</span> as <span class=\"mm\">(4 × 5)(5 × 2)</span>, which is conformable, so <span class=\"mm\">ABC</span> is defined and is <span class=\"mm\">4 × 2</span>.</li><li><span class=\"mm\">BA</span>: <span class=\"mm\">B</span> has 5 columns, <span class=\"mm\">A</span> has 4 rows — undefined.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> Students check <span class=\"mm\">A</span> against <span class=\"mm\">C</span> and stop at the first mismatch, concluding that the triple product fails. The correct test is pairwise and left to right: <span class=\"mm\">A</span> with <span class=\"mm\">B</span>, then the result with <span class=\"mm\">C</span>.</p>"
+  },
+  {
+   "id": "EM-U1-Q27",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">3 × 3</span> upper-triangular matrix whose diagonal entries are <span class=\"mm\">2, −3, 4</span>. Then <span class=\"mm\">det(A)</span> equals",
+   "options": [
+    "<span class=\"mm\">−24</span>",
+    "<span class=\"mm\">24</span>",
+    "<span class=\"mm\">9</span>",
+    "<span class=\"mm\">0</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The determinant of a triangular matrix (upper or lower) is the product of its diagonal entries: all other terms of the Leibniz expansion contain a zero factor.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">A</span> is upper triangular, so every term of <span class=\"mm\">det(A)</span> except the diagonal product contains an entry below the diagonal, which is <span class=\"mm\">0</span>.</li><li><span class=\"mm\">det(A) = 2 · (−3) · 4 = −24</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Adding the diagonal entries, <span class=\"mm\">2 + (−3) + 4 = 3</span>, and picking the nearest option. The rule is a product, not a sum — and the sign matters.</p>"
+  },
+  {
+   "id": "EM-U1-Q28",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">4 × 4</span> real matrix with <span class=\"mm\">det(A) = 3</span>. Then <span class=\"mm\">det(2A⁻¹)</span> equals",
+   "options": [
+    "<span class=\"mm\">16/3</span>",
+    "<span class=\"mm\">2/3</span>",
+    "<span class=\"mm\">16</span>",
+    "<span class=\"mm\">3/16</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two determinant rules compose here: <span class=\"mm\">det(A⁻¹) = 1/det(A)</span> and <span class=\"mm\">det(kA) = kⁿ det(A)</span> for an <span class=\"mm\">n × n</span> matrix.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">det(A⁻¹) = 1/3</span>.</li><li>Scaling <span class=\"mm\">A⁻¹</span> by <span class=\"mm\">2</span> multiplies its determinant by <span class=\"mm\">2⁴ = 16</span>.</li><li><span class=\"mm\">det(2A⁻¹) = 16 · (1/3) = 16/3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Applying the scaling to the inverse first, <span class=\"mm\">(2A)⁻¹ = A⁻¹/2</span>, or using <span class=\"mm\">2</span> instead of <span class=\"mm\">2⁴</span>. Write the order <span class=\"mm\">n</span> down before applying <span class=\"mm\">kⁿ</span>; with <span class=\"mm\">n = 4</span> the factor is <span class=\"mm\">16</span>, not <span class=\"mm\">2</span>.</p>"
+  },
+  {
+   "id": "EM-U1-Q29",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> and <span class=\"mm\">B</span> be invertible <span class=\"mm\">n × n</span> matrices. Then <span class=\"mm\">(AᵀB)⁻¹</span> equals",
+   "options": [
+    "<span class=\"mm\">(A⁻¹)ᵀ B⁻¹</span>",
+    "<span class=\"mm\">B⁻¹ (A⁻¹)ᵀ</span>",
+    "<span class=\"mm\">B⁻¹ A⁻¹</span>",
+    "<span class=\"mm\">A⁻¹ B⁻¹</span>"
+   ],
+   "answer_display": "Option (B)",
+   "answer": [
+    1
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The inverse of a product reverses the order: <span class=\"mm\">(XY)⁻¹ = Y⁻¹X⁻¹</span>. Also <span class=\"mm\">(Aᵀ)⁻¹ = (A⁻¹)ᵀ</span>, so it does not matter whether the transpose or the inverse is taken first.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Put <span class=\"mm\">X = Aᵀ</span> and <span class=\"mm\">Y = B</span>. Then <span class=\"mm\">(XY)⁻¹ = Y⁻¹X⁻¹ = B⁻¹(Aᵀ)⁻¹</span>.</li><li>Since <span class=\"mm\">(Aᵀ)⁻¹ = (A⁻¹)ᵀ</span>, this is <span class=\"mm\">B⁻¹(A⁻¹)ᵀ</span>.</li><li>Check: <span class=\"mm\">(AᵀB)·B⁻¹(A⁻¹)ᵀ = Aᵀ(BB⁻¹)(A⁻¹)ᵀ = Aᵀ(A⁻¹)ᵀ = (A⁻¹A)ᵀ = I</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Option (A) keeps the original order and option (D) forgets the transpose. Both fail the multiplication check above as soon as <span class=\"mm\">A</span> and <span class=\"mm\">B</span> do not commute.</p>"
+  },
+  {
+   "id": "EM-U1-Q30",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">3 × 7</span> real matrix. The nullity of <span class=\"mm\">A</span> is always at least",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">7</span>"
+   ],
+   "answer_display": "Option (C)",
+   "answer": [
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Rank–nullity: <span class=\"mm\">rank(A) + nullity(A) = n</span>, the number of columns. The rank of an <span class=\"mm\">m × n</span> matrix is at most <span class=\"mm\">min(m, n)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <span class=\"mm\">m = 3</span> and <span class=\"mm\">n = 7</span>, so <span class=\"mm\">rank(A) ≤ 3</span>.</li><li><span class=\"mm\">nullity(A) = 7 − rank(A) ≥ 7 − 3 = 4</span>.</li><li>The bound is attained by any matrix of full row rank, e.g. <span class=\"mm\">[I₃ | 0]</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">m</span> instead of <span class=\"mm\">n</span> in rank–nullity, which gives <span class=\"mm\">3 − 3 = 0</span>. The null space lives in <span class=\"mm\">ℝ⁷</span>, so the column count is the one that matters.</p>"
+  },
+  {
+   "id": "EM-U1-Q31",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "The dimension of the column space of a <span class=\"mm\">4 × 6</span> real matrix is at most",
+   "options": [
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">6</span>",
+    "<span class=\"mm\">10</span>",
+    "<span class=\"mm\">24</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The column space of an <span class=\"mm\">m × n</span> matrix is a subspace of <span class=\"mm\">ℝᵐ</span>, and its dimension is the rank, which is at most <span class=\"mm\">min(m, n)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the 6 columns is a vector in <span class=\"mm\">ℝ⁴</span>, so any spanning set of them spans a subspace of dimension at most 4.</li><li>Equivalently <span class=\"mm\">rank(A) ≤ min(4, 6) = 4</span>.</li><li>Equality holds whenever the matrix has full row rank.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering 6 because there are six columns. Having six column vectors does not make them independent — the ambient space <span class=\"mm\">ℝ⁴</span> caps the dimension.</p>"
+  },
+  {
+   "id": "EM-U1-Q32",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be <span class=\"mm\">4 × 3</span> with <span class=\"mm\">rank(A) = 3</span> and <span class=\"mm\">B</span> be <span class=\"mm\">3 × 5</span> with <span class=\"mm\">rank(B) = 2</span>. The largest possible value of <span class=\"mm\">rank(AB)</span> is",
+   "options": [
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">5</span>"
+   ],
+   "answer_display": "Option (B)",
+   "answer": [
+    1
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For conformable matrices, <span class=\"mm\">rank(AB) ≤ min(rank(A), rank(B))</span>. The bound is sharp: it is attainable when the images line up.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">rank(AB) ≤ min(3, 2) = 2</span>, so 2 is an upper bound.</li><li>Attainability: <span class=\"mm\">rank(B) = 2</span> means the image of <span class=\"mm\">B</span> is a 2-dimensional subspace <span class=\"mm\">S ⊆ ℝ³</span>.</li><li><span class=\"mm\">rank(A) = 3</span> with 3 columns makes <span class=\"mm\">A</span> injective, so it maps <span class=\"mm\">S</span> to a subspace of the same dimension 2.</li><li>Hence <span class=\"mm\">rank(AB) = 2</span> for such a pair, and the bound is achieved.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Choosing 3 from <span class=\"mm\">A</span> alone. The product can never create rank that <span class=\"mm\">B</span> does not have; the smaller of the two ranks is the ceiling.</p>"
+  },
+  {
+   "id": "EM-U1-Q33",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">3 × 3</span> real matrix with <span class=\"mm\">A² = 0</span> but <span class=\"mm\">A ≠ 0</span>. Then <span class=\"mm\">rank(A)</span> must be",
+   "options": [
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">3</span>",
+    "cannot be determined from the data"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> If <span class=\"mm\">A² = 0</span> then the image of <span class=\"mm\">A</span> lies inside the kernel of <span class=\"mm\">A</span>, because for every vector <span class=\"mm\">v</span>, <span class=\"mm\">A(Av) = A²v = 0</span>. Hence <span class=\"mm\">col(A) ⊆ ker(A)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Taking dimensions: <span class=\"mm\">rank(A) ≤ nullity(A)</span>.</li><li>Rank–nullity with <span class=\"mm\">n = 3</span> gives <span class=\"mm\">rank(A) + nullity(A) = 3</span>, so <span class=\"mm\">2·rank(A) ≤ 3</span>.</li><li>As a rank is an integer, <span class=\"mm\">rank(A) ≤ 1</span>.</li><li><span class=\"mm\">A ≠ 0</span> forces <span class=\"mm\">rank(A) ≥ 1</span>, so <span class=\"mm\">rank(A) = 1</span>.</li><li>Example: <span class=\"mm\">A = [[0, 1, 0], [0, 0, 0], [0, 0, 0]]</span> has <span class=\"mm\">A² = 0</span> and rank 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Reading <span class=\"mm\">A² = 0</span> as <span class=\"mm\">A = 0</span> and answering that the rank is 0, or assuming the rank can be 2. Nilpotency of index 2 forces the rank to be at most <span class=\"mm\">n/2</span>, not zero.</p>"
+  },
+  {
+   "id": "EM-U1-Q34",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "A homogeneous system of <span class=\"mm\">4</span> linear equations in <span class=\"mm\">3</span> unknowns has a coefficient matrix of rank <span class=\"mm\">3</span>. Its solution set is",
+   "options": [
+    "empty",
+    "exactly one solution, the trivial one <span class=\"mm\">x = 0</span>",
+    "an infinite set of solutions",
+    "exactly three solutions"
+   ],
+   "answer_display": "Option (B)",
+   "answer": [
+    1
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A homogeneous system <span class=\"mm\">Ax = 0</span> is always consistent, since <span class=\"mm\">x = 0</span> works. Its solution set is the null space, whose dimension is <span class=\"mm\">nullity(A) = n − rank(A)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">n = 3</span> (three unknowns) and <span class=\"mm\">rank(A) = 3</span>, so <span class=\"mm\">nullity(A) = 0</span>.</li><li>A null space of dimension 0 is <span class=\"mm\">{0}</span>, so the only solution is <span class=\"mm\">x = 0</span>.</li><li>Note that four equations are irrelevant to the count: rank, not row count, decides.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Believing that more equations than unknowns forces either inconsistency or infinitely many solutions. A homogeneous system is never inconsistent, and here the columns are independent, so the trivial solution is the only one.</p>"
+  },
+  {
+   "id": "EM-U1-Q35",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">3 × 5</span> real matrix of rank <span class=\"mm\">3</span> and let <span class=\"mm\">Ax = b</span> be consistent. The solution set of <span class=\"mm\">Ax = b</span> is",
+   "options": [
+    "a single point",
+    "a line",
+    "a plane",
+    "the empty set"
+   ],
+   "answer_display": "Option (C)",
+   "answer": [
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> If <span class=\"mm\">Ax = b</span> is consistent with particular solution <span class=\"mm\">x₀</span>, the full solution set is <span class=\"mm\">x₀ + ker(A)</span> — an affine subspace whose dimension equals the nullity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">nullity(A) = 5 − rank(A) = 5 − 3 = 2</span>.</li><li>So the solution set is <span class=\"mm\">x₀</span> plus a 2-dimensional subspace of <span class=\"mm\">ℝ⁵</span>.</li><li>A 2-dimensional affine subspace is a plane (a translate of a plane through the origin).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> Answering 'a single point' because there are three equations, or 'a line' by confusing the nullity with the number of free variables minus one. Dimension of the solution set = number of unknowns − rank.</p>"
+  },
+  {
+   "id": "EM-U1-Q36",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Using Cramer's rule on the system <span class=\"mm\">2x + y = 5</span>, <span class=\"mm\">x + 3y = 10</span>, the value of <span class=\"mm\">x</span> is",
+   "options": [
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">5</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Cramer's rule: when <span class=\"mm\">det(A) ≠ 0</span>, <span class=\"mm\">xᵢ = det(Aᵢ)/det(A)</span>, where <span class=\"mm\">Aᵢ</span> is <span class=\"mm\">A</span> with column <span class=\"mm\">i</span> replaced by <span class=\"mm\">b</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">A = [[2, 1], [1, 3]]</span>, so <span class=\"mm\">det(A) = 6 − 1 = 5</span>.</li><li><span class=\"mm\">A₁ = [[5, 1], [10, 3]]</span>, so <span class=\"mm\">det(A₁) = 15 − 10 = 5</span>.</li><li><span class=\"mm\">x = 5/5 = 1</span>.</li><li>Check: <span class=\"mm\">y = det([[2,5],[1,10]])/5 = (20 − 5)/5 = 3</span>, and <span class=\"mm\">2(1) + 3 = 5</span>, <span class=\"mm\">1 + 3(3) = 10</span> both hold.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Replacing the wrong column — putting <span class=\"mm\">b</span> into the <span class=\"mm\">y</span> column gives <span class=\"mm\">det = 20 − 1 = 19</span> and a wrong <span class=\"mm\">x</span>. The replacement column index must match the unknown being solved for.</p>"
+  },
+  {
+   "id": "EM-U1-Q37",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Consider the system <span class=\"mm\">x + y + z = 1</span>, <span class=\"mm\">x + 2y + 3z = 4</span>, <span class=\"mm\">x + 4y + az = b</span>, where <span class=\"mm\">a, b ∈ ℝ</span>. The system has a unique solution for",
+   "options": [
+    "<span class=\"mm\">a ≠ 7</span>, whatever <span class=\"mm\">b</span> is",
+    "<span class=\"mm\">a ≠ 0</span>, whatever <span class=\"mm\">b</span> is",
+    "every real <span class=\"mm\">a</span> and <span class=\"mm\">b</span>",
+    "no real <span class=\"mm\">a</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a square system, uniqueness is decided by the coefficient matrix alone: a unique solution exists exactly when <span class=\"mm\">det(A) ≠ 0</span>, and then it exists for every right-hand side <span class=\"mm\">b</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Expand the determinant of <span class=\"mm\">A = [[1,1,1],[1,2,3],[1,4,a]]</span>:<br/><span class=\"mm\">det(A) = 1(2a − 12) − 1(a − 3) + 1(4 − 2) = a − 7</span>.</li><li>So <span class=\"mm\">det(A) = 0</span> exactly when <span class=\"mm\">a = 7</span>.</li><li>For every <span class=\"mm\">a ≠ 7</span> the matrix is invertible and <span class=\"mm\">x = A⁻¹b</span> is the unique solution, for any <span class=\"mm\">b</span>.</li><li>At <span class=\"mm\">a = 7</span> the rows <span class=\"mm\">(0,1,2)</span> and <span class=\"mm\">(0,3,6)</span> are proportional, so the system is either inconsistent or has infinitely many solutions, depending on <span class=\"mm\">b</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that uniqueness depends on <span class=\"mm\">b</span> as well. Row operations on <span class=\"mm\">[A | b]</span> cannot change <span class=\"mm\">det(A)</span>, so the right-hand side never rescues a singular coefficient matrix into uniqueness.</p>"
+  },
+  {
+   "id": "EM-U1-Q38",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "gauss-elimination",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Which of the following is NOT an elementary row operation?",
+   "options": [
+    "Interchanging two rows",
+    "Multiplying a row by a non-zero scalar",
+    "Adding a scalar multiple of one row to another row",
+    "Multiplying a row by <span class=\"mm\">0</span>"
+   ],
+   "answer_display": "Option (D)",
+   "answer": [
+    3
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three elementary row operations are row interchange, row scaling by a non-zero constant, and row replacement. Each must be reversible, because elimination has to preserve the solution set.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Interchange is its own inverse.</li><li>Scaling by <span class=\"mm\">k ≠ 0</span> is undone by scaling by <span class=\"mm\">1/k</span>.</li><li>Row replacement is undone by subtracting the same multiple.</li><li>Multiplying a row by <span class=\"mm\">0</span> destroys the information in that row and cannot be undone — it is not an elementary operation.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D)</span></p><p class=\"row\"><b>Common misconception.</b> Thinking that any 'row scaling' is allowed. The non-zero condition is essential: scaling by zero changes the solution set and reduces the rank.</p>"
+  },
+  {
+   "id": "EM-U1-Q39",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "gauss-elimination",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Gauss–Jordan elimination (full reduction to reduced row echelon form) applied to a dense <span class=\"mm\">n × n</span> system performs approximately how many arithmetic operations?",
+   "options": [
+    "<span class=\"mm\">n³/3</span>",
+    "<span class=\"mm\">n³/2</span>",
+    "<span class=\"mm\">n²</span>",
+    "<span class=\"mm\">n³</span>"
+   ],
+   "answer_display": "Option (B)",
+   "answer": [
+    1
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Gaussian elimination costs about <span class=\"mm\">n³/3</span> operations for forward elimination; Gauss–Jordan additionally eliminates above each pivot, roughly doubling that work.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Forward elimination removes entries below the pivots: about <span class=\"mm\">n³/3</span> operations.</li><li>Back substitution in ordinary Gaussian elimination costs only <span class=\"mm\">n²/2</span>.</li><li>Gauss–Jordan also clears the entries above each pivot, adding about <span class=\"mm\">n³/6</span>.</li><li>Total <span class=\"mm\">n³/3 + n³/6 = n³/2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Quoting <span class=\"mm\">n³/3</span> for Gauss–Jordan as well. That figure belongs to plain Gaussian elimination followed by back substitution; the extra sweep above the diagonal is what pushes it to <span class=\"mm\">n³/2</span>.</p>"
+  },
+  {
+   "id": "EM-U1-Q40",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "gauss-elimination",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Gaussian elimination without pivoting is applied to a dense tridiagonal <span class=\"mm\">n × n</span> system. Asymptotically, the number of arithmetic operations is",
+   "options": [
+    "<span class=\"mm\">Θ(n)</span>",
+    "<span class=\"mm\">Θ(n log n)</span>",
+    "<span class=\"mm\">Θ(n²)</span>",
+    "<span class=\"mm\">Θ(n³)</span>"
+   ],
+   "answer_display": "Option (A)",
+   "answer": [
+    0
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The cost of elimination is governed by the number of non-zeros it has to touch. A tridiagonal matrix has only <span class=\"mm\">3n − 2</span> non-zero entries, and elimination on it creates no fill-in outside the band.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>At step <span class=\"mm\">k</span> only row <span class=\"mm\">k + 1</span> needs updating, and only in columns <span class=\"mm\">k + 1</span> and <span class=\"mm\">k + 2</span>.</li><li>So each of the <span class=\"mm\">n − 1</span> steps costs a constant number of operations.</li><li>Total <span class=\"mm\">Θ(n)</span> — this is the Thomas algorithm.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Quoting <span class=\"mm\">Θ(n³)</span> out of habit. The <span class=\"mm\">n³/3</span> figure assumes a dense matrix; banded structure is exactly what makes large tridiagonal systems cheap to solve.</p>"
+  },
+  {
+   "id": "EM-U1-Q41",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> and <span class=\"mm\">B</span> be <span class=\"mm\">2 × 2</span> real matrices with <span class=\"mm\">det(A) = 2</span> and <span class=\"mm\">det(B) = 3</span>. Which statements are TRUE?",
+   "options": [
+    "<span class=\"mm\">det(AB) = 6</span>",
+    "<span class=\"mm\">det(A + B) = 5</span>",
+    "<span class=\"mm\">det(A⁻¹) = 1/2</span>",
+    "<span class=\"mm\">det(Aᵀ) = 3</span>"
+   ],
+   "answer_display": "Options (A) and (C)",
+   "answer": [
+    0,
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The determinant is multiplicative and invariant under transpose; it is additive in neither the matrix nor, in general, the scalar.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">det(AB) = det(A)det(B) = 2 · 3 = 6</span> — true.</li><li><span class=\"mm\">det(A + B)</span> has no rule in terms of <span class=\"mm\">det(A)</span> and <span class=\"mm\">det(B)</span>; take <span class=\"mm\">A = I, B = 2I</span>: <span class=\"mm\">det(A + B) = 9 ≠ 3</span> — false.</li><li><span class=\"mm\">det(A⁻¹) = 1/det(A) = 1/2</span> — true.</li><li><span class=\"mm\">det(Aᵀ) = det(A) = 2</span>, not 3 — false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C)</span></p><p class=\"row\"><b>Common misconception.</b> Treating the determinant as linear, so that <span class=\"mm\">det(A + B) = det(A) + det(B)</span>. Linearity holds row by row, not for the whole matrix sum.</p>"
+  },
+  {
+   "id": "EM-U1-Q42",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be an <span class=\"mm\">m × n</span> real matrix of rank <span class=\"mm\">r</span>. Which statements are TRUE?",
+   "options": [
+    "<span class=\"mm\">r ≤ min(m, n)</span>",
+    "<span class=\"mm\">rank(Aᵀ) = r</span>",
+    "<span class=\"mm\">r + nullity(A) = m</span>",
+    "If <span class=\"mm\">r = n</span> then <span class=\"mm\">Ax = 0</span> has only the trivial solution"
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The rank is the common dimension of the row and column spaces; rank–nullity counts columns, not rows.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">r ≤ min(m, n)</span>: the column space lies in <span class=\"mm\">ℝᵐ</span> and is spanned by <span class=\"mm\">n</span> vectors — true.</li><li>Row rank equals column rank, so <span class=\"mm\">rank(Aᵀ) = rank(A) = r</span> — true.</li><li>Rank–nullity is <span class=\"mm\">r + nullity(A) = n</span>, not <span class=\"mm\">m</span> — false.</li><li><span class=\"mm\">r = n</span> means full column rank, so <span class=\"mm\">nullity(A) = 0</span> and <span class=\"mm\">Ax = 0</span> has only <span class=\"mm\">x = 0</span> — true.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D)</span></p><p class=\"row\"><b>Common misconception.</b> Writing rank–nullity with <span class=\"mm\">m</span>. The null space consists of vectors <span class=\"mm\">x ∈ ℝⁿ</span>, so <span class=\"mm\">n</span> is the constant that belongs there.</p>"
+  },
+  {
+   "id": "EM-U1-Q43",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Which of the following systems have infinitely many solutions?",
+   "options": [
+    "<span class=\"mm\">x + y = 1, 2x + 2y = 2</span>",
+    "<span class=\"mm\">x + y = 1, x − y = 0</span>",
+    "<span class=\"mm\">x + y + z = 2, x − y + z = 0, 2x + 2z = 2</span>",
+    "<span class=\"mm\">x + y = 1, x + y = 2</span>"
+   ],
+   "answer_display": "Options (A) and (C)",
+   "answer": [
+    0,
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A consistent system has infinitely many solutions exactly when its coefficient matrix has nullity at least 1, i.e. when its rank is less than the number of unknowns.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) The second equation is twice the first, so rank 1 with 2 unknowns and the system is consistent — infinitely many (a whole line) — true.</li><li>(B) <span class=\"mm\">det([[1,1],[1,−1]]) = −2 ≠ 0</span>, so the solution <span class=\"mm\">(1/2, 1/2)</span> is unique — false.</li><li>(C) The third equation is the sum of the first two, so the rank is 2 while there are 3 unknowns, and the system is consistent — infinitely many (a line) — true.</li><li>(D) The two left sides are identical but the right sides differ, so the system is inconsistent — false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C)</span></p><p class=\"row\"><b>Common misconception.</b> Counting dependent equations as automatically giving infinitely many solutions. Dependence plus consistency gives infinitely many; dependence with contradictory right-hand sides (D) gives none.</p>"
+  },
+  {
+   "id": "EM-U1-Q44",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "gauss-elimination",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Which statements about pivoting in Gaussian elimination are TRUE?",
+   "options": [
+    "Partial pivoting selects the entry of largest magnitude in the current column, at or below the pivot row",
+    "Scaled partial pivoting compares <span class=\"mm\">|aᵢₖ|/sᵢ</span>, where <span class=\"mm\">sᵢ</span> is the largest magnitude of an entry in row <span class=\"mm\">i</span>",
+    "Complete pivoting searches the remaining submatrix for the largest magnitude entry, using both row and column interchanges",
+    "Partial pivoting guarantees an exact answer in finite-precision arithmetic"
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Pivoting chooses the elimination order to keep multipliers small, which limits the growth of rounding error. It improves accuracy; it does not remove floating-point error.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Partial pivoting: interchange rows so that the pivot is the largest magnitude entry in its column at or below the current row — true.</li><li>Scaled partial pivoting divides each candidate by the largest entry in its own row, so rows of different scale are compared fairly — true.</li><li>Complete piviting searches the whole remaining submatrix and may interchange columns as well, which is stronger but costs more comparisons — true.</li><li>No pivoting strategy can make floating-point arithmetic exact; the guarantee is bounded growth of round-off, not exactness — false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C)</span></p><p class=\"row\"><b>Common misconception.</b> Believing pivoting eliminates round-off error. It only keeps the multipliers at most 1 in magnitude, which bounds error growth; the arithmetic is still inexact.</p>"
+  },
+  {
+   "id": "EM-U1-Q45",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A, B, C</span> be <span class=\"mm\">n × n</span> real matrices. Which statements are TRUE?",
+   "options": [
+    "If <span class=\"mm\">A² = 0</span> then <span class=\"mm\">A</span> is singular",
+    "If <span class=\"mm\">A² = A</span> then <span class=\"mm\">det(A) ∈ {0, 1}</span>",
+    "If <span class=\"mm\">A</span> is invertible and <span class=\"mm\">AB = AC</span> then <span class=\"mm\">B = C</span>",
+    "Every square matrix has an inverse"
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The determinant turns matrix multiplication into ordinary multiplication, so polynomial relations among matrices become relations among numbers.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">A² = 0</span> gives <span class=\"mm\">det(A)² = 0</span>, hence <span class=\"mm\">det(A) = 0</span> and <span class=\"mm\">A</span> is singular — true.</li><li><span class=\"mm\">A² = A</span> gives <span class=\"mm\">det(A)² = det(A)</span>, so <span class=\"mm\">det(A)</span> is a real root of <span class=\"mm\">t² = t</span>, namely 0 or 1 — true.</li><li>Multiply <span class=\"mm\">AB = AC</span> on the left by <span class=\"mm\">A⁻¹</span> to get <span class=\"mm\">B = C</span> — true.</li><li>A square matrix is invertible only if <span class=\"mm\">det(A) ≠ 0</span>; the zero matrix is a counterexample — false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C)</span></p><p class=\"row\"><b>Common misconception.</b> Cancelling <span class=\"mm\">A</span> without invertibility. In (C) the hypothesis supplies <span class=\"mm\">A⁻¹</span>; in general <span class=\"mm\">AB = AC</span> does not imply <span class=\"mm\">B = C</span> when <span class=\"mm\">A</span> is singular.</p>"
+  },
+  {
+   "id": "EM-U1-Q46",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "matrix-operations",
+   "type": "NAT",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A = [[2, 1], [1, 1]]</span>. Find the <span class=\"mm\">(1, 2)</span> entry of <span class=\"mm\">A⁻¹</span>. (Enter an integer; the value may be negative.)",
+   "options": [],
+   "answer_display": "-1",
+   "answer": -1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a <span class=\"mm\">2 × 2</span> matrix <span class=\"mm\">[[a, b], [c, d]]</span> with <span class=\"mm\">ad − bc ≠ 0</span>, the inverse is <span class=\"mm\">(1/(ad − bc))·[[d, −b], [−c, a]]</span> — the diagonal entries swap and the off-diagonal entries change sign.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">det(A) = 2·1 − 1·1 = 1</span>.</li><li><span class=\"mm\">A⁻¹ = [[1, −1], [−1, 2]]</span>.</li><li>The <span class=\"mm\">(1, 2)</span> entry is <span class=\"mm\">−1</span>.</li><li>Check: <span class=\"mm\">A·A⁻¹ = [[2·1 − 1·1, −2 + 2], [1 − 1, −1 + 2]] = I</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: −1</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the <span class=\"mm\">(2, 1)</span> entry, or forgetting the sign change on the off-diagonal entries and answering <span class=\"mm\">1</span>. The adjugate puts <span class=\"mm\">−b</span> in position <span class=\"mm\">(1, 2)</span> and <span class=\"mm\">−c</span> in position <span class=\"mm\">(2, 1)</span>.</p>"
+  },
+  {
+   "id": "EM-U1-Q47",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Let <span class=\"mm\">A</span> be a <span class=\"mm\">3 × 5</span> real matrix with <span class=\"mm\">rank(A) = 3</span>. Find the nullity of <span class=\"mm\">Aᵀ</span>. (Enter an integer.)",
+   "options": [],
+   "answer_display": "0",
+   "answer": 0,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Rank–nullity is applied to the matrix you actually have, counting its own columns. Also <span class=\"mm\">rank(Aᵀ) = rank(A)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">Aᵀ</span> is <span class=\"mm\">5 × 3</span>, so it has 3 columns.</li><li><span class=\"mm\">rank(Aᵀ) = rank(A) = 3</span>.</li><li><span class=\"mm\">nullity(Aᵀ) = 3 − 3 = 0</span>.</li><li>Sanity check: <span class=\"mm\">nullity(A) = 5 − 3 = 2</span>, so the two nullities differ — the transposed matrix has different dimensions.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0</span></p><p class=\"row\"><b>Common misconception.</b> Answering 2 by reusing <span class=\"mm\">nullity(A)</span>. <span class=\"mm\">A</span> and <span class=\"mm\">Aᵀ</span> have the same rank but different column counts, so their nullities differ whenever the matrix is not square.</p>"
+  },
+  {
+   "id": "EM-U1-Q48",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "systems-of-linear-equations",
+   "type": "NAT",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "The system <span class=\"mm\">x + 2y + z = 8</span>, <span class=\"mm\">2x − y + 3z = 9</span>, <span class=\"mm\">x + y − z = 0</span> has a unique solution. For that solution, find <span class=\"mm\">x + 2y + 3z</span>. (Enter an integer.)",
+   "options": [],
+   "answer_display": "14",
+   "answer": 14,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Eliminate one variable at a time; then substitute back. Check uniqueness first by the determinant of the coefficient matrix.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">det([[1,2,1],[2,−1,3],[1,1,−1]]) = 1(1 − 3) − 2(−2 − 3) + 1(2 + 1) = −2 + 10 + 3 = 11 ≠ 0</span>, so the solution is unique.</li><li>From the third equation <span class=\"mm\">z = x + y</span>. Substituting into the first: <span class=\"mm\">x + 2y + (x + y) = 8</span>, i.e. <span class=\"mm\">2x + 3y = 8</span>.</li><li>Into the second: <span class=\"mm\">2x − y + 3(x + y) = 9</span>, i.e. <span class=\"mm\">5x + 2y = 9</span>.</li><li>Solving the <span class=\"mm\">2 × 2</span> system: <span class=\"mm\">y = (8 − 2x)/3</span> and <span class=\"mm\">5x + 2(8 − 2x)/3 = 9</span> give <span class=\"mm\">15x + 16 − 4x = 27</span>, so <span class=\"mm\">11x = 11</span>, <span class=\"mm\">x = 1</span>.</li><li>Then <span class=\"mm\">2 + 3y = 8</span> gives <span class=\"mm\">y = 2</span>, and <span class=\"mm\">z = 1 + 2 = 3</span>.</li><li><span class=\"mm\">x + 2y + 3z = 1 + 4 + 9 = 14</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 14</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">x + y + z = 6</span> — the sum of the solution — instead of the weighted expression asked for, or stopping after finding <span class=\"mm\">z</span>. Substitute the triple back into all three original equations before reporting.</p>"
+  },
+  {
+   "id": "EM-U1-Q49",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "gauss-elimination",
+   "type": "NAT",
+   "difficulty": "hard",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-26",
+   "text": "A <span class=\"mm\">5 × 5</span> matrix with no zero pivots is reduced to row echelon form without any row interchange. Counting one operation per row update of the form <span class=\"mm\">Rᵢ ← Rᵢ − mRₖ</span>, how many such updates are performed in total? (Enter an integer.)",
+   "options": [],
+   "answer_display": "10",
+   "answer": 10,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> At elimination step <span class=\"mm\">k</span> every row strictly below the pivot row is updated once. The count is therefore the number of pairs <span class=\"mm\">(k, i)</span> with <span class=\"mm\">i > k</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Step 1 updates rows 2–5: 4 updates.</li><li>Step 2 updates rows 3–5: 3 updates.</li><li>Step 3 updates rows 4–5: 2 updates.</li><li>Step 4 updates row 5: 1 update.</li><li>Total <span class=\"mm\">4 + 3 + 2 + 1 = 10</span>, i.e. <span class=\"mm\">n(n − 1)/2 = 5·4/2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 10</span></p><p class=\"row\"><b>Common misconception.</b> Counting the inner loop over columns instead of rows, which gives the <span class=\"mm\">n³/3 ≈ 42</span> figure for arithmetic operations. Row updates and arithmetic operations are different counts; this question asks for the former.</p>"
+  },
+  {
+   "id": "EM-U1-Q50",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 1,
+   "unit_number": 1,
+   "unit_slug": "linear-algebra-matrices",
+   "subtopic": "rank-nullity",
+   "type": "NAT",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-26",
+   "text": "Find the rank of <span class=\"mm\">A = [[1, 2, 3, 4], [2, 4, 6, 8], [1, 0, 1, 0], [0, 1, 1, 2]]</span>. (Enter an integer.)",
+   "options": [],
+   "answer_display": "2",
+   "answer": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The rank is the number of non-zero rows in any row echelon form; equivalently the size of a largest set of independent rows.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">R₂ = 2R₁</span>, so row 2 contributes nothing: <span class=\"mm\">R₂ ← R₂ − 2R₁</span> clears it.</li><li><span class=\"mm\">R₃ ← R₃ − R₁</span> gives <span class=\"mm\">(0, −2, −2, −4)</span>.</li><li>Row 4 is <span class=\"mm\">(0, 1, 1, 2)</span>, and <span class=\"mm\">(0, −2, −2, −4) = −2·(0, 1, 1, 2)</span>, so rows 3 and 4 are dependent.</li><li>The non-zero rows reduce to <span class=\"mm\">(1, 2, 3, 4)</span> and <span class=\"mm\">(0, 1, 1, 2)</span>, which are independent, so <span class=\"mm\">rank(A) = 2</span>.</li><li>Check with rank–nullity: <span class=\"mm\">nullity(A) = 4 − 2 = 2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 3 because the first three rows 'look' different, or 4 because there are four rows. Always eliminate: a repeated or proportional row is invisible at a glance once entries are larger.</p>"
   }
  ]
 }

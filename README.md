@@ -7,27 +7,86 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 1 — ER Models & Relational Algebra, Set 2 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
+- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 2 of 2**, 2026-10-26 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: ER diagrams, cardinality & weak entities (6) · relational model & constraints (6) · relational algebra: σ, π, join, division (8) · tuple & domain relational calculus (5)
-- Rotation: MODE A drew Databases at random from the 11 subjects. The bank read back
+- Subtopics: matrix operations (7) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (5)
+- Rotation: MODE A drew Engineering Mathematics at random from the 11 subjects. The bank read back
   `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1 — under
   `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1. This is Set 2 of 2;
-  25 + 25 = 50 closes the unit at the cap, and the next Databases run advances to `(0 + 1) mod 5` = Unit 2,
-  SQL & Advanced Querying. No override was used and no second pass has started.
-- Previous test: **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 2 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
+  25 + 25 = 50 closes the unit at the cap, and the next Engineering Mathematics run advances to `(0 + 1) mod 5` = Unit 2,
+  Linear Algebra: Eigenvalues & Vectors. No override was used and no second pass has started.
+- Previous test: **Databases · Unit 1 — ER Models & Relational Algebra, Set 2 of 2**, 2026-10-26 → [`databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html`](databases/er-relational-algebra/gate_db_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 29 (13 Discrete Mathematics, 2 Algorithms, 2 Databases, 2 Compiler Design, 3 Operating Systems, 1 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
+| Papers published | 30 (13 Discrete Mathematics, 2 Algorithms, 2 Databases, 2 Compiler Design, 3 Operating Systems, 2 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 2 Theory of Computation, 1 Digital Logic) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 1 of 4 in Theory of Computation; 1 of 4 in Digital Logic |
-| Questions in the subject banks | 725 (325 Discrete Mathematics, 50 Algorithms, 50 Databases, 50 Compiler Design, 75 Operating Systems, 25 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
+| Questions in the subject banks | 750 (325 Discrete Mathematics, 50 Algorithms, 50 Databases, 50 Compiler Design, 75 Operating Systems, 50 Engineering Mathematics, 50 Programming and Data Structures, 25 Computer Networks, 50 Theory of Computation, 25 Digital Logic) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 13 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases) |
+| Archived sets (earlier runs) | 14 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics) |
 
 ## Rotation log
+
+- **2026-10-26, Engineering Mathematics → Unit 1 (Linear Algebra: Matrices & Systems), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (seed 61724851, draw index 1 of 11) and it gave **Engineering Mathematics**. The bank
+  read back `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with **25** questions banked on Unit 1. Since 25 <
+  `UNIT_QUESTION_CAP = 50` and the unit had been current for 0 days, step B3 regenerated Unit 1 rather than advancing.
+  This is the second and final set for the unit: 25 + 25 = 50, exactly the cap, so no partial set was added and the
+  unit ends at 50, not 60. The next Engineering Mathematics run advances to `(0 + 1) mod 5` = Unit 2, Linear Algebra:
+  Eigenvalues & Vectors. No override was used and no second pass has started.
+- All 25 items are new: no stem, option set or numeric answer is shared with Set 1 (checked by exact-string comparison
+  against the 25 questions already in `master_bank.json`; the only repeated option texts are bare numerals such as
+  `0` and `1`). Composition is the standard 15 MCQ / 5 MSQ / 5 NAT with the 10 easy / 10 medium / 5 hard split; marks
+  total 15 × 1 + 10 × 2 = 35. Coverage is 7 / 7 / 6 / 5 across matrix operations, rank and nullity, systems of linear
+  equations and Gauss elimination, so all four of the unit's subtopics are represented.
+- **Every numeric answer was recomputed by an independent script, not by hand.** `sympy` confirmed: the determinant of
+  `[[1,1,1],[1,2,3],[1,4,a]]` is `a − 7`, so uniqueness holds exactly for `a ≠ 7`; the system
+  `x + 2y + z = 8`, `2x − y + 3z = 9`, `x + y − z = 0` has determinant `11` and the unique solution `(1, 2, 3)`, so
+  `x + 2y + 3z = 14`; the rank of `[[1,2,3,4],[2,4,6,8],[1,0,1,0],[0,1,1,2]]` is `2`; `det(2A⁻¹)` with `det(A) = 3` on a
+  `4 × 4` matrix is `16/3`; Cramer's rule on `2x + y = 5`, `x + 3y = 10` gives `x = 1`; and the `(1,2)` entry of the
+  inverse of `[[2,1],[1,1]]` is `−1`. The counting items were checked by simulating the elimination: `4 + 3 + 2 + 1 = 10`
+  row updates for a `5 × 5` matrix, against the `n³/3 ≈ 42` arithmetic operations those updates contain.
+- The conceptual items were settled by proof rather than by taste: `A² = 0` with `A ≠ 0` on `3 × 3` forces rank 1
+  because `col(A) ⊆ ker(A)` gives `2·rank ≤ 3`; `rank(AB) ≤ min(rank A, rank B)` is attained here because `A` of
+  rank 3 with 3 columns is injective on the image of `B`; a `3 × 5` matrix of rank 3 has nullity 2, so a consistent
+  `Ax = b` has a plane of solutions; and `nullity(Aᵀ) = 3 − 3 = 0`, which differs from `nullity(A) = 2`.
+- No `GATE_PYQ_VARIATION` item ships: no linear-algebra previous-year question has been verified against an official
+  paper and answer key, so none is claimed and `verified_pyqs` stays empty for this subject. Every item is
+  `STANDARD_TEXTBOOK` (13) or `ORIGINAL_SYNTHESIS` (12). The About tab and the Question Bank tab both say so.
+- The Set 1 paper moved to `engineering-mathematics/linear-algebra-matrices/archive/gate_em_mock_1_2026-10-26_run1.html`
+  with its questions, options, answers, solutions and duration frozen — it is byte-for-byte the file that was current
+  before this run (118 900 bytes). The new Set 2 paper (165 261 bytes) is filed only at
+  `engineering-mathematics/linear-algebra-matrices/`; no root copy was written and the unit folder never held two
+  current papers.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 228 bytes) and the exam `<script>` (9 411 bytes) are byte-for-byte identical to the Operating
+  Systems Unit 2 paper, and after normalising the title, the header brand and sub-line, the candidate block, the tab
+  label, the metadata chips, `#qhost`, the payload, the Question Bank pane and the About pane, the remaining bytes
+  differ only in the subject name — 27 795 against 27 789, the six extra characters of "Engineering Mathematics". The
+  `:root` block (521 bytes) matches `design-tokens.css` and `index.html` exactly. The paper carries 84 literal hex
+  occurrences outside `:root` against the reference shell's 86, so no new hex value was introduced.
+- The paper was exercised in a jsdom harness before shipping (**68 checks, all passing**): nothing is revealed
+  pre-submit (no solution text or `Answer:` string in the test pane, every `.sol` empty and hidden, no option mark, no
+  mark text, key tab disabled, key pane empty, summary hidden, timer at 60:00); the palette reaches `ans` / `mrk` /
+  `amr` / `cur` and falls back to `mrk` on Clear Response; all 25 answered correctly scores **35 / 35** with 25
+  correct, 0 wrong, 25 `ok` palette buttons and 25 key entries; a paper with all five MSQs one option short scores
+  **25 / 35** with 5 wrong, confirming an MSQ pays nothing unless the exact option set is chosen; a blank paper scores
+  **0 / 35** with 25 skipped; each tab shows exactly one view; every card carries `data-subject`, `data-unit`,
+  `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; and all four subtopics appear.
+- The Question Bank tab inside the paper lists the **25** solved questions of Set 1 under four subtopic accordions
+  (8 / 7 / 6 / 4), every solution collapsed, and the active 25 are not repeated there. `index.html` holds all **750**
+  questions; the Engineering Mathematics Unit 1 card now reads "50 solved" with subtopic pills 15 / 14 / 12 / 9 and
+  both "Practise Set 1 →" (the archived paper) and "Practise Set 2 →". Its data block was updated in place — the
+  Engineering Mathematics record moved to the end so the newest paper renders first — and its static header strings
+  were recomputed from it: 10 subjects, 59 units, 750 solved, 30 sets published, 750 records, 255 subtopics. The
+  portal harness (part of the same 68 checks) confirms 16 test cards with the new one first, "50 solved" and both
+  practise buttons on the new card, 50 banked cards under its expander, every `href` resolving, and every per-subject
+  count matching its `master_bank.json`.
+- No unit exceeds 50 questions: Engineering Mathematics Unit 1 closes at exactly 50 with this set, and the rotation
+  advances to Unit 2 on the next run for this subject.
 
 - **2026-10-26, Databases → Unit 1 (ER Models & Relational Algebra), Set 2 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects and it gave **Databases**. The bank read back
@@ -899,7 +958,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Linear Algebra: Matrices & Systems | `linear-algebra-matrices` | 25 | yes |
+| 1 | Linear Algebra: Matrices & Systems | `linear-algebra-matrices` | 50 | yes |
 | 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 0 | — |
 | 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 0 | — |
 | 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 0 | — |
@@ -959,8 +1018,9 @@ review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
 
-- `6.4 No raw hex outside :root` is not yet met (the Engineering Mathematics Unit 1 paper carries 115 literal hex
-  occurrences, exactly as the shell it was spliced from, so nothing new was added): the shipped shell uses literal hex
+- `6.4 No raw hex outside :root` is not yet met (the Engineering Mathematics Unit 1 Set 2 paper carries 84 literal hex
+  occurrences, against the reference shell's 86 — no new value was added, because the new cards use `var(--muted)`):
+  the shipped shell uses literal hex
   values for a handful of tints and borders (`#f8fafc`, `#b9c6d2`, `#eaf2f8`, …). Because every paper must share one
   byte-identical shell, this can only be corrected by re-issuing all papers together, so it is recorded here rather than
   fixed in one file and breaking shell parity.
@@ -989,6 +1049,9 @@ review interface.
   fills `.pal button.ans/.na/.mrk` with `--green`/`--red`/`--violet` instead of `--green-d`/`--red-d`/`--violet-d`, which
   fails that ratio. The Operating Systems paper inherits the shell unchanged so that parity holds; the correction is a
   four-line CSS change and belongs to the same one-pass re-issue as the raw-hex item.
+- The Engineering Mathematics Unit 1 Set 2 paper inherits the three open shell items above unchanged (literal hex
+  outside `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens
+  rather than their `-d` variants), for the same reason: re-typing any of them in one paper would break shell parity.
 - The Programming and Data Structures Unit 1 Set 2 paper inherits the three open shell items above unchanged
   (literal hex outside `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet`
   tokens rather than their `-d` variants). Re-typing any of them in one paper would break shell parity, so they stay
