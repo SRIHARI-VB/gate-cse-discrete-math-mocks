@@ -7,26 +7,79 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2**, 2026-10-26 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html)
+- **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 2 of 2**, 2026-10-26 → [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-26.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: OSI & TCP/IP models (7) · transmission delays & bandwidth-delay product (6) · framing: bit & byte stuffing (6) · CRC, checksum & Hamming (6)
-- Rotation: this is a new subject. `computer-networks/question-bank/master_bank.json` did not exist, so there was
-  no `runs[]` entry and no cap to check; the starting unit came from the documented fallback
-  `(2026-10-26 − 2026-10-26) mod 6 = 0` → Unit 1. Unit 1 now holds 25 of its 50 questions, so the next Computer
-  Networks run re-selects Unit 1 for Set 2 of 2.
-- Previous test: **Programming and Data Structures · Unit 1 — C Programming Foundations, Set 1 of 2**, 2026-10-26 → [`programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html`](programming-data-structures/c-programming-core/gate_ds_mock_1_2026-10-26.html)
+- Subtopics: process states & PCB (7) · threads: user vs kernel (6) · preemptive vs non-preemptive (6) · FCFS, SJF, SRTF, RR & priority (6)
+- Rotation: MODE A drew Operating Systems. `runs[-1]` was Unit 1, dated 2026-10-26 and holding 25 questions — under
+  `UNIT_QUESTION_CAP = 50` and current for 0 days — so step B3 re-selected Unit 1 for Set 2 of 2. 25 + 25 = 50 closes
+  the unit at the cap, and the next Operating Systems run advances to `(0 + 1) mod 6` = Unit 2. No override was used.
+- Previous test: **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2**, 2026-10-26 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-26.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 21 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 1 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
+| Papers published | 22 (13 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 1 of 5 in Databases; 1 of 5 in Compiler Design; 1 of 6 in Operating Systems; 1 of 5 in Engineering Mathematics; 1 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks |
-| Questions in the subject banks | 525 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 25 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
+| Questions in the subject banks | 550 (325 Discrete Mathematics, 25 Algorithms, 25 Databases, 50 Compiler Design, 50 Operating Systems, 25 Engineering Mathematics, 25 Programming and Data Structures, 25 Computer Networks) |
 | Verified official PYQs | 3 (2 Discrete Mathematics, 1 Databases) |
-| Archived sets (earlier runs) | 8 (7 Discrete Mathematics, 1 Compiler Design) |
+| Archived sets (earlier runs) | 9 (7 Discrete Mathematics, 1 Compiler Design, 1 Operating Systems) |
 
 ## Rotation log
+
+- **2026-10-26, Operating Systems → Unit 1 (Process Management & CPU Scheduling), Set 2 of 2.** MODE A: the subject was
+  drawn at random from the 11 GATE CSE subjects with a seeded draw for this date (seed 852190219, the SHA-256 of
+  `2026-10-26-gate-cse-mock` reduced modulo 10⁹) and came out Operating Systems. The bank read back
+  `runs[-1] = {date 2026-10-26, unit 1, set "1 of 2"}` with 25 questions on Unit 1. Since 25 < `UNIT_QUESTION_CAP = 50`
+  and the unit had been current for 0 days, step B3 regenerated Unit 1 rather than advancing. This is the second and
+  final set for the unit: 25 + 25 = 50, exactly the cap, so no partial set was added and the unit ends at 50, not 60.
+  The next Operating Systems run will advance to `(0 + 1) mod 6` = Unit 2, Inter-Process Communication &
+  Synchronization. No override was used and no second pass has started for this subject.
+- All 25 items are new: no stem, option set, table or numeric answer is shared with Set 1 (checked by exact-string
+  comparison against the 25 questions already in `master_bank.json`). Composition is the standard 15 MCQ / 5 MSQ /
+  5 NAT with the 10 easy / 10 medium / 5 hard split, and coverage is 7 / 6 / 6 / 6 across process states & PCB,
+  threads, preemptive vs non-preemptive scheduling, and FCFS/SJF/SRTF/RR/priority, so every one of the unit's four
+  subtopics is represented.
+- The Set 1 paper moved to `operating-systems/process-scheduling/archive/gate_os_mock_1_2026-10-26_run1.html` with its
+  questions, options, answers, solutions and duration frozen (137 422 bytes, byte-for-byte the file that was current
+  before this run). The new Set 2 paper is filed only at `operating-systems/process-scheduling/`; no root copy was
+  written and the unit folder never held two current papers.
+- **Every scheduling answer was recomputed by an independent step-by-step simulator, not by hand.** Confirmed:
+  3 × 12 ms of work with two 0.4 ms switches gives **36.8 ms** elapsed; SRTF on (0,9) (2,3) (4,6) (8,2) preempts
+  **twice** (P1 at t = 2 and P3 at t = 8) with completion times 20/5/13/10; preemptive priority on
+  (0,6,pri 3) (2,4,pri 1) (4,2,pri 2) finishes P1 at **12 ms** because P3's priority 2 cannot displace P2's 1; the
+  preemptive-priority average waiting time on (0,8,4) (1,4,1) (2,9,3) (3,5,2) is **7 ms**; FCFS on (0,5) (1,3) (2,8)
+  (4,2) gives an average turnaround of **10 ms** and non-preemptive SJF on the same table an average waiting time of
+  **3.75 ms**; round robin with q = 4 on (0,6) (1,3) (2,7) gives an average turnaround of **11 ms**; round robin with
+  q = 2 on (0,5) (1,4) (2,2) (3,3) gives **9.75 ms**; and the 20 ms process in the two-level feedback queue runs
+  **once** in the 8 ms top queue. Each value was produced by a script that walks the timeline one quantum or one
+  arrival at a time, and the round-robin figures were re-derived by hand from the same trace.
+- Shell parity: the paper was produced by splicing a new payload into the shipped shell rather than re-typing it. After
+  normalising the title, the header brand and sub-line, the candidate block, the metadata chips, `#qhost`, the payload,
+  the Question Bank pane and the About pane, the remaining bytes are identical to the Compiler Design, Computer
+  Networks and Programming and Data Structures papers and to this unit's archived Set 1 — **27 771 bytes on all five
+  sides**. The `:root` block still matches `design-tokens.css` and `index.html` byte for byte (521 bytes). The payload
+  uses `var(--muted)`, `var(--line)` and `var(--bg)` instead of the literal `#5b6b7a` the older cards carried, so this
+  paper has **84 literal hex occurrences outside `:root` against the shell's 114** — no new hex value was introduced,
+  and the count fell.
+- The paper was exercised in a jsdom harness before shipping (**221 checks, all passing**): nothing is revealed
+  pre-submit (no solution text in the test or key pane, no option mark, no key content, base64 payload, key tab
+  disabled, summary hidden, timer at 60:00); all 25 answered correctly scores **35 / 35** with 25 correct and the key
+  unlocks with 25 solutions; a mixed paper (1 correct MCQ, 1 wrong MCQ, 1 partially-selected MSQ, 1 correct NAT)
+  scores **3 / 35** with 21 unattempted, confirming an MSQ pays nothing unless the exact option set is chosen; the
+  palette reaches `mrk` / `amr` and falls back to `mrk` on Clear Response, then switches to `ok` / `bad` / `skip` after
+  submit; each tab shows exactly one view; and every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`.
+- The Question Bank tab inside the paper lists the **25** solved questions of Set 1 — the active 25 are not repeated
+  there — under four subtopic accordions, with every solution collapsed. `index.html` holds all **550** questions and
+  the Operating Systems Unit 1 card now carries "50 solved", the four subtopic pill counts (14 / 12 / 11 / 13) and both
+  "Practise Set 1 →" and "Practise Set 2 →". Its data block was updated in place, and the six static header strings
+  were recomputed from it: 8 subjects, 57 units, 550 solved, 13 sets, 550 records, 247 subtopics. Every `href` in the
+  portal still resolves.
+- Operating Systems still contains no new `GATE_PYQ_VARIATION` item: no further scheduling previous-year question has
+  been verified against an official paper and key in this run, so none is claimed. The subject's one verified PYQ
+  (GATE CSE 2021, Set 1, Q25) remains attached to `OS-U1-Q21` in Set 1, now archived. Every Set 2 item is
+  `STANDARD_TEXTBOOK` (13) or `ORIGINAL_SYNTHESIS` (12).
 
 - **2026-10-26, Computer Networks → Unit 1 (Layering, Physical & Framing).** MODE A: the subject was drawn at random
   from the 11 GATE CSE subjects and came out Computer Networks. No bank existed for it, so step B6's fallback applied:
@@ -543,7 +596,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Process Management & CPU Scheduling | `process-scheduling` | 25 | yes |
+| 1 | Process Management & CPU Scheduling | `process-scheduling` | 50 | yes |
 | 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 0 | — |
 | 3 | Deadlocks | `deadlocks` | 0 | — |
 | 4 | Memory Management & Paging | `memory-paging` | 0 | — |
