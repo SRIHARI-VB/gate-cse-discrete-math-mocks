@@ -6,10 +6,11 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-27",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 100,
+  "total_questions": 125,
   "units_with_questions": [
    1,
-   2
+   2,
+   3
   ]
  },
  "runs": [
@@ -237,6 +238,67 @@
     "left-recursion-and-factoring"
    ],
    "selection": "MODE A, random subject selection drew Compiler Design with an unseeded random.SystemRandom() draw over all 11 GATE CSE subjects. runs[-1] was unit 2 (top-down-parsing), dated 2026-10-27 with 25 questions banked. 25 < UNIT_QUESTION_CAP = 50 and the unit had been current for 0 days, so step B3 held and unit 2 was generated again as Set 2 of 2, closing the unit at exactly 50 questions. No override."
+  },
+  {
+   "run": 5,
+   "date": "2026-10-27",
+   "subject": "compiler-design",
+   "subject_name": "Compiler Design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "set": "1 of 2",
+   "count": 25,
+   "file": "compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "lr0-items-parsing",
+    "slr1-parsing-conflicts",
+    "lr1-and-lalr1-parsers",
+    "operator-precedence-parsing"
+   ],
+   "question_ids": [
+    "CD-U3-Q01",
+    "CD-U3-Q02",
+    "CD-U3-Q03",
+    "CD-U3-Q04",
+    "CD-U3-Q05",
+    "CD-U3-Q06",
+    "CD-U3-Q07",
+    "CD-U3-Q08",
+    "CD-U3-Q09",
+    "CD-U3-Q10",
+    "CD-U3-Q11",
+    "CD-U3-Q12",
+    "CD-U3-Q13",
+    "CD-U3-Q14",
+    "CD-U3-Q15",
+    "CD-U3-Q16",
+    "CD-U3-Q17",
+    "CD-U3-Q18",
+    "CD-U3-Q19",
+    "CD-U3-Q20",
+    "CD-U3-Q21",
+    "CD-U3-Q22",
+    "CD-U3-Q23",
+    "CD-U3-Q24",
+    "CD-U3-Q25"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded random.SystemRandom() draw (draw index 8 of 11) and it gave Compiler Design. runs[-1] read back {date 2026-10-27, run 4, unit 2, top-down-parsing, \"2 of 2\"} with 50 questions banked on Unit 2, so the cap test in step B3 failed and step B4 advanced exactly one unit: (1 + 1) mod 5 = 2 -> Unit 3, Syntax Analysis: Bottom-Up Parsing. No override, no second pass.",
+   "note": "Set 1 of 2. Unit 3 now holds 25 questions, below UNIT_QUESTION_CAP = 50, so the next Compiler Design run re-selects Unit 3 before advancing to (2 + 1) mod 5 = 3, Syntax-Directed Translation & Intermediate Code."
   }
  ],
  "verified_pyqs": [],
@@ -3534,6 +3596,890 @@
    ],
    "answer_display": "Options (A), (B) and (C)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> FIRST sets describe what a string can begin with; FOLLOW sets describe which terminals may appear immediately after a nonterminal, plus the end marker $ for the start symbol.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: a terminal derives only itself, so its FIRST set is the singleton <code class=\"mm\">{a}</code>.</li><li>(B) True: every FOLLOW computation is initialised with <code class=\"mm\">FOLLOW(S) = {$}</code>.</li><li>(C) True: FOLLOW of a nonterminal grows only from occurrences on right sides, so a nonterminal with no such occurrence keeps the empty set — only the start symbol is seeded with $.</li><li>(D) False: FOLLOW holds terminals and $ only; a nonterminal on the right side is followed by whatever its own FOLLOW is, not by the nonterminal itself.</li><li>(E) False: when the leftmost symbol is nullable, the scan continues to the next symbol, so the FIRST set of the whole string can include symbols that the leftmost symbol cannot start.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Stopping the FIRST computation at the leftmost symbol even when it is nullable, and imagining that nonterminals can appear inside FOLLOW sets.</p>"
+  },
+  {
+   "id": "CD-U3-Q01",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "In the LR(0) item A → X · Y Z, what does the position of the dot record?",
+   "question_html": "<p class=\"qtext\">In the LR(0) item <code class=\"mm\">A → X · Y Z</code>, what does the position of the dot record?</p>",
+   "options": [
+    "Nothing has been read yet; the parser still expects the whole right side X Y Z.",
+    "A string derived from X has already been recognised, and a string derived from Y Z is still expected.",
+    "All of X Y Z has been recognised, so the production is ready to be reduced.",
+    "The dot separates the lookahead symbol from the handle and has no relation to the right side."
+   ],
+   "options_html": [
+    "Nothing has been read yet; the parser still expects the whole right side <code class=\"mm\">X Y Z</code>.",
+    "A string derived from <code class=\"mm\">X</code> has already been recognised, and a string derived from <code class=\"mm\">Y Z</code> is still expected.",
+    "All of <code class=\"mm\">X Y Z</code> has been recognised, so the production is ready to be reduced.",
+    "The dot separates the lookahead symbol from the handle and has no relation to the right side."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An LR(0) item is one production with a distinguished position in its right side. The dot is that position: everything to its left has been matched against the input already, everything to its right is still expected.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A → · X Y Z</code> — the dot is at the left end, so nothing of the right side has been read.</li><li><code class=\"mm\">A → X · Y Z</code> — <code class=\"mm\">X</code> has been read; the parser now expects a string derived from <code class=\"mm\">Y Z</code>.</li><li><code class=\"mm\">A → X Y · Z</code> — two symbols read; one remains.</li><li><code class=\"mm\">A → X Y Z ·</code> — the dot is at the right end, which makes this a <i>complete</i> (reduce) item.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — the dot records how much of the right side has been recognised, so <code class=\"mm\">X</code> is done and <code class=\"mm\">Y Z</code> is still to come.</p><p class=\"row\"><b>Common misconception.</b> Reading the dot as a marker of the current input position or of the handle in the input string. The dot is always a position <i>inside one production</i>; the state the parser is in is what says where it stands in the input.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An LR(0) item is one production with a distinguished position in its right side. The dot is that position: everything to its left has been matched against the input already, everything to its right is still expected.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A → · X Y Z</code> — the dot is at the left end, so nothing of the right side has been read.</li><li><code class=\"mm\">A → X · Y Z</code> — <code class=\"mm\">X</code> has been read; the parser now expects a string derived from <code class=\"mm\">Y Z</code>.</li><li><code class=\"mm\">A → X Y · Z</code> — two symbols read; one remains.</li><li><code class=\"mm\">A → X Y Z ·</code> — the dot is at the right end, which makes this a <i>complete</i> (reduce) item.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — the dot records how much of the right side has been recognised, so <code class=\"mm\">X</code> is done and <code class=\"mm\">Y Z</code> is still to come.</p><p class=\"row\"><b>Common misconception.</b> Reading the dot as a marker of the current input position or of the handle in the input string. The dot is always a position <i>inside one production</i>; the state the parser is in is what says where it stands in the input.</p>"
+  },
+  {
+   "id": "CD-U3-Q02",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which one of the following is NOT an LR(0) item of the production A → X Y Z?",
+   "question_html": "<p class=\"qtext\">Which one of the following is <b>NOT</b> an LR(0) item of the production <code class=\"mm\">A → X Y Z</code>?</p>",
+   "options": [
+    "A → · X Y Z",
+    "A → X · Y Z",
+    "A → X Y Z ·",
+    "A → X · Z Y"
+   ],
+   "options_html": [
+    "<code class=\"mm\">A → · X Y Z</code>",
+    "<code class=\"mm\">A → X · Y Z</code>",
+    "<code class=\"mm\">A → X Y Z ·</code>",
+    "<code class=\"mm\">A → X · Z Y</code>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A production with <code class=\"mm\">n</code> symbols on its right side yields exactly <code class=\"mm\">n + 1</code> LR(0) items, one for each legal dot position. The order of the symbols on the right side is never changed: an item is not a permutation of a production.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">n = 3</code> symbols, so there are <code class=\"mm\">4</code> items.</li><li>They are <code class=\"mm\">A → · X Y Z</code>, <code class=\"mm\">A → X · Y Z</code>, <code class=\"mm\">A → X Y · Z</code> and <code class=\"mm\">A → X Y Z ·</code>.</li><li>The fourth option reads <code class=\"mm\">X · Z Y</code>: <code class=\"mm\">Z</code> and <code class=\"mm\">Y</code> have been exchanged, which is a different string, not a different dot position.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D) — <code class=\"mm\">A → X · Z Y</code> is not an item of <code class=\"mm\">A → X Y Z</code>.</p><p class=\"row\"><b>Common misconception.</b> Treating an item as \"the production plus a marker anywhere\", which makes any rearrangement look legal. The dot moves through the right side in order; the symbol sequence is fixed.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A production with <code class=\"mm\">n</code> symbols on its right side yields exactly <code class=\"mm\">n + 1</code> LR(0) items, one for each legal dot position. The order of the symbols on the right side is never changed: an item is not a permutation of a production.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">n = 3</code> symbols, so there are <code class=\"mm\">4</code> items.</li><li>They are <code class=\"mm\">A → · X Y Z</code>, <code class=\"mm\">A → X · Y Z</code>, <code class=\"mm\">A → X Y · Z</code> and <code class=\"mm\">A → X Y Z ·</code>.</li><li>The fourth option reads <code class=\"mm\">X · Z Y</code>: <code class=\"mm\">Z</code> and <code class=\"mm\">Y</code> have been exchanged, which is a different string, not a different dot position.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D) — <code class=\"mm\">A → X · Z Y</code> is not an item of <code class=\"mm\">A → X Y Z</code>.</p><p class=\"row\"><b>Common misconception.</b> Treating an item as \"the production plus a marker anywhere\", which makes any rearrangement look legal. The dot moves through the right side in order; the symbol sequence is fixed.</p>"
+  },
+  {
+   "id": "CD-U3-Q03",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → A A, A → a A | b, how many LR(0) items does the augmented grammar contain in total? Count every item of every production, including the added production S′ → S. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code>, how many LR(0) items does the augmented grammar contain in total? Count every item of every production, including the added production <code class=\"mm\">S′ → S</code>. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 10,
+   "answer_display": "10",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A production with <code class=\"mm\">n</code> symbols on its right side contributes <code class=\"mm\">n + 1</code> LR(0) items. The augmented grammar adds one production, <code class=\"mm\">S′ → S</code>, which contributes its own items.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">S′ → S</code>: one symbol on the right, so 2 items.</li><li><code class=\"mm\">S → A A</code>: two symbols, so 3 items.</li><li><code class=\"mm\">A → a A</code>: two symbols, so 3 items.</li><li><code class=\"mm\">A → b</code>: one symbol, so 2 items.</li><li>Total <code class=\"mm\">2 + 3 + 3 + 2 = 10</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 10 items.</p><p class=\"row\"><b>Common misconception.</b> Counting the four productions instead of the items, or forgetting the augmented production <code class=\"mm\">S′ → S</code>. The start symbol is always primed and its production always counted.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A production with <code class=\"mm\">n</code> symbols on its right side contributes <code class=\"mm\">n + 1</code> LR(0) items. The augmented grammar adds one production, <code class=\"mm\">S′ → S</code>, which contributes its own items.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">S′ → S</code>: one symbol on the right, so 2 items.</li><li><code class=\"mm\">S → A A</code>: two symbols, so 3 items.</li><li><code class=\"mm\">A → a A</code>: two symbols, so 3 items.</li><li><code class=\"mm\">A → b</code>: one symbol, so 2 items.</li><li>Total <code class=\"mm\">2 + 3 + 3 + 2 = 10</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 10 items.</p><p class=\"row\"><b>Common misconception.</b> Counting the four productions instead of the items, or forgetting the augmented production <code class=\"mm\">S′ → S</code>. The start symbol is always primed and its production always counted.</p>"
+  },
+  {
+   "id": "CD-U3-Q04",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "An SLR(1) parser is about to reduce by A → ω in a state I. In the ACTION table the reduction is entered in column a only when which condition holds?",
+   "question_html": "<p class=\"qtext\">An SLR(1) parser is about to reduce by <code class=\"mm\">A → ω</code> in a state I. In the ACTION table the reduction is entered in column <code class=\"mm\">a</code> only when which condition holds?</p>",
+   "options": [
+    "a ∈ FIRST(A).",
+    "a is the terminal that stands immediately to the right of the handle in the input seen so far.",
+    "a ∈ FOLLOW(A).",
+    "a is the terminal that was shifted last, whatever it happens to be."
+   ],
+   "options_html": [
+    "<code class=\"mm\">a ∈ FIRST(A)</code>.",
+    "<code class=\"mm\">a</code> is the terminal that stands immediately to the right of the handle in the input seen so far.",
+    "<code class=\"mm\">a ∈ FOLLOW(A)</code>.",
+    "<code class=\"mm\">a</code> is the terminal that was shifted last, whatever it happens to be."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SLR(1) approximates the lookahead of a reduction by the FOLLOW set of the left side. Every reduction by <code class=\"mm\">A → ω</code> is entered in all columns <code class=\"mm\">a ∈ FOLLOW(A)</code>, and nowhere else.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>When the parser has <code class=\"mm\">A → ω ·</code> on top, <code class=\"mm\">A</code> is about to appear in the sentential form, so the next input symbol can only be one that may follow <code class=\"mm\">A</code>.</li><li>SLR does not look at the individual state; it uses the grammar-wide set <code class=\"mm\">FOLLOW(A)</code>.</li><li><code class=\"mm\">FIRST(A)</code> governs shift decisions and the table entries of productions that begin with <code class=\"mm\">A</code>, not the reduction of <code class=\"mm\">A → ω</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C) — the reduction is entered on the terminals of <code class=\"mm\">FOLLOW(A)</code>.</p><p class=\"row\"><b>Common misconception.</b> Believing SLR(1) inspects the real context of the state. That is exactly what LR(1) does with per-item lookaheads; SLR substitutes the coarser <code class=\"mm\">FOLLOW</code> set, which is why an SLR table can conflict where an LR(1) table does not.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SLR(1) approximates the lookahead of a reduction by the FOLLOW set of the left side. Every reduction by <code class=\"mm\">A → ω</code> is entered in all columns <code class=\"mm\">a ∈ FOLLOW(A)</code>, and nowhere else.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>When the parser has <code class=\"mm\">A → ω ·</code> on top, <code class=\"mm\">A</code> is about to appear in the sentential form, so the next input symbol can only be one that may follow <code class=\"mm\">A</code>.</li><li>SLR does not look at the individual state; it uses the grammar-wide set <code class=\"mm\">FOLLOW(A)</code>.</li><li><code class=\"mm\">FIRST(A)</code> governs shift decisions and the table entries of productions that begin with <code class=\"mm\">A</code>, not the reduction of <code class=\"mm\">A → ω</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C) — the reduction is entered on the terminals of <code class=\"mm\">FOLLOW(A)</code>.</p><p class=\"row\"><b>Common misconception.</b> Believing SLR(1) inspects the real context of the state. That is exactly what LR(1) does with per-item lookaheads; SLR substitutes the coarser <code class=\"mm\">FOLLOW</code> set, which is why an SLR table can conflict where an LR(1) table does not.</p>"
+  },
+  {
+   "id": "CD-U3-Q05",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "In the LR(1) item [A → α · β, a], what does the second component a record?",
+   "question_html": "<p class=\"qtext\">In the LR(1) item <code class=\"mm\">[A → α · β, a]</code>, what does the second component <code class=\"mm\">a</code> record?</p>",
+   "options": [
+    "A terminal that may immediately follow A in some sentential form, so the reduction by this production is taken only on that lookahead.",
+    "The terminal that must be shifted next, before any reduction of A can happen.",
+    "The symbol that stands immediately to the left of the dot.",
+    "The precedence level attached to the production A → αβ."
+   ],
+   "options_html": [
+    "A terminal that may immediately follow <code class=\"mm\">A</code> in some sentential form, so the reduction by this production is taken only on that lookahead.",
+    "The terminal that must be shifted next, before any reduction of <code class=\"mm\">A</code> can happen.",
+    "The symbol that stands immediately to the left of the dot.",
+    "The precedence level attached to the production <code class=\"mm\">A → αβ</code>."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An LR(1) item is a pair: an LR(0) item and one lookahead terminal. The lookahead says which terminal may follow the completed left side, and therefore in which columns the reduction belongs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The dot part <code class=\"mm\">A → α · β</code> is exactly an LR(0) item and records progress through the right side.</li><li>The second component <code class=\"mm\">a</code> is the extra information LR(1) adds: a terminal that can come after <code class=\"mm\">A</code>.</li><li>When the dot reaches the end, <code class=\"mm\">[A → αβ ·, a]</code> licenses the reduction by <code class=\"mm\">A → αβ</code> only in column <code class=\"mm\">a</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A) — <code class=\"mm\">a</code> is the lookahead that may follow <code class=\"mm\">A</code>.</p><p class=\"row\"><b>Common misconception.</b> Confusing the lookahead with the next symbol to be shifted. The lookahead is a condition on a <i>reduction</i>, and the same state can carry different lookaheads for the same core.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An LR(1) item is a pair: an LR(0) item and one lookahead terminal. The lookahead says which terminal may follow the completed left side, and therefore in which columns the reduction belongs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The dot part <code class=\"mm\">A → α · β</code> is exactly an LR(0) item and records progress through the right side.</li><li>The second component <code class=\"mm\">a</code> is the extra information LR(1) adds: a terminal that can come after <code class=\"mm\">A</code>.</li><li>When the dot reaches the end, <code class=\"mm\">[A → αβ ·, a]</code> licenses the reduction by <code class=\"mm\">A → αβ</code> only in column <code class=\"mm\">a</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A) — <code class=\"mm\">a</code> is the lookahead that may follow <code class=\"mm\">A</code>.</p><p class=\"row\"><b>Common misconception.</b> Confusing the lookahead with the next symbol to be shifted. The lookahead is a condition on a <i>reduction</i>, and the same state can carry different lookaheads for the same core.</p>"
+  },
+  {
+   "id": "CD-U3-Q06",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "operator-precedence-parsing",
+   "subtopic": "operator-precedence-parsing",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar E → E + E | E * E | ( E ) | id, which precedence relation holds between the terminals ( and )?",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">E → E + E | E * E | ( E ) | id</code>, which precedence relation holds between the terminals <code class=\"mm\">(</code> and <code class=\"mm\">)</code>?</p>",
+   "options": [
+    "( <· )",
+    "( ≌ )",
+    "( ·> )",
+    "No precedence relation holds between them."
+   ],
+   "options_html": [
+    "<code class=\"mm\">( &lt;· )</code>",
+    "<code class=\"mm\">( ≌ )</code>",
+    "<code class=\"mm\">( ·&gt; )</code>",
+    "No precedence relation holds between them."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three relations are read off the productions: <code class=\"mm\">a ≌ b</code> when a right side contains <code class=\"mm\">a b</code> or <code class=\"mm\">a B b</code>; <code class=\"mm\">a &lt;· b</code> when <code class=\"mm\">a</code> is followed by a nonterminal whose FIRST set contains <code class=\"mm\">b</code>; <code class=\"mm\">a ·&gt; b</code> when <code class=\"mm\">a</code> is in the LAST set of a nonterminal that is followed by <code class=\"mm\">b</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The production <code class=\"mm\">E → ( E )</code> has the shape terminal, nonterminal, terminal: <code class=\"mm\">(</code>, <code class=\"mm\">E</code>, <code class=\"mm\">)</code>.</li><li>That is precisely the pattern <code class=\"mm\">a B b</code>, so <code class=\"mm\">( ≌ )</code>.</li><li>The relation is symmetric in form only: <code class=\"mm\">)</code> never satisfies <code class=\"mm\">) ≌ (</code>, because the production is written in one direction.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — <code class=\"mm\">( ≌ )</code>.</p><p class=\"row\"><b>Common misconception.</b> Reading <code class=\"mm\">≌</code> as \"the two operators have equal precedence\". It is a parsing relation meaning the parser is inside a bracketed construct and must keep shifting until the matching closing symbol appears.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three relations are read off the productions: <code class=\"mm\">a ≌ b</code> when a right side contains <code class=\"mm\">a b</code> or <code class=\"mm\">a B b</code>; <code class=\"mm\">a &lt;· b</code> when <code class=\"mm\">a</code> is followed by a nonterminal whose FIRST set contains <code class=\"mm\">b</code>; <code class=\"mm\">a ·&gt; b</code> when <code class=\"mm\">a</code> is in the LAST set of a nonterminal that is followed by <code class=\"mm\">b</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The production <code class=\"mm\">E → ( E )</code> has the shape terminal, nonterminal, terminal: <code class=\"mm\">(</code>, <code class=\"mm\">E</code>, <code class=\"mm\">)</code>.</li><li>That is precisely the pattern <code class=\"mm\">a B b</code>, so <code class=\"mm\">( ≌ )</code>.</li><li>The relation is symmetric in form only: <code class=\"mm\">)</code> never satisfies <code class=\"mm\">) ≌ (</code>, because the production is written in one direction.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — <code class=\"mm\">( ≌ )</code>.</p><p class=\"row\"><b>Common misconception.</b> Reading <code class=\"mm\">≌</code> as \"the two operators have equal precedence\". It is a parsing relation meaning the parser is inside a bracketed construct and must keep shifting until the matching closing symbol appears.</p>"
+  },
+  {
+   "id": "CD-U3-Q07",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "operator-precedence-parsing",
+   "subtopic": "operator-precedence-parsing",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about operator-precedence parsing are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about operator-precedence parsing are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "An operator grammar has no ε-production and no production whose right side contains two adjacent nonterminals.",
+    "The relations are computed from the productions alone; no LR item set, closure or state machine is built.",
+    "Every context-free grammar becomes an operator grammar once its ε-productions are deleted.",
+    "The parser reduces when the relation between the topmost terminal on the stack and the next input symbol is ·>.",
+    "The parser must compute the FOLLOW set of every nonterminal before it can run."
+   ],
+   "options_html": [
+    "An operator grammar has no <code class=\"mm\">ε</code>-production and no production whose right side contains two adjacent nonterminals.",
+    "The relations are computed from the productions alone; no LR item set, closure or state machine is built.",
+    "Every context-free grammar becomes an operator grammar once its <code class=\"mm\">ε</code>-productions are deleted.",
+    "The parser reduces when the relation between the topmost terminal on the stack and the next input symbol is <code class=\"mm\">·&gt;</code>.",
+    "The parser must compute the FOLLOW set of every nonterminal before it can run."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options ((A), (B)) and (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Operator-precedence parsing is a shift-reduce method that decides every move from a table of three relations between pairs of terminals, built directly from the productions of an operator grammar.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: those two restrictions are the definition of an operator grammar, and they guarantee that the handle of every right-sentential form is bordered by terminals.</li><li>(B) true: <code class=\"mm\">FIRST</code> and <code class=\"mm\">LAST</code> of the nonterminals, plus a scan of each right side, are all that is needed.</li><li>(C) false: deleting <code class=\"mm\">ε</code>-productions does not remove a right side such as <code class=\"mm\">A B</code>, and adjacent nonterminals are forbidden in an operator grammar.</li><li>(D) true: shift while <code class=\"mm\">&lt;·</code> or <code class=\"mm\">≌</code> holds, reduce while <code class=\"mm\">·&gt;</code> holds, and report an error when no relation holds.</li><li>(E) false: FOLLOW sets belong to SLR(1); the precedence relations replace them entirely.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Believing that any CFG can be handled after a quick rewrite. The class of operator grammars is strictly smaller, and grammars with <code class=\"mm\">ε</code>-productions or adjacent nonterminals need a real transformation, not a deletion.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Operator-precedence parsing is a shift-reduce method that decides every move from a table of three relations between pairs of terminals, built directly from the productions of an operator grammar.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: those two restrictions are the definition of an operator grammar, and they guarantee that the handle of every right-sentential form is bordered by terminals.</li><li>(B) true: <code class=\"mm\">FIRST</code> and <code class=\"mm\">LAST</code> of the nonterminals, plus a scan of each right side, are all that is needed.</li><li>(C) false: deleting <code class=\"mm\">ε</code>-productions does not remove a right side such as <code class=\"mm\">A B</code>, and adjacent nonterminals are forbidden in an operator grammar.</li><li>(D) true: shift while <code class=\"mm\">&lt;·</code> or <code class=\"mm\">≌</code> holds, reduce while <code class=\"mm\">·&gt;</code> holds, and report an error when no relation holds.</li><li>(E) false: FOLLOW sets belong to SLR(1); the precedence relations replace them entirely.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Believing that any CFG can be handled after a quick rewrite. The class of operator grammars is strictly smaller, and grammars with <code class=\"mm\">ε</code>-productions or adjacent nonterminals need a real transformation, not a deletion.</p>"
+  },
+  {
+   "id": "CD-U3-Q08",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → A A, A → a A | b, which set is the closure of the single item {S → A · A}?",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code>, which set is the closure of the single item <code class=\"mm\">{S → A · A}</code>?</p>",
+   "options": [
+    "{S → A · A, A → · a A, A → · b}",
+    "{S → A · A, A → a · A, A → b ·}",
+    "{S → A · A}",
+    "{S → A · A, A → · a A, A → · b, S → · A A}"
+   ],
+   "options_html": [
+    "{<code class=\"mm\">S → A · A</code>, <code class=\"mm\">A → · a A</code>, <code class=\"mm\">A → · b</code>}",
+    "{<code class=\"mm\">S → A · A</code>, <code class=\"mm\">A → a · A</code>, <code class=\"mm\">A → b ·</code>}",
+    "{<code class=\"mm\">S → A · A</code>}",
+    "{<code class=\"mm\">S → A · A</code>, <code class=\"mm\">A → · a A</code>, <code class=\"mm\">A → · b</code>, <code class=\"mm\">S → · A A</code>}"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The closure of an item set adds <code class=\"mm\">B → · γ</code> for every production of <code class=\"mm\">B</code> whenever some item in the set has the dot immediately before <code class=\"mm\">B</code>. Nothing else is added.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The item <code class=\"mm\">S → A · A</code> has the dot before the nonterminal <code class=\"mm\">A</code>.</li><li><code class=\"mm\">A</code> has the productions <code class=\"mm\">A → a A</code> and <code class=\"mm\">A → b</code>, so the items <code class=\"mm\">A → · a A</code> and <code class=\"mm\">A → · b</code> are added.</li><li>Neither new item has a dot before a nonterminal, so the closure stops.</li><li><code class=\"mm\">S → · A A</code> is not added: the dot before <code class=\"mm\">A</code> adds the productions of <code class=\"mm\">A</code>, never productions of <code class=\"mm\">S</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Adding the productions of the item’s own left side (option D), or moving the dot forward while closing (option B). Closure only looks at the symbol <i>after</i> the dot, and only adds items with the dot at the left end.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The closure of an item set adds <code class=\"mm\">B → · γ</code> for every production of <code class=\"mm\">B</code> whenever some item in the set has the dot immediately before <code class=\"mm\">B</code>. Nothing else is added.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The item <code class=\"mm\">S → A · A</code> has the dot before the nonterminal <code class=\"mm\">A</code>.</li><li><code class=\"mm\">A</code> has the productions <code class=\"mm\">A → a A</code> and <code class=\"mm\">A → b</code>, so the items <code class=\"mm\">A → · a A</code> and <code class=\"mm\">A → · b</code> are added.</li><li>Neither new item has a dot before a nonterminal, so the closure stops.</li><li><code class=\"mm\">S → · A A</code> is not added: the dot before <code class=\"mm\">A</code> adds the productions of <code class=\"mm\">A</code>, never productions of <code class=\"mm\">S</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Adding the productions of the item’s own left side (option D), or moving the dot forward while closing (option B). Closure only looks at the symbol <i>after</i> the dot, and only adds items with the dot at the left end.</p>"
+  },
+  {
+   "id": "CD-U3-Q09",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → A A, A → a A | b, how many states does the canonical collection of LR(0) items contain? Count the initial state. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code>, how many states does the canonical collection of LR(0) items contain? Count the initial state. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 7,
+   "answer_display": "7",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The states are the distinct closed item sets reached from the closure of <code class=\"mm\">S′ → · S</code> by repeated GOTO on every grammar symbol.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">I0 = {S′ → · S, S → · A A, A → · a A, A → · b}</code></li><li><code class=\"mm\">GOTO(I0, S) = I1 = {S′ → S ·}</code>; <code class=\"mm\">GOTO(I0, A) = I2 = {S → A · A, A → · a A, A → · b}</code></li><li><code class=\"mm\">GOTO(I0, a) = I3 = {A → a · A, A → · a A, A → · b}</code>; <code class=\"mm\">GOTO(I0, b) = I4 = {A → b ·}</code></li><li><code class=\"mm\">GOTO(I2, A) = I5 = {S → A A ·}</code>; <code class=\"mm\">GOTO(I3, A) = I6 = {A → a A ·}</code></li><li><code class=\"mm\">I2</code> and <code class=\"mm\">I3</code> reuse the states <code class=\"mm\">I3, I4</code> on <code class=\"mm\">a</code> and <code class=\"mm\">b</code>, so no further state appears. The collection is <code class=\"mm\">I0 … I6</code>, seven states.</li></ol><p class=\"row\"><b>Final answer.</b> 7 states.</p><p class=\"row\"><b>Common misconception.</b> Expecting one state per item or per production. States are shared: the same core <code class=\"mm\">{A → · a A, A → · b}</code> appears inside <code class=\"mm\">I0</code>, <code class=\"mm\">I2</code> and <code class=\"mm\">I3</code>, and its GOTO on <code class=\"mm\">a</code> always lands in the same state.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The states are the distinct closed item sets reached from the closure of <code class=\"mm\">S′ → · S</code> by repeated GOTO on every grammar symbol.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">I0 = {S′ → · S, S → · A A, A → · a A, A → · b}</code></li><li><code class=\"mm\">GOTO(I0, S) = I1 = {S′ → S ·}</code>; <code class=\"mm\">GOTO(I0, A) = I2 = {S → A · A, A → · a A, A → · b}</code></li><li><code class=\"mm\">GOTO(I0, a) = I3 = {A → a · A, A → · a A, A → · b}</code>; <code class=\"mm\">GOTO(I0, b) = I4 = {A → b ·}</code></li><li><code class=\"mm\">GOTO(I2, A) = I5 = {S → A A ·}</code>; <code class=\"mm\">GOTO(I3, A) = I6 = {A → a A ·}</code></li><li><code class=\"mm\">I2</code> and <code class=\"mm\">I3</code> reuse the states <code class=\"mm\">I3, I4</code> on <code class=\"mm\">a</code> and <code class=\"mm\">b</code>, so no further state appears. The collection is <code class=\"mm\">I0 … I6</code>, seven states.</li></ol><p class=\"row\"><b>Final answer.</b> 7 states.</p><p class=\"row\"><b>Common misconception.</b> Expecting one state per item or per production. States are shared: the same core <code class=\"mm\">{A → · a A, A → · b}</code> appears inside <code class=\"mm\">I0</code>, <code class=\"mm\">I2</code> and <code class=\"mm\">I3</code>, and its GOTO on <code class=\"mm\">a</code> always lands in the same state.</p>"
+  },
+  {
+   "id": "CD-U3-Q10",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "The grammar S → a S b | a is not LR(0). Why is it nevertheless SLR(1)?",
+   "question_html": "<p class=\"qtext\">The grammar <code class=\"mm\">S → a S b | a</code> is not LR(0). Why is it nevertheless SLR(1)?</p>",
+   "options": [
+    "Because the grammar is unambiguous, and every unambiguous grammar is SLR(1).",
+    "Because the conflict is a reduce/reduce conflict, which SLR(1) removes by production order.",
+    "Because FOLLOW(S) is empty, so the reduction never competes with a shift.",
+    "Because from the state that holds S → a · the only shift is on a, while FOLLOW(S) = {b, $} contains no a."
+   ],
+   "options_html": [
+    "Because the grammar is unambiguous, and every unambiguous grammar is SLR(1).",
+    "Because the conflict is a reduce/reduce conflict, which SLR(1) removes by production order.",
+    "Because <code class=\"mm\">FOLLOW(S)</code> is empty, so the reduction never competes with a shift.",
+    "Because from the state that holds <code class=\"mm\">S → a ·</code> the only shift is on <code class=\"mm\">a</code>, while <code class=\"mm\">FOLLOW(S) = {b, $}</code> contains no <code class=\"mm\">a</code>."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> LR(0) requires a state that holds a complete item to reduce in <i>every</i> column, so any state that also has a shift item is in conflict. SLR(1) narrows the reduce action to the columns of <code class=\"mm\">FOLLOW</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>After reading <code class=\"mm\">a</code> from the initial state the parser is in <code class=\"mm\">{S → a · S b, S → · a S b, S → · a, S → a ·}</code>.</li><li>The complete item <code class=\"mm\">S → a ·</code> coexists with a shift on <code class=\"mm\">a</code>, so the LR(0) table has a shift/reduce conflict there.</li><li><code class=\"mm\">FOLLOW(S) = {b, $}</code>: <code class=\"mm\">b</code> from <code class=\"mm\">S → a S b</code> and <code class=\"mm\">$</code> because <code class=\"mm\">S</code> is the start symbol.</li><li><code class=\"mm\">a ∉ FOLLOW(S)</code>, so the reduce action and the shift action occupy disjoint columns and the SLR(1) table has no conflict.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Assuming the hierarchy is a chain in which failing LR(0) means failing SLR(1) too. The classes are nested the other way: every LR(0) grammar is SLR(1), and this grammar shows the inclusion is strict.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> LR(0) requires a state that holds a complete item to reduce in <i>every</i> column, so any state that also has a shift item is in conflict. SLR(1) narrows the reduce action to the columns of <code class=\"mm\">FOLLOW</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>After reading <code class=\"mm\">a</code> from the initial state the parser is in <code class=\"mm\">{S → a · S b, S → · a S b, S → · a, S → a ·}</code>.</li><li>The complete item <code class=\"mm\">S → a ·</code> coexists with a shift on <code class=\"mm\">a</code>, so the LR(0) table has a shift/reduce conflict there.</li><li><code class=\"mm\">FOLLOW(S) = {b, $}</code>: <code class=\"mm\">b</code> from <code class=\"mm\">S → a S b</code> and <code class=\"mm\">$</code> because <code class=\"mm\">S</code> is the start symbol.</li><li><code class=\"mm\">a ∉ FOLLOW(S)</code>, so the reduce action and the shift action occupy disjoint columns and the SLR(1) table has no conflict.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Assuming the hierarchy is a chain in which failing LR(0) means failing SLR(1) too. The classes are nested the other way: every LR(0) grammar is SLR(1), and this grammar shows the inclusion is strict.</p>"
+  },
+  {
+   "id": "CD-U3-Q11",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "LALR(1) is built by merging every pair of canonical LR(1) states that have the same core. Which conflicts can such a merge create that were not present in the canonical automaton?",
+   "question_html": "<p class=\"qtext\">LALR(1) is built by merging every pair of canonical LR(1) states that have the same core. Which conflicts can such a merge create that were not present in the canonical automaton?</p>",
+   "options": [
+    "Shift/reduce conflicts only.",
+    "Reduce/reduce conflicts only.",
+    "Both shift/reduce and reduce/reduce conflicts.",
+    "None — merging states with equal cores never creates a conflict."
+   ],
+   "options_html": [
+    "Shift/reduce conflicts only.",
+    "Reduce/reduce conflicts only.",
+    "Both shift/reduce and reduce/reduce conflicts.",
+    "None — merging states with equal cores never creates a conflict."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two LR(1) states with the same core have the same LR(0) items, hence the same shift actions and the same GOTO transitions; they differ only in the lookahead terminals attached to complete items.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Shift actions depend only on the core, so a shift present in one state is present in the other, and after merging no new shift competes with anything.</li><li>Reduce actions depend on the lookaheads. Merging unions the lookahead sets.</li><li>If two complete items with different left sides are in the merged state, a terminal that is a lookahead of both now asks for two different reductions: a reduce/reduce conflict appears.</li><li>Since no new shift arises and no shift loses a column, no shift/reduce conflict can be created.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — only reduce/reduce conflicts can be introduced.</p><p class=\"row\"><b>Common misconception.</b> Believing LALR is simply \"LR(1) with fewer states\" and therefore equally powerful on every grammar. The grammar <code class=\"mm\">S → a A d | b B d | a B e | b A e</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code> is LR(1) but the merge produces exactly such a reduce/reduce conflict.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two LR(1) states with the same core have the same LR(0) items, hence the same shift actions and the same GOTO transitions; they differ only in the lookahead terminals attached to complete items.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Shift actions depend only on the core, so a shift present in one state is present in the other, and after merging no new shift competes with anything.</li><li>Reduce actions depend on the lookaheads. Merging unions the lookahead sets.</li><li>If two complete items with different left sides are in the merged state, a terminal that is a lookahead of both now asks for two different reductions: a reduce/reduce conflict appears.</li><li>Since no new shift arises and no shift loses a column, no shift/reduce conflict can be created.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — only reduce/reduce conflicts can be introduced.</p><p class=\"row\"><b>Common misconception.</b> Believing LALR is simply \"LR(1) with fewer states\" and therefore equally powerful on every grammar. The grammar <code class=\"mm\">S → a A d | b B d | a B e | b A e</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code> is LR(1) but the merge produces exactly such a reduce/reduce conflict.</p>"
+  },
+  {
+   "id": "CD-U3-Q12",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → L = R | R, L → * R | id, R → L, how many states does the LALR(1) automaton have? Count the initial state; states are obtained by merging canonical LR(1) states that share a core. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code>, how many states does the LALR(1) automaton have? Count the initial state; states are obtained by merging canonical LR(1) states that share a core. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 10,
+   "answer_display": "10",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The LALR(1) automaton has the states of the LR(0) collection with LR(1) lookaheads attached, so its state count equals the LR(0) state count and is at most the canonical LR(1) count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Counting the LR(0) states of this grammar: the initial state, the state after <code class=\"mm\">S</code>, after <code class=\"mm\">L</code>, after <code class=\"mm\">R</code>, after <code class=\"mm\">*</code>, after <code class=\"mm\">id</code>, after <code class=\"mm\">=</code>, after <code class=\"mm\">* R</code>, after <code class=\"mm\">L =</code>, and the state after <code class=\"mm\">L = R</code>. That is 10 states.</li><li>The canonical LR(1) collection keeps two copies of the <code class=\"mm\">L</code> and <code class=\"mm\">R</code> states, one reached through <code class=\"mm\">S → · L = R</code> and one through <code class=\"mm\">S → · R</code>, giving 14 states.</li><li>Merging each pair with a common core reduces 14 to 10 states; the merged automaton has no conflict, which is why this grammar is LALR(1) although it is not SLR(1).</li></ol><p class=\"row\"><b>Final answer.</b> 10 states.</p><p class=\"row\"><b>Common misconception.</b> Answering 14 by counting canonical LR(1) states. LALR merges states with identical cores, so the count must equal the LR(0) count, not the LR(1) count.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The LALR(1) automaton has the states of the LR(0) collection with LR(1) lookaheads attached, so its state count equals the LR(0) state count and is at most the canonical LR(1) count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Counting the LR(0) states of this grammar: the initial state, the state after <code class=\"mm\">S</code>, after <code class=\"mm\">L</code>, after <code class=\"mm\">R</code>, after <code class=\"mm\">*</code>, after <code class=\"mm\">id</code>, after <code class=\"mm\">=</code>, after <code class=\"mm\">* R</code>, after <code class=\"mm\">L =</code>, and the state after <code class=\"mm\">L = R</code>. That is 10 states.</li><li>The canonical LR(1) collection keeps two copies of the <code class=\"mm\">L</code> and <code class=\"mm\">R</code> states, one reached through <code class=\"mm\">S → · L = R</code> and one through <code class=\"mm\">S → · R</code>, giving 14 states.</li><li>Merging each pair with a common core reduces 14 to 10 states; the merged automaton has no conflict, which is why this grammar is LALR(1) although it is not SLR(1).</li></ol><p class=\"row\"><b>Final answer.</b> 10 states.</p><p class=\"row\"><b>Common misconception.</b> Answering 14 by counting canonical LR(1) states. LALR merges states with identical cores, so the count must equal the LR(0) count, not the LR(1) count.</p>"
+  },
+  {
+   "id": "CD-U3-Q13",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "operator-precedence-parsing",
+   "subtopic": "operator-precedence-parsing",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar E → E + E | E * E | ( E ) | id, which precedence relation holds between the terminals id and +?",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">E → E + E | E * E | ( E ) | id</code>, which precedence relation holds between the terminals <code class=\"mm\">id</code> and <code class=\"mm\">+</code>?</p>",
+   "options": [
+    "id <· +",
+    "id ≌ +",
+    "id ·> +",
+    "No precedence relation holds between them."
+   ],
+   "options_html": [
+    "<code class=\"mm\">id &lt;· +</code>",
+    "<code class=\"mm\">id ≌ +</code>",
+    "<code class=\"mm\">id ·&gt; +</code>",
+    "No precedence relation holds between them."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">a ·&gt; b</code> holds when some production has a nonterminal <code class=\"mm\">A</code> immediately followed by the terminal <code class=\"mm\">b</code>, and <code class=\"mm\">a</code> belongs to <code class=\"mm\">LAST(A)</code>. <code class=\"mm\">LAST(E) = {id, )}</code> here, because <code class=\"mm\">E → E + E</code> and <code class=\"mm\">E → ( E )</code> end in <code class=\"mm\">id</code> and <code class=\"mm\">)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">E → E + E</code> has <code class=\"mm\">E</code> immediately before <code class=\"mm\">+</code>.</li><li>Every terminal in <code class=\"mm\">LAST(E)</code> therefore satisfies <code class=\"mm\">·&gt; +</code>: <code class=\"mm\">id ·&gt; +</code> and <code class=\"mm\">) ·&gt; +</code>.</li><li>Symmetrically <code class=\"mm\">FIRST(E) = {id, (}</code> and <code class=\"mm\">E → E + E</code> gives <code class=\"mm\">+ &lt;· id</code> and <code class=\"mm\">+ &lt;· (</code>.</li><li>The two relations go in opposite directions, so <code class=\"mm\">id &lt;· +</code> is false.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C) — <code class=\"mm\">id ·&gt; +</code>.</p><p class=\"row\"><b>Common misconception.</b> Reading the relations as operator precedence levels. They are local facts about where a handle can end: <code class=\"mm\">id ·&gt; +</code> says that a handle may end just before the <code class=\"mm\">+</code>, which is what lets the parser reduce <code class=\"mm\">id</code> to <code class=\"mm\">E</code>.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">a ·&gt; b</code> holds when some production has a nonterminal <code class=\"mm\">A</code> immediately followed by the terminal <code class=\"mm\">b</code>, and <code class=\"mm\">a</code> belongs to <code class=\"mm\">LAST(A)</code>. <code class=\"mm\">LAST(E) = {id, )}</code> here, because <code class=\"mm\">E → E + E</code> and <code class=\"mm\">E → ( E )</code> end in <code class=\"mm\">id</code> and <code class=\"mm\">)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">E → E + E</code> has <code class=\"mm\">E</code> immediately before <code class=\"mm\">+</code>.</li><li>Every terminal in <code class=\"mm\">LAST(E)</code> therefore satisfies <code class=\"mm\">·&gt; +</code>: <code class=\"mm\">id ·&gt; +</code> and <code class=\"mm\">) ·&gt; +</code>.</li><li>Symmetrically <code class=\"mm\">FIRST(E) = {id, (}</code> and <code class=\"mm\">E → E + E</code> gives <code class=\"mm\">+ &lt;· id</code> and <code class=\"mm\">+ &lt;· (</code>.</li><li>The two relations go in opposite directions, so <code class=\"mm\">id &lt;· +</code> is false.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C) — <code class=\"mm\">id ·&gt; +</code>.</p><p class=\"row\"><b>Common misconception.</b> Reading the relations as operator precedence levels. They are local facts about where a handle can end: <code class=\"mm\">id ·&gt; +</code> says that a handle may end just before the <code class=\"mm\">+</code>, which is what lets the parser reduce <code class=\"mm\">id</code> to <code class=\"mm\">E</code>.</p>"
+  },
+  {
+   "id": "CD-U3-Q14",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "In the dangling-else grammar S → i C t S | i C t S e S | a, C → b, the SLR(1) table has exactly one conflict. Which one is it, and how is it conventionally resolved?",
+   "question_html": "<p class=\"qtext\">In the dangling-else grammar <code class=\"mm\">S → i C t S | i C t S e S | a</code>, <code class=\"mm\">C → b</code>, the SLR(1) table has exactly one conflict. Which one is it, and how is it conventionally resolved?</p>",
+   "options": [
+    "A shift/reduce conflict between shifting e and reducing S → i C t S; resolved by shifting, so the e binds to the nearest i.",
+    "A reduce/reduce conflict between the two S-productions; resolved by taking the longer production.",
+    "A shift/reduce conflict resolved by reducing, so the e binds to the outermost i.",
+    "There is no conflict: the grammar is unambiguous, so SLR(1) accepts it as written."
+   ],
+   "options_html": [
+    "A shift/reduce conflict between shifting <code class=\"mm\">e</code> and reducing <code class=\"mm\">S → i C t S</code>; resolved by shifting, so the <code class=\"mm\">e</code> binds to the nearest <code class=\"mm\">i</code>.",
+    "A reduce/reduce conflict between the two <code class=\"mm\">S</code>-productions; resolved by taking the longer production.",
+    "A shift/reduce conflict resolved by reducing, so the <code class=\"mm\">e</code> binds to the outermost <code class=\"mm\">i</code>.",
+    "There is no conflict: the grammar is unambiguous, so SLR(1) accepts it as written."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The grammar is ambiguous: the sentence <code class=\"mm\">i b t i b t a e a</code> has two parse trees, one attaching the <code class=\"mm\">e</code> to each <code class=\"mm\">i</code>. SLR(1) exposes that ambiguity as a single shift/reduce conflict.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>After <code class=\"mm\">i C t S</code> the parser is in a state holding the complete item <code class=\"mm\">S → i C t S ·</code> and the item <code class=\"mm\">S → i C t S · e S</code>.</li><li><code class=\"mm\">e ∈ FOLLOW(S)</code>, so the reduce action sits in column <code class=\"mm\">e</code> — the same column that asks for a shift of <code class=\"mm\">e</code>.</li><li>Shifting is chosen, which postpones the reduction and attaches the <code class=\"mm\">e</code> to the innermost <code class=\"mm\">i</code>.</li><li>The two actions are exactly the two parse trees of the ambiguous sentence, which is why the conflict is unavoidable without changing the grammar or the rule.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Expecting a reduce/reduce conflict, or thinking the resolution is part of the grammar. The conflict is shift/reduce and the \"shift wins\" rule is a parser-level convention that encodes the usual nearest-<code class=\"mm\">i</code> semantics.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The grammar is ambiguous: the sentence <code class=\"mm\">i b t i b t a e a</code> has two parse trees, one attaching the <code class=\"mm\">e</code> to each <code class=\"mm\">i</code>. SLR(1) exposes that ambiguity as a single shift/reduce conflict.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>After <code class=\"mm\">i C t S</code> the parser is in a state holding the complete item <code class=\"mm\">S → i C t S ·</code> and the item <code class=\"mm\">S → i C t S · e S</code>.</li><li><code class=\"mm\">e ∈ FOLLOW(S)</code>, so the reduce action sits in column <code class=\"mm\">e</code> — the same column that asks for a shift of <code class=\"mm\">e</code>.</li><li>Shifting is chosen, which postpones the reduction and attaches the <code class=\"mm\">e</code> to the innermost <code class=\"mm\">i</code>.</li><li>The two actions are exactly the two parse trees of the ambiguous sentence, which is why the conflict is unavoidable without changing the grammar or the rule.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Expecting a reduce/reduce conflict, or thinking the resolution is part of the grammar. The conflict is shift/reduce and the \"shift wins\" rule is a parser-level convention that encodes the usual nearest-<code class=\"mm\">i</code> semantics.</p>"
+  },
+  {
+   "id": "CD-U3-Q15",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which one of the following grammars is LR(1) but NOT LALR(1)?",
+   "question_html": "<p class=\"qtext\">Which one of the following grammars is LR(1) but <b>NOT</b> LALR(1)?</p>",
+   "options": [
+    "S → A A, A → a A | b",
+    "S → a S b | a",
+    "S → a A d | b B d | a B e | b A e, A → c, B → c",
+    "S → L = R | R, L → * R | id, R → L"
+   ],
+   "options_html": [
+    "<code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code>",
+    "<code class=\"mm\">S → a S b | a</code>",
+    "<code class=\"mm\">S → a A d | b B d | a B e | b A e</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code>",
+    "<code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> LALR(1) merges canonical LR(1) states that share a core, unioning their lookaheads. A grammar that is LR(1) fails LALR exactly when that union puts two different reductions in one cell.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option (A): <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code> is LR(0), hence also SLR(1) and LALR(1).</li><li>Option (B): <code class=\"mm\">S → a S b | a</code> is not LR(0) but is SLR(1), so again LALR(1).</li><li>Option (D): <code class=\"mm\">S → L = R | R</code> is the standard grammar that is LALR(1) but not SLR(1).</li><li>Option (C): the canonical LR(1) collection has 14 states and no conflict. The states reached through <code class=\"mm\">a</code> and through <code class=\"mm\">b</code> carry <code class=\"mm\">A → c ·</code> with lookahead <code class=\"mm\">d</code> and <code class=\"mm\">B → c ·</code> with lookahead <code class=\"mm\">e</code>, and the mirror images carry the same two items with the lookaheads exchanged.</li><li>Merging each pair leaves 13 states in which both complete items carry <code class=\"mm\">{d, e}</code>, so column <code class=\"mm\">d</code> (and <code class=\"mm\">e</code>) asks for two different reductions: a reduce/reduce conflict.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Assuming LALR(1) accepts every LR(1) grammar. It accepts every LR(1) <i>language</i>, but individual grammars can be lost in the merge.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> LALR(1) merges canonical LR(1) states that share a core, unioning their lookaheads. A grammar that is LR(1) fails LALR exactly when that union puts two different reductions in one cell.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option (A): <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code> is LR(0), hence also SLR(1) and LALR(1).</li><li>Option (B): <code class=\"mm\">S → a S b | a</code> is not LR(0) but is SLR(1), so again LALR(1).</li><li>Option (D): <code class=\"mm\">S → L = R | R</code> is the standard grammar that is LALR(1) but not SLR(1).</li><li>Option (C): the canonical LR(1) collection has 14 states and no conflict. The states reached through <code class=\"mm\">a</code> and through <code class=\"mm\">b</code> carry <code class=\"mm\">A → c ·</code> with lookahead <code class=\"mm\">d</code> and <code class=\"mm\">B → c ·</code> with lookahead <code class=\"mm\">e</code>, and the mirror images carry the same two items with the lookaheads exchanged.</li><li>Merging each pair leaves 13 states in which both complete items carry <code class=\"mm\">{d, e}</code>, so column <code class=\"mm\">d</code> (and <code class=\"mm\">e</code>) asks for two different reductions: a reduce/reduce conflict.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Assuming LALR(1) accepts every LR(1) grammar. It accepts every LR(1) <i>language</i>, but individual grammars can be lost in the merge.</p>"
+  },
+  {
+   "id": "CD-U3-Q16",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → A A, A → a A | b, how many states of the canonical LR(0) collection contain at least one completed item, that is, an item whose dot stands at the right end? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code>, how many states of the canonical LR(0) collection contain at least one completed item, that is, an item whose dot stands at the right end? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A completed item is one of the form <code class=\"mm\">A → ω ·</code>. Such a state is where a reduction can happen, so the number of them measures how many places in the automaton a reduce action lives.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">I1 = {S′ → S ·}</code> — complete (accepting).</li><li><code class=\"mm\">I4 = {A → b ·}</code> — complete.</li><li><code class=\"mm\">I5 = {S → A A ·}</code> — complete.</li><li><code class=\"mm\">I6 = {A → a A ·}</code> — complete.</li><li><code class=\"mm\">I0, I2, I3</code> hold only items with the dot before a symbol, so they are not counted.</li></ol><p class=\"row\"><b>Final answer.</b> 4 states.</p><p class=\"row\"><b>Common misconception.</b> Counting the accepting state separately from reduce states, or forgetting that <code class=\"mm\">I6</code> is complete. <code class=\"mm\">I1</code> holds a completed item too; it just happens to be the augmented production, whose \"reduction\" is acceptance.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A completed item is one of the form <code class=\"mm\">A → ω ·</code>. Such a state is where a reduction can happen, so the number of them measures how many places in the automaton a reduce action lives.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">I1 = {S′ → S ·}</code> — complete (accepting).</li><li><code class=\"mm\">I4 = {A → b ·}</code> — complete.</li><li><code class=\"mm\">I5 = {S → A A ·}</code> — complete.</li><li><code class=\"mm\">I6 = {A → a A ·}</code> — complete.</li><li><code class=\"mm\">I0, I2, I3</code> hold only items with the dot before a symbol, so they are not counted.</li></ol><p class=\"row\"><b>Final answer.</b> 4 states.</p><p class=\"row\"><b>Common misconception.</b> Counting the accepting state separately from reduce states, or forgetting that <code class=\"mm\">I6</code> is complete. <code class=\"mm\">I1</code> holds a completed item too; it just happens to be the augmented production, whose \"reduction\" is acceptance.</p>"
+  },
+  {
+   "id": "CD-U3-Q17",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about conflicts in an SLR(1) table are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about conflicts in an SLR(1) table are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "A shift/reduce conflict arises in a state that holds a completed item and an item with the dot before a terminal, when that terminal belongs to the FOLLOW set of the completed item’s left side.",
+    "A reduce/reduce conflict arises when two completed items in one state have left sides whose FOLLOW sets share a terminal.",
+    "Every SLR(1) grammar is LR(0).",
+    "Every LR(1) grammar is SLR(1).",
+    "An SLR(1) table can never contain a reduce/reduce conflict."
+   ],
+   "options_html": [
+    "A shift/reduce conflict arises in a state that holds a completed item and an item with the dot before a terminal, when that terminal belongs to the FOLLOW set of the completed item’s left side.",
+    "A reduce/reduce conflict arises when two completed items in one state have left sides whose FOLLOW sets share a terminal.",
+    "Every SLR(1) grammar is LR(0).",
+    "Every LR(1) grammar is SLR(1).",
+    "An SLR(1) table can never contain a reduce/reduce conflict."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The SLR(1) table is filled by shifting on every terminal transition and reducing by <code class=\"mm\">A → ω</code> in the columns of <code class=\"mm\">FOLLOW(A)</code>. A conflict is simply a cell that receives two actions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: the shift action occupies column <code class=\"mm\">a</code> and the reduce action also occupies it, which is the definition of the conflict.</li><li>(B) true: both complete items write into every terminal of their own FOLLOW set, so a shared terminal receives two different reductions.</li><li>(C) false: <code class=\"mm\">S → a S b | a</code> is SLR(1) but not LR(0), so the inclusion is strict.</li><li>(D) false: <code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code> is LALR(1) but has a shift/reduce conflict under SLR(1).</li><li>(E) false: <code class=\"mm\">S → A a | B a</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code> produces a reduce/reduce conflict in column <code class=\"mm\">a</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A) and (B).</p><p class=\"row\"><b>Common misconception.</b> Treating \"SLR(1) conflict\" as synonymous with shift/reduce. Reduce/reduce conflicts are equally possible, and they indicate two distinct handles that the grammar does not separate.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The SLR(1) table is filled by shifting on every terminal transition and reducing by <code class=\"mm\">A → ω</code> in the columns of <code class=\"mm\">FOLLOW(A)</code>. A conflict is simply a cell that receives two actions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: the shift action occupies column <code class=\"mm\">a</code> and the reduce action also occupies it, which is the definition of the conflict.</li><li>(B) true: both complete items write into every terminal of their own FOLLOW set, so a shared terminal receives two different reductions.</li><li>(C) false: <code class=\"mm\">S → a S b | a</code> is SLR(1) but not LR(0), so the inclusion is strict.</li><li>(D) false: <code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code> is LALR(1) but has a shift/reduce conflict under SLR(1).</li><li>(E) false: <code class=\"mm\">S → A a | B a</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code> produces a reduce/reduce conflict in column <code class=\"mm\">a</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A) and (B).</p><p class=\"row\"><b>Common misconception.</b> Treating \"SLR(1) conflict\" as synonymous with shift/reduce. Reduce/reduce conflicts are equally possible, and they indicate two distinct handles that the grammar does not separate.</p>"
+  },
+  {
+   "id": "CD-U3-Q18",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar S → A a | B a, A → c, B → c, which conflict does the SLR(1) construction produce?",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">S → A a | B a</code>, <code class=\"mm\">A → c</code>, <code class=\"mm\">B → c</code>, which conflict does the SLR(1) construction produce?</p>",
+   "options": [
+    "A shift/reduce conflict in column a.",
+    "A reduce/reduce conflict in column a.",
+    "A reduce/reduce conflict in column $.",
+    "No conflict — the grammar is SLR(1)."
+   ],
+   "options_html": [
+    "A shift/reduce conflict in column <code class=\"mm\">a</code>.",
+    "A reduce/reduce conflict in column <code class=\"mm\">a</code>.",
+    "A reduce/reduce conflict in column <code class=\"mm\">$</code>.",
+    "No conflict — the grammar is SLR(1)."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Both productions <code class=\"mm\">A → c</code> and <code class=\"mm\">B → c</code> are complete after the same terminal <code class=\"mm\">c</code>, and <code class=\"mm\">FOLLOW(A) = FOLLOW(B) = {a}</code>, so one cell receives two reductions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FOLLOW(A)</code> comes from <code class=\"mm\">S → A a</code>, giving <code class=\"mm\">{a}</code>; <code class=\"mm\">FOLLOW(B)</code> comes from <code class=\"mm\">S → B a</code>, also <code class=\"mm\">{a}</code>.</li><li>The state reached after shifting <code class=\"mm\">c</code> holds <code class=\"mm\">A → c ·</code> and <code class=\"mm\">B → c ·</code>.</li><li>Both write a reduce action into column <code class=\"mm\">a</code>, so the cell <code class=\"mm\">ACTION[that state, a]</code> holds two entries.</li><li>No shift action competes there, so the conflict is reduce/reduce, not shift/reduce.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — reduce/reduce in column <code class=\"mm\">a</code>.</p><p class=\"row\"><b>Common misconception.</b> Expecting a shift/reduce conflict because the grammar \"looks\" like an operator grammar. Shift/reduce needs a shift item in the same state; here the state holds only the two complete items.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Both productions <code class=\"mm\">A → c</code> and <code class=\"mm\">B → c</code> are complete after the same terminal <code class=\"mm\">c</code>, and <code class=\"mm\">FOLLOW(A) = FOLLOW(B) = {a}</code>, so one cell receives two reductions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FOLLOW(A)</code> comes from <code class=\"mm\">S → A a</code>, giving <code class=\"mm\">{a}</code>; <code class=\"mm\">FOLLOW(B)</code> comes from <code class=\"mm\">S → B a</code>, also <code class=\"mm\">{a}</code>.</li><li>The state reached after shifting <code class=\"mm\">c</code> holds <code class=\"mm\">A → c ·</code> and <code class=\"mm\">B → c ·</code>.</li><li>Both write a reduce action into column <code class=\"mm\">a</code>, so the cell <code class=\"mm\">ACTION[that state, a]</code> holds two entries.</li><li>No shift action competes there, so the conflict is reduce/reduce, not shift/reduce.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — reduce/reduce in column <code class=\"mm\">a</code>.</p><p class=\"row\"><b>Common misconception.</b> Expecting a shift/reduce conflict because the grammar \"looks\" like an operator grammar. Shift/reduce needs a shift item in the same state; here the state holds only the two complete items.</p>"
+  },
+  {
+   "id": "CD-U3-Q19",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about LR(1) and LALR(1) are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about LR(1) and LALR(1) are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "For the same grammar the canonical LR(1) collection can contain more states than the LALR(1) collection.",
+    "LALR(1) grammars generate exactly the same class of languages as LR(1) grammars.",
+    "Merging states with the same core can change the language the parser accepts.",
+    "Every SLR(1) grammar is LALR(1).",
+    "In the canonical LR(1) construction each item carries a set of lookahead terminals rather than one."
+   ],
+   "options_html": [
+    "For the same grammar the canonical LR(1) collection can contain more states than the LALR(1) collection.",
+    "LALR(1) grammars generate exactly the same class of languages as LR(1) grammars.",
+    "Merging states with the same core can change the language the parser accepts.",
+    "Every SLR(1) grammar is LALR(1).",
+    "In the canonical LR(1) construction each item carries a set of lookahead terminals rather than one."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options ((A), (B)) and (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four classes are nested: LR(0) ⊂ SLR(1) ⊂ LALR(1) ⊂ LR(1) as classes of grammars, while LALR(1) and LR(1) accept the same class of languages.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: <code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code> has 14 canonical LR(1) states and only 10 LALR(1) states.</li><li>(B) true: for every LR(1) grammar there is an equivalent LALR(1) grammar, so the two classes of languages coincide.</li><li>(C) false: a merge only changes when a reduction is allowed, never which strings are derivable; if the merge produces a conflict the grammar is simply not LALR(1), and its language is unchanged.</li><li>(D) true: SLR(1) lookaheads are a special case of LALR(1) lookaheads, so no SLR(1) grammar is lost.</li><li>(E) false: in the canonical construction each item is a pair with a single lookahead terminal. Sets of lookaheads appear only after states are merged.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Confusing \"same languages\" with \"same grammars\". LALR(1) accepts the same languages as LR(1) while rejecting some individual LR(1) grammars, exactly the ones whose cores conflict when merged.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four classes are nested: LR(0) ⊂ SLR(1) ⊂ LALR(1) ⊂ LR(1) as classes of grammars, while LALR(1) and LR(1) accept the same class of languages.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: <code class=\"mm\">S → L = R | R</code>, <code class=\"mm\">L → * R | id</code>, <code class=\"mm\">R → L</code> has 14 canonical LR(1) states and only 10 LALR(1) states.</li><li>(B) true: for every LR(1) grammar there is an equivalent LALR(1) grammar, so the two classes of languages coincide.</li><li>(C) false: a merge only changes when a reduction is allowed, never which strings are derivable; if the merge produces a conflict the grammar is simply not LALR(1), and its language is unchanged.</li><li>(D) true: SLR(1) lookaheads are a special case of LALR(1) lookaheads, so no SLR(1) grammar is lost.</li><li>(E) false: in the canonical construction each item is a pair with a single lookahead terminal. Sets of lookaheads appear only after states are merged.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Confusing \"same languages\" with \"same grammars\". LALR(1) accepts the same languages as LR(1) while rejecting some individual LR(1) grammars, exactly the ones whose cores conflict when merged.</p>"
+  },
+  {
+   "id": "CD-U3-Q20",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "operator-precedence-parsing",
+   "subtopic": "operator-precedence-parsing",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the grammar E → E + E | E * E | ( E ) | id, using the standard definition of the precedence relations, how many ordered pairs (a, b) of terminals satisfy a ·> b? Count each ordered pair once. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the grammar <code class=\"mm\">E → E + E | E * E | ( E ) | id</code>, using the standard definition of the precedence relations, how many ordered pairs <code class=\"mm\">(a, b)</code> of terminals satisfy <code class=\"mm\">a ·&gt; b</code>? Count each ordered pair once. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 6,
+   "answer_display": "6",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">a ·&gt; b</code> holds when some production has a nonterminal <code class=\"mm\">A</code> immediately followed by the terminal <code class=\"mm\">b</code> and <code class=\"mm\">a ∈ LAST(A)</code>. Here <code class=\"mm\">LAST(E) = {id, )}</code>: every right side that ends in a terminal ends in <code class=\"mm\">id</code> or <code class=\"mm\">)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">E → E + E</code> has <code class=\"mm\">E</code> followed by <code class=\"mm\">+</code>, so every <code class=\"mm\">a ∈ LAST(E)</code> gives <code class=\"mm\">a ·&gt; +</code>: <code class=\"mm\">id ·&gt; +</code> and <code class=\"mm\">) ·&gt; +</code> — two pairs.</li><li><code class=\"mm\">E → E * E</code> likewise gives <code class=\"mm\">id ·&gt; *</code> and <code class=\"mm\">) ·&gt; *</code> — two more.</li><li><code class=\"mm\">E → ( E )</code> has <code class=\"mm\">E</code> followed by <code class=\"mm\">)</code>, giving <code class=\"mm\">id ·&gt; )</code> and <code class=\"mm\">) ·&gt; )</code> — two more.</li><li><code class=\"mm\">E → E + E</code> also has <code class=\"mm\">E</code> followed by <code class=\"mm\">E</code>, but the symbol after the nonterminal must be a terminal for the relation, so that occurrence adds nothing.</li><li>Total <code class=\"mm\">2 + 2 + 2 = 6</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 6 ordered pairs: <code class=\"mm\">(id, +), (), +), (id, *), (), *), (id, )), (), ))</code>.</p><p class=\"row\"><b>Common misconception.</b> Assuming <code class=\"mm\">·&gt;</code> only relates operator pairs, which would give the four pairs of <code class=\"mm\">{+, *, id}</code> alone and miss the two pairs involving <code class=\"mm\">)</code>. <code class=\"mm\">LAST(E)</code> decides the left member, and it contains <code class=\"mm\">id</code> and <code class=\"mm\">)</code>, not the operators.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">a ·&gt; b</code> holds when some production has a nonterminal <code class=\"mm\">A</code> immediately followed by the terminal <code class=\"mm\">b</code> and <code class=\"mm\">a ∈ LAST(A)</code>. Here <code class=\"mm\">LAST(E) = {id, )}</code>: every right side that ends in a terminal ends in <code class=\"mm\">id</code> or <code class=\"mm\">)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">E → E + E</code> has <code class=\"mm\">E</code> followed by <code class=\"mm\">+</code>, so every <code class=\"mm\">a ∈ LAST(E)</code> gives <code class=\"mm\">a ·&gt; +</code>: <code class=\"mm\">id ·&gt; +</code> and <code class=\"mm\">) ·&gt; +</code> — two pairs.</li><li><code class=\"mm\">E → E * E</code> likewise gives <code class=\"mm\">id ·&gt; *</code> and <code class=\"mm\">) ·&gt; *</code> — two more.</li><li><code class=\"mm\">E → ( E )</code> has <code class=\"mm\">E</code> followed by <code class=\"mm\">)</code>, giving <code class=\"mm\">id ·&gt; )</code> and <code class=\"mm\">) ·&gt; )</code> — two more.</li><li><code class=\"mm\">E → E + E</code> also has <code class=\"mm\">E</code> followed by <code class=\"mm\">E</code>, but the symbol after the nonterminal must be a terminal for the relation, so that occurrence adds nothing.</li><li>Total <code class=\"mm\">2 + 2 + 2 = 6</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 6 ordered pairs: <code class=\"mm\">(id, +), (), +), (id, *), (), *), (id, )), (), ))</code>.</p><p class=\"row\"><b>Common misconception.</b> Assuming <code class=\"mm\">·&gt;</code> only relates operator pairs, which would give the four pairs of <code class=\"mm\">{+, *, id}</code> alone and miss the two pairs involving <code class=\"mm\">)</code>. <code class=\"mm\">LAST(E)</code> decides the left member, and it contains <code class=\"mm\">id</code> and <code class=\"mm\">)</code>, not the operators.</p>"
+  },
+  {
+   "id": "CD-U3-Q21",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "In a shift-reduce parser, the handle of a right-sentential form is which of the following?",
+   "question_html": "<p class=\"qtext\">In a shift-reduce parser, the handle of a right-sentential form is which of the following?</p>",
+   "options": [
+    "The leftmost terminal of the form.",
+    "The longest prefix of the form that is also a prefix of some right-sentential form.",
+    "The next input symbol that will be shifted.",
+    "The substring that matches the right side of some production and whose reduction is one step of a rightmost derivation in reverse."
+   ],
+   "options_html": [
+    "The leftmost terminal of the form.",
+    "The longest prefix of the form that is also a prefix of some right-sentential form.",
+    "The next input symbol that will be shifted.",
+    "The substring that matches the right side of some production and whose reduction is one step of a rightmost derivation in reverse."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A bottom-up parse is a rightmost derivation written backwards. Each reduction undoes one step of that derivation, so the handle is the substring that the next reduction must replace.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A right-sentential form is what a rightmost derivation produces at some step.</li><li>Reversing one step means replacing a right side by its left side — that right side is the handle.</li><li>Option (B) describes a <i>viable prefix</i>, the other central notion of LR parsing; it is a stack prefix, not a handle.</li><li>Options (A) and (C) describe the input pointer, not a reducible substring.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Confusing the handle with the viable prefix. A viable prefix is any prefix of a right-sentential form that does not extend past the end of the handle; the handle itself is the part about to be reduced.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A bottom-up parse is a rightmost derivation written backwards. Each reduction undoes one step of that derivation, so the handle is the substring that the next reduction must replace.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A right-sentential form is what a rightmost derivation produces at some step.</li><li>Reversing one step means replacing a right side by its left side — that right side is the handle.</li><li>Option (B) describes a <i>viable prefix</i>, the other central notion of LR parsing; it is a stack prefix, not a handle.</li><li>Options (A) and (C) describe the input pointer, not a reducible substring.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Confusing the handle with the viable prefix. A viable prefix is any prefix of a right-sentential form that does not extend past the end of the handle; the handle itself is the part about to be reduced.</p>"
+  },
+  {
+   "id": "CD-U3-Q22",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr0-items-parsing",
+   "subtopic": "lr0-items-parsing",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about LR(0) items and the canonical collection are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about LR(0) items and the canonical collection are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "If A → α · B β is in a set and B → γ is a production, then B → · γ belongs to the closure of that set.",
+    "GOTO(I, X) is the closure of the set of items A → α X · β taken over all A → α · X β in I.",
+    "Every state of the canonical collection is the closure of a set of kernel items.",
+    "The number of states of the collection equals the number of productions of the augmented grammar.",
+    "An item whose dot stands at the left end of a production is called a reduce item."
+   ],
+   "options_html": [
+    "If <code class=\"mm\">A → α · B β</code> is in a set and <code class=\"mm\">B → γ</code> is a production, then <code class=\"mm\">B → · γ</code> belongs to the closure of that set.",
+    "<code class=\"mm\">GOTO(I, X)</code> is the closure of the set of items <code class=\"mm\">A → α X · β</code> taken over all <code class=\"mm\">A → α · X β</code> in I.",
+    "Every state of the canonical collection is the closure of a set of kernel items.",
+    "The number of states of the collection equals the number of productions of the augmented grammar.",
+    "An item whose dot stands at the left end of a production is called a reduce item."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options ((A), (B)) and (C)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The collection is built by two operations: CLOSURE, which completes a set of items with the productions of the nonterminal after the dot, and GOTO, which advances the dot over one grammar symbol and then closes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: that is the definition of the closure operation.</li><li>(B) true: GOTO first moves the dot over <code class=\"mm\">X</code> in every item that allows it, then takes the closure.</li><li>(C) true: the initial state is the closure of <code class=\"mm\">{S′ → · S}</code>, and every other state is the closure of the items produced by a GOTO, which are exactly its kernel.</li><li>(D) false: the count depends on the grammar. <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code> has four productions and seven states.</li><li>(E) false: an item with the dot at the left end is an initial item. A reduce item has the dot at the right end.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (C).</p><p class=\"row\"><b>Common misconception.</b> Expecting a one-to-one correspondence between productions and states. States are sets of items, many states share items, and the same core can be reached by different paths.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The collection is built by two operations: CLOSURE, which completes a set of items with the productions of the nonterminal after the dot, and GOTO, which advances the dot over one grammar symbol and then closes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: that is the definition of the closure operation.</li><li>(B) true: GOTO first moves the dot over <code class=\"mm\">X</code> in every item that allows it, then takes the closure.</li><li>(C) true: the initial state is the closure of <code class=\"mm\">{S′ → · S}</code>, and every other state is the closure of the items produced by a GOTO, which are exactly its kernel.</li><li>(D) false: the count depends on the grammar. <code class=\"mm\">S → A A</code>, <code class=\"mm\">A → a A | b</code> has four productions and seven states.</li><li>(E) false: an item with the dot at the left end is an initial item. A reduce item has the dot at the right end.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (C).</p><p class=\"row\"><b>Common misconception.</b> Expecting a one-to-one correspondence between productions and states. States are sets of items, many states share items, and the same core can be reached by different paths.</p>"
+  },
+  {
+   "id": "CD-U3-Q23",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "lr1-and-lalr1-parsers",
+   "subtopic": "lr1-and-lalr1-parsers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the expression grammar E → E + T | T, T → T * F | F, F → ( E ) | id, how many states does the LALR(1) automaton have?",
+   "question_html": "<p class=\"qtext\">For the expression grammar <code class=\"mm\">E → E + T | T</code>, <code class=\"mm\">T → T * F | F</code>, <code class=\"mm\">F → ( E ) | id</code>, how many states does the LALR(1) automaton have?</p>",
+   "options": [
+    "12",
+    "10",
+    "22",
+    "24"
+   ],
+   "options_html": [
+    "12",
+    "10",
+    "22",
+    "24"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This grammar has no pair of LR(1) states with a common core that carry different lookahead sets needing separate copies, so the LALR(1) automaton is the LR(0) automaton with lookaheads attached and has the same number of states.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start: <code class=\"mm\">I0 = {E′ → · E, E → · E + T, E → · T, T → · T * F, T → · F, F → · ( E ), F → · id}</code>.</li><li>The GOTO transitions follow the nesting <code class=\"mm\">E, T, F</code>: states for <code class=\"mm\">E′ → E ·</code>, <code class=\"mm\">E → E · + T</code>, <code class=\"mm\">E → T ·</code>/<code class=\"mm\">T → T · * F</code>, <code class=\"mm\">T → F ·</code>, <code class=\"mm\">F → id ·</code>, <code class=\"mm\">F → ( · E )</code>, <code class=\"mm\">E → E + · T</code>, <code class=\"mm\">T → T * · F</code>, <code class=\"mm\">F → ( E · )</code>, <code class=\"mm\">E → E + T ·</code>, <code class=\"mm\">T → T * F ·</code> and <code class=\"mm\">F → ( E ) ·</code>.</li><li>Counting them gives 12 states, which is also the LR(0) count and the LALR(1) count.</li><li>The canonical LR(1) automaton, by contrast, keeps separate copies of several of these states and has 22.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A) — 12 states.</p><p class=\"row\"><b>Common misconception.</b> Quoting the canonical LR(1) count for an LALR question. Whenever no two states share a core with different lookaheads, LALR and LR(0) have the same state count.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This grammar has no pair of LR(1) states with a common core that carry different lookahead sets needing separate copies, so the LALR(1) automaton is the LR(0) automaton with lookaheads attached and has the same number of states.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start: <code class=\"mm\">I0 = {E′ → · E, E → · E + T, E → · T, T → · T * F, T → · F, F → · ( E ), F → · id}</code>.</li><li>The GOTO transitions follow the nesting <code class=\"mm\">E, T, F</code>: states for <code class=\"mm\">E′ → E ·</code>, <code class=\"mm\">E → E · + T</code>, <code class=\"mm\">E → T ·</code>/<code class=\"mm\">T → T · * F</code>, <code class=\"mm\">T → F ·</code>, <code class=\"mm\">F → id ·</code>, <code class=\"mm\">F → ( · E )</code>, <code class=\"mm\">E → E + · T</code>, <code class=\"mm\">T → T * · F</code>, <code class=\"mm\">F → ( E · )</code>, <code class=\"mm\">E → E + T ·</code>, <code class=\"mm\">T → T * F ·</code> and <code class=\"mm\">F → ( E ) ·</code>.</li><li>Counting them gives 12 states, which is also the LR(0) count and the LALR(1) count.</li><li>The canonical LR(1) automaton, by contrast, keeps separate copies of several of these states and has 22.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A) — 12 states.</p><p class=\"row\"><b>Common misconception.</b> Quoting the canonical LR(1) count for an LALR question. Whenever no two states share a core with different lookaheads, LALR and LR(0) have the same state count.</p>"
+  },
+  {
+   "id": "CD-U3-Q24",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "operator-precedence-parsing",
+   "subtopic": "operator-precedence-parsing",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which one of the following is a genuine limitation of operator-precedence parsing?",
+   "question_html": "<p class=\"qtext\">Which one of the following is a genuine limitation of operator-precedence parsing?</p>",
+   "options": [
+    "It cannot parse grammars that contain left recursion.",
+    "It cannot parse expressions that use more than one operator.",
+    "It applies only to operator grammars, so ε-productions and adjacent nonterminals must be removed first.",
+    "It needs two tokens of lookahead where LR(1) needs one."
+   ],
+   "options_html": [
+    "It cannot parse grammars that contain left recursion.",
+    "It cannot parse expressions that use more than one operator.",
+    "It applies only to operator grammars, so <code class=\"mm\">ε</code>-productions and adjacent nonterminals must be removed first.",
+    "It needs two tokens of lookahead where LR(1) needs one."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The method needs every handle to be bordered by terminals, which is exactly what an operator grammar guarantees: no <code class=\"mm\">ε</code>-production and no right side with two adjacent nonterminals.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Left recursion is harmless: the classic expression grammar <code class=\"mm\">E → E + E | E * E</code> is left recursive and is parsed by this method.</li><li>Several operators are the normal case; the relations handle them pair by pair.</li><li>One token of lookahead is enough: the decision uses only the topmost stack terminal and the next input symbol.</li><li>The real restriction is grammatical: a production such as <code class=\"mm\">A → B C</code> or <code class=\"mm\">A → ε</code> leaves a handle that is not bordered by terminals, so the relation table cannot decide.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Believing the method is limited by recursion or by the number of operators. The limitation is the operator-grammar restriction, which excludes whole families of grammars regardless of how simple their operators are.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The method needs every handle to be bordered by terminals, which is exactly what an operator grammar guarantees: no <code class=\"mm\">ε</code>-production and no right side with two adjacent nonterminals.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Left recursion is harmless: the classic expression grammar <code class=\"mm\">E → E + E | E * E</code> is left recursive and is parsed by this method.</li><li>Several operators are the normal case; the relations handle them pair by pair.</li><li>One token of lookahead is enough: the decision uses only the topmost stack terminal and the next input symbol.</li><li>The real restriction is grammatical: a production such as <code class=\"mm\">A → B C</code> or <code class=\"mm\">A → ε</code> leaves a handle that is not bordered by terminals, so the relation table cannot decide.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Believing the method is limited by recursion or by the number of operators. The limitation is the operator-grammar restriction, which excludes whole families of grammars regardless of how simple their operators are.</p>"
+  },
+  {
+   "id": "CD-U3-Q25",
+   "subject": "compiler-design",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "bottom-up-parsing",
+   "unit_name": "Syntax Analysis: Bottom-Up Parsing",
+   "topic": "Syntax Analysis: Bottom-Up Parsing",
+   "sub": "slr1-parsing-conflicts",
+   "subtopic": "slr1-parsing-conflicts",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about the moves of a shift-reduce parser are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about the moves of a shift-reduce parser are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "Shift pushes the next input symbol onto the stack and advances the input pointer.",
+    "Reduce pops the handle from the top of the stack and pushes the left side of the production that matched it.",
+    "Accept is announced as soon as the stack holds the start symbol, whether or not input remains.",
+    "An error is detected as soon as the table has no action for the current state and the current lookahead.",
+    "Every reduce pops exactly one symbol from the stack."
+   ],
+   "options_html": [
+    "Shift pushes the next input symbol onto the stack and advances the input pointer.",
+    "Reduce pops the handle from the top of the stack and pushes the left side of the production that matched it.",
+    "Accept is announced as soon as the stack holds the start symbol, whether or not input remains.",
+    "An error is detected as soon as the table has no action for the current state and the current lookahead.",
+    "Every reduce pops exactly one symbol from the stack."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options ((A), (B)) and (D)",
+   "solution": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shift-reduce parser performs four kinds of move: shift, reduce, accept and error. Accept needs the stack to hold exactly the start symbol <i>and</i> the input to be exhausted.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: one input symbol moves onto the stack, and the input pointer advances by one.</li><li>(B) true: <code class=\"mm\">| ω |</code> symbols leave the stack and the left side <code class=\"mm\">A</code> takes their place, so the stack can also shrink by more than one symbol.</li><li>(C) false: with input still unread, holding the start symbol is not acceptance; the parser must also see <code class=\"mm\">$</code>.</li><li>(D) true: an empty ACTION entry is the parser’s only way to notice that no legal move exists, and it reports the error immediately.</li><li>(E) false: a reduce by <code class=\"mm\">A → X Y Z</code> pops three symbols.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Thinking reduce always replaces one symbol by one symbol. It replaces a whole right side, of any length, by a single nonterminal.</p>",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shift-reduce parser performs four kinds of move: shift, reduce, accept and error. Accept needs the stack to hold exactly the start symbol <i>and</i> the input to be exhausted.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) true: one input symbol moves onto the stack, and the input pointer advances by one.</li><li>(B) true: <code class=\"mm\">| ω |</code> symbols leave the stack and the left side <code class=\"mm\">A</code> takes their place, so the stack can also shrink by more than one symbol.</li><li>(C) false: with input still unread, holding the start symbol is not acceptance; the parser must also see <code class=\"mm\">$</code>.</li><li>(D) true: an empty ACTION entry is the parser’s only way to notice that no legal move exists, and it reports the error immediately.</li><li>(E) false: a reduce by <code class=\"mm\">A → X Y Z</code> pops three symbols.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Thinking reduce always replaces one symbol by one symbol. It replaces a whole right side, of any length, by a single nonterminal.</p>"
   }
  ]
 }
