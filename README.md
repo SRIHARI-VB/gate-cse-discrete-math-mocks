@@ -7,28 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html)
+- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: standard TM models & variants (5) · recursive vs recursively enumerable (5) ·
-  halting problem & undecidability (5) · Rice's theorem & reductions (5) · Chomsky hierarchy summary (5)
-- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 6 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27,
-  run 6, unit 3, pushdown-automata, Set 2 of 2}`. Unit 3 stood at **50** questions — exactly `UNIT_QUESTION_CAP` —
-  so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(pushdown-automata) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Turing Machines & Decidability**. This
-  is Set 1 of 2, so the next Theory of Computation run re-selects Unit 4 (25 < 50, 0 days) before advancing to
-  Unit 1. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 2 of 2**, 2026-10-27 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html)
+- Subtopics: FIRST and FOLLOW sets (7) · LL(1) parsing tables (6) · recursive-descent parsers (6) ·
+  left recursion & factoring (6)
+- Rotation: MODE A drew **Compiler Design** with a seeded `random` draw (seed `20261027`) over the four subjects
+  that had no paper dated 2026-10-27 — Algorithms, Compiler Design, Databases and Engineering Mathematics. `runs[]`
+  sorted by `(date, run)` gives the most recent Compiler Design paper as `{date 2026-10-26, run 2, unit 1,
+  lexical-analysis, Set 2 of 2}`. Unit 1 stood at **50** questions — exactly `UNIT_QUESTION_CAP` — so step B3 failed
+  on the cap and step B4 advanced exactly one unit:
+  `(index_of(lexical-analysis) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, Syntax Analysis: Top-Down Parsing**. This
+  is Set 1 of 2, so the next Compiler Design run re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3.
+  No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 46 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 27 current · 19 archived |
-| Test cards on the portal | 29 |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1150 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 47 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 28 current · 19 archived |
+| Test cards on the portal | 30 |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1175 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 19 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
@@ -45,6 +46,23 @@ re-verify all 27 current papers and 19 archived sets together.
 
 ## Rotation log
 
+- **2026-10-27, Compiler Design → Unit 2 (Syntax Analysis: Top-Down Parsing), Set 1 of 2.** MODE A: one subject was
+  drawn from the 11 GATE CSE subjects with a seeded `random` draw (seed `20261027`), restricted to the four subjects
+  that had no paper dated 2026-10-27 — Algorithms, Compiler Design, Databases, Engineering Mathematics — so that the
+  day's paper lands on a subject that has not already been served today. It gave **Compiler Design**. `runs[]` sorted
+  by `(date, run)` gives the most recent paper as `{date 2026-10-26, run 2, unit 1, lexical-analysis, Set 2 of 2}`.
+  Unit 1 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4
+  advanced exactly one unit: `(index_of(lexical-analysis) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, Syntax
+  Analysis: Top-Down Parsing** (`top-down-parsing`). Unit 2 had no earlier paper, so nothing was archived; the paper
+  is filed only at `compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`, the unit folder holds exactly
+  one current paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 2, so the
+  next Compiler Design run re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3 of the same pass. No
+  override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — FIRST and FOLLOW sets (7 questions), LL(1) parsing tables (6),
+  recursive-descent parsers (6) and left recursion & factoring (6). Every question carries
+  `data-subject="compiler-design"`, `data-unit="top-down-parsing"`, `data-unit-number="2"` and its subtopic slug.
+  No verified previous-year question exists for this unit in the bank, so no item is labelled an official GATE
+  question and the About tab says so.
 - **2026-10-27, Theory of Computation → Unit 4 (Turing Machines & Decidability), Set 1 of 2.** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw
   index 6 of 11); it gave **Theory of Computation**. `runs[]` sorted by `(date, run)` gives the most recent paper as
@@ -1681,7 +1699,7 @@ digital-logic/
 | 3 | Set Theory | `set-theory` | 50 | yes |
 | 4 | Relations | `relations` | 50 | yes |
 | 5 | Functions | `functions` | 50 | yes |
-| 6 | Mathematical Induction & Recursion | `induction-recursion` | 0 | — |
+| 6 | Mathematical Induction & Recursion | `induction-recursion` | 25 | yes |
 | 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
 | 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
 | 9 | Graph Theory Fundamentals | `graph-theory-fundamentals` | 0 | — |
@@ -1732,7 +1750,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Lexical Analysis | `lexical-analysis` | 50 | yes |
-| 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 0 | — |
+| 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 25 | yes |
 | 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 0 | — |
 | 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 0 | — |
 | 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
@@ -1893,3 +1911,8 @@ review interface.
   before the 50-question cap existed. The rotation has already moved past it (Unit 5 was the most recent Discrete
   Mathematics unit), so the over-cap state is frozen history rather than an active breach; it is recorded here so the
   status table and the banks agree.
+
+- The Compiler Design Unit 2 Set 1 paper inherits the three open shell items above unchanged (literal hex outside
+  `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens rather than
+  their `-d` variants), for the same reason: re-typing any of them in one paper would break shell parity. Its `<style>`
+  block and its script are byte-identical to the previously shipped papers.
