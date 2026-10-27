@@ -4,9 +4,9 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-25",
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-10-28",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 375,
+  "total_questions": 400,
   "units_with_questions": [
    1,
    2,
@@ -14,6 +14,7 @@
    4,
    5,
    6,
+   7,
    16
   ]
  },
@@ -479,6 +480,38 @@
    ],
    "selection": "MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded random.SystemRandom() draw (draw index 6 of 11) and it gave Discrete Mathematics. discrete-mathematics/question-bank/master_bank.json read back runs[-1] = {date 2026-10-27, run 4, unit 6, induction-recursion, \"Set 1 of 2\"}. Unit 6 held 25 questions, below UNIT_QUESTION_CAP = 50, and had been current for 0 days, below DAYS_PER_UNIT_MAX = 7, so step B3 held and step B4 was not reached: the current unit was generated again, giving Set 2 of 2. No override used.",
    "note": "Set 2 of 2 for Discrete Mathematics Unit 6; the unit now holds exactly 50 questions, the cap, so the next Discrete Mathematics run advances (5 + 1) mod 16 = 6 -> Unit 7, Counting & Combinatorics. The Set 1 paper was moved to archive/gate_dm_mock_6_2026-10-27_run1.html with its content frozen and the Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no root copy was written. All 25 items are new: DM-IR6B-Q01..Q25 did not exist in the bank and no stem or option set repeats a banked item (string-normalised check, zero collisions). Coverage: weak-strong-induction 7, structural-induction 6, well-ordering-principle 6, proof-techniques-and-errors 6. No question is an official GATE PYQ and no PYQ was added this run; verified_pyqs stays at 2, both Unit 1. Every numeric answer was recomputed by script."
+  },
+  {
+   "run": 6,
+   "date": "2026-10-28",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "set": "Set 1 of 2",
+   "count": 25,
+   "file": "discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": {
+    "permutations-combinations": 5,
+    "stars-and-bars": 5,
+    "binomial-multinomial-coefficients": 5,
+    "inclusion-exclusion-counting": 5,
+    "double-counting": 5
+   }
   }
  ],
  "verified_pyqs": [
@@ -17030,6 +17063,1290 @@
     "misconception": "Using a value that violates the hypothesis as a counterexample. A counterexample must satisfy the hypothesis and violate the conclusion."
    },
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> “Divisible by 4” is stronger than “divisible by 2”, and squaring can lift divisibility from 2 to 4 without lifting it all the way.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Take <span class=\"mm\">n = 2</span>: <span class=\"mm\">n² = 4</span> is divisible by 4, yet 2 is not divisible by 4.</li><li>So the implication fails and the statement is false.</li><li>The true general fact is weaker: <span class=\"mm\">4 | n²</span> forces <span class=\"mm\">2 | n</span>, because <span class=\"mm\">n² = 4k</span> makes <span class=\"mm\">n²</span> even and hence <span class=\"mm\">n</span> even. Divisibility of <span class=\"mm\">n</span> by 4 would need <span class=\"mm\">16 | n²</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b> (A) is refuted by <span class=\"mm\">n = 2</span>. (B) is not a counterexample: <span class=\"mm\">3² = 9</span> is not divisible by 4, so the hypothesis fails and the implication holds vacuously. (D) misdescribes the failure — it occurs at even <span class=\"mm\">n</span> such as 2, while for odd <span class=\"mm\">n</span> the statement holds only vacuously.</p><p class=\"row\"><b>Common misconception.</b> Using a value that violates the hypothesis as a counterexample. A counterexample must satisfy the hypothesis and violate the conclusion.</p>"
+  },
+  {
+   "id": "DM-CB7-Q01",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many distinct arrangements are there of the letters of the word <code class=\"mm\">BANANA</code>?",
+   "question_html": "<p class=\"qtext\">How many distinct arrangements are there of the letters of the word <code class=\"mm\">BANANA</code>?</p>",
+   "options": [
+    "60",
+    "120",
+    "720",
+    "30"
+   ],
+   "options_html": [
+    "60",
+    "120",
+    "720",
+    "30"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "When a multiset has repeated items, the number of distinct arrangements is the total number of linear arrangements divided by the factorial of each repetition count, because permuting identical copies among themselves produces the same word.",
+    "steps": [
+     "The word BANANA has 6 letters: A appears 3 times, N appears 2 times and B appears once.",
+     "The naive count treats the six letters as distinct: <code class=\"mm\">6! = 720</code>.",
+     "Correct for the repeated letters: <code class=\"mm\">3!</code> orderings of the A's and <code class=\"mm\">2!</code> orderings of the N's are invisible, and <code class=\"mm\">1! = 1</code> for B.",
+     "So the count is <code class=\"mm\">6!/(3!&middot;2!&middot;1!) = 720/12 = 60</code>."
+    ],
+    "final": "60",
+    "misconception": "Dividing by only one of the repetition counts, for example <code class=\"mm\">720/6 = 120</code>, which still counts the two N's as distinguishable.",
+    "takeaway": "Divide once per distinct repeated letter, by the factorial of its multiplicity — not by the letter count."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> When a multiset has repeated items, the number of distinct arrangements is the total number of linear arrangements divided by the factorial of each repetition count, because permuting identical copies among themselves produces the same word.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The word BANANA has 6 letters: A appears 3 times, N appears 2 times and B appears once.</li><li>The naive count treats the six letters as distinct: <code class=\"mm\">6! = 720</code>.</li><li>Correct for the repeated letters: <code class=\"mm\">3!</code> orderings of the A's and <code class=\"mm\">2!</code> orderings of the N's are invisible, and <code class=\"mm\">1! = 1</code> for B.</li><li>So the count is <code class=\"mm\">6!/(3!&middot;2!&middot;1!) = 720/12 = 60</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by only one of the repetition counts, for example <code class=\"mm\">720/6 = 120</code>, which still counts the two N's as distinguishable.</p><p class=\"row\"><b>Takeaway.</b> Divide once per distinct repeated letter, by the factorial of its multiplicity — not by the letter count.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q02",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "After like terms are collected, how many terms does the expansion of <code class=\"mm\">(a + b + c)&#8312;</code> contain?",
+   "question_html": "<p class=\"qtext\">After like terms are collected, how many terms does the expansion of <code class=\"mm\">(a + b + c)&#8312;</code> contain?</p>",
+   "options": [
+    "45",
+    "36",
+    "28",
+    "9"
+   ],
+   "options_html": [
+    "45",
+    "36",
+    "28",
+    "9"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Each collected term is <code class=\"mm\">a&#7510; b&#7511; c&#7503;</code> with <code class=\"mm\">p + q + r = n</code> and <code class=\"mm\">p, q, r &ge; 0</code>, so the number of terms equals the number of non-negative solutions of that equation.",
+    "steps": [
+     "The exponent pattern is a non-negative solution of <code class=\"mm\">p + q + r = 8</code>.",
+     "Stars and bars with 3 variables: <code class=\"mm\">C(8+3&minus;1, 3&minus;1) = C(10,2)</code>.",
+     "<code class=\"mm\">C(10,2) = 45</code>.",
+     "Check on a small case: <code class=\"mm\">(a+b+c)&#178;</code> has <code class=\"mm\">C(4,2) = 6</code> terms, namely a&sup2;, b&sup2;, c&sup2;, ab, bc, ca."
+    ],
+    "final": "45",
+    "misconception": "Answering <code class=\"mm\">3&#8312; = 6561</code>, the number of terms before collecting like terms, or <code class=\"mm\">n + 1 = 9</code>, which is the two-variable rule.",
+    "takeaway": "For k variables raised to n, the collected expansion has <code class=\"mm\">C(n+k&minus;1, k&minus;1)</code> terms."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each collected term is <code class=\"mm\">a&#7510; b&#7511; c&#7503;</code> with <code class=\"mm\">p + q + r = n</code> and <code class=\"mm\">p, q, r &ge; 0</code>, so the number of terms equals the number of non-negative solutions of that equation.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The exponent pattern is a non-negative solution of <code class=\"mm\">p + q + r = 8</code>.</li><li>Stars and bars with 3 variables: <code class=\"mm\">C(8+3&minus;1, 3&minus;1) = C(10,2)</code>.</li><li><code class=\"mm\">C(10,2) = 45</code>.</li><li>Check on a small case: <code class=\"mm\">(a+b+c)&#178;</code> has <code class=\"mm\">C(4,2) = 6</code> terms, namely a&sup2;, b&sup2;, c&sup2;, ab, bc, ca.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering <code class=\"mm\">3&#8312; = 6561</code>, the number of terms before collecting like terms, or <code class=\"mm\">n + 1 = 9</code>, which is the two-variable rule.</p><p class=\"row\"><b>Takeaway.</b> For k variables raised to n, the collected expansion has <code class=\"mm\">C(n+k&minus;1, k&minus;1)</code> terms.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q03",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "In a group of 10 people, every pair shakes hands exactly once. How many handshakes take place?",
+   "question_html": "<p class=\"qtext\">In a group of 10 people, every pair shakes hands exactly once. How many handshakes take place?</p>",
+   "options": [
+    "45",
+    "90",
+    "55",
+    "100"
+   ],
+   "options_html": [
+    "45",
+    "90",
+    "55",
+    "100"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Count the ordered pairs and divide by 2: each handshake corresponds to two ordered pairs, so the number of unordered pairs is <code class=\"mm\">C(10,2) = 10&middot;9/2</code>.",
+    "steps": [
+     "Each of the 10 people shakes hands with the other 9, giving <code class=\"mm\">10 &times; 9 = 90</code> ordered (shaker, shaken) records.",
+     "Every handshake is recorded twice, once from each participant.",
+     "<code class=\"mm\">90/2 = 45</code>, which is also <code class=\"mm\">C(10,2)</code>."
+    ],
+    "final": "45",
+    "misconception": "Answering 90, the number of ordered records, which counts each handshake from both ends; or <code class=\"mm\">10 &times; 10 = 100</code>, which allows self-handshakes.",
+    "takeaway": "Double counting always ends with a division by the size of the over-counted fibre: 2 for unordered pairs."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Count the ordered pairs and divide by 2: each handshake corresponds to two ordered pairs, so the number of unordered pairs is <code class=\"mm\">C(10,2) = 10&middot;9/2</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the 10 people shakes hands with the other 9, giving <code class=\"mm\">10 &times; 9 = 90</code> ordered (shaker, shaken) records.</li><li>Every handshake is recorded twice, once from each participant.</li><li><code class=\"mm\">90/2 = 45</code>, which is also <code class=\"mm\">C(10,2)</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering 90, the number of ordered records, which counts each handshake from both ends; or <code class=\"mm\">10 &times; 10 = 100</code>, which allows self-handshakes.</p><p class=\"row\"><b>Takeaway.</b> Double counting always ends with a division by the size of the over-counted fibre: 2 for unordered pairs.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q04",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Five men and five women are to be seated in a row of 10 seats so that no two women sit next to each other. In how many ways can this be done? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Five men and five women are to be seated in a row of 10 seats so that no two women sit next to each other. In how many ways can this be done? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    86400
+   ],
+   "answer_display": "86400",
+   "marks": 2,
+   "solution": {
+    "concept": "Separating one group inside a row is a two-stage count: seat the other group first, then place the separated group one per gap, because a row of <code class=\"mm\">m</code> people has <code class=\"mm\">m+1</code> gaps.",
+    "steps": [
+     "Seat the five men: <code class=\"mm\">5! = 120</code> orders.",
+     "The five seated men create 6 gaps: before the first man, the four internal gaps and after the last man.",
+     "Choose 5 of these 6 gaps for the women: <code class=\"mm\">C(6,5) = 6</code>.",
+     "Arrange the five women in the chosen gaps: <code class=\"mm\">5! = 120</code>.",
+     "Multiply the independent stages: <code class=\"mm\">120 &times; 6 &times; 120 = 86400</code>."
+    ],
+    "final": "86400",
+    "misconception": "Using 5 internal gaps only, which forces the two end gaps to stay empty and misses the arrangements that start or end with a woman; or treating the women as one block, which answers a different question.",
+    "takeaway": "For 'no two together' seat the other group first: the end gaps are real gaps and must be counted."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Separating one group inside a row is a two-stage count: seat the other group first, then place the separated group one per gap, because a row of <code class=\"mm\">m</code> people has <code class=\"mm\">m+1</code> gaps.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Seat the five men: <code class=\"mm\">5! = 120</code> orders.</li><li>The five seated men create 6 gaps: before the first man, the four internal gaps and after the last man.</li><li>Choose 5 of these 6 gaps for the women: <code class=\"mm\">C(6,5) = 6</code>.</li><li>Arrange the five women in the chosen gaps: <code class=\"mm\">5! = 120</code>.</li><li>Multiply the independent stages: <code class=\"mm\">120 &times; 6 &times; 120 = 86400</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 86400</span></p><p class=\"row\"><b>Common misconception.</b> Using 5 internal gaps only, which forces the two end gaps to stay empty and misses the arrangements that start or end with a woman; or treating the women as one block, which answers a different question.</p><p class=\"row\"><b>Takeaway.</b> For 'no two together' seat the other group first: the end gaps are real gaps and must be counted.</p>",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-CB7-Q05",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 10</code> have?",
+   "question_html": "<p class=\"qtext\">How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 10</code> have?</p>",
+   "options": [
+    "286",
+    "715",
+    "220",
+    "1001"
+   ],
+   "options_html": [
+    "286",
+    "715",
+    "220",
+    "1001"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "A non-negative integer solution of <code class=\"mm\">x&#8321; + &hellip; + x&#8342; = n</code> is a distribution of <code class=\"mm\">n</code> identical stars into <code class=\"mm\">k</code> boxes separated by <code class=\"mm\">k&minus;1</code> identical bars, so the count is <code class=\"mm\">C(n+k&minus;1, k&minus;1)</code>.",
+    "steps": [
+     "Here <code class=\"mm\">n = 10</code> stars and <code class=\"mm\">k = 4</code> variables, so 3 bars.",
+     "Total symbols: <code class=\"mm\">10 + 3 = 13</code>.",
+     "Choose the 3 positions of the bars: <code class=\"mm\">C(13,3) = 286</code>.",
+     "Check on a small case: for <code class=\"mm\">n = 1, k = 4</code> the formula gives <code class=\"mm\">C(4,3) = 4</code>, which matches the four unit vectors."
+    ],
+    "final": "286",
+    "misconception": "Using <code class=\"mm\">C(n+k, k) = C(14,4) = 1001</code>, that is four bars instead of <code class=\"mm\">k&minus;1 = 3</code>; the number of bars is one less than the number of variables.",
+    "takeaway": "Stars-and-bars needs exactly <code class=\"mm\">k&minus;1</code> bars: the bars split the row into k boxes."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A non-negative integer solution of <code class=\"mm\">x&#8321; + &hellip; + x&#8342; = n</code> is a distribution of <code class=\"mm\">n</code> identical stars into <code class=\"mm\">k</code> boxes separated by <code class=\"mm\">k&minus;1</code> identical bars, so the count is <code class=\"mm\">C(n+k&minus;1, k&minus;1)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <code class=\"mm\">n = 10</code> stars and <code class=\"mm\">k = 4</code> variables, so 3 bars.</li><li>Total symbols: <code class=\"mm\">10 + 3 = 13</code>.</li><li>Choose the 3 positions of the bars: <code class=\"mm\">C(13,3) = 286</code>.</li><li>Check on a small case: for <code class=\"mm\">n = 1, k = 4</code> the formula gives <code class=\"mm\">C(4,3) = 4</code>, which matches the four unit vectors.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Using <code class=\"mm\">C(n+k, k) = C(14,4) = 1001</code>, that is four bars instead of <code class=\"mm\">k&minus;1 = 3</code>; the number of bars is one less than the number of variables.</p><p class=\"row\"><b>Takeaway.</b> Stars-and-bars needs exactly <code class=\"mm\">k&minus;1</code> bars: the bars split the row into k boxes.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q06",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many integers from 1 to 100 are divisible by none of 2, 3 and 5?",
+   "question_html": "<p class=\"qtext\">How many integers from 1 to 100 are divisible by none of 2, 3 and 5?</p>",
+   "options": [
+    "26",
+    "32",
+    "24",
+    "22"
+   ],
+   "options_html": [
+    "26",
+    "32",
+    "24",
+    "22"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Three-set inclusion-exclusion: add the single counts, subtract the pairwise intersections and add the triple intersection back, then subtract the union from the universe.",
+    "steps": [
+     "Singles: 50, 33, 20.",
+     "Pairs: multiples of 6 give 16, of 10 give 10, of 15 give 6.",
+     "Triple: multiples of 30 give 3.",
+     "Union <code class=\"mm\">= 50 + 33 + 20 &minus; 16 &minus; 10 &minus; 6 + 3 = 74</code>.",
+     "Neither <code class=\"mm\">= 100 &minus; 74 = 26</code>."
+    ],
+    "final": "26",
+    "misconception": "Forgetting to add the triple intersection back, which gives 23; the multiples of 30 were subtracted three times in the pairwise stage and must be restored once.",
+    "takeaway": "Write the signs in advance: +, &minus;, + for one, two and three properties; the pattern generalises."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three-set inclusion-exclusion: add the single counts, subtract the pairwise intersections and add the triple intersection back, then subtract the union from the universe.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Singles: 50, 33, 20.</li><li>Pairs: multiples of 6 give 16, of 10 give 10, of 15 give 6.</li><li>Triple: multiples of 30 give 3.</li><li>Union <code class=\"mm\">= 50 + 33 + 20 &minus; 16 &minus; 10 &minus; 6 + 3 = 74</code>.</li><li>Neither <code class=\"mm\">= 100 &minus; 74 = 26</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Forgetting to add the triple intersection back, which gives 23; the multiples of 30 were subtracted three times in the pairwise stage and must be restored once.</p><p class=\"row\"><b>Takeaway.</b> Write the signs in advance: +, &minus;, + for one, two and three properties; the pattern generalises.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q07",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "What is the coefficient of <code class=\"mm\">x&#8309;</code> in the expansion of <code class=\"mm\">(1 + x)&#185;&#178;</code>?",
+   "question_html": "<p class=\"qtext\">What is the coefficient of <code class=\"mm\">x&#8309;</code> in the expansion of <code class=\"mm\">(1 + x)&#185;&#178;</code>?</p>",
+   "options": [
+    "792",
+    "924",
+    "495",
+    "1188"
+   ],
+   "options_html": [
+    "792",
+    "924",
+    "495",
+    "1188"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "The binomial theorem gives <code class=\"mm\">(1+x)&#8319; = &Sigma;<sub>k</sub> C(n,k) x&#8314;</code>, so the coefficient of <code class=\"mm\">x&#8314;</code> is <code class=\"mm\">C(n,k)</code> — the number of ways to choose which k of the n factors supply the x.",
+    "steps": [
+     "Here <code class=\"mm\">n = 12</code> and <code class=\"mm\">k = 5</code>.",
+     "<code class=\"mm\">C(12,5) = 12&middot;11&middot;10&middot;9&middot;8 / 120</code>.",
+     "Numerator <code class=\"mm\">= 95040</code>, so <code class=\"mm\">C(12,5) = 95040/120 = 792</code>.",
+     "Cross-check with the symmetry <code class=\"mm\">C(12,7) = C(12,5) = 792</code>."
+    ],
+    "final": "792",
+    "misconception": "Reading the coefficient of <code class=\"mm\">x&#8310;</code>, which is <code class=\"mm\">C(12,6) = 924</code>; the exponent asked for is 5, not the middle one.",
+    "takeaway": "Read k off the exponent itself; the middle coefficient is the largest, not the default."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The binomial theorem gives <code class=\"mm\">(1+x)&#8319; = &Sigma;<sub>k</sub> C(n,k) x&#8314;</code>, so the coefficient of <code class=\"mm\">x&#8314;</code> is <code class=\"mm\">C(n,k)</code> — the number of ways to choose which k of the n factors supply the x.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <code class=\"mm\">n = 12</code> and <code class=\"mm\">k = 5</code>.</li><li><code class=\"mm\">C(12,5) = 12&middot;11&middot;10&middot;9&middot;8 / 120</code>.</li><li>Numerator <code class=\"mm\">= 95040</code>, so <code class=\"mm\">C(12,5) = 95040/120 = 792</code>.</li><li>Cross-check with the symmetry <code class=\"mm\">C(12,7) = C(12,5) = 792</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Reading the coefficient of <code class=\"mm\">x&#8310;</code>, which is <code class=\"mm\">C(12,6) = 924</code>; the exponent asked for is 5, not the middle one.</p><p class=\"row\"><b>Takeaway.</b> Read k off the exponent itself; the middle coefficient is the largest, not the default.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q08",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Count the non-negative integer solutions of <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 20</code> with <code class=\"mm\">x&#8321; &ge; 3</code> and <code class=\"mm\">x&#8322; &ge; 1</code>. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Count the non-negative integer solutions of <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 20</code> with <code class=\"mm\">x&#8321; &ge; 3</code> and <code class=\"mm\">x&#8322; &ge; 1</code>. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    969
+   ],
+   "answer_display": "969",
+   "marks": 2,
+   "solution": {
+    "concept": "Different lower bounds are handled by a separate substitution for each variable; only the sum of the bounds is removed from the right-hand side.",
+    "steps": [
+     "Substitute <code class=\"mm\">y&#8321; = x&#8321; &minus; 3</code>, <code class=\"mm\">y&#8322; = x&#8322; &minus; 1</code>, <code class=\"mm\">y&#8323; = x&#8323;</code>, <code class=\"mm\">y&#8324; = x&#8324;</code>, all non-negative.",
+     "The new equation is <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 20 &minus; 4 = 16</code>.",
+     "Stars and bars: <code class=\"mm\">C(16+4&minus;1, 4&minus;1) = C(19,3)</code>.",
+     "<code class=\"mm\">C(19,3) = 19&middot;18&middot;17/6 = 5814/6 = 969</code>."
+    ],
+    "final": "969",
+    "misconception": "Removing only the bound 3 and leaving <code class=\"mm\">x&#8322; &ge; 0</code>, which gives <code class=\"mm\">C(20,3) = 1140</code>; or subtracting 3 from each variable.",
+    "takeaway": "Shift each variable by its own lower bound, then add the shifts: here 3 + 1 + 0 + 0 = 4."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Different lower bounds are handled by a separate substitution for each variable; only the sum of the bounds is removed from the right-hand side.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Substitute <code class=\"mm\">y&#8321; = x&#8321; &minus; 3</code>, <code class=\"mm\">y&#8322; = x&#8322; &minus; 1</code>, <code class=\"mm\">y&#8323; = x&#8323;</code>, <code class=\"mm\">y&#8324; = x&#8324;</code>, all non-negative.</li><li>The new equation is <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 20 &minus; 4 = 16</code>.</li><li>Stars and bars: <code class=\"mm\">C(16+4&minus;1, 4&minus;1) = C(19,3)</code>.</li><li><code class=\"mm\">C(19,3) = 19&middot;18&middot;17/6 = 5814/6 = 969</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 969</span></p><p class=\"row\"><b>Common misconception.</b> Removing only the bound 3 and leaving <code class=\"mm\">x&#8322; &ge; 0</code>, which gives <code class=\"mm\">C(20,3) = 1140</code>; or subtracting 3 from each variable.</p><p class=\"row\"><b>Takeaway.</b> Shift each variable by its own lower bound, then add the shifts: here 3 + 1 + 0 + 0 = 4.</p>",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-CB7-Q09",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "In how many ways can 4 distinct books be chosen from a shelf of 9 distinct books and then arranged in a row?",
+   "question_html": "<p class=\"qtext\">In how many ways can 4 distinct books be chosen from a shelf of 9 distinct books and then arranged in a row?</p>",
+   "options": [
+    "3024",
+    "126",
+    "1512",
+    "6561"
+   ],
+   "options_html": [
+    "3024",
+    "126",
+    "1512",
+    "6561"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Selecting and then ordering is one ordered selection: the number of injections from a 4-element position set into a 9-element book set is <code class=\"mm\">P(9,4) = 9&middot;8&middot;7&middot;6</code>.",
+    "steps": [
+     "The first position can take any of 9 books, the second any of the remaining 8, and so on.",
+     "<code class=\"mm\">P(9,4) = 9 &times; 8 &times; 7 &times; 6 = 3024</code>.",
+     "Equivalently <code class=\"mm\">C(9,4) &times; 4! = 126 &times; 24 = 3024</code>, which shows the choosing and the ordering are both included."
+    ],
+    "final": "3024",
+    "misconception": "Answering <code class=\"mm\">C(9,4) = 126</code>, which chooses the four books but leaves them unordered.",
+    "takeaway": "If the positions are distinguishable, use a permutation; if only the chosen set matters, use a combination."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Selecting and then ordering is one ordered selection: the number of injections from a 4-element position set into a 9-element book set is <code class=\"mm\">P(9,4) = 9&middot;8&middot;7&middot;6</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The first position can take any of 9 books, the second any of the remaining 8, and so on.</li><li><code class=\"mm\">P(9,4) = 9 &times; 8 &times; 7 &times; 6 = 3024</code>.</li><li>Equivalently <code class=\"mm\">C(9,4) &times; 4! = 126 &times; 24 = 3024</code>, which shows the choosing and the ordering are both included.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering <code class=\"mm\">C(9,4) = 126</code>, which chooses the four books but leaves them unordered.</p><p class=\"row\"><b>Takeaway.</b> If the positions are distinguishable, use a permutation; if only the chosen set matters, use a combination.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q10",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Each of 20 students sends one birthday card to every other student. How many cards are sent in total?",
+   "question_html": "<p class=\"qtext\">Each of 20 students sends one birthday card to every other student. How many cards are sent in total?</p>",
+   "options": [
+    "380",
+    "190",
+    "400",
+    "361"
+   ],
+   "options_html": [
+    "380",
+    "190",
+    "400",
+    "361"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "A card has a sender and a receiver, so it is an ordered pair; the count of ordered pairs is <code class=\"mm\">n(n&minus;1)</code>, with no halving, because sending and receiving are different roles.",
+    "steps": [
+     "Each student sends to the other 19 students: <code class=\"mm\">20 &times; 19</code>.",
+     "<code class=\"mm\">20 &times; 19 = 380</code>.",
+     "Contrast: if a single card were shared by each pair, the count would be <code class=\"mm\">C(20,2) = 190</code>."
+    ],
+    "final": "380",
+    "misconception": "Halving to 190 out of habit: that answer counts unordered pairs, but two distinct cards exist for each pair, one in each direction.",
+    "takeaway": "Double counting halves only when the object is symmetric; a sender and a receiver are not interchangeable."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A card has a sender and a receiver, so it is an ordered pair; the count of ordered pairs is <code class=\"mm\">n(n&minus;1)</code>, with no halving, because sending and receiving are different roles.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each student sends to the other 19 students: <code class=\"mm\">20 &times; 19</code>.</li><li><code class=\"mm\">20 &times; 19 = 380</code>.</li><li>Contrast: if a single card were shared by each pair, the count would be <code class=\"mm\">C(20,2) = 190</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Halving to 190 out of habit: that answer counts unordered pairs, but two distinct cards exist for each pair, one in each direction.</p><p class=\"row\"><b>Takeaway.</b> Double counting halves only when the object is symmetric; a sender and a receiver are not interchangeable.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q11",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "GateOverflow-inspired",
+   "source": "GATE_PYQ_VARIATION",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "What is the coefficient of <code class=\"mm\">x&#179;y&#178;z</code> in the expansion of <code class=\"mm\">(x + y + z)&#8310;</code>?",
+   "question_html": "<p class=\"qtext\">What is the coefficient of <code class=\"mm\">x&#179;y&#178;z</code> in the expansion of <code class=\"mm\">(x + y + z)&#8310;</code>?</p>",
+   "options": [
+    "60",
+    "120",
+    "30",
+    "360"
+   ],
+   "options_html": [
+    "60",
+    "120",
+    "30",
+    "360"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "The multinomial theorem writes <code class=\"mm\">(x&#8321; + &hellip; + x&#8342;)&#8319;</code> as a sum of <code class=\"mm\">n!/(p&#8321;! &hellip; p&#8342;!)</code> times each monomial, where the exponents <code class=\"mm\">p&#7522;</code> sum to <code class=\"mm\">n</code>.",
+    "steps": [
+     "The exponents are <code class=\"mm\">p = 3, q = 2, r = 1</code>, and indeed <code class=\"mm\">3 + 2 + 1 = 6</code>.",
+     "The coefficient is <code class=\"mm\">6!/(3!&middot;2!&middot;1!)</code>.",
+     "<code class=\"mm\">6! = 720</code>, <code class=\"mm\">3!&middot;2!&middot;1! = 12</code>, so the coefficient is <code class=\"mm\">720/12 = 60</code>.",
+     "Equivalently choose the positions: <code class=\"mm\">C(6,3)&middot;C(3,2)&middot;C(1,1) = 20&middot;3&middot;1 = 60</code>."
+    ],
+    "final": "60",
+    "misconception": "Dropping the <code class=\"mm\">3!</code> from the denominator gives <code class=\"mm\">720/2 = 360</code>; the exponent 3 must be divided out too.",
+    "takeaway": "Divide n! by every exponent factorial, including the exponents equal to 1 (their factorial is 1) and never by the number of variables."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The multinomial theorem writes <code class=\"mm\">(x&#8321; + &hellip; + x&#8342;)&#8319;</code> as a sum of <code class=\"mm\">n!/(p&#8321;! &hellip; p&#8342;!)</code> times each monomial, where the exponents <code class=\"mm\">p&#7522;</code> sum to <code class=\"mm\">n</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The exponents are <code class=\"mm\">p = 3, q = 2, r = 1</code>, and indeed <code class=\"mm\">3 + 2 + 1 = 6</code>.</li><li>The coefficient is <code class=\"mm\">6!/(3!&middot;2!&middot;1!)</code>.</li><li><code class=\"mm\">6! = 720</code>, <code class=\"mm\">3!&middot;2!&middot;1! = 12</code>, so the coefficient is <code class=\"mm\">720/12 = 60</code>.</li><li>Equivalently choose the positions: <code class=\"mm\">C(6,3)&middot;C(3,2)&middot;C(1,1) = 20&middot;3&middot;1 = 60</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Dropping the <code class=\"mm\">3!</code> from the denominator gives <code class=\"mm\">720/2 = 360</code>; the exponent 3 must be divided out too.</p><p class=\"row\"><b>Takeaway.</b> Divide n! by every exponent factorial, including the exponents equal to 1 (their factorial is 1) and never by the number of variables.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q12",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Six distinct people are to be seated around a circular table. Which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Six distinct people are to be seated around a circular table. Which of the following statements are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "The number of circular arrangements, counting rotations as the same arrangement, is 120.",
+    "If two particular people must sit next to each other, the number of circular arrangements is 48.",
+    "If reflections are also counted as the same arrangement, the number of arrangements is 60.",
+    "The number of circular arrangements is <code class=\"mm\">6! = 720</code>, because each rotation is a different seating."
+   ],
+   "options_html": [
+    "The number of circular arrangements, counting rotations as the same arrangement, is 120.",
+    "If two particular people must sit next to each other, the number of circular arrangements is 48.",
+    "If reflections are also counted as the same arrangement, the number of arrangements is 60.",
+    "The number of circular arrangements is <code class=\"mm\">6! = 720</code>, because each rotation is a different seating."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "A circular arrangement has no distinguished first seat, so fix one person to break the rotational symmetry: <code class=\"mm\">n</code> distinct objects in a circle give <code class=\"mm\">(n&minus;1)!</code> arrangements, and identifying reflections halves that count when no arrangement equals its mirror image.",
+    "steps": [
+     "(A) Fix one person at the top; the other five fill the five remaining places in <code class=\"mm\">5! = 120</code> ways. True.",
+     "(B) Glue the two particular people into one block: the block plus the other four objects give <code class=\"mm\">(5&minus;1)! = 24</code> circular orders, and the two people swap inside the block in <code class=\"mm\">2</code> ways, so <code class=\"mm\">2 &times; 24 = 48</code>. True.",
+     "(C) Each arrangement and its mirror image are distinct here, because six distinct people admit no reflection symmetry, so identifying reflections gives <code class=\"mm\">120/2 = 60</code>. True.",
+     "(D) <code class=\"mm\">6! = 720</code> counts linear orders; each circular order appears 6 times, once per rotation, so the correct count is <code class=\"mm\">720/6 = 120</code>. False."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "misconception": "Treating a circle as a row and answering <code class=\"mm\">6! = 720</code>, or forgetting the factor 2 for the swap inside the adjacent block.",
+    "takeaway": "Divide by the number of rotations (n) for a circle, and again by 2 only when reflections are declared identical."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A circular arrangement has no distinguished first seat, so fix one person to break the rotational symmetry: <code class=\"mm\">n</code> distinct objects in a circle give <code class=\"mm\">(n&minus;1)!</code> arrangements, and identifying reflections halves that count when no arrangement equals its mirror image.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Fix one person at the top; the other five fill the five remaining places in <code class=\"mm\">5! = 120</code> ways. True.</li><li>(B) Glue the two particular people into one block: the block plus the other four objects give <code class=\"mm\">(5&minus;1)! = 24</code> circular orders, and the two people swap inside the block in <code class=\"mm\">2</code> ways, so <code class=\"mm\">2 &times; 24 = 48</code>. True.</li><li>(C) Each arrangement and its mirror image are distinct here, because six distinct people admit no reflection symmetry, so identifying reflections gives <code class=\"mm\">120/2 = 60</code>. True.</li><li>(D) <code class=\"mm\">6! = 720</code> counts linear orders; each circular order appears 6 times, once per rotation, so the correct count is <code class=\"mm\">720/6 = 120</code>. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (C)</span></p><p class=\"row\"><b>Common misconception.</b> Treating a circle as a row and answering <code class=\"mm\">6! = 720</code>, or forgetting the factor 2 for the swap inside the adjacent block.</p><p class=\"row\"><b>Takeaway.</b> Divide by the number of rotations (n) for a circle, and again by 2 only when reflections are declared identical.</p>",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-CB7-Q13",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many integers from 1 to 1000 are divisible by 2 or by 3?",
+   "question_html": "<p class=\"qtext\">How many integers from 1 to 1000 are divisible by 2 or by 3?</p>",
+   "options": [
+    "667",
+    "833",
+    "666",
+    "500"
+   ],
+   "options_html": [
+    "667",
+    "833",
+    "666",
+    "500"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "For two properties, <code class=\"mm\">|A &cup; B| = |A| + |B| &minus; |A &cap; B|</code>: the joint cases are counted twice in the sum of the sizes and must be removed once.",
+    "steps": [
+     "Multiples of 2 up to 1000: <code class=\"mm\">&#8970;1000/2&#8971; = 500</code>.",
+     "Multiples of 3: <code class=\"mm\">&#8970;1000/3&#8971; = 333</code>.",
+     "Multiples of both, that is of 6: <code class=\"mm\">&#8970;1000/6&#8971; = 166</code>.",
+     "<code class=\"mm\">500 + 333 &minus; 166 = 667</code>."
+    ],
+    "final": "667",
+    "misconception": "Adding the two counts and reporting 833, which double counts the 166 multiples of 6; or rounding 1000/6 up to 167.",
+    "takeaway": "The intersection of 'divisible by a' and 'divisible by b' is 'divisible by lcm(a,b)', and every floor must be taken separately."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For two properties, <code class=\"mm\">|A &cup; B| = |A| + |B| &minus; |A &cap; B|</code>: the joint cases are counted twice in the sum of the sizes and must be removed once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Multiples of 2 up to 1000: <code class=\"mm\">&#8970;1000/2&#8971; = 500</code>.</li><li>Multiples of 3: <code class=\"mm\">&#8970;1000/3&#8971; = 333</code>.</li><li>Multiples of both, that is of 6: <code class=\"mm\">&#8970;1000/6&#8971; = 166</code>.</li><li><code class=\"mm\">500 + 333 &minus; 166 = 667</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Adding the two counts and reporting 833, which double counts the 166 multiples of 6; or rounding 1000/6 up to 167.</p><p class=\"row\"><b>Takeaway.</b> The intersection of 'divisible by a' and 'divisible by b' is 'divisible by lcm(a,b)', and every floor must be taken separately.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q14",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many solutions in <em>positive</em> integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 9</code> have?",
+   "question_html": "<p class=\"qtext\">How many solutions in <em>positive</em> integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 9</code> have?</p>",
+   "options": [
+    "28",
+    "36",
+    "45",
+    "21"
+   ],
+   "options_html": [
+    "28",
+    "36",
+    "45",
+    "21"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "A positive-solution problem is a non-negative problem after the substitution <code class=\"mm\">y&#7522; = x&#7522; &minus; 1</code>: each variable is given one unit up front, so <code class=\"mm\">&Sigma; y&#7522; = n &minus; k</code>.",
+    "steps": [
+     "Set <code class=\"mm\">y&#7522; = x&#7522; &minus; 1 &ge; 0</code>, so <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; = 9 &minus; 3 = 6</code>.",
+     "Apply stars and bars to the <code class=\"mm\">y</code>'s: <code class=\"mm\">C(6+3&minus;1, 3&minus;1) = C(8,2)</code>.",
+     "<code class=\"mm\">C(8,2) = 28</code>.",
+     "Sanity check by listing the compositions of 9 into 3 positive parts: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28."
+    ],
+    "final": "28",
+    "misconception": "Answering <code class=\"mm\">C(9,2) = 36</code>, which is the non-negative count and wrongly allows a variable to be 0.",
+    "takeaway": "For positive solutions, give every variable 1 first and then distribute only the remainder."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A positive-solution problem is a non-negative problem after the substitution <code class=\"mm\">y&#7522; = x&#7522; &minus; 1</code>: each variable is given one unit up front, so <code class=\"mm\">&Sigma; y&#7522; = n &minus; k</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Set <code class=\"mm\">y&#7522; = x&#7522; &minus; 1 &ge; 0</code>, so <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; = 9 &minus; 3 = 6</code>.</li><li>Apply stars and bars to the <code class=\"mm\">y</code>'s: <code class=\"mm\">C(6+3&minus;1, 3&minus;1) = C(8,2)</code>.</li><li><code class=\"mm\">C(8,2) = 28</code>.</li><li>Sanity check by listing the compositions of 9 into 3 positive parts: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering <code class=\"mm\">C(9,2) = 36</code>, which is the non-negative count and wrongly allows a variable to be 0.</p><p class=\"row\"><b>Takeaway.</b> For positive solutions, give every variable 1 first and then distribute only the remainder.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q15",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Evaluate <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(10,k)</code>. (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Evaluate <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(10,k)</code>. (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    5120
+   ],
+   "answer_display": "5120",
+   "marks": 2,
+   "solution": {
+    "concept": "Double count the pairs (element, subset containing it) over a 10-element set: each element lies in <code class=\"mm\">2&#8313;</code> subsets and there are 10 elements, while summing the subset sizes counts exactly the same pairs, giving <code class=\"mm\">&Sigma; k C(n,k) = n&middot;2&#8319;&minus;&#185;</code>.",
+    "steps": [
+     "Fix an element: it belongs to <code class=\"mm\">2&#8313; = 512</code> of the <code class=\"mm\">2&#185;&#8304; = 1024</code> subsets.",
+     "Across all 10 elements that is <code class=\"mm\">10 &times; 512 = 5120</code> element-subset pairs.",
+     "Counting by subset size instead, a subset of size k contributes k pairs, so the total is <code class=\"mm\">&Sigma; k C(10,k)</code>.",
+     "Both counts describe the same set of pairs, so the sum equals 5120."
+    ],
+    "final": "5120",
+    "misconception": "Using <code class=\"mm\">n&middot;2&#8319; = 10240</code>, the value of <code class=\"mm\">&Sigma; C(n,k)</code> multiplied by n without accounting for the missing half.",
+    "takeaway": "The identity <code class=\"mm\">&Sigma; k C(n,k) = n 2&#8319;&minus;&#185;</code> is the cleanest example of counting one set of pairs in two ways."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Double count the pairs (element, subset containing it) over a 10-element set: each element lies in <code class=\"mm\">2&#8313;</code> subsets and there are 10 elements, while summing the subset sizes counts exactly the same pairs, giving <code class=\"mm\">&Sigma; k C(n,k) = n&middot;2&#8319;&minus;&#185;</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Fix an element: it belongs to <code class=\"mm\">2&#8313; = 512</code> of the <code class=\"mm\">2&#185;&#8304; = 1024</code> subsets.</li><li>Across all 10 elements that is <code class=\"mm\">10 &times; 512 = 5120</code> element-subset pairs.</li><li>Counting by subset size instead, a subset of size k contributes k pairs, so the total is <code class=\"mm\">&Sigma; k C(10,k)</code>.</li><li>Both counts describe the same set of pairs, so the sum equals 5120.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5120</span></p><p class=\"row\"><b>Common misconception.</b> Using <code class=\"mm\">n&middot;2&#8319; = 10240</code>, the value of <code class=\"mm\">&Sigma; C(n,k)</code> multiplied by n without accounting for the missing half.</p><p class=\"row\"><b>Takeaway.</b> The identity <code class=\"mm\">&Sigma; k C(n,k) = n 2&#8319;&minus;&#185;</code> is the cleanest example of counting one set of pairs in two ways.</p>",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-CB7-Q16",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 15</code> have if every <code class=\"mm\">x&#7522; &ge; 2</code>?",
+   "question_html": "<p class=\"qtext\">How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 15</code> have if every <code class=\"mm\">x&#7522; &ge; 2</code>?</p>",
+   "options": [
+    "120",
+    "220",
+    "84",
+    "165"
+   ],
+   "options_html": [
+    "120",
+    "220",
+    "84",
+    "165"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "A uniform lower bound is removed by one substitution per variable; the total is reduced by the sum of the bounds and the problem becomes an ordinary stars-and-bars count.",
+    "steps": [
+     "Put <code class=\"mm\">y&#7522; = x&#7522; &minus; 2 &ge; 0</code> for <code class=\"mm\">i = 1, 2, 3, 4</code>.",
+     "The equation becomes <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 15 &minus; 8 = 7</code>.",
+     "Stars and bars: <code class=\"mm\">C(7+4&minus;1, 4&minus;1) = C(10,3)</code>.",
+     "<code class=\"mm\">C(10,3) = 120</code>."
+    ],
+    "final": "120",
+    "misconception": "Subtracting only one unit per variable, giving <code class=\"mm\">C(11,3) = 165</code>, or forgetting the subtraction altogether and answering <code class=\"mm\">C(18,3) = 816</code>.",
+    "takeaway": "Subtract <code class=\"mm\">k</code> times the common lower bound, not one: the reduction is <code class=\"mm\">k &middot; a</code> when every variable is at least <code class=\"mm\">a</code>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A uniform lower bound is removed by one substitution per variable; the total is reduced by the sum of the bounds and the problem becomes an ordinary stars-and-bars count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Put <code class=\"mm\">y&#7522; = x&#7522; &minus; 2 &ge; 0</code> for <code class=\"mm\">i = 1, 2, 3, 4</code>.</li><li>The equation becomes <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 15 &minus; 8 = 7</code>.</li><li>Stars and bars: <code class=\"mm\">C(7+4&minus;1, 4&minus;1) = C(10,3)</code>.</li><li><code class=\"mm\">C(10,3) = 120</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Subtracting only one unit per variable, giving <code class=\"mm\">C(11,3) = 165</code>, or forgetting the subtraction altogether and answering <code class=\"mm\">C(18,3) = 816</code>.</p><p class=\"row\"><b>Takeaway.</b> Subtract <code class=\"mm\">k</code> times the common lower bound, not one: the reduction is <code class=\"mm\">k &middot; a</code> when every variable is at least <code class=\"mm\">a</code>.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q17",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many distinct arrangements are there of the letters of the word <code class=\"mm\">COMMITTEE</code>? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">How many distinct arrangements are there of the letters of the word <code class=\"mm\">COMMITTEE</code>? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    45360
+   ],
+   "answer_display": "45360",
+   "marks": 2,
+   "solution": {
+    "concept": "Arrangements of a multiset are multinomial coefficients: <code class=\"mm\">n!</code> divided by the factorial of every letter's multiplicity.",
+    "steps": [
+     "COMMITTEE has 9 letters: C, O, I appear once; M, T, E appear twice each.",
+     "Start from <code class=\"mm\">9! = 362880</code>.",
+     "Divide by <code class=\"mm\">2!</code> for M, <code class=\"mm\">2!</code> for T and <code class=\"mm\">2!</code> for E, that is by <code class=\"mm\">8</code>.",
+     "<code class=\"mm\">362880/8 = 45360</code>."
+    ],
+    "final": "45360",
+    "misconception": "Dividing by <code class=\"mm\">3!</code> once instead of by three separate <code class=\"mm\">2!</code> factors, or forgetting the repeated E entirely and answering <code class=\"mm\">9!/(2!&middot;2!) = 90720</code>.",
+    "takeaway": "List the multiplicity of every letter before dividing: three letters repeated twice means dividing by <code class=\"mm\">2&#179; = 8</code>, not by 3!."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Arrangements of a multiset are multinomial coefficients: <code class=\"mm\">n!</code> divided by the factorial of every letter's multiplicity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>COMMITTEE has 9 letters: C, O, I appear once; M, T, E appear twice each.</li><li>Start from <code class=\"mm\">9! = 362880</code>.</li><li>Divide by <code class=\"mm\">2!</code> for M, <code class=\"mm\">2!</code> for T and <code class=\"mm\">2!</code> for E, that is by <code class=\"mm\">8</code>.</li><li><code class=\"mm\">362880/8 = 45360</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 45360</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by <code class=\"mm\">3!</code> once instead of by three separate <code class=\"mm\">2!</code> factors, or forgetting the repeated E entirely and answering <code class=\"mm\">9!/(2!&middot;2!) = 90720</code>.</p><p class=\"row\"><b>Takeaway.</b> List the multiplicity of every letter before dividing: three letters repeated twice means dividing by <code class=\"mm\">2&#179; = 8</code>, not by 3!.</p>",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-CB7-Q18",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "A club has 12 members, and every pair of members exchanges exactly one letter. How many letters are exchanged in all?",
+   "question_html": "<p class=\"qtext\">A club has 12 members, and every pair of members exchanges exactly one letter. How many letters are exchanged in all?</p>",
+   "options": [
+    "66",
+    "132",
+    "144",
+    "72"
+   ],
+   "options_html": [
+    "66",
+    "132",
+    "144",
+    "72"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "One letter per unordered pair is a single count of the pairs, so the answer is <code class=\"mm\">C(12,2)</code>; the halving is already built into the word 'pair'.",
+    "steps": [
+     "Number of unordered pairs: <code class=\"mm\">C(12,2) = 12&middot;11/2</code>.",
+     "<code class=\"mm\">12 &times; 11 = 132</code> and <code class=\"mm\">132/2 = 66</code>.",
+     "Because the letter is one per pair, not one per direction, no further factor of 2 is applied."
+    ],
+    "final": "66",
+    "misconception": "Answering 132 by counting both directions, which would be correct only if each member sent a separate letter to every other member.",
+    "takeaway": "Decide first whether the object being counted is a pair or an ordered pair; the letters here belong to pairs."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> One letter per unordered pair is a single count of the pairs, so the answer is <code class=\"mm\">C(12,2)</code>; the halving is already built into the word 'pair'.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Number of unordered pairs: <code class=\"mm\">C(12,2) = 12&middot;11/2</code>.</li><li><code class=\"mm\">12 &times; 11 = 132</code> and <code class=\"mm\">132/2 = 66</code>.</li><li>Because the letter is one per pair, not one per direction, no further factor of 2 is applied.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Answering 132 by counting both directions, which would be correct only if each member sent a separate letter to every other member.</p><p class=\"row\"><b>Takeaway.</b> Decide first whether the object being counted is a pair or an ordered pair; the letters here belong to pairs.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q19",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many distinct arrangements of the letters of <code class=\"mm\">MISSISSIPPI</code> have no two I's adjacent?",
+   "question_html": "<p class=\"qtext\">How many distinct arrangements of the letters of <code class=\"mm\">MISSISSIPPI</code> have no two I's adjacent?</p>",
+   "options": [
+    "7350",
+    "34650",
+    "105",
+    "5880"
+   ],
+   "options_html": [
+    "7350",
+    "34650",
+    "105",
+    "5880"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "When a set of identical letters must be separated, arrange everything else first and then place the constrained letters into the gaps; a row of <code class=\"mm\">m</code> letters has <code class=\"mm\">m+1</code> gaps, and each gap takes at most one constrained letter.",
+    "steps": [
+     "MISSISSIPPI has 11 letters: I&times;4, S&times;4, M&times;1, P&times;2.",
+     "Arrange the seven non-I letters M, S, S, S, S, P, P: <code class=\"mm\">7!/(4!&middot;2!) = 105</code>.",
+     "These seven letters create 8 gaps (before the first, between successive letters, after the last).",
+     "Choose 4 of the 8 gaps for the four identical I's: <code class=\"mm\">C(8,4) = 70</code>.",
+     "Total: <code class=\"mm\">105 &times; 70 = 7350</code>."
+    ],
+    "final": "7350",
+    "misconception": "Using only 7 gaps, which forgets the gap after the last letter and gives <code class=\"mm\">105 &times; C(7,4) = 3675</code>; or subtracting from the unrestricted count <code class=\"mm\">34650</code> without a correct adjacency count.",
+    "takeaway": "Count the complement only when the forbidden pattern is simple; for 'no two adjacent' the gap method is direct."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> When a set of identical letters must be separated, arrange everything else first and then place the constrained letters into the gaps; a row of <code class=\"mm\">m</code> letters has <code class=\"mm\">m+1</code> gaps, and each gap takes at most one constrained letter.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>MISSISSIPPI has 11 letters: I&times;4, S&times;4, M&times;1, P&times;2.</li><li>Arrange the seven non-I letters M, S, S, S, S, P, P: <code class=\"mm\">7!/(4!&middot;2!) = 105</code>.</li><li>These seven letters create 8 gaps (before the first, between successive letters, after the last).</li><li>Choose 4 of the 8 gaps for the four identical I's: <code class=\"mm\">C(8,4) = 70</code>.</li><li>Total: <code class=\"mm\">105 &times; 70 = 7350</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Using only 7 gaps, which forgets the gap after the last letter and gives <code class=\"mm\">105 &times; C(7,4) = 3675</code>; or subtracting from the unrestricted count <code class=\"mm\">34650</code> without a correct adjacency count.</p><p class=\"row\"><b>Takeaway.</b> Count the complement only when the forbidden pattern is simple; for 'no two adjacent' the gap method is direct.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q20",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "GateOverflow-inspired",
+   "source": "GATE_PYQ_VARIATION",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many onto (surjective) functions are there from a set of 5 elements to a set of 3 elements? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">How many onto (surjective) functions are there from a set of 5 elements to a set of 3 elements? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    150
+   ],
+   "answer_display": "150",
+   "marks": 2,
+   "solution": {
+    "concept": "Surjections are counted by inclusion-exclusion over the target elements that are missed: <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314; C(n,k)(n&minus;k)&#7504;</code>.",
+    "steps": [
+     "All functions from a 5-set to a 3-set: <code class=\"mm\">3&#8309; = 243</code>.",
+     "Subtract those missing at least one target element: 3 choices of the missed element, each leaving <code class=\"mm\">2&#8309; = 32</code> functions, so subtract <code class=\"mm\">3 &times; 32 = 96</code>.",
+     "Add back those missing at least two targets, counted twice: 3 choices of the two missed elements, each leaving <code class=\"mm\">1&#8309; = 1</code> function, so add 3.",
+     "<code class=\"mm\">243 &minus; 96 + 3 = 150</code>."
+    ],
+    "final": "150",
+    "misconception": "Reporting <code class=\"mm\">3&#8309; &minus; 3&middot;2&#8309; = 147</code>, which forgets the add-back stage and undercounts by exactly the 3 constant functions.",
+    "takeaway": "The alternating sum must run to k = n; truncating it is the most common surjection error."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Surjections are counted by inclusion-exclusion over the target elements that are missed: <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314; C(n,k)(n&minus;k)&#7504;</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>All functions from a 5-set to a 3-set: <code class=\"mm\">3&#8309; = 243</code>.</li><li>Subtract those missing at least one target element: 3 choices of the missed element, each leaving <code class=\"mm\">2&#8309; = 32</code> functions, so subtract <code class=\"mm\">3 &times; 32 = 96</code>.</li><li>Add back those missing at least two targets, counted twice: 3 choices of the two missed elements, each leaving <code class=\"mm\">1&#8309; = 1</code> function, so add 3.</li><li><code class=\"mm\">243 &minus; 96 + 3 = 150</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 150</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <code class=\"mm\">3&#8309; &minus; 3&middot;2&#8309; = 147</code>, which forgets the add-back stage and undercounts by exactly the 3 constant functions.</p><p class=\"row\"><b>Takeaway.</b> The alternating sum must run to k = n; truncating it is the most common surjection error.</p>",
+   "question_format": "NAT"
+  },
+  {
+   "id": "DM-CB7-Q21",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "For every integer <code class=\"mm\">n &ge; 1</code>, which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">For every integer <code class=\"mm\">n &ge; 1</code>, which of the following statements are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k) = 2&#8319;</code>",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k)&#178; = C(2n,n)</code>",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(n,k) = n&middot;2&#8319;</code>",
+    "The coefficient of <code class=\"mm\">x&#8319;</code> in <code class=\"mm\">(1+x)&#178;&#8319;</code> equals <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k)&middot;C(n,n&minus;k)</code>"
+   ],
+   "options_html": [
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k) = 2&#8319;</code>",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k)&#178; = C(2n,n)</code>",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(n,k) = n&middot;2&#8319;</code>",
+    "The coefficient of <code class=\"mm\">x&#8319;</code> in <code class=\"mm\">(1+x)&#178;&#8319;</code> equals <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> C(n,k)&middot;C(n,n&minus;k)</code>"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B), (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "Binomial identities are proved either by counting one set in two ways or by comparing coefficients of a product of generating functions; the derivative identity carries a factor <code class=\"mm\">n&middot;2&#8319;&minus;&#185;</code>, not <code class=\"mm\">n&middot;2&#8319;</code>.",
+    "steps": [
+     "(A) Both sides count the subsets of an n-set: <code class=\"mm\">C(n,k)</code> counts those of size k and <code class=\"mm\">2&#8319;</code> counts all of them. True.",
+     "(B) Vandermonde's identity with <code class=\"mm\">C(n,k) = C(n,n&minus;k)</code> gives <code class=\"mm\">&Sigma;<sub>k</sub> C(n,k)C(n,n&minus;k) = C(2n,n)</code>. True.",
+     "(C) Differentiate <code class=\"mm\">(1+x)&#8319;</code>: <code class=\"mm\">&Sigma; k C(n,k) x&#8314;&minus;&#185; = n(1+x)&#8319;&minus;&#185;</code>, and at <code class=\"mm\">x = 1</code> this is <code class=\"mm\">n&middot;2&#8319;&minus;&#185;</code>. For n = 3 that is 12, while <code class=\"mm\">n&middot;2&#8319; = 24</code>. False.",
+     "(D) <code class=\"mm\">(1+x)&#8319;(1+x)&#8319; = (1+x)&#178;&#8319;</code>, and the coefficient of <code class=\"mm\">x&#8319;</code> in the product is exactly that convolution. True."
+    ],
+    "final": "Options (A), (B) and (D)",
+    "misconception": "Option (C) is the standard slip: differentiating drops one power of <code class=\"mm\">(1+x)</code>, so the exponent at x = 1 is <code class=\"mm\">n&minus;1</code>.",
+    "takeaway": "Test any identity at n = 3 before believing it: it costs one line and kills the off-by-one-power errors."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Binomial identities are proved either by counting one set in two ways or by comparing coefficients of a product of generating functions; the derivative identity carries a factor <code class=\"mm\">n&middot;2&#8319;&minus;&#185;</code>, not <code class=\"mm\">n&middot;2&#8319;</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Both sides count the subsets of an n-set: <code class=\"mm\">C(n,k)</code> counts those of size k and <code class=\"mm\">2&#8319;</code> counts all of them. True.</li><li>(B) Vandermonde's identity with <code class=\"mm\">C(n,k) = C(n,n&minus;k)</code> gives <code class=\"mm\">&Sigma;<sub>k</sub> C(n,k)C(n,n&minus;k) = C(2n,n)</code>. True.</li><li>(C) Differentiate <code class=\"mm\">(1+x)&#8319;</code>: <code class=\"mm\">&Sigma; k C(n,k) x&#8314;&minus;&#185; = n(1+x)&#8319;&minus;&#185;</code>, and at <code class=\"mm\">x = 1</code> this is <code class=\"mm\">n&middot;2&#8319;&minus;&#185;</code>. For n = 3 that is 12, while <code class=\"mm\">n&middot;2&#8319; = 24</code>. False.</li><li>(D) <code class=\"mm\">(1+x)&#8319;(1+x)&#8319; = (1+x)&#178;&#8319;</code>, and the coefficient of <code class=\"mm\">x&#8319;</code> in the product is exactly that convolution. True.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (D)</span></p><p class=\"row\"><b>Common misconception.</b> Option (C) is the standard slip: differentiating drops one power of <code class=\"mm\">(1+x)</code>, so the exponent at x = 1 is <code class=\"mm\">n&minus;1</code>.</p><p class=\"row\"><b>Takeaway.</b> Test any identity at n = 3 before believing it: it costs one line and kills the off-by-one-power errors.</p>",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-CB7-Q22",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Consider the equation <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 7</code> in non-negative integers. Which of the following counts are correct? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Consider the equation <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 7</code> in non-negative integers. Which of the following counts are correct? (Select all that apply.)</p>",
+   "options": [
+    "The number of solutions with no restriction is 36.",
+    "The number of solutions with every <code class=\"mm\">x&#7522; &ge; 1</code> is 15.",
+    "The number of solutions with <code class=\"mm\">x&#8321; &ge; 2</code> is 21.",
+    "The number of solutions with every <code class=\"mm\">x&#7522; &le; 3</code> is 36."
+   ],
+   "options_html": [
+    "The number of solutions with no restriction is 36.",
+    "The number of solutions with every <code class=\"mm\">x&#7522; &ge; 1</code> is 15.",
+    "The number of solutions with <code class=\"mm\">x&#8321; &ge; 2</code> is 21.",
+    "The number of solutions with every <code class=\"mm\">x&#7522; &le; 3</code> is 36."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Every bounded or shifted count is a stars-and-bars count after a substitution; upper bounds are not handled by a substitution and need enumeration or inclusion-exclusion.",
+    "steps": [
+     "(A) <code class=\"mm\">C(7+3&minus;1, 3&minus;1) = C(9,2) = 36</code>. True.",
+     "(B) Shift by 1 each: <code class=\"mm\">&Sigma; y&#7522; = 7 &minus; 3 = 4</code>, giving <code class=\"mm\">C(6,2) = 15</code>. True.",
+     "(C) Shift only <code class=\"mm\">x&#8321;</code> by 2: <code class=\"mm\">&Sigma; = 5</code>, giving <code class=\"mm\">C(7,2) = 21</code>. True.",
+     "(D) With all <code class=\"mm\">x&#7522; &le; 3</code>, only 3 + 3 + 1 and 3 + 2 + 2 (with all their orderings) survive: <code class=\"mm\">3 + 3 = 6</code> solutions, not 36. False."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "misconception": "Applying a substitution to an upper bound as if it were a lower bound, which turns 'at most 3' into 'at least 3' and gives a meaningless count.",
+    "takeaway": "Substitutions remove lower bounds. Upper bounds require enumeration or inclusion-exclusion."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every bounded or shifted count is a stars-and-bars count after a substitution; upper bounds are not handled by a substitution and need enumeration or inclusion-exclusion.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) <code class=\"mm\">C(7+3&minus;1, 3&minus;1) = C(9,2) = 36</code>. True.</li><li>(B) Shift by 1 each: <code class=\"mm\">&Sigma; y&#7522; = 7 &minus; 3 = 4</code>, giving <code class=\"mm\">C(6,2) = 15</code>. True.</li><li>(C) Shift only <code class=\"mm\">x&#8321;</code> by 2: <code class=\"mm\">&Sigma; = 5</code>, giving <code class=\"mm\">C(7,2) = 21</code>. True.</li><li>(D) With all <code class=\"mm\">x&#7522; &le; 3</code>, only 3 + 3 + 1 and 3 + 2 + 2 (with all their orderings) survive: <code class=\"mm\">3 + 3 = 6</code> solutions, not 36. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (C)</span></p><p class=\"row\"><b>Common misconception.</b> Applying a substitution to an upper bound as if it were a lower bound, which turns 'at most 3' into 'at least 3' and gives a meaningless count.</p><p class=\"row\"><b>Takeaway.</b> Substitutions remove lower bounds. Upper bounds require enumeration or inclusion-exclusion.</p>",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-CB7-Q23",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "How many permutations of <code class=\"mm\">{1, 2, 3, 4, 5}</code> leave no element in its own position?",
+   "question_html": "<p class=\"qtext\">How many permutations of <code class=\"mm\">{1, 2, 3, 4, 5}</code> leave no element in its own position?</p>",
+   "options": [
+    "44",
+    "45",
+    "76",
+    "32"
+   ],
+   "options_html": [
+    "44",
+    "45",
+    "76",
+    "32"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Derangements are counted by inclusion-exclusion over the events 'element i is fixed': subtract the permutations fixing each element, add back those fixing each pair, and so on, giving <code class=\"mm\">!n = n! &Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314;/k!</code>.",
+    "steps": [
+     "<code class=\"mm\">!5 = 5! &minus; C(5,1)&middot;4! + C(5,2)&middot;3! &minus; C(5,3)&middot;2! + C(5,4)&middot;1! &minus; C(5,5)&middot;0!</code>.",
+     "<code class=\"mm\">= 120 &minus; 120 + 60 &minus; 20 + 5 &minus; 1</code>.",
+     "<code class=\"mm\">= 44</code>.",
+     "Recurrence check: <code class=\"mm\">!n = (n&minus;1)(!(n&minus;1) + !(n&minus;2))</code> gives <code class=\"mm\">!5 = 4(9 + 2) = 44</code> since <code class=\"mm\">!4 = 9</code> and <code class=\"mm\">!3 = 2</code>."
+    ],
+    "final": "44",
+    "misconception": "Stopping after the first correction and answering 45, or reporting <code class=\"mm\">5! &minus; 44 = 76</code>, which counts permutations with at least one fixed point.",
+    "takeaway": "Alternate signs strictly; the first two terms cancel and the answer comes from the tail."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Derangements are counted by inclusion-exclusion over the events 'element i is fixed': subtract the permutations fixing each element, add back those fixing each pair, and so on, giving <code class=\"mm\">!n = n! &Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314;/k!</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">!5 = 5! &minus; C(5,1)&middot;4! + C(5,2)&middot;3! &minus; C(5,3)&middot;2! + C(5,4)&middot;1! &minus; C(5,5)&middot;0!</code>.</li><li><code class=\"mm\">= 120 &minus; 120 + 60 &minus; 20 + 5 &minus; 1</code>.</li><li><code class=\"mm\">= 44</code>.</li><li>Recurrence check: <code class=\"mm\">!n = (n&minus;1)(!(n&minus;1) + !(n&minus;2))</code> gives <code class=\"mm\">!5 = 4(9 + 2) = 44</code> since <code class=\"mm\">!4 = 9</code> and <code class=\"mm\">!3 = 2</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Stopping after the first correction and answering 45, or reporting <code class=\"mm\">5! &minus; 44 = 76</code>, which counts permutations with at least one fixed point.</p><p class=\"row\"><b>Takeaway.</b> Alternate signs strictly; the first two terms cancel and the answer comes from the tail.</p>",
+   "question_format": "MCQ"
+  },
+  {
+   "id": "DM-CB7-Q24",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements are TRUE for every simple undirected graph? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements are TRUE for every simple undirected graph? (Select all that apply.)</p>",
+   "options": [
+    "The sum of the degrees of all vertices equals twice the number of edges.",
+    "The number of vertices of odd degree is even.",
+    "If every one of n people shakes hands with exactly three others, then n must be even.",
+    "If every one of n people shakes hands with exactly three others, then n must be a multiple of 3."
+   ],
+   "options_html": [
+    "The sum of the degrees of all vertices equals twice the number of edges.",
+    "The number of vertices of odd degree is even.",
+    "If every one of n people shakes hands with exactly three others, then n must be even.",
+    "If every one of n people shakes hands with exactly three others, then n must be a multiple of 3."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "The handshaking lemma counts the pairs (vertex, incident edge) in two ways: each edge has two ends, so <code class=\"mm\">&Sigma; deg(v) = 2|E|</code>, which forces the degree sum to be even.",
+    "steps": [
+     "(A) Each edge contributes 1 to the degree of each of its two endpoints, so the degree sum is <code class=\"mm\">2|E|</code>. True.",
+     "(B) The degree sum is even, and a sum of integers is even only when an even number of its terms are odd. True.",
+     "(C) With every degree equal to 3, the degree sum is <code class=\"mm\">3n</code>, which must be even, so n is even. True.",
+     "(D) The complete graph K&#8324; has four vertices, every one of degree 3, and 4 is not a multiple of 3. False."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "misconception": "Concluding from '3n must be even' that n must be divisible by 3; the condition is about parity, not about divisibility by the degree.",
+    "takeaway": "The handshaking lemma constrains only parity: it can never force a divisibility by the common degree."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The handshaking lemma counts the pairs (vertex, incident edge) in two ways: each edge has two ends, so <code class=\"mm\">&Sigma; deg(v) = 2|E|</code>, which forces the degree sum to be even.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Each edge contributes 1 to the degree of each of its two endpoints, so the degree sum is <code class=\"mm\">2|E|</code>. True.</li><li>(B) The degree sum is even, and a sum of integers is even only when an even number of its terms are odd. True.</li><li>(C) With every degree equal to 3, the degree sum is <code class=\"mm\">3n</code>, which must be even, so n is even. True.</li><li>(D) The complete graph K&#8324; has four vertices, every one of degree 3, and 4 is not a multiple of 3. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (C)</span></p><p class=\"row\"><b>Common misconception.</b> Concluding from '3n must be even' that n must be divisible by 3; the condition is about parity, not about divisibility by the degree.</p><p class=\"row\"><b>Takeaway.</b> The handshaking lemma constrains only parity: it can never force a divisibility by the common degree.</p>",
+   "question_format": "MSQ"
+  },
+  {
+   "id": "DM-CB7-Q25",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about the principle of inclusion-exclusion are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about the principle of inclusion-exclusion are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "<code class=\"mm\">|A &cup; B &cup; C| = |A| + |B| + |C| &minus; |A&cap;B| &minus; |A&cap;C| &minus; |B&cap;C| + |A&cap;B&cap;C|</code>",
+    "The number of derangements satisfies <code class=\"mm\">!n = n! &Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314;/k!</code>.",
+    "The number of onto functions from an m-element set to an n-element set is <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314; C(n,k)(n&minus;k)&#7504;</code>.",
+    "The principle applies only when the sets involved are pairwise disjoint."
+   ],
+   "options_html": [
+    "<code class=\"mm\">|A &cup; B &cup; C| = |A| + |B| + |C| &minus; |A&cap;B| &minus; |A&cap;C| &minus; |B&cap;C| + |A&cap;B&cap;C|</code>",
+    "The number of derangements satisfies <code class=\"mm\">!n = n! &Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314;/k!</code>.",
+    "The number of onto functions from an m-element set to an n-element set is <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#8314; C(n,k)(n&minus;k)&#7504;</code>.",
+    "The principle applies only when the sets involved are pairwise disjoint."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Inclusion-exclusion corrects the over- and under-counting created by overlaps; disjointness is the degenerate case where no correction term is needed, not a precondition.",
+    "steps": [
+     "(A) This is the standard three-set form; an element in exactly two sets is counted twice in the singles, removed once by a pairwise term, and correctly counted once. True.",
+     "(B) The derangement formula is inclusion-exclusion over the n 'element i is fixed' events. True.",
+     "(C) The surjection formula is inclusion-exclusion over the n 'target j is missed' events. True.",
+     "(D) For pairwise disjoint sets the formula still holds, but its correction terms vanish; the principle is designed precisely for overlapping sets. False."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "misconception": "Believing the formula is only valid for disjoint sets, which inverts its purpose: disjointness is where it becomes trivial.",
+    "takeaway": "The sign of a term depends only on how many sets are intersected, never on their sizes."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Inclusion-exclusion corrects the over- and under-counting created by overlaps; disjointness is the degenerate case where no correction term is needed, not a precondition.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) This is the standard three-set form; an element in exactly two sets is counted twice in the singles, removed once by a pairwise term, and correctly counted once. True.</li><li>(B) The derangement formula is inclusion-exclusion over the n 'element i is fixed' events. True.</li><li>(C) The surjection formula is inclusion-exclusion over the n 'target j is missed' events. True.</li><li>(D) For pairwise disjoint sets the formula still holds, but its correction terms vanish; the principle is designed precisely for overlapping sets. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (C)</span></p><p class=\"row\"><b>Common misconception.</b> Believing the formula is only valid for disjoint sets, which inverts its purpose: disjointness is where it becomes trivial.</p><p class=\"row\"><b>Takeaway.</b> The sign of a term depends only on how many sets are intersected, never on their sizes.</p>",
+   "question_format": "MSQ"
   }
  ]
 }
