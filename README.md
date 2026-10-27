@@ -7,44 +7,114 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html)
+- **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 1 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: characteristic equations (6) · eigenvalue properties (9) · Cayley–Hamilton theorem (5) ·
-  diagonalization (5)
-- Rotation: MODE A drew **Engineering Mathematics** with a seeded `random` draw (seed `20261027-2`, the second
-  draw of the day) over the three subjects that still had no paper dated 2026-10-27 — Algorithms, Databases and
-  Engineering Mathematics. `runs[]` sorted by `(date, run)` gives the most recent Engineering Mathematics paper as
-  `{date 2026-10-26, run 3, unit 2, eigenvalues-eigenvectors, Set 1 of 2}`. Unit 2 stood at **25** questions, under
-  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, under `DAYS_PER_UNIT_MAX = 7`, so step B3 re-selected
-  **Unit 2, Linear Algebra: Eigenvalues & Vectors**. This is Set 2 of 2, so 25 + 25 = 50 closes the unit at the cap;
-  the next Engineering Mathematics run advances to Unit 3, Calculus: Limits, Continuity & Differentiability. No
-  override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
+- Subtopics: indeterminate forms & L'Hôpital's rule (7) · continuity analysis (6) · mean value theorems (6) ·
+  partial derivatives (6)
+- Rotation: MODE A drew **Engineering Mathematics** from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (seed `1855517764`, draw index 1 of 11). `runs[]` gives the most recent Engineering
+  Mathematics paper as `{date 2026-10-27, run 4, unit 2, eigenvalues-eigenvectors, Set 2 of 2}`. Unit 2 held
+  **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so the cap test in step B3 failed and step B4 advanced exactly
+  one unit: `(index_of(eigenvalues-eigenvectors) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Calculus: Limits,
+  Continuity & Differentiability**. This is Set 1 of 2, so 25 questions are now banked on Unit 3 and the next
+  Engineering Mathematics run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was used,
+  no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 48 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 4 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 28 current · 20 archived |
-| Test cards on the portal | 30 |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1200 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 100 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 49 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 5 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 29 current · 20 archived |
+| Test cards on the portal | 31 |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1225 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 125 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 20 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 2 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
 The verification checklist item "no hex colour outside `:root`" **fails in the shared shell** and has done since the
-first paper: the locked `<style>` block carries raw hex values outside `:root` — 697 occurrences in a paper and 704
+first paper: the locked `<style>` block carries raw hex values outside `:root` — 114 occurrences in a paper and 704
 in the portal (`#f8fafc`, `#9fb8cc`, `#eaf4fb` and others, mostly hover, focus and border shades that have no token
 name yet). Because one shell serves all papers and `6.8` treats shell parity as the hard gate, the block was not
-edited for this run — editing it would have changed all 27 current papers at once. The `:root` block itself is
+edited for this run — editing it would have changed all 29 current papers at once. The `:root` block itself is
 byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
 pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
-re-verify all 28 current papers and 20 archived sets together.
+re-verify all 29 current papers and 20 archived sets together.
 
 ## Rotation log
+
+- **2026-10-27, Engineering Mathematics → Unit 3 (Calculus: Limits, Continuity & Differentiability), Set 1 of 2.**
+  MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (seed `1855517764`, draw index 1 of 11); it gave **Engineering Mathematics**. `runs[]`
+  gives the most recent paper as `{date 2026-10-27, run 4, unit 2, eigenvalues-eigenvectors, Set 2 of 2}`. Unit 2 held
+  **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced exactly
+  one unit: `(index_of(eigenvalues-eigenvectors) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Calculus: Limits,
+  Continuity & Differentiability** (`calculus-limits-derivatives`). Unit 3 had no earlier paper, so nothing was
+  archived; the paper is filed only at
+  `engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`, the unit folder holds exactly
+  one current paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 3, so the
+  next Engineering Mathematics run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was
+  used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — indeterminate forms & L'Hôpital's rule (7), continuity analysis (6),
+  mean value theorems (6), partial derivatives (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `EM-U3-Q01`..`EM-U3-Q25` did not exist in the bank, and every stem was checked against the
+  100 banked Engineering Mathematics items (Unit 1 and Unit 2) so that no stem, option set or numeric answer repeats.
+- **Every countable answer was recomputed by script, not by hand.** The verification script evaluates each limit with
+  a symbolic algebra system rather than by inspection: `lim sin 3x/x = 3` (Q01), `lim (1 − cos x)/x² = 1/2` (Q02),
+  `lim (eˣ − 1 − x)/x² = 1/2` (Q07), `lim (1/x² − 1/sin²x) = −1/3` (Q12), `lim (e²ˣ − 1)/x = 2` (Q21) and
+  `lim x ln x = 0` (Q24). The mean-value points are solved, not guessed: `c = 1` for `x²` on `[0, 2]` (Q04), exactly
+  **2** stationary points of `x³ − 3x` inside `(−√3, √3)` (Q09), `c = 14/9` for Cauchy's theorem on `x², x³` over
+  `[1, 2]` (Q14), `c = 2` for `x² + 2x` on `[0, 4]` (Q23), and the two roots `1 ± √3/3 ≈ 0.423, 1.577` of
+  `3x² − 6x + 2` both inside `(0, 2)` (Q20). The partial-derivative items were differentiated symbolically:
+  `f_xy = 2x` (Q05), the tangent plane `z = 2x + 2y − 2` (Q06), `f_xx(1,1) = 6` (Q10), `dw/dt = 16` by both the
+  chain rule and direct substitution (Q11), the critical points `(0, 0)` with `D = −9` and `(1, 1)` with `D = 27`
+  (Q15), and `∂⁴f/∂x²∂y² = 12` at `(1, 1)` (Q25). The removable-discontinuity parameter `a = 15` (Q22) was confirmed
+  by factoring the numerator as `3(x + 2)(x + 3)` and checking that the limit at `x = −2` is the finite value −1.
+  **35 of 35 scripted checks passed.**
+- The conceptual items were settled against the standard rather than by taste: continuity needs `a > 0` in
+  `xᵃ sin(1/x)` while differentiability needs `a > 1`, and the boundary case `a = 1` is continuous but not
+  differentiable (Q08, Q13); Rolle's theorem guarantees *at least* one stationary point, so counting them needs the
+  derivative solved (Q09, Q20); Cauchy's theorem couples two functions through a ratio of derivatives at one point, so
+  it is not the average of two Lagrange applications (Q14); the discriminant `D = f_xx f_yy − f_xy²` — not the sign of
+  `f_yy` — is what separates a saddle from a minimum (Q15); a product form `0 · ∞` must be rewritten as a quotient
+  before L'Hôpital's rule applies (Q24); and a discontinuity is removable exactly when a finite two-sided limit
+  exists, which excludes both `1/x` and `|x|/x` (Q19).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 5 times, (B) 4, (C) 3
+  and (D) 3, and the five MSQ answer sets are (A,B,C), (A,B,D), (A,B,D), (A,C) and (A,B).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged (empty for this subject), the Question Bank tab
+  shows **100 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the 50
+  Unit 1 questions and the 50 Unit 2 questions — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active Unit 3 questions do not appear there (verified: zero overlap between the 25
+  active stems and the 100 bank-tab stems). Unit 3 has no accordion of its own this run because all 25 of its banked
+  questions are the active test.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions replaced by placeholders (title, header sub-line, candidate ID, tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining bytes are **identical** to the shell extracted from the
+  Engineering Mathematics Unit 2 Set 2 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are byte-for-byte unchanged. The `:root` block is byte-identical across the new
+  paper, `index.html` and `design-tokens.css`. No new literal hex value was introduced — the count outside `:root`
+  went from 115 to 114 — so the known Section 6.4 deviation below is untouched and was not partially fixed for one
+  paper.
+- The paper was exercised in a jsdom harness before shipping (**34 checks, all passing**, across three runs): nothing
+  is revealed pre-submit (every active `.sol` empty, no option mark, no `ansline` markup, key tab disabled and
+  labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible); the palette reaches `ans`, `mrk`
+  and `amr` and falls back correctly on Unmark review; all 25 answered correctly scores **35 / 35** with 25 correct,
+  0 wrong, 25 `ok` palette buttons and 25 key cards; one wrong MCQ, an MSQ one option short and a wrong NAT score
+  **30 / 35** with 22 correct and 3 wrong, confirming that an MSQ earns nothing unless the exact set is selected and
+  that there is no negative marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every card carries
+  `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`;
+  and all four subtopics appear.
+- `index.html` holds all **1225** questions. Its data block was updated in place: the new test record was inserted at
+  the head of `tests`, the 25 new question records were appended, and the static header strings were recomputed from
+  the data block — 64 units, 31 sets published, 1225 solved questions and records, 277 subtopics. Engineering
+  Mathematics Unit 3 was already registered in the portal's `units` table, so no unit had to be added. Every `href`
+  on the portal and every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Engineering Mathematics → Unit 2 (Linear Algebra: Eigenvalues & Vectors), Set 2 of 2.** MODE A: a
   subject was drawn with a seeded `random` draw (seed `20261027-2`, the second draw of the day) restricted to the

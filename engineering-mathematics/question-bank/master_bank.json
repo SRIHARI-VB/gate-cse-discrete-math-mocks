@@ -6,12 +6,13 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-27",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such. total_questions was stale at 25 after the second run (50 records were present); it is recomputed from len(questions) on every append as of 2026-10-26.",
-  "total_questions": 100,
+  "total_questions": 125,
   "units_with_questions": [
    1,
-   2
+   2,
+   3
   ],
-  "total_runs": 4
+  "total_runs": 5
  },
  "runs": [
   {
@@ -251,6 +252,66 @@
    ],
    "mode": "MODE A (random subject, bank-driven unit rotation)",
    "note": "Set 1 held 25 of the 50-question cap for Unit 2 and had been current for 1 day, so step B3 re-selected Unit 2 for the second and final set. 25 + 25 = 50 closes the unit at the cap; the next Engineering Mathematics run advances to Unit 3."
+  },
+  {
+   "run": 5,
+   "date": "2026-10-27",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "set": "1 of 2",
+   "file": "engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "indeterminate-forms-lhopital",
+    "continuity-analysis",
+    "mean-value-theorems",
+    "partial-derivatives"
+   ],
+   "question_ids": [
+    "EM-U3-Q01",
+    "EM-U3-Q02",
+    "EM-U3-Q03",
+    "EM-U3-Q04",
+    "EM-U3-Q05",
+    "EM-U3-Q06",
+    "EM-U3-Q07",
+    "EM-U3-Q08",
+    "EM-U3-Q09",
+    "EM-U3-Q10",
+    "EM-U3-Q11",
+    "EM-U3-Q12",
+    "EM-U3-Q13",
+    "EM-U3-Q14",
+    "EM-U3-Q15",
+    "EM-U3-Q16",
+    "EM-U3-Q17",
+    "EM-U3-Q18",
+    "EM-U3-Q19",
+    "EM-U3-Q20",
+    "EM-U3-Q21",
+    "EM-U3-Q22",
+    "EM-U3-Q23",
+    "EM-U3-Q24",
+    "EM-U3-Q25"
+   ],
+   "mode": "MODE A (random subject, bank-driven unit rotation)",
+   "selection": "MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded random.SystemRandom() draw (seed 1855517764, draw index 1 of 11) and it gave Engineering Mathematics. runs[] gives the most recent paper as {date 2026-10-27, run 4, unit 2, eigenvalues-eigenvectors, Set 2 of 2}. Unit 2 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so the cap test in step B3 failed and step B4 advanced exactly one unit: (index_of(eigenvalues-eigenvectors) + 1) mod 5 = (1 + 1) mod 5 = 2, giving Unit 3, Calculus: Limits, Continuity & Differentiability (calculus-limits-derivatives). Unit 3 had no earlier paper, so nothing was archived and no root copy was written. Set 1 of 2. No override was used; no unit exceeded 50 questions; no second pass has started.",
+   "note": "First paper for Engineering Mathematics Unit 3, Set 1 of 2. 25 questions, all new: every stem, option set and numeric answer was checked against the 100 banked Engineering Mathematics questions (Units 1 and 2) so that nothing repeats. All four Unit 3 subtopics are represented: indeterminate forms & L'Hopital's rule (7), continuity analysis (6), mean value theorems (6), partial derivatives (6). No GATE_PYQ_VARIATION item: verified_pyqs is empty for this subject, so nothing here is claimed as official. Every numeric answer was recomputed by script (sympy), not by hand."
   }
  ],
  "verified_pyqs": [],
@@ -3803,6 +3864,990 @@
     "final": "82",
     "trap": "Computing <span class=\"mm\">A⁴</span> entry by entry and summing the diagonal, which invites arithmetic slips, or writing <span class=\"mm\">(tr A)⁴ = 16</span>. The fourth power of the trace has nothing to do with the trace of the fourth power."
    }
+  },
+  {
+   "id": "EM-U3-Q01",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0 sin(3x)/x is",
+   "text": "The value of limx→0 sin(3x)/x is",
+   "options": [
+    "1",
+    "1/3",
+    "3",
+    "0"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "At x = 0 both numerator and denominator vanish, so the expression is the indeterminate form 0/0. For sin(kx)/x the limit is k.",
+    "steps": [
+     "Write sin(3x)/x = 3 · sin(3x)/(3x).",
+     "Put u = 3x. As x → 0, also u → 0, and sin u / u → 1.",
+     "So the limit is 3 · 1 = 3."
+    ],
+    "final": "Answer: 3 — option (C).",
+    "trap": "Reading the coefficient as the reciprocal, or applying L'Hôpital's rule once and forgetting the chain-rule factor 3 from the derivative of sin 3x. Both give 1/3, which is option (B)."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> At <span class=\"mm\">x = 0</span> both numerator and denominator vanish, so the expression is the indeterminate form <span class=\"mm\">0/0</span>. For <span class=\"mm\">sin(kx)/x</span> the limit is <span class=\"mm\">k</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write <span class=\"mm\">sin(3x)/x = 3 · sin(3x)/(3x)</span>.</li><li>Put <span class=\"mm\">u = 3x</span>. As <span class=\"mm\">x → 0</span>, also <span class=\"mm\">u → 0</span>, and <span class=\"mm\">sin u / u → 1</span>.</li><li>So the limit is <span class=\"mm\">3 · 1 = 3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reading the coefficient as the reciprocal, or applying L'Hôpital's rule once and forgetting the chain-rule factor 3 from the derivative of <span class=\"mm\">sin 3x</span>. Both give 1/3, which is option (B).</p>"
+  },
+  {
+   "id": "EM-U3-Q02",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0 (1 − cos x)/x² is",
+   "text": "The value of limx→0 (1 − cos x)/x² is",
+   "options": [
+    "1/2",
+    "1",
+    "0",
+    "2"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The form is 0/0. Two standard routes: the half-angle identity 1 − cos x = 2 sin²(x/2), or one application of L'Hôpital's rule.",
+    "steps": [
+     "Use 1 − cos x = 2 sin²(x/2), so (1 − cos x)/x² = 2 sin²(x/2)/x².",
+     "Write it as (1/2) · [sin(x/2)/(x/2)]².",
+     "Since sin u / u → 1, the bracket tends to 1 and the limit is 1/2."
+    ],
+    "final": "Answer: 1/2 — option (A).",
+    "trap": "Stopping at the first derivative: L'Hôpital once gives sin x / (2x) → 1/2, but a second application on the wrong form gives cos x / 2 → 1/2 only by luck here — students who differentiate the numerator twice but the denominator once get 1. The quadratic vanishing of 1 − cos x is what makes the answer finite and equal to 1/2."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. Two standard routes: the half-angle identity <span class=\"mm\">1 − cos x = 2 sin²(x/2)</span>, or one application of L'Hôpital's rule.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Use <span class=\"mm\">1 − cos x = 2 sin²(x/2)</span>, so <span class=\"mm\">(1 − cos x)/x² = 2 sin²(x/2)/x²</span>.</li><li>Write it as <span class=\"mm\">(1/2) · [sin(x/2)/(x/2)]²</span>.</li><li>Since <span class=\"mm\">sin u / u → 1</span>, the bracket tends to 1 and the limit is <span class=\"mm\">1/2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1/2 — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Stopping at the first derivative: L'Hôpital once gives <span class=\"mm\">sin x / (2x) → 1/2</span>, but a second application on the wrong form gives <span class=\"mm\">cos x / 2 → 1/2</span> only by luck here — students who differentiate the numerator twice but the denominator once get 1. The quadratic vanishing of <span class=\"mm\">1 − cos x</span> is what makes the answer finite and equal to 1/2.</p>"
+  },
+  {
+   "id": "EM-U3-Q03",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let f(x) = (x² − 9)/(x − 3) for x ≠ 3 and f(3) = k. Then f is continuous at x = 3 exactly when k equals",
+   "text": "Let f(x) = (x² − 9)/(x − 3) for x ≠ 3 and f(3) = k. Then f is continuous at x = 3 exactly when k equals",
+   "options": [
+    "0",
+    "3",
+    "9",
+    "6"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Continuity at a point requires limx→a f(x) = f(a). When the formula is a 0/0 quotient, the limit is found by cancelling the common factor — this is a removable discontinuity.",
+    "steps": [
+     "Factor the numerator: x² − 9 = (x − 3)(x + 3).",
+     "For x ≠ 3, cancel: f(x) = x + 3.",
+     "So limx→3 f(x) = 3 + 3 = 6, and continuity needs k = 6."
+    ],
+    "final": "Answer: 6 — option (D).",
+    "trap": "Substituting x = 3 into x + 3 but reporting 3 (the root) or 9 (the constant term of the numerator). The value of the function at the point must match the limit, and the limit is the value of the cancelled expression."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Continuity at a point requires <span class=\"mm\">lim<sub>x→a</sub> f(x) = f(a)</span>. When the formula is a <span class=\"mm\">0/0</span> quotient, the limit is found by cancelling the common factor — this is a removable discontinuity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Factor the numerator: <span class=\"mm\">x² − 9 = (x − 3)(x + 3)</span>.</li><li>For <span class=\"mm\">x ≠ 3</span>, cancel: <span class=\"mm\">f(x) = x + 3</span>.</li><li>So <span class=\"mm\">lim<sub>x→3</sub> f(x) = 3 + 3 = 6</span>, and continuity needs <span class=\"mm\">k = 6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 6 — option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Substituting <span class=\"mm\">x = 3</span> into <span class=\"mm\">x + 3</span> but reporting <span class=\"mm\">3</span> (the root) or <span class=\"mm\">9</span> (the constant term of the numerator). The value of the function at the point must match the limit, and the limit is the value of the cancelled expression.</p>"
+  },
+  {
+   "id": "EM-U3-Q04",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x) = x² on the interval [0, 2], the point c whose existence is asserted by Lagrange's mean value theorem is",
+   "text": "For f(x) = x² on the interval [0, 2], the point c whose existence is asserted by Lagrange's mean value theorem is",
+   "options": [
+    "1/2",
+    "1",
+    "3/2",
+    "√2"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Lagrange's mean value theorem asserts a point c ∈ (a, b) with f′(c) = (f(b) − f(a))/(b − a), the slope of the chord.",
+    "steps": [
+     "The chord slope is (f(2) − f(0))/(2 − 0) = (4 − 0)/2 = 2.",
+     "Set f′(c) = 2c = 2, giving c = 1.",
+     "Check 1 ∈ (0, 2), so the asserted point exists and is unique here."
+    ],
+    "final": "Answer: 1 — option (B).",
+    "trap": "Confusing the mean value theorem with the midpoint of the interval, or with the point where f attains its average value (f(0) + f(2))/2 = 2 — which would be c = √2, option (D). The theorem equates derivatives, not function values."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Lagrange's mean value theorem asserts a point <span class=\"mm\">c ∈ (a, b)</span> with <span class=\"mm\">f′(c) = (f(b) − f(a))/(b − a)</span>, the slope of the chord.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The chord slope is <span class=\"mm\">(f(2) − f(0))/(2 − 0) = (4 − 0)/2 = 2</span>.</li><li>Set <span class=\"mm\">f′(c) = 2c = 2</span>, giving <span class=\"mm\">c = 1</span>.</li><li>Check <span class=\"mm\">1 ∈ (0, 2)</span>, so the asserted point exists and is unique here.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the mean value theorem with the midpoint of the interval, or with the point where <span class=\"mm\">f</span> attains its average value <span class=\"mm\">(f(0) + f(2))/2 = 2</span> — which would be <span class=\"mm\">c = √2</span>, option (D). The theorem equates derivatives, not function values.</p>"
+  },
+  {
+   "id": "EM-U3-Q05",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x, y) = x²y + y³, the mixed partial derivative ∂²f/∂x∂y equals",
+   "text": "For f(x, y) = x²y + y³, the mixed partial derivative ∂²f/∂x∂y equals",
+   "options": [
+    "2x",
+    "2y",
+    "2x + 3y²",
+    "6y"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Mixed partials are computed by differentiating in either order; by Clairaut's theorem the two orders agree whenever the second partials are continuous, which they are for a polynomial.",
+    "steps": [
+     "Differentiate with respect to x first: ∂f/∂x = 2xy.",
+     "Now differentiate that with respect to y: ∂/∂y (2xy) = 2x.",
+     "Reversing the order gives the same answer: ∂f/∂y = x² + 3y² and ∂/∂x (x² + 3y²) = 2x."
+    ],
+    "final": "Answer: 2x — option (A).",
+    "trap": "Reporting ∂²f/∂x² = 2y (option B) or ∂²f/∂y² = 6y (option D), which are the pure second partials. The notation ∂²f/∂x∂y here means differentiate in x then y, and the mixed derivative of a polynomial is generally of lower degree than either pure one."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Mixed partials are computed by differentiating in either order; by Clairaut's theorem the two orders agree whenever the second partials are continuous, which they are for a polynomial.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Differentiate with respect to <span class=\"mm\">x</span> first: <span class=\"mm\">∂f/∂x = 2xy</span>.</li><li>Now differentiate that with respect to <span class=\"mm\">y</span>: <span class=\"mm\">∂/∂y (2xy) = 2x</span>.</li><li>Reversing the order gives the same answer: <span class=\"mm\">∂f/∂y = x² + 3y²</span> and <span class=\"mm\">∂/∂x (x² + 3y²) = 2x</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2x — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">∂²f/∂x² = 2y</span> (option B) or <span class=\"mm\">∂²f/∂y² = 6y</span> (option D), which are the pure second partials. The notation <span class=\"mm\">∂²f/∂x∂y</span> here means differentiate in <span class=\"mm\">x</span> then <span class=\"mm\">y</span>, and the mixed derivative of a polynomial is generally of lower degree than either pure one.</p>"
+  },
+  {
+   "id": "EM-U3-Q06",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The tangent plane to the surface z = x² + y² at the point (1, 1, 2) is",
+   "text": "The tangent plane to the surface z = x² + y² at the point (1, 1, 2) is",
+   "options": [
+    "z = x + y",
+    "z = 2x + 2y",
+    "z = 2x + 2y − 2",
+    "z = 2x + 2y + 2"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "The tangent plane to z = f(x, y) at (a, b, f(a, b)) is z = f(a, b) + fx(a, b)(x − a) + fy(a, b)(y − b), a first-order Taylor expansion.",
+    "steps": [
+     "Here fx = 2x and fy = 2y, so at (1, 1) both slopes equal 2, and f(1, 1) = 2.",
+     "Substitute: z = 2 + 2(x − 1) + 2(y − 1).",
+     "Expand: z = 2x + 2y − 2."
+    ],
+    "final": "Answer: z = 2x + 2y − 2 — option (C).",
+    "trap": "Dropping the constant: writing the plane as z = 2x + 2y (option B) ignores that the plane must pass through (1, 1, 2) — it would pass through the origin instead. Always substitute the point back to check."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The tangent plane to <span class=\"mm\">z = f(x, y)</span> at <span class=\"mm\">(a, b, f(a, b))</span> is <span class=\"mm\">z = f(a, b) + f<sub>x</sub>(a, b)(x − a) + f<sub>y</sub>(a, b)(y − b)</span>, a first-order Taylor expansion.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <span class=\"mm\">f<sub>x</sub> = 2x</span> and <span class=\"mm\">f<sub>y</sub> = 2y</span>, so at <span class=\"mm\">(1, 1)</span> both slopes equal 2, and <span class=\"mm\">f(1, 1) = 2</span>.</li><li>Substitute: <span class=\"mm\">z = 2 + 2(x − 1) + 2(y − 1)</span>.</li><li>Expand: <span class=\"mm\">z = 2x + 2y − 2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: z = 2x + 2y − 2 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Dropping the constant: writing the plane as <span class=\"mm\">z = 2x + 2y</span> (option B) ignores that the plane must pass through <span class=\"mm\">(1, 1, 2)</span> — it would pass through the origin instead. Always substitute the point back to check.</p>"
+  },
+  {
+   "id": "EM-U3-Q07",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0 (ex − 1 − x)/x² is",
+   "text": "The value of limx→0 (ex − 1 − x)/x² is",
+   "options": [
+    "1",
+    "1/2",
+    "0",
+    "It does not exist"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "The numerator vanishes to second order at the origin, so one application of L'Hôpital's rule still leaves 0/0. The Taylor expansion ex = 1 + x + x²/2 + O(x³) settles it at once.",
+    "steps": [
+     "First application: (ex − 1)/(2x), still 0/0 at x = 0.",
+     "Second application: ex/2.",
+     "At x = 0 this equals 1/2. Equivalently, ex − 1 − x = x²/2 + O(x³)."
+    ],
+    "final": "Answer: 1/2 — option (B).",
+    "trap": "Applying L'Hôpital once and stopping when the expression still reads 0/0 — that gives the invalid value 0 by substitution, or 1 if the numerator's derivative is taken as ex and the denominator's as 2x without re-checking. L'Hôpital may be repeated only while the quotient remains indeterminate."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The numerator vanishes to second order at the origin, so one application of L'Hôpital's rule still leaves <span class=\"mm\">0/0</span>. The Taylor expansion <span class=\"mm\">e<sup>x</sup> = 1 + x + x²/2 + O(x³)</span> settles it at once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>First application: <span class=\"mm\">(e<sup>x</sup> − 1)/(2x)</span>, still <span class=\"mm\">0/0</span> at <span class=\"mm\">x = 0</span>.</li><li>Second application: <span class=\"mm\">e<sup>x</sup>/2</span>.</li><li>At <span class=\"mm\">x = 0</span> this equals <span class=\"mm\">1/2</span>. Equivalently, <span class=\"mm\">e<sup>x</sup> − 1 − x = x²/2 + O(x³)</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1/2 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Applying L'Hôpital once and stopping when the expression still reads <span class=\"mm\">0/0</span> — that gives the invalid value 0 by substitution, or 1 if the numerator's derivative is taken as <span class=\"mm\">e<sup>x</sup></span> and the denominator's as <span class=\"mm\">2x</span> without re-checking. L'Hôpital may be repeated only while the quotient remains indeterminate.</p>"
+  },
+  {
+   "id": "EM-U3-Q08",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let f(x) = x sin(1/x) for x ≠ 0 and f(0) = 0. Then f is",
+   "text": "Let f(x) = x sin(1/x) for x ≠ 0 and f(0) = 0. Then f is",
+   "options": [
+    "continuous at 0 but not differentiable at 0",
+    "differentiable at 0 but not continuous at 0",
+    "both continuous and differentiable at 0",
+    "neither continuous nor differentiable at 0"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Continuity at 0 is a squeeze: |x sin(1/x)| ≤ |x|. Differentiability at 0 is a limit of a difference quotient, and the oscillating factor makes that limit fail.",
+    "steps": [
+     "Squeeze: 0 ≤ |x sin(1/x)| ≤ |x| and |x| → 0, so f(x) → 0 = f(0): continuous at 0.",
+     "Difference quotient at 0: (f(h) − f(0))/h = sin(1/h).",
+     "As h → 0, sin(1/h) oscillates in [−1, 1] and has no limit, so f′(0) does not exist."
+    ],
+    "final": "Answer: continuous but not differentiable at 0 — option (A).",
+    "trap": "Assuming continuity implies differentiability, or judging by the oscillation of sin(1/x) alone and declaring the function discontinuous. The factor x kills the oscillation in the function values but not in the slopes, so the function is continuous and not differentiable."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Continuity at 0 is a squeeze: <span class=\"mm\">|x sin(1/x)| ≤ |x|</span>. Differentiability at 0 is a limit of a difference quotient, and the oscillating factor makes that limit fail.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Squeeze: <span class=\"mm\">0 ≤ |x sin(1/x)| ≤ |x|</span> and <span class=\"mm\">|x| → 0</span>, so <span class=\"mm\">f(x) → 0 = f(0)</span>: continuous at 0.</li><li>Difference quotient at 0: <span class=\"mm\">(f(h) − f(0))/h = sin(1/h)</span>.</li><li>As <span class=\"mm\">h → 0</span>, <span class=\"mm\">sin(1/h)</span> oscillates in <span class=\"mm\">[−1, 1]</span> and has no limit, so <span class=\"mm\">f′(0)</span> does not exist.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: continuous but not differentiable at 0 — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming continuity implies differentiability, or judging by the oscillation of <span class=\"mm\">sin(1/x)</span> alone and declaring the function discontinuous. The factor <span class=\"mm\">x</span> kills the oscillation in the function values but not in the slopes, so the function is continuous and not differentiable.</p>"
+  },
+  {
+   "id": "EM-U3-Q09",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The number of points c in (−√3, √3) at which f′(c) = 0 for f(x) = x³ − 3x is",
+   "text": "The number of points c in (−√3, √3) at which f′(c) = 0 for f(x) = x³ − 3x is",
+   "options": [
+    "0",
+    "1",
+    "3",
+    "2"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Rolle's theorem applies on [−√3, √3] because f is a polynomial (hence continuous and differentiable) and the endpoint values agree. Rolle guarantees at least one stationary point; counting them needs the derivative solved explicitly.",
+    "steps": [
+     "f(−√3) = −3√3 + 3√3 = 0 and f(√3) = 3√3 − 3√3 = 0, so Rolle's hypotheses hold.",
+     "f′(x) = 3x² − 3 = 3(x − 1)(x + 1), vanishing at x = ±1.",
+     "Both −1 and 1 lie inside (−√3, √3) since √3 ≈ 1.732, so there are exactly two such points."
+    ],
+    "final": "Answer: 2 — option (D).",
+    "trap": "Answering 1 from Rolle's theorem as if it guaranteed exactly one point — it guarantees at least one. Answering 3 by also counting the endpoints ±√3, where the derivative is 3, not 0."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Rolle's theorem applies on <span class=\"mm\">[−√3, √3]</span> because <span class=\"mm\">f</span> is a polynomial (hence continuous and differentiable) and the endpoint values agree. Rolle guarantees at least one stationary point; counting them needs the derivative solved explicitly.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">f(−√3) = −3√3 + 3√3 = 0</span> and <span class=\"mm\">f(√3) = 3√3 − 3√3 = 0</span>, so Rolle's hypotheses hold.</li><li><span class=\"mm\">f′(x) = 3x² − 3 = 3(x − 1)(x + 1)</span>, vanishing at <span class=\"mm\">x = ±1</span>.</li><li>Both <span class=\"mm\">−1</span> and <span class=\"mm\">1</span> lie inside <span class=\"mm\">(−√3, √3)</span> since <span class=\"mm\">√3 ≈ 1.732</span>, so there are exactly two such points.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2 — option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 1 from Rolle's theorem as if it guaranteed exactly one point — it guarantees at least one. Answering 3 by also counting the endpoints <span class=\"mm\">±√3</span>, where the derivative is 3, not 0.</p>"
+  },
+  {
+   "id": "EM-U3-Q10",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x, y) = x³y² − 2xy, the value of fxx at (1, 1) is",
+   "text": "For f(x, y) = x³y² − 2xy, the value of fxx at (1, 1) is",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "0"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A pure second partial fxx differentiates twice with respect to x, treating y as a constant throughout.",
+    "steps": [
+     "fx = 3x²y² − 2y.",
+     "fxx = 6xy².",
+     "At (1, 1): 6 · 1 · 1 = 6."
+    ],
+    "final": "Answer: 6 — option (C).",
+    "trap": "Reporting the mixed partial fxy = 6x²y − 2, which equals 4 at (1, 1) — option (B) — or the pure fyy = 2x³, which equals 2 — option (A). fxx differentiates twice in x, and the −2xy term drops out after the first differentiation."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A pure second partial <span class=\"mm\">f<sub>xx</sub></span> differentiates twice with respect to <span class=\"mm\">x</span>, treating <span class=\"mm\">y</span> as a constant throughout.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">f<sub>x</sub> = 3x²y² − 2y</span>.</li><li><span class=\"mm\">f<sub>xx</sub> = 6xy²</span>.</li><li>At <span class=\"mm\">(1, 1)</span>: <span class=\"mm\">6 · 1 · 1 = 6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 6 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the mixed partial <span class=\"mm\">f<sub>xy</sub> = 6x²y − 2</span>, which equals 4 at <span class=\"mm\">(1, 1)</span> — option (B) — or the pure <span class=\"mm\">f<sub>yy</sub> = 2x³</span>, which equals 2 — option (A). <span class=\"mm\">f<sub>xx</sub></span> differentiates twice in <span class=\"mm\">x</span>, and the <span class=\"mm\">−2xy</span> term drops out after the first differentiation.</p>"
+  },
+  {
+   "id": "EM-U3-Q11",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let w = x²y with x = 2t and y = t². Then dw/dt at t = 1 equals",
+   "text": "Let w = x²y with x = 2t and y = t². Then dw/dt at t = 1 equals",
+   "options": [
+    "8",
+    "16",
+    "12",
+    "24"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "The chain rule for a composite of several variables: dw/dt = (∂w/∂x)(dx/dt) + (∂w/∂y)(dy/dt). Substituting first and differentiating the resulting one-variable function is an equally valid check.",
+    "steps": [
+     "Substituting: w = (2t)²(t²) = 4t⁴, so dw/dt = 16t³ and at t = 1 this is 16.",
+     "Chain rule check: ∂w/∂x = 2xy, dx/dt = 2, ∂w/∂y = x², dy/dt = 2t.",
+     "So dw/dt = 4xy + 2tx²; at t = 1, x = 2 and y = 1, giving 8 + 8 = 16."
+    ],
+    "final": "Answer: 16 — option (B).",
+    "trap": "Keeping only one branch of the chain rule, which gives 8 (the x branch alone) — option (A). Every intermediate variable that depends on t contributes a term."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The chain rule for a composite of several variables: <span class=\"mm\">dw/dt = (∂w/∂x)(dx/dt) + (∂w/∂y)(dy/dt)</span>. Substituting first and differentiating the resulting one-variable function is an equally valid check.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Substituting: <span class=\"mm\">w = (2t)²(t²) = 4t⁴</span>, so <span class=\"mm\">dw/dt = 16t³</span> and at <span class=\"mm\">t = 1</span> this is 16.</li><li>Chain rule check: <span class=\"mm\">∂w/∂x = 2xy</span>, <span class=\"mm\">dx/dt = 2</span>, <span class=\"mm\">∂w/∂y = x²</span>, <span class=\"mm\">dy/dt = 2t</span>.</li><li>So <span class=\"mm\">dw/dt = 4xy + 2tx²</span>; at <span class=\"mm\">t = 1</span>, <span class=\"mm\">x = 2</span> and <span class=\"mm\">y = 1</span>, giving <span class=\"mm\">8 + 8 = 16</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 16 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Keeping only one branch of the chain rule, which gives 8 (the <span class=\"mm\">x</span> branch alone) — option (A). Every intermediate variable that depends on <span class=\"mm\">t</span> contributes a term.</p>"
+  },
+  {
+   "id": "EM-U3-Q12",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0 (1/x² − 1/sin²x) is",
+   "text": "The value of limx→0 (1/x² − 1/sin²x) is",
+   "options": [
+    "−1/6",
+    "−1/3",
+    "0",
+    "1/3"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "This is the indeterminate form ∞ − ∞. Combine over a common denominator to reach 0/0, then compare the series expansions of sin x and x.",
+    "steps": [
+     "Combine: (sin²x − x²)/(x² sin²x).",
+     "Expand: sin x = x − x³/6 + O(x⁵), so sin²x = x² − x⁴/3 + O(x⁶).",
+     "Numerator = −x⁴/3 + O(x⁶); denominator = x⁴ + O(x⁶).",
+     "Ratio → −1/3."
+    ],
+    "final": "Answer: −1/3 — option (B).",
+    "trap": "Treating ∞ − ∞ as 0, or cancelling 1/x² against 1/sin²x because sin x ≈ x. The two terms differ only at fourth order, so the leading behaviour cancels and the residual is −1/3, not 0."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This is the indeterminate form <span class=\"mm\">∞ − ∞</span>. Combine over a common denominator to reach <span class=\"mm\">0/0</span>, then compare the series expansions of <span class=\"mm\">sin x</span> and <span class=\"mm\">x</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Combine: <span class=\"mm\">(sin²x − x²)/(x² sin²x)</span>.</li><li>Expand: <span class=\"mm\">sin x = x − x³/6 + O(x⁵)</span>, so <span class=\"mm\">sin²x = x² − x⁴/3 + O(x⁶)</span>.</li><li>Numerator <span class=\"mm\">= −x⁴/3 + O(x⁶)</span>; denominator <span class=\"mm\">= x⁴ + O(x⁶)</span>.</li><li>Ratio <span class=\"mm\">→ −1/3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: −1/3 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Treating <span class=\"mm\">∞ − ∞</span> as 0, or cancelling <span class=\"mm\">1/x²</span> against <span class=\"mm\">1/sin²x</span> because <span class=\"mm\">sin x ≈ x</span>. The two terms differ only at fourth order, so the leading behaviour cancels and the residual is <span class=\"mm\">−1/3</span>, not 0.</p>"
+  },
+  {
+   "id": "EM-U3-Q13",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let a > 0, f(x) = xa sin(1/x) for x ≠ 0 and f(0) = 0. Which statement is TRUE?",
+   "text": "Let a > 0, f(x) = xa sin(1/x) for x ≠ 0 and f(0) = 0. Which statement is TRUE?",
+   "options": [
+    "f is continuous at 0 for every a > 0, and differentiable at 0 for every a > 1.",
+    "f is continuous at 0 for every a > 1, and differentiable at 0 for every a > 0.",
+    "f is continuous and differentiable at 0 for every a > 0.",
+    "f is neither continuous nor differentiable at 0 for any a."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Continuity needs xa sin(1/x) → 0; differentiability needs the quotient xa−1 sin(1/x) to have a limit. The two conditions differ by exactly one power of x.",
+    "steps": [
+     "For continuity, |xa sin(1/x)| ≤ |x|a → 0 whenever a > 0.",
+     "The difference quotient at 0 is (f(h) − f(0))/h = ha−1 sin(1/h).",
+     "This tends to 0 exactly when the exponent a − 1 is positive, i.e. a > 1.",
+     "At a = 1 it is sin(1/h), which has no limit, so a > 1 is required."
+    ],
+    "final": "Answer: continuous for every a > 0, differentiable for every a > 1 — option (A).",
+    "trap": "Assuming the same threshold for both properties. The exponent needed for differentiability is one higher than for continuity, which is why the boundary case a = 1 — the function x sin(1/x) — is continuous but not differentiable at 0."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Continuity needs <span class=\"mm\">x<sup>a</sup> sin(1/x) → 0</span>; differentiability needs the quotient <span class=\"mm\">x<sup>a−1</sup> sin(1/x)</span> to have a limit. The two conditions differ by exactly one power of <span class=\"mm\">x</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>For continuity, <span class=\"mm\">|x<sup>a</sup> sin(1/x)| ≤ |x|<sup>a</sup> → 0</span> whenever <span class=\"mm\">a > 0</span>.</li><li>The difference quotient at 0 is <span class=\"mm\">(f(h) − f(0))/h = h<sup>a−1</sup> sin(1/h)</span>.</li><li>This tends to 0 exactly when the exponent <span class=\"mm\">a − 1</span> is positive, i.e. <span class=\"mm\">a > 1</span>.</li><li>At <span class=\"mm\">a = 1</span> it is <span class=\"mm\">sin(1/h)</span>, which has no limit, so <span class=\"mm\">a > 1</span> is required.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: continuous for every a > 0, differentiable for every a > 1 — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the same threshold for both properties. The exponent needed for differentiability is one higher than for continuity, which is why the boundary case <span class=\"mm\">a = 1</span> — the function <span class=\"mm\">x sin(1/x)</span> — is continuous but not differentiable at 0.</p>"
+  },
+  {
+   "id": "EM-U3-Q14",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Apply Cauchy's mean value theorem to f(x) = x² and g(x) = x³ on [1, 2]. The point c whose existence it asserts is",
+   "text": "Apply Cauchy's mean value theorem to f(x) = x² and g(x) = x³ on [1, 2]. The point c whose existence it asserts is",
+   "options": [
+    "3/2",
+    "4/3",
+    "7/3",
+    "14/9"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Cauchy's mean value theorem asserts c ∈ (a, b) with f′(c)/g′(c) = (f(b) − f(a))/(g(b) − g(a)), a ratio of chord slopes rather than a single chord slope. It requires g′(x) ≠ 0 on (a, b).",
+    "steps": [
+     "Chord ratio: (4 − 1)/(8 − 1) = 3/7.",
+     "Derivatives: f′(x) = 2x, g′(x) = 3x², so the ratio is 2/(3x).",
+     "Solve 2/(3c) = 3/7: 14 = 9c, so c = 14/9 ≈ 1.556.",
+     "Check 14/9 ∈ (1, 2), as the theorem promises."
+    ],
+    "final": "Answer: 14/9 — option (D).",
+    "trap": "Applying Lagrange's theorem to each function separately and averaging, which gives 3/2 — the midpoint of the x² interval, option (A). Cauchy's theorem couples the two functions through a ratio of derivatives at one common point."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Cauchy's mean value theorem asserts <span class=\"mm\">c ∈ (a, b)</span> with <span class=\"mm\">f′(c)/g′(c) = (f(b) − f(a))/(g(b) − g(a))</span>, a ratio of chord slopes rather than a single chord slope. It requires <span class=\"mm\">g′(x) ≠ 0</span> on <span class=\"mm\">(a, b)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Chord ratio: <span class=\"mm\">(4 − 1)/(8 − 1) = 3/7</span>.</li><li>Derivatives: <span class=\"mm\">f′(x) = 2x</span>, <span class=\"mm\">g′(x) = 3x²</span>, so the ratio is <span class=\"mm\">2/(3x)</span>.</li><li>Solve <span class=\"mm\">2/(3c) = 3/7</span>: <span class=\"mm\">14 = 9c</span>, so <span class=\"mm\">c = 14/9 ≈ 1.556</span>.</li><li>Check <span class=\"mm\">14/9 ∈ (1, 2)</span>, as the theorem promises.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 14/9 — option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Applying Lagrange's theorem to each function separately and averaging, which gives <span class=\"mm\">3/2</span> — the midpoint of the <span class=\"mm\">x²</span> interval, option (A). Cauchy's theorem couples the two functions through a ratio of derivatives at one common point.</p>"
+  },
+  {
+   "id": "EM-U3-Q15",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x, y) = x³ + y³ − 3xy, which statement about the critical points is TRUE?",
+   "text": "For f(x, y) = x³ + y³ − 3xy, which statement about the critical points is TRUE?",
+   "options": [
+    "(0, 0) is a saddle point and (1, 1) is a local minimum.",
+    "(0, 0) and (1, 1) are both saddle points.",
+    "(0, 0) is a local minimum and (1, 1) is a saddle point.",
+    "(1, 1) is a local maximum."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Solve fx = fy = 0, then classify each critical point with the discriminant D = fxxfyy − fxy²: D  is a saddle, D > 0 with fxx > 0 a minimum.",
+    "steps": [
+     "fx = 3x² − 3y = 0 gives y = x²; fy = 3y² − 3x = 0 gives x = y².",
+     "Combining, x = x⁴, so x = 0 or x = 1 (the roots of x³ = 1 are only x = 1 in the reals). The critical points are (0, 0) and (1, 1).",
+     "fxx = 6x, fyy = 6y, fxy = −3, so D = 36xy − 9.",
+     "At (0, 0): D = −9 , a saddle. At (1, 1): D = 27 > 0 and fxx = 6 > 0, a local minimum."
+    ],
+    "final": "Answer: saddle at (0, 0), local minimum at (1, 1) — option (A).",
+    "trap": "Classifying from the Hessian signs alone without the discriminant, which mislabels (0, 0) as a minimum because fyy = 0 is not negative. Also common: discarding (1, 1) as a maximum by analogy with x³, which has no critical point at all."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Solve <span class=\"mm\">f<sub>x</sub> = f<sub>y</sub> = 0</span>, then classify each critical point with the discriminant <span class=\"mm\">D = f<sub>xx</sub>f<sub>yy</sub> − f<sub>xy</sub>²</span>: <span class=\"mm\">D < 0</span> is a saddle, <span class=\"mm\">D > 0</span> with <span class=\"mm\">f<sub>xx</sub> > 0</span> a minimum.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">f<sub>x</sub> = 3x² − 3y = 0</span> gives <span class=\"mm\">y = x²</span>; <span class=\"mm\">f<sub>y</sub> = 3y² − 3x = 0</span> gives <span class=\"mm\">x = y²</span>.</li><li>Combining, <span class=\"mm\">x = x⁴</span>, so <span class=\"mm\">x = 0</span> or <span class=\"mm\">x = 1</span> (the roots of <span class=\"mm\">x³ = 1</span> are only <span class=\"mm\">x = 1</span> in the reals). The critical points are <span class=\"mm\">(0, 0)</span> and <span class=\"mm\">(1, 1)</span>.</li><li><span class=\"mm\">f<sub>xx</sub> = 6x</span>, <span class=\"mm\">f<sub>yy</sub> = 6y</span>, <span class=\"mm\">f<sub>xy</sub> = −3</span>, so <span class=\"mm\">D = 36xy − 9</span>.</li><li>At <span class=\"mm\">(0, 0)</span>: <span class=\"mm\">D = −9 < 0</span>, a saddle. At <span class=\"mm\">(1, 1)</span>: <span class=\"mm\">D = 27 > 0</span> and <span class=\"mm\">f<sub>xx</sub> = 6 > 0</span>, a local minimum.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: saddle at (0, 0), local minimum at (1, 1) — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Classifying from the Hessian signs alone without the discriminant, which mislabels <span class=\"mm\">(0, 0)</span> as a minimum because <span class=\"mm\">f<sub>yy</sub> = 0</span> is not negative. Also common: discarding <span class=\"mm\">(1, 1)</span> as a maximum by analogy with <span class=\"mm\">x³</span>, which has no critical point at all.</p>"
+  },
+  {
+   "id": "EM-U3-Q16",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following limits equal 1?",
+   "text": "Which of the following limits equal 1?",
+   "options": [
+    "limx→0 sin x / x",
+    "limx→0 tan x / x",
+    "limx→0 (ex − 1)/x",
+    "limx→0 (1 − cos x)/x²"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "Each option is a 0/0 form. The three standard limits sin x/x → 1, tan x/x → 1 and (ex − 1)/x → 1 all follow from the definition of the derivative at 0.",
+    "steps": [
+     "(A) sin x / x → 1 is the fundamental trigonometric limit.",
+     "(B) tan x / x = (sin x / x)(1/cos x) → 1 · 1 = 1.",
+     "(C) (ex − 1)/x is the derivative of ex at 0, which is 1.",
+     "(D) (1 − cos x)/x² → 1/2, not 1 — by the half-angle identity or two applications of L'Hôpital's rule."
+    ],
+    "final": "Answer: (A), (B) and (C).",
+    "trap": "Treating every 0/0 limit with a vanishing denominator as 1. The numerator of (D) vanishes to second order, which halves the answer; the order of vanishing decides the value, not the form alone."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each option is a <span class=\"mm\">0/0</span> form. The three standard limits <span class=\"mm\">sin x/x → 1</span>, <span class=\"mm\">tan x/x → 1</span> and <span class=\"mm\">(e<sup>x</sup> − 1)/x → 1</span> all follow from the definition of the derivative at 0.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) <span class=\"mm\">sin x / x → 1</span> is the fundamental trigonometric limit.</li><li>(B) <span class=\"mm\">tan x / x = (sin x / x)(1/cos x) → 1 · 1 = 1</span>.</li><li>(C) <span class=\"mm\">(e<sup>x</sup> − 1)/x</span> is the derivative of <span class=\"mm\">e<sup>x</sup></span> at 0, which is 1.</li><li>(D) <span class=\"mm\">(1 − cos x)/x² → 1/2</span>, not 1 — by the half-angle identity or two applications of L'Hôpital's rule.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating every <span class=\"mm\">0/0</span> limit with a vanishing denominator as 1. The numerator of (D) vanishes to second order, which halves the answer; the order of vanishing decides the value, not the form alone.</p>"
+  },
+  {
+   "id": "EM-U3-Q17",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let f be continuous on the closed interval [a, b]. Which of the following must be TRUE?",
+   "text": "Let f be continuous on the closed interval [a, b]. Which of the following must be TRUE?",
+   "options": [
+    "f is bounded on [a, b].",
+    "f attains a maximum and a minimum on [a, b].",
+    "f is differentiable on (a, b).",
+    "f takes every value between f(a) and f(b)."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Three consequences of continuity on a closed bounded interval: boundedness, the extreme value theorem and the intermediate value theorem. Differentiability is not one of them.",
+    "steps": [
+     "(A) Boundedness follows from the extreme value theorem, which already produces the maximum and minimum.",
+     "(B) This is the extreme value theorem, and it needs the interval closed and bounded.",
+     "(C) False: f(x) = |x| is continuous on [−1, 1] but not differentiable at 0.",
+     "(D) This is the intermediate value theorem."
+    ],
+    "final": "Answer: (A), (B) and (D).",
+    "trap": "Believing continuity is 'almost differentiability'. Continuity is a much weaker hypothesis: |x| is the standard counterexample, and the Weierstrass function is continuous everywhere yet differentiable nowhere."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three consequences of continuity on a closed bounded interval: boundedness, the extreme value theorem and the intermediate value theorem. Differentiability is not one of them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) Boundedness follows from the extreme value theorem, which already produces the maximum and minimum.</li><li>(B) This is the extreme value theorem, and it needs the interval closed and bounded.</li><li>(C) False: <span class=\"mm\">f(x) = |x|</span> is continuous on <span class=\"mm\">[−1, 1]</span> but not differentiable at 0.</li><li>(D) This is the intermediate value theorem.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Believing continuity is 'almost differentiability'. Continuity is a much weaker hypothesis: <span class=\"mm\">|x|</span> is the standard counterexample, and the Weierstrass function is continuous everywhere yet differentiable nowhere.</p>"
+  },
+  {
+   "id": "EM-U3-Q18",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following statements about the mean value theorems are TRUE?",
+   "text": "Which of the following statements about the mean value theorems are TRUE?",
+   "options": [
+    "Rolle's theorem is the special case of Lagrange's mean value theorem in which f(a) = f(b).",
+    "Lagrange's theorem requires continuity on [a, b] and differentiability on (a, b).",
+    "Lagrange's theorem requires differentiability at the endpoints a and b.",
+    "If f′(x) = 0 at every point of an interval, then f is constant on that interval."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Rolle's theorem is Lagrange's with equal endpoint values, and the zero-derivative corollary is what makes the mean value theorem the main tool for proving identities between functions.",
+    "steps": [
+     "(A) With f(a) = f(b) the chord slope is 0, so Lagrange gives f′(c) = 0 — exactly Rolle.",
+     "(B) These are the correct hypotheses: continuity on the closed interval, differentiability on the open one.",
+     "(C) False: the theorem needs no one-sided derivative at the endpoints, only continuity there.",
+     "(D) Apply Lagrange on any subinterval [x₁, x₂]: f(x₂) − f(x₁) = f′(c)(x₂ − x₁) = 0."
+    ],
+    "final": "Answer: (A), (B) and (D).",
+    "trap": "Upgrading the hypothesis to differentiability on [a, b] (option C). Requiring a derivative at the endpoints would exclude functions like √x on [0, 1], for which the theorem still holds."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Rolle's theorem is Lagrange's with equal endpoint values, and the zero-derivative corollary is what makes the mean value theorem the main tool for proving identities between functions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) With <span class=\"mm\">f(a) = f(b)</span> the chord slope is 0, so Lagrange gives <span class=\"mm\">f′(c) = 0</span> — exactly Rolle.</li><li>(B) These are the correct hypotheses: continuity on the closed interval, differentiability on the open one.</li><li>(C) False: the theorem needs no one-sided derivative at the endpoints, only continuity there.</li><li>(D) Apply Lagrange on any subinterval <span class=\"mm\">[x₁, x₂]</span>: <span class=\"mm\">f(x₂) − f(x₁) = f′(c)(x₂ − x₁) = 0</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Upgrading the hypothesis to differentiability on <span class=\"mm\">[a, b]</span> (option C). Requiring a derivative at the endpoints would exclude functions like <span class=\"mm\">√x</span> on <span class=\"mm\">[0, 1]</span>, for which the theorem still holds.</p>"
+  },
+  {
+   "id": "EM-U3-Q19",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For which of the following functions is the discontinuity at the stated point removable?",
+   "text": "For which of the following functions is the discontinuity at the stated point removable?",
+   "options": [
+    "(x² − 4)/(x − 2) at x = 2",
+    "1/x at x = 0",
+    "sin x / x at x = 0",
+    "|x|/x at x = 0"
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution": {
+    "concept": "A discontinuity is removable exactly when the two-sided limit exists and is finite but differs from the function value (or the function is undefined there). A jump or an infinite limit is not removable.",
+    "steps": [
+     "(A) (x² − 4)/(x − 2) = x + 2 for x ≠ 2, so the limit is 4: removable.",
+     "(B) 1/x has one-sided limits ±∞: an infinite discontinuity, not removable.",
+     "(C) sin x / x → 1: removable, since defining the value as 1 makes the function continuous.",
+     "(D) |x|/x equals 1 for x > 0 and −1 for x : a jump, not removable."
+    ],
+    "final": "Answer: (A) and (C).",
+    "trap": "Calling every point where a function is undefined a removable discontinuity. Removability is about the existence of a finite two-sided limit; 1/x and |x|/x both fail that test."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A discontinuity is removable exactly when the two-sided limit exists and is finite but differs from the function value (or the function is undefined there). A jump or an infinite limit is not removable.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) <span class=\"mm\">(x² − 4)/(x − 2) = x + 2</span> for <span class=\"mm\">x ≠ 2</span>, so the limit is 4: removable.</li><li>(B) <span class=\"mm\">1/x</span> has one-sided limits <span class=\"mm\">±∞</span>: an infinite discontinuity, not removable.</li><li>(C) <span class=\"mm\">sin x / x → 1</span>: removable, since defining the value as 1 makes the function continuous.</li><li>(D) <span class=\"mm\">|x|/x</span> equals 1 for <span class=\"mm\">x > 0</span> and −1 for <span class=\"mm\">x < 0</span>: a jump, not removable.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Calling every point where a function is undefined a removable discontinuity. Removability is about the existence of a finite two-sided limit; <span class=\"mm\">1/x</span> and <span class=\"mm\">|x|/x</span> both fail that test.</p>"
+  },
+  {
+   "id": "EM-U3-Q20",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let f(x) = x(x − 1)(x − 2) on [0, 2]. Which of the following are TRUE?",
+   "text": "Let f(x) = x(x − 1)(x − 2) on [0, 2]. Which of the following are TRUE?",
+   "options": [
+    "Rolle's theorem applies to f on [0, 2].",
+    "f′(c) = 0 at exactly two points of (0, 2).",
+    "The conclusion of Rolle's theorem is attained at exactly one point of (0, 2).",
+    "There is a point c in (2, 3) with f′(c) = 0."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution": {
+    "concept": "Rolle needs f continuous on [0, 2], differentiable on (0, 2) and f(0) = f(2). The number of stationary points is found by solving f′(x) = 0.",
+    "steps": [
+     "f is a polynomial, and f(0) = 0 = f(2), so Rolle applies: (A) is true.",
+     "f(x) = x³ − 3x² + 2x, so f′(x) = 3x² − 6x + 2.",
+     "Roots: x = (6 ± √(36 − 24))/6 = 1 ± √3/3, that is ≈ 0.423 and ≈ 1.577, both in (0, 2). So (B) is true and (C) is false.",
+     "Both roots lie below 2, so (D) is false."
+    ],
+    "final": "Answer: (A) and (B).",
+    "trap": "Reading Rolle's theorem as 'exactly one stationary point'. It guarantees at least one; here the cubic has two, and only a computation of the roots shows that both lie inside the interval."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Rolle needs <span class=\"mm\">f</span> continuous on <span class=\"mm\">[0, 2]</span>, differentiable on <span class=\"mm\">(0, 2)</span> and <span class=\"mm\">f(0) = f(2)</span>. The number of stationary points is found by solving <span class=\"mm\">f′(x) = 0</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">f</span> is a polynomial, and <span class=\"mm\">f(0) = 0 = f(2)</span>, so Rolle applies: (A) is true.</li><li><span class=\"mm\">f(x) = x³ − 3x² + 2x</span>, so <span class=\"mm\">f′(x) = 3x² − 6x + 2</span>.</li><li>Roots: <span class=\"mm\">x = (6 ± √(36 − 24))/6 = 1 ± √3/3</span>, that is <span class=\"mm\">≈ 0.423</span> and <span class=\"mm\">≈ 1.577</span>, both in <span class=\"mm\">(0, 2)</span>. So (B) is true and (C) is false.</li><li>Both roots lie below 2, so (D) is false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> Reading Rolle's theorem as 'exactly one stationary point'. It guarantees at least one; here the cubic has two, and only a computation of the roots shows that both lie inside the interval.</p>"
+  },
+  {
+   "id": "EM-U3-Q21",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0 (e2x − 1)/x is ____.",
+   "text": "The value of limx→0 (e2x − 1)/x is ____.",
+   "options": [],
+   "answer": 2,
+   "answer_display": "2",
+   "solution": {
+    "concept": "The form is 0/0. Either recognise (eu − 1)/u → 1 with u = 2x, or differentiate once.",
+    "steps": [
+     "Write (e2x − 1)/x = 2 · (e2x − 1)/(2x).",
+     "With u = 2x → 0, (eu − 1)/u → 1.",
+     "So the limit is 2 · 1 = 2. By L'Hôpital: 2e2x/1 → 2."
+    ],
+    "final": "Answer: 2",
+    "trap": "Reporting 1 by pattern-matching the standard limit (ex − 1)/x → 1 without noticing the factor 2 in the exponent. The rate of the exponential is what survives in the limit."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. Either recognise <span class=\"mm\">(e<sup>u</sup> − 1)/u → 1</span> with <span class=\"mm\">u = 2x</span>, or differentiate once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write <span class=\"mm\">(e<sup>2x</sup> − 1)/x = 2 · (e<sup>2x</sup> − 1)/(2x)</span>.</li><li>With <span class=\"mm\">u = 2x → 0</span>, <span class=\"mm\">(e<sup>u</sup> − 1)/u → 1</span>.</li><li>So the limit is <span class=\"mm\">2 · 1 = 2</span>. By L'Hôpital: <span class=\"mm\">2e<sup>2x</sup>/1 → 2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 1 by pattern-matching the standard limit <span class=\"mm\">(e<sup>x</sup> − 1)/x → 1</span> without noticing the factor 2 in the exponent. The rate of the exponential is what survives in the limit.</p>"
+  },
+  {
+   "id": "EM-U3-Q22",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "continuity-analysis",
+   "subtopic": "continuity-analysis",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let f(x) = (3x² + ax + a + 3)/(x² + x − 2). The function has a removable discontinuity at x = −2 exactly when a equals ____.",
+   "text": "Let f(x) = (3x² + ax + a + 3)/(x² + x − 2). The function has a removable discontinuity at x = −2 exactly when a equals ____.",
+   "options": [],
+   "answer": 15,
+   "answer_display": "15",
+   "solution": {
+    "concept": "The denominator vanishes at x = −2 (it factors as (x + 2)(x − 1)). For the discontinuity to be removable the numerator must vanish there too, cancelling the factor x + 2.",
+    "steps": [
+     "Denominator at x = −2: 4 − 2 − 2 = 0, so the point is a candidate discontinuity.",
+     "Numerator at x = −2: 3 · 4 − 2a + a + 3 = 15 − a.",
+     "Removability needs 15 − a = 0, so a = 15.",
+     "Check: the numerator becomes 3x² + 15x + 18 = 3(x + 2)(x + 3), the denominator (x + 2)(x − 1), and the ratio tends to 3 · 1/(−3) = −1 as x → −2 — a finite limit, so the discontinuity is removable."
+    ],
+    "final": "Answer: 15",
+    "trap": "Setting the numerator's value at x = −2 equal to the denominator's, or cancelling a as if it were a common factor. The condition is that both numerator and denominator vanish at the point, which is what allows the shared factor to cancel."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The denominator vanishes at <span class=\"mm\">x = −2</span> (it factors as <span class=\"mm\">(x + 2)(x − 1)</span>). For the discontinuity to be removable the numerator must vanish there too, cancelling the factor <span class=\"mm\">x + 2</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Denominator at <span class=\"mm\">x = −2</span>: <span class=\"mm\">4 − 2 − 2 = 0</span>, so the point is a candidate discontinuity.</li><li>Numerator at <span class=\"mm\">x = −2</span>: <span class=\"mm\">3 · 4 − 2a + a + 3 = 15 − a</span>.</li><li>Removability needs <span class=\"mm\">15 − a = 0</span>, so <span class=\"mm\">a = 15</span>.</li><li>Check: the numerator becomes <span class=\"mm\">3x² + 15x + 18 = 3(x + 2)(x + 3)</span>, the denominator <span class=\"mm\">(x + 2)(x − 1)</span>, and the ratio tends to <span class=\"mm\">3 · 1/(−3) = −1</span> as <span class=\"mm\">x → −2</span> — a finite limit, so the discontinuity is removable.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 15</span></p><p class=\"row\"><b>Common misconception.</b> Setting the numerator's value at <span class=\"mm\">x = −2</span> equal to the denominator's, or cancelling <span class=\"mm\">a</span> as if it were a common factor. The condition is that both numerator and denominator vanish at the point, which is what allows the shared factor to cancel.</p>"
+  },
+  {
+   "id": "EM-U3-Q23",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "mean-value-theorems",
+   "subtopic": "mean-value-theorems",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x) = x² + 2x on [0, 4], let c be the point whose existence Lagrange's mean value theorem asserts. Then c equals ____.",
+   "text": "For f(x) = x² + 2x on [0, 4], let c be the point whose existence Lagrange's mean value theorem asserts. Then c equals ____.",
+   "options": [],
+   "answer": 2,
+   "answer_display": "2",
+   "solution": {
+    "concept": "Lagrange's theorem gives f′(c) = (f(b) − f(a))/(b − a) for some c strictly inside the interval; for a quadratic the equation is linear in c, so the point is unique.",
+    "steps": [
+     "Chord slope: (f(4) − f(0))/(4 − 0) = (24 − 0)/4 = 6.",
+     "f′(x) = 2x + 2, so solve 2c + 2 = 6.",
+     "c = 2, and 2 ∈ (0, 4) as required."
+    ],
+    "final": "Answer: 2",
+    "trap": "Reporting the midpoint of the interval instead of solving f′(c) = chord slope. For a quadratic the two coincide, which is exactly why the error goes unnoticed here; for f(x) = x³ on [0, 4] the theorem gives c = 4/√3 ≈ 2.31, not the midpoint 2. Always solve the equation the theorem states."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Lagrange's theorem gives <span class=\"mm\">f′(c) = (f(b) − f(a))/(b − a)</span> for some <span class=\"mm\">c</span> strictly inside the interval; for a quadratic the equation is linear in <span class=\"mm\">c</span>, so the point is unique.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Chord slope: <span class=\"mm\">(f(4) − f(0))/(4 − 0) = (24 − 0)/4 = 6</span>.</li><li><span class=\"mm\">f′(x) = 2x + 2</span>, so solve <span class=\"mm\">2c + 2 = 6</span>.</li><li><span class=\"mm\">c = 2</span>, and <span class=\"mm\">2 ∈ (0, 4)</span> as required.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the midpoint of the interval instead of solving <span class=\"mm\">f′(c) = chord slope</span>. For a quadratic the two coincide, which is exactly why the error goes unnoticed here; for <span class=\"mm\">f(x) = x³</span> on <span class=\"mm\">[0, 4]</span> the theorem gives <span class=\"mm\">c = 4/√3 ≈ 2.31</span>, not the midpoint 2. Always solve the equation the theorem states.</p>"
+  },
+  {
+   "id": "EM-U3-Q24",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "indeterminate-forms-lhopital",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "The value of limx→0⁺ x ln x is ____.",
+   "text": "The value of limx→0⁺ x ln x is ____.",
+   "options": [],
+   "answer": 0,
+   "answer_display": "0",
+   "solution": {
+    "concept": "This is the indeterminate form 0 · ∞, which is not covered by L'Hôpital's rule until it is rewritten as a quotient: x ln x = ln x / (1/x), a ∞/∞ form.",
+    "steps": [
+     "Rewrite: x ln x = ln x / x⁻¹, now −∞/∞ as x → 0⁺.",
+     "L'Hôpital: derivative of ln x is 1/x; derivative of x⁻¹ is −x⁻².",
+     "The quotient becomes (1/x)/(−1/x²) = −x → 0.",
+     "Hence the limit is 0."
+    ],
+    "final": "Answer: 0",
+    "trap": "Reporting −∞ from ln x → −∞ and forgetting that the x factor dominates it, or applying L'Hôpital's rule directly to a product. A product form must first be converted to a quotient; x beats ln x as x → 0⁺."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> This is the indeterminate form <span class=\"mm\">0 · ∞</span>, which is not covered by L'Hôpital's rule until it is rewritten as a quotient: <span class=\"mm\">x ln x = ln x / (1/x)</span>, a <span class=\"mm\">∞/∞</span> form.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Rewrite: <span class=\"mm\">x ln x = ln x / x⁻¹</span>, now <span class=\"mm\">−∞/∞</span> as <span class=\"mm\">x → 0⁺</span>.</li><li>L'Hôpital: derivative of <span class=\"mm\">ln x</span> is <span class=\"mm\">1/x</span>; derivative of <span class=\"mm\">x⁻¹</span> is <span class=\"mm\">−x⁻²</span>.</li><li>The quotient becomes <span class=\"mm\">(1/x)/(−1/x²) = −x → 0</span>.</li><li>Hence the limit is 0.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">−∞</span> from <span class=\"mm\">ln x → −∞</span> and forgetting that the <span class=\"mm\">x</span> factor dominates it, or applying L'Hôpital's rule directly to a product. A product form must first be converted to a quotient; <span class=\"mm\">x</span> beats <span class=\"mm\">ln x</span> as <span class=\"mm\">x → 0⁺</span>.</p>"
+  },
+  {
+   "id": "EM-U3-Q25",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "unit_name": "Calculus: Limits, Continuity & Differentiability",
+   "topic": "Calculus: Limits, Continuity & Differentiability",
+   "sub": "partial-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "For f(x, y) = x²y³, the value of ∂⁴f/∂x²∂y² at (1, 1) is ____.",
+   "text": "For f(x, y) = x²y³, the value of ∂⁴f/∂x²∂y² at (1, 1) is ____.",
+   "options": [],
+   "answer": 12,
+   "answer_display": "12",
+   "solution": {
+    "concept": "For a product xmyn the mixed partial of order r in x and s in y is [m!/(m − r)!] · [n!/(n − s)!] · xm−r yn−s, and the order of differentiation does not matter for a polynomial.",
+    "steps": [
+     "Differentiate twice in y: ∂f/∂y = 3x²y², then ∂²f/∂y² = 6x²y.",
+     "Then twice in x: ∂/∂x (6x²y) = 12xy, then ∂²/∂x² (6x²y) = 12y.",
+     "At (1, 1): 12 · 1 = 12. Shortcut: 2!/(0!) · 3!/(1!) · x⁰y¹ = 2 · 6 · y = 12y."
+    ],
+    "final": "Answer: 12",
+    "trap": "Counting the derivative as ∂²f/∂x∂y (order two) rather than order four, which gives 6xy² = 6 at (1, 1). The symbol ∂x² means 'twice in x', and ∂y² means 'twice in y', so four differentiations are performed in all."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a product <span class=\"mm\">x<sup>m</sup>y<sup>n</sup></span> the mixed partial of order <span class=\"mm\">r</span> in <span class=\"mm\">x</span> and <span class=\"mm\">s</span> in <span class=\"mm\">y</span> is <span class=\"mm\">[m!/(m − r)!] · [n!/(n − s)!] · x<sup>m−r</sup> y<sup>n−s</sup></span>, and the order of differentiation does not matter for a polynomial.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Differentiate twice in <span class=\"mm\">y</span>: <span class=\"mm\">∂f/∂y = 3x²y²</span>, then <span class=\"mm\">∂²f/∂y² = 6x²y</span>.</li><li>Then twice in <span class=\"mm\">x</span>: <span class=\"mm\">∂/∂x (6x²y) = 12xy</span>, then <span class=\"mm\">∂²/∂x² (6x²y) = 12y</span>.</li><li>At <span class=\"mm\">(1, 1)</span>: <span class=\"mm\">12 · 1 = 12</span>. Shortcut: <span class=\"mm\">2!/(0!) · 3!/(1!) · x⁰y¹ = 2 · 6 · y = 12y</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12</span></p><p class=\"row\"><b>Common misconception.</b> Counting the derivative as <span class=\"mm\">∂²f/∂x∂y</span> (order two) rather than order four, which gives <span class=\"mm\">6xy² = 6</span> at <span class=\"mm\">(1, 1)</span>. The symbol <span class=\"mm\">∂x²</span> means 'twice in <span class=\"mm\">x</span>', and <span class=\"mm\">∂y²</span> means 'twice in <span class=\"mm\">y</span>', so four differentiations are performed in all.</p>"
   }
  ]
 }
