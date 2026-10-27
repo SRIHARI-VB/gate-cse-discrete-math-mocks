@@ -35,12 +35,13 @@ and no answer, option mark or hint visible until the test is submitted.
 ### Known deviation from the Section 6.4 token rule
 
 The verification checklist item "no hex colour outside `:root`" **fails in the shared shell** and has done since the
-first paper: the locked `<style>` block carries 33 raw hex values outside `:root` (`#f8fafc`, `#9fb8cc`, `#eaf4fb`
-and others, mostly hover, focus and border shades that have no token name yet). Because one shell serves all papers and
-`6.8` treats shell parity as the hard gate, the block was not edited for this run — editing it would have changed all
-43 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
-which is the part the token contract actually pins. Closing the deviation needs one coordinated pass: add the missing
-shades to `:root`, replace the literals, then re-verify all 43 papers together.
+first paper: the locked `<style>` block carries raw hex values outside `:root` — 697 occurrences in a paper and 704
+in the portal (`#f8fafc`, `#9fb8cc`, `#eaf4fb` and others, mostly hover, focus and border shades that have no token
+name yet). Because one shell serves all papers and `6.8` treats shell parity as the hard gate, the block was not
+edited for this run — editing it would have changed all 27 current papers at once. The `:root` block itself is
+byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
+pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
+re-verify all 27 current papers and 19 archived sets together.
 
 ## Rotation log
 
