@@ -7,26 +7,26 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
+- **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 1 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: deterministic PDA (7) · nondeterministic PDA (6) · acceptance by empty store vs final state (6) ·
-  equivalence with CFG (6)
-- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 6 of 11). The bank read back the most recent paper as `{date 2026-10-27, run 4, unit 2,
-  cfl-grammars}`; Unit 2 stood at **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
-  step B4 advanced exactly one unit: `(index_of(cfl-grammars) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Pushdown
-  Automata**. This is Set 1 of 2; 25 questions are now banked on Unit 3, so the next Theory of Computation run
-  generates Unit 3 again before advancing to Unit 4. No override was used, no cap was breached and no second pass has
-  started.
-- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html)
+- Subtopics: weak & strong induction (7) · structural induction (6) · well-ordering principle (6) ·
+  proof techniques & errors (6)
+- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 6 of 11). The bank read back the most recent paper as `{date 2026-10-26, run 2, unit 5,
+  functions}`; Unit 5 stood at **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
+  step B4 advanced exactly one unit: `(index_of(functions) + 1) mod 16 = (4 + 1) mod 16 = 5` → **Unit 6, Mathematical
+  Induction & Recursion**. This is Set 1 of 2; 25 questions are now banked on Unit 6, so the next Discrete Mathematics
+  run generates Unit 6 again before advancing to Unit 7. No override was used, no cap was breached and no second pass
+  has started.
+- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 41 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1025 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 125 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published | 42 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1050 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 125 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 17 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 2 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
@@ -41,6 +41,53 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 24 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Discrete Mathematics → Unit 6 (Mathematical Induction & Recursion), Set 1 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
+  6 of 11); it gave **Discrete Mathematics**. The bank's `runs[]` was sorted by `(date, run)` before reading, because
+  the Discrete Mathematics entries are not stored in chronological order; the most recent paper was
+  `{date 2026-10-26, run 2, unit 5, functions}`. Unit 5 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — and
+  had been current since 2026-10-26, so the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(functions) + 1) mod 16 = (4 + 1) mod 16 = 5` → **Unit 6, Mathematical Induction & Recursion**
+  (`induction-recursion`). This is Set 1 of 2; 25 questions are now banked on Unit 6, so the next Discrete Mathematics
+  run re-selects Unit 6 (25 < 50, 0 days) before advancing to Unit 7. No override was used, no unit exceeded 50
+  questions and no second pass has started.
+- Coverage this run: all four Unit 6 subtopics — weak & strong induction (7), structural induction (6), well-ordering
+  principle (6), proof techniques & errors (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `DM-IR6-Q01`..`DM-IR6-Q25` did not exist in the bank, and every stem was checked against the
+  325 banked Discrete Mathematics questions (Units 1–5 and 16) so that no stem, option set or numeric answer repeats.
+  Unit 6 had no earlier paper, so nothing was archived; the paper is filed only at
+  `discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`, the unit folder holds exactly one current
+  paper, and no root copy was written.
+- **Every countable answer was recomputed by script, not by hand.** `∑_{i=1}^{10} i³ = 55² = 3025` (Q03); a full binary
+  tree with 20 internal nodes has `2·20 + 1 = 41` nodes (Q09); the smallest set containing 1 and closed under doubling
+  and tripling holds exactly **10** values below 20 — 1, 2, 3, 4, 6, 8, 9, 12, 16, 18 (Q12); the largest amount not
+  representable as `4a + 5b` is **11**, confirmed by checking every value up to 60 (Q15); the least `n` with
+  `n! > 2ⁿ` is **4** (Q19). The two string-set questions were settled by generating the sets rather than by inspection:
+  the set `S` with rules `w ↦ awb, bwa` contains `ab, ba, aabb, abab, baba, bbaa` and **not** `abba` (Q10), and the set
+  with rules `w ↦ 0w1, 1w0` contains exactly `0011, 0101, 1010, 1100` at length 4 and **not** `0110` (Q13), which also
+  confirms the characterisation `w = reverse(complement(w))` used in the solution. The closed forms in Q01
+  (`∑ i·2ⁱ = (n−1)2ⁿ⁺¹ + 2`) and Q07 (`∑ k·k! = (n+1)! − 1`) were each checked against the true sum for n = 1..5, and
+  the three distractor formulas in Q01 were checked to fail at n = 2 so that exactly one option survives.
+- The conceptual items were settled by the standard rather than by taste: weak and strong induction prove the same
+  theorems, and the equivalence is exhibited by applying ordinary induction to the running conjunction
+  `Q(n) = P(0) ∧ … ∧ P(n)` (Q04, Q05); structural induction on prefix-generated strings is ordinary induction on length,
+  because each rule raises the length by exactly one (Q11); the well-ordering principle fails for `ℤ`, for `{1/n}` and
+  for `(0, 1]`, which is what Q14 and Q16 turn on; the remainder bound `r < b` in the division algorithm is forced by
+  minimality and not by the definition of `S` (Q18); “all horses are the same colour” fails at `n = 1` because the two
+  groups of one horse do not overlap (Q22); and `¬¬P` yields `P` only classically, which is why option (C) of Q25 is
+  marked false.
+- No GATE PYQ is claimed for Unit 6. No induction question has been verified against an official GATE paper and
+  answer key, so the About tab and the Question Bank tab say so plainly and every item carries
+  `STANDARD_TEXTBOOK` or `ORIGINAL_SYNTHESIS`. The six verified PYQs recorded in the series are unchanged.
+- Verification run before this push: shell parity is byte-identical to the Discrete Mathematics Unit 5 shell outside
+  the seven payload regions (title, header sub-line, tab counts, meta strip, `#qhost`, palette, bank tab, About tab,
+  payload); `find . -name "*.html"` shows `index.html` plus one file per paper and nothing at the repository root;
+  every `href` in `index.html` and in the paper's archive list resolves; the `:root` block is byte-identical to
+  `design-tokens.css`; the paper renders 25 test cards, a 25-button palette and 325 bank cards (350 banked minus the 25
+  in this test, so no question appears twice); and the dashboard counts match `master_bank.json` (1050 questions,
+  42 papers).
 
 - **2026-10-27, Theory of Computation → Unit 3 (Pushdown Automata), Set 1 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 6 of
