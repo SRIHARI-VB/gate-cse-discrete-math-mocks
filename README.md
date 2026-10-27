@@ -7,32 +7,33 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 2 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
+- **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 2 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: FIRST and FOLLOW sets (8) · LL(1) parsing tables (5) · recursive-descent parsers (6) ·
-  left recursion and left factoring (6)
-- Rotation: MODE A drew **Compiler Design** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects. `runs[-1]` for the subject was `{date 2026-10-27, run 3, unit 2, top-down-parsing, Set 1 of 2}`. Unit 2 held
-  **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, so the cap test in step B3 held
-  and the same unit was generated again: **Unit 2, Set 2 of 2**, closing the unit at exactly 50 questions. The previous
-  current paper was moved to `compiler-design/top-down-parsing/archive/gate_cd_mock_2_2026-10-27_run1.html` with its
-  content frozen, so the unit folder holds exactly one current paper and no root copy was written. The Question Bank tab
-  now carries the 50 solved questions of Unit 1 plus the 25 of Unit 2 Set 1, and does not repeat the 25 active questions.
-  No override was used, no unit exceeded 50 questions and no second pass has started. The next Compiler Design run
-  advances to `(index_of(top-down-parsing) + 1) mod 5 = 2` → Unit 3, Bottom-Up Parsing.
-- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2**, 2026-10-27 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html)
+- Subtopics: pointer arithmetic (7) · pointers to functions (6) · dynamic memory allocation (6) ·
+  macro expansion, scope and lifetime (6)
+- Rotation: MODE A drew **Programming and Data Structures** with an unseeded `random.SystemRandom()` draw over all
+  11 GATE CSE subjects. `runs[-1]` for the subject was `{date 2026-10-27, run 3, unit 2, pointers-memory, Set 1 of 2}`.
+  Unit 2 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, so the cap test
+  in step B3 held and the same unit was generated again: **Unit 2, Set 2 of 2**, closing the unit at exactly 50
+  questions. The previous current paper was moved to
+  `programming-data-structures/pointers-memory/archive/gate_ds_mock_2_2026-10-27_run1.html` with its content frozen,
+  so the unit folder holds exactly one current paper and no root copy was written. The Question Bank tab now carries
+  the 50 solved questions of Unit 1 plus the 25 of Unit 2 Set 1, and does not repeat the 25 active questions. No
+  override was used, no unit exceeded 50 questions and no second pass has started. The next Programming and Data
+  Structures run advances to `(index_of(pointers-memory) + 1) mod 7 = 2` → Unit 3, Linear Data Structures.
+- Previous test: **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 2 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 54 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 32 current · 22 archived |
+| Papers published (current + archived) | 55 (15 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 32 current · 23 archived |
 | Test cards on the portal | 34 |
 | Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1350 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 100 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1375 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 100 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 22 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 23 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -59,6 +60,81 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Programming and Data Structures → Unit 2 (Pointers, Memory & Preprocessors), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw,
+  giving **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-27, run 3, unit 2, pointers-memory, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so the cap test in
+  step B3 held and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now
+  holds exactly 50 questions — the cap — and the next Programming and Data Structures run advances
+  `(index_of(pointers-memory) + 1) mod 7 = (1 + 1) mod 7 = 2` → **Unit 3, Linear Data Structures**. The Set 1 paper
+  was moved to `programming-data-structures/pointers-memory/archive/gate_ds_mock_2_2026-10-27_run1.html` with its
+  content frozen, and the Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper
+  and no root copy was written. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — pointer arithmetic (7), pointers to functions (6), dynamic memory
+  allocation (6) and macro expansion, scope and lifetime (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="programming-data-structures"`, `data-unit="pointers-memory"`, `data-unit-number="2"` and its
+  subtopic slug.
+- All 25 items are new: `DS-U2B-Q01`..`DS-U2B-Q25` did not exist in the bank, and every stem and every option set was
+  compared against the 75 banked Programming and Data Structures items (Unit 1 and Unit 2 Set 1) with a
+  string-normalised check over the whole card (tags stripped, case and punctuation removed): zero collisions, and no
+  id overlap. The five stems that read "What does this program print?" are distinguished by their code blocks, which
+  is why the comparison is made over the full card text rather than the stem alone.
+- **Every countable answer was recomputed independently, not by hand.** No C compiler exists in the build sandbox, so
+  each fragment was simulated in Python against C semantics rather than compiled: the pointer trace
+  `*p, p[-1]` from `a + 2` gives `6 4` (Q02); `(char *)(a + 1) - (char *)a` on `int a[4][3]` gives **12** (Q03);
+  `(*q)[1] += 10` through `int **` writes `a[2]` and leaves `a[1]` alone, giving `8 19` (Q04); `sizeof(b)` for
+  `int *b[3]` is **24** and `sizeof(*c)` for `int (*c)[4]` is **16** (Q06); the converging-pointer loop makes **2**
+  increments on `{3, 1, 4, 1, 5, 9, 2}` with the trace `(3,2) false, (1,9) true, (4,5) true` (Q07); the function
+  pointer chain `inc` then `dbl` from 3 accumulates **12** (Q09); `apply(p, 2 + 3, 4)` through `mul` is **20** (Q10);
+  the nested dispatch `a(b(2, 3), 4)` is `add(mul(2,3),4)` = **10** (Q12); the pointer swap gives `6 4` (Q13);
+  `calloc(12, sizeof(struct pt))` requests **96** bytes (Q15); the two-level allocation makes **4** calls totalling
+  **72** bytes (Q19); `3 * DOUBLE(4)` with `#define DOUBLE(x) (x) + (x)` is `12 + 4` = **16** (Q20); and
+  `B * 2` with `#define B A + 2`, `A = 3` is `3 + 2 * 2` = **7** (Q23). **25 of 25 answers reproduced; 0
+  disagreements.**
+- The conceptual items were settled against the standard rather than by taste: `&a` for `int a[10]` has type
+  `int (*)[10]` because the operand of unary `&` does not decay (Q01); `r[0] + 5` on a row of 5 ints is a
+  one-past-the-end pointer whose dereference is undefined even though the byte is physically inside the next row
+  (Q05); only `==` and `!=` are defined between function pointers, and function pointers are not guaranteed to survive
+  a round trip through `void *` (Q11); a failed `realloc` leaves the original block allocated, while a successful
+  moving `realloc` frees it, which is what makes the temporary-variable idiom necessary (Q16, Q17); `free` invalidates
+  every pointer into the block, not only the one passed to it (Q18); and `#define SIZE 5` followed by
+  `int SIZE = 3;` is a syntax error because a macro cannot be shadowed by a declaration (Q24).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4
+  and (D) 3, and the five MSQ answer sets are (A,B,C), (A,B), (A,B,C), (A,C,D) and (A,B,C).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **75 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the 50
+  Unit 1 questions and the 25 Unit 2 Set 1 questions — under one accordion per unit and one heading per subtopic,
+  every solution collapsed. The 25 active Set 2 questions do not appear there (verified: zero overlap between the 25
+  active cards and the 75 bank-tab cards). Units 3–7 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions replaced by placeholders (title, header sub-line, tab label, meta set chip, `#qhost`,
+  bank tab, About tab, payload), the remaining **28 414 bytes are byte-identical** to the shell extracted from the
+  Programming and Data Structures Unit 2 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper,
+  `index.html` and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4
+  deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**53 checks, all passing**, across five runs): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, key tab disabled and labelled locked,
+  key pane empty, summary hidden, timer at 60:00, one card visible, every input enabled); the palette reaches `ans`,
+  `amr` and back, falls back to `na` on Clear response, and the palette button opens its question; all four tabs open;
+  all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards;
+  one wrong MCQ, one skipped MCQ, an MSQ one option short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong
+  and 1 unattempted, confirming that an MSQ earns nothing unless the exact set is selected and that there is no
+  negative marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every card carries `data-subject`,
+  `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase
+  difficulty values; and all four subtopics appear.
+- `index.html` holds all **1375** questions. Its data block was updated in place: the existing 2026-10-27 Programming
+  and Data Structures Unit 2 record was retargeted at the new paper and given an `archives` entry pointing at the
+  frozen Set 1 copy (so the card reads "Earlier sets for this date: Set 1"), and the 25 new question records were
+  appended. No unit had to be registered — Programming and Data Structures Units 1–7 were already in the portal's
+  `units` table. The static header strings were recomputed from the data block and now read 65 units, 34 sets
+  published, 1375 solved questions / records and 281 subtopics. Every path in the data block resolves against the
+  repository tree.
 
 - **2026-10-27, Operating Systems → Unit 3 (Deadlocks), Set 1 of 2.** MODE A: one subject was drawn uniformly at
   random from all 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw, giving **Operating Systems**.
