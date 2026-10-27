@@ -7,26 +7,26 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 1 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
+- **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2**, 2026-10-27 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-27.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: weak & strong induction (7) · structural induction (6) · well-ordering principle (6) ·
-  proof techniques & errors (6)
-- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 6 of 11). The bank read back the most recent paper as `{date 2026-10-26, run 2, unit 5,
-  functions}`; Unit 5 stood at **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
-  step B4 advanced exactly one unit: `(index_of(functions) + 1) mod 16 = (4 + 1) mod 16 = 5` → **Unit 6, Mathematical
-  Induction & Recursion**. This is Set 1 of 2; 25 questions are now banked on Unit 6, so the next Discrete Mathematics
-  run generates Unit 6 again before advancing to Unit 7. No override was used, no cap was breached and no second pass
-  has started.
-- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
+- Subtopics: stop-and-wait ARQ (5) · Go-Back-N & selective repeat (5) · pure & slotted ALOHA (5) ·
+  CSMA/CD, CSMA/CA & backoff (5) · Ethernet, switches & bridges (5)
+- Rotation: MODE A drew **Computer Networks** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 10 of 11). The bank read back the most recent paper as `{date 2026-10-27, run 2, unit 1,
+  network-fundamentals-framing}`; Unit 1 stood at **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3
+  failed on the cap and step B4 advanced exactly one unit: `(index_of(network-fundamentals-framing) + 1) mod 6 =
+  (0 + 1) mod 6 = 1` → **Unit 2, Data Link Protocols & MAC**. This is Set 1 of 2; 25 questions are now banked on
+  Unit 2, so the next Computer Networks run generates Unit 2 again before advancing to Unit 3. Unit 2 had no earlier
+  paper, so nothing was archived. No override was used, no cap was breached and no second pass has started.
+- Previous test: **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 1 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 42 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1050 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 125 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published | 43 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 5 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1075 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 125 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 17 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 2 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
@@ -36,11 +36,37 @@ The verification checklist item "no hex colour outside `:root`" **fails in the s
 first paper: the locked `<style>` block carries 33 raw hex values outside `:root` (`#f8fafc`, `#9fb8cc`, `#eaf4fb`
 and others, mostly hover, focus and border shades that have no token name yet). Because one shell serves all papers and
 `6.8` treats shell parity as the hard gate, the block was not edited for this run — editing it would have changed all
-24 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
+43 papers at once. The `:root` block itself is byte-identical across `design-tokens.css`, `index.html` and every paper,
 which is the part the token contract actually pins. Closing the deviation needs one coordinated pass: add the missing
-shades to `:root`, replace the literals, then re-verify all 24 papers together.
+shades to `:root`, replace the literals, then re-verify all 43 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Computer Networks → Unit 2 (Data Link Protocols & MAC), Set 1 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 10 of
+  11); it gave **Computer Networks**. `runs[]` was sorted by `(date, run)` before reading: the most recent paper was
+  `{date 2026-10-27, run 2, unit 1, network-fundamentals-framing}`. Unit 1 held **50** questions — exactly
+  `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(network-fundamentals-framing) + 1) mod 6 = (0 + 1) mod 6 = 1` → **Unit 2, Data Link Protocols & MAC**
+  (`data-link-mac`). Unit 2 had no earlier paper, so nothing was archived and the unit folder holds exactly one
+  current paper. This is Set 1 of 2; 25 questions are now banked on Unit 2, so the next Computer Networks run
+  re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3. No override was used, no unit exceeded 50 questions
+  and no second pass has started.
+- Coverage this run: all five Unit 2 subtopics, five questions each — stop-and-wait ARQ, Go-Back-N & selective
+  repeat, pure & slotted ALOHA, CSMA/CD & CSMA/CA & backoff, and Ethernet, switches & bridges. Composition 15 MCQ /
+  5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `CN-DL2-Q01`..`CN-DL2-Q25` did not exist in the bank, and every stem was checked against the
+  50 banked Unit 1 questions so that no stem, option set or numeric answer repeats. The paper is filed only at
+  `computer-networks/data-link-mac/gate_cn_mock_2_2026-10-27.html`, and no root copy was written.
+- **Every countable answer was recomputed by script, not by hand.** Stop-and-wait utilisation `1/41 = 2.44%` (Q01)
+  and `1/5 = 20%` (Q05); slotted-ALOHA success probability `0.9⁹ = 0.387` for 10 stations at p = 0.1 (Q12); pure-ALOHA
+  vulnerable period `2 × 1000/10⁶ s = 2 ms` (Q14); minimum CSMA/CD frame at 100 Mbps over 1 km at 2 × 10⁸ m/s,
+  `100 Mbps × 2 × 5 μs = 1000 bits = 125 bytes` (Q17); the 10 Mbps slot-time frame `10⁷ × 51.2 μs = 512 bits` (Q20).
+  The window bounds were checked against the protocol definitions rather than quoted: Go-Back-N `2ᵐ − 1 = 7` for
+  m = 3 (Q06), selective repeat `2ᵐ⁻¹ = 8` for m = 4 (Q10), and both ALOHA peaks, `1/(2e) = 0.184` (Q11) and
+  `1/e = 0.368`, were evaluated numerically.
+- No `GATE_PYQ_VARIATION` item: `verified_pyqs` is empty for Computer Networks, so nothing in this paper is claimed
+  as an official GATE question, and the About tab and Question Bank tab both say so.
 
 - **2026-10-27, Discrete Mathematics → Unit 6 (Mathematical Induction & Recursion), Set 1 of 2.** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
@@ -1535,7 +1561,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
-| 2 | Data Link Protocols & MAC | `data-link-mac` | 0 | — |
+| 2 | Data Link Protocols & MAC | `data-link-mac` | 25 | yes |
 | 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 0 | — |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
@@ -1570,6 +1596,16 @@ Algorithms:
 | 5 | Instruction Pipelining | `pipelining` | 0 | — |
 | 6 | I/O Interface & Storage | `io-interfaces` | 0 | — |
 
+- **Raw hex in the Unit 2 paper (checked 2026-10-27).** The new paper carries 133 literal hex occurrences outside
+  `:root`, exactly the count in the reference shell it was generated from, so no new value was introduced; every new
+  card uses `var(--…)` tokens or inherits the shared shell's existing tints. The item above still needs its one
+  coordinated pass across all 43 papers.
+- **Bank tab structure (changed 2026-10-27, deliberately).** The Question Bank tab of the Unit 2 paper nests one
+  `details.sub` accordion per subtopic inside the unit accordion, as `6.2` requires, instead of the flat subtopic
+  headings used by the earlier papers. No CSS or JavaScript changed: `details.sub` and `.count` are part of the shared
+  shell, so shell parity still holds. The older papers should be rebuilt with the same structure in the one-pass
+  repair.
+
 ## Provenance rules used in every test
 
 1. A question is called an official GATE PYQ **only** when its year, paper and official answer key have been verified;
@@ -1603,7 +1639,8 @@ review interface.
   both claim to be current, which `4.1` forbids. Both are reachable from `index.html` and both are correct; the fault is
   filing only. Fixing it means moving the 2026-10-26 paper into `archive/` as `..._run1.html`, retargeting its portal
   card and re-running the link check, i.e. the same one-pass repair as the items below. It was not touched by the
-  2026-10-27 Computer Networks run, which confined itself to `computer-networks/network-fundamentals-framing/`.
+  2026-10-27 Computer Networks Unit 1 run, which confined itself to `computer-networks/network-fundamentals-framing/`, nor by the later Computer Networks Unit 2 run of the same
+  date, which confined itself to `computer-networks/data-link-mac/`.
 - `6.4 No raw hex outside :root` is not yet met (the Engineering Mathematics Unit 1 Set 2 paper carries 84 literal hex
   occurrences, against the reference shell's 86 — no new value was added, because the new cards use `var(--muted)`):
   the shipped shell uses literal hex
