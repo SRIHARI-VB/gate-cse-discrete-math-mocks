@@ -7,30 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 2 of 2**, 2026-10-28 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html)
+- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: LR(0) items and the canonical collection (7) · SLR(1) parsing and conflicts (5) · LR(1) and LALR(1)
-  parsers (7) · operator-precedence parsing (6)
-- Rotation: MODE A drew **Compiler Design** with an unseeded `random.SystemRandom()` draw over the 8 subjects that
-  had no paper dated 2026-10-28 (draw index 1 of 8). `runs[]` sorted by `(date, run)` gives the most recent paper for
-  the subject as `{date 2026-10-27, run 5, unit 3, bottom-up-parsing, Set 1 of 2}`. Unit 3 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  step B4 was not reached: the same unit was generated again as **Set 2 of 2**, closing Unit 3 at exactly 50. The
-  advance was not taken on the calendar. No override was used, no unit exceeded 50 questions and no second pass has
-  started.
-- Previous test: **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
+- Subtopics: standard TM models and variants (5) · recursive vs recursively enumerable (5) · halting problem and
+  undecidability (5) · Rice's theorem and reductions (5) · Chomsky hierarchy summary (5)
+- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over the 7 subjects
+  that had no paper dated 2026-10-28 (draw index 6 of 7). `runs[]` sorted by `(date, run)` gives the most recent paper
+  for the subject as `{date 2026-10-27, run 7, unit 4, turing-machines-decidability, Set 1 of 2}`. Unit 4 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so
+  step B3 held and step B4 was not reached: the same unit was generated again as **Set 2 of 2**, closing Unit 4 at
+  exactly 50. The advance was not taken on the calendar. No override was used, no unit exceeded 50 questions and no
+  second pass has started.
+- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 2 of 2**, 2026-10-28 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 61 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 34 current · 27 archived |
+| Papers published (current + archived) | 62 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 34 current · 28 archived |
 | Test cards on the portal | 36 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1525 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1550 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 27 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
+| Archived sets (earlier runs) | 28 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 4 Theory of Computation, 2 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -57,6 +57,79 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Theory of Computation → Unit 4 (Turing Machines & Decidability), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 7 subjects that had no paper
+  dated 2026-10-28 (draw index 6 of 7), giving **Theory of Computation**. `runs[]` sorted by `(date, run)` gives the
+  most recent paper as `{date 2026-10-27, run 7, unit 4, turing-machines-decidability, Set 1 of 2}`. Unit 4 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step
+  B3 held and step B4 was not reached: Unit 4 was generated again, closing it at exactly 50. The next Theory of
+  Computation run advances `(index_of(turing-machines-decidability) + 1) mod 4 = 0` → **Unit 1, Regular Languages &
+  Finite Automata**, and every unit of the subject will then be at the cap, so a second pass starts there; it is
+  recorded here as the first such wrap. No override was used and no unit exceeded 50 questions.
+- Coverage this run: all five Unit 4 subtopics — standard TM models and variants (5), recursive vs recursively
+  enumerable (5), halting problem and undecidability (5), Rice's theorem and reductions (5), Chomsky hierarchy
+  summary (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 =
+  35. Every question carries `data-subject="theory-of-computation"`, `data-unit="turing-machines-decidability"`,
+  `data-unit-number="4"` and its subtopic slug.
+- All 25 items are new: `TOC-U4-S2-Q01`..`TOC-U4-S2-Q25` did not exist in the bank, and every stem was compared
+  against the 175 banked Theory of Computation items with a string-normalised check (tags stripped, case and
+  punctuation removed): zero stem collisions, and no id overlap. Two stems that opened with the bare words "Which of
+  the following statements is TRUE?" were rewritten to name their subject matter before shipping, for exactly that
+  reason.
+- **Every countable answer was recomputed by script, not by hand.** The configuration count of Q15 is
+  `5 × 6 × 2⁶ = 1920`; the input count of Q25 is `1 + 2 + 4 + 8 = 15` strings over `{0, 1}` of length at most 3; the
+  recursive count of Q10 is `1 + 0 + 0 + 1 = 2` over `L₁` recursive, `L₂` r.e. non-recursive, `L₃ = L̄₂` and
+  `L₄ = L₂ ∪ L₃ = Σ*`; the union-closure count of Q05 is 4 of 4; and the r.e. count of Q20 is 3 — items (ii), (iii) and
+  (v), with (i) `L(M) = ∅` and (iv) "does not halt on ε" both outside the r.e. class. **5 of 5 answers reproduced;
+  0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: halting states are exactly the states
+  where δ is undefined, so a loop is the absence of an answer rather than a rejection (Q01); a universal machine is a
+  recogniser and never a decider, because it inherits the loop (Q02); the r.e. languages are the ranges of total
+  computable functions (Q03); an enumerator semi-decides but does not decide (Q04); the r.e. class is closed under
+  union and intersection and not under complement (Q16); a short input does not bound a computation, so `HALT_ε` is
+  undecidable while still r.e. (Q13); a bound that is a function of the input is a clock, so bounded halting is
+  decidable (Q14); `K` is complete for the r.e. languages (Q21); the universal halting question reduces to the
+  existential one and not the reverse, and `{⟨M⟩ : M halts on every input}` is not r.e. (Q22); the multi-tape
+  simulation costs a square while the two-way-tape fold costs a factor of `n`, so (B) of Q23 is the false one;
+  context-free languages are closed under complement and not under intersection (Q24); and Rice's theorem reaches
+  neither the number of states nor space usage (Q09, Q19).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 3 times, (B) 4, (C) 4 and
+  (D) 4, and the five MSQ answer sets are (A,C), (B,D), (A,D), (A,B) and (A,C,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **175 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **175** banked items that are not part of the active set — the 50
+  questions of each of Units 1, 2 and 3 and the 25 of Unit 4 Set 1 — under one accordion per unit and one heading per
+  subtopic, every solution collapsed. The 25 active Set 2 questions do not appear there (verified: the string
+  `TOC-U4-S2` occurs nowhere in the bank tab). The Units 1–3 accordions are carried over byte for byte from the
+  shipped Set 1 paper; the Unit 4 Set 1 accordion is generated from `master_bank.json`.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the nine payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining **27 926 bytes are byte-identical** to the shell extracted
+  from the Theory of Computation Unit 4 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html`
+  and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4 deviation below is
+  untouched and was not partially fixed for one paper. The paper also inherits, unchanged, the three other open
+  shell-level items recorded below (no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/
+  `--violet` tokens rather than their `-d` variants, and the two legacy `proof-techniques` archive files).
+- The paper was exercised in a jsdom harness before shipping (**49 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all four tabs open and the key tab stays locked until submit; all 25 answered correctly scores **35 / 35** with 25
+  correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one skipped MCQ, one wrong MCQ and an MSQ one option
+  short score **31 / 35** with 22 correct, 2 wrong and 1 unattempted; an empty paper scores **0 / 35** with 25 `skip`
+  buttons; an MSQ with one extra option ticked scores **0 / 35**, confirming that an MSQ earns nothing unless the
+  exact set is selected; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`,
+  `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; the Question Bank tab renders
+  175 cards with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1550** questions. Its data block was updated in place: the existing Theory of Computation
+  Unit 4 record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1 copy (so
+  the card reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit had to
+  be registered — Theory of Computation Units 1–4 were already in the portal's `units` table. The static header
+  strings were recomputed from the data block and now read 65 units, 36 sets published and 1550 solved questions /
+  records, with 281 subtopics. Every path in the data block resolves against the repository tree.
 
 - **2026-10-28, Discrete Mathematics → Unit 7 (Counting & Combinatorics), Set 1 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 0 of 11),
