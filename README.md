@@ -7,34 +7,33 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 2 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
+- **Databases · Unit 2 — SQL & Advanced Querying, Set 2 of 2**, 2026-10-28 → [`databases/sql-querying/gate_db_mock_2_2026-10-28.html`](databases/sql-querying/gate_db_mock_2_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: weak and strong induction (7) · structural induction (6) · well-ordering principle (6) ·
-  proof techniques and errors (6)
-- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 6 of 11). `runs[-1]` for the subject was `{date 2026-10-27, run 4, unit 6, induction-recursion,
-  Set 1 of 2}`; Unit 6 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days,
-  below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit was generated again.
-  This is Set 2 of 2, so Unit 6 now holds exactly 50 questions — the cap — and the next Discrete Mathematics run
-  advances `(index_of(induction-recursion) + 1) mod 16 = (5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**.
-  The Set 1 paper was moved to `discrete-mathematics/induction-recursion/archive/gate_dm_mock_6_2026-10-27_run1.html`
-  with its content frozen, and the Set 2 paper took the canonical filename, so the unit folder holds exactly one
-  current paper and no root copy was written. No override was used, no unit exceeded 50 questions and no second pass
-  has started. The Question Bank tab carries the 350 solved questions of Units 1–6 and 16 and does not repeat the 25
-  active questions.
-- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html)
+- Subtopics: DDL, DML and DCL (5) · nested and correlated subqueries (5) · aggregates, GROUP BY and HAVING (5) ·
+  joins and outer joins (5) · views, triggers and constraints (5)
+- Rotation: MODE A drew **Databases** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects
+  (draw index 9 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-26, run 2,
+  unit 1, er-relational-algebra, Set 2 of 2}`. Unit 1 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so
+  the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(er-relational-algebra) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, SQL & Advanced Querying**. Unit 2
+  already held the 25 questions of Set 1, so this set completes it at the cap; the next Databases run advances
+  `(index_of(sql-querying) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Database Normalization**. The Set 1 paper was
+  moved to `databases/sql-querying/archive/gate_db_mock_2_2026-10-26_run1.html` with its content frozen, and the
+  Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no root copy was
+  written. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 2 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 57 (16 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 33 current · 24 archived |
+| Papers published (current + archived) | 58 (15 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 33 current · 25 archived |
 | Test cards on the portal | 35 |
 | Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1425 (375 Discrete Mathematics, 75 Algorithms, 75 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1450 (375 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 24 (8 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 25 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -61,6 +60,87 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Databases → Unit 2 (SQL & Advanced Querying), Set 2 of 2.** MODE A: one subject was drawn uniformly
+  at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 9 of 11), giving
+  **Databases**. `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-26, run 2, unit 1,
+  er-relational-algebra, Set 2 of 2}`. Unit 1 held **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3's
+  cap test failed and step B4 advanced exactly one unit: `(index_of(er-relational-algebra) + 1) mod 5 = (0 + 1) mod
+  5 = 1` → **Unit 2, SQL & Advanced Querying** (`sql-querying`). Unit 2 already held 25 questions from Set 1, so
+  this set closes it at the cap and the next Databases run advances `(1 + 1) mod 5 = 2` → **Unit 3, Database
+  Normalization**. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all five Unit 2 subtopics — DDL, DML and DCL (5), nested and correlated subqueries (5),
+  aggregates with GROUP BY and HAVING (5), joins and outer joins (5), views, triggers and constraints (5).
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every
+  question carries `data-subject="databases"`, `data-unit="sql-querying"`, `data-unit-number="2"` and its subtopic
+  slug.
+- All 25 items are new: `DB-U2-Q26`..`DB-U2-Q50` did not exist in the bank, and every stem and every option set was
+  compared against the 75 banked Databases items (Units 1 and 2 Set 1) with a string-normalised check (tags stripped,
+  case and punctuation removed): zero collisions, and no id overlap. The five stems that open "With the schema and
+  data below" are distinguished by their query blocks, which is why the comparison is made over the full card text
+  rather than the stem alone.
+- **Every countable answer was recomputed by script, not by hand.** The one shared dataset
+  (6 students, 3 courses, 10 enrollments, one unenrolled student and one ungraded enrollment) was replayed in Python
+  against SQL semantics: the cascade chain `dept → emp → dependent` gave **4** rows removed by
+  `DELETE FROM dept WHERE dno = 1` (Q04); the doubly nested correlated query gave **3** students above their own
+  course's average, rolls 11, 13 and 16, with course averages 82.6, 79.667 and 68 (Q10); `COUNT(cid)`,
+  `COUNT(DISTINCT cid)` and `COUNT(*)` gave **10, 3, 10** (Q11); the NULL-keyed table gave **3** groups with the
+  NULL group holding **2** (Q13); the `HAVING AVG(cgpa) > 8.0` subquery left **1** department, CSE at 25.7/3 = 8.567
+  against ECE 7.7 and MECH 6.8 (Q14); `NATURAL JOIN` gave **10** rows over **6** merged columns (Q16); the self-join
+  with `a.roll < b.roll` gave **4** pairs, C(3,2) + C(2,2) + 0 (Q18); the `LEFT JOIN` with `e.marks > 80` in `ON`
+  gave **8** rows, 5 matching pairs plus 3 NULL-extended students (Q20); and the updatable view over CSE gave **3**
+  rows changed (Q24). The `NOT EXISTS` query of Q08 was re-evaluated row by row and returns rolls 12, 14 and 15, and
+  the `UPDATE ... WHERE cid = 'C3'` of Q02 was traced to 73 and NULL. **25 of 25 answers reproduced; 0
+  disagreements.**
+- The conceptual items were settled against the standard rather than by taste: an omitted column takes its
+  `DEFAULT`, so a `NOT NULL` column with a default accepts the row (Q01); NULL propagates through `marks + 5` but
+  the row is still updated (Q02); `REVOKE ... RESTRICT` fails when the grantee has passed the privilege on, and
+  `CASCADE` follows the dependency (Q03); one DML statement is atomic, so a `CHECK` violation on any row leaves the
+  table unchanged, and dropping a table drops the grants on it (Q05); `COUNT(*)` over no rows is 0 while `SUM` and
+  `MAX` are NULL (Q06); a scalar subquery returning five rows is a cardinality error, not a set comparison (Q07);
+  the condition that defines what is being searched for belongs inside `EXISTS` (Q08); `EXISTS` counts rows and `IN`
+  compares values, and a derived table cannot see a sibling table's columns without a lateral construct (Q09);
+  `HAVING` without `GROUP BY` tests the single implicit group (Q12); grouped `SELECT` and `HAVING` may use only
+  grouped columns and aggregates (Q15); `NATURAL JOIN` merges the shared column and is an inner join (Q16); `ON` and
+  `WHERE` are interchangeable for an inner join and not for an outer one (Q17); an outer join preserves the
+  preserved side even when nothing matches (Q19); `WITH CHECK OPTION` rejects a write that would fall outside the
+  view (Q21); `INSTEAD OF` replaces the statement and is defined on views only (Q22); a `CHECK` condition may
+  reference only the row being tested, so no subquery (Q23); and grouping destroys the one-to-one mapping that makes
+  a view updatable (Q25).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 3 times, (B) 5, (C) 5
+  and (D) 2, and the five MSQ answer sets are (A,C,D), (A,B), (A,C,D), (A,B,C) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 1 for this subject (Unit 1), the Question
+  Bank tab shows **75 solved** and **1 verified GATE PYQ**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the 50
+  Unit 1 questions and the 25 Unit 2 Set 1 questions — under one accordion per unit and one heading per subtopic,
+  every solution collapsed. The 25 active Set 2 questions do not appear there (verified: `DB-U2-Q26` and
+  `DB-U2-Q50` occur nowhere in the bank tab). The Unit 1 accordion is carried over byte for byte from the shipped
+  Set 1 paper; the Unit 2 Set 1 accordion is generated from `master_bank.json`.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta
+  strip, `#qhost`, bank tab, About tab, payload), the remaining **27 707 bytes are byte-identical** to the shell
+  extracted from the Databases Unit 2 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper,
+  `index.html` and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4
+  deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**53 checks, all passing**, across five runs): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` or solution markup in
+  the test pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card
+  visible, every input enabled); the palette reaches `na`, `ans`, `amr`, `mrk` and back through Unmark review and
+  Clear response; all four tabs open and the key tab stays locked until submit; all 25 answered correctly scores
+  **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one wrong MCQ, one skipped MCQ, an
+  MSQ one option short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong and 1 unattempted, confirming that
+  an MSQ earns nothing unless the exact set is selected and that there is no negative marking; an empty paper scores
+  **0 / 35** with 25 `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; the Question
+  Bank tab renders 75 cards with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1450** questions. Its data block was updated in place: the existing Databases Unit 2
+  record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1 copy (so the
+  card reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit had to be
+  registered — Databases Units 1–5 were already in the portal's `units` table. The static header strings were
+  recomputed from the data block and now read 65 units, 35 sets published and 1450 solved questions / records, with
+  281 subtopics. Every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Discrete Mathematics → Unit 6 (Mathematical Induction & Recursion), Set 2 of 2.** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
