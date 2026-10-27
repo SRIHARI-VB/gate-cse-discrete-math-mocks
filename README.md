@@ -7,33 +7,34 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 2 — SQL & Advanced Querying, Set 2 of 2**, 2026-10-28 → [`databases/sql-querying/gate_db_mock_2_2026-10-28.html`](databases/sql-querying/gate_db_mock_2_2026-10-28.html)
+- **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 2 of 2**, 2026-10-28 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DDL, DML and DCL (5) · nested and correlated subqueries (5) · aggregates, GROUP BY and HAVING (5) ·
-  joins and outer joins (5) · views, triggers and constraints (5)
-- Rotation: MODE A drew **Databases** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects
-  (draw index 9 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-26, run 2,
-  unit 1, er-relational-algebra, Set 2 of 2}`. Unit 1 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so
-  the cap test in step B3 failed and step B4 advanced exactly one unit:
-  `(index_of(er-relational-algebra) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, SQL & Advanced Querying**. Unit 2
-  already held the 25 questions of Set 1, so this set completes it at the cap; the next Databases run advances
-  `(index_of(sql-querying) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Database Normalization**. The Set 1 paper was
-  moved to `databases/sql-querying/archive/gate_db_mock_2_2026-10-26_run1.html` with its content frozen, and the
+- Subtopics: latches and flip-flops (5) · setup and hold times (7) · characteristic equations (6) ·
+  shift registers (7)
+- Rotation: MODE A drew **Digital Logic** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects
+  (draw index 2 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27, run 5,
+  unit 3, sequential-flipflops, Set 1 of 2}`. Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had
+  been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so the cap test in step B3 held and step B4 was not
+  reached: the current unit was generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions — the
+  cap — and the next Digital Logic run advances
+  `(index_of(sequential-flipflops) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Sequential Circuits: Counters & State
+  Machines**. The Set 1 paper was moved to
+  `digital-logic/sequential-flipflops/archive/gate_dl_mock_3_2026-10-27_run1.html` with its content frozen, and the
   Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no root copy was
   written. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 2 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
+- Previous test: **Databases · Unit 2 — SQL & Advanced Querying, Set 2 of 2**, 2026-10-28 → [`databases/sql-querying/gate_db_mock_2_2026-10-28.html`](databases/sql-querying/gate_db_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 58 (15 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 33 current · 25 archived |
+| Papers published (current + archived) | 59 (15 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 33 current · 26 archived |
 | Test cards on the portal | 35 |
 | Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1450 (375 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1475 (375 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 25 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 26 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -60,6 +61,77 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Digital Logic → Unit 3 (Sequential Circuits: Flip-Flops & Registers), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
+  2 of 11), giving **Digital Logic**. `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27,
+  run 5, unit 3, sequential-flipflops, Set 1 of 2}`. Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and
+  had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the
+  current unit was generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions — the cap — and the
+  next Digital Logic run advances `(index_of(sequential-flipflops) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4,
+  Sequential Circuits: Counters & State Machines**. No override was used, no unit exceeded 50 questions and no second
+  pass has started.
+- Coverage this run: all four Unit 3 subtopics — latches and flip-flops (5), setup and hold times (7), characteristic
+  equations (6) and shift registers (7). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="digital-logic"`,
+  `data-unit="sequential-flipflops"`, `data-unit-number="3"` and its subtopic slug.
+- All 25 items are new: `DL-U3B-Q01`..`DL-U3B-Q25` did not exist in the bank, and every stem and every option set was
+  compared against the 150 banked Digital Logic items with a string-normalised check (tags stripped, case and
+  punctuation removed): zero collisions, and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** The maximum clock frequency of Q06 is
+  `1 / (2 + 5.5 + 0.5 ns) = 125 MHz`; the two-flip-flop circuit of Q15 was iterated to the sequence
+  `00, 01, 10, 11, 00`; the 3-bit Johnson counter of Q12 has a 6-state main cycle, leaving **2** unused states, and the
+  5-bit counter of Q23 leaves **22** of its 32; the right shift of Q11 takes `1101` to `0011` in two clocks and the
+  left shift of Q13 takes `1011` to `0110`; the minimum period of Q22 is `1.5 + 6.5 + 2.0 = 10 ns`; the hold slack of
+  Q24 is `1.2 + 0.5 − 1.4 − 0.2 = 0.1 ns`; the race-around count of Q25 is **2** toggles inside a 10 ns high phase with
+  a 4 ns settling delay; and the feedback register of Q20 was iterated in code — the cycle from `1000` closes after
+  **15** steps, visits every non-zero state, and `0000` is a lock-up. The three conversions of Q18 were checked over
+  both present states and every input pair, and `S = J, R = K` was confirmed to fail as an SR-to-JK conversion.
+  **25 of 25 answers reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: the master–slave output moves when the
+  slave opens, not when the master samples (Q01); `(0, 0)` is the memory condition of a NOR latch, not the forbidden
+  one (Q02); edge-triggering is created by non-overlapping enables (Q03); setup contains the clock period and hold does
+  not (Q05); positive skew relaxes setup and tightens hold by the same amount (Q07, Q17); `J = 1, K = 0` is a set
+  (Q08); `J = Q, K = Q̄` holds and `T = Q` forces 0 (Q09, Q10); a gated latch is level-sensitive, so it can change
+  several times per clock period (Q16); a maximal 4-stage LFSR has period `2⁴ − 1 = 15` (Q14); and a ring counter has
+  `n` states while a Johnson counter has `2n`, neither being self-starting (Q19).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,C,D), (A,B,D), (A,B,C), (A,B,D) and (B,C,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 2 for this subject (both Unit 1), the Question
+  Bank tab shows **125 solved** and **2 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (11) or `ORIGINAL_SYNTHESIS` (14), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **125** banked items that are not part of the active set — the 50
+  questions of Unit 1, the 50 of Unit 2 and the 25 of Unit 3 Set 1 — under one accordion per unit and one heading per
+  subtopic, every solution collapsed. The 25 active Set 2 questions do not appear there (verified: `DL-U3B-Q` occurs
+  nowhere in the bank tab). Unit 4 is reported on one line rather than as an empty accordion.
+- Bank repair this run: the Unit 3 Set 1 records had been banked without `question_html`, and the 25 Unit 2 Set 2
+  records carried only the question number in that field. Both sets were recovered from the papers that hold them and
+  written back into `digital-logic/question-bank/master_bank.json`, so every banked Digital Logic record now carries
+  its card markup. No paper was altered by the repair.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining **27 516 bytes are byte-identical** to the shell extracted
+  from the Digital Logic Unit 3 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key
+  view and the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html` and
+  `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4 deviation below is
+  untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**44 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` and returns through Unmark review and Clear response;
+  all four tabs open and the key tab stays locked until submit; all 25 answered correctly scores **35 / 35** with
+  25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one wrong MCQ, one skipped MCQ, an MSQ one option
+  short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong and 1 unattempted, confirming that an MSQ earns
+  nothing unless the exact set is selected and that there is no negative marking; an empty paper scores **0 / 35**
+  with 25 `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`,
+  `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; the Question Bank tab renders
+  125 cards with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1475** questions. Its data block was updated in place: the existing Digital Logic Unit 3
+  record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1 copy (so the card
+  reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit had to be
+  registered — Digital Logic Units 1–4 were already in the portal's `units` table. The static header strings were
+  recomputed from the data block and now read 65 units and 1475 solved questions / records, with 281 subtopics. Every
+  path in the data block resolves against the repository tree.
 
 - **2026-10-28, Databases → Unit 2 (SQL & Advanced Querying), Set 2 of 2.** MODE A: one subject was drawn uniformly
   at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 9 of 11), giving
