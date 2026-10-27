@@ -7,29 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 3 — Pushdown Automata, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
+- **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 2 of 2**, 2026-10-27 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: deterministic PDA (7) · nondeterministic PDA (6) · acceptance by empty store versus final state (6) ·
-  equivalence with context-free grammars (6)
-- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 6 of 11). The bank's `runs[]` was read in append order — the last appended entry is the most
-  recent paper, and that array is not stored chronologically for several subjects — giving `{date 2026-10-27, run 5,
-  unit 3, pushdown-automata, Set 1 of 2}`. Unit 3 stood at **25** questions, below `UNIT_QUESTION_CAP = 50`, and had
-  been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current
-  unit was generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions and the next Theory of
-  Computation run advances `(index_of(pushdown-automata) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Turing Machines
-  & Decidability**. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2**, 2026-10-27 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-27.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-27.html)
+- Subtopics: critical section & Peterson's solution (7) · hardware primitives: test-and-set & swap (6) ·
+  binary & counting semaphores (6) · producer–consumer, dining philosophers & readers–writers (6)
+- Rotation: MODE A drew **Operating Systems** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 8 of 11). `runs[]` gives the most recent paper as `{date 2026-10-26, run 3, unit 2,
+  synchronization-ipc, Set 1 of 2}`. Unit 2 stood at **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been
+  current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit
+  was generated again. This is Set 2 of 2, so Unit 2 now holds exactly 50 questions and the next Operating Systems run
+  advances `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks**. No override was
+  used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 44 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 6 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Papers published | 45 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 6 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
 | Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1100 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 150 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1125 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 150 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 18 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 3 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
+| Archived sets (earlier runs) | 19 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 2 Operating Systems, 3 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -42,6 +41,70 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 43 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Operating Systems → Unit 2 (Inter-Process Communication & Synchronization), Set 2 of 2.** MODE A:
+  one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()`
+  draw (draw index 8 of 11); it gave **Operating Systems**. `runs[]` gives the most recent paper as
+  `{date 2026-10-26, run 3, unit 2, synchronization-ipc, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so the cap test in
+  step B3 held and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now
+  holds exactly 50 questions and the next Operating Systems run advances
+  `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks**. No override was used, no
+  unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — critical section & Peterson's solution (7), hardware primitives:
+  test-and-set & swap (6), binary & counting semaphores (6), producer–consumer, dining philosophers &
+  readers–writers (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `OS-U2B-Q01`..`OS-U2B-Q25` did not exist in the bank, and every stem was checked against the
+  75 banked Operating Systems items (Unit 1 and Unit 2 Set 1) so that no stem, option set or numeric answer repeats.
+  The Set 1 paper was moved to
+  `operating-systems/synchronization-ipc/archive/gate_os_mock_2_2026-10-26_run1.html` with its content frozen, and
+  the Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no root copy
+  was written.
+- **Every countable answer was recomputed by hand and re-checked by script.** Semaphore arithmetic: a value of 0
+  under `P` goes to −1 with one waiter (Q14); a value of −2 under `V` goes to −1 and wakes exactly one waiter (Q15);
+  the magnitude of −2 is two blocked processes (Q16); a binary mutex at 1 taken by A and then requested by B and C
+  reads −2 with two waiters, whose answer is option (D) (Q17). Concurrency counts: 8 contenders leave 7 spinning
+  (Q13); Peterson's `n − 1` levels for `n = 6` is 5 (Q7); a buffer of capacity 8 with `full = 3` has `empty = 5`
+  (Q24); five forks admit at most ⌊5/2⌋ = 2 simultaneous eaters (Q25). The Peterson trace of Q3 was walked step by
+  step: after `P0: flag[0] = true; turn = 1` and `P1: flag[1] = true; turn = 0`, P0 finds `turn != 1` and enters
+  while P1 spins on `flag[0] && turn == 0`.
+- The conceptual items were settled against the standard rather than by taste: progress and bounded waiting are
+  independent obligations, so progress never implies bounded waiting (Q4, Q5); strict alternation violates progress
+  rather than mutual exclusion (Q5); Peterson's proof assumes sequential consistency, so a store buffer can let both
+  processes in without fences (Q6); interrupt masking is atomic on a uniprocessor but not on a multiprocessor
+  because the mask is per processor (Q19); a ticket lock built from `fetch-and-add` is the construction that adds
+  bounded waiting to an atomic primitive (Q10); a release store can be reordered with the critical-section writes,
+  which is the multicore spin-lock bug (Q12); the four-at-a-time dining-philosophers bound works because it removes
+  circular wait, not because contention disappears (Q22); and the two readers–writers solutions starve writers and
+  readers respectively (Q21).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 3
+  and (D) 4, and the five MSQ answer sets are (A,B,C), (B,C,D), (A,B,D), (A,B,C) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged for this subject, the Question Bank tab shows
+  **75 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the 50
+  Unit 1 questions and the 25 Unit 2 Set 1 questions — under one accordion per unit and one heading per subtopic,
+  every solution collapsed. The 25 active Set 2 questions do not appear there (zero overlap between the 25 active
+  stems and the 75 banked stems).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 228 bytes) and the exam `<script>` (9 411 bytes) are byte-for-byte identical to the Operating
+  Systems Unit 2 Set 1 paper, and the `:root` block is byte-identical to `design-tokens.css` and `index.html`. No new
+  literal hex value was introduced, so the known Section 6.4 deviation below is unchanged and was not partially fixed
+  for one paper.
+- The paper was exercised in a jsdom harness before shipping (19 checks, all passing, plus a second run against a
+  deliberately mixed submission): nothing is revealed pre-submit (every active `.sol` empty, key tab disabled and
+  labelled locked, one card visible, timer at 60:00); all 25 answered correctly scores **35 / 35** with 25 correct;
+  one wrong MCQ, an MSQ one option short and a wrong NAT score **30 / 35** with 22 correct, 3 wrong and 0
+  unattempted, confirming that an MSQ earns nothing unless the exact set is selected and that there is no negative
+  marking; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`,
+  `data-difficulty` and `data-source`; all four subtopics appear; the Question Bank tab renders 75 cards with no
+  active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1125** questions. Its data block was updated in place: the Operating Systems Unit 2 record
+  was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1 copy (so the card reads
+  "Earlier sets for this date: Set 1"), and the 25 new question records were appended. The static header strings were
+  recomputed and now read 64 units, 29 sets published and 1125 solved questions / records. Every `href` on the portal
+  and every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Theory of Computation → Unit 3 (Pushdown Automata), Set 2 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 6 of
