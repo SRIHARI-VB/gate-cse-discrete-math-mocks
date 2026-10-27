@@ -7,31 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
+- **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 2 of 2**, 2026-10-28 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: permutations and combinations (5) · stars and bars (5) · binomial and multinomial coefficients (5) ·
-  inclusion-exclusion counting (5) · double counting (5)
-- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 0 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper for the subject as
-  `{date 2026-10-27, run 5, unit 6, induction-recursion, Set 2 of 2}`. Unit 6 held **50** questions, the cap
-  `UNIT_QUESTION_CAP = 50`, so the step B3 test failed and step B4 advanced one unit:
-  `(index_of(induction-recursion) = 5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**. The advance was taken
-  on the cap, not on the calendar: Unit 6 had been current for only 1 day, well below `DAYS_PER_UNIT_MAX = 7`. No
-  folder existed for Unit 7, so nothing was archived and the paper took the canonical filename; no root copy was
-  written. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 2 of 2**, 2026-10-28 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html)
+- Subtopics: LR(0) items and the canonical collection (7) · SLR(1) parsing and conflicts (5) · LR(1) and LALR(1)
+  parsers (7) · operator-precedence parsing (6)
+- Rotation: MODE A drew **Compiler Design** with an unseeded `random.SystemRandom()` draw over the 8 subjects that
+  had no paper dated 2026-10-28 (draw index 1 of 8). `runs[]` sorted by `(date, run)` gives the most recent paper for
+  the subject as `{date 2026-10-27, run 5, unit 3, bottom-up-parsing, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: the same unit was generated again as **Set 2 of 2**, closing Unit 3 at exactly 50. The
+  advance was not taken on the calendar. No override was used, no unit exceeded 50 questions and no second pass has
+  started.
+- Previous test: **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 60 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 34 current · 26 archived |
+| Papers published (current + archived) | 61 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 34 current · 27 archived |
 | Test cards on the portal | 36 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1500 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1525 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 26 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
+| Archived sets (earlier runs) | 27 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -306,6 +305,62 @@ touches files this run did not create:
   had to be registered — Discrete Mathematics Units 1–16 were already in the portal's `units` table. The static
   header strings were recomputed from the data block and now read 65 units, 35 sets published and 1425 solved
   questions / records, with 281 subtopics. Every path in the data block resolves against the repository tree.
+
+- **2026-10-28, Compiler Design → Unit 3 (Syntax Analysis: Bottom-Up Parsing), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 8 subjects that had no paper dated 2026-10-28, with an unseeded
+  `random.SystemRandom()` draw (draw index 1 of 8), giving **Compiler Design**. `runs[]` sorted by `(date, run)` gives
+  the most recent paper as `{date 2026-10-27, run 5, unit 3, bottom-up-parsing, Set 1 of 2}`. Unit 3 held **25**
+  questions — below `UNIT_QUESTION_CAP = 50` — and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step
+  B3 held and step B4 was not reached: Unit 3 was generated again, closing it at exactly 50 questions. The next
+  Compiler Design run advances `(index_of(bottom-up-parsing) + 1) mod 5 = 3` → Unit 4, Syntax-Directed Translation &
+  Intermediate Code. No override was used and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — LR(0) items and the canonical collection (7), SLR(1) parsing and
+  conflicts (5), LR(1) and LALR(1) parsers (7), operator-precedence parsing (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="compiler-design"`, `data-unit="bottom-up-parsing"`, `data-unit-number="3"` and its subtopic slug.
+- All 25 items are new: `CD-U3-S2-Q01`..`CD-U3-S2-Q25` did not exist in the bank, and no stem or option set repeats a
+  banked Compiler Design item (Units 1, 2 and Unit 3 Set 1). No question is an official GATE PYQ: `verified_pyqs` is
+  empty for this subject and nothing on the paper is claimed as official.
+- **Every countable answer was recomputed by an LR engine written for this run, not by hand.** A closure/GOTO
+  implementation built the canonical LR(0) collection, the SLR(1) table with FOLLOW-based reductions, the canonical
+  LR(1) collection, the LALR(1) merge and the operator-precedence relations from FIRST and LAST. It returned: 20 LR(0)
+  items for the expression grammar `E → E + T | T`, `T → T * F | F`, `F → ( E ) | id` (Q03); 7 LR(0) states for
+  `S → C C`, `C → c C | d`, with `GOTO(I₀, C)` listed item by item (Q04, Q05); 10 canonical LR(1) states for the same
+  grammar against 7 LALR(1) states, the three extra states being the split kernels (Q15); 2 conflicting cells, both
+  shift/reduce, for `S → A a | b A c | d c | b d a`, `A → d` with `FOLLOW(A) = {a, c}` (Q12); one shift/reduce
+  conflict on `=` for `S → L = R | R`, `L → * R | id`, `R → L` (Q10); and, for `E → E + E | E * E | ( E ) | id`,
+  6 pairs satisfying `<·`, 6 satisfying `·>`, 1 satisfying `≌` and 12 pairs with no relation at all (Q23, Q24, Q25).
+  The engine reproduces the shipped Set 1 answers (6 for the `·>` count, `( ≌ )` for the parenthesis pair), which is
+  an independent cross-check of both papers. Grammar classes were checked mechanically rather than asserted:
+  `S → a S b | ε` conflicts in LR(0) on `a` in the initial state but is SLR(1) (Q04); `S → C C`, `C → c C | d` and
+  `S → a S | b S | a` are SLR(1); `S → A a | b A c | d c | b d a` has 2 SLR conflicts and none in LALR(1) (Q18);
+  `S → a A d | b B d | a B e | b A e` has no canonical LR(1) conflict, 2 reduce/reduce conflicts after the merge on
+  `d` and `e`, 14 LR(1) states against 13 LALR(1) states (Q19); and `S → A a | b A c | d c | b d a` has no conflict
+  in its canonical LR(1) table (Q18). No grammar class claimed anywhere on the paper was left unchecked.
+- The Question Bank tab inside the paper lists the **125** banked items that are not part of the active set — the 50
+  of Unit 1, the 50 of Unit 2 and the 25 of Unit 3 Set 1 — under one accordion per unit and one heading per subtopic,
+  every solution collapsed. The 25 active Set 2 questions do not appear there (verified: the string `CD-U3-S2` occurs
+  nowhere in the bank tab). Units 4–5 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block and the exam `<script>` are byte-identical to the Set 1 paper, and the `:root` block is
+  byte-identical across the new paper, `index.html` and `design-tokens.css`. The set of literal hex values outside
+  `:root` is identical to the Set 1 paper's (40 values, none added), so the known Section 6.4 deviation below is
+  untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**45 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards;
+  every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty`
+  and `data-source`, with lowercase difficulty values; 15 MCQ / 5 MSQ / 5 NAT and all four subtopics are present; the
+  Question Bank tab renders 125 cards with no active question repeated; the About tab carries its three sections; and
+  all four tabs open.
+- `index.html` holds all **1525** questions. Its data block was updated in place: the existing 2026-10-27 Compiler
+  Design Unit 3 record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1 copy
+  (so the card reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit had
+  to be registered — Compiler Design Units 1–5 were already in the portal's `units` table. The static header strings
+  were recomputed from the data block and now read 65 units, 36 sets published and 1525 solved questions / records,
+  with 281 subtopics. Every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Compiler Design → Unit 3 (Syntax Analysis: Bottom-Up Parsing), Set 1 of 2.** MODE A: one subject was
   drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 8
