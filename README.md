@@ -7,32 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 2 of 2**, 2026-10-28 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html)
+- **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: latches and flip-flops (5) · setup and hold times (7) · characteristic equations (6) ·
-  shift registers (7)
-- Rotation: MODE A drew **Digital Logic** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects
-  (draw index 2 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27, run 5,
-  unit 3, sequential-flipflops, Set 1 of 2}`. Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had
-  been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so the cap test in step B3 held and step B4 was not
-  reached: the current unit was generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions — the
-  cap — and the next Digital Logic run advances
-  `(index_of(sequential-flipflops) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Sequential Circuits: Counters & State
-  Machines**. The Set 1 paper was moved to
-  `digital-logic/sequential-flipflops/archive/gate_dl_mock_3_2026-10-27_run1.html` with its content frozen, and the
-  Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no root copy was
+- Subtopics: permutations and combinations (5) · stars and bars (5) · binomial and multinomial coefficients (5) ·
+  inclusion-exclusion counting (5) · double counting (5)
+- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 0 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper for the subject as
+  `{date 2026-10-27, run 5, unit 6, induction-recursion, Set 2 of 2}`. Unit 6 held **50** questions, the cap
+  `UNIT_QUESTION_CAP = 50`, so the step B3 test failed and step B4 advanced one unit:
+  `(index_of(induction-recursion) = 5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**. The advance was taken
+  on the cap, not on the calendar: Unit 6 had been current for only 1 day, well below `DAYS_PER_UNIT_MAX = 7`. No
+  folder existed for Unit 7, so nothing was archived and the paper took the canonical filename; no root copy was
   written. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Databases · Unit 2 — SQL & Advanced Querying, Set 2 of 2**, 2026-10-28 → [`databases/sql-querying/gate_db_mock_2_2026-10-28.html`](databases/sql-querying/gate_db_mock_2_2026-10-28.html)
+- Previous test: **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 2 of 2**, 2026-10-28 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 59 (15 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 33 current · 26 archived |
-| Test cards on the portal | 35 |
-| Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1475 (375 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 60 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 34 current · 26 archived |
+| Test cards on the portal | 36 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1500 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 26 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 2 Digital Logic) |
 
@@ -61,6 +58,30 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Discrete Mathematics → Unit 7 (Counting & Combinatorics), Set 1 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 0 of 11),
+  giving **Discrete Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27,
+  run 5, unit 6, induction-recursion, Set 2 of 2}`. Unit 6 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` —
+  and had been current for 1 day, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(induction-recursion) = 5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**. The modulo applied to
+  the advance, not to the day offset. Unit 7 had no folder and no papers, so no paper was moved to `archive/`; the new
+  paper took the canonical filename and the unit folder holds exactly one current paper. No override was used, no unit
+  exceeded 50 questions and no second pass has started.
+- Coverage this run: all five Unit 7 subtopics — permutations and combinations (5), stars and bars (5), binomial and
+  multinomial coefficients (5), inclusion-exclusion counting (5) and double counting (5). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="discrete-mathematics"`, `data-unit="combinatorics"`, `data-unit-number="7"` and its subtopic slug.
+- All 25 items are new: `DM-CB7-Q01`..`DM-CB7-Q25` did not exist in the bank, and every stem and every option set was
+  compared against the 375 previously banked Discrete Mathematics items with a string-normalised check (tags stripped,
+  case and punctuation removed): zero collisions, and no id overlap.
+- The Question Bank tab of this paper lists 375 solved questions: Units 1–5 (50 each), Unit 6 (50, now that Set 2 is
+  superseded and its 25 items moved from the active test into the tab) and Unit 16 (75). The 25 active Unit 7 items are
+  banked in `master_bank.json` but deliberately not repeated in the tab, so the tab holds 400 − 25 = 375.
+- This paper inherits the four open shell items recorded below unchanged (literal hex outside `:root`, no explicit
+  `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens rather than their `-d` variants,
+  and the two legacy `proof-techniques` archive files). Its `<style>` and `<script>` blocks are byte-identical to the
+  paper it was generated from, so shell parity holds.
 
 - **2026-10-28, Digital Logic → Unit 3 (Sequential Circuits: Flip-Flops & Registers), Set 2 of 2.** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
