@@ -7,29 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
+- **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 1 of 2**, 2026-10-27 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: indeterminate forms & L'Hôpital's rule (7) · continuity analysis (6) · mean value theorems (6) ·
-  partial derivatives (6)
-- Rotation: MODE A drew **Engineering Mathematics** from the 11 GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw (seed `213900260`, draw index 1 of 11). `runs[]` sorted by `(date, run)` gives the most
-  recent Engineering Mathematics paper as `{date 2026-10-27, run 5, unit 3, calculus-limits-derivatives, Set 1 of 2}`.
-  Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below
-  `DAYS_PER_UNIT_MAX = 7`, so the cap test in step B3 held and step B4 was not reached: the current unit was generated
-  again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions and the next Engineering Mathematics run advances
-  `(index_of(calculus-limits-derivatives) + 1) mod 5 = (2 + 1) mod 5 = 3` → **Unit 4, Calculus: Maxima, Minima &
-  Integrals**. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 1 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html`](engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html)
+- Subtopics: latches vs flip-flops (8) · setup & hold times (6) · characteristic equations (5) · shift registers (6)
+- Rotation: MODE A drew **Digital Logic** from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (draw index 2 of 11). `runs[-1]` for the subject is `{date 2026-10-27, run 4, unit 2,
+  combinational-circuits, Set 2 of 2}`. Unit 2 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap
+  test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(combinational-circuits) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Sequential Circuits: Flip-Flops &
+  Registers** (`sequential-flipflops`). Unit 3 had no earlier paper, so nothing was archived; the paper is filed only
+  at `digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`, the unit folder holds exactly one current paper and no root copy was written.
+  This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next Digital Logic run re-selects Unit 3
+  (25 < 50, 0 days) before advancing to Unit 4. No override was used, no unit exceeded 50 questions and no second
+  pass has started.
+- Previous test: **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 50 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 29 current · 21 archived |
-| Test cards on the portal | 31 |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1250 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 51 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 30 current · 21 archived |
+| Test cards on the portal | 32 |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1275 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 21 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
@@ -58,6 +59,75 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Digital Logic → Unit 3 (Sequential Circuits: Flip-Flops & Registers), Set 1 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (draw index 2 of 11); it gave **Digital Logic**. `runs[-1]` for the subject is `{date 2026-10-27, run 4, unit 2,
+  combinational-circuits, Set 2 of 2}`. Unit 2 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap
+  test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(combinational-circuits) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Sequential Circuits: Flip-Flops &
+  Registers** (`sequential-flipflops`). Unit 3 had no earlier paper, so nothing was archived; the paper is filed only
+  at `digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`, the unit folder holds exactly one current
+  paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next Digital
+  Logic run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4 of the same pass. No override was used, no
+  unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — latches vs flip-flops (8), setup & hold times (6), characteristic
+  equations (5) and shift registers (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="digital-logic"`,
+  `data-unit="sequential-flipflops"`, `data-unit-number="3"` and its subtopic slug.
+- All 25 items are new: `DL-U3-Q01`..`DL-U3-Q25` did not exist in the bank, and every stem and every option set was
+  compared against the 100 banked Digital Logic items (Units 1 and 2) with a string-normalised check (tags stripped,
+  case and punctuation removed): zero collisions, and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** The shift traces were simulated bit by bit: the
+  right shift of `0000` under the input sequence `1, 0, 1, 1` gives `1000, 0100, 1010, 1101` (Q04); the ring counter
+  from `1000` after three clocks gives `0001` (Q17); `1011` shifted left twice with a 0 entering gives `1100` = 12
+  (Q18); the 4-bit Johnson cycle was generated and has exactly **8** states — `0000, 1000, 1100, 1110, 1111, 0111,
+  0011, 0001` — leaving 8 unused (Q05), while the 4-bit ring cycle has 4 states and leaves 12 (Q24). The timing items
+  were computed from the two inequalities: `T = 2 + 6 + 2 = 10` ns giving **100 MHz** (Q12); a hold slack of
+  `1 + 0.5 − 2 = −0.5` ns giving **0.5** ns of extra delay (Q13); and `T = 1.5 + 3.0 + 1.0 = 5.5` ns giving
+  **181.82 MHz** with a hold slack of +0.7 ns (Q22). The characteristic-equation items were evaluated on both rows of
+  the next-state function: `J = Q̄, K = Q` toggles (Q15), `J = Q, K = Q̄` holds (Q23), and `D = Q̄` toggles (Q16).
+  **Every one of the 25 answers was reproduced by an independent computation; 0 disagreements.**
+- The latch items were settled by solving the cross-coupled equations for both outputs simultaneously rather than by
+  pattern-matching: the NOR latch at `S = 0, R = 1` is forced to `Q = 0, Q̄ = 1` from either previous state (Q01);
+  the NAND latch is set by a low pulse on `S̄` and holds after release (Q02); `S = R = 1` on the NOR latch drives both
+  outputs to 0, which is what makes it forbidden (Q10A); and releasing both NAND inputs from `S̄ = R̄ = 0` leaves two
+  self-consistent solutions, so the outcome is a race, not a priority (Q21). The transparency item follows from the
+  gated latch's definition — while the enable is high, `Q = D` continuously (Q09).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 5, (C) 3 and
+  (D) 3, and the five MSQ answer sets are (A,C,D), (B,C,D), (A,B,C), (A,B,D) and (A,B,C).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 2 for Digital Logic (both Unit 1), the
+  Question Bank tab shows **100 solved** and **2 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`.
+  Every item is `STANDARD_TEXTBOOK` (9) or `ORIGINAL_SYNTHESIS` (16), so nothing on this paper claims
+  previous-year status.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the 50
+  Unit 1 questions and the 50 Unit 2 questions — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active Unit 3 questions do not appear there (verified: zero overlap between the 25
+  active stems and the 100 bank-tab stems). Unit 3 has no accordion of its own this run because all 25 of its banked
+  questions are the active test.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta
+  strip, `#qhost`, bank tab, About tab, payload), the remaining **27 594 bytes are byte-identical** to the shell
+  extracted from the Digital Logic Unit 2 Set 2 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper,
+  `index.html` and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4
+  deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**51 checks, all passing**, across four runs): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane,
+  key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and back through Unmark review and Clear response; the timer was
+  observed ticking 60:00 → 59:59 under a real interval; all 25 answered correctly scores **35 / 35** with 25 correct,
+  0 wrong, 25 `ok` palette buttons and 25 key cards; one wrong MCQ, two MSQs one option short and two wrong NATs score
+  **26 / 35** with 20 correct, 5 wrong and 5 `bad` buttons, confirming that an MSQ earns nothing unless the exact set
+  is selected and that there is no negative marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every
+  card carries all seven data attributes with lowercase difficulty values; all four subtopics appear; the Question
+  Bank tab renders 100 cards with no active question repeated; the About tab carries its three sections; and all four
+  tabs open.
+- `index.html` holds all **1275** questions. Its data block was updated in place: the new test record was inserted at
+  the head of `tests`, the 25 new question records were appended, and Digital Logic Unit 3 was registered in the
+  portal's `units` table (it was the only Digital Logic unit missing). The static header strings were recomputed from
+  the data block and now read 65 units, 32 sets published, 1275 solved questions / records and 281 subtopics. Every
+  path in the data block resolves against the repository tree.
 
 - **2026-10-27, Engineering Mathematics → Unit 3 (Calculus: Limits, Continuity & Differentiability), Set 2 of 2.**
   MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded

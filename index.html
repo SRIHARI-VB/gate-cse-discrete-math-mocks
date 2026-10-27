@@ -171,7 +171,7 @@ footer.foot p{margin:6px 0}
   <div class="brand">GATE CSE 2027 · Mock Test Portal</div>
   <div class="sub">Daily mock tests &amp; solved question archive · 11 subjects</div>
   <div class="spacer"></div>
-  <div class="candidate"><b>SRIHARI V B</b>64 units &middot; 1250 solved questions banked</div>
+  <div class="candidate"><b>SRIHARI V B</b>65 units &middot; 1275 solved questions banked</div>
 </header>
 
 <nav class="tabs">
@@ -183,10 +183,10 @@ footer.foot p{margin:6px 0}
   <div id="view-tests">
     <div class="banner info"><b>Test series portal.</b> One 25-question mock test per day on a rotating unit order; every test is a single self-contained HTML file that opens offline with a question palette, a running timer and answers locked until submission.</div>
     <div class="meta-strip">
-      <span class="chip"><b>64</b> units in the series · <b>31</b> sets published</span>
-      <span class="chip"><b>1250</b> solved questions in the review archive</span>
+      <span class="chip"><b>65</b> units in the series · <b>32</b> sets published</span>
+      <span class="chip"><b>1275</b> solved questions in the review archive</span>
       <span class="chip"><b>1150</b> records in the subject banks</span>
-      <span class="chip">Syllabus covered: 64 units · 277 subtopics</span>
+      <span class="chip">Syllabus covered: 65 units · 281 subtopics</span>
     </div>
     <div class="grid2" id="testList"></div>
   </div>
@@ -202,6 +202,26 @@ footer.foot p{margin:6px 0}
 
 <script id="data" type="text/plain">{
  "tests": [
+  {
+   "date": "2026-10-27",
+   "subject": "digital-logic",
+   "subject_name": "Digital Logic",
+   "unit": 3,
+   "unit_name": "Sequential Circuits: Flip-Flops & Registers",
+   "questions": 25,
+   "duration": 60,
+   "marks": 35,
+   "easy": 10,
+   "medium": 10,
+   "hard": 5,
+   "subtopics": [
+    "Latches vs flip-flops",
+    "Setup & hold times",
+    "Characteristic equations",
+    "Shift registers"
+   ],
+   "path": "digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html"
+  },
   {
    "date": "2026-10-27",
    "subject": "engineering-mathematics",
@@ -2680,6 +2700,31 @@ footer.foot p{margin:6px 0}
     [
      "chomsky-hierarchy-summary",
      "Chomsky hierarchy summary"
+    ]
+   ]
+  },
+  {
+   "n": 3,
+   "name": "Sequential Circuits: Flip-Flops & Registers",
+   "slug": "sequential-flipflops",
+   "subject": "digital-logic",
+   "subject_name": "Digital Logic",
+   "subtopics": [
+    [
+     "latches-vs-flipflops",
+     "Latches vs flip-flops"
+    ],
+    [
+     "setup-and-hold-times",
+     "Setup & hold times"
+    ],
+    [
+     "characteristic-equations",
+     "Characteristic equations"
+    ],
+    [
+     "shift-registers",
+     "Shift registers"
     ]
    ]
   }
@@ -26444,6 +26489,481 @@ footer.foot p{margin:6px 0}
    "options": null,
    "answer_display": "24",
    "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> For a polynomial, mixed partial derivatives commute, so the order of differentiation does not matter; the exponents are simply decremented once per differentiation in that variable.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Differentiate once in <span class=\"mm\">z</span>: <span class=\"mm\">f<sub>z</sub> = x³y²</span>.</li>\n<li>Once in <span class=\"mm\">y</span>: <span class=\"mm\">f<sub>zy</sub> = 2x³y</span>.</li>\n<li>Once in <span class=\"mm\">x</span>: <span class=\"mm\">f<sub>zyx</sub> = 6x²y</span>.</li>\n<li>Twice in <span class=\"mm\">x</span>: <span class=\"mm\">f<sub>zyxx</sub> = 12xy</span>, then <span class=\"mm\">f<sub>zyxxx</sub> = 12y</span>.</li>\n<li>At <span class=\"mm\">(1, 2, 1)</span>: <span class=\"mm\">12 · 1 · 2 = 24</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 24 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Dividing by the exponents or subtracting them, as if differentiating were division; and forgetting that <span class=\"mm\">x</span> is differentiated <i>twice</i>, which halves the result to 12. The exponents <span class=\"mm\">3</span>, <span class=\"mm\">2</span> and <span class=\"mm\">1</span> are decremented once per differentiation, so <span class=\"mm\">f</span> loses two powers of <span class=\"mm\">x</span>.</p>"
+  },
+  {
+   "id": "DL-U3-Q01",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "An active-high SR latch is built from two cross-coupled NOR gates, with <code class=\"mm\">Q = ¬(R ∨ Q̄)</code> and <code class=\"mm\">Q̄ = ¬(S ∨ Q)</code>. The inputs <code class=\"mm\">S = 0</code> and <code class=\"mm\">R = 1</code> are applied and held. Which one of the following describes the outputs?",
+   "options": [
+    "<code class=\"mm\">Q = 0</code>, <code class=\"mm\">Q̄ = 1</code>",
+    "<code class=\"mm\">Q = 1</code>, <code class=\"mm\">Q̄ = 0</code>",
+    "<code class=\"mm\">Q</code> and <code class=\"mm\">Q̄</code> keep their previous values",
+    "<code class=\"mm\">Q = 0</code> and <code class=\"mm\">Q̄ = 0</code>"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A NOR latch has no clock. Each gate is an inverter driven by the other gate's output, so a 1 on <code class=\"mm\">S</code> or on <code class=\"mm\">R</code> forces the cross-coupled pair into a definite state, while <code class=\"mm\">S = R = 0</code> lets it remember.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">R = 1</code> is an input of the gate that produces <code class=\"mm\">Q</code>, so <code class=\"mm\">Q = ¬(1 ∨ Q̄) = 0</code> whatever the old state was.</li><li>With <code class=\"mm\">Q = 0</code> and <code class=\"mm\">S = 0</code>, the other gate gives <code class=\"mm\">Q̄ = ¬(0 ∨ 0) = 1</code>.</li><li>The pair <code class=\"mm\">Q = 0, Q̄ = 1</code> is self-consistent: substituting back reproduces itself, so the latch is stable there.</li><li>That is the reset state, and it is reached whether the latch was previously at 0 or at 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q = 0, Q̄ = 1 — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Reading the two equations in the order they are written and assuming <code class=\"mm\">S</code> drives <code class=\"mm\">Q</code> directly. In a NOR latch <code class=\"mm\">S</code> drives <code class=\"mm\">Q̄</code>, and <code class=\"mm\">R</code> drives <code class=\"mm\">Q</code>; swapping them turns a reset into a set.</p><p class=\"row\"><b>Takeaway.</b> Never reason about a latch from one gate alone: solve the two equations simultaneously and check that the answer reproduces itself.</p>"
+  },
+  {
+   "id": "DL-U3-Q02",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "An active-low SR latch is built from two cross-coupled NAND gates, with <code class=\"mm\">Q = ¬(S̄ ∧ Q̄)</code> and <code class=\"mm\">Q̄ = ¬(R̄ ∧ Q)</code>. It is holding <code class=\"mm\">Q = 0, Q̄ = 1</code> with <code class=\"mm\">S̄ = R̄ = 1</code>. The input <code class=\"mm\">S̄</code> is then pulsed to 0 for 20 ns and returned to 1, while <code class=\"mm\">R̄</code> stays at 1 throughout. What is <code class=\"mm\">Q</code> immediately afterwards?",
+   "options": [
+    "<code class=\"mm\">Q = 0</code>, unchanged, because a low pulse on <code class=\"mm\">S̄</code> only clears the latch",
+    "<code class=\"mm\">Q = 1</code>, because <code class=\"mm\">S̄ = 0</code> forces the gate output to 1",
+    "<code class=\"mm\">Q</code> toggles on every low pulse of <code class=\"mm\">S̄</code>",
+    "Both outputs become 1 and stay there"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a NAND latch the active level is 0: a 0 on <code class=\"mm\">S̄</code> sets (<code class=\"mm\">Q = 1</code>) and a 0 on <code class=\"mm\">R̄</code> resets (<code class=\"mm\">Q = 0</code>). The names carry the bar because the input is inverted inside the gate.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>While <code class=\"mm\">S̄ = 0</code>: <code class=\"mm\">Q = ¬(0 ∧ Q̄) = 1</code>, independent of the previous state.</li><li>Then <code class=\"mm\">Q̄ = ¬(R̄ ∧ Q) = ¬(1 ∧ 1) = 0</code>, so the pair becomes <code class=\"mm\">Q = 1, Q̄ = 0</code>.</li><li>When <code class=\"mm\">S̄</code> returns to 1, both inputs are 1 and the latch holds: <code class=\"mm\">Q = ¬(1 ∧ 0) = 1</code> and <code class=\"mm\">Q̄ = ¬(1 ∧ 1) = 0</code>.</li><li>So the pulse has set the latch, and <code class=\"mm\">Q</code> stays at 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q = 1 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Carrying the NOR latch's polarity over to the NAND latch, so that a low on <code class=\"mm\">S̄</code> is read as a reset. The active level of the input is the level that overrides the feedback, and for a NAND gate that level is 0.</p><p class=\"row\"><b>Takeaway.</b> Read the gate, not the letter: NAND latches are set and reset by zeros, NOR latches by ones.</p>"
+  },
+  {
+   "id": "DL-U3-Q03",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "characteristic-equations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Which one of the following is the characteristic equation of a T flip-flop?",
+   "options": [
+    "<code class=\"mm\">Q⁺ = T · Q</code>",
+    "<code class=\"mm\">Q⁺ = T + Q</code>",
+    "<code class=\"mm\">Q⁺ = T ⊕ Q</code>",
+    "<code class=\"mm\">Q⁺ = T̄ · Q̄</code>"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A characteristic equation is the next-state function <code class=\"mm\">Q⁺</code> written in terms of the present state <code class=\"mm\">Q</code> and the inputs, valid for every combination of them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Read the T flip-flop's defining behaviour: <code class=\"mm\">T = 0</code> holds the state and <code class=\"mm\">T = 1</code> complements it.</li><li>Check the truth table: <code class=\"mm\">(T, Q) = (0, 0) → 0</code>, <code class=\"mm\">(0, 1) → 1</code>, <code class=\"mm\">(1, 0) → 1</code>, <code class=\"mm\">(1, 1) → 0</code>.</li><li>That table is exactly the exclusive-OR of <code class=\"mm\">T</code> and <code class=\"mm\">Q</code>, so <code class=\"mm\">Q⁺ = T ⊕ Q</code>.</li><li>The algebraic form <code class=\"mm\">Q⁺ = TQ̄ + T̄Q</code> is the same statement written out.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q⁺ = T ⊕ Q — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Writing <code class=\"mm\">Q⁺ = T + Q</code>, which is the set condition of an SR latch: it would make the state stick at 1 forever once it is 1, so the flip-flop would never toggle.</p><p class=\"row\"><b>Takeaway.</b> Verify a candidate equation on the two rows that matter — <code class=\"mm\">Q = 0</code> and <code class=\"mm\">Q = 1</code> with the input held at 1 — before trusting it.</p>"
+  },
+  {
+   "id": "DL-U3-Q04",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "A 4-bit serial-in serial-out shift register initially holds <code class=\"mm\">0000</code> and shifts one position to the right on every clock, the incoming bit entering at the most significant end. The serial input sequence <code class=\"mm\">1, 0, 1, 1</code> is applied, one bit per clock, starting with the first bit. What does the register hold after the fourth clock?",
+   "options": [
+    "<code class=\"mm\">1011</code>",
+    "<code class=\"mm\">1101</code>",
+    "<code class=\"mm\">0110</code>",
+    "<code class=\"mm\">1110</code>"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shift register moves its contents one stage per clock. On a right shift the new bit occupies the most significant position and every old bit moves one place towards the least significant end, so the oldest bit is pushed out of the register.</p><p class=\"row\"><b>Step by step.</b> Write the register most significant bit on the left and move every bit one place right, then insert the new bit on the left:</p><ol><li>Start: <code class=\"mm\">0000</code>.</li><li>Clock 1, input 1: <code class=\"mm\">1000</code>.</li><li>Clock 2, input 0: <code class=\"mm\">0100</code>.</li><li>Clock 3, input 1: <code class=\"mm\">1010</code>.</li><li>Clock 4, input 1: <code class=\"mm\">1101</code>.</li></ol><p class=\"row\">A fifth clock would give <code class=\"mm\">1110</code>, which is why the count of clocks has to be followed exactly.</p><p class=\"row\"><span class=\"ansline\">Answer: 1101 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Reading the four applied bits as a word and answering 1011. After four clocks the register holds the four most recent input bits, but in reverse order, because each new bit enters at the left while the older ones move right.</p><p class=\"row\"><b>Takeaway.</b> Always draw the four-stage box and move bits physically; a four-clock trace costs ten seconds and removes every direction ambiguity.</p>"
+  },
+  {
+   "id": "DL-U3-Q05",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "NAT",
+   "difficulty": "easy",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A Johnson counter is built from a 4-bit shift register whose inverted last-stage output is fed back into the first stage. How many distinct states does its main cycle contain? (Enter an integer.)",
+   "options": [],
+   "answer_display": "8",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A Johnson (twisted-ring) counter shifts a single run of 1s in and a run of 0s out, and inverts the feedback. Its cycle length is <code class=\"mm\">2n</code> for <code class=\"mm\">n</code> stages, twice the ring counter's <code class=\"mm\">n</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start from <code class=\"mm\">0000</code> with the inverted output 1 entering at the left.</li><li>The states are <code class=\"mm\">0000, 1000, 1100, 1110, 1111, 0111, 0011, 0001</code>, and the next clock returns to <code class=\"mm\">0000</code>.</li><li>Count them: eight states, which is <code class=\"mm\">2n = 2 × 4 = 8</code>.</li><li>The counter therefore divides the clock by 8 and leaves <code class=\"mm\">16 − 8 = 8</code> states unused.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 8</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4, which is the ring counter's cycle length, or answering 16, which is the number of states the four flip-flops can hold rather than the number the cycle visits.</p><p class=\"row\"><b>Takeaway.</b> Memorise the pair: <code class=\"mm\">n</code> stages give a ring counter of modulus <code class=\"mm\">n</code> and a Johnson counter of modulus <code class=\"mm\">2n</code>.</p>"
+  },
+  {
+   "id": "DL-U3-Q06",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Which one of the following correctly distinguishes a latch from a flip-flop?",
+   "options": [
+    "A latch is edge-triggered, whereas a flip-flop is level-sensitive.",
+    "A latch stores data continuously and has no feedback path, whereas a flip-flop does have one.",
+    "A flip-flop cannot hold state without a continuous clock, whereas a latch can.",
+    "A latch is level-sensitive and stays transparent while its enable is active, whereas a flip-flop changes state only at a clock edge."
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Both devices are bistable and both use feedback. The difference is the gating: a latch is transparent for as long as its enable is high, while a flip-flop samples its input in a narrow window around one clock edge.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A gated D latch with enable 1 passes <code class=\"mm\">D</code> straight to <code class=\"mm\">Q</code>; every change of <code class=\"mm\">D</code> in that window reaches the output, so the device is level-sensitive.</li><li>A D flip-flop built as master–slave gated latches breaks that transparency: the master is transparent on one clock level and the slave on the other, so the output moves only at the edge.</li><li>Both hold their state indefinitely when not enabled or not clocked, so the 'continuous clock' option is false.</li><li>Hence option (D) states the distinction correctly.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Believing a flip-flop is simply a latch with a clock pin. Adding a clock to a latch gives a gated latch, which is still level-sensitive; edge behaviour needs two latches in series.</p><p class=\"row\"><b>Takeaway.</b> Say the trigger condition out loud — 'while enabled' is a latch, 'at the edge' is a flip-flop.</p>"
+  },
+  {
+   "id": "DL-U3-Q07",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The setup time of a flip-flop is the minimum time for which the data input must be:",
+   "options": [
+    "held unchanged after the active clock edge",
+    "held unchanged before the active clock edge",
+    "held unchanged for the whole clock period, on both sides of the edge",
+    "kept at logic 1 before the active clock edge so that the input can be captured"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A flip-flop needs its input stable for a short window around the active edge. The part before the edge is the setup time <code class=\"mm\">t<sub>su</sub></code>, the part after it is the hold time <code class=\"mm\">t<sub>h</sub></code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Inside the flip-flop the input drives a transmission gate and a latch; charge takes a finite time to establish.</li><li>If the input is still moving when the edge arrives, the internal node may sit between the two logic levels when the latch closes.</li><li>That is why the input must already be settled <code class=\"mm\">t<sub>su</sub></code> before the edge — the definition in option (B).</li><li>The requirement after the edge is a separate quantity, the hold time.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: held unchanged before the active clock edge — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Merging setup and hold into a single 'data must be stable around the edge' window. The two are separate constraints with separate fixes: setup is repaired by slowing the clock, hold is not.</p><p class=\"row\"><b>Takeaway.</b> Setup looks backwards from the edge, hold looks forwards. Keep the directions straight and the formulas follow.</p>"
+  },
+  {
+   "id": "DL-U3-Q08",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "In a level-triggered master–slave JK flip-flop with <code class=\"mm\">J = K = 1</code>, the output toggles more than once during a single wide clock pulse, because the master can change state while the clock is still high and the slave then copies each change. This behaviour is known as:",
+   "options": [
+    "the race-around condition",
+    "the forbidden state",
+    "metastability",
+    "the hold-time violation"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A master–slave pair is only edge-triggered if the clock pulse is narrower than the loop delay of the master. With <code class=\"mm\">J = K = 1</code> the master complements on every pass through the loop, so a long pulse lets it oscillate.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>While the clock is high the master is transparent and, with <code class=\"mm\">J = K = 1</code>, toggles after each propagation delay.</li><li>The slave is transparent while the clock is low, so it copies whatever the master finally holds.</li><li>If the pulse is long enough for several toggles, the final value depends on the pulse width rather than on the clock edge — the race-around condition.</li><li>The standard remedy is a true edge-triggered design, or limiting the pulse width.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: the race-around condition — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Calling it metastability. Metastability is an analogue, unresolved level caused by a timing violation; race-around is a deterministic multiple toggle caused by a pulse that is too wide.</p><p class=\"row\"><b>Takeaway.</b> With <code class=\"mm\">J = K = 1</code>, ask how long the clock stays high compared with the loop delay — that comparison is the whole question.</p>"
+  },
+  {
+   "id": "DL-U3-Q09",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A gated D latch has its enable held at 1 throughout. The data input <code class=\"mm\">D</code> goes <code class=\"mm\">0 → 1 → 0 → 1</code> while the enable stays high. What does the output <code class=\"mm\">Q</code> do?",
+   "options": [
+    "<code class=\"mm\">Q</code> stays at 0 until the enable falls, then copies the last <code class=\"mm\">D</code>",
+    "<code class=\"mm\">Q</code> becomes 1 on the first change of <code class=\"mm\">D</code> and stays there",
+    "<code class=\"mm\">Q</code> becomes undefined because <code class=\"mm\">D</code> changed while the enable was high",
+    "<code class=\"mm\">Q</code> follows <code class=\"mm\">D</code> through all four changes and ends at 1"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A gated D latch is transparent while its enable is active: <code class=\"mm\">Q = D</code> continuously, and the latch only remembers when the enable falls.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Enable 1, <code class=\"mm\">D = 0</code>: the feedback loop is broken and <code class=\"mm\">Q = 0</code>.</li><li><code class=\"mm\">D</code> rises to 1: <code class=\"mm\">Q</code> rises with it.</li><li><code class=\"mm\">D</code> falls to 0 and rises to 1 again: <code class=\"mm\">Q</code> copies each change, with only the gate delay in between.</li><li>When the enable finally falls, the last value — 1 — is frozen in the latch.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q follows D and ends at 1 — option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Treating the enable as a clock edge and expecting the latch to sample <code class=\"mm\">D</code> once. That is flip-flop behaviour; a latch tracks its input for the whole enable window.</p><p class=\"row\"><b>Takeaway.</b> In any trace question, first ask whether the enable is high for the whole interval. If it is, the latch output is simply <code class=\"mm\">D</code>.</p>"
+  },
+  {
+   "id": "DL-U3-Q10",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Which of the following statements about latches and flip-flops are TRUE?",
+   "options": [
+    "A NOR-based SR latch with <code class=\"mm\">S = R = 1</code> drives both <code class=\"mm\">Q</code> and <code class=\"mm\">Q̄</code> to 0, which is why that combination is called forbidden.",
+    "A gated D latch samples its input only at the instant the enable falls, so it behaves like an edge-triggered device.",
+    "An edge-triggered flip-flop is commonly built from two gated latches in a master–slave arrangement.",
+    "Gating the <code class=\"mm\">S</code> and <code class=\"mm\">R</code> inputs of an SR latch with its own outputs removes the forbidden combination and gives a JK latch."
+   ],
+   "answer_display": "Options (A), (C), (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three ideas being tested are the forbidden state of an SR latch, the transparency of a latch, and how edge triggering and the JK behaviour are constructed.</p><p class=\"row\"><b>Step by step — evaluate each option.</b></p><ol><li><b>(A) True.</b> With <code class=\"mm\">S = R = 1</code>, each NOR gate has a 1 on an input, so <code class=\"mm\">Q = 0</code> and <code class=\"mm\">Q̄ = 0</code>. The outputs are no longer complements, and if both inputs then return to 0 the latch races to an unpredictable state.</li><li><b>(B) False.</b> A gated latch is transparent while the enable is high; it stores when the enable falls, but it does not sample at that instant. Sampling at one edge is what the master–slave pair achieves.</li><li><b>(C) True.</b> Master–slave gated latches driven by opposite clock levels is the standard edge-triggered construction.</li><li><b>(D) True.</b> Feeding back <code class=\"mm\">Q̄</code> into the <code class=\"mm\">R</code> gate and <code class=\"mm\">Q</code> into the <code class=\"mm\">S</code> gate means the latch sees <code class=\"mm\">S = 0</code> or <code class=\"mm\">R = 0</code> whenever it would otherwise be asked for <code class=\"mm\">S = R = 1</code>; with both inputs at 1 it toggles.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: options (A), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Reading the enable as an edge. The words 'samples at the instant the enable falls' describe a flip-flop, and that single confusion makes option (B) look true.</p><p class=\"row\"><b>Takeaway.</b> For every latch option, ask what the output is while the enable is high; for every flip-flop option, ask what happens at the edge.</p>"
+  },
+  {
+   "id": "DL-U3-Q11",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Which one of the following statements about timing violations is TRUE?",
+   "options": [
+    "A setup-time violation can be removed by slowing the clock, but a hold-time violation cannot.",
+    "Both a setup-time violation and a hold-time violation can be removed by slowing the clock.",
+    "A hold-time violation can be removed by slowing the clock, but a setup-time violation cannot.",
+    "Neither violation depends on the clock period, because both are properties of the flip-flop alone."
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The setup constraint compares the clock period with the path delay, so it contains <code class=\"mm\">T</code>; the hold constraint compares the same path delay with a fixed window after the edge, so it does not.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Setup: <code class=\"mm\">T ≥ t<sub>cq</sub> + t<sub>comb</sub> + t<sub>su</sub></code>. A larger <code class=\"mm\">T</code> — a slower clock — always satisfies it.</li><li>Hold: <code class=\"mm\">t<sub>cq</sub> + t<sub>comb</sub> ≥ t<sub>h</sub></code>. No <code class=\"mm\">T</code> appears, so changing the clock cannot help.</li><li>A hold violation means the data arrives too early and overwrites the value being captured; the remedy is to add delay on the path, not to slow the clock.</li><li>Hence only option (A) is correct.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: option (A).</span></p><p class=\"row\"><b>Common misconception.</b> 'Slow the clock down' is offered as a universal fix. It repairs every setup violation and no hold violation, which is why hold problems are usually found only after the design is otherwise complete.</p><p class=\"row\"><b>Takeaway.</b> Write both inequalities before answering: whichever one contains <code class=\"mm\">T</code> is the one the clock period can fix.</p>"
+  },
+  {
+   "id": "DL-U3-Q12",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Two edge-triggered flip-flops are connected through combinational logic. The clock-to-Q delay is 2 ns, the largest combinational delay on the path is 6 ns and the setup time is 2 ns. Clock skew is zero and the hold constraint is already satisfied. What is the highest clock frequency, in MHz, at which the circuit works correctly? (Enter an integer.)",
+   "options": [],
+   "answer_display": "100",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a single-cycle path the data launched at one edge must reach the capturing flip-flop and settle before the next edge: <code class=\"mm\">T ≥ t<sub>cq</sub> + t<sub>comb</sub> + t<sub>su</sub></code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The launch flip-flop needs 2 ns after the edge to present its output.</li><li>The logic adds up to 6 ns.</li><li>The capture flip-flop needs the data stable 2 ns before the next edge.</li><li>So the minimum period is <code class=\"mm\">2 + 6 + 2 = 10</code> ns.</li><li>The highest frequency is <code class=\"mm\">1 / 10 ns = 100</code> MHz.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 100 MHz</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by the combinational delay alone, which gives 166.7 MHz and ignores both flip-flop delays. The setup time is as much part of the period as the logic delay is.</p><p class=\"row\"><b>Takeaway.</b> The critical-path formula is three terms added, never two: launch delay, logic delay, capture setup.</p>"
+  },
+  {
+   "id": "DL-U3-Q13",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "In a synchronous circuit the minimum clock-to-Q delay of the launching flip-flop is 1 ns, the smallest combinational delay on the path is 0.5 ns and the hold time of the capturing flip-flop is 2 ns. What is the smallest extra delay, in ns, that must be inserted on the path to remove the hold-time violation? (Enter a decimal such as 0.5.)",
+   "options": [],
+   "answer_display": "0.5",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The hold check uses the <i>fastest</i> arrival of new data at the capturing flip-flop: <code class=\"mm\">t<sub>cq,min</sub> + t<sub>comb,min</sub> ≥ t<sub>h</sub></code>. New data that arrives too soon destroys the value being captured.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Earliest arrival of the new value after the edge: <code class=\"mm\">1 + 0.5 = 1.5</code> ns.</li><li>The old value must survive <code class=\"mm\">t<sub>h</sub> = 2</code> ns after the same edge.</li><li>Slack <code class=\"mm\">= 1.5 − 2 = −0.5</code> ns, so the path is 0.5 ns too fast.</li><li>Adding 0.5 ns of delay brings the arrival to exactly 2 ns, which meets the hold time with zero slack.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.5 ns</span></p><p class=\"row\"><b>Common misconception.</b> Using the maximum delays in a hold check. Hold is decided by the earliest data arrival, so the minimum delays are the ones that matter — the opposite of the setup calculation.</p><p class=\"row\"><b>Takeaway.</b> Setup uses worst-case (maximum) delays, hold uses best-case (minimum) delays. Getting that pairing right is most of the marks.</p>"
+  },
+  {
+   "id": "DL-U3-Q14",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Which of the following statements about setup time and hold time are TRUE?",
+   "options": [
+    "Increasing the clock frequency repairs a hold-time violation.",
+    "Setup time is measured before the active clock edge.",
+    "Hold time is measured after the active clock edge.",
+    "A negative hold time means the data may change before the active clock edge and still be captured correctly."
+   ],
+   "answer_display": "Options (B), (C), (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The two numbers describe one window around the active edge: <code class=\"mm\">t<sub>su</sub></code> before it, <code class=\"mm\">t<sub>h</sub></code> after it. Either may be zero or negative in a real library cell.</p><p class=\"row\"><b>Step by step — evaluate each option.</b></p><ol><li><b>(A) False.</b> The hold constraint <code class=\"mm\">t<sub>cq,min</sub> + t<sub>comb,min</sub> ≥ t<sub>h</sub></code> has no clock period in it, so frequency cannot affect it; a faster clock only makes setup harder.</li><li><b>(B) True.</b> Setup time is the interval before the edge in which the data must already be stable.</li><li><b>(C) True.</b> Hold time is the interval after the edge in which the data must remain stable.</li><li><b>(D) True.</b> A negative hold time means the input may change slightly before the edge and the cell still captures the old value; the window simply extends to the other side of the edge.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: options (B), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming hold time must be positive. Library cells routinely publish negative hold times, and treating them as an error leads to inserting delay that is not needed.</p><p class=\"row\"><b>Takeaway.</b> Picture the window straddling the edge; a negative number simply means the window has slid across the edge, not that the rule has changed.</p>"
+  },
+  {
+   "id": "DL-U3-Q15",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "characteristic-equations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A JK flip-flop is wired with <code class=\"mm\">J = Q̄</code> and <code class=\"mm\">K = Q</code>. Which one of the following gives its next state?",
+   "options": [
+    "<code class=\"mm\">Q⁺ = 0</code> always, because <code class=\"mm\">J</code> and <code class=\"mm\">K</code> are complements",
+    "<code class=\"mm\">Q⁺ = Q̄</code>, so the flip-flop toggles on every clock",
+    "<code class=\"mm\">Q⁺ = Q</code>, so the flip-flop holds its state",
+    "<code class=\"mm\">Q⁺ = 1</code> always, because <code class=\"mm\">J = 1</code> when <code class=\"mm\">Q = 0</code>"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Substitute the wiring into the JK characteristic equation <code class=\"mm\">Q⁺ = JQ̄ + K̄Q</code> and simplify.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>With <code class=\"mm\">Q = 0</code>: <code class=\"mm\">J = Q̄ = 1</code> and <code class=\"mm\">K = Q = 0</code>, so <code class=\"mm\">Q⁺ = 1·1 + 1·0 = 1</code> — the flip-flop sets.</li><li>With <code class=\"mm\">Q = 1</code>: <code class=\"mm\">J = 0</code> and <code class=\"mm\">K = 1</code>, so <code class=\"mm\">Q⁺ = 0·0 + 0·1 = 0</code> — the flip-flop resets.</li><li>In both rows the next state is the complement of the present state, so <code class=\"mm\">Q⁺ = Q̄</code>.</li><li>This is exactly a T flip-flop with <code class=\"mm\">T = 1</code>: it toggles on every clock.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q⁺ = Q̄, it toggles — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Noticing that <code class=\"mm\">J</code> and <code class=\"mm\">K</code> are complements and concluding that the outputs are therefore fixed. <code class=\"mm\">J ≠ K</code> means set or reset, and since which one is active depends on <code class=\"mm\">Q</code>, the result is a toggle.</p><p class=\"row\"><b>Takeaway.</b> Evaluate both rows of the characteristic equation; two rows settle every 'what does this wiring do' question.</p>"
+  },
+  {
+   "id": "DL-U3-Q16",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "characteristic-equations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "A D flip-flop has its <code class=\"mm\">Q̄</code> output fed back to its <code class=\"mm\">D</code> input. The resulting one-flip-flop circuit behaves as:",
+   "options": [
+    "an SR latch, because the feedback creates the forbidden state",
+    "a D latch, because the input is still <code class=\"mm\">D</code>",
+    "a T flip-flop with <code class=\"mm\">T = 1</code>, toggling on every clock",
+    "a JK flip-flop with <code class=\"mm\">J = K = 0</code>, which holds its state"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The D flip-flop obeys <code class=\"mm\">Q⁺ = D</code>. Feedback changes the function by changing what <code class=\"mm\">D</code> is.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <code class=\"mm\">D = Q̄</code>, so <code class=\"mm\">Q⁺ = Q̄</code>.</li><li>From <code class=\"mm\">Q = 0</code> the next state is 1; from <code class=\"mm\">Q = 1</code> it is 0.</li><li>That is precisely <code class=\"mm\">Q⁺ = T ⊕ Q</code> with <code class=\"mm\">T = 1</code>, the toggle mode of a T flip-flop.</li><li>The output therefore divides the clock by 2.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: a T flip-flop with T = 1 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Calling it a D latch because the device is still a D flip-flop. The name of the component does not fix the function once the input is driven from the output.</p><p class=\"row\"><b>Takeaway.</b> Any 'output fed back to input' question reduces to substituting the feedback into the characteristic equation and reading the resulting row pair.</p>"
+  },
+  {
+   "id": "DL-U3-Q17",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A 4-bit ring counter is initialised to <code class=\"mm\">1000</code> and shifts one position to the right on every clock, with the last stage fed back into the first. What does it hold after three clock pulses?",
+   "options": [
+    "<code class=\"mm\">0100</code>",
+    "<code class=\"mm\">0010</code>",
+    "<code class=\"mm\">1000</code>",
+    "<code class=\"mm\">0001</code>"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A ring counter is a shift register with the last stage fed back to the first, so the single 1 circulates and never leaves the register.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start: <code class=\"mm\">1000</code>.</li><li>After 1 clock: <code class=\"mm\">0100</code>.</li><li>After 2 clocks: <code class=\"mm\">0010</code>.</li><li>After 3 clocks: <code class=\"mm\">0001</code>.</li><li>A fourth clock returns the counter to <code class=\"mm\">1000</code>, so the modulus is 4.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0001 — option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Counting the initial state as one of the three shifts and stopping at <code class=\"mm\">0010</code>. The question counts clock pulses, not states visited.</p><p class=\"row\"><b>Takeaway.</b> With a ring counter of <code class=\"mm\">n</code> stages the state after <code class=\"mm\">k</code> clocks has its 1 at position <code class=\"mm\">k mod n</code>.</p>"
+  },
+  {
+   "id": "DL-U3-Q18",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A 4-bit shift register holds <code class=\"mm\">1011</code> and shifts left on every clock, with a 0 entering at the least significant end each time. After two clock pulses the register holds a 4-bit value; give that value as an unsigned decimal integer. (Enter an integer.)",
+   "options": [],
+   "answer_display": "12",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A left shift moves every bit one place towards the most significant end, which multiplies the stored value by 2 and discards any bit shifted out of the top. The vacated least significant position takes the serial input.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start: <code class=\"mm\">1011</code> = 11.</li><li>After 1 clock: <code class=\"mm\">0110</code> = 6. The top bit 1 was shifted out.</li><li>After 2 clocks: <code class=\"mm\">1100</code> = 12.</li><li>Check by arithmetic: <code class=\"mm\">(11 × 4) mod 16 = 44 mod 16 = 12</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12</span></p><p class=\"row\"><b>Common misconception.</b> Expecting 44, that is 11 × 4, and forgetting that a 4-bit register can hold only 16 values, so the bits shifted past the top are lost rather than retained.</p><p class=\"row\"><b>Takeaway.</b> A left shift is multiplication by 2 modulo the register width; a right shift is division by 2, rounding down.</p>"
+  },
+  {
+   "id": "DL-U3-Q19",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Which of the following are standard uses or properties of a shift register?",
+   "options": [
+    "Converting a serial bit stream into a parallel word.",
+    "Delaying a serial data stream by a fixed number of clock periods.",
+    "Multiplying an unsigned binary number by 2 by shifting the bits left when no bit is lost.",
+    "A 4-bit ring counter built from a shift register has 8 distinct states in its cycle."
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shift register is a chain of flip-flops with a common clock; it converts between serial and parallel form, stores, delays and shifts data.</p><p class=\"row\"><b>Step by step — evaluate each option.</b></p><ol><li><b>(A) True.</b> Load the bits one per clock and read all the outputs together — that is a serial-in parallel-out register.</li><li><b>(B) True.</b> Each stage adds one clock of delay, so an <code class=\"mm\">n</code>-stage register delays a serial stream by <code class=\"mm\">n</code> periods.</li><li><b>(C) True.</b> A left shift multiplies by 2, provided no significant bit is shifted past the most significant end.</li><li><b>(D) False.</b> A ring counter of 4 stages has 4 states; the counter with <code class=\"mm\">2n = 8</code> states is the Johnson counter, which inverts the feedback.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating ring and Johnson counters as the same circuit. The ring counter feeds the last stage back directly; the Johnson counter feeds back its complement, which doubles the cycle length.</p><p class=\"row\"><b>Takeaway.</b> Ring = <code class=\"mm\">n</code> states, Johnson = <code class=\"mm\">2n</code> states; the feedback connection is the whole difference.</p>"
+  },
+  {
+   "id": "DL-U3-Q20",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "characteristic-equations",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Which of the following characteristic equations are correct?",
+   "options": [
+    "D flip-flop: <code class=\"mm\">Q⁺ = D</code>",
+    "T flip-flop: <code class=\"mm\">Q⁺ = T ⊕ Q</code>",
+    "JK flip-flop: <code class=\"mm\">Q⁺ = JQ + K̄Q̄</code>",
+    "SR flip-flop: <code class=\"mm\">Q⁺ = S + R̄Q</code>, with <code class=\"mm\">SR = 0</code>"
+   ],
+   "answer_display": "Options (A), (B), (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each characteristic equation is the next-state function of one flip-flop type, and each must reproduce that flip-flop's mode table for every input combination.</p><p class=\"row\"><b>Step by step — check each equation on the decisive row.</b></p><ol><li><b>(A) Correct.</b> The D flip-flop copies its input: <code class=\"mm\">Q⁺ = D</code>.</li><li><b>(B) Correct.</b> With <code class=\"mm\">T = 0</code> it gives <code class=\"mm\">Q⁺ = Q</code> (hold) and with <code class=\"mm\">T = 1</code> it gives <code class=\"mm\">Q⁺ = Q̄</code> (toggle).</li><li><b>(C) Wrong.</b> The correct JK equation is <code class=\"mm\">Q⁺ = JQ̄ + K̄Q</code>. Test the written form at <code class=\"mm\">J = 1, K = 1, Q = 1</code>: it gives <code class=\"mm\">1·1 + 0·0 = 1</code>, but a JK flip-flop must toggle to 0.</li><li><b>(D) Correct.</b> <code class=\"mm\">Q⁺ = S + R̄Q</code> sets on <code class=\"mm\">S = 1</code>, resets on <code class=\"mm\">R = 1, S = 0</code> and holds on <code class=\"mm\">S = R = 0</code>; the condition <code class=\"mm\">SR = 0</code> excludes the forbidden input.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Swapping <code class=\"mm\">Q</code> and <code class=\"mm\">Q̄</code> in the JK equation. The test is always the same: put <code class=\"mm\">J = K = 1, Q = 1</code> in and see whether the equation toggles.</p><p class=\"row\"><b>Takeaway.</b> Memorise one probe row per flip-flop type; one substitution catches almost every misremembered equation.</p>"
+  },
+  {
+   "id": "DL-U3-Q21",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "An active-low SR latch of two cross-coupled NAND gates is held with <code class=\"mm\">S̄ = R̄ = 0</code> for a long time, and then both inputs are returned to 1 at the same instant. Which one of the following describes the outcome?",
+   "options": [
+    "<code class=\"mm\">Q</code> settles to 0 and <code class=\"mm\">Q̄</code> to 1, because reset dominates set.",
+    "<code class=\"mm\">Q</code> settles to 1 and <code class=\"mm\">Q̄</code> to 0, because set dominates reset.",
+    "The latch enters a race: which output settles at 1 depends on the relative gate delays, so the final state is not predictable from the inputs.",
+    "Both outputs settle at 0 and stay there until the next pulse."
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Holding both NAND-latch inputs at 0 forces <code class=\"mm\">Q = Q̄ = 1</code>, a state that violates the complement relation. Releasing both inputs simultaneously removes that forcing while the circuit is still symmetric, so the outcome is decided by a race between the two gates.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>While <code class=\"mm\">S̄ = R̄ = 0</code>: <code class=\"mm\">Q = ¬(0 ∧ Q̄) = 1</code> and <code class=\"mm\">Q̄ = ¬(0 ∧ Q) = 1</code>.</li><li>Release both to 1: the equations become <code class=\"mm\">Q = ¬Q̄</code> and <code class=\"mm\">Q̄ = ¬Q</code>, which both <code class=\"mm\">(0, 1)</code> and <code class=\"mm\">(1, 0)</code> satisfy.</li><li>Whichever gate switches first drives the other, so the settled state depends on delay mismatches, noise and layout — it is genuinely unpredictable.</li><li>That is the race condition, and it is why <code class=\"mm\">S̄ = R̄ = 0</code> is forbidden.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: a race with an unpredictable final state — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Believing one input 'wins' — usually that reset wins because it is listed second. Nothing in the symmetric circuit gives either gate priority.</p><p class=\"row\"><b>Takeaway.</b> Any question that releases both forbidden inputs at once has the answer 'unpredictable'; a question that releases them at different times has the answer given by whichever was released last.</p>"
+  },
+  {
+   "id": "DL-U3-Q22",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "setup-and-hold-times",
+   "type": "NAT",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A synchronous circuit has a clock-to-Q delay between 1.0 ns and 1.5 ns, a setup time of 1.0 ns, a hold time of 0.5 ns, and combinational logic whose delay lies between 0.2 ns and 3.0 ns. What is the highest clock frequency, in MHz, at which the circuit is free of both setup and hold violations? Give the answer rounded to two decimal places.",
+   "options": [],
+   "answer_display": "181.82",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two independent inequalities must hold. Setup uses the slowest path, hold uses the fastest: <code class=\"mm\">T ≥ t<sub>cq,max</sub> + t<sub>comb,max</sub> + t<sub>su</sub></code> and <code class=\"mm\">t<sub>cq,min</sub> + t<sub>comb,min</sub> ≥ t<sub>h</sub></code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Hold check: <code class=\"mm\">1.0 + 0.2 = 1.2 ≥ 0.5</code>, so hold is satisfied with 0.7 ns of slack and does not limit the frequency.</li><li>Setup check: <code class=\"mm\">T ≥ 1.5 + 3.0 + 1.0 = 5.5</code> ns.</li><li>Highest frequency: <code class=\"mm\">1 / 5.5 ns = 181.818…</code> MHz.</li><li>Rounded to two decimal places: 181.82 MHz.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 181.82 MHz</span></p><p class=\"row\"><b>Common misconception.</b> Using the minimum delays in the setup calculation, which gives <code class=\"mm\">1.0 + 0.2 + 1.0 = 2.2</code> ns and a wildly optimistic 454.55 MHz. Setup is a worst-case check: the slowest launch and the slowest logic decide it.</p><p class=\"row\"><b>Takeaway.</b> When a question gives both a minimum and a maximum, it is testing whether you pair them correctly — maximum for setup, minimum for hold.</p>"
+  },
+  {
+   "id": "DL-U3-Q23",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "characteristic-equations",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "The characteristic equation of a JK flip-flop is <code class=\"mm\">Q⁺ = JQ̄ + K̄Q</code>. If the inputs are wired as <code class=\"mm\">J = Q</code> and <code class=\"mm\">K = Q̄</code>, then <code class=\"mm\">Q⁺</code> equals:",
+   "options": [
+    "<code class=\"mm\">Q</code>",
+    "<code class=\"mm\">Q̄</code>",
+    "<code class=\"mm\">0</code>",
+    "<code class=\"mm\">1</code>"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Substitute the wiring into the characteristic equation and simplify; the answer must hold for both values of <code class=\"mm\">Q</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>With <code class=\"mm\">Q = 0</code>: <code class=\"mm\">J = 0</code>, <code class=\"mm\">K = 1</code>, so <code class=\"mm\">Q⁺ = 0·1 + 0·0 = 0 = Q</code>.</li><li>With <code class=\"mm\">Q = 1</code>: <code class=\"mm\">J = 1</code>, <code class=\"mm\">K = 0</code>, so <code class=\"mm\">Q⁺ = 1·0 + 1·1 = 1 = Q</code>.</li><li>Both rows give <code class=\"mm\">Q⁺ = Q</code>, so the flip-flop holds its state on every clock.</li><li>Algebraically: <code class=\"mm\">Q·Q̄ + Q̄·Q = 0</code> for the first term and the second term gives <code class=\"mm\">Q</code>, leaving <code class=\"mm\">Q⁺ = Q</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Q⁺ = Q — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Comparing with the toggle wiring <code class=\"mm\">J = Q̄, K = Q</code> and assuming the swapped pair also toggles. The swap turns the toggle into a hold, which is exactly why the question exists.</p><p class=\"row\"><b>Takeaway.</b> Two similar-looking wirings can be opposite functions; always evaluate both rows rather than pattern-matching.</p>"
+  },
+  {
+   "id": "DL-U3-Q24",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "shift-registers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "A 4-bit ring counter and a 4-bit Johnson counter are each built from a 4-bit shift register. Counting only the states that are not on the main cycle, how many unused states does each counter have?",
+   "options": [
+    "12 for the ring counter and 12 for the Johnson counter",
+    "12 for the ring counter and 8 for the Johnson counter",
+    "8 for the ring counter and 8 for the Johnson counter",
+    "4 for the ring counter and 8 for the Johnson counter"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Four flip-flops give <code class=\"mm\">2⁴ = 16</code> possible states. The number of unused states is 16 minus the length of the counter's main cycle.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Ring counter: the single 1 circulates through 4 positions, so the cycle length is <code class=\"mm\">n = 4</code>.</li><li>Unused states for the ring counter: <code class=\"mm\">16 − 4 = 12</code>.</li><li>Johnson counter: the run of 1s grows and then shrinks, so the cycle length is <code class=\"mm\">2n = 8</code>.</li><li>Unused states for the Johnson counter: <code class=\"mm\">16 − 8 = 8</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12 and 8 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 and 8, which are the cycle lengths rather than the unused counts, or assuming both counters waste the same number of states.</p><p class=\"row\"><b>Takeaway.</b> The Johnson counter is the one to prefer when state utilisation matters, precisely because it halves the number of unused states.</p>"
+  },
+  {
+   "id": "DL-U3-Q25",
+   "subject": "digital-logic",
+   "unit": 3,
+   "unit_slug": "sequential-flipflops",
+   "subtopic": "latches-vs-flipflops",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Which of the following statements about metastability in synchronous circuits are TRUE?",
+   "options": [
+    "Metastability can be triggered when either the setup or the hold time of a flip-flop is violated.",
+    "Two flip-flops in cascade form a synchroniser that reduces, but does not eliminate, the chance that a metastable level reaches the rest of the circuit.",
+    "Metastability arises when the data and clock transitions arrive so close together that the flip-flop cannot resolve to a defined level within its delay.",
+    "Raising the clock frequency lowers the probability of metastability, because the flip-flop is clocked more often."
+   ],
+   "answer_display": "Options (A), (B), (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Metastability is an analogue condition: when the input changes inside the setup/hold window, the internal latch is driven to a level between the two logic rails and takes an unbounded time to resolve.</p><p class=\"row\"><b>Step by step — evaluate each option.</b></p><ol><li><b>(A) True.</b> Either violation leaves the latch without a well-defined value at the edge, which is the definition of the metastable window.</li><li><b>(B) True.</b> A second flip-flop gives the first one a full clock period to resolve, which cuts the failure probability to the residue of that one period — smaller, never zero.</li><li><b>(C) True.</b> Simultaneous data and clock transitions are exactly the cause; the flip-flop cannot decide, so its output hovers.</li><li><b>(D) False.</b> A faster clock means more edges per second and a shorter resolution time per edge, so the probability of failure per unit time rises, not falls.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Believing a two-flip-flop synchroniser removes metastability. It cannot: no purely synchronous circuit can eliminate an asynchronous input's uncertainty, it can only make the residual probability small enough to be acceptable.</p><p class=\"row\"><b>Takeaway.</b> Metastability is probabilistic — quote mean time between failures, never a guarantee of zero.</p>"
   }
  ]
 }</script>
