@@ -7,55 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 2 of 2**, 2026-10-27 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html)
+- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: OSI & TCP/IP models (6) · delays & bandwidth-delay product (6) · framing: bit & byte stuffing (6) ·
-  CRC, checksum & Hamming (7)
-- Rotation: MODE A drew **Computer Networks** with an unseeded `random.SystemRandom()` draw over the 11 subjects
-  (draw index 10 of 11). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "Set 1 of 2"}` with **25**
-  questions banked on Unit 1; 25 < `UNIT_QUESTION_CAP = 50` and the unit had been current for 1 day, so step B3 held
-  and step B4 was never reached — Unit 1 was generated again. This is Set 2 of 2, so the unit now stands at exactly
-  50 questions and the next Computer Networks run advances to `(0 + 1) mod 6 = 1` → Unit 2, Data Link Protocols & MAC.
-  No override was used, no cap was breached and no second pass has started.
-- Previous test: **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 1 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
-- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: pointer arithmetic (7) · pointers to functions (6) · dynamic memory allocation (6) · macro expansion,
-  scope & lifetime (6)
-- Rotation: MODE A drew **Programming and Data Structures** at random from the nine subjects that had not already
-  produced a paper dated 2026-10-27 (`random.Random(20261027).choice`; Digital Logic and Computer Architecture were
-  excluded because each had already run today). The bank read back `runs[-1] = {date 2026-10-26, unit 1, set "2 of
-  2"}` with **50** questions banked on Unit 1, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
-  step B4 advanced exactly one unit: `(index_of(c-programming-core) + 1) mod 7 = (0 + 1) mod 7 = 1` → **Unit 2,
-  Pointers, Memory & Preprocessors**. This is Set 1 of 2, so the unit stands at 25 questions and the next
-  Programming and Data Structures run repeats Unit 2 under step B3 (25 < 50, 0 days current) to close it at 50. No
-  override was used, no cap was breached and no second pass has started.
-- Previous test: **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 1 of 2**, 2026-10-27 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-27.html)
-- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: hardwired control (7) · microprogrammed control (6) · ALU & datapath timing (6) · bus architectures (6)
-- Rotation: MODE A drew **Computer Architecture** at random from the 11 subjects (`random.Random(20261027).choice` over the
-  ten subjects that had no paper yet today). Computer Architecture had no `master_bank.json` and no `runs[]` entry, so
-  the B6 fallback picked the starting unit: `(2026-10-27 − 2026-10-26) mod 6 = 1` → **Unit 2, CPU Control Design & Data
-  Path**. This is Set 1 of 2, so the unit stands at 25 questions and the next Computer Architecture run repeats Unit 2
-  under step B3 (25 < 50, 0 days current) to close it at 50. No override was used, no cap was breached and no second
-  pass has started. This is the eleventh subject in the series and the first paper filed under it.
-- Previous test: **Digital Logic · Unit 2 — Combinational Circuit Design, Set 2 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html`](digital-logic/combinational-circuits/gate_dl_mock_2_2026-10-27.html)
-- Rotation: MODE A drew Digital Logic at random from the 11 subjects (`random.Random(20261027).choice`). The bank read
-  back `runs[-1] = {date 2026-10-27, unit 2, set "Set 1 of 2"}` with **25** questions banked on Unit 2, below
-  `UNIT_QUESTION_CAP = 50` and current for 0 days, so step B3 held and the current unit was generated again; step B4
-  was not reached. This is Set 2 of 2, so Unit 2 now stands at exactly 50 questions and the next Digital Logic run
-  advances to `(1 + 1) mod 4 = 2` → Unit 3, Sequential Circuits: Flip-Flops & Registers. No override was used and no
-  second pass has started.
-- Previous test: **Digital Logic · Unit 2 — Combinational Circuit Design, Set 1 of 2**, 2026-10-27 → [`digital-logic/combinational-circuits/archive/gate_dl_mock_2_2026-10-27_run1.html`](digital-logic/combinational-circuits/archive/gate_dl_mock_2_2026-10-27_run1.html)
+- Subtopics: CFG derivation trees (6) · ambiguity in grammars (6) · CNF & GNF normal forms (7) · closure
+  properties of CFLs (6)
+- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over the seven
+  subjects that had not already produced a paper dated 2026-10-27. The bank read back `runs[-1] = {date
+  2026-10-26, unit 2, set "Set 1 of 2"}` with **25** questions banked on Unit 2; 25 < `UNIT_QUESTION_CAP = 50`
+  and the unit had been current for 1 day, so step B3 held and step B4 was never reached — Unit 2 was generated
+  again. This is Set 2 of 2, so the unit now stands at exactly 50 questions and the next Theory of Computation
+  run advances to `(1 + 1) mod 4 = 2` → Unit 3, Pushdown Automata. No override was used, no cap was breached and
+  no second pass has started.
+- Previous test: **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 2 of 2**, 2026-10-27 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 39 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 3 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Papers published | 40 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
 | Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 975 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 75 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1000 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 100 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 16 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 1 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
+| Archived sets (earlier runs) | 17 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 2 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -68,6 +41,69 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 24 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Theory of Computation → Unit 2 (Grammars & Context-Free Languages), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random from the seven subjects that had not already produced a paper dated
+  2026-10-27 (discrete-mathematics, engineering-mathematics, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases) with an unseeded `random.SystemRandom()` draw; it gave **Theory of Computation**.
+  The bank read back `runs[-1] = {date 2026-10-26, unit 2, set "Set 1 of 2"}`; Unit 2 stood at **25** questions,
+  below `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held
+  and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now holds
+  exactly 50 questions and the next Theory of Computation run advances to
+  `(index_of(cfl-grammars) + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**. No override was used, no unit
+  exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — CFG derivation trees (6), ambiguity in grammars (6), CNF & GNF
+  normal forms (7), closure properties of CFLs (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: no stem repeats `TOC-U2-Q01`..`TOC-U2-Q25`. The Set 1 paper was moved to
+  `theory-of-computation/cfl-grammars/archive/gate_toc_mock_2_2026-10-26_run1.html` with its content frozen, and
+  the Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper. No root copy
+  was written.
+- **Every countable answer was recomputed by script, not by hand.** The Catalan recurrence gives **2** trees for
+  `a + a + a` under `S → S + S | a` (Q8) and **5** trees for `aaaa` under `S → SS | a` (Q12), cross-checked
+  against `C₂ = 2` and `C₃ = 5`; `S → aS | Sa | a` was enumerated by its recurrence `T(n) = 2T(n−1)` and yields
+  1, 2, 4, 8 trees for `a`, `aa`, `aaa`, `aaaa`, so the shortest ambiguous string is `aa` (Q9); the Dyck
+  membership test was run on `aabb`, `abab`, `aaabbb` (in) and `abba` (out) for `S → aSb | SS | ε` (Q3); the
+  `ε`-node tree for `a⁴b⁴` under `S → aSb | ε` was walked node by node, giving **5** internal nodes (Q2); the
+  unit-production elimination on `S → A | B | c, A → aA | a, B → bB | b` was executed symbolically and leaves
+  `S → aA | a | bB | b | c` plus the two untouched nonterminals, i.e. **9** productions (Q15); and the CYK
+  triangular table for `n = 10` is `10 × 11 / 2 = **55**` entries (Q21).
+- The conceptual items were settled by the standard rather than by taste: a node and its ordered children encode
+  exactly one production; the yield of a subtree rooted at `A` is a string derivable from `A`, not a member of
+  `L(G)`; a nonterminal repeated on one root-to-leaf path is the tree-level statement of the CFL pumping lemma
+  and says nothing about ambiguity; `S → AB | ε` with nullable `A` and `B` is ambiguous because `ε` has two
+  trees; GNF derivations take exactly `|w|` steps while CNF trees have `2n − 1` nodes; the `j > i` ordering in
+  GNF conversion is a termination measure, not the GNF condition itself; CNF pumping bounds the repeated block
+  by `2^k`, not by `k`; CFL is closed under reversal, inverse homomorphism, substitution and right quotient by a
+  regular language, but not under intersection or complement; DCFL is closed under complement, so `{aⁿbⁿ}` and
+  its complement are both context-free although the language is not regular; and `{aⁱbʲcᵏ : i ≠ j}` is
+  context-free while `{aⁱbʲcᵏ : i < j < k}` is not.
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4,
+  (C) 4 and (D) 3, and the five MSQ answer sets are (A,B,C), (B,D), (B,C,D), (A,C) and (A,B,C).
+- No verified PYQ exists for this unit: `verified_pyqs` stays empty for this subject, the Question Bank tab shows
+  **75 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the
+  50 Unit 1 questions and the 25 Unit 2 Set 1 questions — under one accordion per unit and one heading per
+  subtopic, every solution collapsed. The 25 active Set 2 questions do not appear there (verified: zero overlap
+  between the 25 active stems and the 75 banked stems).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it.
+  The `<style>` block (13 243 bytes) and the exam `<script>` (9 445 bytes) are byte-for-byte identical to the
+  Computer Networks Unit 1 Set 2 paper, and the `:root` block matches `design-tokens.css` and `index.html`
+  exactly. No new literal hex value was introduced, so the known Section 6.4 deviation below is unchanged and was
+  not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**39 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no mark text, key tab disabled and labelled
+  locked, key pane empty, summary hidden, timer at 60:00, one card visible); the palette reaches `ans` / `mrk` /
+  `amr` and falls back correctly on Clear Response; a mixed paper scores **8 / 35** with 6 correct, 2 wrong and
+  17 unattempted, confirming that an MSQ one option short earns nothing and that there is no negative marking;
+  every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`,
+  `data-difficulty` and `data-source`; all four subtopics appear; and the Question Bank tab renders 75 cards with
+  no active question repeated.
+- `index.html` holds all **1000** questions. Its data block was updated in place: the new test record was
+  prepended so the newest paper renders first, the 2026-10-26 Theory of Computation Unit 2 card was retargeted at
+  the archived copy, and every `href` on the portal resolves. Per-subject question counts in the portal match
+  each `master_bank.json`.
 
 - **2026-10-27, Computer Networks → Unit 1 (Layering, Physical & Framing), Set 2 of 2.** MODE A: one subject was
   drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw; the draw
