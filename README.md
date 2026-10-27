@@ -7,33 +7,34 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html)
+- **Discrete Mathematics · Unit 6 — Mathematical Induction & Recursion, Set 2 of 2**, 2026-10-27 → [`discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html`](discrete-mathematics/induction-recursion/gate_dm_mock_6_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: LR(0) items and the canonical collection (7) · SLR(1) parsing and conflicts (7) ·
-  LR(1) and LALR(1) parsers (6) · operator-precedence parsing (5)
-- Rotation: MODE A drew **Compiler Design** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 8 of 11). `runs[-1]` for the subject was `{date 2026-10-27, run 4, unit 2, top-down-parsing,
-  Set 2 of 2}`, and Unit 2 held exactly **50** questions, the cap, so step B3's cap test failed and step B4 advanced
-  one unit: `(index_of(top-down-parsing) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Syntax Analysis: Bottom-Up
-  Parsing**. Unit 3 had no earlier paper, so nothing was archived; the paper is filed only at
-  `compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html`, the unit folder holds exactly one current
-  paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next
-  Compiler Design run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4, Syntax-Directed Translation
-  & Intermediate Code. No override was used, no unit exceeded 50 questions and no second pass has started. The
-  Question Bank tab carries the 100 solved questions of Units 1 and 2 and does not repeat the 25 active questions.
-- Previous test: **Programming and Data Structures · Unit 2 — Pointers, Memory & Preprocessors, Set 2 of 2**, 2026-10-27 → [`programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html`](programming-data-structures/pointers-memory/gate_ds_mock_2_2026-10-27.html)
+- Subtopics: weak and strong induction (7) · structural induction (6) · well-ordering principle (6) ·
+  proof techniques and errors (6)
+- Rotation: MODE A drew **Discrete Mathematics** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 6 of 11). `runs[-1]` for the subject was `{date 2026-10-27, run 4, unit 6, induction-recursion,
+  Set 1 of 2}`; Unit 6 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days,
+  below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit was generated again.
+  This is Set 2 of 2, so Unit 6 now holds exactly 50 questions — the cap — and the next Discrete Mathematics run
+  advances `(index_of(induction-recursion) + 1) mod 16 = (5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**.
+  The Set 1 paper was moved to `discrete-mathematics/induction-recursion/archive/gate_dm_mock_6_2026-10-27_run1.html`
+  with its content frozen, and the Set 2 paper took the canonical filename, so the unit folder holds exactly one
+  current paper and no root copy was written. No override was used, no unit exceeded 50 questions and no second pass
+  has started. The Question Bank tab carries the 350 solved questions of Units 1–6 and 16 and does not repeat the 25
+  active questions.
+- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 56 (15 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 33 current · 23 archived |
+| Papers published (current + archived) | 57 (16 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 33 current · 24 archived |
 | Test cards on the portal | 35 |
 | Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1400 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1425 (375 Discrete Mathematics, 75 Algorithms, 75 Databases, 125 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 23 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 24 (8 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -60,6 +61,78 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Discrete Mathematics → Unit 6 (Mathematical Induction & Recursion), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
+  6 of 11), giving **Discrete Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-27, run 4, unit 6, induction-recursion, Set 1 of 2}`. Unit 6 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so the cap test in
+  step B3 held and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 6 now
+  holds exactly 50 questions — the cap — and the next Discrete Mathematics run advances
+  `(index_of(induction-recursion) + 1) mod 16 = (5 + 1) mod 16 = 6` → **Unit 7, Counting & Combinatorics**. The Set 1
+  paper was moved to `discrete-mathematics/induction-recursion/archive/gate_dm_mock_6_2026-10-27_run1.html` with its
+  content frozen, and the Set 2 paper took the canonical filename. No override was used, no unit exceeded 50
+  questions and no second pass has started.
+- Coverage this run: all four Unit 6 subtopics — weak and strong induction (7), structural induction (6), the
+  well-ordering principle (6) and proof techniques and errors (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="discrete-mathematics"`, `data-unit="induction-recursion"`, `data-unit-number="6"` and its subtopic
+  slug.
+- All 25 items are new: `DM-IR6B-Q01`..`DM-IR6B-Q25` did not exist in the bank, and every stem and every option set was
+  compared against the 350 banked Discrete Mathematics items with a string-normalised check (tags stripped, case and
+  punctuation removed): zero collisions, and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** The sequence `a₁ = 3`, `a_{n+1} = a_n + 2n` was
+  iterated to `a₁₂ = 135`, matching `n² − n + 3` (Q02); `∑_{i=1}^{20} i(i+1) = 20·21·22/3 = 3080` (Q07); the closure
+  `2 ∈ S`, `x ∈ S ⇒ x+3 ∈ S` was generated by fixed point to give 98 as the largest element ≤ 100 (Q09); the least
+  `n` with `n² > 50` is 8 (Q15); the 4- and 7-paise amounts were enumerated, giving exactly nine unmakeable values
+  `{1, 2, 3, 5, 6, 9, 10, 13, 17}` and largest 17 (Q19); `n² + n + 41` was tested for primality, prime on
+  `n = 1..39` and `1681 = 41²` at `n = 40` (Q22); and the identity `4^{k+1} − 1 = 4(4^k − 1) + 3` was checked for
+  `k = 1..11` (Q05). The structural-induction claim of Q12 was settled by exhaustive generation: the closure of
+  `ε` under `0x` and `x1` equals, for every length up to 9, exactly the set of binary strings avoiding `10` (55
+  strings on each side). **25 of 25 answers reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: the step must be
+  `∀k, P(k) ⇒ P(k+1)` for an arbitrary `k` (Q01); a stride-2 step from `P(1)` reaches only odd indices (Q03); a step
+  of the form `P(k) ⇒ P(k−1)` establishes nothing above its base case (Q06); strong induction may be weakened to
+  `P(k)` when the step uses only `P(k)`, but never strengthened to `P(k+1)` (Q04); structural induction grants the
+  property for a rule's inputs only, not for every shorter formula (Q08, Q13); the well-ordering principle is
+  equivalent to ordinary induction, not to the axiom of choice (Q14); minimality supplies every smaller case, not
+  `P(m+1)` (Q16); `{1/n}` has no least element (Q17); the least counterexample in the prime-divisor proof must be
+  composite (Q18); sufficiency is `P ⇒ Q` (Q21); the converse never substitutes for the contrapositive (Q23); and
+  `4 | n²` does not force `4 | n`, with `n = 2` as the witness and `n = 3` not a counterexample at all (Q25).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 3 times, (B) 3, (C) 5 and
+  (D) 4, and the five MSQ answer sets are (A,B,D), (A,B,C), (A,B,C), (A,C,D) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 2 for this subject (both Unit 1), the Question
+  Bank tab shows **350 solved** and **2 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item
+  is `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **350** banked items that are not part of the active set — the 50
+  questions of each of Units 1–5, the 25 of Unit 6 Set 1 and the 75 of Unit 16 — under one accordion per unit and one
+  heading per subtopic, every solution collapsed. The 25 active Set 2 questions do not appear there (verified: the
+  string `DM-IR6B` occurs nowhere in the bank tab). Units 7–15 are reported on one line rather than as empty
+  accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, tab label, meta set chip, `#qhost`, palette,
+  bank tab, About tab, payload), the remaining **26 519 bytes are byte-identical** to the shell extracted from the
+  Discrete Mathematics Unit 6 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key
+  view and the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html` and
+  `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4 deviation below is
+  untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**38 checks, all passing**, across four runs): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane,
+  key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one
+  wrong MCQ, one skipped MCQ, an MSQ one option short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong and
+  1 unattempted, confirming that an MSQ earns nothing unless the exact set is selected and that there is no negative
+  marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every card carries `data-subject`, `data-unit`,
+  `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty
+  values; all four subtopics appear; the Question Bank tab renders 350 cards with no active question repeated; the
+  About tab carries its three sections; and all four tabs open.
+- `index.html` holds all **1425** questions. Its data block was updated in place: the existing 2026-10-27 Discrete
+  Mathematics Unit 6 record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1
+  copy (so the card reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit
+  had to be registered — Discrete Mathematics Units 1–16 were already in the portal's `units` table. The static
+  header strings were recomputed from the data block and now read 65 units, 35 sets published and 1425 solved
+  questions / records, with 281 subtopics. Every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Compiler Design → Unit 3 (Syntax Analysis: Bottom-Up Parsing), Set 1 of 2.** MODE A: one subject was
   drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 8
@@ -2154,7 +2227,7 @@ digital-logic/
 | 3 | Set Theory | `set-theory` | 50 | yes |
 | 4 | Relations | `relations` | 50 | yes |
 | 5 | Functions | `functions` | 50 | yes |
-| 6 | Mathematical Induction & Recursion | `induction-recursion` | 25 | yes |
+| 6 | Mathematical Induction & Recursion | `induction-recursion` | 50 | yes |
 | 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
 | 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
 | 9 | Graph Theory Fundamentals | `graph-theory-fundamentals` | 0 | — |
