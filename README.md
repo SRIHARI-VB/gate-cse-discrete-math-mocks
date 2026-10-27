@@ -7,32 +7,32 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2**, 2026-10-27 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html)
+- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 2 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: four conditions & the resource-allocation graph (6) · prevention, avoidance & the banker's algorithm (10) ·
-  detection & recovery (5) · starvation vs deadlock (4)
-- Rotation: MODE A drew **Operating Systems** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects. `runs[-1]` for the subject is `{date 2026-10-26, run 4, unit 2, synchronization-ipc, Set 2 of 2}`. Unit 2
-  held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced
-  exactly one unit: `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks**
-  (`deadlocks`). Unit 3 had no earlier paper, so nothing was archived; the paper is filed only at
-  `operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`, the unit folder holds exactly one current paper and
-  no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next Operating Systems
-  run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was used, no unit exceeded 50
-  questions and no second pass has started.
-- Previous test: **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 1 of 2**, 2026-10-27 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html)
+- Subtopics: FIRST and FOLLOW sets (8) · LL(1) parsing tables (5) · recursive-descent parsers (6) ·
+  left recursion and left factoring (6)
+- Rotation: MODE A drew **Compiler Design** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects. `runs[-1]` for the subject was `{date 2026-10-27, run 3, unit 2, top-down-parsing, Set 1 of 2}`. Unit 2 held
+  **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, so the cap test in step B3 held
+  and the same unit was generated again: **Unit 2, Set 2 of 2**, closing the unit at exactly 50 questions. The previous
+  current paper was moved to `compiler-design/top-down-parsing/archive/gate_cd_mock_2_2026-10-27_run1.html` with its
+  content frozen, so the unit folder holds exactly one current paper and no root copy was written. The Question Bank tab
+  now carries the 50 solved questions of Unit 1 plus the 25 of Unit 2 Set 1, and does not repeat the 25 active questions.
+  No override was used, no unit exceeded 50 questions and no second pass has started. The next Compiler Design run
+  advances to `(index_of(top-down-parsing) + 1) mod 5 = 2` → Unit 3, Bottom-Up Parsing.
+- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2**, 2026-10-27 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 53 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 3 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 32 current · 21 archived |
+| Papers published (current + archived) | 54 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 32 current · 22 archived |
 | Test cards on the portal | 34 |
 | Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1325 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 75 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1350 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 100 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 21 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 22 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 2 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
