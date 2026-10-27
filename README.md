@@ -7,28 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
+- **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: standard TM models and variants (5) · recursive vs recursively enumerable (5) · halting problem and
-  undecidability (5) · Rice's theorem and reductions (5) · Chomsky hierarchy summary (5)
-- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over the 7 subjects
-  that had no paper dated 2026-10-28 (draw index 6 of 7). `runs[]` sorted by `(date, run)` gives the most recent paper
-  for the subject as `{date 2026-10-27, run 7, unit 4, turing-machines-decidability, Set 1 of 2}`. Unit 4 held **25**
-  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so
-  step B3 held and step B4 was not reached: the same unit was generated again as **Set 2 of 2**, closing Unit 4 at
-  exactly 50. The advance was not taken on the calendar. No override was used, no unit exceeded 50 questions and no
-  second pass has started.
-- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 2 of 2**, 2026-10-28 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html)
+- Subtopics: arrays and multidimensional arrays (7) · singly, doubly and circular linked lists (6) · stacks, infix and
+  postfix (6) · queues, circular queues and deques (6)
+- Rotation: MODE A drew **Programming and Data Structures** with an unseeded `random.SystemRandom()` draw over the 6
+  subjects that had no paper dated 2026-10-28 (draw index 5 of 6). `runs[]` sorted by `(date, run)` gives the most
+  recent paper for the subject as `{date 2026-10-27, run 4, unit 2, pointers-memory, Set 2 of 2}`. Unit 2 held **50**
+  questions — exactly `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(pointers-memory) = 1 + 1) mod 7 = 2` → **Unit 3, Linear Data Structures**. The modulo applied to the
+  advance, not to the day offset. Unit 3 had no folder and no papers, so nothing was moved to `archive/`. This is
+  Set 1 of 2. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 62 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 34 current · 28 archived |
-| Test cards on the portal | 36 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1550 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 100 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 63 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 35 current · 28 archived |
+| Test cards on the portal | 37 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1575 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 28 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 4 Theory of Computation, 2 Digital Logic) |
 
@@ -38,10 +38,10 @@ The verification checklist item "no hex colour outside `:root`" **fails in the s
 first paper: the locked `<style>` block carries raw hex values outside `:root` — 114 occurrences in a paper and 704
 in the portal (`#f8fafc`, `#9fb8cc`, `#eaf4fb` and others, mostly hover, focus and border shades that have no token
 name yet). Because one shell serves all papers and `6.8` treats shell parity as the hard gate, the block was not
-edited for this run — editing it would have changed all 33 current papers at once. The `:root` block itself is
+edited for this run — editing it would have changed all 35 current papers at once. The `:root` block itself is
 byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
 pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
-re-verify all 33 current papers and 23 archived sets together.
+re-verify all 35 current papers and 28 archived sets together.
 
 Three further shell-level items are open and are deliberately left to that same coordinated pass, because each of them
 touches files this run did not create:
@@ -57,6 +57,79 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Programming and Data Structures → Unit 3 (Linear Data Structures), Set 1 of 2.** MODE A: one subject
+  was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 6 subjects that had no paper
+  dated 2026-10-28 (draw index 5 of 6), giving **Programming and Data Structures**. `runs[]` sorted by `(date, run)`
+  gives the most recent paper as `{date 2026-10-27, run 4, unit 2, pointers-memory, Set 2 of 2}`. Unit 2 held **50**
+  questions — exactly `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(pointers-memory) = 1 + 1) mod 7 = 2` → **Unit 3, Linear Data Structures**. The modulo applied to the
+  advance, not to the day offset. Unit 3 had no folder and no paper, so no file was moved to `archive/`; the new paper
+  is Set 1 of 2 and the unit now stands at 25 questions. The next Programming and Data Structures run re-selects Unit 3
+  (25 < 50, 0 days current) and closes it at exactly 50. No override was used and no unit exceeded 50 questions.
+- Coverage this run: all four Unit 3 subtopics — arrays and multidimensional arrays (7), singly, doubly and circular
+  linked lists (6), stacks, infix and postfix (6), queues, circular queues and deques (6). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="programming-data-structures"`, `data-unit="linear-data-structures"`, `data-unit-number="3"` and its
+  subtopic slug.
+- All 25 items are new: `DS-U3-Q01`..`DS-U3-Q25` did not exist in the bank, and every stem was compared against all
+  1550 questions already in the portal data block with a string-normalised check (tags stripped, case and punctuation
+  removed): zero stem collisions and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** Address arithmetic Q1–Q5:
+  `1000 + (3·8 + 2)·4 = 1104`, `2000 + (1·3 + 2)·4 = 2020`, `|12 − 5|·4 = 28`, `(1+2+…+7) + 3 = 31`,
+  `((1·3 + 2)·4 + 3)·4 = 92`. Linked lists: the reversal loop executes 6 times for 6 nodes; the Floyd walk on
+  1→…→7 with 7→4 first meets after 4 steps at node 5; the Josephus run with `k = 2` eliminates 2, 4, 6, 1, 5, 3 and
+  leaves 7. Stacks: `6 2 / 1 + 3 *` evaluates to 12, `5 3 + 8 2 - *` to 48, the converter returns `A B C * +` and
+  `A B + C D - * E +`, and of the four offered permutations only `3 1 2 5 4` is unreachable (the full enumeration of
+  the 5! orders confirms 42 producible sequences, the Catalan number `C₅`). Queues: `rear = 5` after 5 enqueues,
+  `rear = 1` after 5 enqueues / 3 dequeues / 4 enqueues, capacity 9 in a 10-slot buffer, 8 pushes through the
+  two-stack queue, and the print-and-rotate order `1 3 5 2 6 4` with 2 in fourth place. **All recomputations
+  reproduced the keyed answers; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: decay peels one dimension per
+  subscript, and `sizeof` suppresses it, so `sizeof(A[0])` is the whole row and not a pointer (Q06, Q07); a singly
+  linked list with a head pointer alone gives Θ(1) only at the front, and a tail pointer does not make tail deletion
+  constant (Q08, Q12); a stack can only ever emit what is on top, which is why `3 1 2 …` is impossible (Q19); a
+  circular queue with all `n` slots usable cannot distinguish full from empty without a counter (Q24); and a deque
+  restricted at one end is a stack, restricted at both is a queue (Q24).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,B), (A,C), (A,B,C), (A,C) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **100 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (14) or `ORIGINAL_SYNTHESIS` (11), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the 50
+  questions of Unit 1 and the 50 of Unit 2 — under one accordion per unit and one heading per subtopic, every solution
+  collapsed. Unit 3 has no banked items outside the active set, so the tab closes with "Units 3–7 have no banked
+  questions yet". The 25 active questions do not appear there (verified: the string `DS-U3-Q` occurs nowhere in the
+  bank tab).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the ten payload regions replaced by placeholders (title, brand line, header sub-line, candidate ID, bank tab label,
+  meta strip, `#qhost`, bank tab, About tab, payload), the remaining **27 707 bytes are byte-identical** to the shell
+  extracted from the Programming and Data Structures Unit 2 Set 2 paper, so the `<style>` block, the exam `<script>`,
+  the palette, the answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new
+  paper, `index.html` and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4
+  deviation below is untouched and was not partially fixed for one paper. The paper also inherits, unchanged, the
+  three other open shell-level items recorded below.
+- The paper was exercised in a jsdom harness before shipping (**43 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all four tabs open and the key tab stays locked until submit; all 25 answered correctly scores **35 / 35** with 25
+  correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one skipped MCQ, one wrong MCQ and an MSQ one option
+  short score **31 / 35** with 22 correct, 2 wrong and 1 unattempted; an empty paper scores **0 / 35** with 25 `skip`
+  buttons; an MSQ with one extra option ticked scores **0 / 35**, confirming that an MSQ earns nothing unless the exact
+  set is selected; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`,
+  `data-difficulty` and `data-source`, with lowercase difficulty values; the Question Bank tab renders 100 cards with
+  no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1575** questions. Its data block was updated in place: the new Programming and Data
+  Structures Unit 3 record was inserted at the head of `tests` so it renders first for 2026-10-28 with
+  `archives: []`, and the 25 new question records were appended. No unit had to be registered — Programming and Data
+  Structures Units 1–7 were already in the portal's `units` table. The static header strings were recomputed from the
+  data block and now read 65 units, 37 sets published and 1575 solved questions / records, with 281 subtopics. Every
+  path in the data block resolves against the repository tree.
+- Hygiene: the paper is filed at exactly one path, `programming-data-structures/linear-data-structures/`, and nowhere
+  else; `find . -name "*.html"` returns `index.html` plus one file per paper (64 files, 35 current and 28 archived);
+  no temporary or loose file was left at the repository root; and the pre-existing `digital-logic/number-systems`
+  duplicate noted below was not touched by this run.
 
 - **2026-10-28, Theory of Computation → Unit 4 (Turing Machines & Decidability), Set 2 of 2.** MODE A: one subject
   was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 7 subjects that had no paper
@@ -2506,6 +2579,7 @@ engineering-mathematics/
   question-bank/master_bank.json                     append-only master question bank
 programming-data-structures/
   c-programming-core/gate_ds_mock_1_<date>.html      current paper for Unit 1
+  linear-data-structures/gate_ds_mock_3_<date>.html  current paper for Unit 3
   question-bank/master_bank.json                     append-only master question bank
 computer-networks/
   network-fundamentals-framing/gate_cn_mock_1_<date>.html  current paper for Unit 1
@@ -2557,8 +2631,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | C Programming Foundations | `c-programming-core` | 50 | yes |
-| 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 25 | yes |
-| 3 | Linear Data Structures | `linear-data-structures` | 0 | — |
+| 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 50 | yes |
+| 3 | Linear Data Structures | `linear-data-structures` | 25 | yes |
 | 4 | Binary Trees & Tree Traversals | `trees-traversals` | 0 | — |
 | 5 | Binary Search Trees & Balanced Trees | `search-trees` | 0 | — |
 | 6 | Heaps & Priority Queues | `heaps-priority-queues` | 0 | — |
