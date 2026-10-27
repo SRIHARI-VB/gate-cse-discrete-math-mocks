@@ -7,31 +7,31 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
+- **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: FIRST and FOLLOW sets (7) · LL(1) parsing tables (6) · recursive-descent parsers (6) ·
-  left recursion & factoring (6)
-- Rotation: MODE A drew **Compiler Design** with a seeded `random` draw (seed `20261027`) over the four subjects
-  that had no paper dated 2026-10-27 — Algorithms, Compiler Design, Databases and Engineering Mathematics. `runs[]`
-  sorted by `(date, run)` gives the most recent Compiler Design paper as `{date 2026-10-26, run 2, unit 1,
-  lexical-analysis, Set 2 of 2}`. Unit 1 stood at **50** questions — exactly `UNIT_QUESTION_CAP` — so step B3 failed
-  on the cap and step B4 advanced exactly one unit:
-  `(index_of(lexical-analysis) + 1) mod 5 = (0 + 1) mod 5 = 1` → **Unit 2, Syntax Analysis: Top-Down Parsing**. This
-  is Set 1 of 2, so the next Compiler Design run re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3.
-  No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html)
+- Subtopics: characteristic equations (6) · eigenvalue properties (9) · Cayley–Hamilton theorem (5) ·
+  diagonalization (5)
+- Rotation: MODE A drew **Engineering Mathematics** with a seeded `random` draw (seed `20261027-2`, the second
+  draw of the day) over the three subjects that still had no paper dated 2026-10-27 — Algorithms, Databases and
+  Engineering Mathematics. `runs[]` sorted by `(date, run)` gives the most recent Engineering Mathematics paper as
+  `{date 2026-10-26, run 3, unit 2, eigenvalues-eigenvectors, Set 1 of 2}`. Unit 2 stood at **25** questions, under
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, under `DAYS_PER_UNIT_MAX = 7`, so step B3 re-selected
+  **Unit 2, Linear Algebra: Eigenvalues & Vectors**. This is Set 2 of 2, so 25 + 25 = 50 closes the unit at the cap;
+  the next Engineering Mathematics run advances to Unit 3, Calculus: Limits, Continuity & Differentiability. No
+  override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2**, 2026-10-27 → [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 47 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 28 current · 19 archived |
+| Papers published (current + archived) | 48 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 4 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 28 current · 20 archived |
 | Test cards on the portal | 30 |
 | Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1175 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1200 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 100 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 19 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 20 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 2 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -42,9 +42,23 @@ name yet). Because one shell serves all papers and `6.8` treats shell parity as 
 edited for this run — editing it would have changed all 27 current papers at once. The `:root` block itself is
 byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
 pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
-re-verify all 27 current papers and 19 archived sets together.
+re-verify all 28 current papers and 20 archived sets together.
 
 ## Rotation log
+
+- **2026-10-27, Engineering Mathematics → Unit 2 (Linear Algebra: Eigenvalues & Vectors), Set 2 of 2.** MODE A: a
+  subject was drawn with a seeded `random` draw (seed `20261027-2`, the second draw of the day) restricted to the
+  three subjects that still had no paper dated 2026-10-27 — Algorithms, Databases, Engineering Mathematics — so the
+  day's second paper lands on a subject not already served today. It gave **Engineering Mathematics**. `runs[]`
+  sorted by `(date, run)` gives the most recent paper as `{date 2026-10-26, run 3, unit 2, eigenvalues-eigenvectors,
+  Set 1 of 2}`. Unit 2 held **25** questions (< `UNIT_QUESTION_CAP = 50`) and had been current for **1** day
+  (< `DAYS_PER_UNIT_MAX = 7`), so step B3 re-selected it: no advance, no modulo. The paper is Set 2 of 2, filed only
+  at `engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html`. The previous current paper
+  for the unit was moved to `engineering-mathematics/eigenvalues-eigenvectors/archive/gate_em_mock_2_2026-10-26_run1.html`
+  with its content frozen, so the unit folder holds exactly one current paper and no root copy was written. Unit 2 now
+  stands at 50 questions, exactly the cap, so the next Engineering Mathematics run advances one unit to
+  `(index_of(eigenvalues-eigenvectors) + 1) mod 5 = 2` → Unit 3, Calculus: Limits, Continuity & Differentiability.
+  No override was used, no unit exceeded 50 questions and no second pass has started.
 
 - **2026-10-27, Compiler Design → Unit 2 (Syntax Analysis: Top-Down Parsing), Set 1 of 2.** MODE A: one subject was
   drawn from the 11 GATE CSE subjects with a seeded `random` draw (seed `20261027`), restricted to the four subjects
