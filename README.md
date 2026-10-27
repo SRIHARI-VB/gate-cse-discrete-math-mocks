@@ -7,26 +7,26 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html)
+- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: CFG derivation trees (6) · ambiguity in grammars (6) · CNF & GNF normal forms (7) · closure
-  properties of CFLs (6)
-- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over the seven
-  subjects that had not already produced a paper dated 2026-10-27. The bank read back `runs[-1] = {date
-  2026-10-26, unit 2, set "Set 1 of 2"}` with **25** questions banked on Unit 2; 25 < `UNIT_QUESTION_CAP = 50`
-  and the unit had been current for 1 day, so step B3 held and step B4 was never reached — Unit 2 was generated
-  again. This is Set 2 of 2, so the unit now stands at exactly 50 questions and the next Theory of Computation
-  run advances to `(1 + 1) mod 4 = 2` → Unit 3, Pushdown Automata. No override was used, no cap was breached and
-  no second pass has started.
-- Previous test: **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 2 of 2**, 2026-10-27 → [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-27.html)
+- Subtopics: deterministic PDA (7) · nondeterministic PDA (6) · acceptance by empty store vs final state (6) ·
+  equivalence with CFG (6)
+- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 6 of 11). The bank read back the most recent paper as `{date 2026-10-27, run 4, unit 2,
+  cfl-grammars}`; Unit 2 stood at **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
+  step B4 advanced exactly one unit: `(index_of(cfl-grammars) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Pushdown
+  Automata**. This is Set 1 of 2; 25 questions are now banked on Unit 3, so the next Theory of Computation run
+  generates Unit 3 again before advancing to Unit 4. No override was used, no cap was breached and no second pass has
+  started.
+- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 40 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 2 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1000 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 100 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published | 41 (13 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Units covered | 6 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 1 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1025 (325 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 75 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 50 Computer Networks, 125 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 17 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 1 Operating Systems, 2 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
 
@@ -41,6 +41,83 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 24 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Theory of Computation → Unit 3 (Pushdown Automata), Set 1 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 6 of
+  11); it gave **Theory of Computation**. The bank's `runs[]` was sorted by `(date, run)` before reading, because the
+  Theory of Computation entries are not stored in chronological order; the most recent paper was
+  `{date 2026-10-27, run 4, unit 2, unit_slug cfl-grammars}`. Unit 2 held **50** questions — exactly
+  `UNIT_QUESTION_CAP = 50` — and had been current since 2026-10-26, so the cap test in step B3 failed and step B4
+  advanced exactly one unit: `(index_of(cfl-grammars) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**
+  (`pushdown-automata`). This is Set 1 of 2; 25 questions are now banked on Unit 3, so the next Theory of Computation
+  run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was used, no unit exceeded 50
+  questions and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — deterministic PDA (7), nondeterministic PDA (6), acceptance by
+  empty store vs final state (6), equivalence with CFG (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `TOC-U3-Q01`..`TOC-U3-Q25` did not exist in the bank, and every stem, option set and numeric
+  answer was checked against the 100 banked Unit 1 and Unit 2 questions. Unit 3 had no earlier paper, so nothing was
+  archived; the paper is filed only at
+  `theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`, the unit folder holds exactly one current
+  paper, and no root copy was written.
+- **Every countable answer was recomputed by script, not by hand.** The NPDA of Q9 was executed as a computation tree
+  over lists of stack symbols and gives exactly **2** accepting computations on `aabb` (the second `b` branches to
+  `q0`-then-ε or straight to `q1`; the branch that reaches `q1` with an `A` still on top dies); the DPDA of Q7 was
+  traced deterministically — `ab`, `aabb`, `aaabbb` accepted, `aab` ending in `q1` with `AZ₀` still on the stack
+  (non-final, which is what makes option D of Q7 true), `abb` and `aabbb` rejected with input left over; the
+  two-phase NPDA of Q10 was run on ten strings to confirm the language is `{aⁿbⁿ : n ≥ 1}` and not `{aⁿbⁿ : n ≥ 0}`
+  (`ε` never reaches `q1`, where the only ε-move lives); Q15 is `2 × (2 + 2²) = 12` configurations; the top-down
+  NPDA of Q21 peaks at **4** symbols on `aabb` and the one of Q24 at **5**, both computed by enumerating every
+  derivation and taking the maximum **along the accepting derivation only** — a first draft took the maximum over
+  all branches, which gives 6 for Q24 because the dead `S → aSb → aSb → aSb` branch pushes one symbol too many, and
+  the question was reworded to say "during the computation that accepts" so the answer is unambiguous; Q23 is
+  `|P| + |T| = 5 + 2 = 7`.
+- The conceptual items were settled by the standard rather than by taste: determinism is one successor per
+  `(q, a, X)` plus the rule that an ε-move and an input move may never coexist on the same `(q, X)`; DCFLs are
+  closed under complement, under intersection with a regular language and under union with a regular language, but
+  not under union in general — the witness `{aⁿbⁿ} ∪ {aⁿb²ⁿ}` was confirmed against the standard references before
+  being used as Q6; `{aⁿbᵐ : n ≠ m}` is a DCFL because it is the complement of `{aⁿbⁿ}` inside the regular set
+  `a*b*`; `{aⁱbʲcᵏ : i = j or j = k}` is context-free but not deterministic, which is what Q13 turns on; converting
+  a DPDA from final-state to empty-stack acceptance fails exactly when the machine accepts with input still
+  unread, and empty-stack acceptance forces the prefix property (Q17, Q18, Q19); in the triple construction
+  `[q, A, p]` generates the strings read while popping `A` without looking below it (Q22).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4,
+  (C) 4 and (D) 3, and the five MSQ answer sets are (A,C,D), (A,B,D), (A,B,C), (A,C,D) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` stays empty for this subject, the Question Bank tab shows
+  **125 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the
+  50 Unit 1 questions and the 50 Unit 2 questions — under one accordion per unit and one heading per subtopic,
+  every solution collapsed. The 25 active Unit 3 questions do not appear there (verified: zero overlap between the
+  25 active stems and the 100 banked stems).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. The
+  `<style>` block (13 235 bytes) and the exam `<script>` (9 419 bytes) are byte-for-byte identical to the Theory of
+  Computation Unit 2 Set 2 paper, and the `:root` block matches `design-tokens.css` and `index.html` exactly. The
+  palette, the answer-key view, the footer and the head-before-`<style>` region are also byte-identical after
+  normalising the title, the header sub-line, the candidate ID, the tab label and the meta chips. No new literal hex
+  value was introduced, so the known Section 6.4 deviation below is unchanged and was not partially fixed for one
+  paper.
+- The paper was exercised in a jsdom harness before shipping (**251 checks, all passing** across two runs): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no mark text, no "Answer:" string in
+  the test pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card
+  visible); the palette reaches `ans` / `mrk` / `amr` and falls back correctly on Clear Response; all 25 answered
+  correctly scores **35 / 35** with 25 correct, 0 wrong and 25 `ok` palette buttons; a deliberately wrong MCQ, an
+  MSQ one option short and a wrong NAT score **30 / 35** with 22 correct, 3 wrong and 0 unattempted, confirming that
+  an MSQ earns nothing unless the exact set is selected and that there is no negative marking; every card carries
+  `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`;
+  all four subtopics appear; the Question Bank tab renders 100 cards with no active question repeated; and the About
+  tab renders once the bank tab is hidden.
+- `index.html` holds all **1025** questions. Its data block was updated in place: the new test record was prepended,
+  the 25 new question records appended, and Theory of Computation Units 2, 3 and 4 registered in the portal's `units`
+  table — they had never been added, so the 50 Unit 2 questions banked yesterday had no card in the archive view.
+  Two defects were repaired while doing this. First, the render loop was `D.tests.slice().reverse()`, which printed
+  the **oldest** paper first and the newest last, contradicting Section 5.1; it now sorts by date descending, so the
+  newest paper renders first. Second, the static header strings had drifted one run behind the data block (they said
+  61 units / 24 sets / 975 records while the data held 61 / 25 / 1000); they are now recomputed from the data block
+  and read 64 units, 26 sets published, 1025 solved questions, 1025 records and 277 subtopics. Every `href` on the
+  portal resolves, and the archive view now shows Theory of Computation Units 1, 2 and 3 at 50, 50 and 25 solved.
+
+
 
 - **2026-10-27, Theory of Computation → Unit 2 (Grammars & Context-Free Languages), Set 2 of 2.** MODE A: one
   subject was drawn uniformly at random from the seven subjects that had not already produced a paper dated
@@ -1422,8 +1499,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 50 | yes |
-| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 25 | yes |
-| 3 | Pushdown Automata | `pushdown-automata` | 0 | — |
+| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 50 | yes |
+| 3 | Pushdown Automata | `pushdown-automata` | 25 | yes |
 | 4 | Turing Machines & Decidability | `turing-machines-decidability` | 0 | — |
 
 ### Digital Logic
