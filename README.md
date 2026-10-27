@@ -7,28 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 2 of 2**, 2026-10-27 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html)
+- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2**, 2026-10-27 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: critical section & Peterson's solution (7) · hardware primitives: test-and-set & swap (6) ·
-  binary & counting semaphores (6) · producer–consumer, dining philosophers & readers–writers (6)
-- Rotation: MODE A drew **Operating Systems** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
-  subjects (draw index 8 of 11). `runs[]` gives the most recent paper as `{date 2026-10-26, run 3, unit 2,
-  synchronization-ipc, Set 1 of 2}`. Unit 2 stood at **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been
-  current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit
-  was generated again. This is Set 2 of 2, so Unit 2 now holds exactly 50 questions and the next Operating Systems run
-  advances `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks**. No override was
-  used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 2 of 2**, 2026-10-27 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-27.html)
+- Subtopics: standard TM models & variants (5) · recursive vs recursively enumerable (5) ·
+  halting problem & undecidability (5) · Rice's theorem & reductions (5) · Chomsky hierarchy summary (5)
+- Rotation: MODE A drew **Theory of Computation** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects (draw index 6 of 11). `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27,
+  run 6, unit 3, pushdown-automata, Set 2 of 2}`. Unit 3 stood at **50** questions — exactly `UNIT_QUESTION_CAP` —
+  so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(pushdown-automata) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Turing Machines & Decidability**. This
+  is Set 1 of 2, so the next Theory of Computation run re-selects Unit 4 (25 < 50, 0 days) before advancing to
+  Unit 1. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 2 of 2**, 2026-10-27 → [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published | 45 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 6 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 3 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1125 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 150 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 46 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 2 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 27 current · 19 archived |
+| Test cards on the portal | 29 |
+| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 1 of 5 in Compiler Design; 2 of 6 in Operating Systems; 2 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1150 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 50 Compiler Design, 100 Operating Systems, 75 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 19 (7 Discrete Mathematics, 1 Algorithms, 1 Compiler Design, 2 Operating Systems, 3 Theory of Computation, 1 Programming and Data Structures, 1 Databases, 1 Engineering Mathematics, 1 Digital Logic, 1 Computer Networks) |
+| Archived sets (earlier runs) | 19 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 1 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -41,6 +43,71 @@ which is the part the token contract actually pins. Closing the deviation needs 
 shades to `:root`, replace the literals, then re-verify all 43 papers together.
 
 ## Rotation log
+
+- **2026-10-27, Theory of Computation → Unit 4 (Turing Machines & Decidability), Set 1 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw
+  index 6 of 11); it gave **Theory of Computation**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-27, run 6, unit 3, pushdown-automata, Set 2 of 2}`. Unit 3 held **50** questions — exactly
+  `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(pushdown-automata) + 1) mod 4 = (2 + 1) mod 4 = 3` → **Unit 4, Turing Machines & Decidability**
+  (`turing-machines-decidability`). Unit 4 had no earlier paper, so nothing was archived; the paper is filed only at
+  `theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-27.html`, the unit folder holds exactly
+  one current paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 4, so the
+  next Theory of Computation run re-selects Unit 4 (25 < 50, 0 days) before advancing to Unit 1 of a second pass.
+  No override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all five Unit 4 subtopics, five questions each — standard TM models & variants, recursive vs
+  recursively enumerable, halting problem & undecidability, Rice's theorem & reductions, and the Chomsky hierarchy
+  summary. Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `TOC-U4-Q01`..`TOC-U4-Q25` did not exist in the bank, and every stem was compared against
+  the 150 banked items of Units 1–3 (string-normalised) so that no stem repeats. No earlier paper existed for
+  Unit 4, so no file was archived and the unit folder holds exactly one current paper.
+- **Every countable answer was recomputed by script, not by hand.** The transition table has `8 × 5 = 40` entries
+  (Q02); the bounded-tape machine has `3 × 4 × 3⁴ = 972` configurations (Q05); the cross-off machine for `{0ⁿ1ⁿ}`
+  makes **13** moves on `0011` (Q14), confirmed by simulating the transition table step by step and cross-checked
+  against `2n² + 2n + 1`, which gives 5 and 25 for `n = 1` and `n = 3`; **2** of the five listed languages are
+  recursive (Q09); **5** of the six properties are undecidable by Rice's theorem (Q20), the exception being the
+  trivially true `L(M) ⊆ Σ*`; and **3** of the six listed languages are context-free (Q25).
+- The conceptual items were settled against the standard rather than by taste: every TM variant is simulated by the
+  standard machine, so the class of accepted languages never grows (Q01, Q03, Q04); a fixed 1000-cell tape is finite
+  memory and therefore accepts only regular languages, unlike an LBA whose bound grows with `n` (Q04); "both r.e."
+  is exactly "recursive", by dovetailing the two recognisers (Q06, Q08, Q10); the r.e. languages are the one class
+  in the question that is not closed under complement, the context-sensitive class being closed by
+  Immerman–Szelepcsényi (Q07); a reduction from `HALT` runs from the known-hard problem *to* the new one, so the
+  opposite arrow proves only r.e.-ness (Q12, Q15); Rice's theorem needs a semantic **and** non-trivial property, so
+  "has three states" and "uses at most 50 cells" are outside it (Q16, Q17, Q18); and the answer to Q14 was worded
+  so that the count is unambiguous — every application of `δ` counts, including the final one that halts.
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4
+  and (D) 3, and the five MSQ answer sets are (A,B,D), (A,B,C), (A,B,D), (A,B,C) and (A,B,C).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged (empty for this subject), the Question Bank tab
+  shows **150 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **150** banked items that are not part of the active set — 50 from
+  Unit 1, 50 from Unit 2 and 50 from Unit 3 — under one expander per unit and one heading per subtopic, every
+  solution collapsed. The 25 active questions do not appear there (verified: zero overlap between the 25 active
+  stems and the 150 banked stems).
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, candidate ID, tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining bytes are **identical** to the shell extracted from the
+  Theory of Computation Unit 3 Set 2 paper; the `<style>` block (13 243 bytes) and the exam `<script>` (9 428 bytes)
+  are byte-for-byte identical. The `:root` block is byte-identical across the new paper, `index.html` and
+  `design-tokens.css`, and the count of literal hex values outside `:root` is unchanged at 697 in the paper and 704
+  in the portal, so the known Section 6.4 deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**510 checks, all passing**, plus a second DOM run
+  against a deliberately mixed submission): nothing is revealed pre-submit (every active `.sol` empty and hidden,
+  every option mark empty, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one
+  card visible, every input enabled); the palette reaches `ans`, `na`, `mrk` and `amr` and falls back correctly on
+  Clear response and on Unmark review; all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong, 25 `ok`
+  palette buttons and 25 key cards; one wrong MCQ, an MSQ one option short and a wrong NAT score **30 / 35** with 22
+  correct, 3 wrong and 3 `bad` buttons, confirming that an MSQ earns nothing unless the exact set is selected and
+  that there is no negative marking; every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; all five subtopics appear; the Question Bank tab
+  renders 150 cards with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all 1150 questions. Its data block was updated in place: the new test record was
+  inserted at the head of `tests`, the 25 new question records were appended, and the static header strings were
+  recomputed from the data block — 64 units, 29 sets published, 1150
+  solved questions and records, 277 subtopics. Theory of Computation Unit 4 was already registered in
+  the portal's `units` table, so no unit had to be added. Every `href` on the portal and every path in the data block
+  resolves against the repository tree.
 
 - **2026-10-27, Operating Systems → Unit 2 (Inter-Process Communication & Synchronization), Set 2 of 2.** MODE A:
   one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()`
