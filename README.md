@@ -7,30 +7,31 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 1 of 2**, 2026-10-27 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html)
+- **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 1 of 2**, 2026-10-27 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: latches vs flip-flops (8) · setup & hold times (6) · characteristic equations (5) · shift registers (6)
-- Rotation: MODE A drew **Digital Logic** from the 11 GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw (draw index 2 of 11). `runs[-1]` for the subject is `{date 2026-10-27, run 4, unit 2,
-  combinational-circuits, Set 2 of 2}`. Unit 2 held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap
-  test in step B3 failed and step B4 advanced exactly one unit:
-  `(index_of(combinational-circuits) + 1) mod 4 = (1 + 1) mod 4 = 2` → **Unit 3, Sequential Circuits: Flip-Flops &
-  Registers** (`sequential-flipflops`). Unit 3 had no earlier paper, so nothing was archived; the paper is filed only
-  at `digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`, the unit folder holds exactly one current paper and no root copy was written.
-  This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next Digital Logic run re-selects Unit 3
-  (25 < 50, 0 days) before advancing to Unit 4. No override was used, no unit exceeded 50 questions and no second
-  pass has started.
-- Previous test: **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
+- Subtopics: merge sort & quicksort (7) · counting & radix sort (6) · selection & the k-th element (6) · inversion
+  counting (6)
+- Rotation: MODE A drew **Algorithms** with an unseeded draw among the subjects that had no paper dated 2026-10-27
+  (the draw was between Algorithms and Databases, both last served on 2026-10-26). `runs[-1]` for the subject is
+  `{date 2026-10-26, run 1, unit 1, asymptotic-analysis, Set 2 of 2}`. Unit 1 held **50** questions — exactly
+  `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(asymptotic-analysis) + 1) mod 7 = (0 + 1) mod 7 = 1` → **Unit 2, Divide and Conquer & Sorting**
+  (`sorting-divide-conquer`). Unit 2 had no earlier paper, so nothing was archived; the paper is filed only at
+  `algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`, the unit folder holds exactly one current
+  paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 2, so the next
+  Algorithms run re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3. No override was used, no unit
+  exceeded 50 questions and no second pass has started.
+- Previous test: **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 1 of 2**, 2026-10-27 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 51 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 30 current · 21 archived |
-| Test cards on the portal | 32 |
-| Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1275 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 52 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 31 current · 21 archived |
+| Test cards on the portal | 33 |
+| Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1300 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 21 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
@@ -59,6 +60,41 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Algorithms → Unit 2 (Divide and Conquer & Sorting), Set 1 of 2.** MODE A: the subject was drawn with
+  an unseeded draw among the subjects that had no paper dated 2026-10-27 — Algorithms and Databases, both last served
+  on 2026-10-26 — and the draw gave **Algorithms**. `runs[-1]` for the subject is `{date 2026-10-26, run 1, unit 1,
+  asymptotic-analysis, Set 2 of 2}`. Unit 1 held **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3's cap
+  test failed and step B4 advanced exactly one unit: `(index_of(asymptotic-analysis) + 1) mod 7 = (0 + 1) mod 7 = 1`
+  → **Unit 2, Divide and Conquer & Sorting** (`sorting-divide-conquer`). No override was used, no unit exceeded 50
+  questions, and no second pass has started.
+- Coverage this run: all four Unit 2 subtopics — merge sort & quicksort (7), counting & radix sort (6), selection &
+  the k-th element (6) and inversion counting (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="algorithms"`,
+  `data-unit="sorting-divide-conquer"`, `data-unit-number="2"` and its subtopic slug.
+- All 25 items are new: `ALG-U2-Q01`..`ALG-U2-Q25` did not exist in the bank, and no stem or option set repeats a
+  Unit 1 item. Every numeric answer was recomputed independently in code before shipping: the merge-sort worst case
+  for n = 8 by exhaustive enumeration of all 40,320 input orders (17), the duplicate-key inversion count by direct
+  pair counting ([3, 1, 2, 3, 1, 2] → 7), the expected inversion count n(n − 1)/4 against all 24 permutations for
+  n = 4 (mean 3), and the comparison-count identities (⌈3n/2⌉ − 2 = 13 for n = 10, n + ⌈log₂n⌉ − 2 = 18 for
+  n = 16, d(n + b) = 3 × 1,001,000 = 3,003,000 for the radix pass).
+- The set contains no `GATE_PYQ_VARIATION` item: no sorting, selection or inversion-counting previous-year question
+  has been verified against an official paper and answer key, so none is claimed; every question is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10) and the About tab says so.
+- Filed only at `algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`. Unit 2 had no earlier paper, so
+  nothing was archived, the unit folder holds exactly one current paper and nothing was written at the repository
+  root. The portal card carries no "Earlier sets" line because no set has been superseded yet.
+- Shell parity checked this run: the `<style>` block and the `<script>` block are byte-identical to the paper the
+  shell was copied from, the `:root` block still matches `design-tokens.css` byte for byte, and the changed lines
+  outside the question payload are confined to the title, header, meta strip, bank tab and About tab.
+- Structural checks this run (no browser harness): 25 `.qcard` elements, 25 palette buttons, a payload that decodes
+  to 25 answers and 25 solutions, zero solution HTML inside the active test cards, 50 `.hcard` items in the Question
+  Bank tab, zero stem overlap between the active test and that tab, and a tag-balance baseline identical to the
+  existing shell.
+- The Question Bank tab inside the paper lists the 50 solved questions of Unit 1 and nothing else: its 25 run-1 cards
+  are carried over byte for byte from the previous Algorithms paper, and its 25 run-2 cards are generated from
+  `master_bank.json` because no earlier tab had listed them. Unit 2's 25 are the active test and are not repeated in
+  the tab, so the tab and the paper share no question. `index.html` now holds 1300 banked questions and 33 test cards.
 
 - **2026-10-27, Digital Logic → Unit 3 (Sequential Circuits: Flip-Flops & Registers), Set 1 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
@@ -1960,7 +1996,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
-| 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 0 | — |
+| 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 25 | yes |
 | 3 | Greedy Algorithms | `greedy-algorithms` | 0 | — |
 | 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |

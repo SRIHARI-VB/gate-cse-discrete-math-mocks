@@ -4,11 +4,12 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-26",
+  "last_updated": "2026-10-27",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 50,
+  "total_questions": 75,
   "units_with_questions": [
-   1
+   1,
+   2
   ]
  },
  "runs": [
@@ -123,6 +124,58 @@
    ],
    "mode": "MODE A (random subject, bank-driven unit rotation)",
    "note": "Set 1 held 25 of the 50 questions for Unit 1, under the cap and current for 0 days, so step B3 re-selected Unit 1 for the second and final set. 25 + 25 = 50 closes the unit at the cap."
+  },
+  {
+   "run": 3,
+   "date": "2026-10-27",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "set": "1 of 2",
+   "file": "algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "question_ids": [
+    "ALG-U2-Q01",
+    "ALG-U2-Q02",
+    "ALG-U2-Q03",
+    "ALG-U2-Q04",
+    "ALG-U2-Q05",
+    "ALG-U2-Q06",
+    "ALG-U2-Q07",
+    "ALG-U2-Q08",
+    "ALG-U2-Q09",
+    "ALG-U2-Q10",
+    "ALG-U2-Q11",
+    "ALG-U2-Q12",
+    "ALG-U2-Q13",
+    "ALG-U2-Q14",
+    "ALG-U2-Q15",
+    "ALG-U2-Q16",
+    "ALG-U2-Q17",
+    "ALG-U2-Q18",
+    "ALG-U2-Q19",
+    "ALG-U2-Q20",
+    "ALG-U2-Q21",
+    "ALG-U2-Q22",
+    "ALG-U2-Q23",
+    "ALG-U2-Q24",
+    "ALG-U2-Q25"
+   ],
+   "selection": "MODE A. Random subject selection drew Algorithms from the subjects with no paper dated 2026-10-27 (an unseeded draw between algorithms and databases). runs[-1] for Algorithms was {date 2026-10-26, run 1, unit 1, asymptotic-analysis}, and unit 1 held 50 questions, exactly UNIT_QUESTION_CAP, so the cap test failed and the unit advanced: (index_of(asymptotic-analysis) + 1) mod 7 = (0 + 1) mod 7 = 1 -> Unit 2, Divide and Conquer & Sorting (sorting-divide-conquer). No override."
   }
  ],
  "verified_pyqs": [],
@@ -1874,6 +1927,959 @@
     ],
     "final": "256.",
     "trap": "Answering 64, the root cost alone. Every one of the log₂ 8 + 1 = 4 levels costs n² = 64 here, so the total is 4 × 64 = 256 — the driving term is never negligible."
+   }
+  },
+  {
+   "id": "ALG-U2-Q01",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which statement about the standard array implementation of merge sort is TRUE?",
+   "options": [
+    "It sorts in place, using Θ(1) auxiliary space.",
+    "It is stable, and it needs Θ(n) auxiliary space for the temporary merge buffer.",
+    "It is unstable, because the merge step destroys the relative order of equal keys.",
+    "Its best case is Θ(n), because an already-sorted input needs no merging."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Merge sort splits, sorts each half recursively, then merges two sorted runs. The merge writes into a separate buffer, so it needs Θ(n) auxiliary space, and it takes the left run first on a tie, which makes it stable.",
+    "steps": [
+     "Splitting needs no extra memory, but the merge cannot be done in place without quadratic movement, so an auxiliary array of size n is allocated once.",
+     "While merging, when L[i] == R[j] the algorithm copies L[i] first. Two equal keys therefore keep their original left-to-right order, which is exactly stability.",
+     "Every input, sorted or not, goes through the same ⌊log₂n⌋ + 1 levels of merging, so no input is cheaper than Θ(n log n)."
+    ],
+    "final": "Option (B)",
+    "trap": "Mixing up \"in place\" with \"does not move keys far\". Merge sort moves keys only inside the buffer, but the buffer itself is linear in size.",
+    "takeaway": "Two facts travel together in every merge-sort question: stable, and Θ(n) auxiliary space for the array version.",
+    "why_wrong": [
+     "(A) is false: the temporary buffer holds up to n keys at the top-level merge, so the space is Θ(n), not Θ(1).",
+     "(C) is false: stability depends on the tie rule in the merge, and taking the left key on a tie makes the algorithm stable.",
+     "(D) is false: standard merge sort does not detect sorted runs, so its best case equals its worst case."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q02",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Quicksort uses Lomuto partitioning with the first element of the current subarray as pivot. On which input does it run in Θ(n²) time?",
+   "options": [
+    "A uniformly random permutation of n distinct keys.",
+    "Keys that are already in increasing order.",
+    "Keys arranged so that every pivot is the median of its subarray.",
+    "Keys in an order in which every element is at most one position away from its sorted place."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Quicksort costs Θ(n log n) when the pivot splits the subarray into two parts of comparable size, and Θ(n²) when one part is empty at every level. With a first-element pivot, sorted input is the worst case.",
+    "steps": [
+     "On increasing input the first element is the minimum, so Lomuto partition puts the pivot in place and leaves all remaining n − 1 keys on one side.",
+     "The next call handles n − 1 keys and again strips off the minimum, so the subproblem sizes are n, n − 1, n − 2, …",
+     "The total work is therefore (n − 1) + (n − 2) + … + 1 = n(n − 1)/2 = Θ(n²)."
+    ],
+    "final": "Option (B)",
+    "trap": "Believing that \"already sorted\" is the easy case for every sort. It is the best case for insertion sort and the worst case for quicksort with an end pivot.",
+    "takeaway": "With a fixed end pivot, sorted or reverse-sorted input is the Θ(n²) trigger; the cure is a random or median-of-three pivot.",
+    "why_wrong": [
+     "(A) A random permutation splits roughly in the middle in expectation, giving Θ(n log n) expected time.",
+     "(C) A median pivot is the best case: two halves of size about n/2, so Θ(n log n).",
+     "(D) Near-sorted input is the adversarial case, not a benign one, for a first-element pivot."
+    ],
+    "faster": "You do not need to sum the series: each of the n levels removes exactly one key from one side, so there are n levels of cost Θ(n) each."
+   }
+  },
+  {
+   "id": "ALG-U2-Q03",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Let n = 2ᵐ. Which statement about standard merge sort on n keys is TRUE?",
+   "options": [
+    "Best case Θ(n), worst case Θ(n log n).",
+    "Best case and worst case are both Θ(n log n).",
+    "Worst case Θ(n²), average case Θ(n log n).",
+    "Best case Θ(n log n), auxiliary space Θ(log n)."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Merge sort is not adaptive: it always performs the same recursive split and the same number of merge levels, so its running time does not depend on the input order. The recurrence T(n) = 2T(n/2) + Θ(n) gives Θ(n log n) for every input.",
+    "steps": [
+     "The recursion tree has log₂n + 1 levels because every subarray is halved regardless of its contents.",
+     "Level i holds 2ᵢ subarrays whose total length is n, and merging them costs Θ(n).",
+     "Total cost = n · (log₂n + 1) = Θ(n log n), independent of the input order."
+    ],
+    "final": "Option (B)",
+    "trap": "Assuming that every divide-and-conquer sort has a cheap best case. Quicksort does; merge sort does not.",
+    "takeaway": "Merge sort: Θ(n log n) in all three cases, Θ(n) space, stable. Those four facts answer most questions on it.",
+    "why_wrong": [
+     "(A) A best case of Θ(n) belongs to adaptive sorts such as insertion sort or a natural merge sort that first detects sorted runs.",
+     "(C) Merge sort never degenerates: the split is by position, not by key value.",
+     "(D) The auxiliary space is the merge buffer, Θ(n); the recursion stack is only Θ(log n)."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q04",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "Quicksort is run on n distinct keys and the recursion depth is counted as the number of nested partition calls. Which statement is TRUE?",
+   "options": [
+    "Best case Θ(log n), worst case Θ(n).",
+    "Best case and worst case are both Θ(log n).",
+    "Best case Θ(1), worst case Θ(n²).",
+    "Best case Θ(log n), worst case Θ(n log n)."
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Recursion depth is the height of the recursion tree, not the amount of work. A balanced split gives height Θ(log n); a maximally unbalanced split removes one key per level and gives height n − 1.",
+    "steps": [
+     "Best case: each partition splits the subarray into two halves of size about n/2, so the height is log₂n.",
+     "Worst case: each partition leaves one side empty, so the sizes are n, n − 1, n − 2, …, 1 and the height is n − 1.",
+     "Height is therefore Θ(log n) at best and Θ(n) at worst; the Θ(n²) figure is the work, not the depth."
+    ],
+    "final": "Option (A)",
+    "trap": "Reporting Θ(n²) for the depth because it is the familiar worst-case time. Depth and work are different quantities: depth n with work Θ(n²).",
+    "takeaway": "For any recursion question, separate the three numbers: work per level, number of levels, and the branching factor.",
+    "why_wrong": [
+     "(B) ignores the degenerate split, which is reachable on sorted input.",
+     "(C) quotes the worst-case running time where the question asks for depth; the best depth is never constant.",
+     "(D) mixes the average work with the worst depth."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q05",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following statements comparing merge sort and quicksort are TRUE? (Select all that apply.)",
+   "options": [
+    "Merge sort has worst-case time Θ(n log n), while quicksort has worst-case time Θ(n²).",
+    "The array version of merge sort needs Θ(n) auxiliary space, while quicksort needs only O(log n) stack space on average.",
+    "Merge sort is stable, while the usual array quicksort is not.",
+    "Both algorithms run in Θ(n log n) time on average, and both are stable."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "The two sorts trade different guarantees. Merge sort buys a guaranteed Θ(n log n) bound and stability with linear auxiliary space; quicksort buys in-place operation and speed in practice with a quadratic worst case and no stability.",
+    "steps": [
+     "(A) True. The split of merge sort is by position, so no input can unbalance it; quicksort splits by key value and can be driven to a 0 : n − 1 split.",
+     "(B) True. The merge buffer holds up to n keys; quicksort partitions in place and keeps only the recursion stack, Θ(log n) deep on average.",
+     "(C) True. The merge copies the left key on a tie; the usual partition swaps keys across the pivot and destroys the original order of equal keys.",
+     "(D) False. The average time is Θ(n log n) for both, but quicksort is not stable."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "trap": "Treating \"Θ(n log n) on average\" as a complete description of quicksort. The average says nothing about stability or about the worst case.",
+    "takeaway": "When two sorts are compared, hold four columns: worst case, average case, auxiliary space, stable.",
+    "why_wrong": [
+     "Option (D) fails on stability alone, even though its average-time claim is correct."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q06",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "Which statement about quicksort and its pivot rules is TRUE?",
+   "options": [
+    "Choosing the median of the first, middle and last elements guarantees Θ(n log n) worst-case time.",
+    "Choosing the pivot uniformly at random gives Θ(n log n) expected time on every input, while the worst case remains Θ(n²).",
+    "Choosing the pivot uniformly at random removes the Θ(n²) worst case entirely.",
+    "Quicksort becomes stable when the pivot is chosen as the smallest key of the subarray."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Randomisation moves the bad case from the input to the coin tosses. For any fixed input the expected number of comparisons is Θ(n log n), but there remains a non-zero probability of drawing a run of bad pivots, so the worst case is still Θ(n²).",
+    "steps": [
+     "Fix an input of n distinct keys. With a random pivot, the expected split is balanced enough that the expected recursion is Θ(n log n); this holds for every input, including sorted ones.",
+     "The expectation is over pivot choices, not over inputs, so an adversary who knows the algorithm but not the coin tosses cannot force the bad case.",
+     "Some sequence of tosses still produces the degenerate split at every level, and that sequence has non-zero probability, so the worst case stays Θ(n²).",
+     "Deterministic pivot rules such as median-of-three have known adversarial inputs that force Θ(n²)."
+    ],
+    "final": "Option (B)",
+    "trap": "Confusing \"expected Θ(n log n)\" with \"worst case Θ(n log n)\". Only a selection-based pivot such as median-of-medians, or introsort's heapsort fallback, changes the worst case.",
+    "takeaway": "Randomisation converts a bad input into a bad coin toss; it does not delete the bad case.",
+    "why_wrong": [
+     "(A) Median-of-three has adversarial inputs that keep the median-of-three at an extreme of the subarray, so no guarantee follows.",
+     "(C) Randomisation improves the expected time; it does not remove the worst case.",
+     "(D) Picking the smallest key is the worst possible pivot and says nothing about stability; stability fails because partitioning swaps distant keys."
+    ],
+    "faster": "A guaranteed Θ(n log n) bound needs either a worst-case linear-time pivot (median of medians) or a switch to heapsort when the depth exceeds c·log n (introsort)."
+   }
+  },
+  {
+   "id": "ALG-U2-Q07",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "merge-sort-quick-sort",
+   "subtopic": "merge-sort-quick-sort",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "Merge sort is used to sort 8 distinct keys. Over all possible input orders, what is the maximum number of key comparisons the algorithm performs? (Enter an integer.)",
+   "options": [],
+   "answer": 17,
+   "solution": {
+    "concept": "A merge of two runs whose lengths add to m performs at most m − 1 comparisons, and that bound is attained when the runs interleave so that one run is exhausted only at the last step. The worst case obeys M(n) = M(⌈n/2⌉) + M(⌊n/2⌋) + (n − 1).",
+    "steps": [
+     "Base case: M(1) = 0 and M(2) = 1.",
+     "For n = 4 the split is 2 + 2, so M(4) = 1 + 1 + 3 = 5.",
+     "For n = 8 the split is 4 + 4, so M(8) = 5 + 5 + 7 = 17.",
+     "Each merge bound is attainable, and independent at each level, so 17 is reached by a suitable input such as alternating keys from the two halves."
+    ],
+    "final": "17",
+    "trap": "Answering 8 log₂8 = 24, which is the number of comparisons if every level compared every pair, or 12, which is the best case n log₂n − n + 1 = 8·3 − 8 + 1.",
+    "takeaway": "Worst-case merge-sort comparisons: n⌈log₂n⌉ − 2⌈log₂n⌉ + 1, which gives 17 for n = 8 and 8 for n = 5."
+   }
+  },
+  {
+   "id": "ALG-U2-Q08",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Counting sort is applied to n = 1000 keys, each an integer in the range 0 to 99. What is its running time?",
+   "options": [
+    "Θ(n log n)",
+    "Θ(n + k), which here is Θ(n) because k < n",
+    "Θ(n·k)",
+    "Θ(n²)"
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Counting sort never compares keys. It counts occurrences in an array of size k + 1 and then writes the output by prefix sums, so the cost is one pass to count and one pass to place: Θ(n + k).",
+    "steps": [
+     "Build the frequency array C[0..99]: one pass over the n keys, Θ(n).",
+     "Convert C to prefix sums: one pass over the k + 1 counters, Θ(k).",
+     "Write the output: one more pass over the n keys, Θ(n).",
+     "With k = 100 and n = 1000, k is dominated by n, so the total is Θ(n + k) = Θ(n)."
+    ],
+    "final": "Option (B)",
+    "trap": "Thinking that \"linear time\" means the key range is irrelevant. The term k is part of the cost; it is small here only because the keys are bounded by 99.",
+    "takeaway": "Counting sort costs Θ(n + k) time and Θ(k) space. Always quote both terms, then decide which dominates.",
+    "why_wrong": [
+     "(A) Counting sort does not sort by comparison, so the n log n bound does not apply.",
+     "(C) Θ(nk) would arise from scanning the key range once per key, which counting sort does not do.",
+     "(D) Quadratic time is what the algorithm is designed to avoid."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q09",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "LSD radix sort sorts digit by digit, starting from the least significant digit. Why must each digit sort be stable?",
+   "options": [
+    "Because an unstable digit sort would make the algorithm slower.",
+    "Because the order already established by the less significant digits must survive when two keys tie on the current digit.",
+    "Because radix sort compares digits with one another and needs them sorted.",
+    "Because stability is what makes radix sort in place."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "LSD radix sort treats the digits already processed as the low-order part of the key. Two keys that tie on the digit now being sorted must keep the relative order their lower digits gave them, otherwise that earlier work is destroyed.",
+    "steps": [
+     "After pass j the keys are sorted by their j least significant digits.",
+     "Pass j + 1 sorts by digit j + 1. Keys that tie on that digit must remain in the order the previous pass produced, which is exactly what a stable sort guarantees.",
+     "With a stable per-digit sort the invariant \"sorted by the last j digits\" holds after every pass, so after the last pass the keys are fully sorted."
+    ],
+    "final": "Option (B)",
+    "trap": "Assuming that any correct digit sort will do. MSD radix sort can recurse on buckets, but the LSD version is correct only with a stable subroutine.",
+    "takeaway": "LSD radix sort = d stable passes over the digits. Stability is a correctness requirement, not an optimisation.",
+    "why_wrong": [
+     "(A) Stability costs nothing asymptotically; an unstable pass would simply give a wrong result, not a slow one.",
+     "(C) Radix sort does not compare digits; it distributes them into buckets by value.",
+     "(D) Stability and in-place operation are unrelated; radix sort needs an output buffer anyway."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q10",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Counting sort first fills a frequency array C[0..k] and then converts it into prefix sums (running totals). Immediately after that conversion, what does C[v] hold?",
+   "options": [
+    "The number of keys equal to v.",
+    "The number of keys that are ≤ v, which is the last 1-based output position of value v.",
+    "The number of distinct key values that are ≤ v.",
+    "The 0-based index of the first occurrence of value v in the output."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "The prefix-sum step turns counts into positions. After it, C[v] is the cumulative count of keys up to and including v, so a key with value v belongs at output position C[v] (1-based) once that counter is decremented.",
+    "steps": [
+     "Before the conversion C[v] is the frequency of v.",
+     "The conversion sets C[v] ← C[v] + C[v − 1] for v = 1..k, so C[v] becomes the number of keys that are ≤ v.",
+     "Walking the input from right to left, each key of value v is written at position C[v] and then C[v] is decremented, which keeps equal keys in their original order."
+    ],
+    "final": "Option (B)",
+    "trap": "Using the frequency array directly as an index, which places every duplicate at the same output slot.",
+    "takeaway": "Counting sort = count, prefix-sum, place right to left. The right-to-left pass is what makes it stable.",
+    "why_wrong": [
+     "(A) describes the array before the prefix-sum step.",
+     "(C) counts distinct values, not keys; duplicates would then overwrite each other.",
+     "(D) the value stored is a 1-based last position, and it is decremented after each placement."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q11",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which statement about the Ω(n log n) lower bound for sorting is TRUE?",
+   "options": [
+    "It applies to every sorting algorithm, including counting sort and radix sort.",
+    "It applies to any algorithm that learns about the input order only through pairwise comparisons; counting sort avoids it by using a key as an array index.",
+    "It states that no algorithm can sort n keys with fewer than n log₂n comparisons, and that value is exact for every n.",
+    "It follows from the fact that n! > 2ⁿ for every n ≥ 1."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "The bound is a decision-tree argument: a comparison sort must distinguish n! possible orders, and a binary tree of height h has at most 2ʰ leaves, so h ≥ log₂(n!) = Θ(n log n). It constrains comparison sorts only.",
+    "steps": [
+     "Model the algorithm as a binary decision tree whose internal nodes are comparisons.",
+     "Each of the n! permutations must reach its own leaf, so the tree has at least n! leaves.",
+     "A binary tree with L leaves has height at least log₂L, hence h ≥ log₂(n!) = Θ(n log n).",
+     "Counting sort and radix sort never branch on comparisons; they read the key as an address, so the decision-tree model does not apply to them."
+    ],
+    "final": "Option (B)",
+    "trap": "Believing the bound covers all sorting. It covers comparison sorting; the escape route is to use the key value as an index, which requires a bounded key range.",
+    "takeaway": "Ω(n log n) holds for comparison sorts. Non-comparison sorts beat it by spending memory on the key range.",
+    "why_wrong": [
+     "(A) is false for exactly that reason: the model presupposes comparisons.",
+     "(C) The exact bound is ⌈log₂(n!)⌉, which is about n log₂n − 1.44n, so it is strictly smaller than n log₂n.",
+     "(D) n! > 2ⁿ only from n = 4 onwards, and that inequality alone would only give h > n."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q12",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following statements about counting sort and radix sort are TRUE? (Select all that apply.)",
+   "options": [
+    "Counting sort is stable when the output pass walks the input from right to left.",
+    "Radix sort with base b over d-digit keys runs in Θ(d(n + b)).",
+    "Counting sort uses Θ(k) auxiliary space, where k is the size of the key range.",
+    "Radix sort is a comparison sort, so the Ω(n log n) bound applies to it."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Both algorithms trade memory for time: they use the key value as an index instead of comparing keys. Counting sort costs Θ(n + k) time and Θ(k) space; radix sort repeats a stable linear pass once per digit.",
+    "steps": [
+     "(A) True. Walking right to left and decrementing the position counter places later duplicates after earlier ones, which preserves their input order.",
+     "(B) True. Each of the d passes counts into b buckets and moves n keys, so one pass is Θ(n + b) and the whole sort is Θ(d(n + b)).",
+     "(C) True. The counter array has k + 1 entries, and the output buffer adds Θ(n).",
+     "(D) False. Radix sort distributes keys into buckets by digit; it never compares two keys."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "trap": "Assuming a linear-time sort must be comparison based. Both algorithms here are distribution sorts, and that is why they can beat Ω(n log n).",
+    "takeaway": "Linear-time sorts: quote time Θ(n + k) or Θ(d(n + b)), space Θ(k) or Θ(n + b), and stability of the per-digit pass.",
+    "why_wrong": [
+     "Option (D) is the only false statement: it applies a comparison-model bound to a non-comparison algorithm."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q13",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "linear-time-sorts-counting-radix",
+   "subtopic": "linear-time-sorts-counting-radix",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "A radix sort with base b = 1000 is applied to n = 10⁶ keys, each a 9-digit decimal integer (every key is below 10⁹). Counting each pass as n + b elementary operations, what is the total number of elementary operations performed? (Enter an integer.)",
+   "options": [],
+   "answer": 3003000,
+   "solution": {
+    "concept": "Radix sort needs one pass per digit in the chosen base, and one pass costs n + b operations: n to distribute the keys into buckets and b to scan the counters.",
+    "steps": [
+     "The number of passes is d = ⌈log₁₀₀₀(10⁹)⌉ = 3, because 1000³ = 10⁹ covers every 9-digit decimal key.",
+     "One pass costs n + b = 10⁶ + 1000 = 1,001,000 operations.",
+     "Total = d(n + b) = 3 × 1,001,000 = 3,003,000."
+    ],
+    "final": "3003000",
+    "trap": "Using d = 9, the number of decimal digits, instead of the number of digits in the chosen base. The base fixes d: base 1000 packs three decimal digits into one pass.",
+    "takeaway": "Pick the base, compute d = ⌈log_b V⌉, then multiply by (n + b). A larger base shortens d but lengthens each pass."
+   }
+  },
+  {
+   "id": "ALG-U2-Q14",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which method finds the k-th smallest of n distinct keys in Θ(n) time in the worst case, for any k?",
+   "options": [
+    "Sorting the keys and reading position k.",
+    "The median-of-medians selection algorithm.",
+    "Building a max-heap and performing k extractions.",
+    "Binary searching over the key range and counting keys below each candidate value."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Selection is easier than sorting. The median-of-medians algorithm picks a pivot that is guaranteed to discard a constant fraction of the keys, which gives the recurrence T(n) ≤ T(n/5) + T(7n/10) + Θ(n) = Θ(n).",
+    "steps": [
+     "Group the n keys into ⌊n/5⌋ blocks of five and take the median of each block by sorting five keys: Θ(n) work in total.",
+     "Recursively take the median of those block medians; that pivot has at least 3n/10 keys below it and at least 3n/10 above it.",
+     "Recurse on one side only, of size at most 7n/10.",
+     "Since 1/5 + 7/10 = 9/10 < 1, the recurrence solves to Θ(n)."
+    ],
+    "final": "Option (B)",
+    "trap": "Concluding that selection must cost Θ(n log n) because sorting does. Selection is strictly easier: it answers one question about the order, not all of them.",
+    "takeaway": "Θ(n) worst-case selection exists (median of medians); Θ(n) expected selection is quickselect.",
+    "why_wrong": [
+     "(A) Sorting costs Θ(n log n), which is more than necessary.",
+     "(C) A heap gives Θ(n + k log n), which is Θ(n log n) when k is about n/2.",
+     "(D) Counting below each candidate is Θ(n) per probe, and the number of probes depends on the numeric range, so no Θ(n) guarantee follows."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q15",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Randomized quickselect is used to find the median of n distinct keys. Which statement about its running time is TRUE?",
+   "options": [
+    "Θ(n) expected, Θ(n²) worst case.",
+    "Θ(n log n) expected, Θ(n log n) worst case.",
+    "Θ(n) expected, Θ(n) worst case.",
+    "Θ(log n) expected, Θ(n) worst case."
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Quickselect partitions once and recurses into the one side that contains the k-th element. The expected sum of the subproblem sizes is n + n/2 + n/4 + … = 2n, which is Θ(n); the worst case is still the degenerate chain of partitions, Θ(n²).",
+    "steps": [
+     "One partition of a subarray of size m costs Θ(m).",
+     "With a random pivot the expected size of the surviving side is at most 3m/4, so the expected total work satisfies E(n) ≤ n + E(3n/4) = Θ(n).",
+     "If every pivot is extreme, the sizes fall by one each time and the total is Θ(n²)."
+    ],
+    "final": "Option (A)",
+    "trap": "Assuming that \"select instead of sort\" automatically means worst-case linear. Only the median-of-medians pivot gives that guarantee.",
+    "takeaway": "Quickselect halves the work of quicksort by following one side; the expectation is Θ(n), the worst case Θ(n²).",
+    "why_wrong": [
+     "(B) Θ(n log n) is the cost of sorting, not of selecting; only one side is explored.",
+     "(C) The worst case is quadratic, exactly as in quicksort.",
+     "(D) Θ(log n) is the recursion depth, not the work."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q16",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following statements about selection algorithms are TRUE? (Select all that apply.)",
+   "options": [
+    "Quickselect's expected Θ(n) time follows from the expected subproblem sizes forming a decreasing geometric series.",
+    "The median-of-medians algorithm attains Θ(n) in the worst case by using a pivot that is guaranteed to lie between the 30th and 70th percentile.",
+    "Sorting first and indexing costs Θ(n log n), which is asymptotically worse than the Θ(n) worst case of median-of-medians.",
+    "Any comparison-based algorithm that finds the k-th smallest of n distinct keys needs Ω(n log n) comparisons in the worst case."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Selection is a weaker problem than sorting, so it has a weaker lower bound: Ω(n), not Ω(n log n). The two ways to reach Θ(n) are randomisation (expected) and a guaranteed-fraction pivot (worst case).",
+    "steps": [
+     "(A) True. With a random pivot the surviving side has expected size at most 3m/4, so the expected work is n + (3/4)n + (3/4)²n + … = 4n.",
+     "(B) True. Each block of five contributes three keys on each side of its median, so the median of medians has at least 3n/10 keys below and at least 3n/10 above it.",
+     "(C) True. Θ(n log n) dominates Θ(n).",
+     "(D) False. Median-of-medians finds the k-th smallest in Θ(n) comparisons, so the lower bound is Ω(n)."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "trap": "Quoting Ω(n log n) for selection. That bound is for producing the whole sorted order; a single order statistic costs only Ω(n).",
+    "takeaway": "Sort Θ(n log n), select Θ(n) expected, select Θ(n) worst case with median of medians.",
+    "why_wrong": [
+     "Option (D) imports the sorting bound into a problem that does not need a total order."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q17",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "An array holds 10 distinct keys. Both the maximum and the minimum must be determined. What is the minimum number of comparisons that suffices in the worst case? (Enter an integer.)",
+   "options": [],
+   "answer": 13,
+   "solution": {
+    "concept": "Finding the maximum alone needs n − 1 comparisons, and doing the two searches independently costs 2n − 2. Comparing pairs first makes each key lose at most once as a maximum candidate and win at most once as a minimum candidate, which brings the total down to ⌈3n/2⌉ − 2.",
+    "steps": [
+     "Pair the 10 keys into 5 pairs and compare within each pair: 5 comparisons. Call the larger element the pair maximum and the smaller the pair minimum.",
+     "The overall maximum is one of the 5 pair maxima, so 4 more comparisons find it.",
+     "The overall minimum is one of the 5 pair minima, so 4 more comparisons find it.",
+     "Total = 5 + 4 + 4 = 13, which equals ⌈3n/2⌉ − 2 = 15 − 2."
+    ],
+    "final": "13",
+    "trap": "Answering 18 = 2n − 2 by running two independent scans, which wastes the information each comparison already gives about both extremes.",
+    "takeaway": "Paired scan for max and min: ⌈3n/2⌉ − 2 comparisons, and the same pairing idea underlies the tournament method for the second largest."
+   }
+  },
+  {
+   "id": "ALG-U2-Q18",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "Which of the following statements about linear-time selection are TRUE? (Select all that apply.)",
+   "options": [
+    "With blocks of five, the recurrence T(n) ≤ T(n/5) + T(7n/10) + O(n) solves to Θ(n) because 1/5 + 7/10 < 1.",
+    "Grouping into blocks of three instead of five still gives a linear-time algorithm, because the fraction of keys discarded at each step stays positive.",
+    "Quickselect with a random pivot is Θ(n) in expectation even though its worst case is Θ(n²).",
+    "Every comparison-based selection algorithm needs Ω(n) comparisons in the worst case, since a key that is never examined could be the answer."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "The block size controls how much the pivot guarantees. Blocks of five discard 3n/10 on each side, giving the 9/10 recurrence that solves to linear time. Blocks of three discard only n/3, and the recurrence then sums to Θ(n log n).",
+    "steps": [
+     "(A) True. The fractions 1/5 (the recursive median-of-medians call) and 7/10 (the surviving side) add to 9/10 < 1, so the level costs form a decreasing geometric series.",
+     "(B) False. With blocks of three the pivot only guarantees n/3 on each side, so the recurrence is T(n) ≤ T(n/3) + T(2n/3) + O(n), and 1/3 + 2/3 = 1 makes the sum Θ(n log n).",
+     "(C) True. Randomisation gives a geometric expected decrease in subproblem size while leaving the adversarial worst case intact.",
+     "(D) True. An unexamined key could be the k-th smallest, so every key must be touched at least once."
+    ],
+    "final": "Options (A), (C) and (D)",
+    "trap": "Thinking that any constant block size works. The guarantee needs a block size of at least five, because only then is the recursive fraction sum below 1.",
+    "takeaway": "For median-of-medians, check the fraction sum: T(n/b) + T(cn) is linear exactly when 1/b + c < 1.",
+    "why_wrong": [
+     "Option (B) is the trap: a positive discarded fraction is not enough — the two recursive fractions must sum to strictly less than 1."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q19",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "selection-kth-element",
+   "subtopic": "selection-kth-element",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "Sixteen distinct keys are stored in an array. Both the largest and the second largest key must be determined. What is the minimum number of comparisons needed in the worst case? (Enter an integer.)",
+   "options": [],
+   "answer": 18,
+   "solution": {
+    "concept": "Finding the maximum costs n − 1 comparisons, and only the keys that lost directly to the winner can be second largest. A tournament makes each key lose at most once, so the winner has beaten exactly ⌈log₂n⌉ opponents, and the second largest is the maximum of those.",
+    "steps": [
+     "Run a knockout tournament on 16 keys: 8 + 4 + 2 + 1 = 15 comparisons identify the largest key.",
+     "The largest key played exactly 4 matches, one per round, so exactly 4 keys lost directly to it.",
+     "The second largest must be among those 4 losers, because every other key lost to some key that is itself smaller than the maximum.",
+     "Finding the maximum of 4 keys costs 3 comparisons. Total = 15 + 3 = 18, that is n + ⌈log₂n⌉ − 2."
+    ],
+    "final": "18",
+    "trap": "Answering 16 + 15 = 31 by finding the maximum and then rescanning the array, which redoes comparisons that the tournament already made.",
+    "takeaway": "Second largest = n + ⌈log₂n⌉ − 2 comparisons; keep the list of keys each winner has beaten."
+   }
+  },
+  {
+   "id": "ALG-U2-Q20",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "An array of 6 distinct keys is stored in strictly decreasing order. How many inversions does it have?",
+   "options": [
+    "6",
+    "15",
+    "21",
+    "30"
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "An inversion is a pair of indices i < j with a[i] > a[j]. In a decreasing array every pair is inverted, so the count is the number of pairs, C(n,2) = n(n − 1)/2.",
+    "steps": [
+     "Every one of the C(6,2) pairs of positions has the larger key first.",
+     "C(6,2) = 6 × 5 / 2 = 15.",
+     "So the array has 15 inversions, the maximum possible for 6 distinct keys."
+    ],
+    "final": "Option (B)",
+    "trap": "Counting ordered pairs instead of index pairs, which doubles the answer.",
+    "takeaway": "Sorted ascending: 0 inversions. Sorted descending: n(n − 1)/2. Insertion sort takes exactly that many exchanges.",
+    "why_wrong": [
+     "(A) 6 is n, the number of keys.",
+     "(C) 21 = C(7,2) counts pairs of 7 keys.",
+     "(D) 30 = 6 × 5 counts ordered pairs twice."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q21",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Insertion sort is run on an array of n keys that contains exactly I inversions. Which statement is TRUE?",
+   "options": [
+    "It performs exactly I adjacent exchanges and runs in Θ(n + I) time.",
+    "It runs in Θ(n log n) time regardless of I.",
+    "It performs exactly I key comparisons in total.",
+    "It cannot be used to count inversions, because it destroys them as it runs."
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Insertion sort moves a key left by swapping it with its immediate predecessor, and each swap removes exactly one inversion. The number of swaps is therefore exactly the inversion count, and the work is one pass over n keys plus one swap per inversion.",
+    "steps": [
+     "Each inner-loop exchange swaps two adjacent keys that are out of order, which removes exactly one inversion and creates none.",
+     "The process stops when no inversion remains, so exactly I exchanges are performed.",
+     "The outer loop still visits all n keys, so the time is Θ(n + I)."
+    ],
+    "final": "Option (A)",
+    "trap": "Concluding that because insertion sort is Θ(n²) in the worst case, it is useless for counting. It is exactly linear in the number of inversions, which is the worst case n(n − 1)/2.",
+    "takeaway": "Adjacent transpositions = inversions. That identity links inversion counting to insertion sort, to bubble sort and to the Kendall tau distance.",
+    "why_wrong": [
+     "(B) Insertion sort is quadratic on a decreasing array, so it is not Θ(n log n) in general.",
+     "(C) The number of comparisons is I plus the n − 1 comparisons that fail to move a key, so it is not exactly I.",
+     "(D) It can: the number of exchanges it performs is the inversion count, which is why the naive count is Θ(n + I)."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q22",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "In the merge-sort based inversion count, the left and right runs are being merged and the current key of the right run is smaller than the current key of the left run. How many new inversions are counted at that moment?",
+   "options": [
+    "Exactly one.",
+    "As many as the number of keys still remaining in the left run, including the current one.",
+    "As many as the number of keys still remaining in the right run.",
+    "As many as the number of keys already written to the merged output."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Within each run the keys are already sorted, so an inversion can only pair a left-run key with a right-run key. When the current right key r is smaller than the current left key, r is smaller than every key still in the left run, and all of them precede r in the original array.",
+    "steps": [
+     "Both runs are sorted, so no inversion lies inside either run; only cross pairs matter.",
+     "Let L[i..] be the remaining left run and R[j] the current right key, with R[j] < L[i].",
+     "Since the left run is sorted, R[j] < L[i] ≤ L[i+1] ≤ …, so R[j] forms an inversion with each of them.",
+     "The count added is therefore the number of keys left in the left run, that is len(L) − i."
+    ],
+    "final": "Option (B)",
+    "trap": "Adding one inversion per comparison. The merge step must add a whole block of inversions, which is what makes the counting Θ(n log n) rather than Θ(n²).",
+    "takeaway": "Merge-based counting: whenever a right key is taken, add the number of left keys still waiting.",
+    "why_wrong": [
+     "(A) counts only the pair with L[i] and misses the rest of the left run.",
+     "(C) The right run keys come after R[j] in the array, so they cannot form an inversion with it.",
+     "(D) The size of the output so far has nothing to do with the pairs still unresolved."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q23",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "A permutation of n distinct keys is drawn uniformly at random. What is the expected number of inversions?",
+   "options": [
+    "n(n − 1)/2",
+    "n(n − 1)/4",
+    "n²/2",
+    "(n − 1)/2"
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Use linearity of expectation over pairs. For any fixed pair of positions, the two keys are equally likely to appear in either order, so the pair is inverted with probability 1/2, independently of all other pairs for the purpose of the sum.",
+    "steps": [
+     "There are C(n,2) = n(n − 1)/2 pairs of positions.",
+     "For a uniformly random permutation each pair is ordered one way or the other with probability 1/2, so the indicator of that pair being an inversion has expectation 1/2.",
+     "By linearity of expectation the expected total is C(n,2) × 1/2 = n(n − 1)/4.",
+     "For n = 4 the formula gives 4·3/4 = 3, and the 24 permutations of four keys do average exactly three inversions."
+    ],
+    "final": "Option (B)",
+    "trap": "Assuming the expectation must be a whole number. Expectations need not be integers; n(n − 1)/4 is 1.5 for n = 4.",
+    "takeaway": "Linearity of expectation over pairs turns an inversion-count question into a one-line computation.",
+    "why_wrong": [
+     "(A) is the maximum, attained only by the decreasing order.",
+     "(C) ignores the 1/2 factor and the −1 term.",
+     "(D) is (n − 1)/2, the expected number of inversions contributed by a single key at most."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q24",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "question": "Which of the following statements about inversions are TRUE? (Select all that apply.)",
+   "options": [
+    "The maximum possible number of inversions in an array of n distinct keys is n(n − 1)/2.",
+    "Two different permutations of the same n distinct keys can have the same number of inversions.",
+    "If an array has exactly one inversion, a single adjacent exchange sorts it.",
+    "The number of inversions of a permutation equals the minimum number of arbitrary element exchanges needed to sort it."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Inversions measure disorder in the adjacent-swap metric. Each adjacent exchange changes the count by exactly one, which is why inversions equal the adjacent-transposition distance. Exchanging arbitrary pairs is a different metric, governed by cycle structure.",
+    "steps": [
+     "(A) True. There are C(n,2) pairs, and the decreasing order inverts every one of them.",
+     "(B) True. For three keys, [2,3,1] and [3,1,2] both have two inversions.",
+     "(C) True. Exactly one inversion means exactly one adjacent pair is out of order, and swapping it sorts the array.",
+     "(D) False. The minimum number of arbitrary exchanges is n − (number of cycles), for example 1 for [2,3,1], which has two inversions."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "trap": "Treating every measure of disorder as the inversion count. Inversions count adjacent swaps only.",
+    "takeaway": "Inversions = adjacent-transposition distance = number of exchanges performed by insertion sort.",
+    "why_wrong": [
+     "Option (D) swaps the adjacent-swap metric for the arbitrary-exchange metric; the two distances differ whenever a cycle has length three or more."
+    ]
+   }
+  },
+  {
+   "id": "ALG-U2-Q25",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "sorting-divide-conquer",
+   "unit_name": "Divide and Conquer & Sorting",
+   "topic": "Divide and Conquer & Sorting",
+   "sub": "inversion-counting",
+   "subtopic": "inversion-counting",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "question": "How many inversions does the array [3, 1, 2, 3, 1, 2] contain, where an inversion is a pair of indices i < j with a[i] > a[j]? Equal keys do not form an inversion. (Enter an integer.)",
+   "options": [],
+   "answer": 7,
+   "solution": {
+    "concept": "With duplicates, an inversion is still a strict inequality on values but a strict inequality on positions. Equal keys never count, so the array is not simply \"disordered everywhere\".",
+    "steps": [
+     "Count per position, looking only to the right. Position 1 (value 3): smaller keys to its right are 1, 2, 1, 2, giving 4.",
+     "Position 2 (value 1): nothing to its right is smaller, giving 0.",
+     "Position 3 (value 2): the 1 at position 5 is smaller, giving 1.",
+     "Position 4 (value 3): 1 and 2 are smaller, giving 2. Position 5 (value 1): 0. Position 6: 0.",
+     "Total = 4 + 0 + 1 + 2 + 0 + 0 = 7."
+    ],
+    "final": "7",
+    "trap": "Counting the equal 3s and the equal 1s as inversions, which adds 1 + 1 = 2 and gives 9. An inversion needs a strictly greater value on the left.",
+    "takeaway": "With duplicates, state the rule before counting: strict inequality on values, strict order on indices."
    }
   }
  ]
