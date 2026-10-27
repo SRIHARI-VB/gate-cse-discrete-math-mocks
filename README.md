@@ -7,31 +7,31 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 1 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
+- **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html`](engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: indeterminate forms & L'Hôpital's rule (7) · continuity analysis (6) · mean value theorems (6) ·
   partial derivatives (6)
 - Rotation: MODE A drew **Engineering Mathematics** from the 11 GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw (seed `1855517764`, draw index 1 of 11). `runs[]` gives the most recent Engineering
-  Mathematics paper as `{date 2026-10-27, run 4, unit 2, eigenvalues-eigenvectors, Set 2 of 2}`. Unit 2 held
-  **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so the cap test in step B3 failed and step B4 advanced exactly
-  one unit: `(index_of(eigenvalues-eigenvectors) + 1) mod 5 = (1 + 1) mod 5 = 2` → **Unit 3, Calculus: Limits,
-  Continuity & Differentiability**. This is Set 1 of 2, so 25 questions are now banked on Unit 3 and the next
-  Engineering Mathematics run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was used,
-  no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Engineering Mathematics · Unit 2 — Linear Algebra: Eigenvalues & Vectors, Set 2 of 2**, 2026-10-27 → [`engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html`](engineering-mathematics/eigenvalues-eigenvectors/gate_em_mock_2_2026-10-27.html)
+  `random.SystemRandom()` draw (seed `213900260`, draw index 1 of 11). `runs[]` sorted by `(date, run)` gives the most
+  recent Engineering Mathematics paper as `{date 2026-10-27, run 5, unit 3, calculus-limits-derivatives, Set 1 of 2}`.
+  Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below
+  `DAYS_PER_UNIT_MAX = 7`, so the cap test in step B3 held and step B4 was not reached: the current unit was generated
+  again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions and the next Engineering Mathematics run advances
+  `(index_of(calculus-limits-derivatives) + 1) mod 5 = (2 + 1) mod 5 = 3` → **Unit 4, Calculus: Maxima, Minima &
+  Integrals**. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Engineering Mathematics · Unit 3 — Calculus: Limits, Continuity & Differentiability, Set 1 of 2**, 2026-10-27 → [`engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html`](engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 49 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 5 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 29 current · 20 archived |
+| Papers published (current + archived) | 50 (14 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 4 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 29 current · 21 archived |
 | Test cards on the portal | 31 |
 | Units covered | 7 of 16 in Discrete Mathematics; 1 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 2 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1225 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 125 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1250 (350 Discrete Mathematics, 50 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 100 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 20 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 2 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
+| Archived sets (earlier runs) | 21 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -42,9 +42,99 @@ name yet). Because one shell serves all papers and `6.8` treats shell parity as 
 edited for this run — editing it would have changed all 29 current papers at once. The `:root` block itself is
 byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
 pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
-re-verify all 29 current papers and 20 archived sets together.
+re-verify all 29 current papers and 21 archived sets together.
+
+Three further shell-level items are open and are deliberately left to that same coordinated pass, because each of them
+touches files this run did not create:
+
+- Two archived Discrete Mathematics `proof-techniques` sets (`archive/gate_dm_mock_16_2026-10-25_run1.html` and
+  `_run2.html`) still carry an older `:root` block, so Section 4.1's rule that an archived paper is rebuilt on the
+  current interface when the interface changes is not yet satisfied for them. Every other paper, current and archived,
+  matches `design-tokens.css` byte for byte.
+- `digital-logic/number-systems` holds two "current" papers (`gate_dl_mock_1_2026-10-26.html` and
+  `gate_dl_mock_1_2026-10-27.html`); one of them should have moved to `archive/` when the other superseded it.
+- Two portal cards point at archived runs although a current paper exists for their unit: the Theory of Computation
+  `cfl-grammars` card and the Computer Networks `network-fundamentals-framing` card. Both targets exist and open, so no
+  link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Engineering Mathematics → Unit 3 (Calculus: Limits, Continuity & Differentiability), Set 2 of 2.**
+  MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (seed `213900260`, draw index 1 of 11); it gave **Engineering Mathematics**. `runs[]`
+  sorted by `(date, run)` gives the most recent paper as `{date 2026-10-27, run 5, unit 3, calculus-limits-derivatives,
+  Set 1 of 2}`. Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days,
+  below `DAYS_PER_UNIT_MAX = 7`, so the cap test in step B3 held and step B4 was not reached: the current unit was
+  generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50 questions — the cap — and the next Engineering
+  Mathematics run advances `(index_of(calculus-limits-derivatives) + 1) mod 5 = (2 + 1) mod 5 = 3` → **Unit 4,
+  Calculus: Maxima, Minima & Integrals**. The Set 1 paper was moved to
+  `engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html` with its content
+  frozen, and the Set 2 paper took the canonical filename, so the unit folder holds exactly one current paper and no
+  root copy was written. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — indeterminate forms & L'Hôpital's rule (7), continuity analysis (6),
+  mean value theorems (6), partial derivatives (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35.
+- All 25 items are new: `EM-U3B-Q01`..`EM-U3B-Q25` did not exist in the bank, and every stem was checked against the
+  125 banked Engineering Mathematics items (Unit 1, Unit 2 and Unit 3 Set 1) so that no stem, option set or numeric
+  answer repeats. The check was string-normalised (tags stripped, case and punctuation removed): zero collisions.
+- **Every countable answer was recomputed by script, not by hand.** The limits were evaluated symbolically rather than
+  by inspection: `lim tan(3x)/(2x) = 3/2` (Q01), `lim sin 5x/sin 2x = 5/2` (Q02), `lim (√x − 3)/(x − 9) = 1/6` (Q03),
+  `lim (x − sin x)/x³ = 1/6` (Q07), `lim (tan x − sin x)/x³ = 1/2` (Q11), `lim (1 − cos 4x)/x² = 8` (Q21) and
+  `lim (sin 3x − 3 sin x)/x³ = −4` (Q24). The derivative quantities were differentiated symbolically:
+  `f_y = 4xy` giving 8 at (1, 2) (Q05), `∇f(2,1) = (4, 6)` (Q06), `∂z/∂r = 2r` under the polar substitution (Q10),
+  Euler's `x f_x + y f_y = 2f` giving 30 (Q15) and `∂⁴f/∂x²∂y∂z = 12xy` giving 24 at (1, 2, 1) (Q25). The
+  one-sided derivatives that decide the corners of `|x − 2| + |x + 2|` were computed as 0 and 2 at `x = 2`, and
+  −2 and 0 at `x = −2` (Q08). The critical points of `4xy − x⁴ − y⁴` were solved and classified: `(0, 0)` with
+  `D = −16` is a saddle, `(1, 1)` and `(−1, −1)` with `D = 128` and `f_xx = −12` are local maxima (Q14). Rolle's
+  point for `x² − 4x + 1` on `[1, 3]` is `c = 2` after confirming `f(1) = f(3) = −2` (Q04); the Lagrange points for
+  `x³ − 3x² + 2x` on `[0, 3]` are the roots of `3c² − 6c = 0`, of which only `c = 2` is interior (Q23). The
+  continuity parameter in Q22 was settled by two conditions at once — `a + b = 1` from continuity and `a = 2` from
+  the matching slopes — giving `a + b = 1`. **Every one of the 25 answers was reproduced by an independent symbolic
+  computation; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: `x^(2/3)` satisfies two of Rolle's
+  three hypotheses on `[−1, 1]` and fails only differentiability at the interior point 0, which is what Q09 asks for;
+  `x² sin(1/x)` is differentiable at 0 with `f′(0) = 0` while `f′` oscillates without limit there, so a derivative
+  need not be continuous (Q12); a derivative bounded by `1 ≤ f′ ≤ 2` gives a two-sided bound `3 ≤ f(3) ≤ 6`, both
+  sides attained by `x` and `2x` (Q13); Lagrange's theorem asks for differentiability on the **open** interval only, so
+  `√x` on `[0, 1]` qualifies despite its vertical tangent at the endpoint while `|x|` on `[−1, 1]` does not (Q20);
+  the discriminant `D = f_xx f_yy − f_xy²` — not the sign of `f_yy` — is what separates a saddle from a maximum, and
+  it does so at `(0, 0)` of `4xy − x⁴ − y⁴` where both pure second derivatives vanish (Q14); and a cancelled common
+  factor removes a singularity rather than creating an asymptote (Q19).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 2 times, (B) 4, (C) 4
+  and (D) 5, and the five MSQ answer sets are (A,C), (B,C), (A,B,C), (A,B) and (B,C,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged (empty for this subject), the Question Bank tab
+  shows **125 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **125** banked items that are not part of the active set — 50 from
+  Unit 1, 50 from Unit 2 and 25 from Unit 3 Set 1 — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active Set 2 questions do not appear there (verified: zero overlap between the 25 active
+  stems and the 125 bank-tab questions). Unit 3's accordion therefore carries only its Set 1 questions this run, because
+  all 25 of its Set 2 questions are the active test.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, tab label, meta set chip, `#qhost`, bank tab,
+  About tab, payload), the remaining **28 423 bytes are byte-identical** to the shell extracted from the Engineering
+  Mathematics Unit 3 Set 1 paper, so the `<style>` block (13 243 bytes), the exam `<script>` (9 428 bytes), the
+  palette, the answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper,
+  `index.html` and `design-tokens.css`, and the count of literal hex values outside `:root` is unchanged at 114 in the
+  paper, so the known Section 6.4 deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**59 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the test pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the timer was observed ticking 60:00 → 59:59 under real intervals; the palette reaches `ans`, `amr`, `na`
+  and `mrk` and falls back correctly on Unmark review and Clear response; all 25 answered correctly scores
+  **35 / 35** with 25 correct, 0 wrong, 25 `ok` palette buttons and 25 key cards; one wrong MCQ, one skipped MCQ, an
+  MSQ one option short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong and 1 unattempted, confirming that
+  an MSQ earns nothing unless the exact set is selected and that there is no negative marking; an empty paper scores
+  **0 / 35** with 25 `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; all four
+  subtopics appear; the Question Bank tab renders 125 cards; the About tab carries its three sections; and all four
+  tabs open.
+- `index.html` holds all **1250** questions. Its data block was updated in place: the existing 2026-10-27 Engineering
+  Mathematics Unit 3 record was retargeted at the new paper and given an `archives` entry pointing at the frozen Set 1
+  copy (so the card reads "Earlier sets for this date: Set 1"), and the 25 new question records were appended. No unit
+  had to be registered — Engineering Mathematics Units 1–5 were already in the portal's `units` table. The static
+  header strings were recomputed from the data block and now read 64 units, 31 sets published, 1250 solved questions /
+  records and 277 subtopics. Every path in the data block resolves against the repository tree.
 
 - **2026-10-27, Engineering Mathematics → Unit 3 (Calculus: Limits, Continuity & Differentiability), Set 1 of 2.**
   MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded

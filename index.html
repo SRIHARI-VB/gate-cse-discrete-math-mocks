@@ -171,7 +171,7 @@ footer.foot p{margin:6px 0}
   <div class="brand">GATE CSE 2027 · Mock Test Portal</div>
   <div class="sub">Daily mock tests &amp; solved question archive · 11 subjects</div>
   <div class="spacer"></div>
-  <div class="candidate"><b>SRIHARI V B</b>64 units &middot; 1225 solved questions banked</div>
+  <div class="candidate"><b>SRIHARI V B</b>64 units &middot; 1250 solved questions banked</div>
 </header>
 
 <nav class="tabs">
@@ -184,7 +184,7 @@ footer.foot p{margin:6px 0}
     <div class="banner info"><b>Test series portal.</b> One 25-question mock test per day on a rotating unit order; every test is a single self-contained HTML file that opens offline with a question palette, a running timer and answers locked until submission.</div>
     <div class="meta-strip">
       <span class="chip"><b>64</b> units in the series · <b>31</b> sets published</span>
-      <span class="chip"><b>1225</b> solved questions in the review archive</span>
+      <span class="chip"><b>1250</b> solved questions in the review archive</span>
       <span class="chip"><b>1150</b> records in the subject banks</span>
       <span class="chip">Syllabus covered: 64 units · 277 subtopics</span>
     </div>
@@ -221,7 +221,12 @@ footer.foot p{margin:6px 0}
     "Partial derivatives"
    ],
    "path": "engineering-mathematics/calculus-limits-derivatives/gate_em_mock_3_2026-10-27.html",
-   "archives": []
+   "archives": [
+    {
+     "label": "Set 1",
+     "path": "engineering-mathematics/calculus-limits-derivatives/archive/gate_em_mock_3_2026-10-27_run1.html"
+    }
+   ]
   },
   {
    "date": "2026-10-27",
@@ -25964,6 +25969,481 @@ footer.foot p{margin:6px 0}
    "options": [],
    "answer_display": "12",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a product <span class=\"mm\">x<sup>m</sup>y<sup>n</sup></span> the mixed partial of order <span class=\"mm\">r</span> in <span class=\"mm\">x</span> and <span class=\"mm\">s</span> in <span class=\"mm\">y</span> is <span class=\"mm\">[m!/(m − r)!] · [n!/(n − s)!] · x<sup>m−r</sup> y<sup>n−s</sup></span>, and the order of differentiation does not matter for a polynomial.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Differentiate twice in <span class=\"mm\">y</span>: <span class=\"mm\">∂f/∂y = 3x²y²</span>, then <span class=\"mm\">∂²f/∂y² = 6x²y</span>.</li><li>Then twice in <span class=\"mm\">x</span>: <span class=\"mm\">∂/∂x (6x²y) = 12xy</span>, then <span class=\"mm\">∂²/∂x² (6x²y) = 12y</span>.</li><li>At <span class=\"mm\">(1, 1)</span>: <span class=\"mm\">12 · 1 = 12</span>. Shortcut: <span class=\"mm\">2!/(0!) · 3!/(1!) · x⁰y¹ = 2 · 6 · y = 12y</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12</span></p><p class=\"row\"><b>Common misconception.</b> Counting the derivative as <span class=\"mm\">∂²f/∂x∂y</span> (order two) rather than order four, which gives <span class=\"mm\">6xy² = 6</span> at <span class=\"mm\">(1, 1)</span>. The symbol <span class=\"mm\">∂x²</span> means 'twice in <span class=\"mm\">x</span>', and <span class=\"mm\">∂y²</span> means 'twice in <span class=\"mm\">y</span>', so four differentiations are performed in all.</p>"
+  },
+  {
+   "id": "EM-U3B-Q01",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> tan(3x)/(2x)</span> is",
+   "options": [
+    "<span class=\"mm\">2/3</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">3/2</span>"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Both numerator and denominator vanish at <span class=\"mm\">x = 0</span>, so the expression is the indeterminate form <span class=\"mm\">0/0</span>. The standard limit <span class=\"mm\">lim<sub>u→0</sub> tan u / u = 1</span> settles it.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Write <span class=\"mm\">tan(3x)/(2x) = (3/2) · tan(3x)/(3x)</span>.</li>\n<li>Put <span class=\"mm\">u = 3x</span>. As <span class=\"mm\">x → 0</span>, also <span class=\"mm\">u → 0</span>, and <span class=\"mm\">tan u / u → 1</span>.</li>\n<li>So the limit is <span class=\"mm\">(3/2) · 1 = 3/2</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 3/2 — option (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reading the coefficient of <span class=\"mm\">x</span> in the numerator as the answer gives 3 (option B); treating the factor 2 in the denominator as a multiplier of the numerator gives 6, and its reciprocal gives 2/3 (option A). The chain-rule factor from <span class=\"mm\">tan 3x</span> must be divided by the coefficient in the denominator, not multiplied.</p>"
+  },
+  {
+   "id": "EM-U3B-Q02",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> sin(5x)/sin(2x)</span> is",
+   "options": [
+    "<span class=\"mm\">2/5</span>",
+    "<span class=\"mm\">5/2</span>",
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">0</span>"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Both numerator and denominator tend to 0, so the form is <span class=\"mm\">0/0</span>. Dividing numerator and denominator by the same factor <span class=\"mm\">x</span> turns each piece into the standard limit <span class=\"mm\">lim<sub>u→0</sub> sin u / u = 1</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Divide numerator and denominator by <span class=\"mm\">x</span>: <span class=\"mm\">sin(5x)/sin(2x) = [sin(5x)/(5x)] · [2x/sin(2x)] · (5/2)</span>.</li>\n<li>As <span class=\"mm\">x → 0</span>, the first factor tends to <span class=\"mm\">1</span> and the second to <span class=\"mm\">1</span>.</li>\n<li>So the limit is <span class=\"mm\">5/2</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 5/2 — option (B).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Inverting the ratio gives 2/5 (option A). A second trap is to cancel <span class=\"mm\">sin 5x</span> against <span class=\"mm\">sin 2x</span> as if they were like algebraic factors; they are not, and only the limiting ratio <span class=\"mm\">5/2</span> is meaningful.</p>"
+  },
+  {
+   "id": "EM-U3B-Q03",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = (√x − 3)/(x − 9)</span> for <span class=\"mm\">x ≠ 9</span> and <span class=\"mm\">f(9) = k</span>. Then <span class=\"mm\">f</span> is continuous at <span class=\"mm\">x = 9</span> exactly when <span class=\"mm\">k</span> equals",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">6</span>",
+    "<span class=\"mm\">1/3</span>",
+    "<span class=\"mm\">1/6</span>"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Continuity at <span class=\"mm\">x = 9</span> needs <span class=\"mm\">lim<sub>x→9</sub> f(x) = f(9)</span>. Here the formula is undefined at <span class=\"mm\">x = 9</span>, so the value must be supplied by the limit.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>At <span class=\"mm\">x = 9</span> both <span class=\"mm\">√x − 3</span> and <span class=\"mm\">x − 9</span> vanish, so the form is <span class=\"mm\">0/0</span>. Rationalise the numerator by multiplying by <span class=\"mm\">(√x + 3)/(√x + 3)</span>.</li>\n<li><span class=\"mm\">(√x − 3)/(x − 9) = (x − 9)/[(x − 9)(√x + 3)]</span>.</li>\n<li>Cancel the common factor <span class=\"mm\">x − 9</span>: <span class=\"mm\">f(x) = 1/(√x + 3)</span> for <span class=\"mm\">x ≠ 9</span>.</li>\n<li>So <span class=\"mm\">lim<sub>x→9</sub> f(x) = 1/6</span>, and continuity forces <span class=\"mm\">k = 1/6</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 1/6 — option (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Applying L'Hôpital's rule to <span class=\"mm\">√x − 3</span> gives <span class=\"mm\">1/(2√x)</span>, which is the derivative of the numerator alone; forgetting to differentiate the denominator as well yields 1/3 (option C). Another slip is to use the numerator's constant 3 as the answer (option B).</p>"
+  },
+  {
+   "id": "EM-U3B-Q04",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Rolle's theorem applies to <span class=\"mm\">f(x) = x² − 4x + 1</span> on the interval <span class=\"mm\">[1, 3]</span>. The point <span class=\"mm\">c</span> it guarantees is",
+   "options": [
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">3/2</span>",
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">5/2</span>"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Rolle's theorem: if <span class=\"mm\">f</span> is continuous on <span class=\"mm\">[a, b]</span>, differentiable on <span class=\"mm\">(a, b)</span> and <span class=\"mm\">f(a) = f(b)</span>, then some <span class=\"mm\">c</span> in <span class=\"mm\">(a, b)</span> has <span class=\"mm\">f′(c) = 0</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f</span> is a polynomial, hence continuous on <span class=\"mm\">[1, 3]</span> and differentiable on <span class=\"mm\">(1, 3)</span>.</li>\n<li><span class=\"mm\">f(1) = 1 − 4 + 1 = −2</span> and <span class=\"mm\">f(3) = 9 − 12 + 1 = −2</span>, so the equal-endpoint hypothesis holds.</li>\n<li>Solve <span class=\"mm\">f′(c) = 0</span>: <span class=\"mm\">2c − 4 = 0</span> gives <span class=\"mm\">c = 2</span>.</li>\n<li><span class=\"mm\">c = 2</span> lies in <span class=\"mm\">(1, 3)</span>, so it is the required point.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 2 — option (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Taking the midpoint of the interval, 2, by coincidence is correct here, but the midpoint is not what the theorem asserts — the point comes from solving <span class=\"mm\">f′(c) = 0</span>. Choosing the endpoint value 1 (option A) or half the coefficient sum (option B) is guesswork; always differentiate.</p>"
+  },
+  {
+   "id": "EM-U3B-Q05",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "For <span class=\"mm\">f(x, y) = x³ + 2xy²</span>, the value of <span class=\"mm\">∂f/∂y</span> at the point <span class=\"mm\">(1, 2)</span> is",
+   "options": [
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">8</span>",
+    "<span class=\"mm\">16</span>",
+    "<span class=\"mm\">2</span>"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The partial derivative <span class=\"mm\">∂f/∂y</span> differentiates with respect to <span class=\"mm\">y</span> while holding <span class=\"mm\">x</span> constant, so <span class=\"mm\">x</span> is treated as a constant coefficient.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Differentiate term by term in <span class=\"mm\">y</span>: the term <span class=\"mm\">x³</span> contributes 0, and <span class=\"mm\">2xy²</span> contributes <span class=\"mm\">2x · 2y = 4xy</span>.</li>\n<li>So <span class=\"mm\">∂f/∂y = 4xy</span>.</li>\n<li>At <span class=\"mm\">(1, 2)</span>: <span class=\"mm\">4 · 1 · 2 = 8</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 8 — option (B).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Differentiating with respect to <span class=\"mm\">x</span> instead gives <span class=\"mm\">3x² + 2y²</span>, which is 7 at <span class=\"mm\">(1, 2)</span> and matches no option; using <span class=\"mm\">2y²</span> alone as the answer gives 4 (option A), and squaring the coefficient gives 16 (option C). The factor 2 in <span class=\"mm\">2xy²</span> and the exponent 2 in <span class=\"mm\">y</span> both belong in the answer.</p>"
+  },
+  {
+   "id": "EM-U3B-Q06",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The gradient of <span class=\"mm\">f(x, y) = x² + 3y²</span> at the point <span class=\"mm\">(2, 1)</span> is",
+   "options": [
+    "<span class=\"mm\">(4, 6)</span>",
+    "<span class=\"mm\">(2, 3)</span>",
+    "<span class=\"mm\">(4, 3)</span>",
+    "<span class=\"mm\">(2, 6)</span>"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The gradient is the vector of first partial derivatives, <span class=\"mm\">∇f = (f<sub>x</sub>, f<sub>y</sub>)</span>, evaluated at the stated point.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f<sub>x</sub> = 2x</span> and <span class=\"mm\">f<sub>y</sub> = 6y</span>.</li>\n<li>At <span class=\"mm\">(2, 1)</span>: <span class=\"mm\">f<sub>x</sub> = 4</span> and <span class=\"mm\">f<sub>y</sub> = 6</span>.</li>\n<li>So <span class=\"mm\">∇f(2, 1) = (4, 6)</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (4, 6) — option (A).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reporting the partials at the wrong point, or dropping the factor 3 from <span class=\"mm\">3y²</span>, gives <span class=\"mm\">(4, 3)</span> — option (C). Halving both components gives <span class=\"mm\">(2, 3)</span> (option B), which is the gradient of <span class=\"mm\">x² + y²</span> rather than of <span class=\"mm\">x² + 3y²</span>.</p>"
+  },
+  {
+   "id": "EM-U3B-Q07",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> (x − sin x)/x³</span> is",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">1/6</span>",
+    "<span class=\"mm\">1/3</span>",
+    "<span class=\"mm\">1/2</span>"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. Applying L'Hôpital's rule three times, or expanding <span class=\"mm\">sin x</span> about 0, both give the same answer; the expansion shows why the leading terms cancel.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Expand: <span class=\"mm\">sin x = x − x³/6 + x⁵/120 − …</span>.</li>\n<li>Subtract <span class=\"mm\">x</span>: <span class=\"mm\">x − sin x = x³/6 − x⁵/120 + …</span>.</li>\n<li>Divide by <span class=\"mm\">x³</span>: <span class=\"mm\">1/6 − x²/120 + …</span>, so the limit is <span class=\"mm\">1/6</span>.</li>\n<li>Check by L'Hôpital: <span class=\"mm\">lim (1 − cos x)/(3x²)</span>, <span class=\"mm\">lim sin x/(6x)</span>, <span class=\"mm\">lim cos x/6</span>, giving <span class=\"mm\">1/6</span> at <span class=\"mm\">x = 0</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 1/6 — option (B).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Stopping at one application of L'Hôpital's rule gives <span class=\"mm\">(1 − cos x)/(3x²)</span>, which is still <span class=\"mm\">0/0</span>, and reading the surviving numerator as the answer gives 0 (option A). A second trap is to use the first neglected term of <span class=\"mm\">sin x</span> alone as if it were the whole remainder, which halves or doubles the answer.</p>"
+  },
+  {
+   "id": "EM-U3B-Q08",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = |x − 2| + |x + 2|</span>. Which statement is TRUE?",
+   "options": [
+    "f is continuous everywhere and not differentiable only at x = 2",
+    "f is discontinuous at x = 2 and at x = −2",
+    "f is continuous everywhere and not differentiable at x = 2 and at x = −2",
+    "f is continuous and differentiable everywhere"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> A sum of absolute values is continuous everywhere because each absolute value is. It can fail to be differentiable only where an argument vanishes — here at <span class=\"mm\">x = 2</span> and <span class=\"mm\">x = −2</span> — because the slope of <span class=\"mm\">|t|</span> changes sign there.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Split the line at the two break points. For <span class=\"mm\">x < −2</span>: <span class=\"mm\">f(x) = −(x − 2) − (x + 2) = −2x</span>.</li>\n<li>For <span class=\"mm\">−2 ≤ x ≤ 2</span>: <span class=\"mm\">f(x) = −(x − 2) + (x + 2) = 4</span>.</li>\n<li>For <span class=\"mm\">x > 2</span>: <span class=\"mm\">f(x) = (x − 2) + (x + 2) = 2x</span>.</li>\n<li>At <span class=\"mm\">x = 2</span> the left derivative is 0 (from the middle piece) and the right derivative is 2, so <span class=\"mm\">f</span> has a corner there.</li>\n<li>At <span class=\"mm\">x = −2</span> the left derivative is −2 and the right derivative is 0, another corner.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: continuous everywhere, not differentiable at x = 2 and x = −2 — option (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Assuming a corner at <span class=\"mm\">x = 2</span> only, since that is the more visible kink (option A), or assuming that a continuous piecewise-linear function must be smooth (option D). Two absolute values mean two corners unless the break points coincide.</p>"
+  },
+  {
+   "id": "EM-U3B-Q09",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Rolle's theorem cannot be applied to <span class=\"mm\">f(x) = x<sup>2/3</sup></span> on the interval <span class=\"mm\">[−1, 1]</span> because one of its hypotheses fails. Which hypothesis fails?",
+   "options": [
+    "f is not defined at x = 0",
+    "f(−1) ≠ f(1)",
+    "f is not continuous on [−1, 1]",
+    "f is not differentiable on (−1, 1)"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Rolle's theorem has three hypotheses: continuity on <span class=\"mm\">[a, b]</span>, differentiability on <span class=\"mm\">(a, b)</span> and equality of the endpoint values. Any one of them failing blocks the theorem.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f</span> is defined at <span class=\"mm\">x = 0</span>, so option (A) is false.</li>\n<li><span class=\"mm\">f(−1) = 1</span> and <span class=\"mm\">f(1) = 1</span>, so the endpoints agree and option (B) is false.</li>\n<li><span class=\"mm\">f</span> is continuous on <span class=\"mm\">[−1, 1]</span> — the cube-root power is continuous everywhere — so option (C) is false.</li>\n<li><span class=\"mm\">f′(x) = (2/3)x<sup>−1/3</sup></span> for <span class=\"mm\">x ≠ 0</span>, and <span class=\"mm\">|f′(x)| → ∞</span> as <span class=\"mm\">x → 0</span>, so the derivative is unbounded at 0 and <span class=\"mm\">f</span> is not differentiable at <span class=\"mm\">x = 0</span>. That is a point of the open interval <span class=\"mm\">(−1, 1)</span>, so differentiability fails there and option (D) is correct.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: f is not differentiable on (−1, 1) — option (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Confusing continuity with differentiability and declaring the function \"well behaved\". A vertical tangent at an interior point is exactly the kind of defect Rolle's theorem excludes, and it is the standard counterexample that shows continuity on the closed interval alone is not enough.</p>"
+  },
+  {
+   "id": "EM-U3B-Q10",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">z = x² + y²</span>, where <span class=\"mm\">x = r cos θ</span> and <span class=\"mm\">y = r sin θ</span>. Then <span class=\"mm\">∂z/∂r</span> equals",
+   "options": [
+    "<span class=\"mm\">2r</span>",
+    "<span class=\"mm\">2r²</span>",
+    "<span class=\"mm\">2r(cos θ + sin θ)</span>",
+    "<span class=\"mm\">0</span>"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Two routes give the same answer: substitute first and differentiate, or apply the chain rule <span class=\"mm\">∂z/∂r = z<sub>x</sub> x<sub>r</sub> + z<sub>y</sub> y<sub>r</sub></span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Substituting: <span class=\"mm\">z = r²cos²θ + r²sin²θ = r²</span>, so <span class=\"mm\">∂z/∂r = 2r</span>.</li>\n<li>By the chain rule: <span class=\"mm\">z<sub>x</sub> = 2x</span> and <span class=\"mm\">z<sub>y</sub> = 2y</span>, so <span class=\"mm\">∂z/∂r = 2x cos θ + 2y sin θ</span>.</li>\n<li>Using <span class=\"mm\">x = r cos θ</span> and <span class=\"mm\">y = r sin θ</span> this is <span class=\"mm\">2r cos²θ + 2r sin²θ = 2r</span>.</li>\n<li>Both routes give <span class=\"mm\">∂z/∂r = 2r</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 2r — option (A).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Adding the two chain-rule terms without using the trigonometric identity gives <span class=\"mm\">2r(cos θ + sin θ)</span> — option (C) — which is not a function of <span class=\"mm\">r</span> alone. Reporting <span class=\"mm\">r</span> and then forgetting the factor 2 gives <span class=\"mm\">2r²</span> (option B), and treating <span class=\"mm\">x</span> and <span class=\"mm\">y</span> as independent of <span class=\"mm\">r</span> gives 0 (option D).</p>"
+  },
+  {
+   "id": "EM-U3B-Q11",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> (tan x − sin x)/x³</span> is",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">1/3</span>",
+    "<span class=\"mm\">1/2</span>",
+    "<span class=\"mm\">1</span>"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. Factoring exposes the two standard limits <span class=\"mm\">sin x / x → 1</span> and <span class=\"mm\">tan x / x → 1</span> without any differentiation.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">tan x − sin x = sin x (1/cos x − 1) = sin x · (1 − cos x)/cos x</span>.</li>\n<li><span class=\"mm\">(tan x − sin x)/x³ = [sin x / x] · [(1 − cos x)/x²] · [1/cos x]</span>.</li>\n<li>As <span class=\"mm\">x → 0</span>: <span class=\"mm\">sin x / x → 1</span>, <span class=\"mm\">(1 − cos x)/x² → 1/2</span> and <span class=\"mm\">1/cos x → 1</span>, giving <span class=\"mm\">1 · (1/2) · 1 = 1/2</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 1/2 — option (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Cancelling <span class=\"mm\">sin x</span> to leave <span class=\"mm\">tan x − sin x ≈ 0</span> and reporting 0 (option A). The two functions agree only to first order; their difference is cubic, and the coefficient is the whole point of the question. Applying L'Hôpital's rule once and stopping yields another <span class=\"mm\">0/0</span> form, which invites the wrong guess 1/3 (option B).</p>"
+  },
+  {
+   "id": "EM-U3B-Q12",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = x² sin(1/x)</span> for <span class=\"mm\">x ≠ 0</span> and <span class=\"mm\">f(0) = 0</span>. Which statement is TRUE?",
+   "options": [
+    "f is not continuous at x = 0",
+    "f is differentiable at 0 with f′(0) = 0, and f′ is not continuous at 0",
+    "f is continuous at 0 but not differentiable at 0",
+    "f is differentiable at 0 and f′ is continuous at 0"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Two separate questions are being asked: does the difference quotient converge, and is the resulting derivative function continuous? They can have different answers, and here they do.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Continuity: <span class=\"mm\">|f(x)| ≤ x² → 0</span>, since <span class=\"mm\">sin(1/x)</span> is bounded and <span class=\"mm\">x² → 0</span>. So <span class=\"mm\">f(x) → 0 = f(0)</span>, ruling out option (A).</li>\n<li>Differentiability at 0: <span class=\"mm\">f′(0) = lim<sub>h→0</sub> [h² sin(1/h) − 0]/h = lim<sub>h→0</sub> h sin(1/h) = 0</span>, so <span class=\"mm\">f′(0) = 0</span>.</li>\n<li>For <span class=\"mm\">x ≠ 0</span>, the product and chain rules give <span class=\"mm\">f′(x) = 2x sin(1/x) − cos(1/x)</span>.</li>\n<li>The term <span class=\"mm\">cos(1/x)</span> oscillates between <span class=\"mm\">−1</span> and <span class=\"mm\">1</span> without settling, so <span class=\"mm\">lim<sub>x→0</sub> f′(x)</span> does not exist and <span class=\"mm\">f′</span> is not continuous at 0. Options (C) and (D) are therefore both wrong.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: differentiable at 0 with f′(0) = 0, and f′ not continuous at 0 — option (B).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Believing that a derivative, once it exists, must be continuous. Differentiation improves regularity at the single point but not in a neighbourhood: <span class=\"mm\">x² sin(1/x)</span> is the standard example of a differentiable function with a discontinuous derivative. Comparing this with <span class=\"mm\">x sin(1/x)</span>, which is not even differentiable at 0, is the fastest way to see the one-power gap.</p>"
+  },
+  {
+   "id": "EM-U3B-Q13",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f</span> be differentiable on <span class=\"mm\">ℝ</span> with <span class=\"mm\">f(0) = 0</span> and <span class=\"mm\">1 ≤ f′(x) ≤ 2</span> for every <span class=\"mm\">x</span>. Which conclusion is valid?",
+   "options": [
+    "<span class=\"mm\">f(3) ≥ 6</span>",
+    "<span class=\"mm\">f(3) = 3</span>",
+    "<span class=\"mm\">f(3) ≤ 3</span>",
+    "<span class=\"mm\">3 ≤ f(3) ≤ 6</span>"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Lagrange's mean value theorem converts a bound on the derivative into a bound on the increment: on <span class=\"mm\">[0, 3]</span> there is a <span class=\"mm\">c</span> with <span class=\"mm\">f(3) − f(0) = 3 f′(c)</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f</span> is differentiable, hence continuous, so the theorem applies on <span class=\"mm\">[0, 3]</span>.</li>\n<li>There is a <span class=\"mm\">c</span> in <span class=\"mm\">(0, 3)</span> with <span class=\"mm\">f(3) = 3 f′(c)</span>.</li>\n<li>Since <span class=\"mm\">1 ≤ f′(c) ≤ 2</span>, multiplying by 3 gives <span class=\"mm\">3 ≤ f(3) ≤ 6</span>.</li>\n<li>And <span class=\"mm\">f(0) = 0</span>, so <span class=\"mm\">f(3) = 3 f′(c)</span>. Both bounds are attained by the linear functions <span class=\"mm\">f(x) = x</span> and <span class=\"mm\">f(x) = 2x</span>, so neither inequality can be tightened.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 3 ≤ f(3) ≤ 6 — option (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Assuming a single value, <span class=\"mm\">f(3) = 3</span> (option B), or using only one side of the derivative bound, which yields <span class=\"mm\">f(3) ≥ 6</span> (option A) or <span class=\"mm\">f(3) ≤ 3</span> (option C). A derivative bound of the form <span class=\"mm\">1 ≤ f′ ≤ 2</span> is a two-sided constraint and must produce a two-sided conclusion.</p>"
+  },
+  {
+   "id": "EM-U3B-Q14",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "For <span class=\"mm\">f(x, y) = 4xy − x⁴ − y⁴</span>, which statement about the critical points is TRUE?",
+   "options": [
+    "(0, 0) is a local minimum",
+    "(1, 1) is a saddle point and (0, 0) is a local maximum",
+    "both (0, 0) and (1, 1) are saddle points",
+    "(0, 0) is a saddle point and (1, 1) is a local maximum"
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Critical points solve <span class=\"mm\">f<sub>x</sub> = f<sub>y</sub> = 0</span>. Each is classified by the discriminant <span class=\"mm\">D = f<sub>xx</sub>f<sub>yy</sub> − f<sub>xy</sub>²</span>: a minimum if <span class=\"mm\">D > 0</span> and <span class=\"mm\">f<sub>xx</sub> > 0</span>, a maximum if <span class=\"mm\">D > 0</span> and <span class=\"mm\">f<sub>xx</sub> < 0</span>, and a saddle if <span class=\"mm\">D < 0</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f<sub>x</sub> = 4y − 4x³</span> and <span class=\"mm\">f<sub>y</sub> = 4x − 4y³</span>.</li>\n<li>Setting both to zero gives <span class=\"mm\">y = x³</span> and <span class=\"mm\">x = y³</span>, hence <span class=\"mm\">x = x⁹</span>, so <span class=\"mm\">x ∈ {0, 1, −1}</span>. The critical points are <span class=\"mm\">(0, 0)</span>, <span class=\"mm\">(1, 1)</span> and <span class=\"mm\">(−1, −1)</span>.</li>\n<li>Second derivatives: <span class=\"mm\">f<sub>xx</sub> = −12x²</span>, <span class=\"mm\">f<sub>yy</sub> = −12y²</span>, <span class=\"mm\">f<sub>xy</sub> = 4</span>.</li>\n<li>At <span class=\"mm\">(0, 0)</span>: <span class=\"mm\">D = 0 · 0 − 16 = −16 < 0</span>, so the point is a saddle.</li>\n<li>At <span class=\"mm\">(1, 1)</span>: <span class=\"mm\">D = 144 − 16 = 128 > 0</span> and <span class=\"mm\">f<sub>xx</sub> = −12 < 0</span>, so it is a local maximum; the same holds at <span class=\"mm\">(−1, −1)</span> by symmetry.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (0, 0) is a saddle and (1, 1) is a local maximum — option (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reading the signs of <span class=\"mm\">f<sub>xx</sub></span> and <span class=\"mm\">f<sub>yy</sub></span> separately instead of forming <span class=\"mm\">D</span>, which makes both points look like maxima. When <span class=\"mm\">D = 0</span> the second-derivative test is inconclusive and the discriminant is the deciding quantity; a zero discriminant is the case that actually fails, not a negative one.</p>"
+  },
+  {
+   "id": "EM-U3B-Q15",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "For <span class=\"mm\">f(x, y) = x² + 3xy + 2y²</span>, the value of <span class=\"mm\">x f<sub>x</sub> + y f<sub>y</sub></span> at the point <span class=\"mm\">(1, 2)</span> is",
+   "options": [
+    "<span class=\"mm\">15</span>",
+    "<span class=\"mm\">19</span>",
+    "<span class=\"mm\">30</span>",
+    "<span class=\"mm\">45</span>"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> <span class=\"mm\">f</span> is a homogeneous polynomial of degree 2, so Euler's theorem gives <span class=\"mm\">x f<sub>x</sub> + y f<sub>y</sub> = 2f</span>. The expression can be evaluated directly as a check.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f(1, 2) = 1 + 6 + 8 = 15</span>, so <span class=\"mm\">f</span>.</li>\n<li>Euler: <span class=\"mm\">x f<sub>x</sub> + y f<sub>y</sub> = 2 · 15 = 30</span>.</li>\n<li>Direct check: <span class=\"mm\">f<sub>x</sub> = 2x + 3y = 8</span> and <span class=\"mm\">f<sub>y</sub> = 3x + 4y = 11</span>, so at <span class=\"mm\">(1, 2)</span> the value is <span class=\"mm\">1 · 8 + 2 · 11 = 30</span>.</li>\n<li>Both routes give 30.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 30 — option (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">f(1, 2)</span> itself, which is 15 (option A), instead of the Euler expression <span class=\"mm\">2f(1, 2)</span>. A second slip is to forget the factor 2 in <span class=\"mm\">3xy</span> and obtain 19 (option B), or to double once more and reach 45 (option D).</p>"
+  },
+  {
+   "id": "EM-U3B-Q16",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Which of the following limits exist and are finite?",
+   "options": [
+    "<span class=\"mm\">lim<sub>x→0</sub> sin x / x</span>",
+    "<span class=\"mm\">lim<sub>x→0</sub> 1/x²</span>",
+    "<span class=\"mm\">lim<sub>x→0</sub> (√(1 + x) − 1)/x</span>",
+    "<span class=\"mm\">lim<sub>x→0</sub> |x|/x</span>"
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> A two-sided limit exists exactly when the left-hand and right-hand limits exist and agree; it is finite when that common value is a real number. Each option must be tested on its own.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>(A) <span class=\"mm\">sin x / x → 1</span>. Finite. <b>Correct.</b></li>\n<li>(B) <span class=\"mm\">1/x² → +∞</span> from both sides, so the limit is not finite — the function has a pole at 0. <b>Incorrect.</b></li>\n<li>(C) Rationalising, <span class=\"mm\">(√(1 + x) − 1)/x = 1/(√(1 + x) + 1)</span>, which tends to <span class=\"mm\">1/2</span>. Finite. <b>Correct.</b></li>\n<li>(D) The right-hand limit is <span class=\"mm\">+1</span> and the left-hand limit is <span class=\"mm\">−1</span>. The two differ, so the limit does not exist. <b>Incorrect.</b></li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (A) and (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Treating \"the limit does not exist\" and \"the limit is infinite\" as the same failure. Option (B) fails by diverging; option (D) fails by disagreeing on the two sides. Only (D) is the genuine non-existence case, and neither counts as finite.</p>"
+  },
+  {
+   "id": "EM-U3B-Q17",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Each function below is defined to be 0 at the origin and by the stated rule elsewhere. Which of them are continuous at <span class=\"mm\">x = 0</span>?",
+   "options": [
+    "<span class=\"mm\">f(x) = sin(1/x) for x ≠ 0</span>",
+    "<span class=\"mm\">f(x) = x² sin(1/x) for x ≠ 0</span>",
+    "<span class=\"mm\">f(x) = |x| for x ≠ 0</span>",
+    "<span class=\"mm\">f(x) = 1/x for x ≠ 0</span>"
+   ],
+   "answer_display": "Options (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Continuity at 0 requires <span class=\"mm\">lim<sub>x→0</sub> f(x) = f(0) = 0</span>. Since all four functions are assigned the value 0 at the origin, each question reduces to whether the limit is 0.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>(A) <span class=\"mm\">sin(1/x)</span> oscillates between <span class=\"mm\">−1</span> and <span class=\"mm\">1</span> as <span class=\"mm\">x → 0</span>, so no limit exists. <b>Incorrect.</b></li>\n<li>(B) <span class=\"mm\">|x² sin(1/x)| ≤ x² → 0</span> because <span class=\"mm\">sin(1/x)</span> is bounded and <span class=\"mm\">x² → 0</span>. Limit 0. <b>Correct.</b></li>\n<li>(C) <span class=\"mm\">|x| → 0</span>. Limit 0. <b>Correct.</b></li>\n<li>(D) <span class=\"mm\">1/x</span> is unbounded near 0, so the limit is not 0. <b>Incorrect.</b></li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (B) and (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Judging continuity from the shape of the graph far from the origin. Option (B) looks wilder than option (A) because it oscillates faster, yet the damping factor <span class=\"mm\">x²</span> controls it completely. The squeeze argument, not visual impression, decides.</p>"
+  },
+  {
+   "id": "EM-U3B-Q18",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = x²</span> on the interval <span class=\"mm\">[−1, 1]</span>. Which of the following statements are TRUE?",
+   "options": [
+    "f(−1) = f(1)",
+    "Rolle's theorem applies to f on [−1, 1]",
+    "there is exactly one point c in (−1, 1) with f′(c) = 0",
+    "f′(c) = 0 at c = 1"
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Rolle's theorem asserts the existence of <i>at least</i> one interior point with zero derivative. Counting the points needs the derivative solved separately.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f(−1) = 1</span> and <span class=\"mm\">f(1) = 1</span>, so (A) is true.</li>\n<li><span class=\"mm\">f</span> is a polynomial, hence continuous on <span class=\"mm\">[−1, 1]</span> and differentiable on <span class=\"mm\">(−1, 1)</span>, and the endpoints agree; all three hypotheses hold, so (B) is true.</li>\n<li><span class=\"mm\">f′(x) = 2x = 0</span> gives <span class=\"mm\">x = 0</span>, the only solution in <span class=\"mm\">(−1, 1)</span>. So (C) is true.</li>\n<li>At <span class=\"mm\">c = 1</span>, <span class=\"mm\">f′(1) = 2</span>, not 0, so (D) is false.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (C).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reading the conclusion of Rolle's theorem as \"at the midpoint\", or assuming the point it asserts must be an endpoint. The theorem says nothing about where the point is; only solving <span class=\"mm\">f′(c) = 0</span> locates it, and the endpoint <span class=\"mm\">c = 1</span> is never admissible because the point must lie in the open interval.</p>"
+  },
+  {
+   "id": "EM-U3B-Q19",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = (x² − 5x + 6)/(x − 2)</span> for <span class=\"mm\">x ≠ 2</span>. Which of the following statements are TRUE?",
+   "options": [
+    "f has a removable discontinuity at x = 2",
+    "lim<sub>x→2</sub> f(x) = −1",
+    "f has a vertical asymptote at x = 2",
+    "f has a jump discontinuity at x = 2"
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> At a point where the formula is undefined, classify the discontinuity by the behaviour of the two one-sided limits: a finite common value means removable, two different finite values mean a jump, and divergence means an asymptote.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Factor the numerator: <span class=\"mm\">x² − 5x + 6 = (x − 2)(x − 3)</span>.</li>\n<li>For <span class=\"mm\">x ≠ 2</span>, cancel: <span class=\"mm\">f(x) = x − 3</span>.</li>\n<li>So <span class=\"mm\">lim<sub>x→2</sub> f(x) = 2 − 3 = −1</span>, a finite two-sided limit, which makes the discontinuity removable — (A) and (B) are true.</li>\n<li>The denominator vanishes only at <span class=\"mm\">x = 2</span>, where the numerator equals <span class=\"mm\">1 − 10 + 6 = −3</span>, not 0, so the cancellation is complete and there is no asymptote — (C) is false.</li>\n<li>Both one-sided limits equal <span class=\"mm\">−1</span>, so they agree and there is no jump — (D) is false.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (A) and (B).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Seeing a zero in the denominator and concluding \"asymptote\" without checking the numerator. A shared factor removes the singularity; the function is the straight line <span class=\"mm\">y = x − 3</span> with a single point deleted, and the graph is a line with a hole, not a wall.</p>"
+  },
+  {
+   "id": "EM-U3B-Q20",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "For which of the following does Lagrange's mean value theorem apply on the stated interval?",
+   "options": [
+    "<span class=\"mm\">f(x) = |x| on [−1, 1]</span>",
+    "<span class=\"mm\">f(x) = x³ on [−1, 1]</span>",
+    "<span class=\"mm\">f(x) = 1/x on [1, 2]</span>",
+    "<span class=\"mm\">f(x) = √x on [0, 1]</span>"
+   ],
+   "answer_display": "Options (B), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Lagrange's theorem asks for continuity on the closed interval <span class=\"mm\">[a, b]</span> and differentiability on the open interval <span class=\"mm\">(a, b)</span>. Differentiability at the endpoints is <i>not</i> required.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>(A) <span class=\"mm\">|x|</span> is continuous on <span class=\"mm\">[−1, 1]</span> but has a corner at <span class=\"mm\">x = 0</span>, which lies inside <span class=\"mm\">(−1, 1)</span>. Differentiability fails. <b>Incorrect.</b></li>\n<li>(B) <span class=\"mm\">x³</span> is a polynomial: continuous on <span class=\"mm\">[−1, 1]</span> and differentiable on <span class=\"mm\">(−1, 1)</span>. <b>Correct.</b></li>\n<li>(C) <span class=\"mm\">1/x</span> is continuous on <span class=\"mm\">[1, 2]</span> and differentiable on <span class=\"mm\">(1, 2)</span>, since <span class=\"mm\">x</span> is never 0 there. <b>Correct.</b></li>\n<li>(D) <span class=\"mm\">√x</span> is continuous on <span class=\"mm\">[0, 1]</span> and differentiable on <span class=\"mm\">(0, 1)</span>, where <span class=\"mm\">f′(x) = 1/(2√x)</span>. The infinite slope at the endpoint <span class=\"mm\">x = 0</span> is harmless because <span class=\"mm\">0</span> is an endpoint. <b>Correct.</b></li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: (B), (C) and (D).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Rejecting option (D) because <span class=\"mm\">√x</span> is not differentiable at 0. That is exactly the point of the open interval in the hypothesis: the theorem needs a tangent line only strictly between the endpoints, so a vertical tangent at an endpoint does not disqualify the function. Option (A), whose defect is interior, is the one that genuinely fails.</p>"
+  },
+  {
+   "id": "EM-U3B-Q21",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "NAT",
+   "difficulty": "easy",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> (1 − cos 4x)/x²</span> is ____.",
+   "options": null,
+   "answer_display": "8",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. The standard limit <span class=\"mm\">(1 − cos x)/x² → 1/2</span> generalises to <span class=\"mm\">(1 − cos kx)/x² → k²/2</span> for a constant <span class=\"mm\">k</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Multiply numerator and denominator by 16: <span class=\"mm\">(1 − cos 4x)/x² = 16 · (1 − cos 4x)/(4x)²</span>.</li>\n<li>Put <span class=\"mm\">u = 4x</span>. As <span class=\"mm\">x → 0</span>, <span class=\"mm\">u → 0</span>, so the bracket tends to <span class=\"mm\">1/2</span>.</li>\n<li>Hence the limit is <span class=\"mm\">16 · (1/2) = 8</span>.</li>\n<li>Check with the double-angle identity <span class=\"mm\">1 − cos 4x = 2 sin²(2x)</span>, which gives <span class=\"mm\">2 sin²(2x)/x² → 2 · 4 = 8</span> directly.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 8 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">(1 − cos 4x)/x² ≈ 1/2</span>, which forgets the factor <span class=\"mm\">k</span> and gives 4. The factor appears squared because the argument is squared in the denominator; for <span class=\"mm\">cos 4x</span> the limit is <span class=\"mm\">k²/2</span>, not <span class=\"mm\">k/2</span>.</p>"
+  },
+  {
+   "id": "EM-U3B-Q22",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "continuity-analysis",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = x²</span> for <span class=\"mm\">x ≤ 1</span> and <span class=\"mm\">f(x) = ax + b</span> for <span class=\"mm\">x > 1</span>. If <span class=\"mm\">f</span> is differentiable at <span class=\"mm\">x = 1</span>, then <span class=\"mm\">a + b</span> equals ____.",
+   "options": null,
+   "answer_display": "1",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> Differentiability at a point implies continuity there, so two conditions must hold: the two pieces must meet, and their slopes must agree.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Continuity at <span class=\"mm\">x = 1</span>: <span class=\"mm\">lim<sub>x→1⁻</sub> f(x) = 1</span> and <span class=\"mm\">lim<sub>x→1⁺</sub> f(x) = a + b</span>, so <span class=\"mm\">a + b = 1</span>.</li>\n<li>Differentiability at <span class=\"mm\">x = 1</span>: the left derivative is <span class=\"mm\">2x</span> evaluated at <span class=\"mm\">x = 1</span>, which is <span class=\"mm\">2</span>; the right derivative is <span class=\"mm\">a</span>.</li>\n<li>Matching slopes gives <span class=\"mm\">a = 2</span>, and then <span class=\"mm\">a + b = 1</span> gives <span class=\"mm\">b = −1</span>.</li>\n<li>Therefore <span class=\"mm\">a + b = 2 − 1 = 1</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 1 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Imposing only continuity and stopping, which leaves <span class=\"mm\">b</span> free and makes <span class=\"mm\">a + b</span> indeterminate. Continuity alone puts the line through the point <span class=\"mm\">(1, 1)</span>; it is the slope condition <span class=\"mm\">a = 2</span> that pins the line down. Note also that the reverse implication fails: continuity does not imply differentiability.</p>"
+  },
+  {
+   "id": "EM-U3B-Q23",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "mean-value-theorems",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "Let <span class=\"mm\">f(x) = x³ − 3x² + 2x</span> on the interval <span class=\"mm\">[0, 3]</span>. Lagrange's mean value theorem guarantees a point <span class=\"mm\">c</span> in <span class=\"mm\">(0, 3)</span> with <span class=\"mm\">f′(c)</span> equal to the chord slope. The largest such <span class=\"mm\">c</span> equals ____.",
+   "options": null,
+   "answer_display": "2",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The chord slope on <span class=\"mm\">[0, 3]</span> is <span class=\"mm\">(f(3) − f(0))/3</span>. The theorem asserts that <span class=\"mm\">f′</span> attains that value somewhere strictly inside the interval; finding where means solving a polynomial equation and discarding any root outside <span class=\"mm\">(0, 3)</span>.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">f(0) = 0</span> and <span class=\"mm\">f(3) = 27 − 27 + 6 = 6</span>, so the chord slope is <span class=\"mm\">6/3 = 2</span>.</li>\n<li><span class=\"mm\">f′(x) = 3x² − 6x + 2</span>, so the equation <span class=\"mm\">f′(c) = 2</span> becomes <span class=\"mm\">3c² − 6c + 2 = 2</span>.</li>\n<li>That is <span class=\"mm\">3c² − 6c = 3c(c − 2) = 0</span>, whose roots are <span class=\"mm\">c = 0</span> and <span class=\"mm\">c = 2</span>.</li>\n<li><span class=\"mm\">c = 0</span> is an endpoint and is excluded; <span class=\"mm\">c = 2</span> lies in <span class=\"mm\">(0, 3)</span> and is admissible.</li>\n<li>The only admissible point is <span class=\"mm\">c = 2</span>, so the largest one is <span class=\"mm\">2</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 2 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Accepting the root <span class=\"mm\">c = 0</span> because it satisfies <span class=\"mm\">f′(0) = 2</span>. The theorem places the point in the open interval, so endpoint roots must be discarded — and here discarding it changes the answer from \"two points\" to one.</p>"
+  },
+  {
+   "id": "EM-U3B-Q24",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "indeterminate-forms-lhopital",
+   "type": "NAT",
+   "difficulty": "medium",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "text": "The value of <span class=\"mm\">lim<sub>x→0</sub> (sin 3x − 3 sin x)/x³</span> is ____.",
+   "options": null,
+   "answer_display": "−4",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> The form is <span class=\"mm\">0/0</span>. Expanding both sines about 0 to the cubic term isolates the leading behaviour of the difference.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li><span class=\"mm\">sin 3x = 3x − (3x)³/6 + … = 3x − 4.5x³ + …</span>.</li>\n<li><span class=\"mm\">3 sin x = 3x − 3x³/6 + … = 3x − 0.5x³ + …</span>.</li>\n<li>Subtract: <span class=\"mm\">sin 3x − 3 sin x = (−4.5 + 0.5)x³ + … = −4x³ + …</span>.</li>\n<li>Divide by <span class=\"mm\">x³</span>: <span class=\"mm\">−4 + O(x²)</span>, so the limit is <span class=\"mm\">−4</span>.</li>\n<li>Cross-check by L'Hôpital's rule three times: <span class=\"mm\">(3 cos 3x − 3 cos x)/(3x²)</span>, <span class=\"mm\">(−9 sin 3x + 3 sin x)/(6x)</span>, <span class=\"mm\">(−27 cos 3x + 3 cos x)/6</span>, giving <span class=\"mm\">(−27 + 3)/6 = −4</span> at <span class=\"mm\">x = 0</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: −4 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Reporting 0 because <span class=\"mm\">sin 3x</span> and <span class=\"mm\">3 sin x</span> agree to first order — the leading terms cancel, and the sign of the surviving cubic term is what the question tests. A second slip is to drop the minus sign, which comes from <span class=\"mm\">sin 3x</span> growing much faster than <span class=\"mm\">3 sin x</span>.</p>"
+  },
+  {
+   "id": "EM-U3B-Q25",
+   "subject": "engineering-mathematics",
+   "unit": 3,
+   "unit_slug": "calculus-limits-derivatives",
+   "subtopic": "partial-derivatives",
+   "type": "NAT",
+   "difficulty": "hard",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "text": "For <span class=\"mm\">f(x, y, z) = x³y²z</span>, the value of <span class=\"mm\">∂⁴f/∂x²∂y∂z</span> at the point <span class=\"mm\">(1, 2, 1)</span> is ____.",
+   "options": null,
+   "answer_display": "24",
+   "solution_html": "<h4>Detailed solution</h4>\n<p class=\"row\"><b>Concept.</b> For a polynomial, mixed partial derivatives commute, so the order of differentiation does not matter; the exponents are simply decremented once per differentiation in that variable.</p>\n<p class=\"row\"><b>Step by step.</b></p>\n<ol><li>Differentiate once in <span class=\"mm\">z</span>: <span class=\"mm\">f<sub>z</sub> = x³y²</span>.</li>\n<li>Once in <span class=\"mm\">y</span>: <span class=\"mm\">f<sub>zy</sub> = 2x³y</span>.</li>\n<li>Once in <span class=\"mm\">x</span>: <span class=\"mm\">f<sub>zyx</sub> = 6x²y</span>.</li>\n<li>Twice in <span class=\"mm\">x</span>: <span class=\"mm\">f<sub>zyxx</sub> = 12xy</span>, then <span class=\"mm\">f<sub>zyxxx</sub> = 12y</span>.</li>\n<li>At <span class=\"mm\">(1, 2, 1)</span>: <span class=\"mm\">12 · 1 · 2 = 24</span>.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: 24 (exact integer).</span></p>\n<p class=\"row\"><b>Common misconception.</b> Dividing by the exponents or subtracting them, as if differentiating were division; and forgetting that <span class=\"mm\">x</span> is differentiated <i>twice</i>, which halves the result to 12. The exponents <span class=\"mm\">3</span>, <span class=\"mm\">2</span> and <span class=\"mm\">1</span> are decremented once per differentiation, so <span class=\"mm\">f</span> loses two powers of <span class=\"mm\">x</span>.</p>"
   }
  ]
 }</script>
