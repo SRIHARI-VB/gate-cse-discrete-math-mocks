@@ -6,10 +6,11 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-27",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 100,
+  "total_questions": 125,
   "units_with_questions": [
    1,
-   2
+   2,
+   3
   ]
  },
  "runs": [
@@ -175,6 +176,27 @@
     "classic-problems-dining-philosophers-producer-consumer"
    ],
    "note": "Set 2 of 2. Unit 2 reaches the 50-question cap; next Operating Systems run advances to Unit 3."
+  },
+  {
+   "date": "2026-10-27",
+   "run": 5,
+   "unit": 3,
+   "unit_name": "Deadlocks",
+   "unit_slug": "deadlocks",
+   "file": "operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html",
+   "set": "1 of 2",
+   "composition": {
+    "mcq": 15,
+    "msq": 5,
+    "nat": 5,
+    "total": 25
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "note": "Unit 2 reached UNIT_QUESTION_CAP = 50 after its 2026-10-27 paper, so the rotation advanced one unit: (index_of(synchronization-ipc) + 1) mod 6 = 2 -> Unit 3, Deadlocks. This is Set 1 of 2 for Unit 3."
   }
  ],
  "verified_pyqs": [
@@ -2911,6 +2933,674 @@
    "answer": null,
    "answer_display": "2",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each eater needs two distinct forks, and a table of five has five forks.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Two eaters use four forks and cannot be adjacent, because neighbours would share a fork.</li><li>Three eaters would need six forks, which the table does not have.</li><li>The bound is therefore <code class=\"mm\">⌊5 / 2⌋ = 2</code>, and it is achievable: philosophers 1 and 3 eat while 2, 4 and 5 wait.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 by reading the four-at-a-time rule as a count of eaters rather than of competitors.</p>"
+  },
+  {
+   "id": "OS-U3-Q01",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which one of the following is NOT one of the four necessary conditions for a deadlock to occur?",
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four Coffman conditions are <b>mutual exclusion</b>, <b>hold and wait</b>, <b>no preemption</b> and <b>circular wait</b>. Each is necessary, and deadlock requires all four to hold at the same time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Mutual exclusion: at least one resource must be held in a non-shareable mode, so a second requester must wait.</li><li>Hold and wait: a process must be holding at least one resource while it waits for another.</li><li>No preemption: a resource can be released only voluntarily, by the process that holds it.</li><li>Circular wait: there is a closed chain of processes in which each waits for a resource held by the next.</li><li>Option (C) states the <i>negation</i> of the third condition. Deadlock needs preemption to be impossible, so “preemption of resources” is not a condition — it is the escape route.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — preemption of resources is the opposite of the required condition, which is <i>no</i> preemption.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) Mutual exclusion is the first Coffman condition.</li><li>(B) Hold and wait is the second.</li><li>(D) Circular wait is the fourth.</li></ul><p class=\"row\"><b>Common misconception.</b> Many candidates tick “preemption” because the word does appear in the standard list. The list says <i>no</i> preemption: if the system could preempt a resource from a waiting process, the wait could never be permanent.</p><p class=\"row\"><b>Takeaway.</b> All four conditions must hold simultaneously. Denying any one of them makes deadlock impossible — that is exactly what deadlock prevention does.</p>",
+   "options": [
+    "Mutual exclusion",
+    "Hold and wait",
+    "Preemption of resources",
+    "Circular wait"
+   ]
+  },
+  {
+   "id": "OS-U3-Q02",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "A resource allocation graph contains exactly one instance of every resource type. Which of the following statements is TRUE?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> When every resource type has a single instance, each resource node has at most one outgoing edge, so the graph collapses into a <b>wait-for graph</b> on processes. In that graph deadlock and cycle are the same thing.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Merge each resource node with its holder: draw <span class=\"mm\">Pᵢ → Pⱼ</span> exactly when <span class=\"mm\">Pᵢ</span> is waiting for a resource held by <span class=\"mm\">Pⱼ</span>.</li><li><b>Deadlock ⇒ cycle.</b> If a set of processes is deadlocked, each member waits for a resource held by another member; following the waits around the set closes a cycle.</li><li><b>Cycle ⇒ deadlock.</b> Take a cycle <span class=\"mm\">P₁ → P₂ → … → Pₖ → P₁</span>. Each <span class=\"mm\">Pᵢ</span> waits for the single instance held by its successor, and that successor cannot release it, because it is itself waiting. No member can ever proceed.</li><li>Hence with single instances the cycle test is a complete decision procedure.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — with one instance per resource type, a cycle is necessary and sufficient for deadlock.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) is the correct statement only when a resource type may have several instances.</li><li>(C) reverses the quantifiers: a deadlock always contains a cycle, so a cycle cannot be merely sufficient.</li><li>(D) denies a standard theorem.</li></ul><p class=\"row\"><b>Common misconception.</b> Candidates learn “cycle is necessary, not sufficient” as a slogan and apply it everywhere. That slogan belongs to the multi-instance case; with single instances the cycle test decides.</p><p class=\"row\"><b>Takeaway.</b> Single instance → wait-for graph → cycle test. Multiple instances → graph reduction.</p>",
+   "options": [
+    "A cycle is necessary but not sufficient for deadlock.",
+    "A cycle is both necessary and sufficient for deadlock.",
+    "A cycle is sufficient but not necessary for deadlock.",
+    "A cycle is neither necessary nor sufficient for deadlock."
+   ]
+  },
+  {
+   "id": "OS-U3-Q03",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following best captures the difference between deadlock and starvation?",
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Deadlock is a <b>closed</b> failure: every member of the blocked set waits for a member of that same set, so nobody can be released. Starvation is an <b>open</b> failure: the system as a whole progresses, but the allocation policy repeatedly passes one process over.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In deadlock, the blocked set is closed under waiting — each process's requested resource is held by another blocked member — so no member can ever be unblocked.</li><li>In starvation, other processes acquire and release the contended resource all the time; only the victim is never selected.</li><li>A cycle in the wait-for graph is the signature of deadlock, not of starvation: a starving process has no cycle, only a policy that ignores it.</li><li>Therefore the distinguishing feature is whether the rest of the system progresses.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) reverses the facts: a cycle accompanies deadlock, and starvation needs no cycle.</li><li>(C) describes no real property of either condition.</li><li>(D) confuses the resource conditions with the scheduling failure.</li></ul><p class=\"row\"><b>Common misconception.</b> The two terms are often used as synonyms. A system can be completely deadlock-free and still starve a low-priority process forever.</p><p class=\"row\"><b>Takeaway.</b> Deadlock: nobody progresses. Starvation: everybody except one progresses. Cure deadlock by breaking a wait cycle; cure starvation by aging or fair queueing.</p>",
+   "options": [
+    "In deadlock a set of processes waits forever for resources held by one another; in starvation one process waits indefinitely while the other processes keep making progress.",
+    "Starvation always leaves a cycle in the wait-for graph, while deadlock never does.",
+    "Deadlock ends as soon as the highest-priority process finishes, while starvation can never end.",
+    "Starvation requires mutual exclusion, while deadlock does not."
+   ]
+  },
+  {
+   "id": "OS-U3-Q04",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Deadlock avoidance differs from deadlock prevention in that avoidance:",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three strategies are distinct. <b>Prevention</b> removes a Coffman condition at design time. <b>Avoidance</b> keeps every condition intact but refuses any allocation that would leave the system without a safe completion order, using each process's declared maximum. <b>Detection</b> lets deadlock happen and then finds it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Prevention acts on structure: request all resources at once (denies hold and wait), or number the resources (denies circular wait).</li><li>Avoidance acts on decisions: every request is granted only if the resulting state is still safe. This needs each process's maximum claim in advance, which is why it is a <i>runtime</i> technique.</li><li>Avoidance denies none of the four conditions — processes still hold, still wait, still exclude. It only refuses allocations that could lead to deadlock.</li><li>So the distinguishing feature is the use of future maximum claims to maintain safety.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) is the definition of prevention.</li><li>(C) is detection followed by recovery.</li><li>(D) describes no real strategy: waiting is normal even in a deadlock-free system.</li></ul><p class=\"row\"><b>Common misconception.</b> Banker's algorithm is often filed under “prevention”. It is avoidance: the four conditions still hold, but the system never enters an unsafe state.</p><p class=\"row\"><b>Takeaway.</b> Prevention removes a condition; avoidance never enters an unsafe state; detection finds and breaks. Three strategies, three different guarantees.</p>",
+   "options": [
+    "structurally denies one of the four necessary conditions, so deadlock becomes impossible by construction",
+    "uses advance information about each process's future maximum claims to keep the system in a safe state",
+    "detects cycles in the resource allocation graph and rolls processes back",
+    "guarantees that no process ever waits for a resource"
+   ]
+  },
+  {
+   "id": "OS-U3-Q05",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "A system state is called safe when:",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Safety is defined by the existence of a <b>safe sequence</b>: an order in which every process can be given its full remaining claim, run to completion and release everything, so that the next process in the order can do the same.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start from the current Available vector.</li><li>Repeatedly look for a process whose remaining <code class=\"mm\">Need ≤ Available</code>. Let it finish and add its whole allocation back to Available.</li><li>If all processes can be finished this way, the state is safe and the order found is a safe sequence.</li><li>Safety is a worst-case guarantee: if every process requests at most its declared maximum, a safe state can never deadlock, because the safe sequence always has a next step available.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) A state in which processes wait can still be safe; waiting is not deadlock.</li><li>(C) That is the opposite extreme — every process has already taken everything it may take.</li><li>(D) Acyclicity is a property of single-instance graphs; it is neither the definition of safety nor equivalent to it.</li></ul><p class=\"row\"><b>Common misconception.</b> “Unsafe” is read as “deadlocked”. Unsafe means only that no safe sequence exists at this instant, so deadlock has become <i>possible</i>; the processes may still finish if they request less than their maximum.</p><p class=\"row\"><b>Takeaway.</b> Safe ⊂ deadlock-free. Unsafe ⊇ deadlocked. The two inclusions are strict.</p>",
+   "options": [
+    "no process is currently waiting for a resource",
+    "there exists an ordering of all processes in which each process's remaining maximum demand can be met from the currently available resources plus the resources released by the processes that precede it in that ordering",
+    "every process's current allocation equals its declared maximum",
+    "the resource allocation graph contains no cycle"
+   ]
+  },
+  {
+   "id": "OS-U3-Q06",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "A system has two resource types: R₁ with 2 instances and R₂ with 1 instance. Three processes hold and request them as follows.\nAllocated : R₁ → P1 , R₁ → P2 , R₂ → P3\nRequested : P1 → R₂ , P2 → R₂ , P3 → R₁\nWhich of the following statements about the current state is TRUE?",
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With more than one instance per resource type a cycle is only a <i>necessary</i> condition, so the verdict comes from <b>graph reduction</b>: repeatedly let a process whose outstanding request can be met finish, and add all of its resources back to the pool.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Compute what is free. <span class=\"mm\">R₁</span>: 2 − 2 = <b>0</b> available. <span class=\"mm\">R₂</span>: 1 − 1 = <b>0</b> available.</li><li>P1 and P2 both request <span class=\"mm\">R₂</span>, whose only instance is held by P3. P3 requests <span class=\"mm\">R₁</span>, whose two instances are held by P1 and P2.</li><li>No process's request can be satisfied from the available pool, so no process can finish and no edge can be removed. Reduction stalls immediately.</li><li>The processes left behind wait only on one another, so they are deadlocked. The cycle is <span class=\"mm\">P1 → R₂ → P3 → R₁ → P1</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the graph cannot be reduced, so the system is deadlocked.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) Two instances in total is irrelevant once both are already allocated; the free count is zero.</li><li>(C) Holding one resource each is exactly the arrangement that closes the cycle.</li><li>(D) States the correct general rule but misapplies it: here reduction confirms the deadlock rather than dissolving it.</li></ul><p class=\"row\"><b>Common misconception.</b> Candidates stop at “multiple instances, so a cycle proves nothing” and never run the reduction. The rule is a warning to check further, not a licence to answer “no deadlock”.</p><p class=\"row\"><b>Takeaway.</b> Always compute the free counts first, then reduce. If nothing can finish, the remaining processes are deadlocked regardless of how many instances exist.</p>",
+   "options": [
+    "The system is deadlocked.",
+    "The system is not deadlocked, because R₁ has two instances in total.",
+    "The system is not deadlocked, because each process holds at most one resource.",
+    "The system is not deadlocked, because a cycle in a graph with multiple instances never implies deadlock."
+   ]
+  },
+  {
+   "id": "OS-U3-Q07",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Five processes share three resource types. The current state is:\nProcess | Allocation (A B C) | Max (A B C) | Need (A B C)\n--------+--------------------+-------------+-------------\n   P0   |      0 1 0         |   7 5 3     |   7 4 3\n   P1   |      2 0 0         |   3 2 2     |   1 2 2\n   P2   |      3 0 2         |   9 0 2     |   6 0 0\n   P3   |      2 1 1         |   2 2 2     |   0 1 1\n   P4   |      0 0 2         |   4 3 3     |   4 3 1\n--------+--------------------+-------------+-------------\nAvailable = (3 3 2)      Total instances = (10 5 7)\nWhich one of the following is a safe sequence?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The safety algorithm asks, for the first process of a candidate sequence, whether its <code class=\"mm\">Need</code> fits the current <code class=\"mm\">Available</code>. Only then may it run, and only then is its whole allocation added back.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The table already gives <span class=\"mm\">Need = Max − Allocation</span>: P0 (7 4 3), P1 (1 2 2), P2 (6 0 0), P3 (0 1 1), P4 (4 3 1).</li><li><span class=\"mm\">Available = (3 3 2)</span>. Only P1's need (1 2 2) fits, and P3's (0 1 1) also fits; P0, P2 and P4 do not. So a safe sequence must start with P1 or P3.</li><li>Run P1: <span class=\"mm\">Available = (3 3 2) + (2 0 0) = (5 3 2)</span>.</li><li>Run P3: <span class=\"mm\">(5 3 2) + (2 1 1) = (7 4 3)</span>.</li><li>Run P4: <span class=\"mm\">(7 4 3) + (0 0 2) = (7 4 5)</span>.</li><li>Run P0: <span class=\"mm\">(7 4 5) + (0 1 0) = (7 5 5)</span>, then P2 needs (6 0 0) and finishes. The sequence P1, P3, P4, P0, P2 completes.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — P1, P3, P4, P0, P2.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) starts with P0, whose need (7 4 3) exceeds Available (3 3 2) in A.</li><li>(C) starts with P2, which needs 6 units of A when only 3 are available.</li><li>(D) starts with P4, which needs 4 units of A when only 3 are available.</li></ul><p class=\"row\"><b>Common misconception.</b> Taking the processes in index order and calling it a safe sequence. A sequence is safe only if <i>every</i> prefix is executable, so the first element alone usually settles it.</p><p class=\"row\"><b>Takeaway.</b> Compute Need first, then test the first process of each candidate against Available. Most wrong options die on the very first step.</p>",
+   "options": [
+    "P0, P1, P2, P3, P4",
+    "P1, P3, P4, P0, P2",
+    "P2, P0, P1, P3, P4",
+    "P4, P3, P2, P1, P0"
+   ]
+  },
+  {
+   "id": "OS-U3-Q08",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following techniques prevents deadlock by denying the hold-and-wait condition?",
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Hold-and-wait means holding one resource while waiting for another. It is denied either by acquiring everything up front, or by releasing everything currently held before issuing a new request.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The condition is: a process holds at least one resource while it waits for another.</li><li>If a process must obtain its entire future requirement in one atomic request, it either gets everything (and never waits while holding) or gets nothing (and holds nothing).</li><li>The two standard implementations are <i>all at once</i> and <i>release before request</i>; both attack hold-and-wait directly.</li><li>Ordering attacks circular wait, preemption attacks no-preemption, and the safety algorithm is avoidance rather than prevention.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — all-at-once allocation denies hold and wait.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) denies circular wait, not hold and wait.</li><li>(C) denies no preemption.</li><li>(D) is avoidance: it grants requests whenever the resulting state stays safe.</li></ul><p class=\"row\"><b>Common misconception.</b> The four techniques are memorised as a list without their pairings, so any option that “sounds like deadlock prevention” looks acceptable.</p><p class=\"row\"><b>Takeaway.</b> Pair each technique with its condition: all-at-once → hold and wait; numbering → circular wait; preemption → no preemption. Mutual exclusion is usually not deniable.</p>",
+   "options": [
+    "Requiring a process to request all the resources it will ever need, in a single operation, before it starts execution",
+    "Numbering the resource types and requiring every request to be made in strictly increasing order of number",
+    "Allowing the system to preempt a resource from a process that is waiting",
+    "Running the banker's safety algorithm before granting each request"
+   ]
+  },
+  {
+   "id": "OS-U3-Q09",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which statement about how often the deadlock-detection algorithm should be invoked is TRUE?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Detection is a trade-off between the overhead of running it and the loss caused by undetected deadlocked processes, which hold resources while doing no work.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each invocation costs time proportional to the size of the graph — the number of processes and resource types.</li><li>Every deadlocked process keeps its resources but can never finish, so the longer detection is delayed the more resources sit idle.</li><li>Frequent invocation therefore buys resource utilisation at the price of CPU time, and rare invocation does the reverse. A common practical heuristic is to detect when resource utilisation falls or when a request cannot be satisfied.</li><li>There is no single correct frequency; it depends on how often deadlock is expected and how expensive an idle process is.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — detection frequency trades CPU overhead against resources left idle by undetected deadlocks.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) A deadlocked process harms the system precisely by holding resources forever.</li><li>(C) Cost grows with the number of invocations by definition.</li><li>(D) An acyclic graph needs no detection at all, so this cannot be a condition on invoking it.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming a fixed rule such as “detect on every request”. Detection frequency is a design decision, and systems often choose an intermediate point.</p><p class=\"row\"><b>Takeaway.</b> Detection frequency = cost of detection against cost of idleness. State the trade-off, not a fixed number.</p>",
+   "options": [
+    "It should run as rarely as possible, because a deadlocked process holding resources harms no one.",
+    "Running it more often raises the CPU cost of detection but leaves fewer processes holding resources uselessly; running it rarely saves CPU but lets deadlocks accumulate.",
+    "Its cost is independent of how often it is invoked.",
+    "It may be invoked only when the resource allocation graph is acyclic."
+   ]
+  },
+  {
+   "id": "OS-U3-Q10",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about starvation (indefinite blocking) is TRUE?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation is a <b>fairness</b> failure, not a liveness failure: the victim is eligible and the resource is eventually free, but the policy never chooses the victim.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In starvation the process is runnable, and the resource does become free from time to time.</li><li>Other processes progress, so the blocked set is not closed — there is no wait cycle.</li><li>The cause is the selection rule: a strict priority policy always prefers a higher-priority waiter, so a steady supply of higher-priority requests keeps the victim waiting forever.</li><li>Adding instances reduces contention but does not change the rule; a policy that never selects the victim still never selects it.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) Starvation and deadlock are independent failures.</li><li>(C) More resources ease contention but cannot fix an unfair selection rule; aging or fair queueing does.</li><li>(D) A cycle is the signature of deadlock, and starvation involves no closed wait set.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating more resources as the universal cure. The cure for starvation is a change of policy — aging, FIFO queueing, or a bounded number of overtakes.</p><p class=\"row\"><b>Takeaway.</b> Starvation is caused by a policy and cured by a policy. Deadlock is caused by a resource cycle and cured by breaking the cycle.</p>",
+   "options": [
+    "Starvation implies that a deadlock exists somewhere in the system.",
+    "A starving process could in principle be executed, but the resource-allocation policy never selects it while other processes keep making progress.",
+    "Starvation can always be removed by adding more instances of the contended resource.",
+    "Starvation requires a cycle in the wait-for graph."
+   ]
+  },
+  {
+   "id": "OS-U3-Q11",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "For the state below, the banker's algorithm is used to decide each request. Which one of the following requests must be refused, because granting it would leave the system unsafe?\nProcess | Allocation (A B C) | Max (A B C) | Need (A B C)\n--------+--------------------+-------------+-------------\n   P0   |      0 1 0         |   7 5 3     |   7 4 3\n   P1   |      2 0 0         |   3 2 2     |   1 2 2\n   P2   |      3 0 2         |   9 0 2     |   6 0 0\n   P3   |      2 1 1         |   2 2 2     |   0 1 1\n   P4   |      0 0 2         |   4 3 3     |   4 3 1\n--------+--------------------+-------------+-------------\nAvailable = (3 3 2)      Total instances = (10 5 7)",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A request is granted only if it passes two tests: it must be <b>legal</b> (<code class=\"mm\">request ≤ Need</code> and <code class=\"mm\">request ≤ Available</code>), and the state after the grant must still be <b>safe</b>. Legality alone is not enough.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) P1 requests (1 2 2).</b> Available becomes <span class=\"mm\">(3 3 2) − (1 2 2) = (2 1 0)</span> and P1's need becomes (0 0 0), so P1 finishes at once and releases (3 2 2), giving <span class=\"mm\">(5 3 2)</span>. Then P3, P4, P0, P2 complete in that order. <b>Safe.</b></li><li><b>(B) P0 requests (1 2 2).</b> Available becomes <span class=\"mm\">(2 1 0)</span> and P0's need becomes (6 2 1). Now P1 needs (1 2 2) — only one unit of B is free; P2 needs 6 units of A — only 2 are free; P3 needs one unit of C — none is free; P4 needs 4 of A; P0 needs 6 of A. <b>No process can finish, so the state is unsafe.</b></li><li><b>(C) P2 requests (3 0 0).</b> Available becomes <span class=\"mm\">(0 3 2)</span>. P3 (0 1 1) finishes, then P1 (1 2 2), then P4 (4 3 1), then P2 (3 0 0), then P0. <b>Safe.</b></li><li><b>(D) P4 requests (2 2 0).</b> Available becomes <span class=\"mm\">(1 1 2)</span>. P3 finishes, then P1, then P4, then P2, then P0. <b>Safe.</b></li><li>Only (B) destroys every safe sequence, so only (B) must be refused.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — P0's request for (1 2 2) leaves the system unsafe.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A), (C) and (D) each admit a complete safe sequence, as traced above, so each may be granted.</li></ul><p class=\"row\"><b>Common misconception.</b> Granting a request simply because <code class=\"mm\">Available</code> covers it. Covering the request is only the legality test; the safety test is what the banker's algorithm adds, and it is where (B) fails.</p><p class=\"row\"><b>Takeaway.</b> Two tests per request: legal, then safe. A request can be perfectly legal and still have to be refused.</p>",
+   "options": [
+    "P1 requests (1 2 2)",
+    "P0 requests (1 2 2)",
+    "P2 requests (3 0 0)",
+    "P4 requests (2 2 0)"
+   ]
+  },
+  {
+   "id": "OS-U3-Q12",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "The graph-reduction algorithm repeatedly removes a process whose outstanding requests can all be met from the currently available instances, adding that process's resources back to the pool. Which of the following statements is TRUE?",
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Reducibility is an exact test for deadlock-freedom. A complete reduction exhibits a completion order for every process; a stalled reduction leaves behind exactly the processes that cannot complete.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>If every process can be reduced away, the order of removals is a completion order: each process's requests could be met at the moment it was removed. Some schedule therefore finishes every process, so nobody is deadlocked.</li><li>If reduction stalls, the processes still in the graph wait only on one another, and those are deadlocked. Processes already removed are not, so “every process” in (B) overstates the conclusion.</li><li>Reduction uses instance counts, so it works with any number of instances per resource type; (C) is false.</li><li>A reducible graph may contain a cycle. Take <span class=\"mm\">R₁</span> with two instances, one held by P1 and one free, and <span class=\"mm\">R₂</span> held by P2, with P1 requesting <span class=\"mm\">R₂</span> and P2 requesting <span class=\"mm\">R₁</span>. The cycle <span class=\"mm\">P1 → R₂ → P2 → R₁ → P1</span> exists, yet P2 can take the free instance of <span class=\"mm\">R₁</span>, finish, and release <span class=\"mm\">R₂</span>, after which P1 finishes. The graph reduces. So (D) is false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) Only the processes left after the reduction stalls are deadlocked.</li><li>(C) Reduction is designed precisely for the multi-instance case.</li><li>(D) Cycles are common in reducible, deadlock-free graphs.</li></ul><p class=\"row\"><b>Common misconception.</b> Equating “reducible” with “acyclic”. With multiple instances a cycle is a warning, not a verdict; only reduction decides.</p><p class=\"row\"><b>Takeaway.</b> Reduction answers the only question that matters: can every process complete? Complete → deadlock-free. Stalled → the leftovers are deadlocked.</p>",
+   "options": [
+    "If the graph is completely reducible, no process in the system is deadlocked.",
+    "If the graph is not completely reducible, every process in the system is deadlocked.",
+    "Reduction can be applied only when every resource type has a single instance.",
+    "A reducible graph must be acyclic, and every acyclic graph is reducible."
+   ]
+  },
+  {
+   "id": "OS-U3-Q13",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about recovery from a detected deadlock is TRUE?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Recovery has two families: <b>termination</b> (abort all deadlocked processes, or abort one at a time and re-run detection) and <b>resource preemption</b> (select a victim, preempt, roll back to a checkpoint, guard against repeated victimisation).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Aborting all deadlocked processes certainly breaks the deadlock but throws away the maximum amount of work. Aborting one at a time and re-running detection costs many detection passes but discards less.</li><li>Resource preemption needs three decisions: <i>victim selection</i> (usually the one with the smallest cost), <i>rollback</i> (return the victim to a state from which it can resume, which requires checkpoints), and <i>starvation prevention</i> (bound the number of times any process may be rolled back).</li><li>Victim selection therefore drives both how much work is lost and whether one process is picked again and again.</li><li>Hence (A) is too strong — partial termination is standard; (C) is false, because rollback is a recovery action available whenever preemption is permitted; (D) is false, since repeated victimisation is the classic starvation risk of preemption.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) Aborting one process at a time until the cycle disappears is usually cheaper.</li><li>(C) Rollback is a property of the victim and its checkpoint, not of the graph's shape.</li><li>(D) Repeatedly choosing the same victim is a well-known source of starvation.</li></ul><p class=\"row\"><b>Common misconception.</b> Recovery is often reduced to “kill a process”. Preemption with rollback is the other half, and it introduces its own fairness problem.</p><p class=\"row\"><b>Takeaway.</b> Three recovery decisions: which victim, how far to roll back, and how to stop the same process being chosen forever.</p>",
+   "options": [
+    "Recovery by termination always requires aborting every deadlocked process and restarting all of them from the beginning.",
+    "Preempting a resource from a victim and rolling that process back to an earlier checkpoint is a recovery technique, and the choice of victim affects both the cost of recovery and the risk of starving the same process repeatedly.",
+    "Rollback is possible only if the wait-for graph still contains a cycle at the moment of rollback.",
+    "Preempting a resource can never cause starvation."
+   ]
+  },
+  {
+   "id": "OS-U3-Q14",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Numbering the resource types and requiring every process to request them in strictly increasing order prevents deadlock because:",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Ordering denies the <b>circular wait</b> condition. A process may request a resource only if its number is greater than that of every resource the process already holds.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Assign each resource type a unique number and allow a request for type <span class=\"mm\">j</span> only when <span class=\"mm\">j</span> is larger than the number of every resource currently held.</li><li>Suppose a cycle existed: <span class=\"mm\">P₁</span> waits for a resource held by <span class=\"mm\">P₂</span>, …, <span class=\"mm\">Pₖ</span> waits for one held by <span class=\"mm\">P₁</span>.</li><li>Each holder holds a resource numbered lower than the one it is waiting for, so the numbers strictly increase as the cycle is traversed.</li><li>Returning to the starting process would require the number to drop back — a contradiction. No cycle can exist, so circular wait is impossible.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) A process does hold lower-numbered resources while requesting higher-numbered ones; the rule only constrains the <i>order</i>.</li><li>(C) The number of instances is untouched by the rule.</li><li>(D) Safety in the banker's sense is a different guarantee; ordering prevents deadlock structurally and needs no maximum claims.</li></ul><p class=\"row\"><b>Common misconception.</b> Confusing prevention with avoidance. Ordering never inspects future claims and never computes a safe sequence — it removes the possibility of a cycle by construction.</p><p class=\"row\"><b>Takeaway.</b> Ordering → no cycle → no circular wait. A structural guarantee, with no knowledge of future requests.</p>",
+   "options": [
+    "a process can never hold a resource while requesting another",
+    "the requests of any set of processes cannot form a cycle, so circular wait is impossible",
+    "it forces every resource type to have a single instance",
+    "it guarantees that the system is always in a safe state according to the banker's algorithm"
+   ]
+  },
+  {
+   "id": "OS-U3-Q15",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about denying the mutual-exclusion condition is TRUE?",
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A resource is non-shareable when concurrent use would corrupt it. For such resources mutual exclusion must hold, so denying it is not a general prevention strategy.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Mutual exclusion is required whenever simultaneous access is unsafe — a printer, a tape drive, a write lock on a file.</li><li>For these resources the condition cannot be denied at all, so prevention must attack hold-and-wait or circular wait instead.</li><li>The classic partial workaround is <b>spooling</b>: several processes write to a disk queue and one spooler process owns the printer. The printer is then shared only in the sense that the queue is.</li><li>Spooling works only for resources whose output can be buffered; it does not generalise to a tape drive or a shared memory region.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) Declaring a printer shareable does not make it shareable.</li><li>(C) The two conditions are independent; denying one says nothing about the other.</li><li>(D) Mutual exclusion is not the only condition that resists denial, and the phrasing of the option is too absolute.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming every condition is equally deniable. In practice prevention targets hold-and-wait and circular wait, because mutual exclusion usually cannot be removed.</p><p class=\"row\"><b>Takeaway.</b> Spooling is the one well-known attack on mutual exclusion, and it applies only to bufferable resources.</p>",
+   "options": [
+    "It can be denied for every resource by declaring all resources shareable.",
+    "It cannot be denied for intrinsically non-shareable resources such as a printer or a tape drive, so it is rarely usable as a general prevention technique.",
+    "Denying mutual exclusion also denies circular wait.",
+    "It is the only condition that cannot be denied in any system."
+   ]
+  },
+  {
+   "id": "OS-U3-Q16",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following are among the four necessary conditions for deadlock? (Select all that apply.)",
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four Coffman conditions are mutual exclusion, hold and wait, no preemption and circular wait. They must hold simultaneously for deadlock to be possible.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) Mutual exclusion</b> — a resource is held in a non-shareable mode. <b>Condition.</b></li><li><b>(B) Hold and wait</b> — a process holds one resource while waiting for another. <b>Condition.</b></li><li><b>(C) No preemption</b> — a resource is released only voluntarily. <b>Condition.</b></li><li><b>(D) Priority inversion</b> — a scheduling anomaly in which a low-priority task holding a lock blocks a high-priority one. It is a real-time scheduling problem, not a deadlock condition. <b>Not a condition.</b></li><li>The fourth Coffman condition, circular wait, is absent from the list, so three of the four appear here.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Priority inversion is often grouped with deadlock because both involve blocking. Inversion concerns who gets the CPU while a lock is held; deadlock concerns a closed wait set.</p><p class=\"row\"><b>Takeaway.</b> Four conditions, all necessary, all simultaneously required: mutual exclusion, hold and wait, no preemption, circular wait.</p>",
+   "options": [
+    "Mutual exclusion",
+    "Hold and wait",
+    "No preemption",
+    "Priority inversion"
+   ]
+  },
+  {
+   "id": "OS-U3-Q17",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about the banker's algorithm are TRUE? (Select all that apply.)",
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Safety is a worst-case guarantee computed from declared maximum claims. Unsafe means no safe sequence exists <i>now</i>; it does not mean that a deadlock exists now.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> A safe sequence can always be advanced: the first process in it can obtain its remaining claim and finish. So a safe state cannot deadlock while claims are respected. <b>TRUE</b></li><li><b>(B)</b> Unsafe means no completion order exists <i>under the worst case</i>. If processes request less than their maximum, they may still finish. <b>FALSE</b></li><li><b>(C)</b> The remaining claim <code class=\"mm\">Max − Allocation</code> is exactly what the safety test compares with Available, so maxima must be declared in advance. This is the algorithm's main practical limitation. <b>TRUE</b></li><li><b>(D)</b> Refusing an unsafe request is precautionary. Deadlock might never have materialised, because the other processes may not ask for their full maxima. <b>FALSE</b></li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating unsafe and deadlocked as the same. Every deadlocked state is unsafe, but an unsafe state can be deadlock-free at the moment it is examined.</p><p class=\"row\"><b>Takeaway.</b> Safe ⇒ deadlock-free (under declared maxima). Unsafe ⇒ deadlock possible, not deadlock certain. The price of the guarantee is advance knowledge of every maximum.</p>",
+   "options": [
+    "If the system is in a safe state and every process requests at most its declared maximum, no deadlock can occur.",
+    "An unsafe state is necessarily a deadlocked state.",
+    "The algorithm requires every process's maximum claim to be known in advance.",
+    "If granting a request leaves the system unsafe, granting it will immediately create a deadlock."
+   ]
+  },
+  {
+   "id": "OS-U3-Q18",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following are recognised techniques for recovering from a detected deadlock? (Select all that apply.)",
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Recovery is either <b>termination</b> or <b>resource preemption</b>. Both act on processes that are already deadlocked.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> Aborting every deadlocked process certainly removes the deadlock, at the maximum cost in lost work. <b>Technique.</b></li><li><b>(B)</b> Aborting one process at a time and re-running detection after each abort trades detection overhead for less discarded work. <b>Technique.</b></li><li><b>(C)</b> Preemption with rollback to a checkpoint is the standard non-terminating recovery. <b>Technique.</b></li><li><b>(D)</b> A deadlocked process never exits on its own — that is the definition of the condition — so this is not recovery at all. <b>Not a technique.</b></li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Option (D) sounds cautious and therefore plausible. But recovery must break the wait; waiting for a deadlocked set to finish is waiting forever.</p><p class=\"row\"><b>Takeaway.</b> Recovery = terminate (all at once or one at a time) or preempt with rollback. Nothing else removes the deadlock.</p>",
+   "options": [
+    "Abort all deadlocked processes.",
+    "Abort one deadlocked process at a time and re-run detection after each abort.",
+    "Preempt a resource from a chosen victim process and roll that process back to an earlier checkpoint.",
+    "Refuse every future request for the contended resource until the deadlocked processes exit on their own."
+   ]
+  },
+  {
+   "id": "OS-U3-Q19",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements are TRUE? (Select all that apply.)",
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation is a fairness failure of the selection policy; deadlock is a closed wait cycle. Neither implies the other.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> In a strict-priority system with a steady supply of higher-priority requests, a low-priority process is passed over forever while everyone else progresses. No deadlock is involved. <b>TRUE</b></li><li><b>(B)</b> Same mechanism, stated in the language of priorities. Deadlock-freedom says nothing about which waiter is chosen. <b>TRUE</b></li><li><b>(C)</b> A starving process is not part of a closed wait set — the resources it needs are granted, just never to it. <b>FALSE</b></li><li><b>(D)</b> More instances ease contention, but a policy that always prefers a higher-priority waiter will still never select the victim. <b>FALSE</b></li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> “Starvation is a mild deadlock”. They are different failures with different cures: break a cycle for deadlock, change the policy (aging) for starvation.</p><p class=\"row\"><b>Takeaway.</b> Deadlock-free does not mean starvation-free. Test them separately: is there a cycle, and is the selection rule fair?</p>",
+   "options": [
+    "A process can starve even though no deadlock exists anywhere in the system.",
+    "Priority-based resource allocation can starve a low-priority process in a system that is completely deadlock-free.",
+    "Every starving process belongs to a deadlocked set.",
+    "Adding more instances of the contended resource always ends starvation."
+   ]
+  },
+  {
+   "id": "OS-U3-Q20",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Which of the following statements about a resource allocation graph are TRUE? (Select all that apply.)",
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A cycle is always <i>necessary</i>; it is <i>sufficient</i> only when every resource type has a single instance.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> In a deadlock every blocked process waits for a resource held by another blocked process; following those waits around the set closes a cycle. <b>TRUE</b></li><li><b>(B)</b> With single instances no process outside the cycle can release the needed resource, so the cycle can never be broken. <b>TRUE</b></li><li><b>(C)</b> This is the contrapositive of (A): no cycle ⇒ no deadlock. <b>TRUE</b></li><li><b>(D)</b> With several instances a process outside the cycle may hold a spare instance and release it, dissolving the cycle; only graph reduction decides. <b>FALSE</b></li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> The pair (B) and (D) is where marks are lost. The correct summary is one sentence: necessary always, sufficient only for single instances.</p><p class=\"row\"><b>Takeaway.</b> Cycle ⇒ check further, never a verdict — unless every resource has exactly one instance.</p>",
+   "options": [
+    "A cycle is a necessary condition for deadlock, whatever the number of instances per resource type.",
+    "If every resource type has exactly one instance, a cycle implies deadlock.",
+    "If the graph contains no cycle, the system is deadlock-free.",
+    "A cycle in a graph in which some resource type has several instances always implies deadlock."
+   ]
+  },
+  {
+   "id": "OS-U3-Q21",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "A system has four processes, and each may need at most 3 instances of a single resource type. Instances are acquired one at a time. What is the minimum number of instances of the resource that guarantees the system can never deadlock, whatever the order in which requests are made?",
+   "answer": 9,
+   "answer_display": "Answer: 9",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The worst case is that every process holds <span class=\"mm\">m − 1</span> instances and is waiting for one more. With <span class=\"mm\">n</span> processes that is <span class=\"mm\">n(m − 1)</span> instances all held and stuck; one further instance lets somebody finish.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <span class=\"mm\">n = 4</span> processes and <span class=\"mm\">m = 3</span> instances per process at most.</li><li>Suppose there are <span class=\"mm\">4 × 2 = 8</span> instances. Every process can take 2 and then wait for a third. No instance is free, so nobody can proceed — a deadlock is reachable.</li><li>With <b>9</b> instances, at most <span class=\"mm\">4 × 2 = 8</span> can be held in that pattern, so at least one instance remains free. The process that gets it completes, releases 3, and the chain unwinds.</li><li>Hence the minimum is <span class=\"mm\">n(m − 1) + 1 = 4 × 2 + 1 = 9</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <b>9</b> (range 9 to 9).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 12, which is <span class=\"mm\">n × m</span> — the total maximum demand. That is sufficient, but far more than the minimum needed to rule deadlock out.</p><p class=\"row\"><b>Takeaway.</b> Minimum instances to guarantee deadlock-freedom: <span class=\"mm\">n(m − 1) + 1</span>.</p>"
+  },
+  {
+   "id": "OS-U3-Q22",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Three processes share two resource types, A and B. The current state is:\nProcess | Allocation (A B) | Max (A B) | Need (A B)\n--------+-------------------+-----------+------------\n   P1   |       1 0         |   1 3     |   0 3\n   P2   |       0 2         |   2 2     |   2 0\n   P3   |       1 1         |   2 1     |   1 0\n--------+-------------------+-----------+------------\nAvailable = (0 0)\nResource A is not increased. What is the minimum number of additional instances of resource B that must be added to the available pool so that the state becomes safe?",
+   "answer": 3,
+   "answer_display": "Answer: 3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A state is safe exactly when some process's <code class=\"mm\">Need</code> fits <code class=\"mm\">Available</code>. Adding instances to B can only help a process whose need is entirely in B — here, only P1.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>With <span class=\"mm\">b</span> instances of B added, Available is <span class=\"mm\">(0, b)</span>.</li><li><span class=\"mm\">b = 2</span>: P1 needs (0 3) — three units of B, so it is short by one. P2 needs (2 0) and P3 needs (1 0), both needing A, of which none is free. No process can finish, so the state is unsafe. Any <span class=\"mm\">b &lt; 3</span> fails for the same reason.</li><li><span class=\"mm\">b = 3</span>: Available is (0 3). P1 needs (0 3) and finishes, releasing (1 0), so Available becomes <span class=\"mm\">(1 3)</span>.</li><li>P3 needs (1 0) and finishes, releasing (1 1), so Available becomes <span class=\"mm\">(2 4)</span>.</li><li>P2 needs (2 0) and finishes. The safe sequence is P1, P3, P2, so three extra instances of B suffice.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <b>3</b> (range 3 to 3).</span></p><p class=\"row\"><b>Common misconception.</b> Adding to resource A, or forgetting that a finishing process releases its <i>whole</i> allocation rather than only what it just received. Both mistakes give a different minimum.</p><p class=\"row\"><b>Takeaway.</b> When only one resource type can grow, find the single process whose whole need lies in that resource, and size the addition to it.</p>"
+  },
+  {
+   "id": "OS-U3-Q23",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "A system has exactly one instance of every resource type, and its wait-for graph has these edges: P1 → P2, P2 → P3, P3 → P1, P2 → P4, P4 → P5, P5 → P2. What is the minimum number of processes that must be aborted so that the remaining graph contains no cycle?",
+   "answer": 1,
+   "answer_display": "Answer: 1",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Breaking every cycle means choosing a set of vertices that meets every cycle — a feedback vertex set. Cycles that share a vertex are broken by aborting that one vertex.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Find the cycles. Following the edges: <span class=\"mm\">P1 → P2 → P3 → P1</span> is one cycle.</li><li>Also <span class=\"mm\">P2 → P4 → P5 → P2</span> is a second, independent cycle.</li><li>Both cycles pass through <b>P2</b>. Aborting P2 removes all of its outgoing edges, so neither cycle survives: the remaining edges are only those leaving P1, P3, P4 and P5 to processes that no longer close a loop.</li><li>At least one abort is necessary, since the graph is not acyclic, so one is the minimum.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <b>1</b> (range 1 to 1).</span></p><p class=\"row\"><b>Common misconception.</b> Aborting one process per cycle and answering 2. The cycles intersect, so a single carefully chosen victim clears both — the same idea as picking a good victim in recovery.</p><p class=\"row\"><b>Takeaway.</b> Look for the shared vertex before counting cycles. One well-chosen abort can be worth several careless ones.</p>"
+  },
+  {
+   "id": "OS-U3-Q24",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Consider four resource-allocation policies: (i) first-come first-served, (ii) round robin with a fixed quantum, (iii) strict fixed priority without aging, (iv) shortest-job-first in the presence of a continuous stream of new short jobs. How many of these four can leave a process waiting indefinitely while the other processes keep making progress?",
+   "answer": 2,
+   "answer_display": "Answer: 2",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation arises when a policy lets later arrivals overtake a waiter indefinitely. Any policy that guarantees a bounded number of overtakes is starvation-free.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(i) FCFS.</b> A request is served in arrival order, so the wait is bounded by the requests already queued. No starvation.</li><li><b>(ii) Round robin.</b> Every process is served within one full cycle of the queue, so the wait is bounded by the number of processes. No starvation.</li><li><b>(iii) Strict fixed priority.</b> A continuous supply of higher-priority requests always overtakes the victim, which is never selected. Starvation is possible.</li><li><b>(iv) SJF with continuous short arrivals.</b> A long job is overtaken by every newly arriving short job, forever. Starvation is possible.</li><li>Two of the four — (iii) and (iv) — can starve a process.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <b>2</b> (range 2 to 2).</span></p><p class=\"row\"><b>Common misconception.</b> Counting FCFS as starvation-prone. FCFS is the textbook starvation-free policy: the only thing it can be blamed for is a long average wait, not indefinite blocking.</p><p class=\"row\"><b>Takeaway.</b> Bounded overtaking ⇒ no starvation. Aging converts an unbounded policy into a bounded one by raising the victim's priority with time.</p>"
+  },
+  {
+   "id": "OS-U3-Q25",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-27",
+   "set": "1 of 2",
+   "question": "Three processes share two resource types, A and B, with 4 instances of A and 4 instances of B in total. The current state is:\nProcess | Allocation (A B) | Max (A B) | Need (A B)\n--------+-------------------+-----------+------------\n   P1   |       0 2         |   2 3     |   2 1\n   P2   |       0 0         |   0 2     |   0 2\n   P3   |       2 1         |   2 2     |   0 1\n--------+-------------------+-----------+------------\nAvailable = (2 1)\nA safe sequence is an ordering of all three processes in which each process can be given its remaining need from the currently available instances plus those released by the processes before it, and then finishes and releases everything. How many distinct safe sequences does this state have?",
+   "answer": 4,
+   "answer_display": "Answer: 4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A safe sequence is a completion order found by repeatedly running any process whose <code class=\"mm\">Need ≤ Available</code> and adding its allocation back. Counting them means exploring every choice of first process and following the consequences.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Available is <span class=\"mm\">(2 1)</span>. Compare with each need: P1 needs (2 1) — fits; P2 needs (0 2) — B is short by one, so it cannot go first; P3 needs (0 1) — fits.</li><li><b>P1 first.</b> It releases (0 2), so Available becomes <span class=\"mm\">(2 3)</span>. Now both P2 (0 2) and P3 (0 1) fit, and each can go second, with the other third: two sequences, <code class=\"mm\">P1 P2 P3</code> and <code class=\"mm\">P1 P3 P2</code>.</li><li><b>P3 first.</b> It releases (2 1), so Available becomes <span class=\"mm\">(4 2)</span>. Now both P1 and P2 fit, giving <code class=\"mm\">P3 P1 P2</code> and <code class=\"mm\">P3 P2 P1</code>: two more sequences.</li><li>P2 cannot go first at all, so no sequence begins with P2. The total is <span class=\"mm\">2 + 2 = 4</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: <b>4</b> (range 4 to 4).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 6 by assuming all three orders of three processes must work. The first process is constrained by the <i>current</i> Available, and P2 needs two units of B when only one is free.</p><p class=\"row\"><b>Takeaway.</b> Count from the possible first moves. Any process whose need exceeds the initial Available can never open a sequence, however the rest is ordered.</p>"
   }
  ]
 }

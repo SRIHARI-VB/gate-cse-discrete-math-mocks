@@ -7,31 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 1 of 2**, 2026-10-27 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html)
+- **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2**, 2026-10-27 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: merge sort & quicksort (7) · counting & radix sort (6) · selection & the k-th element (6) · inversion
-  counting (6)
-- Rotation: MODE A drew **Algorithms** with an unseeded draw among the subjects that had no paper dated 2026-10-27
-  (the draw was between Algorithms and Databases, both last served on 2026-10-26). `runs[-1]` for the subject is
-  `{date 2026-10-26, run 1, unit 1, asymptotic-analysis, Set 2 of 2}`. Unit 1 held **50** questions — exactly
-  `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced exactly one unit:
-  `(index_of(asymptotic-analysis) + 1) mod 7 = (0 + 1) mod 7 = 1` → **Unit 2, Divide and Conquer & Sorting**
-  (`sorting-divide-conquer`). Unit 2 had no earlier paper, so nothing was archived; the paper is filed only at
-  `algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`, the unit folder holds exactly one current
-  paper and no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 2, so the next
-  Algorithms run re-selects Unit 2 (25 < 50, 0 days) before advancing to Unit 3. No override was used, no unit
-  exceeded 50 questions and no second pass has started.
-- Previous test: **Digital Logic · Unit 3 — Sequential Circuits: Flip-Flops & Registers, Set 1 of 2**, 2026-10-27 → [`digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html`](digital-logic/sequential-flipflops/gate_dl_mock_3_2026-10-27.html)
+- Subtopics: four conditions & the resource-allocation graph (6) · prevention, avoidance & the banker's algorithm (10) ·
+  detection & recovery (5) · starvation vs deadlock (4)
+- Rotation: MODE A drew **Operating Systems** with an unseeded `random.SystemRandom()` draw over all 11 GATE CSE
+  subjects. `runs[-1]` for the subject is `{date 2026-10-26, run 4, unit 2, synchronization-ipc, Set 2 of 2}`. Unit 2
+  held **50** questions — exactly `UNIT_QUESTION_CAP = 50` — so the cap test in step B3 failed and step B4 advanced
+  exactly one unit: `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks**
+  (`deadlocks`). Unit 3 had no earlier paper, so nothing was archived; the paper is filed only at
+  `operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`, the unit folder holds exactly one current paper and
+  no root copy was written. This is Set 1 of 2: 25 questions are now banked on Unit 3, so the next Operating Systems
+  run re-selects Unit 3 (25 < 50, 0 days) before advancing to Unit 4. No override was used, no unit exceeded 50
+  questions and no second pass has started.
+- Previous test: **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 1 of 2**, 2026-10-27 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-27.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 52 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 31 current · 21 archived |
-| Test cards on the portal | 33 |
-| Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 2 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1300 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 75 Compiler Design, 100 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
+| Papers published (current + archived) | 53 (14 Discrete Mathematics, 3 Algorithms, 3 Databases, 3 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 3 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 5 Digital Logic, 1 Computer Architecture) |
+| Current papers / archived sets | 32 current · 21 archived |
+| Test cards on the portal | 34 |
+| Units covered | 7 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 2 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 2 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1325 (350 Discrete Mathematics, 75 Algorithms, 75 Databases, 75 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 75 Programming and Data Structures, 75 Computer Networks, 175 Theory of Computation, 125 Digital Logic, 25 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 21 (7 Discrete Mathematics, 1 Algorithms, 1 Databases, 1 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 1 Programming and Data Structures, 1 Computer Networks, 3 Theory of Computation, 1 Digital Logic) |
 
@@ -60,6 +59,40 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-27, Operating Systems → Unit 3 (Deadlocks), Set 1 of 2.** MODE A: one subject was drawn uniformly at
+  random from all 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw, giving **Operating Systems**.
+  `runs[-1]` for the subject is `{date 2026-10-26, run 4, unit 2, synchronization-ipc, Set 2 of 2}`. Unit 2 held
+  **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3's cap test failed and step B4 advanced exactly one
+  unit: `(index_of(synchronization-ipc) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Deadlocks** (`deadlocks`). No
+  override was used, no unit exceeded 50 questions, and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — four conditions & the resource-allocation graph (6), prevention,
+  avoidance & the banker's algorithm (10), detection & recovery (5), starvation vs deadlock (4). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="operating-systems"`, `data-unit="deadlocks"`, `data-unit-number="3"` and its subtopic slug.
+- All 25 items are new: `OS-U3-Q01`..`OS-U3-Q25` did not exist in the bank, and no stem or option set repeats a
+  Unit 1 or Unit 2 item. Every numeric answer was recomputed in code before shipping: the safety test for the
+  classic 5-process state (safe sequence P1, P3, P4, P0, P2 and no other among the four options), the four candidate
+  grants of the hard MCQ (only P0's request for (1 2 2) destroys every safe sequence), the minimum addition of B in
+  Q22 (3, with b = 2 unsafe), the maximum grantable k in the classic state (k = 2 safe, k = 3 unsafe), and the
+  safe-sequence count of Q25 (4, obtained by exhaustive enumeration of all 3! orders; P2 can never open a sequence
+  because it needs two units of B when one is free).
+- The set contains no `GATE_PYQ_VARIATION` item: no deadlock previous-year question has been verified against an
+  official paper and answer key for this run, so none is claimed. Every question is `STANDARD_TEXTBOOK` (15) or
+  `ORIGINAL_SYNTHESIS` (10), and the About tab and the paper's Question Bank tab both say so.
+- Filed only at `operating-systems/deadlocks/gate_os_mock_3_2026-10-27.html`. Unit 3 had no earlier paper, so nothing
+  was archived, the unit folder holds exactly one current paper and nothing was written at the repository root. The
+  portal card carries no "Earlier sets" line because no set has been superseded yet.
+- Shell parity checked this run: the `<style>` block and the `<script>` block are byte-identical to the paper the
+  shell was copied from, the `:root` block still matches `design-tokens.css` byte for byte, and the changed bytes
+  outside the payload are confined to the title, header, meta strip, question host, palette, bank tab and About tab.
+- Structural checks this run (no browser harness): 25 `.qcard` elements, 25 palette buttons, a payload that decodes
+  to 25 answers and 25 solutions, zero solution HTML inside the active test cards, 100 `.hcard` items in the Question
+  Bank tab, a tag-balance baseline no worse than the existing shell (the shell's own unclosed `</head>` remains, as
+  in every other paper), and a marks total of 35 from the `Marks:` labels.
+- The Question Bank tab inside the paper lists the 100 solved questions of Units 1 and 2 and nothing else, generated
+  from `master_bank.json`. Unit 3's 25 are the active test and are not repeated in the tab, so the tab and the paper
+  share no question. `index.html` now holds 1325 banked questions and 34 test cards.
 
 - **2026-10-27, Algorithms → Unit 2 (Divide and Conquer & Sorting), Set 1 of 2.** MODE A: the subject was drawn with
   an unseeded draw among the subjects that had no paper dated 2026-10-27 — Algorithms and Databases, both last served
@@ -2040,8 +2073,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Process Management & CPU Scheduling | `process-scheduling` | 50 | yes |
-| 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 25 | yes |
-| 3 | Deadlocks | `deadlocks` | 0 | — |
+| 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 50 | yes |
+| 3 | Deadlocks | `deadlocks` | 25 | yes |
 | 4 | Memory Management & Paging | `memory-paging` | 0 | — |
 | 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
 | 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
