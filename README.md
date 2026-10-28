@@ -7,30 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 2 of 2**, 2026-10-28 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html)
+- **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 2 of 2**, 2026-10-28 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Stop-and-wait ARQ (5) · Go-back-N & selective repeat (5) · Pure & slotted ALOHA (5) · CSMA/CD,
-  CSMA/CA & backoff (5) · Ethernet, switches & bridges (5)
-- Rotation: MODE A drew **Computer Networks** from the 4 subjects that had no paper dated 2026-10-28 (unseeded
-  `random.SystemRandom()` choice, draw index 3 of 4). `runs[]` sorted by `(date, run)` gives the most recent paper for
-  the subject as `{date 2026-10-27, run 3, unit 2, data-link-mac, Set 1 of 2}`. Unit 2 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  step B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Computer Networks run
-  advances `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**.
-  No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 2 of 2**, 2026-10-28 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html)
+- Subtopics: Merge sort & quicksort (7) · Counting & radix sort (6) · Selection & the k-th element (6) ·
+  Inversion counting (6)
+- Rotation: MODE A drew **Algorithms** from the 3 subjects that had no paper dated 2026-10-28 (unseeded
+  `random.SystemRandom()` draw, draw index 0 of 3). `runs[]` sorted by `(date, run)` gives the most recent paper for
+  the subject as `{date 2026-10-27, run 3, unit 2, sorting-divide-conquer, Set 1 of 2}`. Unit 2 held **25** questions,
+  below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held
+  and step B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Algorithms run advances
+  `(index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms**. No override was used, no
+  unit exceeded 50 questions and no second pass has started.
+- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 2 of 2**, 2026-10-28 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 65 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 35 current · 30 archived |
-| Test cards on the portal | 39 |
+| Papers published (current + archived) | 66 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 35 current · 31 archived |
+| Test cards on the portal | 40 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1625 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1650 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 30 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 31 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -57,6 +57,89 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Algorithms → Unit 2 (Divide and Conquer & Sorting), Set 2 of 2.** MODE A: one subject was drawn
+  uniformly at random with an unseeded `random.SystemRandom()` draw over the 3 subjects that had no paper dated
+  2026-10-28 (draw index 0 of 3), giving **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper
+  as `{date 2026-10-27, run 3, unit 2, sorting-divide-conquer, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now holds exactly 50
+  questions — the cap — and the next Algorithms run advances
+  `(index_of(sorting-divide-conquer) + 1) mod 7 = (1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms**. The Set 1 paper
+  was moved to `algorithms/sorting-divide-conquer/archive/gate_algo_mock_2_2026-10-27_run1.html` with its content
+  frozen, and the Set 2 paper took the canonical filename. No override was used, no unit exceeded 50 questions and no
+  second pass has started.
+- Coverage this run: all four Unit 2 subtopics — merge sort and quicksort (7), counting and radix sort (6), selection
+  and the k-th element (6), inversion counting (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10
+  medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="algorithms"`,
+  `data-unit="sorting-divide-conquer"`, `data-unit-number="2"` and its subtopic slug.
+- All 25 items are new: `ALG-U2-Q26`..`ALG-U2-Q50` did not exist in the bank, and every stem was compared against all
+  1625 questions already in the portal data block with a string-normalised check (tags stripped, case and punctuation
+  removed): zero stem collisions and no id overlap for this run's items.
+- **Every countable answer was recomputed by script, not by hand.** The merge of runs of 5 and 8 has a maximum of
+  `5 + 8 − 1 = 12` comparisons (Q30); the full Lomuto quicksort of `[7,3,9,4,2,8,5]` performs **9** exchanges, two of
+  them self-exchanges in the last partition (Q32); base 16 over 32 bits needs `32/4 = 8` passes (Q38);
+  median-of-medians on 60 keys guarantees `3·60/10 − 6 = 12` keys on each side (Q43); and `[5,2,4,1,3,2,6,1]` holds
+  **16** inversions, counted position by position with strict inequality (Q49). The inversion count, the exchange
+  count and the partition trace were each produced by a script that simulates the algorithm, not by hand.
+  **5 of 5 computed answers reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: merging linked lists rewires pointers,
+  so the Θ(n) buffer of the array merge disappears and only the Θ(log n) stack remains (Q26); one partition fixes the
+  pivot's final index (Q27); a two-way partition is Θ(n²) on equal keys while a three-way partition is Θ(n) (Q28);
+  randomisation gives an expected bound, smaller-side-first recursion gives a worst-case stack bound (Q29); a
+  1 : 9 split is still Θ(n log n) because 1/10 + 9/10 = 1 and the level cost is Θ(n) (Q31); counting sort uses no
+  comparison at all (Q33); the k term, not n, dominates when the key range is 10⁶ wide (Q34); radix base n sorts
+  n keys below n² in two passes (Q35); the optimal radix base is b ≈ n (Q36); LSD radix sort is stable overall and
+  its pass count is data-independent (Q37); quickselect discards the side that cannot contain the rank (Q39); the
+  maximum needs n − 1 comparisons because every other key must lose once (Q40); the median is Ω(n) and Θ(n), not
+  Ω(n log n) (Q41); blocks of 3 destroy the median-of-medians guarantee because 1/3 + 2/3 = 1 (Q42); 9/10 < 1 is
+  why the recurrence is linear (Q44); a permutation plus its reverse always sums to n(n−1)/2 inversions (Q45); an
+  adjacent exchange changes the count by exactly ±1 (Q46); inversions measure adjacent-swap distance while n − cycles
+  measures arbitrary-swap distance (Q47); the merge counter counts each pair at exactly one level (Q48); and the
+  Lehmer code has position-dependent bounds 0 ≤ dᵢ ≤ n − i (Q50).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,B,C), (A,B,D), (A,C,D), (B,C,D) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **75 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the 50
+  questions of Unit 1 and the 25 of Unit 2 Set 1 — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active Set 2 questions do not appear there (verified: no `ALG-U2-Q26`..`Q50` id occurs
+  in the bank tab). Units 3–7 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, bank tab label, meta strip, `#qhost`, bank
+  tab, About tab, payload), the remaining bytes are byte-identical to the shell extracted from the Algorithms Unit 2
+  Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key view and the footer are
+  unchanged. The `:root` block is byte-identical to the shell it was spliced from and to `design-tokens.css`, and no
+  new literal hex value was introduced (89 literal hex values outside `:root` in both the new paper and its Set 1
+  predecessor), so the known Section 6.4 deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**56 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all four tabs open and the key tab stays locked until submit; a fully correct paper scores **35 / 35** with 25 `ok`
+  palette buttons, 25 key cards and 25 filled solutions; one skipped MCQ, one wrong MCQ, an MSQ one option short and
+  a wrong NAT score **29 / 35** with 21 correct, 3 wrong and 1 unattempted; an MSQ with one extra option ticked loses
+  its 2 marks (**33 / 35**), confirming that an MSQ earns nothing unless the exact set is selected and that there is
+  no negative marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every card carries `data-subject`,
+  `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase
+  difficulty values; the Question Bank tab renders 75 cards with no active question repeated; and the About tab
+  carries its three sections.
+- `index.html` holds all **1650** questions. Its data block was updated in place: the new Algorithms Unit 2 record was
+  inserted at the head of `tests` with an `archives` entry pointing at the frozen Set 1 copy, and the superseded
+  2026-10-27 record was retargeted at the archived copy so its link still resolves. The 25 new question records were
+  appended. No unit had to be registered — Algorithms Units 1–7 were already in the portal's `units` table. The static
+  header strings were recomputed from the data block and now read 65 units, 40 sets published and 1650 solved
+  questions / records, with 281 subtopics. Every path in the data block resolves against the repository tree.
+- Hygiene: the paper is filed at exactly one path, `algorithms/sorting-divide-conquer/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (66 papers, 35 current and 31 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the literal
+  hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry an older
+  `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an archived run
+  while a current paper exists; and two pre-existing stem collisions inside Unit 1 of this subject
+  (`ALG-U1-Q29`/`ALG-U1-Q04` and `ALG-U1-Q45`/`ALG-U1-Q16`), found by this run's portal-wide duplicate check and left
+  untouched because the bank is append-only.
 
 - **2026-10-28, Computer Networks → Unit 2 (Data Link Protocols & MAC), Set 2 of 2.** MODE A: one subject was
   drawn uniformly at random with an unseeded `random.SystemRandom()` choice over the 4 subjects that had no paper
