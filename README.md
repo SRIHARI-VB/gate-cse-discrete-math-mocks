@@ -7,30 +7,58 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 4 — Binary Trees & Tree Traversals, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html`](programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html)
+- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2 (second pass)**, 2026-10-28 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-28.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Binary tree properties (7) · Inorder, preorder & postorder (6) · Threaded binary trees (6) ·
-  Expression trees (6)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Programming and
-  Data Structures** (draw index 4 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the
-  full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 6, unit 3, linear-data-structures, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+- Subtopics: DFA construction & minimisation (11) · Regular expressions (6) · NFA to DFA: subset construction (4) ·
+  Pumping lemma for regular languages (4)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Theory of
+  Computation** (draw index 6 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the full
+  list. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 8, unit 4, turing-machines-decidability, Set 2 of 2}`. Unit 4 held **50** questions, exactly
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(linear-data-structures) = 2 + 1) mod 7 = 3` → **Unit 4, Binary Trees & Tree Traversals**, Set 1 of 2.
-  Unit 4 had no folder and no paper, so nothing was archived. No override was used.
-- Previous test: **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 2 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
+  `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` → **Unit 1, Regular Languages & Finite Automata**.
+  All four Theory of Computation units are at the cap, so the modulo wrapped and **a second pass over the subject has
+  begun** (step B5). No override was used.
+- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 71 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 38 current · 33 archived |
-| Test cards on the portal | 43 |
+| Papers published (current + archived) | 72 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 4 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 38 current · 34 archived |
+| Test cards on the portal | 44 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1775 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1800 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 100 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 33 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 34 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### Portal data externalised (`data/questions-<subject>.js`)
+
+`index.html` had grown to 3.64 MB because its `data` block carried all 1800 question records with their full
+solutions. That file can no longer be delivered by the automation channel, which rejects request bodies above roughly
+3 MB, so this run split the archive out of the portal and into one file per subject under `data/`:
+
+- `index.html` keeps the `tests` and `units` tables inline (25 KB) and loads eleven
+  `data/questions-<subject>.js` files, each of which registers its array on `window.GATE_BANK`; the portal script
+  concatenates them into `D.questions` before rendering, so both views behave exactly as before.
+- The portal was never standalone — every card links to a paper by relative path — so the extra files change nothing
+  about how it is used, and plain `<script src>` tags load over `file://`, so it still works offline.
+- Verified in headless Chromium 153 from `file://`: 44 test cards, 37 unit cards in the archive view, 1800 question
+  cards, both tabs switching, no console or page errors. A paper opened the same way shows 25 cards, a 25-button
+  palette, no solution text before submit, and reveals 25 solutions plus the answer key on submit.
+- The same pass fixed a data-entry slip carried since 2026-10-27: 25 Operating Systems Unit 3 records stored `unit`
+  as the string `"3"`, so the portal's `q.unit === u.n` test skipped them and the archive rendered 1775 of 1800
+  questions. The values are now integers and the count matches the banks.
+
+### Second pass
+
+Theory of Computation is the first subject to enter a **second pass**: all four of its units (Regular Languages &
+Finite Automata, Grammars & Context-Free Languages, Pushdown Automata, Turing Machines & Decidability) reached
+`UNIT_QUESTION_CAP = 50`, so step B4 wrapped `(3 + 1) mod 4 = 0` and the series returned to Unit 1 instead of stopping.
+Unit 1 therefore now holds **75** questions — the same over-cap state Discrete Mathematics Unit 16 has carried since
+before the cap existed, and for the same reason: the rotation must keep producing 25-question papers. A second pass is
+not a breach of the cap rule; it is what step B5 prescribes when every unit of a subject is full.
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -57,6 +85,42 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Theory of Computation → Unit 1 (Regular Languages & Finite Automata), Set 1 of 2 (second pass).**
+  MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (draw index 6 of 11 in the fixed list order discrete-mathematics,
+  engineering-mathematics, digital-logic, computer-architecture, programming-data-structures, algorithms,
+  theory-of-computation, compiler-design, operating-systems, databases, computer-networks), giving **Theory of
+  Computation**. All eleven subjects already had a paper dated 2026-10-28, so the draw ran over the full list.
+  `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 8, unit 4, turing-machines-decidability, Set 2 of 2}`. Unit 4 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` → **Unit 1, Regular Languages & Finite Automata**
+  (`regular-languages-fa`). Every Theory of Computation unit is at the cap, so the modulo wrapped and a **second pass
+  has started** (step B5). No override was used.
+- Coverage this run: all four Unit 1 subtopics — DFA construction & minimisation (11), regular expressions (6), NFA to
+  DFA and the subset construction (4), pumping lemma for regular languages (4). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="theory-of-computation"`, `data-unit="regular-languages-fa"`, `data-unit-number="1"`, its subtopic
+  slug, its type, its lowercase difficulty and its source tag.
+- All 25 items are new: `TOC-U1-Q51`..`TOC-U1-Q75` did not exist in the bank, and every stem was compared with the 50
+  banked Unit 1 items with a string-normalised check (tags stripped, case folded) — zero collisions. The active set is
+  not repeated in the paper's Question Bank tab, which shows the other **200** banked Theory of Computation questions.
+- Answer verification: every numeric answer was recomputed by script. Three minimal-state items were **corrected**
+  during verification — Q61 (even 0s and ends in 1) and Q68 (even length and ends in b) are 3 states, not the 4 the
+  product construction suggests, because the two "odd" states are equivalent; Q71 (divisible by 6) is 4 states, not 6,
+  because 2 is not invertible modulo 6 and residues 1 ≡ 4, 2 ≡ 5. A Myhill–Nerode signature check over all words up to
+  length 7 confirmed each count, and Q75 (mod 7) confirmed 7 states, where 2 *is* invertible.
+- The previously current paper `gate_toc_mock_1_2026-10-26.html` was moved to
+  `archive/gate_toc_mock_1_2026-10-26_run2.html` with its content frozen, and the new paper took the canonical
+  filename, so the unit folder holds exactly one current paper and no root copy was written. The portal card for that
+  date now launches the archived run2 file and links Set 1 to `archive/…_run1.html`.
+- Shell: the paper was built by injecting only the payload, the 25 question cards, the palette (unchanged), the
+  Question Bank tab and the About tab into the Theory of Computation Unit 4 Set 2 shell. With those content regions
+  normalised away, the remaining bytes are identical to that paper's (verified by script), so shell parity holds.
+- Bank: `master_bank.json` grew to **225** questions and **9** runs; the portal now carries **44** test cards and
+  **1800** question records, both matching the banks exactly. No verified PYQ was added — Theory of Computation still
+  has none, so nothing in this paper is claimed as official.
 
 - **2026-10-28, Programming and Data Structures → Unit 4 (Binary Trees & Tree Traversals), Set 1 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
