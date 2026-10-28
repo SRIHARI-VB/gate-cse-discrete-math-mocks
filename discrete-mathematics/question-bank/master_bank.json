@@ -6,7 +6,7 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-28",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 400,
+  "total_questions": 425,
   "units_with_questions": [
    1,
    2,
@@ -493,6 +493,39 @@
    "set": "Set 1 of 2",
    "count": 25,
    "file": "discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": {
+    "permutations-combinations": 5,
+    "stars-and-bars": 5,
+    "binomial-multinomial-coefficients": 5,
+    "inclusion-exclusion-counting": 5,
+    "double-counting": 5
+   }
+  },
+  {
+   "run": 7,
+   "date": "2026-10-28",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html",
+   "archived_previous": "discrete-mathematics/combinatorics/archive/gate_dm_mock_7_2026-10-28_run1.html",
    "duration_min": 60,
    "marks": 35,
    "composition": {
@@ -18347,6 +18380,1363 @@
    },
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Inclusion-exclusion corrects the over- and under-counting created by overlaps; disjointness is the degenerate case where no correction term is needed, not a precondition.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) This is the standard three-set form; an element in exactly two sets is counted twice in the singles, removed once by a pairwise term, and correctly counted once. True.</li><li>(B) The derangement formula is inclusion-exclusion over the n 'element i is fixed' events. True.</li><li>(C) The surjection formula is inclusion-exclusion over the n 'target j is missed' events. True.</li><li>(D) For pairwise disjoint sets the formula still holds, but its correction terms vanish; the principle is designed precisely for overlapping sets. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B), (C)</span></p><p class=\"row\"><b>Common misconception.</b> Believing the formula is only valid for disjoint sets, which inverts its purpose: disjointness is where it becomes trivial.</p><p class=\"row\"><b>Takeaway.</b> The sign of a term depends only on how many sets are intersected, never on their sizes.</p>",
    "question_format": "MSQ"
+  },
+  {
+   "id": "DM-CB7-Q26",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many distinct arrangements are there of the letters of the word <code class=\"mm\">LEVEL</code>?",
+   "question_html": "<p class=\"qtext\">How many distinct arrangements are there of the letters of the word <code class=\"mm\">LEVEL</code>?</p>",
+   "options": [
+    "60",
+    "30",
+    "120",
+    "20"
+   ],
+   "options_html": [
+    "60",
+    "30",
+    "120",
+    "20"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "A word with repeated letters is a multiset, so the number of distinct linear arrangements is the total number of permutations of its positions divided by the factorial of each letter's multiplicity: identical copies can be swapped without producing a new word.",
+    "steps": [
+     "LEVEL has five letters: L appears twice, E appears twice and V appears once.",
+     "Treating all five letters as distinct gives <code class=\"mm\">5! = 120</code> orders.",
+     "Swapping the two L's gives the same word, so divide by <code class=\"mm\">2!</code>; swapping the two E's likewise, so divide by another <code class=\"mm\">2!</code>.",
+     "The count is <code class=\"mm\">5!/(2!&middot;2!) = 120/4 = 30</code>."
+    ],
+    "final": "Option (B) &mdash; 30.",
+    "whywrong": [
+     "(A) 60 divides by only one of the two repetition factors, so the two E's are still treated as distinguishable.",
+     "(C) 120 is the count for five genuinely distinct letters and treats the repeated L's and E's as different objects.",
+     "(D) 20 divides by <code class=\"mm\">3!</code>, the number of distinct letters, which is not what the multiset rule asks for."
+    ],
+    "misconception": "Dividing by the number of distinct letters instead of by the factorial of each multiplicity. The divisor is the product of <code class=\"mm\">m!</code> over letters with multiplicity <code class=\"mm\">m</code>, here <code class=\"mm\">2!&middot;2!</code>.",
+    "faster": "Write the multiplicities first (2, 2, 1) and evaluate <code class=\"mm\">5!/(2!&middot;2!&middot;1!)</code> directly.",
+    "takeaway": "For a multiset of size n with multiplicities m&#8321;, m&#8322;, &hellip;, the number of distinct arrangements is <code class=\"mm\">n!/(m&#8321;! m&#8322;! &hellip;)</code>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A word with repeated letters is a multiset, so the number of distinct linear arrangements is the total number of permutations of its positions divided by the factorial of each letter's multiplicity: identical copies can be swapped without producing a new word.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>LEVEL has five letters: L appears twice, E appears twice and V appears once.</li><li>Treating all five letters as distinct gives <code class=\"mm\">5! = 120</code> orders.</li><li>Swapping the two L's gives the same word, so divide by <code class=\"mm\">2!</code>; swapping the two E's likewise, so divide by another <code class=\"mm\">2!</code>.</li><li>The count is <code class=\"mm\">5!/(2!&middot;2!) = 120/4 = 30</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 30.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 60 divides by only one of the two repetition factors, so the two E's are still treated as distinguishable.</li><li>(C) 120 is the count for five genuinely distinct letters and treats the repeated L's and E's as different objects.</li><li>(D) 20 divides by <code class=\"mm\">3!</code>, the number of distinct letters, which is not what the multiset rule asks for.</li></ul><p class=\"row\"><b>Common misconception.</b> Dividing by the number of distinct letters instead of by the factorial of each multiplicity. The divisor is the product of <code class=\"mm\">m!</code> over letters with multiplicity <code class=\"mm\">m</code>, here <code class=\"mm\">2!&middot;2!</code>.</p><p class=\"row\"><b>Faster method.</b> Write the multiplicities first (2, 2, 1) and evaluate <code class=\"mm\">5!/(2!&middot;2!&middot;1!)</code> directly.</p><p class=\"row\"><b>Takeaway.</b> For a multiset of size n with multiplicities m&#8321;, m&#8322;, &hellip;, the number of distinct arrangements is <code class=\"mm\">n!/(m&#8321;! m&#8322;! &hellip;)</code>.</p>"
+  },
+  {
+   "id": "DM-CB7-Q27",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; + x&#8325; = 6</code> have?",
+   "question_html": "<p class=\"qtext\">How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; + x&#8325; = 6</code> have?</p>",
+   "options": [
+    "252",
+    "126",
+    "210",
+    "84"
+   ],
+   "options_html": [
+    "252",
+    "126",
+    "210",
+    "84"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "A non-negative solution of <code class=\"mm\">&Sigma; x&#7522; = n</code> in k variables is a distribution of n identical stars into k distinct boxes separated by k &minus; 1 identical bars, so the count is <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code>.",
+    "steps": [
+     "Here n = 6 stars and k = 5 variables, so there are k &minus; 1 = 4 bars.",
+     "The row holds 6 + 4 = 10 symbols in all.",
+     "Choosing which 4 of the 10 positions hold bars fixes the solution: <code class=\"mm\">C(10, 4)</code>.",
+     "<code class=\"mm\">C(10,4) = 10&middot;9&middot;8&middot;7/24 = 210</code>."
+    ],
+    "final": "Option (C) &mdash; 210.",
+    "whywrong": [
+     "(A) 252 = <code class=\"mm\">C(10,5)</code> uses five bars, which would separate six boxes rather than five.",
+     "(B) 126 = <code class=\"mm\">C(9,4)</code> works with nine symbols, as if there were five stars instead of six.",
+     "(D) 84 = <code class=\"mm\">C(9,3)</code> is the answer for four variables and six stars, not five variables."
+    ],
+    "misconception": "Using k bars instead of k &minus; 1. Bars cut a row into k boxes only when there are exactly k &minus; 1 of them.",
+    "faster": "Memorise the shape: number of variables minus one is the lower argument of the binomial coefficient.",
+    "takeaway": "Stars and bars: <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code> for non-negative solutions, and never forget the &minus; 1 on the bars."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A non-negative solution of <code class=\"mm\">&Sigma; x&#7522; = n</code> in k variables is a distribution of n identical stars into k distinct boxes separated by k &minus; 1 identical bars, so the count is <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here n = 6 stars and k = 5 variables, so there are k &minus; 1 = 4 bars.</li><li>The row holds 6 + 4 = 10 symbols in all.</li><li>Choosing which 4 of the 10 positions hold bars fixes the solution: <code class=\"mm\">C(10, 4)</code>.</li><li><code class=\"mm\">C(10,4) = 10&middot;9&middot;8&middot;7/24 = 210</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 210.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 252 = <code class=\"mm\">C(10,5)</code> uses five bars, which would separate six boxes rather than five.</li><li>(B) 126 = <code class=\"mm\">C(9,4)</code> works with nine symbols, as if there were five stars instead of six.</li><li>(D) 84 = <code class=\"mm\">C(9,3)</code> is the answer for four variables and six stars, not five variables.</li></ul><p class=\"row\"><b>Common misconception.</b> Using k bars instead of k &minus; 1. Bars cut a row into k boxes only when there are exactly k &minus; 1 of them.</p><p class=\"row\"><b>Faster method.</b> Memorise the shape: number of variables minus one is the lower argument of the binomial coefficient.</p><p class=\"row\"><b>Takeaway.</b> Stars and bars: <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code> for non-negative solutions, and never forget the &minus; 1 on the bars.</p>"
+  },
+  {
+   "id": "DM-CB7-Q28",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What is the coefficient of <code class=\"mm\">x&sup3;</code> in the expansion of <code class=\"mm\">(1 + x)&#8313;</code>?",
+   "question_html": "<p class=\"qtext\">What is the coefficient of <code class=\"mm\">x&sup3;</code> in the expansion of <code class=\"mm\">(1 + x)&#8313;</code>?</p>",
+   "options": [
+    "126",
+    "36",
+    "9",
+    "84"
+   ],
+   "options_html": [
+    "126",
+    "36",
+    "9",
+    "84"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "marks": 1,
+   "solution": {
+    "concept": "The binomial theorem gives <code class=\"mm\">(1+x)&#8319; = &Sigma;<sub>k</sub> C(n,k) x&#7504;</code>, so the coefficient of <code class=\"mm\">x&#7504;</code> is the number of ways of choosing k of the n factors to supply an x.",
+    "steps": [
+     "Here n = 9 and the exponent asked for is k = 3.",
+     "The coefficient is <code class=\"mm\">C(9,3)</code>.",
+     "<code class=\"mm\">C(9,3) = 9&middot;8&middot;7/6 = 504/6 = 84</code>.",
+     "Cross-check with the symmetry <code class=\"mm\">C(9,3) = C(9,6) = 84</code>."
+    ],
+    "final": "Option (D) &mdash; 84.",
+    "whywrong": [
+     "(A) 126 = <code class=\"mm\">C(9,4)</code> reads the exponent off as n &minus; k.",
+     "(B) 36 = <code class=\"mm\">C(9,2)</code> is the coefficient of <code class=\"mm\">x&sup2;</code>, one exponent too low.",
+     "(C) 9 is the value of n, not a binomial coefficient."
+    ],
+    "misconception": "Taking the largest or middle coefficient, or using <code class=\"mm\">C(n, n&minus;k)</code> with the wrong k. Read k straight off the exponent.",
+    "faster": "Coefficient of <code class=\"mm\">x&#7504;</code> in <code class=\"mm\">(1+x)&#8319;</code> is always <code class=\"mm\">C(n,k)</code>; substitute and evaluate.",
+    "takeaway": "Coefficients of <code class=\"mm\">(1+x)&#8319;</code> are the binomial coefficients in increasing order of exponent."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The binomial theorem gives <code class=\"mm\">(1+x)&#8319; = &Sigma;<sub>k</sub> C(n,k) x&#7504;</code>, so the coefficient of <code class=\"mm\">x&#7504;</code> is the number of ways of choosing k of the n factors to supply an x.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here n = 9 and the exponent asked for is k = 3.</li><li>The coefficient is <code class=\"mm\">C(9,3)</code>.</li><li><code class=\"mm\">C(9,3) = 9&middot;8&middot;7/6 = 504/6 = 84</code>.</li><li>Cross-check with the symmetry <code class=\"mm\">C(9,3) = C(9,6) = 84</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; 84.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 126 = <code class=\"mm\">C(9,4)</code> reads the exponent off as n &minus; k.</li><li>(B) 36 = <code class=\"mm\">C(9,2)</code> is the coefficient of <code class=\"mm\">x&sup2;</code>, one exponent too low.</li><li>(C) 9 is the value of n, not a binomial coefficient.</li></ul><p class=\"row\"><b>Common misconception.</b> Taking the largest or middle coefficient, or using <code class=\"mm\">C(n, n&minus;k)</code> with the wrong k. Read k straight off the exponent.</p><p class=\"row\"><b>Faster method.</b> Coefficient of <code class=\"mm\">x&#7504;</code> in <code class=\"mm\">(1+x)&#8319;</code> is always <code class=\"mm\">C(n,k)</code>; substitute and evaluate.</p><p class=\"row\"><b>Takeaway.</b> Coefficients of <code class=\"mm\">(1+x)&#8319;</code> are the binomial coefficients in increasing order of exponent.</p>"
+  },
+  {
+   "id": "DM-CB7-Q29",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In a class of 40 students, 25 like tea, 20 like coffee and 10 like both. How many students like neither drink?",
+   "question_html": "<p class=\"qtext\">In a class of 40 students, 25 like tea, 20 like coffee and 10 like both. How many students like neither drink?</p>",
+   "options": [
+    "15",
+    "10",
+    "5",
+    "25"
+   ],
+   "options_html": [
+    "15",
+    "10",
+    "5",
+    "25"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "Two-set inclusion-exclusion: <code class=\"mm\">|T &cup; C| = |T| + |C| &minus; |T &cap; C|</code>. The union is the set of students who like at least one drink, so the complement inside the class is the 'neither' count.",
+    "steps": [
+     "Add the two preferences: 25 + 20 = 45.",
+     "The 10 students who like both were counted twice, so subtract them once: <code class=\"mm\">|T &cup; C| = 45 &minus; 10 = 35</code>.",
+     "The class has 40 students, so the number outside the union is 40 &minus; 35 = 5."
+    ],
+    "final": "Option (C) &mdash; 5.",
+    "whywrong": [
+     "(A) 15 = 40 &minus; 25 counts only the students who do not like tea and ignores coffee entirely.",
+     "(B) 10 is the size of the intersection, the number who like both, not the number who like neither.",
+     "(D) 25 is the size of the tea set."
+    ],
+    "misconception": "Adding the two groups and stopping there, which reports 45 people in a class of 40 and hides the double count.",
+    "faster": "Neither = total &minus; (|T| + |C| &minus; |T &cap; C|) in one line.",
+    "takeaway": "The complement of a union is the 'neither' set: subtract the union from the universe, never from a single set."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two-set inclusion-exclusion: <code class=\"mm\">|T &cup; C| = |T| + |C| &minus; |T &cap; C|</code>. The union is the set of students who like at least one drink, so the complement inside the class is the 'neither' count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Add the two preferences: 25 + 20 = 45.</li><li>The 10 students who like both were counted twice, so subtract them once: <code class=\"mm\">|T &cup; C| = 45 &minus; 10 = 35</code>.</li><li>The class has 40 students, so the number outside the union is 40 &minus; 35 = 5.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 5.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 15 = 40 &minus; 25 counts only the students who do not like tea and ignores coffee entirely.</li><li>(B) 10 is the size of the intersection, the number who like both, not the number who like neither.</li><li>(D) 25 is the size of the tea set.</li></ul><p class=\"row\"><b>Common misconception.</b> Adding the two groups and stopping there, which reports 45 people in a class of 40 and hides the double count.</p><p class=\"row\"><b>Faster method.</b> Neither = total &minus; (|T| + |C| &minus; |T &cap; C|) in one line.</p><p class=\"row\"><b>Takeaway.</b> The complement of a union is the 'neither' set: subtract the union from the universe, never from a single set.</p>"
+  },
+  {
+   "id": "DM-CB7-Q30",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A simple graph has 10 vertices and 15 edges. What is the sum of the degrees of all its vertices?",
+   "question_html": "<p class=\"qtext\">A simple graph has 10 vertices and 15 edges. What is the sum of the degrees of all its vertices?</p>",
+   "options": [
+    "15",
+    "25",
+    "30",
+    "150"
+   ],
+   "options_html": [
+    "15",
+    "25",
+    "30",
+    "150"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "Handshaking lemma: every edge contributes exactly one to the degree of each of its two endpoints, so summing degrees over all vertices counts every edge twice.",
+    "steps": [
+     "Each of the 15 edges has two endpoints.",
+     "Counting endpoint incidences gives 2 &times; 15 = 30.",
+     "That total is precisely <code class=\"mm\">&Sigma;<sub>v</sub> deg(v)</code>, because the degree of a vertex is the number of edges incident with it."
+    ],
+    "final": "Option (C) &mdash; 30.",
+    "whywrong": [
+     "(A) 15 is the number of edges, which is half the degree sum.",
+     "(B) 25 has no combinatorial meaning here; it comes from subtracting rather than doubling.",
+     "(D) 150 multiplies vertices by edges, which is not a count of incidences."
+    ],
+    "misconception": "Reporting the number of edges as the degree sum. The factor 2 is the whole content of the lemma.",
+    "faster": "<code class=\"mm\">&Sigma; deg(v) = 2|E|</code> &mdash; read the answer off the edge count.",
+    "takeaway": "The degree sum is always even, and it equals twice the edge count in any undirected graph."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Handshaking lemma: every edge contributes exactly one to the degree of each of its two endpoints, so summing degrees over all vertices counts every edge twice.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the 15 edges has two endpoints.</li><li>Counting endpoint incidences gives 2 &times; 15 = 30.</li><li>That total is precisely <code class=\"mm\">&Sigma;<sub>v</sub> deg(v)</code>, because the degree of a vertex is the number of edges incident with it.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 30.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 15 is the number of edges, which is half the degree sum.</li><li>(B) 25 has no combinatorial meaning here; it comes from subtracting rather than doubling.</li><li>(D) 150 multiplies vertices by edges, which is not a count of incidences.</li></ul><p class=\"row\"><b>Common misconception.</b> Reporting the number of edges as the degree sum. The factor 2 is the whole content of the lemma.</p><p class=\"row\"><b>Faster method.</b> <code class=\"mm\">&Sigma; deg(v) = 2|E|</code> &mdash; read the answer off the edge count.</p><p class=\"row\"><b>Takeaway.</b> The degree sum is always even, and it equals twice the edge count in any undirected graph.</p>"
+  },
+  {
+   "id": "DM-CB7-Q31",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A club must choose a president and a secretary from its 10 members, and no member may hold both posts. In how many ways can this be done?",
+   "question_html": "<p class=\"qtext\">A club must choose a president and a secretary from its 10 members, and no member may hold both posts. In how many ways can this be done?</p>",
+   "options": [
+    "100",
+    "45",
+    "90",
+    "20"
+   ],
+   "options_html": [
+    "100",
+    "45",
+    "90",
+    "20"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "The two posts are distinguishable, so the selection is an ordered pair of distinct members: an injection from a 2-element post set into the 10 members.",
+    "steps": [
+     "The president can be any of the 10 members.",
+     "Once the president is fixed, the secretary must be one of the remaining 9.",
+     "Multiply the independent choices: 10 &times; 9 = 90, which is <code class=\"mm\">P(10,2)</code>."
+    ],
+    "final": "Option (C) &mdash; 90.",
+    "whywrong": [
+     "(A) 100 = 10 &times; 10 allows the same member to take both posts.",
+     "(B) 45 = <code class=\"mm\">C(10,2)</code> treats the two posts as interchangeable and so halves the count.",
+     "(D) 20 = 2 &times; 10 forgets that the second post has only nine candidates left."
+    ],
+    "misconception": "Using a combination because 'a pair of people is chosen'. The pair (A as president, B as secretary) differs from (B as president, A as secretary), so order matters.",
+    "faster": "Ask whether swapping the two selected people produces a different outcome. If yes, use a permutation.",
+    "takeaway": "Distinct posts mean ordered selection: <code class=\"mm\">P(n,2) = n(n&minus;1)</code>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The two posts are distinguishable, so the selection is an ordered pair of distinct members: an injection from a 2-element post set into the 10 members.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The president can be any of the 10 members.</li><li>Once the president is fixed, the secretary must be one of the remaining 9.</li><li>Multiply the independent choices: 10 &times; 9 = 90, which is <code class=\"mm\">P(10,2)</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 90.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 100 = 10 &times; 10 allows the same member to take both posts.</li><li>(B) 45 = <code class=\"mm\">C(10,2)</code> treats the two posts as interchangeable and so halves the count.</li><li>(D) 20 = 2 &times; 10 forgets that the second post has only nine candidates left.</li></ul><p class=\"row\"><b>Common misconception.</b> Using a combination because 'a pair of people is chosen'. The pair (A as president, B as secretary) differs from (B as president, A as secretary), so order matters.</p><p class=\"row\"><b>Faster method.</b> Ask whether swapping the two selected people produces a different outcome. If yes, use a permutation.</p><p class=\"row\"><b>Takeaway.</b> Distinct posts mean ordered selection: <code class=\"mm\">P(n,2) = n(n&minus;1)</code>.</p>"
+  },
+  {
+   "id": "DM-CB7-Q32",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Seven identical sweets are to be distributed among three children so that every child gets at least one. In how many ways can this be done?",
+   "question_html": "<p class=\"qtext\">Seven identical sweets are to be distributed among three children so that every child gets at least one. In how many ways can this be done?</p>",
+   "options": [
+    "21",
+    "15",
+    "28",
+    "36"
+   ],
+   "options_html": [
+    "21",
+    "15",
+    "28",
+    "36"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "A positive-solution problem becomes a non-negative one by giving every variable one unit up front: put <code class=\"mm\">y&#7522; = x&#7522; &minus; 1 &ge; 0</code>, which removes k from the right-hand side.",
+    "steps": [
+     "Give one sweet to each of the three children: 3 sweets used, 4 left.",
+     "Distribute the remaining 4 identical sweets among the 3 children with no restriction: <code class=\"mm\">C(4 + 3 &minus; 1, 3 &minus; 1) = C(6,2)</code>.",
+     "<code class=\"mm\">C(6,2) = 6&middot;5/2 = 15</code>.",
+     "Every distribution of the remainder gives exactly one positive distribution, and vice versa, so the counts agree."
+    ],
+    "final": "Option (B) &mdash; 15.",
+    "whywrong": [
+     "(A) 21 = <code class=\"mm\">C(7,2)</code> treats all seven sweets as freely distributable and so allows an empty-handed child.",
+     "(C) 28 = <code class=\"mm\">C(8,2)</code> is the non-negative count for six sweets among three children.",
+     "(D) 36 = <code class=\"mm\">C(9,2)</code> is the non-negative count for seven sweets among three children &mdash; the unrestricted answer."
+    ],
+    "misconception": "Applying the non-negative formula to a requirement that every child gets at least one. A positive lower bound must be paid in advance.",
+    "faster": "For every <code class=\"mm\">x&#7522; &ge; 1</code>, the answer is <code class=\"mm\">C(n &minus; 1, k &minus; 1)</code>; here <code class=\"mm\">C(6,2)</code>.",
+    "takeaway": "Lower bounds are removed by substitution, never by adjusting the binomial coefficient at the end."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A positive-solution problem becomes a non-negative one by giving every variable one unit up front: put <code class=\"mm\">y&#7522; = x&#7522; &minus; 1 &ge; 0</code>, which removes k from the right-hand side.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Give one sweet to each of the three children: 3 sweets used, 4 left.</li><li>Distribute the remaining 4 identical sweets among the 3 children with no restriction: <code class=\"mm\">C(4 + 3 &minus; 1, 3 &minus; 1) = C(6,2)</code>.</li><li><code class=\"mm\">C(6,2) = 6&middot;5/2 = 15</code>.</li><li>Every distribution of the remainder gives exactly one positive distribution, and vice versa, so the counts agree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 15.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 21 = <code class=\"mm\">C(7,2)</code> treats all seven sweets as freely distributable and so allows an empty-handed child.</li><li>(C) 28 = <code class=\"mm\">C(8,2)</code> is the non-negative count for six sweets among three children.</li><li>(D) 36 = <code class=\"mm\">C(9,2)</code> is the non-negative count for seven sweets among three children &mdash; the unrestricted answer.</li></ul><p class=\"row\"><b>Common misconception.</b> Applying the non-negative formula to a requirement that every child gets at least one. A positive lower bound must be paid in advance.</p><p class=\"row\"><b>Faster method.</b> For every <code class=\"mm\">x&#7522; &ge; 1</code>, the answer is <code class=\"mm\">C(n &minus; 1, k &minus; 1)</code>; here <code class=\"mm\">C(6,2)</code>.</p><p class=\"row\"><b>Takeaway.</b> Lower bounds are removed by substitution, never by adjusting the binomial coefficient at the end.</p>"
+  },
+  {
+   "id": "DM-CB7-Q33",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What is the coefficient of <code class=\"mm\">x&sup2;y&sup3;</code> in the expansion of <code class=\"mm\">(x + y)&#8309;</code>? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">What is the coefficient of <code class=\"mm\">x&sup2;y&sup3;</code> in the expansion of <code class=\"mm\">(x + y)&#8309;</code>? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    10
+   ],
+   "answer_display": "10",
+   "marks": 2,
+   "solution": {
+    "concept": "In <code class=\"mm\">(x+y)&#8319;</code> the term with exponent k on y and n &minus; k on x carries the coefficient <code class=\"mm\">C(n,k)</code>, the number of ways of choosing which factors contribute a y.",
+    "steps": [
+     "The exponents must add to the power: 2 + 3 = 5, which matches the exponent of the binomial.",
+     "So the required coefficient is <code class=\"mm\">C(5,3)</code>, equivalently <code class=\"mm\">C(5,2)</code>.",
+     "<code class=\"mm\">C(5,3) = 5&middot;4&middot;3/6 = 10</code>."
+    ],
+    "final": "10.",
+    "misconception": "Using the product of the exponents, 2 &times; 3 = 6, or multiplying the coefficients of the two separate binomial expansions.",
+    "faster": "Check that the exponents sum to n, then read off a single binomial coefficient.",
+    "takeaway": "For two variables the multinomial coefficient collapses to a binomial coefficient <code class=\"mm\">C(n, k)</code>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In <code class=\"mm\">(x+y)&#8319;</code> the term with exponent k on y and n &minus; k on x carries the coefficient <code class=\"mm\">C(n,k)</code>, the number of ways of choosing which factors contribute a y.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The exponents must add to the power: 2 + 3 = 5, which matches the exponent of the binomial.</li><li>So the required coefficient is <code class=\"mm\">C(5,3)</code>, equivalently <code class=\"mm\">C(5,2)</code>.</li><li><code class=\"mm\">C(5,3) = 5&middot;4&middot;3/6 = 10</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 10.</span></p><p class=\"row\"><b>Common misconception.</b> Using the product of the exponents, 2 &times; 3 = 6, or multiplying the coefficients of the two separate binomial expansions.</p><p class=\"row\"><b>Faster method.</b> Check that the exponents sum to n, then read off a single binomial coefficient.</p><p class=\"row\"><b>Takeaway.</b> For two variables the multinomial coefficient collapses to a binomial coefficient <code class=\"mm\">C(n, k)</code>.</p>"
+  },
+  {
+   "id": "DM-CB7-Q34",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Let <code class=\"mm\">|A| = 12</code>, <code class=\"mm\">|B| = 18</code> and <code class=\"mm\">|A &cap; B| = 5</code>. What is <code class=\"mm\">|A &cup; B|</code>?",
+   "question_html": "<p class=\"qtext\">Let <code class=\"mm\">|A| = 12</code>, <code class=\"mm\">|B| = 18</code> and <code class=\"mm\">|A &cap; B| = 5</code>. What is <code class=\"mm\">|A &cup; B|</code>?</p>",
+   "options": [
+    "30",
+    "35",
+    "6",
+    "25"
+   ],
+   "options_html": [
+    "30",
+    "35",
+    "6",
+    "25"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "marks": 1,
+   "solution": {
+    "concept": "Two-set inclusion-exclusion: the sum <code class=\"mm\">|A| + |B|</code> counts every element of the intersection twice, so it must be corrected once.",
+    "steps": [
+     "<code class=\"mm\">|A| + |B| = 12 + 18 = 30</code>.",
+     "The 5 elements of <code class=\"mm\">A &cap; B</code> were each counted twice, so subtract 5 once.",
+     "<code class=\"mm\">|A &cup; B| = 30 &minus; 5 = 25</code>.",
+     "Sanity check: the union is at least the larger set, 18, and at most the sum, 30; 25 lies inside that window."
+    ],
+    "final": "Option (D) &mdash; 25.",
+    "whywrong": [
+     "(A) 30 adds the sizes and never removes the double-counted intersection.",
+     "(B) 35 adds the intersection instead of subtracting it, which double counts it a third time.",
+     "(C) 6 = 18 &minus; 12 is the difference of the sizes, which is not a union count."
+    ],
+    "misconception": "Subtracting the intersection twice, or adding it. It enters exactly once, with a minus sign.",
+    "faster": "<code class=\"mm\">|A&cup;B| = |A| + |B| &minus; |A&cap;B|</code>; substitute three numbers.",
+    "takeaway": "The union is bounded below by the larger set and above by the sum, and the intersection is what moves you inside that window."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two-set inclusion-exclusion: the sum <code class=\"mm\">|A| + |B|</code> counts every element of the intersection twice, so it must be corrected once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">|A| + |B| = 12 + 18 = 30</code>.</li><li>The 5 elements of <code class=\"mm\">A &cap; B</code> were each counted twice, so subtract 5 once.</li><li><code class=\"mm\">|A &cup; B| = 30 &minus; 5 = 25</code>.</li><li>Sanity check: the union is at least the larger set, 18, and at most the sum, 30; 25 lies inside that window.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; 25.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 30 adds the sizes and never removes the double-counted intersection.</li><li>(B) 35 adds the intersection instead of subtracting it, which double counts it a third time.</li><li>(C) 6 = 18 &minus; 12 is the difference of the sizes, which is not a union count.</li></ul><p class=\"row\"><b>Common misconception.</b> Subtracting the intersection twice, or adding it. It enters exactly once, with a minus sign.</p><p class=\"row\"><b>Faster method.</b> <code class=\"mm\">|A&cup;B| = |A| + |B| &minus; |A&cap;B|</code>; substitute three numbers.</p><p class=\"row\"><b>Takeaway.</b> The union is bounded below by the larger set and above by the sum, and the intersection is what moves you inside that window.</p>"
+  },
+  {
+   "id": "DM-CB7-Q35",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Let <code class=\"mm\">K<sub>4,6</sub></code> be the complete bipartite graph whose two parts have 4 and 6 vertices, with every vertex of one part joined to every vertex of the other. What is the sum of the degrees of all ten vertices? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Let <code class=\"mm\">K<sub>4,6</sub></code> be the complete bipartite graph whose two parts have 4 and 6 vertices, with every vertex of one part joined to every vertex of the other. What is the sum of the degrees of all ten vertices? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    48
+   ],
+   "answer_display": "48",
+   "marks": 2,
+   "solution": {
+    "concept": "In a complete bipartite graph every vertex of one part is adjacent to all vertices of the other part, so the two degrees are fixed by the part sizes; the handshaking lemma then gives the degree sum as twice the edge count.",
+    "steps": [
+     "Each of the 4 vertices in the small part has degree 6, contributing 4 &times; 6 = 24.",
+     "Each of the 6 vertices in the large part has degree 4, contributing 6 &times; 4 = 24.",
+     "Total degree sum = 24 + 24 = 48, so the graph has 24 edges."
+    ],
+    "final": "48.",
+    "misconception": "Adding 4 + 6 = 10, the number of vertices, or counting 24 edges and reporting 24 as the degree sum.",
+    "faster": "A complete bipartite graph has <code class=\"mm\">mn</code> edges, so the degree sum is <code class=\"mm\">2mn = 2&middot;4&middot;6</code>.",
+    "takeaway": "Count incidences on both sides of a bipartition; both sides must give the same total, which is a check on your answer."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a complete bipartite graph every vertex of one part is adjacent to all vertices of the other part, so the two degrees are fixed by the part sizes; the handshaking lemma then gives the degree sum as twice the edge count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the 4 vertices in the small part has degree 6, contributing 4 &times; 6 = 24.</li><li>Each of the 6 vertices in the large part has degree 4, contributing 6 &times; 4 = 24.</li><li>Total degree sum = 24 + 24 = 48, so the graph has 24 edges.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 48.</span></p><p class=\"row\"><b>Common misconception.</b> Adding 4 + 6 = 10, the number of vertices, or counting 24 edges and reporting 24 as the degree sum.</p><p class=\"row\"><b>Faster method.</b> A complete bipartite graph has <code class=\"mm\">mn</code> edges, so the degree sum is <code class=\"mm\">2mn = 2&middot;4&middot;6</code>.</p><p class=\"row\"><b>Takeaway.</b> Count incidences on both sides of a bipartition; both sides must give the same total, which is a check on your answer.</p>"
+  },
+  {
+   "id": "DM-CB7-Q36",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many distinct arrangements are there of the letters of the word <code class=\"mm\">EXAMINATION</code>? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">How many distinct arrangements are there of the letters of the word <code class=\"mm\">EXAMINATION</code>? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    4989600
+   ],
+   "answer_display": "4989600",
+   "marks": 2,
+   "solution": {
+    "concept": "Arrangements of a word are multiset permutations: divide the factorial of the length by the factorial of every letter's multiplicity.",
+    "steps": [
+     "EXAMINATION has 11 letters: E, X, M, T, O appear once each; A appears twice (positions 3 and 7); I appears twice; N appears twice.",
+     "Start from <code class=\"mm\">11! = 39916800</code>.",
+     "Divide by <code class=\"mm\">2!</code> for A, <code class=\"mm\">2!</code> for I and <code class=\"mm\">2!</code> for N, that is by 8.",
+     "<code class=\"mm\">39916800/8 = 4989600</code>.",
+     "Check the size: three repeated letters each halve the count once, so the answer is <code class=\"mm\">11!/8</code>."
+    ],
+    "final": "4989600.",
+    "misconception": "Dividing by <code class=\"mm\">3!</code> because three letters repeat, instead of by <code class=\"mm\">2!&middot;2!&middot;2! = 8</code>. A letter of multiplicity 2 contributes a factor 2, not 3.",
+    "faster": "Count multiplicities first (2, 2, 2, 1, 1, 1, 1, 1) and write <code class=\"mm\">11!/8</code> immediately.",
+    "takeaway": "The divisor is a product of factorials of multiplicities, one factor per repeated letter."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Arrangements of a word are multiset permutations: divide the factorial of the length by the factorial of every letter's multiplicity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>EXAMINATION has 11 letters: E, X, M, T, O appear once each; A appears twice (positions 3 and 7); I appears twice; N appears twice.</li><li>Start from <code class=\"mm\">11! = 39916800</code>.</li><li>Divide by <code class=\"mm\">2!</code> for A, <code class=\"mm\">2!</code> for I and <code class=\"mm\">2!</code> for N, that is by 8.</li><li><code class=\"mm\">39916800/8 = 4989600</code>.</li><li>Check the size: three repeated letters each halve the count once, so the answer is <code class=\"mm\">11!/8</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4989600.</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by <code class=\"mm\">3!</code> because three letters repeat, instead of by <code class=\"mm\">2!&middot;2!&middot;2! = 8</code>. A letter of multiplicity 2 contributes a factor 2, not 3.</p><p class=\"row\"><b>Faster method.</b> Count multiplicities first (2, 2, 2, 1, 1, 1, 1, 1) and write <code class=\"mm\">11!/8</code> immediately.</p><p class=\"row\"><b>Takeaway.</b> The divisor is a product of factorials of multiplicities, one factor per repeated letter.</p>"
+  },
+  {
+   "id": "DM-CB7-Q37",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 12</code> have with <code class=\"mm\">x&#8321; &ge; 2</code>, <code class=\"mm\">x&#8322; &ge; 2</code> and <code class=\"mm\">x&#8323; &ge; 2</code>? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">How many solutions in non-negative integers does <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; + x&#8324; = 12</code> have with <code class=\"mm\">x&#8321; &ge; 2</code>, <code class=\"mm\">x&#8322; &ge; 2</code> and <code class=\"mm\">x&#8323; &ge; 2</code>? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    84
+   ],
+   "answer_display": "84",
+   "marks": 2,
+   "solution": {
+    "concept": "Each variable with a lower bound is shifted by that bound; the total of all the shifts is subtracted from the right-hand side once, and the shifted problem is an ordinary stars-and-bars count.",
+    "steps": [
+     "Put <code class=\"mm\">y&#8321; = x&#8321; &minus; 2</code>, <code class=\"mm\">y&#8322; = x&#8322; &minus; 2</code>, <code class=\"mm\">y&#8323; = x&#8323; &minus; 2</code> and <code class=\"mm\">y&#8324; = x&#8324;</code>, all non-negative.",
+     "The equation becomes <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 12 &minus; 6 = 6</code>.",
+     "Stars and bars with 4 variables: <code class=\"mm\">C(6 + 3, 3) = C(9,3)</code>.",
+     "<code class=\"mm\">C(9,3) = 9&middot;8&middot;7/6 = 84</code>."
+    ],
+    "final": "84.",
+    "misconception": "Subtracting 2 from only the first variable, or subtracting 2 four times from a sum that only has three bounded variables; either way the right-hand side is wrong.",
+    "faster": "Sum the lower bounds, subtract once, then apply <code class=\"mm\">C(n&prime; + k &minus; 1, k &minus; 1)</code>.",
+    "takeaway": "Shift every bounded variable by its own bound and subtract the total of the bounds, not a per-variable amount."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each variable with a lower bound is shifted by that bound; the total of all the shifts is subtracted from the right-hand side once, and the shifted problem is an ordinary stars-and-bars count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Put <code class=\"mm\">y&#8321; = x&#8321; &minus; 2</code>, <code class=\"mm\">y&#8322; = x&#8322; &minus; 2</code>, <code class=\"mm\">y&#8323; = x&#8323; &minus; 2</code> and <code class=\"mm\">y&#8324; = x&#8324;</code>, all non-negative.</li><li>The equation becomes <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; + y&#8324; = 12 &minus; 6 = 6</code>.</li><li>Stars and bars with 4 variables: <code class=\"mm\">C(6 + 3, 3) = C(9,3)</code>.</li><li><code class=\"mm\">C(9,3) = 9&middot;8&middot;7/6 = 84</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 84.</span></p><p class=\"row\"><b>Common misconception.</b> Subtracting 2 from only the first variable, or subtracting 2 four times from a sum that only has three bounded variables; either way the right-hand side is wrong.</p><p class=\"row\"><b>Faster method.</b> Sum the lower bounds, subtract once, then apply <code class=\"mm\">C(n&prime; + k &minus; 1, k &minus; 1)</code>.</p><p class=\"row\"><b>Takeaway.</b> Shift every bounded variable by its own bound and subtract the total of the bounds, not a per-variable amount.</p>"
+  },
+  {
+   "id": "DM-CB7-Q38",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "After like terms are collected, how many terms does the expansion of <code class=\"mm\">(a + b + c + d)&#8309;</code> contain?",
+   "question_html": "<p class=\"qtext\">After like terms are collected, how many terms does the expansion of <code class=\"mm\">(a + b + c + d)&#8309;</code> contain?</p>",
+   "options": [
+    "70",
+    "56",
+    "35",
+    "126"
+   ],
+   "options_html": [
+    "70",
+    "56",
+    "35",
+    "126"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Each collected term of <code class=\"mm\">(x&#8321; + &hellip; + x&#8342;)&#8319;</code> corresponds to one solution in non-negative integers of <code class=\"mm\">p&#8321; + &hellip; + p&#8342; = n</code>, so the number of terms is a stars-and-bars count.",
+    "steps": [
+     "A term is determined by the four exponents <code class=\"mm\">p&#8321;, p&#8322;, p&#8323;, p&#8324;</code>, which must sum to 5.",
+     "Number of non-negative solutions: <code class=\"mm\">C(5 + 4 &minus; 1, 4 &minus; 1) = C(8,3)</code>.",
+     "<code class=\"mm\">C(8,3) = 8&middot;7&middot;6/6 = 56</code>.",
+     "Small check: <code class=\"mm\">(a+b)&#8309;</code> has 6 terms and <code class=\"mm\">C(5+1,1) = 6</code>, so the pattern is consistent."
+    ],
+    "final": "Option (B) &mdash; 56.",
+    "whywrong": [
+     "(A) 70 = <code class=\"mm\">C(8,4)</code> uses four bars for four variables, which would be five boxes.",
+     "(C) 35 = <code class=\"mm\">C(7,3)</code> is the count for four variables raised to the power 4.",
+     "(D) 126 = <code class=\"mm\">C(9,4)</code> is the count for five variables raised to the power 5."
+    ],
+    "misconception": "Counting the terms before like terms are collected, which gives <code class=\"mm\">4&#8309; = 1024</code>, or using the two-variable rule n + 1.",
+    "faster": "Terms of <code class=\"mm\">(k variables)&#8319;</code> = <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code>.",
+    "takeaway": "The number of collected terms is a stars-and-bars count on the exponents, not a power of the number of variables."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each collected term of <code class=\"mm\">(x&#8321; + &hellip; + x&#8342;)&#8319;</code> corresponds to one solution in non-negative integers of <code class=\"mm\">p&#8321; + &hellip; + p&#8342; = n</code>, so the number of terms is a stars-and-bars count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A term is determined by the four exponents <code class=\"mm\">p&#8321;, p&#8322;, p&#8323;, p&#8324;</code>, which must sum to 5.</li><li>Number of non-negative solutions: <code class=\"mm\">C(5 + 4 &minus; 1, 4 &minus; 1) = C(8,3)</code>.</li><li><code class=\"mm\">C(8,3) = 8&middot;7&middot;6/6 = 56</code>.</li><li>Small check: <code class=\"mm\">(a+b)&#8309;</code> has 6 terms and <code class=\"mm\">C(5+1,1) = 6</code>, so the pattern is consistent.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 56.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 70 = <code class=\"mm\">C(8,4)</code> uses four bars for four variables, which would be five boxes.</li><li>(C) 35 = <code class=\"mm\">C(7,3)</code> is the count for four variables raised to the power 4.</li><li>(D) 126 = <code class=\"mm\">C(9,4)</code> is the count for five variables raised to the power 5.</li></ul><p class=\"row\"><b>Common misconception.</b> Counting the terms before like terms are collected, which gives <code class=\"mm\">4&#8309; = 1024</code>, or using the two-variable rule n + 1.</p><p class=\"row\"><b>Faster method.</b> Terms of <code class=\"mm\">(k variables)&#8319;</code> = <code class=\"mm\">C(n + k &minus; 1, k &minus; 1)</code>.</p><p class=\"row\"><b>Takeaway.</b> The number of collected terms is a stars-and-bars count on the exponents, not a power of the number of variables.</p>"
+  },
+  {
+   "id": "DM-CB7-Q39",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "GateOverflow-inspired",
+   "source": "GATE_PYQ_VARIATION",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many onto (surjective) functions are there from a set of 6 elements to a set of 4 elements? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">How many onto (surjective) functions are there from a set of 6 elements to a set of 4 elements? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    1560
+   ],
+   "answer_display": "1560",
+   "marks": 2,
+   "solution": {
+    "concept": "A function fails to be onto when it misses at least one target element, so surjections are counted by inclusion-exclusion over the four target elements: <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#7504; C(n,k)(n&minus;k)&#7504;</code>.",
+    "steps": [
+     "All functions from a 6-set to a 4-set: <code class=\"mm\">4&#8310; = 4096</code>.",
+     "Subtract those missing at least one target: choose the missed element in 4 ways, each leaving <code class=\"mm\">3&#8310; = 729</code> functions, giving 4 &times; 729 = 2916.",
+     "Add back those missing at least two targets, counted twice above: <code class=\"mm\">C(4,2) = 6</code> pairs, each leaving <code class=\"mm\">2&#8310; = 64</code> functions, giving 384.",
+     "Subtract those missing three targets: <code class=\"mm\">C(4,3) = 4</code> triples, each leaving <code class=\"mm\">1&#8310; = 1</code> function, giving 4.",
+     "<code class=\"mm\">4096 &minus; 2916 + 384 &minus; 4 = 1560</code>. The last term for k = 4 is zero because <code class=\"mm\">0&#8310; = 0</code>."
+    ],
+    "final": "1560.",
+    "misconception": "Stopping after the first subtraction, which gives 1180, or forgetting the add-back stage entirely. Truncating the alternating sum is the standard error.",
+    "faster": "Use the closed form and compute term by term: <code class=\"mm\">4&#8310; &minus; 4&middot;3&#8310; + 6&middot;2&#8310; &minus; 4&middot;1&#8310;</code>.",
+    "takeaway": "Onto functions = inclusion-exclusion over the codomain; the alternating sum must run all the way to k = n."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A function fails to be onto when it misses at least one target element, so surjections are counted by inclusion-exclusion over the four target elements: <code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> (&minus;1)&#7504; C(n,k)(n&minus;k)&#7504;</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>All functions from a 6-set to a 4-set: <code class=\"mm\">4&#8310; = 4096</code>.</li><li>Subtract those missing at least one target: choose the missed element in 4 ways, each leaving <code class=\"mm\">3&#8310; = 729</code> functions, giving 4 &times; 729 = 2916.</li><li>Add back those missing at least two targets, counted twice above: <code class=\"mm\">C(4,2) = 6</code> pairs, each leaving <code class=\"mm\">2&#8310; = 64</code> functions, giving 384.</li><li>Subtract those missing three targets: <code class=\"mm\">C(4,3) = 4</code> triples, each leaving <code class=\"mm\">1&#8310; = 1</code> function, giving 4.</li><li><code class=\"mm\">4096 &minus; 2916 + 384 &minus; 4 = 1560</code>. The last term for k = 4 is zero because <code class=\"mm\">0&#8310; = 0</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1560.</span></p><p class=\"row\"><b>Common misconception.</b> Stopping after the first subtraction, which gives 1180, or forgetting the add-back stage entirely. Truncating the alternating sum is the standard error.</p><p class=\"row\"><b>Faster method.</b> Use the closed form and compute term by term: <code class=\"mm\">4&#8310; &minus; 4&middot;3&#8310; + 6&middot;2&#8310; &minus; 4&middot;1&#8310;</code>.</p><p class=\"row\"><b>Takeaway.</b> Onto functions = inclusion-exclusion over the codomain; the alternating sum must run all the way to k = n.</p>"
+  },
+  {
+   "id": "DM-CB7-Q40",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In a school, 12 students each join exactly 2 clubs, and every club has exactly 3 members. How many clubs are there?",
+   "question_html": "<p class=\"qtext\">In a school, 12 students each join exactly 2 clubs, and every club has exactly 3 members. How many clubs are there?</p>",
+   "options": [
+    "6",
+    "24",
+    "8",
+    "18"
+   ],
+   "options_html": [
+    "6",
+    "24",
+    "8",
+    "18"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "Count the student-club incidences twice. Summed over students the total is (number of students) &times; (clubs per student); summed over clubs it is (number of clubs) &times; (members per club).",
+    "steps": [
+     "By students: 12 &times; 2 = 24 incidences.",
+     "By clubs: if there are c clubs with 3 members each, the same total is 3c.",
+     "Equate: 3c = 24, so c = 8.",
+     "Check: 8 clubs &times; 3 members = 24 memberships = 12 students &times; 2 clubs."
+    ],
+    "final": "Option (C) &mdash; 8.",
+    "whywrong": [
+     "(A) 6 = 12/2 divides by the clubs per student instead of by the club size.",
+     "(B) 24 is the number of incidences, not of clubs; it is the intermediate quantity, not the answer.",
+     "(D) 18 multiplies by the club size instead of dividing by it."
+    ],
+    "misconception": "Dividing the number of students by the number of clubs per student. The bridge between the two counts is the club size.",
+    "faster": "Write <code class=\"mm\">2n = 3c</code> from the two ways of counting incidences, then solve for the unknown.",
+    "takeaway": "Whenever a quantity can be counted by rows and by columns, equate the two totals: that single equation usually solves the problem."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Count the student-club incidences twice. Summed over students the total is (number of students) &times; (clubs per student); summed over clubs it is (number of clubs) &times; (members per club).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>By students: 12 &times; 2 = 24 incidences.</li><li>By clubs: if there are c clubs with 3 members each, the same total is 3c.</li><li>Equate: 3c = 24, so c = 8.</li><li>Check: 8 clubs &times; 3 members = 24 memberships = 12 students &times; 2 clubs.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 8.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 6 = 12/2 divides by the clubs per student instead of by the club size.</li><li>(B) 24 is the number of incidences, not of clubs; it is the intermediate quantity, not the answer.</li><li>(D) 18 multiplies by the club size instead of dividing by it.</li></ul><p class=\"row\"><b>Common misconception.</b> Dividing the number of students by the number of clubs per student. The bridge between the two counts is the club size.</p><p class=\"row\"><b>Faster method.</b> Write <code class=\"mm\">2n = 3c</code> from the two ways of counting incidences, then solve for the unknown.</p><p class=\"row\"><b>Takeaway.</b> Whenever a quantity can be counted by rows and by columns, equate the two totals: that single equation usually solves the problem.</p>"
+  },
+  {
+   "id": "DM-CB7-Q41",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Six people are to be seated in a row of six seats. In how many ways can they be seated if two particular people refuse to sit next to each other?",
+   "question_html": "<p class=\"qtext\">Six people are to be seated in a row of six seats. In how many ways can they be seated if two particular people refuse to sit next to each other?</p>",
+   "options": [
+    "240",
+    "480",
+    "600",
+    "720"
+   ],
+   "options_html": [
+    "240",
+    "480",
+    "600",
+    "720"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "A 'must not be adjacent' constraint is counted by complement: total arrangements minus the arrangements in which the two people are glued into a single block.",
+    "steps": [
+     "Total arrangements of six distinct people: <code class=\"mm\">6! = 720</code>.",
+     "Glue the two particular people into one block. The block plus the other four people is 5 objects, arranged in <code class=\"mm\">5! = 120</code> ways.",
+     "The two people can swap places inside the block in 2 ways, so the adjacent arrangements number 2 &times; 120 = 240.",
+     "Subtract: 720 &minus; 240 = 480."
+    ],
+    "final": "Option (B) &mdash; 480.",
+    "whywrong": [
+     "(A) 240 is the number of arrangements in which they DO sit together, the complement of what is asked.",
+     "(C) 600 = 720 &minus; 120 forgets the factor 2 for the internal order of the glued pair.",
+     "(D) 720 ignores the restriction altogether."
+    ],
+    "misconception": "Subtracting <code class=\"mm\">5!</code> instead of <code class=\"mm\">2&middot;5!</code>. A glued block has two internal orders.",
+    "faster": "<code class=\"mm\">n! &minus; 2&middot;(n&minus;1)!</code> for two named people in a row of n.",
+    "takeaway": "'Not adjacent' = total minus glued; always double the block count for the two internal orders."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A 'must not be adjacent' constraint is counted by complement: total arrangements minus the arrangements in which the two people are glued into a single block.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Total arrangements of six distinct people: <code class=\"mm\">6! = 720</code>.</li><li>Glue the two particular people into one block. The block plus the other four people is 5 objects, arranged in <code class=\"mm\">5! = 120</code> ways.</li><li>The two people can swap places inside the block in 2 ways, so the adjacent arrangements number 2 &times; 120 = 240.</li><li>Subtract: 720 &minus; 240 = 480.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 480.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 240 is the number of arrangements in which they DO sit together, the complement of what is asked.</li><li>(C) 600 = 720 &minus; 120 forgets the factor 2 for the internal order of the glued pair.</li><li>(D) 720 ignores the restriction altogether.</li></ul><p class=\"row\"><b>Common misconception.</b> Subtracting <code class=\"mm\">5!</code> instead of <code class=\"mm\">2&middot;5!</code>. A glued block has two internal orders.</p><p class=\"row\"><b>Faster method.</b> <code class=\"mm\">n! &minus; 2&middot;(n&minus;1)!</code> for two named people in a row of n.</p><p class=\"row\"><b>Takeaway.</b> 'Not adjacent' = total minus glued; always double the block count for the two internal orders.</p>"
+  },
+  {
+   "id": "DM-CB7-Q42",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "How many solutions in non-negative integers does <code class=\"mm\">x + y + z = 10</code> have with <code class=\"mm\">x &le; 4</code>?",
+   "question_html": "<p class=\"qtext\">How many solutions in non-negative integers does <code class=\"mm\">x + y + z = 10</code> have with <code class=\"mm\">x &le; 4</code>?</p>",
+   "options": [
+    "45",
+    "36",
+    "21",
+    "66"
+   ],
+   "options_html": [
+    "45",
+    "36",
+    "21",
+    "66"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "An upper bound cannot be removed by substitution the way a lower bound can; count the complement instead. Here the forbidden event is <code class=\"mm\">x &ge; 5</code>, and inclusion-exclusion subtracts it once.",
+    "steps": [
+     "Unrestricted non-negative solutions: <code class=\"mm\">C(10 + 2, 2) = C(12,2) = 66</code>.",
+     "Forbidden case <code class=\"mm\">x &ge; 5</code>: substitute <code class=\"mm\">x&prime; = x &minus; 5 &ge; 0</code>, giving <code class=\"mm\">x&prime; + y + z = 5</code>, that is <code class=\"mm\">C(7,2) = 21</code> solutions.",
+     "A single upper bound means no two variables can be simultaneously at least 5 when the sum is 10 in three variables with non-negative parts, so no add-back is needed.",
+     "Answer: 66 &minus; 21 = 45."
+    ],
+    "final": "Option (A) &mdash; 45.",
+    "whywrong": [
+     "(B) 36 = <code class=\"mm\">C(9,2)</code> is the unrestricted count for a sum of 7.",
+     "(C) 21 is the number of forbidden solutions, which must be subtracted from 66, not reported.",
+     "(D) 66 is the unrestricted count and ignores the bound on x."
+    ],
+    "misconception": "Trying to handle <code class=\"mm\">x &le; 4</code> with a substitution. Substitutions shift a variable upward; an upper bound has to be subtracted out.",
+    "faster": "<code class=\"mm\">C(n+k&minus;1, k&minus;1) &minus; C(n&minus;(B+1)+k&minus;1, k&minus;1)</code> for a single bound B.",
+    "takeaway": "Lower bounds are substituted away; upper bounds are counted by complement."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An upper bound cannot be removed by substitution the way a lower bound can; count the complement instead. Here the forbidden event is <code class=\"mm\">x &ge; 5</code>, and inclusion-exclusion subtracts it once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Unrestricted non-negative solutions: <code class=\"mm\">C(10 + 2, 2) = C(12,2) = 66</code>.</li><li>Forbidden case <code class=\"mm\">x &ge; 5</code>: substitute <code class=\"mm\">x&prime; = x &minus; 5 &ge; 0</code>, giving <code class=\"mm\">x&prime; + y + z = 5</code>, that is <code class=\"mm\">C(7,2) = 21</code> solutions.</li><li>A single upper bound means no two variables can be simultaneously at least 5 when the sum is 10 in three variables with non-negative parts, so no add-back is needed.</li><li>Answer: 66 &minus; 21 = 45.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; 45.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) 36 = <code class=\"mm\">C(9,2)</code> is the unrestricted count for a sum of 7.</li><li>(C) 21 is the number of forbidden solutions, which must be subtracted from 66, not reported.</li><li>(D) 66 is the unrestricted count and ignores the bound on x.</li></ul><p class=\"row\"><b>Common misconception.</b> Trying to handle <code class=\"mm\">x &le; 4</code> with a substitution. Substitutions shift a variable upward; an upper bound has to be subtracted out.</p><p class=\"row\"><b>Faster method.</b> <code class=\"mm\">C(n+k&minus;1, k&minus;1) &minus; C(n&minus;(B+1)+k&minus;1, k&minus;1)</code> for a single bound B.</p><p class=\"row\"><b>Takeaway.</b> Lower bounds are substituted away; upper bounds are counted by complement.</p>"
+  },
+  {
+   "id": "DM-CB7-Q43",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What is the coefficient of <code class=\"mm\">x&sup2;yz&sup3;</code> in the expansion of <code class=\"mm\">(x + y + z)&#8310;</code>?",
+   "question_html": "<p class=\"qtext\">What is the coefficient of <code class=\"mm\">x&sup2;yz&sup3;</code> in the expansion of <code class=\"mm\">(x + y + z)&#8310;</code>?</p>",
+   "options": [
+    "60",
+    "120",
+    "360",
+    "30"
+   ],
+   "options_html": [
+    "60",
+    "120",
+    "360",
+    "30"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution": {
+    "concept": "Multinomial theorem: the coefficient of <code class=\"mm\">x&#7504; y&#7511; z&#7512;</code> in <code class=\"mm\">(x+y+z)&#8319;</code> is <code class=\"mm\">n!/(p! q! r!)</code>, provided p + q + r = n.",
+    "steps": [
+     "The exponents are p = 2, q = 1, r = 3 and they sum to 6, matching the power.",
+     "The coefficient is <code class=\"mm\">6!/(2!&middot;1!&middot;3!)</code>.",
+     "<code class=\"mm\">6! = 720</code>, and <code class=\"mm\">2!&middot;1!&middot;3! = 2&middot;1&middot;6 = 12</code>.",
+     "<code class=\"mm\">720/12 = 60</code>.",
+     "Equivalently choose positions: <code class=\"mm\">C(6,2)&middot;C(4,1)&middot;C(3,3) = 15&middot;4&middot;1 = 60</code>."
+    ],
+    "final": "Option (A) &mdash; 60.",
+    "whywrong": [
+     "(B) 120 = <code class=\"mm\">6!/3!</code> divides only by the largest exponent factorial.",
+     "(C) 360 = <code class=\"mm\">6!/2!</code> divides only by the exponent factorial of x.",
+     "(D) 30 halves the correct value, which happens when one exponent is wrongly doubled."
+    ],
+    "misconception": "Dividing by only one of the exponent factorials, or by the number of variables instead of the product of their factorials.",
+    "faster": "Choose positions successively: <code class=\"mm\">C(6,2)&middot;C(4,1)</code>, which avoids large factorials.",
+    "takeaway": "The multinomial coefficient divides n! by every exponent factorial, including those equal to 1 (whose factorial is 1)."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Multinomial theorem: the coefficient of <code class=\"mm\">x&#7504; y&#7511; z&#7512;</code> in <code class=\"mm\">(x+y+z)&#8319;</code> is <code class=\"mm\">n!/(p! q! r!)</code>, provided p + q + r = n.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The exponents are p = 2, q = 1, r = 3 and they sum to 6, matching the power.</li><li>The coefficient is <code class=\"mm\">6!/(2!&middot;1!&middot;3!)</code>.</li><li><code class=\"mm\">6! = 720</code>, and <code class=\"mm\">2!&middot;1!&middot;3! = 2&middot;1&middot;6 = 12</code>.</li><li><code class=\"mm\">720/12 = 60</code>.</li><li>Equivalently choose positions: <code class=\"mm\">C(6,2)&middot;C(4,1)&middot;C(3,3) = 15&middot;4&middot;1 = 60</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; 60.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) 120 = <code class=\"mm\">6!/3!</code> divides only by the largest exponent factorial.</li><li>(C) 360 = <code class=\"mm\">6!/2!</code> divides only by the exponent factorial of x.</li><li>(D) 30 halves the correct value, which happens when one exponent is wrongly doubled.</li></ul><p class=\"row\"><b>Common misconception.</b> Dividing by only one of the exponent factorials, or by the number of variables instead of the product of their factorials.</p><p class=\"row\"><b>Faster method.</b> Choose positions successively: <code class=\"mm\">C(6,2)&middot;C(4,1)</code>, which avoids large factorials.</p><p class=\"row\"><b>Takeaway.</b> The multinomial coefficient divides n! by every exponent factorial, including those equal to 1 (whose factorial is 1).</p>"
+  },
+  {
+   "id": "DM-CB7-Q44",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Five distinct letters are placed one per envelope into five correctly addressed envelopes. In how many ways can exactly one letter end up in its own envelope?",
+   "question_html": "<p class=\"qtext\">Five distinct letters are placed one per envelope into five correctly addressed envelopes. In how many ways can exactly one letter end up in its own envelope?</p>",
+   "options": [
+    "44",
+    "45",
+    "9",
+    "120"
+   ],
+   "options_html": [
+    "44",
+    "45",
+    "9",
+    "120"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution": {
+    "concept": "Fix which letter is correct, then require the remaining letters to form a derangement of the remaining envelopes: <code class=\"mm\">C(5,1)&middot;!4</code>.",
+    "steps": [
+     "Choose the letter that goes into its own envelope: <code class=\"mm\">C(5,1) = 5</code> ways.",
+     "The other four letters must all be wrong, that is a derangement of four objects.",
+     "<code class=\"mm\">!4 = 4!(1 &minus; 1 + 1/2 &minus; 1/6 + 1/24) = 24 &minus; 24 + 12 &minus; 4 + 1 = 9</code>.",
+     "Multiply: 5 &times; 9 = 45."
+    ],
+    "final": "Option (B) &mdash; 45.",
+    "whywrong": [
+     "(A) 44 = <code class=\"mm\">!5</code> is the number of placements in which NO letter is correct.",
+     "(C) 9 = <code class=\"mm\">!4</code> forgets to choose which letter is the correct one.",
+     "(D) 120 = 5! is the total number of placements and ignores the requirement."
+    ],
+    "misconception": "Reading 'exactly one' as 'at least one', which requires <code class=\"mm\">5! &minus; !5 = 76</code>, or forgetting the choice of the fixed letter.",
+    "faster": "Exactly r correct placements of n letters = <code class=\"mm\">C(n,r)&middot;!(n&minus;r)</code>.",
+    "takeaway": "'Exactly r correct' always factors into choosing the r fixed items and deranging the rest."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Fix which letter is correct, then require the remaining letters to form a derangement of the remaining envelopes: <code class=\"mm\">C(5,1)&middot;!4</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Choose the letter that goes into its own envelope: <code class=\"mm\">C(5,1) = 5</code> ways.</li><li>The other four letters must all be wrong, that is a derangement of four objects.</li><li><code class=\"mm\">!4 = 4!(1 &minus; 1 + 1/2 &minus; 1/6 + 1/24) = 24 &minus; 24 + 12 &minus; 4 + 1 = 9</code>.</li><li>Multiply: 5 &times; 9 = 45.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 45.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 44 = <code class=\"mm\">!5</code> is the number of placements in which NO letter is correct.</li><li>(C) 9 = <code class=\"mm\">!4</code> forgets to choose which letter is the correct one.</li><li>(D) 120 = 5! is the total number of placements and ignores the requirement.</li></ul><p class=\"row\"><b>Common misconception.</b> Reading 'exactly one' as 'at least one', which requires <code class=\"mm\">5! &minus; !5 = 76</code>, or forgetting the choice of the fixed letter.</p><p class=\"row\"><b>Faster method.</b> Exactly r correct placements of n letters = <code class=\"mm\">C(n,r)&middot;!(n&minus;r)</code>.</p><p class=\"row\"><b>Takeaway.</b> 'Exactly r correct' always factors into choosing the r fixed items and deranging the rest.</p>"
+  },
+  {
+   "id": "DM-CB7-Q45",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In a class of 30 students, each student shakes hands with exactly 4 others. How many handshakes take place in total?",
+   "question_html": "<p class=\"qtext\">In a class of 30 students, each student shakes hands with exactly 4 others. How many handshakes take place in total?</p>",
+   "options": [
+    "120",
+    "240",
+    "60",
+    "30"
+   ],
+   "options_html": [
+    "120",
+    "240",
+    "60",
+    "30"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution": {
+    "concept": "A handshake is an unordered pair, so counting from each participant's side records every handshake twice; the correct total is half the incidence count (the handshaking lemma read backwards).",
+    "steps": [
+     "Each of the 30 students reports 4 handshakes: 30 &times; 4 = 120 records.",
+     "Each handshake involves two students and so appears in exactly two records.",
+     "Divide by 2: 120/2 = 60 handshakes.",
+     "Check the parity: the degree sum is 120, which is even, so such a handshake pattern is possible."
+    ],
+    "final": "Option (C) &mdash; 60.",
+    "whywrong": [
+     "(A) 120 is the incidence count and counts every handshake from both ends.",
+     "(B) 240 doubles the incidence count instead of halving it.",
+     "(D) 30 is the number of students, not the number of handshakes."
+    ],
+    "misconception": "Forgetting the division by 2. Doubling is the common slip, but the error is the same: treating a symmetric object as ordered.",
+    "faster": "Total handshakes = (number of people &times; handshakes per person)/2.",
+    "takeaway": "Divide by 2 whenever the object being counted is an unordered pair of distinct participants."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A handshake is an unordered pair, so counting from each participant's side records every handshake twice; the correct total is half the incidence count (the handshaking lemma read backwards).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the 30 students reports 4 handshakes: 30 &times; 4 = 120 records.</li><li>Each handshake involves two students and so appears in exactly two records.</li><li>Divide by 2: 120/2 = 60 handshakes.</li><li>Check the parity: the degree sum is 120, which is even, so such a handshake pattern is possible.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 60.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) 120 is the incidence count and counts every handshake from both ends.</li><li>(B) 240 doubles the incidence count instead of halving it.</li><li>(D) 30 is the number of students, not the number of handshakes.</li></ul><p class=\"row\"><b>Common misconception.</b> Forgetting the division by 2. Doubling is the common slip, but the error is the same: treating a symmetric object as ordered.</p><p class=\"row\"><b>Faster method.</b> Total handshakes = (number of people &times; handshakes per person)/2.</p><p class=\"row\"><b>Takeaway.</b> Divide by 2 whenever the object being counted is an unordered pair of distinct participants.</p>"
+  },
+  {
+   "id": "DM-CB7-Q46",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Permutations & combinations",
+   "subtopic": "permutations-combinations",
+   "subtopic_label": "Permutations & combinations",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Five distinct books &mdash; A, B, C, D and E &mdash; are arranged in a row on a shelf. Which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Five distinct books &mdash; A, B, C, D and E &mdash; are arranged in a row on a shelf. Which of the following statements are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "If C must occupy one of the two end positions, there are 48 arrangements.",
+    "If C must occupy an end position and A and B must not be adjacent, there are 24 arrangements.",
+    "If C must occupy an end position and A and B must not be adjacent, there are 36 arrangements.",
+    "If C must occupy an end position and A and B must be adjacent, there are 12 arrangements."
+   ],
+   "options_html": [
+    "If C must occupy one of the two end positions, there are 48 arrangements.",
+    "If C must occupy an end position and A and B must not be adjacent, there are 24 arrangements.",
+    "If C must occupy an end position and A and B must not be adjacent, there are 36 arrangements.",
+    "If C must occupy an end position and A and B must be adjacent, there are 12 arrangements."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "marks": 2,
+   "solution": {
+    "concept": "A positional constraint on one object is handled by choosing its position first; an adjacency constraint is handled by gluing the pair into a block; a non-adjacency constraint is the complement of the glued count.",
+    "steps": [
+     "(A) C takes one of 2 end positions and the other four books fill the remaining four places in <code class=\"mm\">4! = 24</code> ways, giving 2 &times; 24 = 48. TRUE.",
+     "For (B) and (C), fix C at one end. The other four books fill four consecutive places in 4! = 24 ways; of these, the arrangements with A and B adjacent number 3 placements of the block &times; 2 internal orders &times; 2 orders of D and E = 12.",
+     "So with C at a fixed end there are 24 &minus; 12 = 12 valid arrangements, and with C at either end 2 &times; 12 = 24. (B) TRUE, (C) FALSE.",
+     "For (D), with C at one end and A and B glued: 3 block placements &times; 2 internal orders &times; 2 orders of D and E = 12 per end, so 24 in total. (D) FALSE."
+    ],
+    "final": "Options (A) and (B).",
+    "misconception": "Forgetting the factor 2 for the end position of C, or for the internal order of the glued pair. Both are independent multipliers that are easy to drop.",
+    "faster": "Count for one fixed end and double at the very end; it keeps the two factors of 2 from being confused.",
+    "takeaway": "Separate the constraint into 'choose the special position', 'arrange the rest', and 'fix the internal order of any glued block'."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A positional constraint on one object is handled by choosing its position first; an adjacency constraint is handled by gluing the pair into a block; a non-adjacency constraint is the complement of the glued count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) C takes one of 2 end positions and the other four books fill the remaining four places in <code class=\"mm\">4! = 24</code> ways, giving 2 &times; 24 = 48. TRUE.</li><li>For (B) and (C), fix C at one end. The other four books fill four consecutive places in 4! = 24 ways; of these, the arrangements with A and B adjacent number 3 placements of the block &times; 2 internal orders &times; 2 orders of D and E = 12.</li><li>So with C at a fixed end there are 24 &minus; 12 = 12 valid arrangements, and with C at either end 2 &times; 12 = 24. (B) TRUE, (C) FALSE.</li><li>For (D), with C at one end and A and B glued: 3 block placements &times; 2 internal orders &times; 2 orders of D and E = 12 per end, so 24 in total. (D) FALSE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> Forgetting the factor 2 for the end position of C, or for the internal order of the glued pair. Both are independent multipliers that are easy to drop.</p><p class=\"row\"><b>Faster method.</b> Count for one fixed end and double at the very end; it keeps the two factors of 2 from being confused.</p><p class=\"row\"><b>Takeaway.</b> Separate the constraint into 'choose the special position', 'arrange the rest', and 'fix the internal order of any glued block'.</p>"
+  },
+  {
+   "id": "DM-CB7-Q47",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Stars and bars",
+   "subtopic": "stars-and-bars",
+   "subtopic_label": "Stars and bars",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Consider the equation <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 6</code> in non-negative integers. Which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Consider the equation <code class=\"mm\">x&#8321; + x&#8322; + x&#8323; = 6</code> in non-negative integers. Which of the following statements are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "It has <code class=\"mm\">C(8,2) = 28</code> solutions in non-negative integers.",
+    "It has <code class=\"mm\">C(5,2) = 10</code> solutions in positive integers.",
+    "It has 21 solutions in which every <code class=\"mm\">x&#7522; &le; 4</code>.",
+    "In every positive-integer solution, each part is at most 4."
+   ],
+   "options_html": [
+    "It has <code class=\"mm\">C(8,2) = 28</code> solutions in non-negative integers.",
+    "It has <code class=\"mm\">C(5,2) = 10</code> solutions in positive integers.",
+    "It has 21 solutions in which every <code class=\"mm\">x&#7522; &le; 4</code>.",
+    "In every positive-integer solution, each part is at most 4."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "Stars and bars gives the unrestricted count; a positive requirement shifts each variable down by 1; an upper bound has to be subtracted by inclusion-exclusion rather than substituted away.",
+    "steps": [
+     "(A) <code class=\"mm\">C(6 + 3 &minus; 1, 3 &minus; 1) = C(8,2) = 28</code>. TRUE.",
+     "(B) Put <code class=\"mm\">y&#7522; = x&#7522; &minus; 1</code>: then <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; = 3</code>, giving <code class=\"mm\">C(5,2) = 10</code>. TRUE.",
+     "(C) Subtract the cases with some <code class=\"mm\">x&#7522; &ge; 5</code>: each such variable leaves a sum of 1, so <code class=\"mm\">C(3,2) = 3</code> solutions, and there are 3 variables, giving 9. No two variables can both be at least 5 (that needs a sum of 10), so no add-back is needed: 28 &minus; 9 = 19, not 21. FALSE.",
+     "(D) In a positive solution each part is at least 1, so the largest possible part is 6 &minus; 1 &minus; 1 = 4. TRUE."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "misconception": "Assuming an upper bound behaves like a lower bound and subtracting 5 from the right-hand side, which is not a valid operation for an upper bound.",
+    "faster": "Check the boundary case: for positive solutions, the maximum part is n &minus; (k &minus; 1).",
+    "takeaway": "Read each bound's direction before choosing the tool: lower bounds shift, upper bounds subtract."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Stars and bars gives the unrestricted count; a positive requirement shifts each variable down by 1; an upper bound has to be subtracted by inclusion-exclusion rather than substituted away.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) <code class=\"mm\">C(6 + 3 &minus; 1, 3 &minus; 1) = C(8,2) = 28</code>. TRUE.</li><li>(B) Put <code class=\"mm\">y&#7522; = x&#7522; &minus; 1</code>: then <code class=\"mm\">y&#8321; + y&#8322; + y&#8323; = 3</code>, giving <code class=\"mm\">C(5,2) = 10</code>. TRUE.</li><li>(C) Subtract the cases with some <code class=\"mm\">x&#7522; &ge; 5</code>: each such variable leaves a sum of 1, so <code class=\"mm\">C(3,2) = 3</code> solutions, and there are 3 variables, giving 9. No two variables can both be at least 5 (that needs a sum of 10), so no add-back is needed: 28 &minus; 9 = 19, not 21. FALSE.</li><li>(D) In a positive solution each part is at least 1, so the largest possible part is 6 &minus; 1 &minus; 1 = 4. TRUE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming an upper bound behaves like a lower bound and subtracting 5 from the right-hand side, which is not a valid operation for an upper bound.</p><p class=\"row\"><b>Faster method.</b> Check the boundary case: for positive solutions, the maximum part is n &minus; (k &minus; 1).</p><p class=\"row\"><b>Takeaway.</b> Read each bound's direction before choosing the tool: lower bounds shift, upper bounds subtract.</p>"
+  },
+  {
+   "id": "DM-CB7-Q48",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Binomial & multinomial coefficients",
+   "subtopic": "binomial-multinomial-coefficients",
+   "subtopic_label": "Binomial & multinomial coefficients",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about binomial and multinomial coefficients are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about binomial and multinomial coefficients are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "Pascal's rule states <code class=\"mm\">C(n,r) = C(n&minus;1,r&minus;1) + C(n&minus;1,r+1)</code> for <code class=\"mm\">1 &le; r &le; n&minus;1</code>.",
+    "After like terms are collected, the expansion of <code class=\"mm\">(x + y + z)&#8308;</code> contains 15 terms.",
+    "The coefficient of <code class=\"mm\">x&sup2;y&sup2;z&sup2;</code> in <code class=\"mm\">(x + y + z)&#8310;</code> is 90.",
+    "The coefficient of <code class=\"mm\">x&sup3;</code> in <code class=\"mm\">(1 + x)&#8312;</code> is <code class=\"mm\">C(8,4) = 70</code>."
+   ],
+   "options_html": [
+    "Pascal's rule states <code class=\"mm\">C(n,r) = C(n&minus;1,r&minus;1) + C(n&minus;1,r+1)</code> for <code class=\"mm\">1 &le; r &le; n&minus;1</code>.",
+    "After like terms are collected, the expansion of <code class=\"mm\">(x + y + z)&#8308;</code> contains 15 terms.",
+    "The coefficient of <code class=\"mm\">x&sup2;y&sup2;z&sup2;</code> in <code class=\"mm\">(x + y + z)&#8310;</code> is 90.",
+    "The coefficient of <code class=\"mm\">x&sup3;</code> in <code class=\"mm\">(1 + x)&#8312;</code> is <code class=\"mm\">C(8,4) = 70</code>."
+   ],
+   "answer": [
+    1,
+    2
+   ],
+   "answer_display": "Options (B) and (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Binomial and multinomial coefficients follow from choosing positions: the coefficient of a monomial counts the ways of assigning each factor to one of the variables in the required multiplicities.",
+    "steps": [
+     "(A) The true Pascal rule is <code class=\"mm\">C(n,r) = C(n&minus;1,r&minus;1) + C(n&minus;1,r)</code>. The stated right-hand side equals <code class=\"mm\">C(n,r+1)</code>, not <code class=\"mm\">C(n,r)</code>. FALSE.",
+     "(B) Terms = <code class=\"mm\">C(4 + 3 &minus; 1, 3 &minus; 1) = C(6,2) = 15</code>. TRUE.",
+     "(C) <code class=\"mm\">6!/(2!&middot;2!&middot;2!) = 720/8 = 90</code>. TRUE.",
+     "(D) The coefficient of <code class=\"mm\">x&sup3;</code> in <code class=\"mm\">(1+x)&#8312;</code> is <code class=\"mm\">C(8,3) = 56</code>, not <code class=\"mm\">C(8,4) = 70</code>. FALSE."
+    ],
+    "final": "Options (B) and (C).",
+    "misconception": "Reading Pascal's rule from memory with the indices shifted by one, and taking the middle coefficient of a row as the coefficient of x&sup3;.",
+    "faster": "Verify any binomial claim on the row <code class=\"mm\">n = 4</code>: 1, 4, 6, 4, 1 must reproduce it.",
+    "takeaway": "Both the rule and the coefficient are position counts; a quick small-case check catches index errors."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Binomial and multinomial coefficients follow from choosing positions: the coefficient of a monomial counts the ways of assigning each factor to one of the variables in the required multiplicities.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) The true Pascal rule is <code class=\"mm\">C(n,r) = C(n&minus;1,r&minus;1) + C(n&minus;1,r)</code>. The stated right-hand side equals <code class=\"mm\">C(n,r+1)</code>, not <code class=\"mm\">C(n,r)</code>. FALSE.</li><li>(B) Terms = <code class=\"mm\">C(4 + 3 &minus; 1, 3 &minus; 1) = C(6,2) = 15</code>. TRUE.</li><li>(C) <code class=\"mm\">6!/(2!&middot;2!&middot;2!) = 720/8 = 90</code>. TRUE.</li><li>(D) The coefficient of <code class=\"mm\">x&sup3;</code> in <code class=\"mm\">(1+x)&#8312;</code> is <code class=\"mm\">C(8,3) = 56</code>, not <code class=\"mm\">C(8,4) = 70</code>. FALSE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reading Pascal's rule from memory with the indices shifted by one, and taking the middle coefficient of a row as the coefficient of x&sup3;.</p><p class=\"row\"><b>Faster method.</b> Verify any binomial claim on the row <code class=\"mm\">n = 4</code>: 1, 4, 6, 4, 1 must reproduce it.</p><p class=\"row\"><b>Takeaway.</b> Both the rule and the coefficient are position counts; a quick small-case check catches index errors.</p>"
+  },
+  {
+   "id": "DM-CB7-Q49",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Inclusion-exclusion counting",
+   "subtopic": "inclusion-exclusion-counting",
+   "subtopic_label": "Inclusion-exclusion counting",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Among the integers from 1 to 1000, which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Among the integers from 1 to 1000, which of the following statements are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "734 of them are divisible by at least one of 2, 3 and 5.",
+    "264 of them are divisible by none of 2, 3 and 5.",
+    "233 of them are divisible by exactly two of 2, 3 and 5.",
+    "567 of them are divisible by exactly one of 2, 3 and 5."
+   ],
+   "options_html": [
+    "734 of them are divisible by at least one of 2, 3 and 5.",
+    "264 of them are divisible by none of 2, 3 and 5.",
+    "233 of them are divisible by exactly two of 2, 3 and 5.",
+    "567 of them are divisible by exactly one of 2, 3 and 5."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "marks": 2,
+   "solution": {
+    "concept": "Three-set inclusion-exclusion gives the union, and the region sizes for 'exactly one' and 'exactly two' properties are obtained by subtracting the triple intersection from the pairwise intersections.",
+    "steps": [
+     "Singles: <code class=\"mm\">&lfloor;1000/2&rfloor; = 500</code>, <code class=\"mm\">&lfloor;1000/3&rfloor; = 333</code>, <code class=\"mm\">&lfloor;1000/5&rfloor; = 200</code>.",
+     "Pairs: multiples of 6 give 166, of 10 give 100, of 15 give 66. Triple: multiples of 30 give 33.",
+     "Union <code class=\"mm\">= 500 + 333 + 200 &minus; 166 &minus; 100 &minus; 66 + 33 = 734</code>, so (A) is TRUE.",
+     "None <code class=\"mm\">= 1000 &minus; 734 = 266</code>, so (B) is FALSE.",
+     "Exactly two <code class=\"mm\">= (166&minus;33) + (100&minus;33) + (66&minus;33) = 133 + 67 + 33 = 233</code>, so (C) is TRUE.",
+     "Exactly one <code class=\"mm\">= (500&minus;166&minus;100+33) + (333&minus;166&minus;66+33) + (200&minus;100&minus;66+33) = 267 + 134 + 67 = 468</code>, so (D) is FALSE. Check: 468 + 233 + 33 = 734."
+    ],
+    "final": "Options (A) and (C).",
+    "misconception": "Reporting the pairwise intersections as 'exactly two' counts without removing the multiples of 30, which belong to all three sets.",
+    "faster": "Compute the union once, then get 'none' as the complement and 'exactly two' from the pair counts; the three regions must sum to the union.",
+    "takeaway": "The three regions &mdash; exactly one, exactly two, exactly three &mdash; partition the union, which gives a free arithmetic check."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three-set inclusion-exclusion gives the union, and the region sizes for 'exactly one' and 'exactly two' properties are obtained by subtracting the triple intersection from the pairwise intersections.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Singles: <code class=\"mm\">&lfloor;1000/2&rfloor; = 500</code>, <code class=\"mm\">&lfloor;1000/3&rfloor; = 333</code>, <code class=\"mm\">&lfloor;1000/5&rfloor; = 200</code>.</li><li>Pairs: multiples of 6 give 166, of 10 give 100, of 15 give 66. Triple: multiples of 30 give 33.</li><li>Union <code class=\"mm\">= 500 + 333 + 200 &minus; 166 &minus; 100 &minus; 66 + 33 = 734</code>, so (A) is TRUE.</li><li>None <code class=\"mm\">= 1000 &minus; 734 = 266</code>, so (B) is FALSE.</li><li>Exactly two <code class=\"mm\">= (166&minus;33) + (100&minus;33) + (66&minus;33) = 133 + 67 + 33 = 233</code>, so (C) is TRUE.</li><li>Exactly one <code class=\"mm\">= (500&minus;166&minus;100+33) + (333&minus;166&minus;66+33) + (200&minus;100&minus;66+33) = 267 + 134 + 67 = 468</code>, so (D) is FALSE. Check: 468 + 233 + 33 = 734.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the pairwise intersections as 'exactly two' counts without removing the multiples of 30, which belong to all three sets.</p><p class=\"row\"><b>Faster method.</b> Compute the union once, then get 'none' as the complement and 'exactly two' from the pair counts; the three regions must sum to the union.</p><p class=\"row\"><b>Takeaway.</b> The three regions &mdash; exactly one, exactly two, exactly three &mdash; partition the union, which gives a free arithmetic check.</p>"
+  },
+  {
+   "id": "DM-CB7-Q50",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 7,
+   "unit_number": 7,
+   "unit_slug": "combinatorics",
+   "unit_name": "Counting & Combinatorics",
+   "topic": "Counting & Combinatorics",
+   "sub": "Double counting",
+   "subtopic": "double-counting",
+   "subtopic_label": "Double counting",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "run_date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about double counting are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about double counting are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "For disjoint sets of sizes m and n, <code class=\"mm\">C(m+n,2) = C(m,2) + C(n,2) + mn</code>, obtained by counting the 2-element subsets of their union.",
+    "A simple graph on 10 vertices has at most 45 edges.",
+    "If each of n people has exactly three friends among them, then n must be a multiple of 3.",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(n,k) = n&middot;2&#8319;&minus;&sup1;</code>, obtained by counting the pairs (element, subset containing it)."
+   ],
+   "options_html": [
+    "For disjoint sets of sizes m and n, <code class=\"mm\">C(m+n,2) = C(m,2) + C(n,2) + mn</code>, obtained by counting the 2-element subsets of their union.",
+    "A simple graph on 10 vertices has at most 45 edges.",
+    "If each of n people has exactly three friends among them, then n must be a multiple of 3.",
+    "<code class=\"mm\">&Sigma;<sub>k=0</sub><sup>n</sup> k&middot;C(n,k) = n&middot;2&#8319;&minus;&sup1;</code>, obtained by counting the pairs (element, subset containing it)."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "marks": 2,
+   "solution": {
+    "concept": "Double counting proves an identity by counting one set of objects in two ways; the equality of the two totals is the identity.",
+    "steps": [
+     "(A) A 2-subset of the disjoint union is either inside the m-set, inside the n-set, or one element from each: <code class=\"mm\">C(m,2) + C(n,2) + mn</code> cases, which must equal <code class=\"mm\">C(m+n,2)</code>. TRUE.",
+     "(B) A simple graph on 10 vertices has at most one edge per unordered pair, so at most <code class=\"mm\">C(10,2) = 45</code> edges, attained by <code class=\"mm\">K<sub>10</sub></code>. TRUE.",
+     "(C) The degree sum is 3n, which must be even, so n must be even &mdash; not a multiple of 3. The four people of <code class=\"mm\">K<sub>4</sub></code> are a counterexample: n = 4 works and 4 is not a multiple of 3. FALSE.",
+     "(D) Count the pairs (element, subset containing it) over all subsets: each of the n elements lies in <code class=\"mm\">2&#8319;&minus;&sup1;</code> subsets, giving <code class=\"mm\">n&middot;2&#8319;&minus;&sup1;</code>; grouping by subset size gives <code class=\"mm\">&Sigma; k&middot;C(n,k)</code>. TRUE."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "misconception": "Confusing the parity constraint (the degree sum must be even) with a divisibility constraint by the degree itself.",
+    "faster": "Test each general claim on the smallest case: n = 4 for (C), m = n = 1 for (A), n = 2 for (D).",
+    "takeaway": "A double-counting identity is true when both sides count the same object set; a parity argument constrains n, not its divisibility by the degree."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Double counting proves an identity by counting one set of objects in two ways; the equality of the two totals is the identity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) A 2-subset of the disjoint union is either inside the m-set, inside the n-set, or one element from each: <code class=\"mm\">C(m,2) + C(n,2) + mn</code> cases, which must equal <code class=\"mm\">C(m+n,2)</code>. TRUE.</li><li>(B) A simple graph on 10 vertices has at most one edge per unordered pair, so at most <code class=\"mm\">C(10,2) = 45</code> edges, attained by <code class=\"mm\">K<sub>10</sub></code>. TRUE.</li><li>(C) The degree sum is 3n, which must be even, so n must be even &mdash; not a multiple of 3. The four people of <code class=\"mm\">K<sub>4</sub></code> are a counterexample: n = 4 works and 4 is not a multiple of 3. FALSE.</li><li>(D) Count the pairs (element, subset containing it) over all subsets: each of the n elements lies in <code class=\"mm\">2&#8319;&minus;&sup1;</code> subsets, giving <code class=\"mm\">n&middot;2&#8319;&minus;&sup1;</code>; grouping by subset size gives <code class=\"mm\">&Sigma; k&middot;C(n,k)</code>. TRUE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the parity constraint (the degree sum must be even) with a divisibility constraint by the degree itself.</p><p class=\"row\"><b>Faster method.</b> Test each general claim on the smallest case: n = 4 for (C), m = n = 1 for (A), n = 2 for (D).</p><p class=\"row\"><b>Takeaway.</b> A double-counting identity is true when both sides count the same object set; a parity argument constrains n, not its divisibility by the degree.</p>"
   }
  ]
 }

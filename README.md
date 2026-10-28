@@ -7,29 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 4 — Binary Trees & Tree Traversals, Set 2 of 2**, 2026-10-28 → [`programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html`](programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html)
+- **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 2 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Binary tree properties (7) · Inorder, preorder & postorder (6) · Threaded binary trees (6) ·
-  Expression trees (6)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Programming and Data
-  Structures** (draw index 4 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent
-  paper as `{date 2026-10-28, run 7, unit 4, trees-traversals, Set 1 of 2}`. Unit 4 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held and step B4 was not reached: Unit 4 was
-  generated again as **Set 2 of 2**, closing it at exactly 50 questions.
-- Previous test: **Programming and Data Structures · Unit 4 — Binary Trees & Tree Traversals, Set 1 of 2**, 2026-10-28 →
-  [`programming-data-structures/trees-traversals/archive/gate_ds_mock_4_2026-10-28_run1.html`](programming-data-structures/trees-traversals/archive/gate_ds_mock_4_2026-10-28_run1.html)
+- Subtopics: Permutations & combinations (5) · Stars and bars (5) · Binomial & multinomial coefficients (5) ·
+  Inclusion-exclusion counting (5) · Double counting (5)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Discrete Mathematics**
+  (draw index 0 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 6, unit 7, combinatorics, Set 1 of 2}`. Unit 7 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4
+  was not reached: Unit 7 was generated again as **Set 2 of 2**, closing it at exactly 50 questions.
+- Previous test: **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 →
+  [`discrete-mathematics/combinatorics/archive/gate_dm_mock_7_2026-10-28_run1.html`](discrete-mathematics/combinatorics/archive/gate_dm_mock_7_2026-10-28_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 77 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 41 current · 36 archived |
+| Papers published (current + archived) | 78 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 41 current · 37 archived |
 | Test cards on the portal | 47 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1925 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1950 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 36 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 37 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -83,6 +83,28 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Discrete Mathematics → Unit 7 (Counting & Combinatorics), Set 2 of 2.** MODE A: one subject was drawn
+  uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 0 of 11 in
+  the fixed list order discrete-mathematics, engineering-mathematics, digital-logic, computer-architecture,
+  programming-data-structures, algorithms, theory-of-computation, compiler-design, operating-systems, databases,
+  computer-networks), giving **Discrete Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 6, unit 7, combinatorics, Set 1 of 2}`. Unit 7 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4
+  was not reached: Unit 7 was generated again as **Set 2 of 2** and now holds exactly 50 questions, the cap. No override
+  was used. The next Discrete Mathematics run advances `(index_of(combinatorics) = 6 + 1) mod 16 = 7` → Unit 8,
+  Recurrence Relations & Generating Functions.
+- Coverage this run: all five Unit 7 subtopics — permutations & combinations (5), stars and bars (5), binomial &
+  multinomial coefficients (5), inclusion-exclusion counting (5), double counting (5). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="discrete-mathematics"`, `data-unit="combinatorics"`, `data-unit-number="7"` and its subtopic slug.
+  Every numeric answer was re-derived independently in code (brute-force enumeration for the stars-and-bars, derangement,
+  onto-function, adjacency and divisibility counts; closed forms for the multinomial and multiset counts).
+- No verified previous-year question exists for Unit 7, so nothing on this paper is labelled an official GATE question;
+  the two source tags used are standard textbook and original synthesis, plus one GATE-PYQ-variation pattern item that
+  claims no year.
+- The correct option is spread across A–D (2 A, 5 B, 6 C, 2 D) rather than always being option (A), which is a defect in
+  several earlier papers of this series that has not yet been swept.
 
 - **2026-10-28, Programming and Data Structures → Unit 4 (Binary Trees & Tree Traversals), Set 2 of 2.** MODE A: one
   subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
@@ -3512,7 +3534,7 @@ digital-logic/
 | 4 | Relations | `relations` | 50 | yes |
 | 5 | Functions | `functions` | 50 | yes |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 50 | yes |
-| 7 | Counting & Combinatorics | `combinatorics` | 0 | — |
+| 7 | Counting & Combinatorics | `combinatorics` | 50 | yes |
 | 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
 | 9 | Graph Theory Fundamentals | `graph-theory-fundamentals` | 0 | — |
 | 10 | Graph Theory Advanced | `graph-theory-advanced` | 0 | — |
@@ -3528,7 +3550,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
-| 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 25 | yes |
+| 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 50 | yes |
 | 3 | Greedy Algorithms | `greedy-algorithms` | 0 | — |
 | 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
@@ -3542,7 +3564,7 @@ Algorithms:
 | 1 | C Programming Foundations | `c-programming-core` | 50 | yes |
 | 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 50 | yes |
 | 3 | Linear Data Structures | `linear-data-structures` | 50 | yes |
-| 4 | Binary Trees & Tree Traversals | `trees-traversals` | 0 | — |
+| 4 | Binary Trees & Tree Traversals | `trees-traversals` | 50 | yes |
 | 5 | Binary Search Trees & Balanced Trees | `search-trees` | 0 | — |
 | 6 | Heaps & Priority Queues | `heaps-priority-queues` | 0 | — |
 | 7 | Hashing & Hash Tables | `hashing` | 0 | — |
@@ -3562,9 +3584,9 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Lexical Analysis | `lexical-analysis` | 50 | yes |
-| 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 25 | yes |
-| 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 0 | — |
-| 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 0 | — |
+| 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 50 | yes |
+| 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 50 | yes |
+| 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 25 | yes |
 | 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
 
 ### Operating Systems
@@ -3574,7 +3596,7 @@ Algorithms:
 | 1 | Process Management & CPU Scheduling | `process-scheduling` | 50 | yes |
 | 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 50 | yes |
 | 3 | Deadlocks | `deadlocks` | 50 | yes |
-| 4 | Memory Management & Paging | `memory-paging` | 0 | — |
+| 4 | Memory Management & Paging | `memory-paging` | 50 | yes |
 | 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
 | 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
 
@@ -3603,10 +3625,10 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 50 | yes |
+| 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 75 | yes |
 | 2 | Grammars & Context-Free Languages | `cfl-grammars` | 50 | yes |
-| 3 | Pushdown Automata | `pushdown-automata` | 25 | yes |
-| 4 | Turing Machines & Decidability | `turing-machines-decidability` | 0 | — |
+| 3 | Pushdown Automata | `pushdown-automata` | 50 | yes |
+| 4 | Turing Machines & Decidability | `turing-machines-decidability` | 50 | yes |
 
 ### Digital Logic
 
@@ -3614,7 +3636,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | Number Systems & Representation | `number-systems` | 50 | yes |
 | 2 | Combinational Circuit Design | `combinational-circuits` | 50 | yes |
-| 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 0 | — |
+| 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 50 | yes |
 | 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
 
 ### Computer Architecture
@@ -3622,7 +3644,7 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Machine Instructions & Addressing Modes | `instructions-addressing` | 0 | — |
-| 2 | CPU Control Design & Data Path | `datapath-control-unit` | 25 | yes |
+| 2 | CPU Control Design & Data Path | `datapath-control-unit` | 50 | yes |
 | 3 | Memory Hierarchy & Cache Memory | `cache-memory` | 0 | — |
 | 4 | Main Memory & Virtual Memory Interface | `memory-management-unit` | 0 | — |
 | 5 | Instruction Pipelining | `pipelining` | 0 | — |
