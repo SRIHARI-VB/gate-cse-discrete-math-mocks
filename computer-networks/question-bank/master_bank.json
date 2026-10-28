@@ -4,9 +4,9 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-27",
+  "last_updated": "2026-10-28",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 75,
+  "total_questions": 100,
   "units_with_questions": [
    1,
    2
@@ -185,6 +185,59 @@
    ],
    "selection": "MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded random.SystemRandom() draw (draw index 10 of 11) and it gave Computer Networks. runs[] was sorted by (date, run) before reading: the most recent paper was {date 2026-10-27, run 2, unit 1, Set 2 of 2}. Unit 1 held exactly 50 questions, which is UNIT_QUESTION_CAP, so step B3 failed on the cap and step B4 advanced one unit: (index_of(network-fundamentals-framing) + 1) mod 6 = (0 + 1) mod 6 = 1, giving Unit 2 (data-link-mac). Unit 2 had no earlier paper, so nothing was archived. No override was used.",
    "note": "First paper for Computer Networks, Unit 2, Set 1 of 2. 25 questions, all new: every stem, option set and numeric answer was checked against the 50 banked Unit 1 questions. All five subtopics are represented, five questions each: stop-and-wait ARQ, Go-Back-N & selective repeat, pure & slotted ALOHA, CSMA/CD, CSMA/CA & backoff, and Ethernet, switches & bridges. No GATE_PYQ_VARIATION item: verified_pyqs is empty for this subject, so nothing here is claimed as official. Every numeric answer was recomputed by script."
+  },
+  {
+   "run": 4,
+   "date": "2026-10-28",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "set": "Set 2 of 2",
+   "file": "computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "question_ids": [
+    "CN-U2-Q26",
+    "CN-U2-Q27",
+    "CN-U2-Q28",
+    "CN-U2-Q29",
+    "CN-U2-Q30",
+    "CN-U2-Q31",
+    "CN-U2-Q32",
+    "CN-U2-Q33",
+    "CN-U2-Q34",
+    "CN-U2-Q35",
+    "CN-U2-Q36",
+    "CN-U2-Q37",
+    "CN-U2-Q38",
+    "CN-U2-Q39",
+    "CN-U2-Q40",
+    "CN-U2-Q41",
+    "CN-U2-Q42",
+    "CN-U2-Q43",
+    "CN-U2-Q44",
+    "CN-U2-Q45",
+    "CN-U2-Q46",
+    "CN-U2-Q47",
+    "CN-U2-Q48",
+    "CN-U2-Q49",
+    "CN-U2-Q50"
+   ],
+   "selection": "MODE A. Computer Networks was drawn with an unseeded random.SystemRandom() choice over the four subjects that had no paper dated 2026-10-28 (engineering-mathematics, algorithms, operating-systems, computer-networks; draw index 3 of 4). runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-27, run 3, unit 2, data-link-mac, Set 1 of 2}. Unit 2 held 25 questions, below UNIT_QUESTION_CAP = 50, and had been current for 1 day, below DAYS_PER_UNIT_MAX = 7, so step B3 held and step B4 was not reached: Unit 2 was generated again and closes at exactly 50. No override was used.",
+   "note": "Set 2 of 2 for Unit 2, closing it at the cap of 50 questions. The Set 1 paper was moved to archive/gate_cn_mock_2_2026-10-27_run1.html with its content frozen. The next Computer Networks run advances (index_of(data-link-mac) = 1 + 1) mod 6 = 2, Unit 3, Network Layer: IP Addressing & Subnetting. All 25 items are new (CN-U2-Q26..CN-U2-Q50); every subtopic is represented; no verified PYQ exists for this unit, so no item is tagged GATE_PYQ_VARIATION."
   }
  ],
  "verified_pyqs": [],
@@ -2917,6 +2970,916 @@
    ],
    "answer_display": "Option (A)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Bridging is transparent and stateless with respect to forwarding: a bridge floods unknown destinations every time it sees them. With a loop, each flooded copy is seen again and flooded again.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bridge 1 receives the frame, does not know the destination, and floods it to bridge 2.</li><li>Bridge 2 also does not know the destination, so it floods the frame back to bridge 1 and to its own segments.</li><li>Nothing in an 802.3 frame ages: there is no TTL field, and bridges do not keep a record of frames they have already forwarded.</li><li>Each pass creates more copies, so the copies grow without bound and the loop saturates &mdash; a broadcast storm.</li><li>Spanning tree protocol exists precisely to break the loop by blocking one port, keeping the topology a tree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Options (B) and (C) assume layer-2 frames behave like IP packets. TTL, hop limits and duplicate detection are layer-3 and above; Ethernet has none of them.</p><p class=\"row\"><b>Takeaway.</b> A layer-2 network must be loop-free by construction, because the frame itself carries no defence against looping.</p>"
+  },
+  {
+   "id": "CN-U2-Q26",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "stop-and-wait-arq",
+   "subtopic": "stop-and-wait-arq",
+   "subtopic_label": "Stop-and-wait ARQ",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In stop-and-wait ARQ the sender arms a timer when it transmits a frame. Which value should the timeout be set to?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"1\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"stop-and-wait-arq\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 1</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">stop-and-wait-arq</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In stop-and-wait ARQ the sender arms a timer when it transmits a frame. Which value should the timeout be set to?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">One frame transmission time, <code>Tt</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">One frame transmission time plus one round-trip propagation delay, plus the acknowledgement transmission time and a safety margin.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Twice the one-way propagation delay, <code>2Tp</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The bandwidth-delay product of the link.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "One frame transmission time, <code>Tt</code>.",
+    "One frame transmission time plus one round-trip propagation delay, plus the acknowledgement transmission time and a safety margin.",
+    "Twice the one-way propagation delay, <code>2Tp</code>.",
+    "The bandwidth-delay product of the link."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">One frame transmission time, <code>Tt</code>.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">One frame transmission time plus one round-trip propagation delay, plus the acknowledgement transmission time and a safety margin.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">Twice the one-way propagation delay, <code>2Tp</code>.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">The bandwidth-delay product of the link.</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The timer has to cover everything that happens between the start of a transmission and the arrival of its acknowledgement: the frame on the way out, the propagation of both directions, the acknowledgement on the way back, and then a margin for processing and queueing.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The frame itself occupies the link for <code>Tt = L/R</code>.</li><li>Its last bit then needs one propagation delay <code>Tp</code> to reach the receiver, and the acknowledgement needs another <code>Tp</code> to come back, so the round trip contributes <code>2Tp</code>.</li><li>The acknowledgement occupies the link for <code>Tack</code>.</li><li>A timeout of exactly <code>Tt + Tack + 2Tp</code> would fire on the fastest possible successful exchange, so real timers add a margin. Setting it to <code>Tt</code> alone or to <code>2Tp</code> alone fires before the acknowledgement could possibly arrive.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; frame time plus one round trip plus the acknowledgement time and a margin.</span></p><p class=\"row\"><b>Common misconception.</b> Many candidates answer <code>2Tp</code> because the propagation delay feels like the slow part. A timeout that ignores the frame transmission time expires while the frame is still leaving the sender, which produces a spurious retransmission every cycle.</p><p class=\"row\"><b>Takeaway.</b> A timeout is a worst-case estimate of the whole exchange, not of one component of it.</p>"
+  },
+  {
+   "id": "CN-U2-Q27",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "stop-and-wait-arq",
+   "subtopic": "stop-and-wait-arq",
+   "subtopic_label": "Stop-and-wait ARQ",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A stop-and-wait link achieves a utilisation of 20% when the acknowledgement time is negligible. If the one-way propagation delay is halved and nothing else changes, what is the new utilisation?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"2\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"stop-and-wait-arq\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 2</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">stop-and-wait-arq</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A stop-and-wait link achieves a utilisation of 20% when the acknowledgement time is negligible. If the one-way propagation delay is halved and nothing else changes, what is the new utilisation?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">40%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">20%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">33.3%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">10%</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "40%",
+    "20%",
+    "33.3%",
+    "10%"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">40%</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">20%</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">33.3%</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">10%</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> With a negligible acknowledgement, the stop-and-wait utilisation is <code>U = Tt / (Tt + 2Tp)</code>. The ratio of the two times, not their absolute values, fixes the utilisation.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Set <code>Tt/(Tt + 2Tp) = 0.2</code>.</li><li>Cross-multiplying: <code>Tt = 0.2Tt + 0.4Tp</code>, so <code>0.8Tt = 0.4Tp</code> and <code>2Tp = 4Tt</code>.</li><li>Halving the one-way delay halves the round trip: the new round trip is <code>2Tt</code>.</li><li>New utilisation <code>= Tt/(Tt + 2Tt) = 1/3 &asymp; 33.3%</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 33.3%.</span></p><p class=\"row\"><b>Common misconception.</b> Doubling the utilisation to 40% is the tempting error: halving the idle time does not double the fraction of time that is busy. Utilisation is a ratio <code>busy/(busy + idle)</code>, so it saturates towards 1 rather than scaling linearly.</p><p class=\"row\"><b>Takeaway.</b> For a fixed frame time, <code>U = 1/(1 + 2Tp/Tt)</code>: only the ratio <code>Tp/Tt</code> matters.</p>"
+  },
+  {
+   "id": "CN-U2-Q28",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "stop-and-wait-arq",
+   "subtopic": "stop-and-wait-arq",
+   "subtopic_label": "Stop-and-wait ARQ",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A stop-and-wait sender uses 1000-byte frames on a 100 Mbps link whose one-way propagation delay is 1 ms; acknowledgements are negligible. What utilisation does it achieve?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"3\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"stop-and-wait-arq\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 3</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">stop-and-wait-arq</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A stop-and-wait sender uses 1000-byte frames on a 100 Mbps link whose one-way propagation delay is 1 ms; acknowledgements are negligible. What utilisation does it achieve?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">7.69%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">1.92%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">50%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">3.85%</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "7.69%",
+    "1.92%",
+    "50%",
+    "3.85%"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">7.69%</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">1.92%</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">50%</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">3.85%</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Utilisation is the fraction of the cycle spent transmitting: <code>U = Tt/(Tt + 2Tp)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>Tt = 8 &times; 1000 / 10<sup>8</sup> = 80 &micro;s</code>.</li><li><code>2Tp = 2 &times; 1 ms = 2000 &micro;s</code>.</li><li>Cycle <code>= 80 + 2000 = 2080 &micro;s</code>.</li><li><code>U = 80/2080 = 0.03846</code>, that is <code>3.85%</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; 3.85%.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 7.69% comes from using one propagation delay instead of the round trip; reporting 1.92% comes from counting four propagation delays. The acknowledgement must travel back, so exactly two one-way delays belong in the cycle.</p><p class=\"row\"><b>Takeaway.</b> On a fast, long link the frame time vanishes beside the round trip, and stop-and-wait collapses to a few percent.</p>"
+  },
+  {
+   "id": "CN-U2-Q29",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "stop-and-wait-arq",
+   "subtopic": "stop-and-wait-arq",
+   "subtopic_label": "Stop-and-wait ARQ",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about the receiver and the timer in stop-and-wait ARQ are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"4\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"stop-and-wait-arq\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 4</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">stop-and-wait-arq</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about the receiver and the timer in stop-and-wait ARQ are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">The receiver needs to buffer at most one frame at a time.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">A timeout shorter than one round-trip propagation delay causes spurious retransmissions even when nothing has been lost.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Its utilisation rises as the bandwidth-delay product of the link grows.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"4\" data-typ=\"MSQ\" name=\"q4\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It provides flow control as well as error control.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "The receiver needs to buffer at most one frame at a time.",
+    "A timeout shorter than one round-trip propagation delay causes spurious retransmissions even when nothing has been lost.",
+    "Its utilisation rises as the bandwidth-delay product of the link grows.",
+    "It provides flow control as well as error control."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">The receiver needs to buffer at most one frame at a time.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">A timeout shorter than one round-trip propagation delay causes spurious retransmissions even when nothing has been lost.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">Its utilisation rises as the bandwidth-delay product of the link grows.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">It provides flow control as well as error control.</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Stop-and-wait is a one-frame pipeline: the sender may have exactly one frame outstanding, so the receiver only ever has to distinguish a new frame from a repeat of the previous one.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True &mdash; only one frame can be in flight, so one buffer position is enough.</li><li>(B) True &mdash; the acknowledgement cannot possibly arrive before one full round trip has elapsed, so a timer set below that bound expires on every successful exchange and the sender retransmits frames that were received correctly.</li><li>(C) False &mdash; a larger bandwidth-delay product means more bits fit in the pipe, and stop-and-wait still sends only one frame per round trip, so utilisation <i>falls</i>.</li><li>(D) True &mdash; the rule that the next frame may not be sent until the previous one is acknowledged is a form of flow control as well as error control.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (C) reverses the direction of the effect. Pipelining exists precisely because the bandwidth-delay product grows faster than stop-and-wait can fill it.</p><p class=\"row\"><b>Takeaway.</b> One outstanding frame means one buffer, one sequence bit and a timer that must exceed the round trip, with utilisation that decays as <code>Tp/Tt</code> grows.</p>"
+  },
+  {
+   "id": "CN-U2-Q30",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "stop-and-wait-arq",
+   "subtopic": "stop-and-wait-arq",
+   "subtopic_label": "Stop-and-wait ARQ",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A sender is connected to its receiver by a 1 Mbps link whose one-way propagation delay is 50 ms. Frames are 1000 bits and acknowledgements are negligible.<br/>What is the smallest number of frames that must be outstanding at all times to keep the link continuously busy?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"5\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"stop-and-wait-arq\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 5</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">stop-and-wait-arq</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A sender is connected to its receiver by a 1 Mbps link whose one-way propagation delay is 50 ms. Frames are 1000 bits and acknowledgements are negligible.<br/>What is the smallest number of frames that must be outstanding at all times to keep the link continuously busy?</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 5\" autocomplete=\"off\" class=\"natinput\" data-n=\"5\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer number of frames.</div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    101
+   ],
+   "answer_display": "101",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A link stays busy only while there is always a frame being transmitted. The number of frames that fit in one cycle is the cycle length divided by the transmission time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>Tt = 1000/10<sup>6</sup> = 1 ms</code>.</li><li>One cycle of the protocol is <code>Tt + 2Tp = 1 + 100 = 101 ms</code>.</li><li>In 101 ms the link can carry <code>101/1 = 101</code> frames of this size.</li><li>So a window of 101 frames keeps a frame arriving at the head of the link exactly as the previous one finishes.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 101 frames.</span></p><p class=\"row\"><b>Common misconception.</b> Using the one-way delay (50 ms) instead of the round trip gives 51, and using the bandwidth-delay product in bits (50 000 bits) without dividing by the frame size gives a number 50 times too large. The window is a count of frames, so the cycle must be divided by the frame time.</p><p class=\"row\"><b>Takeaway.</b> Minimum window for full utilisation <code>= (Tt + 2Tp)/Tt = 1 + 2Tp/Tt</code>.</p>"
+  },
+  {
+   "id": "CN-U2-Q31",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "go-back-n-selective-repeat-efficiency",
+   "subtopic": "go-back-n-selective-repeat-efficiency",
+   "subtopic_label": "Go-back-N & selective repeat",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A selective-repeat sender uses a 3-bit sequence number field. What is the largest window it may use?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"6\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"go-back-n-selective-repeat-efficiency\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 6</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">go-back-n-selective-repeat-efficiency</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A selective-repeat sender uses a 3-bit sequence number field. What is the largest window it may use?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">4</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">7</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">8</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">3</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "4",
+    "7",
+    "8",
+    "3"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">4</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">7</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">8</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">3</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> With <code>m</code>-bit sequence numbers there are <code>2<sup>m</sup></code> distinct numbers. A selective-repeat sender may use at most <code>2<sup>m&minus;1</sup></code> of them, and a Go-Back-N sender at most <code>2<sup>m</sup> &minus; 1</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <code>m = 3</code>, so the sequence space is <code>2<sup>3</sup> = 8</code>.</li><li>Selective repeat halves it: <code>2<sup>2</sup> = 4</code>.</li><li>The reason is that a selective-repeat receiver accepts out-of-order frames, so a retransmission from the previous window must not carry a number that the receiver could confuse with a new frame. A window wider than half the space destroys that separation.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; 4.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 7 by recalling the Go-Back-N bound, or 8 by using the whole sequence space. Go-Back-N tolerates a window of <code>2<sup>m</sup>&minus;1</code> only because its receiver refuses out-of-order frames and therefore cannot confuse them.</p><p class=\"row\"><b>Takeaway.</b> Keep the pair together: Go-Back-N <code>2<sup>m</sup>&minus;1</code>, selective repeat <code>2<sup>m&minus;1</sup></code>.</p>"
+  },
+  {
+   "id": "CN-U2-Q32",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "go-back-n-selective-repeat-efficiency",
+   "subtopic": "go-back-n-selective-repeat-efficiency",
+   "subtopic_label": "Go-back-N & selective repeat",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A Go-Back-N receiver has correctly received every frame up to 3. It now receives frame 5. What does it do?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"7\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"go-back-n-selective-repeat-efficiency\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 7</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">go-back-n-selective-repeat-efficiency</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A Go-Back-N receiver has correctly received every frame up to 3. It now receives frame 5. What does it do?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">It discards frame 5 and sends an acknowledgement for frame 3, the last frame it received in order.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">It buffers frame 5 and delivers it once frame 4 arrives.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">It discards frame 5 and sends a negative acknowledgement asking for frame 4.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It accepts frame 5, because Go-Back-N tolerates gaps in the sequence.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "It discards frame 5 and sends an acknowledgement for frame 3, the last frame it received in order.",
+    "It buffers frame 5 and delivers it once frame 4 arrives.",
+    "It discards frame 5 and sends a negative acknowledgement asking for frame 4.",
+    "It accepts frame 5, because Go-Back-N tolerates gaps in the sequence."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">It discards frame 5 and sends an acknowledgement for frame 3, the last frame it received in order.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">It buffers frame 5 and delivers it once frame 4 arrives.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">It discards frame 5 and sends a negative acknowledgement asking for frame 4.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">It accepts frame 5, because Go-Back-N tolerates gaps in the sequence.</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A standard Go-Back-N receiver has a window of exactly one frame and keeps no reordering buffer. It delivers frames strictly in order and acknowledges cumulatively.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Frame 5 arrives while frame 4 is still missing, so it is out of order.</li><li>With no buffer, the only possible action is to discard it.</li><li>The receiver then repeats the acknowledgement of the highest in-order frame, which is 3.</li><li>The sender, receiving a duplicate acknowledgement for 3, eventually times out and retransmits 4 and 5 &mdash; which is the &lsquo;go back&rsquo; in Go-Back-N.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; discard it and re-acknowledge frame 3.</span></p><p class=\"row\"><b>Common misconception.</b> Option (B) describes a selective-repeat receiver, not a Go-Back-N one. Option (C) invents a negative acknowledgement, which standard Go-Back-N does not use.</p><p class=\"row\"><b>Takeaway.</b> Go-Back-N: receiver window 1, cumulative acknowledgements, discard out-of-order frames. Selective repeat: receiver buffers, individual acknowledgements.</p>"
+  },
+  {
+   "id": "CN-U2-Q33",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "go-back-n-selective-repeat-efficiency",
+   "subtopic": "go-back-n-selective-repeat-efficiency",
+   "subtopic_label": "Go-back-N & selective repeat",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A Go-Back-N sender uses a window of 10 frames on a 1 Mbps link. Frames are 1000 bits and the round-trip time is 100 ms; acknowledgements are negligible in size. What utilisation does it achieve?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"8\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"go-back-n-selective-repeat-efficiency\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 8</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">go-back-n-selective-repeat-efficiency</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A Go-Back-N sender uses a window of 10 frames on a 1 Mbps link. Frames are 1000 bits and the round-trip time is 100 ms; acknowledgements are negligible in size. What utilisation does it achieve?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">50%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">100%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">1.0%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">9.9%</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "50%",
+    "100%",
+    "1.0%",
+    "9.9%"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">50%</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">100%</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">1.0%</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">9.9%</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> With pipelining, utilisation is the fraction of the round trip covered by the window: <code>U = N&middot;Tt / (Tt + RTT)</code>, capped at 1.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>Tt = 1000/10<sup>6</sup> = 1 ms</code>.</li><li>The cycle is <code>Tt + RTT = 1 + 100 = 101 ms</code>.</li><li>The window keeps <code>10 &times; 1 = 10 ms</code> of transmission in flight.</li><li><code>U = 10/101 = 0.0990</code>, that is <code>9.9%</code>, below the cap of 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; 9.9%.</span></p><p class=\"row\"><b>Common misconception.</b> Choosing 100% assumes the window always fills the pipe; here it covers only a tenth of the round trip. Choosing 50% or 1.0% comes from mixing the one-way delay with the round trip, or from forgetting the window multiplier.</p><p class=\"row\"><b>Takeaway.</b> The window needed for 100% is <code>(Tt + RTT)/Tt = 101</code> frames; ten frames reach a tenth of that.</p>"
+  },
+  {
+   "id": "CN-U2-Q34",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "go-back-n-selective-repeat-efficiency",
+   "subtopic": "go-back-n-selective-repeat-efficiency",
+   "subtopic_label": "Go-back-N & selective repeat",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about Go-Back-N are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"9\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"go-back-n-selective-repeat-efficiency\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 9</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">go-back-n-selective-repeat-efficiency</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about Go-Back-N are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">The standard Go-Back-N receiver has a window of one frame and no reordering buffer.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">The sender keeps a copy of every frame in its window until that frame is acknowledged.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A single lost frame can cause a whole window of frames to be retransmitted.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"9\" data-typ=\"MSQ\" name=\"q9\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">Go-Back-N can never reach 100% link utilisation, however large its window.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "The standard Go-Back-N receiver has a window of one frame and no reordering buffer.",
+    "The sender keeps a copy of every frame in its window until that frame is acknowledged.",
+    "A single lost frame can cause a whole window of frames to be retransmitted.",
+    "Go-Back-N can never reach 100% link utilisation, however large its window."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">The standard Go-Back-N receiver has a window of one frame and no reordering buffer.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">The sender keeps a copy of every frame in its window until that frame is acknowledged.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">A single lost frame can cause a whole window of frames to be retransmitted.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">Go-Back-N can never reach 100% link utilisation, however large its window.</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Go-Back-N trades receiver simplicity and bandwidth for sender bookkeeping: the receiver is a one-frame window, the sender holds the unacknowledged window, and a loss costs the whole window.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True &mdash; that is the defining simplification of Go-Back-N against selective repeat.</li><li>(B) True &mdash; a frame may have to be retransmitted until a cumulative acknowledgement covering it arrives, so it must be retained.</li><li>(C) True &mdash; every frame after the lost one is discarded by the receiver, so all of them are sent again.</li><li>(D) False &mdash; once the window is at least <code>(Tt + RTT)/Tt</code> the link is busy continuously and utilisation reaches 100% in the absence of errors.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> (D) confuses loss recovery with capacity. Losses reduce the achieved goodput, but a sufficiently large window removes the idle time entirely.</p><p class=\"row\"><b>Takeaway.</b> Go-Back-N is efficient when losses are rare and wasteful when they are frequent; selective repeat buys back that waste with receiver memory.</p>"
+  },
+  {
+   "id": "CN-U2-Q35",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "go-back-n-selective-repeat-efficiency",
+   "subtopic": "go-back-n-selective-repeat-efficiency",
+   "subtopic_label": "Go-back-N & selective repeat",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A selective-repeat sender runs over a 10 Mbps link with 1250-byte frames and a one-way propagation delay of 30 ms. Acknowledgements are negligible.<br/>What is the smallest window, in frames, that keeps the link continuously busy?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"10\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"go-back-n-selective-repeat-efficiency\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 10</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">go-back-n-selective-repeat-efficiency</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A selective-repeat sender runs over a 10 Mbps link with 1250-byte frames and a one-way propagation delay of 30 ms. Acknowledgements are negligible.<br/>What is the smallest window, in frames, that keeps the link continuously busy?</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 10\" autocomplete=\"off\" class=\"natinput\" data-n=\"10\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer number of frames.</div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    61
+   ],
+   "answer_display": "61",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The window must cover one transmission time plus one round trip; that is the number of frames that fit in the pipe.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>Tt = 1250 &times; 8 / 10<sup>7</sup> = 10000/10<sup>7</sup> = 1 ms</code>.</li><li><code>RTT = 2 &times; 30 = 60 ms</code>.</li><li>Cycle <code>= Tt + RTT = 61 ms</code>.</li><li>Frames per cycle <code>= 61/1 = 61</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 61 frames.</span></p><p class=\"row\"><b>Common misconception.</b> Using the one-way delay gives 31, which leaves the link idle for half of every round trip. Note also that 61 frames needs a sequence field of at least 7 bits for selective repeat, since <code>2<sup>m&minus;1</sup> &ge; 61</code> requires <code>m = 7</code>.</p><p class=\"row\"><b>Takeaway.</b> Window for full utilisation <code>= (Tt + RTT)/Tt</code>; check it against <code>2<sup>m&minus;1</sup></code> before promising it is achievable.</p>"
+  },
+  {
+   "id": "CN-U2-Q36",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "pure-and-slotted-aloha",
+   "subtopic": "pure-and-slotted-aloha",
+   "subtopic_label": "Pure & slotted ALOHA",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What is the maximum throughput of slotted ALOHA, as a fraction of the channel capacity?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"11\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"pure-and-slotted-aloha\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 11</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">pure-and-slotted-aloha</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">What is the maximum throughput of slotted ALOHA, as a fraction of the channel capacity?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">18.4%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">50%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">36.8%</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">100%</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "18.4%",
+    "50%",
+    "36.8%",
+    "100%"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">18.4%</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">50%</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">36.8%</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">100%</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Slotted ALOHA has throughput <code>S = G&middot;e<sup>&minus;G</sup></code>; differentiating gives its peak at <code>G = 1</code>, where <code>S = 1/e &asymp; 0.368</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>S(G) = G e<sup>&minus;G</sup></code>.</li><li><code>dS/dG = e<sup>&minus;G</sup>(1 &minus; G)</code>, which vanishes at <code>G = 1</code>.</li><li><code>S(1) = e<sup>&minus;1</sup> &asymp; 0.368</code>, that is 36.8%.</li><li>This is exactly twice the peak of pure ALOHA, because the vulnerable period is halved.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 36.8%.</span></p><p class=\"row\"><b>Common misconception.</b> 18.4% is the pure-ALOHA figure, and 50% belongs to neither protocol &mdash; it is sometimes quoted for a perfect scheduler with a two-way handshake, not for ALOHA.</p><p class=\"row\"><b>Takeaway.</b> Pure <code>1/(2e)</code>, slotted <code>1/e</code>; slotting doubles the ceiling and nothing more.</p>"
+  },
+  {
+   "id": "CN-U2-Q37",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "pure-and-slotted-aloha",
+   "subtopic": "pure-and-slotted-aloha",
+   "subtopic_label": "Pure & slotted ALOHA",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In slotted ALOHA, what is the vulnerable period of a frame whose transmission time is <code>T</code>?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"12\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"pure-and-slotted-aloha\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 12</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">pure-and-slotted-aloha</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In slotted ALOHA, what is the vulnerable period of a frame whose transmission time is <code>T</code>?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\"><code>T/2</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\"><code>T</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\"><code>2T</code></span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\"><code>3T</code></span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "<code>T/2</code>",
+    "<code>T</code>",
+    "<code>2T</code>",
+    "<code>3T</code>"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\"><code>T/2</code></span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\"><code>T</code></span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\"><code>2T</code></span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\"><code>3T</code></span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The vulnerable period is the span of time during which another station's start of transmission would overlap this frame and destroy it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In slotted ALOHA every station may start only at a slot boundary, and a frame occupies exactly one slot.</li><li>A frame that starts in the same slot as ours collides with it; a frame that starts in the previous slot has already finished, and one that starts in the next slot begins only after ours ends.</li><li>So the only colliding start is our own slot: the vulnerable period is exactly <code>T</code>.</li><li>In pure ALOHA a station may start at any instant, so a start up to <code>T</code> before or after ours also overlaps, giving <code>2T</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; <code>T</code>.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <code>2T</code> by carrying the pure-ALOHA figure across. Slotting is precisely the mechanism that removes the half-frame overlap on either side.</p><p class=\"row\"><b>Takeaway.</b> Vulnerable period <code>T</code> &rarr; <code>S = Ge<sup>&minus;G</sup></code>; vulnerable period <code>2T</code> &rarr; <code>S = Ge<sup>&minus;2G</sup></code>.</p>"
+  },
+  {
+   "id": "CN-U2-Q38",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "pure-and-slotted-aloha",
+   "subtopic": "pure-and-slotted-aloha",
+   "subtopic_label": "Pure & slotted ALOHA",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "In a pure ALOHA network the offered load is <code>G = 0.5</code> frames per frame time. What is the throughput <code>S = G&middot;e<sup>&minus;2G</sup></code>?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"13\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"pure-and-slotted-aloha\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 13</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">pure-and-slotted-aloha</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In a pure ALOHA network the offered load is <code>G = 0.5</code> frames per frame time. What is the throughput <code>S = G&middot;e<sup>&minus;2G</sup></code>?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">0.303</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">0.184</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">0.368</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">0.092</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "0.303",
+    "0.184",
+    "0.368",
+    "0.092"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">0.303</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">0.184</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">0.368</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">0.092</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Throughput is the offered load multiplied by the probability that no other transmission overlaps the vulnerable period, which for pure ALOHA is <code>e<sup>&minus;2G</sup></code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>2G = 1</code>.</li><li><code>e<sup>&minus;1</sup> &asymp; 0.3679</code>.</li><li><code>S = 0.5 &times; 0.3679 &asymp; 0.1839</code>.</li><li>That is the maximum of the pure-ALOHA curve, which occurs at <code>G = 0.5</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 0.184.</span></p><p class=\"row\"><b>Common misconception.</b> Using <code>e<sup>&minus;G</sup></code> instead of <code>e<sup>&minus;2G</sup></code> gives 0.303, the slotted-ALOHA value at the same load; 0.368 is the slotted peak, and 0.092 is <code>0.5 &times; e<sup>&minus;3</sup></code>.</p><p class=\"row\"><b>Takeaway.</b> At the same offered load, slotted ALOHA always delivers more than pure ALOHA, and the gap is a factor of <code>e<sup>G</sup></code>.</p>"
+  },
+  {
+   "id": "CN-U2-Q39",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "pure-and-slotted-aloha",
+   "subtopic": "pure-and-slotted-aloha",
+   "subtopic_label": "Pure & slotted ALOHA",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about ALOHA throughput are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"14\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"pure-and-slotted-aloha\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 14</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">pure-and-slotted-aloha</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about ALOHA throughput are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">At <code>G = 1</code> the throughputs of slotted ALOHA and of pure ALOHA are equal.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Pure ALOHA reaches its peak throughput at <code>G = 0.5</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Slotted ALOHA reaches its peak throughput at <code>G = 1</code>.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"14\" data-typ=\"MSQ\" name=\"q14\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">At its peak, slotted ALOHA carries twice the offered load that pure ALOHA carries at its own peak.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "At <code>G = 1</code> the throughputs of slotted ALOHA and of pure ALOHA are equal.",
+    "Pure ALOHA reaches its peak throughput at <code>G = 0.5</code>.",
+    "Slotted ALOHA reaches its peak throughput at <code>G = 1</code>.",
+    "At its peak, slotted ALOHA carries twice the offered load that pure ALOHA carries at its own peak."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">At <code>G = 1</code> the throughputs of slotted ALOHA and of pure ALOHA are equal.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">Pure ALOHA reaches its peak throughput at <code>G = 0.5</code>.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">Slotted ALOHA reaches its peak throughput at <code>G = 1</code>.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">At its peak, slotted ALOHA carries twice the offered load that pure ALOHA carries at its own peak.</span>"
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "answer_display": "Options (B), (C) and (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The two curves are <code>Ge<sup>&minus;2G</sup></code> and <code>Ge<sup>&minus;G</sup></code>; their maxima sit at <code>G = 1/2</code> and <code>G = 1</code> respectively.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) False &mdash; at <code>G = 1</code>, slotted gives <code>0.368</code> while pure gives <code>e<sup>&minus;2</sup> &asymp; 0.135</code>.</li><li>(B) True &mdash; <code>d/dG (Ge<sup>&minus;2G</sup>) = e<sup>&minus;2G</sup>(1 &minus; 2G)</code>, zero at <code>G = 0.5</code>.</li><li>(C) True &mdash; <code>d/dG (Ge<sup>&minus;G</sup>) = e<sup>&minus;G</sup>(1 &minus; G)</code>, zero at <code>G = 1</code>.</li><li>(D) True &mdash; the peaks occur at <code>G = 1</code> and <code>G = 0.5</code>, so the slotted peak carries twice the load for twice the throughput.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (B), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (A) is the trap: the two curves do cross, but at <code>G = 0</code> and only there &mdash; at every positive load slotted ALOHA is strictly higher.</p><p class=\"row\"><b>Takeaway.</b> Peak throughput <code>1/(2e) = 0.184</code> at <code>G = 0.5</code>; <code>1/e = 0.368</code> at <code>G = 1</code>.</p>"
+  },
+  {
+   "id": "CN-U2-Q40",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "pure-and-slotted-aloha",
+   "subtopic": "pure-and-slotted-aloha",
+   "subtopic_label": "Pure & slotted ALOHA",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Eight stations share a slotted ALOHA channel. In every slot each station transmits independently with probability <code>1/8</code>.<br/>What is the probability, as a percentage rounded to the nearest integer, that a given slot is successful?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"15\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"pure-and-slotted-aloha\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 15</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">pure-and-slotted-aloha</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Eight stations share a slotted ALOHA channel. In every slot each station transmits independently with probability <code>1/8</code>.<br/>What is the probability, as a percentage rounded to the nearest integer, that a given slot is successful?</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 15\" autocomplete=\"off\" class=\"natinput\" data-n=\"15\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: a percentage, rounded to the nearest integer, without the % sign.</div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    39
+   ],
+   "answer_display": "39",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A slot succeeds when exactly one of the eight stations transmits, which is a binomial probability: <code>8 &times; p &times; (1&minus;p)<sup>7</sup></code> with <code>p = 1/8</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The probability that one specified station transmits and the other seven stay silent is <code>(1/8)(7/8)<sup>7</sup></code>.</li><li>Any of the eight stations could be the one, so multiply by 8.</li><li><code>(7/8)<sup>7</sup> = 0.875<sup>7</sup> &asymp; 0.3927</code>.</li><li>As a percentage that is 39.27%, which rounds to 39.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 39 (percent).</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 12.5% takes only the single station's own probability and forgets that any of the eight may be the successful one. Reporting 37% forgets that this is a finite population, not the <code>Ge<sup>&minus;G</sup></code> limit; with <code>G = 1</code> the Poisson model gives 36.8% and the binomial gives 39.3%.</p><p class=\"row\"><b>Takeaway.</b> For a finite number of stations use the binomial form; the <code>Ge<sup>&minus;G</sup></code> curve is its large-population limit.</p>"
+  },
+  {
+   "id": "CN-U2-Q41",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "csma-cd-csma-ca-backoff",
+   "subtopic": "csma-cd-csma-ca-backoff",
+   "subtopic_label": "CSMA/CD, CSMA/CA & backoff",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A CSMA/CD station using binary exponential backoff has just suffered its third consecutive collision, counting the first collision as <code>i = 1</code>. From which set does it choose the backoff value <code>k</code>?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"16\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"csma-cd-csma-ca-backoff\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 16</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">csma-cd-csma-ca-backoff</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A CSMA/CD station using binary exponential backoff has just suffered its third consecutive collision, counting the first collision as <code>i = 1</code>. From which set does it choose the backoff value <code>k</code>?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">0 to 3</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">0 to 15</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">0 to 7</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"16\" data-typ=\"MCQ\" name=\"q16\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">1 to 8</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "0 to 3",
+    "0 to 15",
+    "0 to 7",
+    "1 to 8"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">0 to 3</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">0 to 15</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">0 to 7</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">1 to 8</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> After the <code>i</code>-th collision the station waits <code>k</code> slot times, where <code>k</code> is drawn uniformly from <code>0</code> to <code>2<sup>i</sup> &minus; 1</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>i = 3</code>.</li><li><code>2<sup>i</sup> &minus; 1 = 8 &minus; 1 = 7</code>.</li><li>So <code>k</code> ranges over <code>0, 1, ..., 7</code>, that is eight choices.</li><li>The range doubles with each further collision until the implementation's limit is reached.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 0 to 7.</span></p><p class=\"row\"><b>Common misconception.</b> &ldquo;0 to 3&rdquo; uses <code>2<sup>i&minus;1</sup> &minus; 1</code>, off by one collision; &ldquo;0 to 15&rdquo; is the range after the fourth. Note also that <code>k = 0</code> is allowed, which is why the range is not <code>1 to 8</code>.</p><p class=\"row\"><b>Takeaway.</b> Collision <code>i</code> gives <code>2<sup>i</sup></code> slots numbered from 0.</p>"
+  },
+  {
+   "id": "CN-U2-Q42",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "csma-cd-csma-ca-backoff",
+   "subtopic": "csma-cd-csma-ca-backoff",
+   "subtopic_label": "CSMA/CD, CSMA/CA & backoff",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What does a CSMA/CD station transmit as soon as it detects a collision?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"17\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"csma-cd-csma-ca-backoff\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 17</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">csma-cd-csma-ca-backoff</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">What does a CSMA/CD station transmit as soon as it detects a collision?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A negative acknowledgement for the damaged frame.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">The frame again, immediately.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A request-to-send frame.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"17\" data-typ=\"MCQ\" name=\"q17\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A jam signal, which reinforces the collision so that every station on the segment notices it.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "A negative acknowledgement for the damaged frame.",
+    "The frame again, immediately.",
+    "A request-to-send frame.",
+    "A jam signal, which reinforces the collision so that every station on the segment notices it."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">A negative acknowledgement for the damaged frame.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">The frame again, immediately.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">A request-to-send frame.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">A jam signal, which reinforces the collision so that every station on the segment notices it.</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A collision is detected by comparing the transmitted signal with the received one. Because the first station to notice may be far from the other participants, it must make the collision last long enough for everyone to see it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The detecting station stops sending the frame and sends a short jam signal instead.</li><li>The jam guarantees that the collision energy persists for at least the slot time, so no station can miss it.</li><li>Every station involved then aborts, enters binary exponential backoff and reschedules.</li><li>Negative acknowledgements belong to error-control protocols at a higher layer, and an immediate retransmission would collide again.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; a jam signal.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that everyone detects the collision at the same moment. Stations are spread along the cable, so the jam exists to equalise what they observe.</p><p class=\"row\"><b>Takeaway.</b> Detect &rarr; abort with a jam &rarr; back off &rarr; retry.</p>"
+  },
+  {
+   "id": "CN-U2-Q43",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "csma-cd-csma-ca-backoff",
+   "subtopic": "csma-cd-csma-ca-backoff",
+   "subtopic_label": "CSMA/CD, CSMA/CA & backoff",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A CSMA/CD LAN has a slot time of 51.2 &micro;s and signals that travel at 2 &times; 10<sup>8</sup> m/s. Treating the slot time as the maximum round-trip propagation delay, what is the greatest cable length the network can span?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"18\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"csma-cd-csma-ca-backoff\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 18</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">csma-cd-csma-ca-backoff</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A CSMA/CD LAN has a slot time of 51.2 &micro;s and signals that travel at 2 &times; 10<sup>8</sup> m/s. Treating the slot time as the maximum round-trip propagation delay, what is the greatest cable length the network can span?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"18\" data-typ=\"MCQ\" name=\"q18\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">5120 m</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"18\" data-typ=\"MCQ\" name=\"q18\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">2560 m</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"18\" data-typ=\"MCQ\" name=\"q18\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">10240 m</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"18\" data-typ=\"MCQ\" name=\"q18\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">512 m</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "5120 m",
+    "2560 m",
+    "10240 m",
+    "512 m"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">5120 m</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">2560 m</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">10240 m</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">512 m</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The slot time is twice the maximum one-way propagation delay, <code>2&tau;</code>, because a collision must be able to travel from the far end back to the sender before the sender finishes transmitting.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>2&tau; = 51.2 &micro;s</code>, so <code>&tau; = 25.6 &micro;s</code>.</li><li><code>length = speed &times; &tau; = 2 &times; 10<sup>8</sup> &times; 25.6 &times; 10<sup>&minus;6</sup></code>.</li><li><code>= 5120 m</code>.</li><li>Doubling the cable would double <code>&tau;</code> and break the guarantee that the sender is still transmitting when a distant collision is reported.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; 5120 m.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 10 240 m uses the slot time as a one-way delay. The slot time is a round trip, and the cable length is fixed by the one-way half of it.</p><p class=\"row\"><b>Takeaway.</b> <code>slot time = 2 &times; length / speed</code>; every one of the three quantities follows from the other two.</p>"
+  },
+  {
+   "id": "CN-U2-Q44",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "csma-cd-csma-ca-backoff",
+   "subtopic": "csma-cd-csma-ca-backoff",
+   "subtopic_label": "CSMA/CD, CSMA/CA & backoff",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about CSMA/CA in IEEE 802.11 are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"19\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"csma-cd-csma-ca-backoff\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 19</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">csma-cd-csma-ca-backoff</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about CSMA/CA in IEEE 802.11 are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A data frame is positively acknowledged at the link layer, because a station cannot reliably detect a collision while it is transmitting.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">The RTS/CTS exchange reduces the damage caused by hidden terminals.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A station that finds the medium busy must wait for it to become idle and then for a further backoff period before transmitting.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The DIFS is shorter than the SIFS.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "A data frame is positively acknowledged at the link layer, because a station cannot reliably detect a collision while it is transmitting.",
+    "The RTS/CTS exchange reduces the damage caused by hidden terminals.",
+    "A station that finds the medium busy must wait for it to become idle and then for a further backoff period before transmitting.",
+    "The DIFS is shorter than the SIFS."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">A data frame is positively acknowledged at the link layer, because a station cannot reliably detect a collision while it is transmitting.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">The RTS/CTS exchange reduces the damage caused by hidden terminals.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">A station that finds the medium busy must wait for it to become idle and then for a further backoff period before transmitting.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">The DIFS is shorter than the SIFS.</span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> CSMA/CA avoids collisions rather than detecting them, because a radio's own transmission drowns out any incoming signal and a hidden terminal is inaudible to the sender.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True &mdash; with detection impossible, the only way to learn that a frame was lost is to require an explicit acknowledgement and retransmit on its absence.</li><li>(B) True &mdash; the short RTS reserves the medium and the CTS, sent by the receiver, is heard by stations that cannot hear the sender, which is exactly the hidden-terminal case.</li><li>(C) True &mdash; after the medium goes idle a station still defers for a random backoff, so several waiting stations do not all start at the same instant.</li><li>(D) False &mdash; the ordering is <code>SIFS &lt; PIFS &lt; DIFS</code>. The short interframe space gives acknowledgements priority over new frames, which is why it must be shorter.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> (D) reverses the two intervals. Making DIFS shorter than SIFS would let a new data frame jump ahead of the acknowledgement it is waiting for.</p><p class=\"row\"><b>Takeaway.</b> Shortest interval wins the contention: SIFS for control responses, DIFS for ordinary data.</p>"
+  },
+  {
+   "id": "CN-U2-Q45",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "csma-cd-csma-ca-backoff",
+   "subtopic": "csma-cd-csma-ca-backoff",
+   "subtopic_label": "CSMA/CD, CSMA/CA & backoff",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "After four consecutive collisions a CSMA/CD station draws <code>k</code> uniformly at random from <code>0</code> to <code>2<sup>4</sup> &minus; 1</code> and waits <code>k</code> slot times.<br/>What is its expected wait, in slot times?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"20\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"csma-cd-csma-ca-backoff\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 20</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">csma-cd-csma-ca-backoff</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">After four consecutive collisions a CSMA/CD station draws <code>k</code> uniformly at random from <code>0</code> to <code>2<sup>4</sup> &minus; 1</code> and waits <code>k</code> slot times.<br/>What is its expected wait, in slot times?</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 20\" autocomplete=\"off\" class=\"natinput\" data-n=\"20\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: a number of slot times; a decimal answer is allowed.</div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    7.5
+   ],
+   "answer_display": "7.5",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The backoff <code>k</code> is uniform over <code>0 .. 2<sup>i</sup>&minus;1</code>, so its expectation is the midpoint of the range, <code>(2<sup>i</sup> &minus; 1)/2</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code>i = 4</code>, so <code>k</code> is uniform over <code>0, 1, ..., 15</code>, sixteen values.</li><li>The sum is <code>0 + 1 + ... + 15 = 120</code>.</li><li>Expected value <code>= 120/16 = 7.5</code>.</li><li>Equivalently <code>(2<sup>4</sup> &minus; 1)/2 = 15/2 = 7.5</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 7.5 slot times.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 8 treats the range as <code>1 .. 16</code> or as <code>0 .. 16</code>; the range is <code>0 .. 2<sup>i</sup>&minus;1</code>, which has an odd maximum and therefore a half-integer mean.</p><p class=\"row\"><b>Takeaway.</b> Expected backoff after collision <code>i</code> is <code>(2<sup>i</sup>&minus;1)/2</code> slot times &mdash; it doubles with every further collision.</p>"
+  },
+  {
+   "id": "CN-U2-Q46",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "ethernet-standards-switches-bridges",
+   "subtopic": "ethernet-standards-switches-bridges",
+   "subtopic_label": "Ethernet, switches & bridges",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which address in an arriving frame does a transparent bridge read in order to build its forwarding table?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"21\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"ethernet-standards-switches-bridges\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 21</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">ethernet-standards-switches-bridges</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">Which address in an arriving frame does a transparent bridge read in order to build its forwarding table?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">The destination MAC address</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">The destination IP address</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">The frame's sequence number</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"21\" data-typ=\"MCQ\" name=\"q21\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The source MAC address</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "The destination MAC address",
+    "The destination IP address",
+    "The frame's sequence number",
+    "The source MAC address"
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">The destination MAC address</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">The destination IP address</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">The frame's sequence number</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">The source MAC address</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A transparent bridge learns by looking at where frames come <i>from</i>: if a frame with source address <code>S</code> arrived on port <code>p</code>, then <code>S</code> is reachable through <code>p</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The frame arrives on a port; the bridge records <code>source &rarr; port</code> in its table, refreshing the entry's age.</li><li>It then looks up the <i>destination</i> address to decide where to forward the frame.</li><li>So the source address is used for learning and the destination address for forwarding &mdash; two different reads for two different purposes.</li><li>IP addresses are not examined at all by a layer-2 bridge.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; the source MAC address.</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the address used for learning with the address used for forwarding. Answering &lsquo;destination&rsquo; describes the lookup, not the table construction.</p><p class=\"row\"><b>Takeaway.</b> Learn from the source, forward by the destination, and flood when the destination is unknown.</p>"
+  },
+  {
+   "id": "CN-U2-Q47",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "ethernet-standards-switches-bridges",
+   "subtopic": "ethernet-standards-switches-bridges",
+   "subtopic_label": "Ethernet, switches & bridges",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "What does a hub do with a frame it receives?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"22\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"ethernet-standards-switches-bridges\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 22</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">ethernet-standards-switches-bridges</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">What does a hub do with a frame it receives?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">It forwards the frame only to the port on which the destination address was learned.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">It discards the frame if the destination address is unknown.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">It repeats the signal out of every other port, because it keeps no address table.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"22\" data-typ=\"MCQ\" name=\"q22\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It rewrites the source address before repeating the frame.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "It forwards the frame only to the port on which the destination address was learned.",
+    "It discards the frame if the destination address is unknown.",
+    "It repeats the signal out of every other port, because it keeps no address table.",
+    "It rewrites the source address before repeating the frame."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">It forwards the frame only to the port on which the destination address was learned.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">It discards the frame if the destination address is unknown.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">It repeats the signal out of every other port, because it keeps no address table.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">It rewrites the source address before repeating the frame.</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A hub is a physical-layer device: it regenerates and repeats electrical signals and has no notion of a frame, an address or a table.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bits arriving on one port are re-timed and sent out of all the others.</li><li>There is no filtering, so every station in the collision domain sees every transmission.</li><li>All ports of a hub therefore belong to a single collision domain and a single broadcast domain.</li><li>Only a bridge or switch, which reads addresses, can forward selectively.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; it repeats the signal out of every other port.</span></p><p class=\"row\"><b>Common misconception.</b> Option (A) describes a switch. Because a hub cannot read an address, it can neither filter nor learn, and it also cannot detect a collision per port &mdash; it merely repeats the collision to everyone.</p><p class=\"row\"><b>Takeaway.</b> Hub &rarr; repeat everything; switch &rarr; learn, filter and flood.</p>"
+  },
+  {
+   "id": "CN-U2-Q48",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "ethernet-standards-switches-bridges",
+   "subtopic": "ethernet-standards-switches-bridges",
+   "subtopic_label": "Ethernet, switches & bridges",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "A switch receives a frame on port 1 whose destination MAC address is one that the switch has learned on port 1 itself. What does the switch do?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"23\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"ethernet-standards-switches-bridges\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 23</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">ethernet-standards-switches-bridges</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A switch receives a frame on port 1 whose destination MAC address is one that the switch has learned on port 1 itself. What does the switch do?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">It filters the frame, that is, drops it, because the destination lies on the same segment as the source.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">It floods the frame out of every other port.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">It forwards the frame out of port 1 as well.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"23\" data-typ=\"MCQ\" name=\"q23\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It returns the frame to the sender with an error indication.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "It filters the frame, that is, drops it, because the destination lies on the same segment as the source.",
+    "It floods the frame out of every other port.",
+    "It forwards the frame out of port 1 as well.",
+    "It returns the frame to the sender with an error indication."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">It filters the frame, that is, drops it, because the destination lies on the same segment as the source.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">It floods the frame out of every other port.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">It forwards the frame out of port 1 as well.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">It returns the frame to the sender with an error indication.</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A switch compares the port learned for the destination with the port the frame arrived on. Equal means the two hosts share a segment and no other segment needs the frame.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The source address is learned on port 1, refreshing that entry.</li><li>The destination address is looked up and also resolves to port 1.</li><li>Because the frame is already on the segment where the destination lives, forwarding it anywhere would be wasted bandwidth.</li><li>The switch therefore filters &mdash; drops &mdash; the frame.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; it filters the frame.</span></p><p class=\"row\"><b>Common misconception.</b> Believing a switch always forwards or always floods. Filtering is the third action, and it is what makes a switch a bandwidth-saving device rather than a repeater.</p><p class=\"row\"><b>Takeaway.</b> Three actions: filter if the destination is on the incoming port, forward if it is on another known port, flood if it is unknown.</p>"
+  },
+  {
+   "id": "CN-U2-Q49",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "ethernet-standards-switches-bridges",
+   "subtopic": "ethernet-standards-switches-bridges",
+   "subtopic_label": "Ethernet, switches & bridges",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about IEEE 802.3 Ethernet are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"24\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"ethernet-standards-switches-bridges\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 24</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">ethernet-standards-switches-bridges</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about IEEE 802.3 Ethernet are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A frame's payload must be at least 46 bytes for the frame to reach the 64-byte minimum.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Ethernet delivers frames reliably by acknowledging each one at the data link layer.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">The preamble is seven bytes of alternating 1s and 0s followed by a one-byte start-frame delimiter.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"24\" data-typ=\"MSQ\" name=\"q24\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">A switch forwards a broadcast frame out of every port except the one on which it arrived.</span><span class=\"mark\"></span></label></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [
+    "A frame's payload must be at least 46 bytes for the frame to reach the 64-byte minimum.",
+    "Ethernet delivers frames reliably by acknowledging each one at the data link layer.",
+    "The preamble is seven bytes of alternating 1s and 0s followed by a one-byte start-frame delimiter.",
+    "A switch forwards a broadcast frame out of every port except the one on which it arrived."
+   ],
+   "options_html": [
+    "<span class=\"lbl\">A</span><span class=\"txt\">A frame's payload must be at least 46 bytes for the frame to reach the 64-byte minimum.</span>",
+    "<span class=\"lbl\">B</span><span class=\"txt\">Ethernet delivers frames reliably by acknowledging each one at the data link layer.</span>",
+    "<span class=\"lbl\">C</span><span class=\"txt\">The preamble is seven bytes of alternating 1s and 0s followed by a one-byte start-frame delimiter.</span>",
+    "<span class=\"lbl\">D</span><span class=\"txt\">A switch forwards a broadcast frame out of every port except the one on which it arrived.</span>"
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Ethernet is a best-effort, connectionless LAN: it detects errors but does not recover from them, and its frame format is fixed by the standard.</p><p class=\"row\"><b>Step by step.</b></li></ol><ol><li>(A) True &mdash; the minimum frame is 64 bytes and the header plus trailer accounts for 18 bytes (6 + 6 + 2 + 4), so the payload floor is 46 bytes. Shorter payloads are padded.</li><li>(B) False &mdash; there is no link-layer acknowledgement in 802.3. A lost frame is simply lost, and recovery is left to TCP or the application.</li><li>(C) True &mdash; 7 bytes of preamble for clock recovery, then the <code>10101011</code> start-frame delimiter.</li><li>(D) True &mdash; a broadcast address cannot be looked up, so the frame is flooded; the sending port is excluded.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (B) is the usual error, often borrowed from Wi-Fi, where 802.11 <i>does</i> acknowledge every data frame. Wired Ethernet does not.</p><p class=\"row\"><b>Takeaway.</b> 64-byte minimum, 46-byte payload floor, 18 bytes of overhead, no acknowledgements.</p>"
+  },
+  {
+   "id": "CN-U2-Q50",
+   "subject": "computer-networks",
+   "subject_name": "Computer Networks",
+   "unit": "2",
+   "unit_number": "2",
+   "unit_slug": "data-link-mac",
+   "unit_name": "Data Link Protocols & MAC",
+   "topic": "Data Link Protocols & MAC",
+   "sub": "ethernet-standards-switches-bridges",
+   "subtopic": "ethernet-standards-switches-bridges",
+   "subtopic_label": "Ethernet, switches & bridges",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-28",
+   "set": "Set 2 of 2",
+   "question": "Four switches are cabled so that every pair is joined by exactly one link. The spanning-tree protocol runs and reduces the network to a tree.<br/>How many of those links are left in the blocking state?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"25\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-networks\" data-unit=\"data-link-mac\" data-unit-number=\"2\" data-subtopic=\"ethernet-standards-switches-bridges\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 25</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">ethernet-standards-switches-bridges</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:#5b6b7a\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Four switches are cabled so that every pair is joined by exactly one link. The spanning-tree protocol runs and reduces the network to a tree.<br/>How many of those links are left in the blocking state?</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 25\" autocomplete=\"off\" class=\"natinput\" data-n=\"25\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div><div class=\"hintline\">Answer format: an integer number of links.</div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div></div>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    3
+   ],
+   "answer_display": "3",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A spanning tree over <code>n</code> nodes has exactly <code>n &minus; 1</code> links. Every other link must be blocked, or a loop would remain.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Four switches, every pair joined: the number of links is <code>C(4,2) = 6</code>.</li><li>A tree on four nodes uses <code>4 &minus; 1 = 3</code> links.</li><li>Blocked links <code>= 6 &minus; 3 = 3</code>.</li><li>Each blocked port still receives bridge protocol data units but forwards no data, so the remaining three links form a loop-free path between every pair.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3 links blocked.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 6 minus the number of switches, or blocking links until each switch has degree one. The tree requirement is <code>n&minus;1</code> links in total, not a star.</p><p class=\"row\"><b>Takeaway.</b> Blocked links <code>= |E| &minus; (|V| &minus; 1)</code> for a connected graph.</p>"
   }
  ]
 }
