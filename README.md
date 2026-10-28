@@ -7,29 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 2 of 2**, 2026-10-28 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html)
+- **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 2 of 2**, 2026-10-28 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: hardwired control (6) · microprogrammed control (6) · ALU & datapath timing (7) · bus architectures (6)
-- Rotation: MODE A drew **Computer Architecture** from the 5 subjects that had no paper dated 2026-10-28 (unseeded
-  `random.SystemRandom()` draw, index 1 of 5). `runs[]` sorted by `(date, run)` gives the most recent paper for the
-  subject as `{date 2026-10-27, run 1, unit 2, datapath-control-unit, Set 1 of 2}`. Unit 2 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step
-  B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Computer Architecture run advances
-  `(index_of(datapath-control-unit) = 1 + 1) mod 6 = 2` → **Unit 3, Memory Hierarchy & Cache Memory**. No override was
-  used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
+- Subtopics: Stop-and-wait ARQ (5) · Go-back-N & selective repeat (5) · Pure & slotted ALOHA (5) · CSMA/CD,
+  CSMA/CA & backoff (5) · Ethernet, switches & bridges (5)
+- Rotation: MODE A drew **Computer Networks** from the 4 subjects that had no paper dated 2026-10-28 (unseeded
+  `random.SystemRandom()` choice, draw index 3 of 4). `runs[]` sorted by `(date, run)` gives the most recent paper for
+  the subject as `{date 2026-10-27, run 3, unit 2, data-link-mac, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Computer Networks run
+  advances `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**.
+  No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 2 of 2**, 2026-10-28 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 64 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 35 current · 29 archived |
-| Test cards on the portal | 38 |
+| Papers published (current + archived) | 65 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 35 current · 30 archived |
+| Test cards on the portal | 39 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1600 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1625 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 29 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 30 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -56,6 +57,83 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Computer Networks → Unit 2 (Data Link Protocols & MAC), Set 2 of 2.** MODE A: one subject was
+  drawn uniformly at random with an unseeded `random.SystemRandom()` choice over the 4 subjects that had no paper
+  dated 2026-10-28 (draw index 3 of 4), giving **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most
+  recent paper as `{date 2026-10-27, run 3, unit 2, data-link-mac, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now holds exactly 50
+  questions — the cap — and the next Computer Networks run advances
+  `(index_of(data-link-mac) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**.
+  The Set 1 paper was moved to
+  `computer-networks/data-link-mac/archive/gate_cn_mock_2_2026-10-27_run1.html` with its content frozen, and the Set 2
+  paper took the canonical filename. No override was used, no unit exceeded 50 questions and no second pass has
+  started.
+- Coverage this run: all five Unit 2 subtopics — stop-and-wait ARQ (5), Go-back-N and selective repeat (5), pure and
+  slotted ALOHA (5), CSMA/CD, CSMA/CA and backoff (5), Ethernet, switches and bridges (5). Composition 15 MCQ / 5 MSQ
+  / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="computer-networks"`, `data-unit="data-link-mac"`, `data-unit-number="2"` and its subtopic slug.
+- All 25 items are new: `CN-U2-Q26`..`CN-U2-Q50` did not exist in the bank, and every stem was compared against the
+  75 banked Computer Networks items with a string-normalised check (tags stripped, case and punctuation removed).
+  That check caught one collision — this run's stop-and-wait MSQ opened with the same sentence as `CN-DL2-Q04` — and
+  the stem was rewritten to name the receiver and the timer before shipping. After the rewrite: zero stem collisions
+  and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** Utilisation after halving the propagation delay:
+  `U = 0.2` implies `2Tp = 4Tt`, so the new figure is `1/3 = 33.3%` (Q02); the 100 Mbps / 1 ms link gives
+  `80 µs / 2080 µs = 3.85%` (Q03); the frame count for a full pipe is `(1 + 100)/1 = 101` (Q05) and `(1 + 60)/1 = 61`
+  (Q10); the Go-Back-N window of 10 gives `10/101 = 9.9%` (Q08); pure ALOHA at `G = 0.5` gives
+  `0.5·e⁻¹ = 0.1839` (Q13); eight slotted stations give `(7/8)⁷ = 39.27%`, rounded to **39** (Q15); the 51.2 µs slot
+  gives `2 × 10⁸ × 25.6 µs = 5120 m` (Q18); the backoff expectation is `(0 + … + 15)/16 = 7.5` (Q20); and the
+  spanning tree of `K₄` blocks `6 − 3 = 3` links (Q25). **10 of 10 computed answers reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: a timeout must cover the frame time
+  plus one round trip plus the acknowledgement plus a margin (Q01); one outstanding frame means one buffer, one
+  sequence bit and a timeout above the round trip (Q04); selective repeat takes `2^(m−1) = 4` numbers from a 3-bit
+  field while Go-Back-N may take 7 (Q06); a Go-Back-N receiver has a window of one and re-acknowledges the last
+  in-order frame (Q07); a single loss costs a whole window (Q09); slotted ALOHA halves the vulnerable period to `T`
+  and doubles the ceiling to `1/e` (Q11, Q12); the two ALOHA curves meet only at `G = 0` (Q14); collision `i` gives
+  `2^i` slots numbered from 0, so `i = 3` means `0..7` (Q16); the jam signal exists because stations are spread along
+  the cable (Q17); CSMA/CA acknowledges every data frame because detection is impossible in radio, and `SIFS` is
+  shorter than `DIFS` (Q19); a bridge learns from the source and forwards by the destination (Q21); a hub repeats
+  everything (Q22); a switch filters a frame whose destination is on the incoming port (Q23); and 802.3 has no
+  link-layer acknowledgement at all (Q24).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 3, (C) 4 and
+  (D) 4, and the five MSQ answer sets are (A,B,D), (A,B,C), (B,C,D), (A,B,C) and (A,C,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **75 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (10) or `ORIGINAL_SYNTHESIS` (15), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **75** banked items that are not part of the active set — the 50
+  questions of Unit 1 and the 25 of Unit 2 Set 1 — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active Set 2 questions do not appear there (verified: `CN-U2-Q26` occurs nowhere in the
+  bank tab). Units 3–6 are not shown as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, bank tab label, meta strip, `#qhost`, bank
+  tab, About tab set label, payload), the remaining bytes are byte-identical to the shell extracted from the
+  Computer Networks Unit 2 Set 1 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key view
+  and the footer are unchanged. The `:root` block is byte-identical to the shell it was spliced from and to
+  `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4 deviation below is
+  untouched and was not partially fixed for one paper. The paper also inherits, unchanged, the other open
+  shell-level items recorded below.
+- The paper was exercised in a jsdom harness before shipping (**80 structural checks and 30 behavioural checks, all
+  passing**): nothing is
+  revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question
+  pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00); the palette reaches
+  `na`, `ans`, `amr` and `mrk`; all four tabs open and the key tab stays locked until submit; a fully correct paper
+  scores **35 / 35** with 25 `ok` palette buttons and 25 key cards; one wrong MCQ, one skipped MCQ, an MSQ one option
+  short and a wrong NAT score **29 / 35** with 21 correct, 3 wrong and 1 unattempted, confirming that an MSQ earns
+  nothing unless the exact set is selected and that there is no negative marking; an empty paper scores **0 / 35**
+  with 25 `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`,
+  `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; and the About tab carries its
+  three sections.
+- `index.html` holds all **1625** questions. Its data block was updated in place: the new Computer Networks Unit 2
+  record was inserted at the head of `tests`, and the superseded 2026-10-27 record was retargeted at the archived copy
+  so its link still resolves. The 25 new question records were appended. No unit had to be registered — Computer
+  Networks Units 1–6 were already in the portal's `units` table. The static header strings were recomputed from the
+  data block and now read 65 units, 39 sets published and 1625 solved questions / records, with 281 subtopics. Every
+  path in the data block resolves against the repository tree.
+- Hygiene: the paper is filed at exactly one path, `computer-networks/data-link-mac/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper; no temporary or loose file was left at the
+  repository root.
 
 - **2026-10-28, Computer Architecture → Unit 2 (CPU Control Design & Data Path), Set 2 of 2.** MODE A: one subject
   was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 5 subjects that had no paper
