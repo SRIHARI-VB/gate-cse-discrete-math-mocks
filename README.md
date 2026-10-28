@@ -7,27 +7,27 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 4 — Memory Management & Paging, Set 1 of 2**, 2026-10-28 → [`operating-systems/memory-paging/gate_os_mock_4_2026-10-28.html`](operating-systems/memory-paging/gate_os_mock_4_2026-10-28.html)
+- **Compiler Design · Unit 4 — Syntax-Directed Translation & Intermediate Code, Set 1 of 2**, 2026-10-28 → [`compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-28.html`](compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Contiguous allocation: first, best & worst fit (7) · Paging & page-table structures (6) ·
-  Inverted page tables (6) · Segmentation & paged segmentation (6)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Operating Systems**
-  (draw index 8 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 6, unit 3, deadlocks, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+- Subtopics: S-attributed vs L-attributed definitions (7) · Three-address code, quadruples & triples (7) ·
+  Syntax trees & DAGs (6) · Type checking (5)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Compiler Design**
+  (draw index 7 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 7, unit 3, bottom-up-parsing, Set 2 of 2}`. Unit 3 held **50** questions, exactly
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4, Memory Management & Paging**. Unit 4 had no folder and no
-  paper, so nothing was archived and no override was used.
-- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 2 of 2**, 2026-10-28 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html)
+  `(index_of(bottom-up-parsing) = 2 + 1) mod 5 = 3` → **Unit 4, Syntax-Directed Translation & Intermediate Code**.
+  Unit 4 had no folder and no paper, so nothing was archived and no override was used.
+- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 2 of 2**, 2026-10-28 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 74 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 7 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 40 current · 34 archived |
-| Test cards on the portal | 46 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1850 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 175 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 75 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 7 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 41 current · 34 archived |
+| Test cards on the portal | 47 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1875 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 175 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 34 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -83,6 +83,88 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Compiler Design → Unit 4 (Syntax-Directed Translation & Intermediate Code), Set 1 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (draw index 7 of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic,
+  computer-architecture, programming-data-structures, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases, computer-networks), giving **Compiler Design**. All eleven subjects already had a paper
+  dated 2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 7, unit 3, bottom-up-parsing, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(bottom-up-parsing) = 2 + 1) mod 5 = 3` → **Unit 4, Syntax-Directed Translation & Intermediate Code**
+  (`sdt-intermediate-code`), Set 1 of 2. Unit 4 had no folder and no paper, so nothing was archived and the unit folder
+  holds exactly one current paper. No override was used, no unit exceeded 50 questions and no second pass has started.
+  The next Compiler Design run re-selects Unit 4 (25 < 50) before advancing to `(3 + 1) mod 5 = 4`, Unit 5, Runtime
+  Environments & Code Optimization.
+- Coverage this run: all four Unit 4 subtopics — S-attributed against L-attributed definitions (7), three-address
+  code with quadruples and triples (7), syntax trees and DAGs (6), type checking (5). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="compiler-design"`, `data-unit="sdt-intermediate-code"`, `data-unit-number="4"`, its subtopic slug,
+  its type, its lowercase difficulty and its source tag.
+- All 25 items are new: `CD-U4-Q01`..`CD-U4-Q25` did not exist in the bank, and every stem was compared with the 150
+  banked Compiler Design questions with a string-normalised check (tags stripped, case and punctuation removed):
+  zero collisions and no id overlap. No question is an official GATE PYQ — `verified_pyqs` is empty for this subject —
+  so nothing is claimed as official and no item is tagged `GATE_PYQ_VARIATION`. Every item is `STANDARD_TEXTBOOK` (19)
+  or `ORIGINAL_SYNTHESIS` (6).
+- **Every countable answer was recomputed by script, not by hand (6 independent checks, 0 disagreements).** The
+  annotated parse tree for `x + y * z` was built by a recursive-descent parser over the grammar
+  `E → E + T | T`, `T → T * F | F`, `F → ( E ) | id` and its `val` instances counted by walking it: 2 `E` nodes,
+  3 `T` nodes and 3 `F` nodes give 8 (Q07). The DAG for `a + a * (b - c) + (b - c) * d` was constructed with a
+  hash-consing builder that merges nodes on identical operator and identical children: 5 interior nodes and 4 distinct
+  leaves give 9 (Q17). The three-address counts were read off explicit instruction sequences — `a = b * -c + d` gives
+  `t1 = -c`, `t2 = b * t1`, `t3 = t2 + d`, `a = t3`, so 4 instructions (Q11), and `a = b*c + d*e + f*g` with no reuse
+  gives 5 temporaries in 6 instructions (Q14). The type expression `array(2, array(3, integer → integer))` contains
+  3 constructors: two `array` nodes and one `→` (Q24). **Every count reproduced.**
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 3, (C) 4 and
+  (D) 4, and the five MSQ answer sets are (A,B,D,E), (A,C,D,E), (A,B,C,D), (A,B,C,D) and (A,B,C,D).
+- The conceptual items were settled against the standard rather than by taste: S-attributed ⊂ L-attributed is strict,
+  with the identifier-list definition `D → T L { L.inh = T.type }` as the witness for the missing direction (Q02,
+  Q04); an inherited attribute reading a right sibling is the one rule that breaks L-attributedness (Q05); a
+  dependency cycle among inherited attributes admits no evaluation order at all, while an acyclic graph always admits
+  a topological one (Q06); soundness is the one-sided guarantee that nothing accepted goes wrong, and no sound static
+  checker can also be complete for a Turing-complete language (Q23, Q25); and `SSA` forbids a second definition of the
+  same name, which is what separates it from ordinary three-address code (Q12).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab shows
+  **125 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`.
+- The Question Bank tab inside the paper lists the **125** banked items that are not part of the active set — the 50
+  questions of Unit 1, the 50 of Unit 2 and the 25 of Unit 3 that remain after its own Set 2 — under one accordion per
+  unit and one heading per subtopic, every solution collapsed. The 25 active questions do not appear there (verified:
+  the string `CD-U4-Q` occurs nowhere in the bank tab), and Unit 5 is reported on one line rather than as an empty
+  accordion. The tab block is the shipped one with its trailing empty-units line edited from `Units 4–5` to `Unit 5`;
+  nothing else in it changed, because the 125 cards it lists are exactly the same 125 questions as last run.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With the
+  nine payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining bytes are **byte-identical** to the shell extracted from the
+  Compiler Design Unit 3 Set 2 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key view and
+  the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html` and
+  `design-tokens.css`, and the paper carries the same literal hex values outside `:root` as its predecessor, so the
+  known Section 6.4 deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in headless Chromium 153 from `file://` before shipping (**54 checks, all passing**): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question
+  pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every
+  input enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear
+  response, `cur` follows the current question, and Save & Next / Previous move the selection; all four tabs open and
+  the key tab stays locked until submit; a fully correct paper scores **35 / 35** with 25 `ok` palette buttons, 25 key
+  cards and a filled solution on every card; one wrong MCQ, one MSQ one option short, one wrong NAT and one skipped MCQ
+  score **29 / 35** with 21 correct, 3 wrong and 1 unattempted, confirming that an MSQ earns nothing unless the exact
+  set is selected and that there is no negative marking; an MSQ with one extra option ticked scores **33 / 35**; an
+  empty paper scores **0 / 35** with 25 `skip` buttons; every card carries all seven data attributes with lowercase
+  difficulty values; the Question Bank tab renders 125 cards with no active question repeated; the About tab carries
+  its three sections and states the practice marking scheme; and no page error or console error is raised.
+- `index.html` holds all **1875** questions. Its data block was updated in place: the new Unit 4 record was inserted at
+  the head of `tests` with `archives: []`, and the 25 new records were appended to `data/questions-compiler-design.js`.
+  No unit had to be registered — Compiler Design Unit 4 (`sdt-intermediate-code`) was already in the portal's `units`
+  table. The static header strings were recomputed from the data and now read 65 units, 47 sets published and 1875
+  solved questions / records, with 281 subtopics.
+- Hygiene: the paper is filed at exactly one path, `compiler-design/sdt-intermediate-code/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper; no temporary or loose file was left at the
+  repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the literal
+  hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry an older
+  `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an archived run
+  while a current paper exists; the two pre-existing stem collisions inside Algorithms Unit 1; and the unclosed
+  `#view-about` in the shared shell.
 
 - **2026-10-28, Operating Systems → Unit 4 (Memory Management & Paging), Set 1 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 8 of 11
