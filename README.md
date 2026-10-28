@@ -7,30 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 2 of 2**, 2026-10-28 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html)
+- **Operating Systems · Unit 3 — Deadlocks, Set 2 of 2**, 2026-10-28 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Merge sort & quicksort (7) · Counting & radix sort (6) · Selection & the k-th element (6) ·
-  Inversion counting (6)
-- Rotation: MODE A drew **Algorithms** from the 3 subjects that had no paper dated 2026-10-28 (unseeded
-  `random.SystemRandom()` draw, draw index 0 of 3). `runs[]` sorted by `(date, run)` gives the most recent paper for
-  the subject as `{date 2026-10-27, run 3, unit 2, sorting-divide-conquer, Set 1 of 2}`. Unit 2 held **25** questions,
-  below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held
-  and step B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Algorithms run advances
-  `(index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms**. No override was used, no
-  unit exceeded 50 questions and no second pass has started.
-- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 2 of 2**, 2026-10-28 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html)
+- Subtopics: Four conditions & RAG (7) · Prevention, avoidance & Banker's (6) · Detection & recovery (6) ·
+  Starvation vs deadlock (6)
+- Rotation: MODE A drew **Operating Systems** from the 2 subjects that had no paper dated 2026-10-28 (unseeded
+  `random.SystemRandom()` draw, draw index 1 of 2). `runs[]` sorted by `(date, run)` gives the most recent paper for
+  the subject as `{date 2026-10-27, run 5, unit 3, deadlocks, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: Unit 3 was generated again and closes at exactly 50. The next Operating Systems run
+  advances `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4, Memory Management & Paging**. No override was used,
+  no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 2 of 2**, 2026-10-28 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 66 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 35 current · 31 archived |
+| Papers published (current + archived) | 67 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 6 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 35 current · 32 archived |
 | Test cards on the portal | 40 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1650 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1675 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 150 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 31 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 32 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -58,6 +58,24 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-28, Operating Systems → Unit 3 (Deadlocks), Set 2 of 2.** MODE A: one subject was drawn uniformly at
+  random with an unseeded `random.SystemRandom()` draw over the 2 subjects that had no paper dated 2026-10-28 (draw
+  index 1 of 2), giving **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-27, run 5, unit 3, deadlocks, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 3 now holds exactly 50
+  questions — the cap — and the next Operating Systems run advances
+  `(index_of(deadlocks) + 1) mod 6 = (2 + 1) mod 6 = 3` → **Unit 4, Memory Management & Paging**. The Set 1 paper
+  was moved to `operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-27_run1.html` with its content frozen, and
+  the Set 2 paper took the canonical filename. No override was used, no unit exceeded 50 questions and no second
+  pass has started.
+- Coverage this run: all four Unit 3 subtopics — four conditions and the resource-allocation graph (7), prevention,
+  avoidance and the banker's algorithm (6), detection and recovery (6), starvation versus deadlock (6). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question
+  carries `data-subject="operating-systems"`, `data-unit="deadlocks"`, `data-unit-number="3"` and its subtopic slug.
+- No question in this set is claimed as an official GATE previous-year question. No deadlock PYQ has been verified
+  against an official paper and answer key, so none is marked `GATE_PYQ_VARIATION` as an official item; that tag here
+  means the question follows a previously asked pattern with new resources and numbers.
 - **2026-10-28, Algorithms → Unit 2 (Divide and Conquer & Sorting), Set 2 of 2.** MODE A: one subject was drawn
   uniformly at random with an unseeded `random.SystemRandom()` draw over the 3 subjects that had no paper dated
   2026-10-28 (draw index 0 of 3), giving **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper
@@ -2900,7 +2918,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | Process Management & CPU Scheduling | `process-scheduling` | 50 | yes |
 | 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 50 | yes |
-| 3 | Deadlocks | `deadlocks` | 25 | yes |
+| 3 | Deadlocks | `deadlocks` | 50 | yes |
 | 4 | Memory Management & Paging | `memory-paging` | 0 | — |
 | 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
 | 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
