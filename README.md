@@ -7,28 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 3 — Deadlocks, Set 2 of 2**, 2026-10-28 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html)
+- **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 1 of 2**, 2026-10-28 → [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Four conditions & RAG (7) · Prevention, avoidance & Banker's (6) · Detection & recovery (6) ·
-  Starvation vs deadlock (6)
-- Rotation: MODE A drew **Operating Systems** from the 2 subjects that had no paper dated 2026-10-28 (unseeded
-  `random.SystemRandom()` draw, draw index 1 of 2). `runs[]` sorted by `(date, run)` gives the most recent paper for
-  the subject as `{date 2026-10-27, run 5, unit 3, deadlocks, Set 1 of 2}`. Unit 3 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  step B4 was not reached: Unit 3 was generated again and closes at exactly 50. The next Operating Systems run
-  advances `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4, Memory Management & Paging**. No override was used,
-  no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Algorithms · Unit 2 — Divide and Conquer & Sorting, Set 2 of 2**, 2026-10-28 → [`algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html`](algorithms/sorting-divide-conquer/gate_algo_mock_2_2026-10-28.html)
+- Subtopics: Single-variable extrema (7) · Multivariable extrema & saddle points (6) · Definite integrals (6) ·
+  Vector calculus basics (6)
+- Rotation: MODE A drew **Engineering Mathematics**, the only one of the 11 subjects with no paper dated 2026-10-28
+  (a `random.SystemRandom()` draw over a one-element list, so the outcome was forced). `runs[]` sorted by
+  `(date, run)` gives the most recent Engineering Mathematics paper as `{date 2026-10-27, run 6, unit 3,
+  calculus-limits-derivatives, Set 2 of 2}`. Unit 3 held **50** questions — the cap — so step B3 failed and step B4
+  advanced: `(index_of(calculus-limits-derivatives) = 2 + 1) mod 5 = 3` → **Unit 4, Calculus: Maxima, Minima &
+  Integrals**, Set 1 of 2. Units 1, 2 and 3 of the subject are all at the cap, so this is the first unit of the second
+  sweep through the subject. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 2 of 2**, 2026-10-28 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 67 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 6 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 35 current · 32 archived |
-| Test cards on the portal | 40 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1675 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 150 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 68 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 36 current · 32 archived |
+| Test cards on the portal | 41 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1700 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 32 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -57,6 +57,15 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Engineering Mathematics → Unit 4 (Calculus: Maxima, Minima & Integrals), Set 1 of 2.** MODE A: at the
+  time of the draw only Engineering Mathematics had no paper dated 2026-10-28, so the uniform draw over that
+  one-element list gave **Engineering Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-27, run 6, unit 3, calculus-limits-derivatives, Set 2 of 2}`. Unit 3 held **50** questions, so it was
+  not under `UNIT_QUESTION_CAP = 50` and step B3 failed; step B4 advanced
+  `(index_of(calculus-limits-derivatives) + 1) mod 5 = (2 + 1) mod 5 = 3` → **Unit 4, Set 1 of 2**. Units 1–3 are all
+  at the cap, so the subject has begun a second sweep. No archive move was needed: Unit 4 had no earlier paper, and
+  the Unit 3 folder keeps its own current paper. No override was used and no unit exceeded 50 questions.
 
 - **2026-10-28, Operating Systems → Unit 3 (Deadlocks), Set 2 of 2.** MODE A: one subject was drawn uniformly at
   random with an unseeded `random.SystemRandom()` draw over the 2 subjects that had no paper dated 2026-10-28 (draw
@@ -2928,9 +2937,9 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Linear Algebra: Matrices & Systems | `linear-algebra-matrices` | 50 | yes |
-| 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 25 | yes |
-| 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 0 | — |
-| 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 0 | — |
+| 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 50 | yes |
+| 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 50 | yes |
+| 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 25 | yes |
 | 5 | Continuous Probability & Distributions | `probability-distributions` | 0 | — |
 
 ### Computer Networks
