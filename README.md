@@ -7,28 +7,27 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 1 of 2**, 2026-10-28 → [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html)
+- **Databases · Unit 3 — Database Normalization, Set 1 of 2**, 2026-10-28 → [`databases/normalization/gate_db_mock_3_2026-10-28.html`](databases/normalization/gate_db_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Single-variable extrema (7) · Multivariable extrema & saddle points (6) · Definite integrals (6) ·
-  Vector calculus basics (6)
-- Rotation: MODE A drew **Engineering Mathematics**, the only one of the 11 subjects with no paper dated 2026-10-28
-  (a `random.SystemRandom()` draw over a one-element list, so the outcome was forced). `runs[]` sorted by
-  `(date, run)` gives the most recent Engineering Mathematics paper as `{date 2026-10-27, run 6, unit 3,
-  calculus-limits-derivatives, Set 2 of 2}`. Unit 3 held **50** questions — the cap — so step B3 failed and step B4
-  advanced: `(index_of(calculus-limits-derivatives) = 2 + 1) mod 5 = 3` → **Unit 4, Calculus: Maxima, Minima &
-  Integrals**, Set 1 of 2. Units 1, 2 and 3 of the subject are all at the cap, so this is the first unit of the second
-  sweep through the subject. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 2 of 2**, 2026-10-28 → [`operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-28.html)
+- Subtopics: Functional dependencies & Armstrong's axioms (5) · Closure of attribute sets & keys (5) ·
+  1NF, 2NF, 3NF & BCNF (5) · Lossless join & dependency preservation (5) · Multivalued dependencies & 4NF (5)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Databases**
+  (draw index 9 of 11); every subject already had a paper dated 2026-10-28, so the draw was over the full list rather
+  than over subjects missing from today. `runs[]` sorted by `(date, run)` gives the most recent Databases paper as
+  `{date 2026-10-28, run 3, unit 2, sql-querying, Set 2 of 2}`. Unit 2 held **50** questions — exactly the cap — so
+  step B3 failed and step B4 advanced: `(index_of(sql-querying) = 1 + 1) mod 5 = 2` → **Unit 3, Database
+  Normalization**, Set 1 of 2. No override was used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 1 of 2**, 2026-10-28 → [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 68 (16 Discrete Mathematics, 4 Algorithms, 4 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 36 current · 32 archived |
-| Test cards on the portal | 41 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1700 (400 Discrete Mathematics, 100 Algorithms, 100 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 69 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 37 current · 32 archived |
+| Test cards on the portal | 42 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1725 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 32 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -57,6 +56,80 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Databases → Unit 3 (Database Normalization), Set 1 of 2.** MODE A: one subject was drawn uniformly at
+  random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 9 of 11), giving
+  **Databases**. All eleven subjects already had a paper dated 2026-10-28, so the draw ran over the full list rather
+  than over the subjects still missing from today. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 3, unit 2, sql-querying, Set 2 of 2}`. Unit 2 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(sql-querying) = 1 + 1) mod 5 = 2` → **Unit 3, Database Normalization** (`normalization`), Set 1 of 2.
+  Unit 3 had no folder and no paper, so nothing was archived and the unit folder holds exactly one current paper.
+  No override was used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all five Unit 3 subtopics, five questions each — functional dependencies and Armstrong's axioms,
+  closure of attribute sets and keys, 1NF/2NF/3NF/BCNF, lossless join and dependency preservation, multivalued
+  dependencies and 4NF. Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = 35. Every question carries `data-subject="databases"`, `data-unit="normalization"`,
+  `data-unit-number="3"` and its subtopic slug.
+- All 25 items are new: `DB-U3-Q01`..`DB-U3-Q25` did not exist in the bank, and every stem was compared against the
+  100 banked Databases items with a string-normalised check (tags stripped, case and punctuation removed): zero
+  collisions and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** Attribute closures, candidate keys and superkey
+  counts were enumerated exhaustively over all attribute subsets: `AB`, `BC` and `BD` are the three candidate keys of
+  `{AB → C, C → D, D → A}` (Q08); `AB`, `BC`, `BD` and `BE` are the four of `{AB → C, C → D, D → E, E → A}` (Q18);
+  `A⁺` covers 4 attributes (Q13) and the superkey count is `2³ = 8` (Q23) for the chain `A → B → C → D`; the minimal
+  cover of `{A → B, B → C, A → C}` keeps 2 dependencies (Q14). Losslessness was decided by a chase-test
+  implementation rather than by inspection: of the four decompositions offered in Q17 only `(A, C)|(B, D)` is lossy,
+  and in Q22 the split `(A, B)|(A, C, D)` is lossless but loses `BC → D`, which is the answer keyed. **5 of 5
+  numeric answers and 2 of 2 chase verdicts reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: triviality for FDs is `Y ⊆ X`, while
+  MVDs need the second clause `X ∪ Y = R` as well, which is why `A →→ BC` is trivial and `A →→ B` is not (Q24);
+  pseudotransitivity is sound but is not one of Armstrong's three axioms (Q10); 2NF needs *both* a proper subset of a
+  key and a non-prime right-hand side (Q07); `R(A, B, C, D)` with `{AB → C, C → D}` is in 2NF and not 3NF (Q11); a
+  relation with `A →→ B` and `A →→ C` and no FD is in BCNF yet not in 4NF, and its lossless 4NF split is
+  `(A, B)|(A, C)` (Q15, Q20); and `{AB → C, C → B}` is the standard witness that a BCNF decomposition need not
+  preserve dependencies (Q21).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,C,D), (A,B,D), (B,C,D), (A,B,C) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 1 for the subject (the 2014 Set 3 Q30
+  variation banked under Unit 1), the Question Bank tab shows **100 solved** and **1 verified GATE PYQ**, and no item
+  in this set is tagged `GATE_PYQ_VARIATION`. Every item is `STANDARD_TEXTBOOK` (10) or `ORIGINAL_SYNTHESIS` (15), so
+  nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the 50
+  questions of Unit 1 and the 50 of Unit 2 — under one accordion per unit and one heading per subtopic, every
+  solution collapsed. The 25 active questions do not appear there (verified: the string `DB-U3-Q` occurs nowhere in
+  the bank tab), and Units 4–5 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining **27 854 bytes are byte-identical** to the shell extracted
+  from the Databases Unit 2 Set 2 paper, so the `<style>` block, the exam `<script>`, the palette, the answer-key view
+  and the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html` and
+  `design-tokens.css`, and the paper carries exactly the same 89 literal hex values outside `:root` as its
+  predecessor, so the known Section 6.4 deviation below is untouched and was not partially fixed for one paper.
+- The paper was exercised in a jsdom harness before shipping (**47 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response;
+  all four tabs open and the key tab stays locked until submit; a fully correct paper scores **35 / 35** with 25 `ok`
+  palette buttons, 25 key cards and a filled solution on every card; one wrong MCQ, one MSQ one option short and one
+  skipped NAT score **30 / 35** with 22 correct, 2 wrong and 1 unattempted, confirming that an MSQ earns nothing
+  unless the exact set is selected and that there is no negative marking; an empty paper scores **0 / 35** with 25
+  `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`,
+  `data-difficulty` and `data-source`, with lowercase difficulty values; the Question Bank tab renders 100 cards with
+  no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1725** questions. Its data block was updated in place: the new Databases Unit 3 record was
+  inserted at the head of `tests` with `archives: []`, and the 25 new question records were appended. No unit had to
+  be registered — Databases Units 1–5 were already in the portal's `units` table. The static header strings were
+  recomputed from the data block and now read 65 units, 42 sets published and 1725 solved questions / records, with
+  281 subtopics; the earlier 1675-vs-1700 mismatch between the two "solved questions" chips is gone, both now count
+  the full `questions` array. Every path in the data block resolves against the repository tree (136 links, 0 broken).
+- Hygiene: the paper is filed at exactly one path, `databases/normalization/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (70 files, 37 current and 32 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the literal
+  hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry an older
+  `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an archived run
+  while a current paper exists; and the two pre-existing stem collisions inside Algorithms Unit 1.
 
 - **2026-10-28, Engineering Mathematics → Unit 4 (Calculus: Maxima, Minima & Integrals), Set 1 of 2.** MODE A: at the
   time of the draw only Engineering Mathematics had no paper dated 2026-10-28, so the uniform draw over that
