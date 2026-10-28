@@ -7,29 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 3 — Database Normalization, Set 2 of 2**, 2026-10-29 → [`databases/normalization/gate_db_mock_3_2026-10-29.html`](databases/normalization/gate_db_mock_3_2026-10-29.html)
+- **Operating Systems · Unit 5 — Virtual Memory & Page Replacement, Set 1 of 2**, 2026-10-29 →
+  [`operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html`](operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Functional dependencies & Armstrong's axioms (5) · Closure of attribute sets & keys (5) ·
-  1NF, 2NF, 3NF & BCNF (5) · Lossless join & dependency preservation (5) · Multivalued dependencies & 4NF (5)
-- Rotation: MODE A. A seeded `random.Random` draw (seed = `sha256("gate-mock-2026-10-29")`, draw index 9 of 11
-  in the fixed list order) gave **Databases**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 4, unit 3, normalization, Set 1 of 2}`. Unit 3 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  Unit 3 was generated again as **Set 2 of 2**. 25 + 25 = 50 closes the unit exactly at the cap; the next Databases
-  run advances `(index_of(normalization) = 2 + 1) mod 5 = 3` → Unit 4, Transactions & Concurrency Control.
-  No override was used and no second pass has started for this subject.
-- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (second pass)**, 2026-10-28 →
-  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html)
+- Subtopics: Demand paging & page-fault rate (7) · FIFO, OPT & LRU replacement (6) · Belady's anomaly (6) ·
+  Thrashing & the working-set model (6)
+- Rotation: MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw (draw index 8 of 11 in the fixed list order), giving **Operating Systems**. `runs[]`
+  sorted by `(date, run)` gives the most recent paper as `{date 2026-10-28, run 8, unit 4, memory-paging,
+  Set 2 of 2}`. Unit 4 held **50** questions — at `UNIT_QUESTION_CAP = 50` — so step B4 advanced
+  `(index_of(memory-paging) = 3 + 1) mod 6 = 4` → Unit 5, Virtual Memory & Page Replacement. No override was used
+  and no second pass has started for this subject.
+- Previous test: **Databases · Unit 3 — Database Normalization, Set 2 of 2**, 2026-10-29 →
+  [`databases/normalization/gate_db_mock_3_2026-10-29.html`](databases/normalization/gate_db_mock_3_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 82 (17 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 11 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 41 current · 41 archived |
-| Test cards on the portal | 48 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2050 (425 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 275 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 83 (17 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 11 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 42 current · 41 archived |
+| Test cards on the portal | 49 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 2075 (425 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 275 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 41 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -99,6 +99,29 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-29, Operating Systems → Unit 5 (Virtual Memory & Page Replacement), Set 1 of 2.** MODE A: one subject was
+  drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 8
+  of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic, computer-architecture,
+  programming-data-structures, algorithms, theory-of-computation, compiler-design, operating-systems, databases,
+  computer-networks), giving **Operating Systems**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{date 2026-10-28, run 8, unit 4, memory-paging, Set 2 of 2}`. Unit 4 held **50** questions, at
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(3 + 1) mod 6 = 4` → Unit 5. Unit 5 held no questions, so this is
+  **Set 1 of 2**; no override was used and no second pass has started for this subject.
+- Coverage this run: all four Unit 5 subtopics — demand paging and the page-fault rate (7 questions), FIFO/OPT/LRU
+  replacement (6), Belady's anomaly (6), thrashing and the working-set model (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="operating-systems"`, `data-unit="virtual-memory"`, `data-unit-number="5"`, its subtopic slug, its
+  type, its lowercase difficulty and its source tag.
+- Nothing on this paper is claimed as an official GATE question. The bank holds one verified PYQ
+  (`PYQ-GATE2021S1-Q25`, GATE CSE 2021 Set 1 Q25, NAT, official answer 12), and it belongs to Unit 1, not to this
+  unit; no virtual-memory previous-year question has been verified against an official paper and key, so every item
+  here is `STANDARD_TEXTBOOK` (10) or `ORIGINAL_SYNTHESIS` (15).
+- Every number in this set was recomputed by script rather than by hand: the FIFO, LRU and OPT traces on both
+  reference strings at 3 and 4 frames (giving FIFO 9 → 10 for the Belady pair, LRU 10 → 8, OPT 7 → 6 on
+  `1,2,3,4,1,2,5,1,2,3,4,5`, and OPT 9 < LRU 12 < FIFO 15 on the twenty-reference string), the effective-access-time
+  arithmetic (1099.9 → 1100 ns, 1120 ns, 429 ns), the fault-rate bound (11 per 10⁶ references) and the working-set
+  window count (4). No Unit 5 id or stem collides with the 200 banked Operating Systems items: ids are
+  `OS-U5-Q01`..`OS-U5-Q25`.
 - **2026-10-29, Databases → Unit 3 (Database Normalization), Set 2 of 2.** MODE A: one subject was drawn from the
   11 GATE CSE subjects with a seeded `random.Random` draw (seed = `sha256("gate-mock-2026-10-29")`, draw index 9 of
   11 in the fixed list order), giving **Databases**. `runs[]` sorted by `(date, run)` gives the most recent paper as
