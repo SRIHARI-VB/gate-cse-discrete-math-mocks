@@ -7,30 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 1 of 2**, 2026-10-29 →
-  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html)
+- **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 1 of 2**, 2026-10-29 →
+  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Characteristic equations (6) · Homogeneous & non-homogeneous (5) · Divide-and-conquer recurrences (4) ·
-  Ordinary generating functions (5) · Coefficient extraction (5)
-- Rotation: MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw. Databases, Operating Systems and Theory of Computation already had a paper dated
-  2026-10-29, so the draw ran over the remaining eight subjects and returned **Discrete Mathematics**.
-  `runs[]` sorted by `(date, run)` gives the most recent Discrete Mathematics paper as `{date 2026-10-28, run 7,
-  unit 7, combinatorics, Set 2 of 2}`. Unit 7 held exactly **50** questions, the cap, so step B4 advanced
-  `(index_of(combinatorics) = 6 + 1) mod 16 = 7` → **Unit 8, Recurrence Relations & Generating Functions**,
-  generated as **Set 1 of 2**. No override was used.
-- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2 (second pass)**, 2026-10-29 →
-  [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html)
+- Subtopics: BST insertion & deletion (7) · AVL trees & rotations (6) · B-trees & B+ trees (6) · Trie basics (6)
+- Rotation: MODE A. One subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over
+  the seven subjects that had no paper dated 2026-10-29 (Databases, Discrete Mathematics, Operating Systems and
+  Theory of Computation already had one), and the draw returned **Programming and Data Structures**.
+  `runs[]` sorted by `(date, run)` gives the most recent Programming and Data Structures paper as
+  `{date 2026-10-28, run 8, unit 4, trees-traversals, Set 2 of 2}`. Unit 4 held exactly **50** questions, the cap,
+  so step B4 advanced `(index_of(trees-traversals) = 3 + 1) mod 7 = 4` → **Unit 5, Binary Search Trees & Balanced
+  Trees**, generated as **Set 1 of 2**. No override was used and no second pass has started for this subject.
+- Previous test: **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 1 of 2**, 2026-10-29 →
+  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 85 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 43 current · 42 archived |
-| Test cards on the portal | 50 |
-| Units covered | 9 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2125 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 86 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 44 current · 42 archived |
+| Test cards on the portal | 51 |
+| Units covered | 9 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 2150 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 42 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -100,6 +99,75 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Programming and Data Structures → Unit 5 (Binary Search Trees & Balanced Trees), Set 1 of 2.**
+  MODE A: one subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the seven
+  subjects without a paper dated 2026-10-29, giving **Programming and Data Structures**.
+  `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-28, run 8, unit 4,
+  trees-traversals, Set 2 of 2}`. Unit 4 held **50** questions, at `UNIT_QUESTION_CAP`, so step B3 failed and step
+  B4 advanced exactly one unit: `(index_of(trees-traversals) = 3 + 1) mod 7 = 4` → **Unit 5, Binary Search Trees &
+  Balanced Trees**. Unit 5 held no questions, so this is **Set 1 of 2**. No override was used and no second pass has
+  started for this subject. The next Programming and Data Structures run holds Unit 5 at 25 questions, under the cap
+  and under `DAYS_PER_UNIT_MAX`, so it will generate Unit 5 again as Set 2 of 2.
+- Coverage this run: all four Unit 5 subtopics — BST insertion and deletion (7), AVL trees and rotations (6),
+  B-trees and B+ trees (6), tries (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="programming-data-structures"`,
+  `data-unit="search-trees"`, `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its
+  source tag.
+- All 25 items are new: ids `DS-U5-Q01`..`DS-U5-Q25` did not exist in the bank, and every stem was checked against
+  the 2125 records already held in the eleven subject banks (tags stripped, case and punctuation removed): zero id
+  overlap and no duplicated stem. No item is a `GATE_PYQ_VARIATION` — `verified_pyqs` is empty for this subject, so
+  nothing on this paper is claimed as an official GATE question. Every item is `STANDARD_TEXTBOOK` (15) or
+  `ORIGINAL_SYNTHESIS` (10).
+- **Every countable answer was recomputed by script, not by hand.** A BST was built by insertion and every deletion
+  performed by the stated rule: the root after deleting 50 by successor is **60**; the sum of depths of
+  20,10,30,5,15,25,35,3,7,12,17 is **22**; after deleting 25 the left child of 45 is **35**; the postorder after
+  deleting 2 from 4,2,6,1,3,5,7 is **1, 3, 5, 7, 6, 4**; after deleting 20 from the fifteen-key tree the root is 22
+  and the sum of the fourteen remaining depths is **31**. An AVL implementation with the four rotation cases
+  confirmed: 10,20,30 → root **20** with one single rotation; 30,20,10,25,28 → preorder **20, 10, 28, 25, 30**;
+  30,10,20 → exactly **one double (LR) rotation and no single rotation** while 10,20,30 is a single rotation and
+  20,10,30 needs none; 50,40,60,30,45,55,70,20 → **0** rotations, the deliberate trap. The AVL minimum-node
+  recurrence gives **12** nodes at height 4 (1, 2, 4, 7, 12, 20, 33). B-tree arithmetic: the fan-out bound
+  6n + 8(n−1) ≤ 4096 gives **293** (4094 bytes used) and 294 overflows at 4108; the maximum key count of an order-5
+  B-tree of height 2 is **124** = 5³ − 1. Trie node counts were produced by building the trie: {cat, car, dog} →
+  **8**, the eight-string set bear/bell/bid/bull/buy/sell/stock/stop → **22**, {do, dog, done, cat, car} → **10**.
+  Every one of these reproduced the drafted answer, so no option or solution had to be rewritten.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are (B,D),
+  (A,B,C), (A,B,C), (A,B,D) and (A,C,D) — checked by script.
+- The paper is filed only at `programming-data-structures/search-trees/`; nothing was written at the repository
+  root, and no paper was superseded, because Unit 5 had no previous paper — the Unit 4 paper stays current in its
+  own folder.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it.
+  With the ten payload regions normalised to placeholders (title, brand, sub-line, candidate ID, bank tab label,
+  meta strip, `#qhost`, bank tab, About tab, payload), the remaining **27 640 bytes are byte-identical** to the
+  shell extracted from the 2026-10-28 Unit 4 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view, the Question Bank tab, the About tab and the footer are unchanged. The `:root` block is
+  byte-identical across the new paper, `index.html` and `design-tokens.css`.
+- The paper was exercised in headless Chromium 153 from `file://` before shipping (**41 checks, all passing**):
+  nothing is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the
+  question pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card
+  visible, every input enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering,
+  marking and Clear response, `cur` follows the current question, and Save & Next / Previous move the selection;
+  all four tabs open and the key tab stays locked until submit; a fully correct paper scores **35 / 35** with 25
+  `ok` palette buttons, 25 key cards and a filled solution on every card; a paper whose five MSQ are each one
+  option short scores **25 / 35** with 5 wrong; an all-wrong paper scores **0 / 35** and an empty paper **0 / 35**
+  with 25 `skip` buttons, so the exact-set MSQ rule and the absence of negative marking both hold in code; every
+  card carries all eight data attributes with lowercase difficulty values; the Question Bank tab renders **200**
+  cards under four unit accordions with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **2150** questions. Its data block was updated in place: the new Unit 5 record was inserted
+  at the head of `tests` with an empty `archives` list, and the 25 new records were appended to
+  `data/questions-programming-data-structures.js`. The static header strings had drifted again — they still read
+  2025 records and 48 test cards — and were recomputed from the data to read 65 units, **2150** solved questions
+  banked, **51** test cards, 2150 records and 281 subtopics. A headless run of the portal renders the new paper
+  first, every relative link resolving against the repository tree, and no console or page errors.
+- Hygiene: the paper is filed at exactly one path, `programming-data-structures/search-trees/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (87 files, 44 current and 42 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the
+  literal hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry
+  an older `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an
+  archived run while a current paper exists; the two pre-existing stem collisions inside Algorithms Unit 1; and the
+  unclosed `#view-about` in the shared shell.
 
 - **2026-10-29, Theory of Computation → Unit 4 (Turing Machines & Decidability), Set 1 of 2 (second pass).** MODE A:
   one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()`
