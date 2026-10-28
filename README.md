@@ -7,29 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 2 of 2**, 2026-10-28 → [`discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html`](discrete-mathematics/combinatorics/gate_dm_mock_7_2026-10-28.html)
+- **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 2 of 2**, 2026-10-28 → [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-10-28.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Permutations & combinations (5) · Stars and bars (5) · Binomial & multinomial coefficients (5) ·
-  Inclusion-exclusion counting (5) · Double counting (5)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Discrete Mathematics**
-  (draw index 0 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 6, unit 7, combinatorics, Set 1 of 2}`. Unit 7 held **25** questions, below
+- Subtopics: IPv4 header & fragmentation (7) · Classful vs classless & CIDR (6) ·
+  Subnet masking & supernetting (6) · IPv6 basics & differences (6)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Computer Networks**
+  (draw index 10 of 11 in the fixed list order). `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 5, unit 3, ipv4-subnetting, Set 1 of 2}`. Unit 3 held **25** questions, below
   `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4
-  was not reached: Unit 7 was generated again as **Set 2 of 2**, closing it at exactly 50 questions.
-- Previous test: **Discrete Mathematics · Unit 7 — Counting & Combinatorics, Set 1 of 2**, 2026-10-28 →
-  [`discrete-mathematics/combinatorics/archive/gate_dm_mock_7_2026-10-28_run1.html`](discrete-mathematics/combinatorics/archive/gate_dm_mock_7_2026-10-28_run1.html)
+  was not reached: Unit 3 was generated again as **Set 2 of 2**, closing it at exactly 50 questions.
+- Previous test: **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2**, 2026-10-28 →
+  [`computer-networks/ipv4-subnetting/archive/gate_cn_mock_3_2026-10-28_run1.html`](computer-networks/ipv4-subnetting/archive/gate_cn_mock_3_2026-10-28_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 78 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 41 current · 37 archived |
+| Papers published (current + archived) | 79 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 41 current · 38 archived |
 | Test cards on the portal | 47 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1950 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1975 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 37 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 38 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -48,6 +48,16 @@ solutions. That file can no longer be delivered by the automation channel, which
 - The same pass fixed a data-entry slip carried since 2026-10-27: 25 Operating Systems Unit 3 records stored `unit`
   as the string `"3"`, so the portal's `q.unit === u.n` test skipped them and the archive rendered 1775 of 1800
   questions. The values are now integers and the count matches the banks.
+
+### Portal launch row for a unit whose current paper is the newest set
+
+The topic-and-subtopic archive built its "Practise Set n" buttons from `tests[].archives` alone, so a unit whose
+current paper carried the newest set showed only the superseded sets and no button for the questions held by the
+current paper. The row now lists the archived sets first and then the current paper under its own `set` label, which
+is what the Computer Networks Unit 3 card needs: `Practise Set 1` → `archive/gate_cn_mock_3_2026-10-28_run1.html`,
+`Practise Set 2` → `gate_cn_mock_3_2026-10-28.html`. Checked in headless Chromium from `file://`: 47 test cards,
+40 unit cards, 1975 question cards, every `href` on the page resolving to a file that exists, and no console or page
+errors.
 
 ### Second pass
 
@@ -83,6 +93,31 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Computer Networks → Unit 3 (Network Layer: IP Addressing & Subnetting), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (draw index 10 of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic,
+  computer-architecture, programming-data-structures, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases, computer-networks), giving **Computer Networks**. `runs[]` sorted by `(date, run)`
+  gives the most recent paper as `{date 2026-10-28, run 5, unit 3, ipv4-subnetting, Set 1 of 2}`. Unit 3 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step
+  B3 held and step B4 was not reached: Unit 3 was generated again as **Set 2 of 2** and now holds exactly 50 questions,
+  the cap. No override was used and no second pass has started for this subject. The next Computer Networks run
+  advances `(index_of(ipv4-subnetting) = 2 + 1) mod 6 = 3` → Unit 4, Network Layer: Routing & Protocols.
+- Coverage this run: all four Unit 3 subtopics — IPv4 header & fragmentation (7), classful vs classless & CIDR (6),
+  subnet masking & supernetting (6), IPv6 basics & differences (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="computer-networks"`, `data-unit="ipv4-subnetting"`, `data-unit-number="3"` and its subtopic slug.
+  Every numeric answer was re-derived in code: fragment counts and last-fragment offsets by simulation
+  (`MTU &minus; 20` rounded down to a multiple of 8), usable-host counts and subnet addresses with `ipaddress`,
+  and the prefix/subnet arithmetic for the /12, /16, /22 and /29 cases.
+- Set 2 repeats nothing from Set 1: the two sets share no id, no stem and no numeric answer. Its four subtopics are
+  all represented, and no item is a `GATE_PYQ_VARIATION` — no computer-networks previous-year question on this unit has
+  been verified against an official paper and key, so nothing on this paper is claimed as an official GATE question.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and each numeric option list stays in
+  ascending order where the values allow it. Both were checked by script, not by eye.
+- The new paper is filed only at `computer-networks/ipv4-subnetting/`; the superseded Set 1 paper was moved into that
+  unit's `archive/` as `gate_cn_mock_3_2026-10-28_run1.html` unchanged, so the unit folder never held two current papers.
 
 - **2026-10-28, Discrete Mathematics → Unit 7 (Counting & Combinatorics), Set 2 of 2.** MODE A: one subject was drawn
   uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 0 of 11 in
@@ -3616,7 +3651,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
 | 2 | Data Link Protocols & MAC | `data-link-mac` | 50 | yes |
-| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 25 | yes |
+| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 50 | yes |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
 | 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
@@ -3758,3 +3793,12 @@ review interface.
   `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens rather than
   their `-d` variants), for the same reason: re-typing any of them in one paper would break shell parity. Its `<style>`
   block and its script are byte-identical to the previously shipped papers.
+
+- Shell parity, measured on the 2026-10-28 Computer Networks Unit 3 Set 2 paper: its `<style>` block, its script and its
+  body structure are byte-identical to the Set 1 paper it was generated from, apart from the five metadata strings that
+  are allowed to differ (title, header sub-line, candidate id, Question Bank count, Set label). Against the other
+  current papers, three pre-existing variants show up and none is introduced here: some papers write the meta-strip
+  separators as raw glyphs where the Computer Networks papers write `&middot;`/`&mdash;` entities; some break lines
+  around `</aside>` differently; and several close `.layout`/`#view-test` with one extra `</div>`, which puts the
+  Answer Key panel outside `.wrap`. All three render identically or are the known nesting defect already recorded
+  above, and normalising them belongs to the one-pass re-issue.
