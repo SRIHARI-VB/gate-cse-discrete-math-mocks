@@ -7,33 +7,31 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (second pass)**, 2026-10-28 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html)
+- **Databases · Unit 3 — Database Normalization, Set 2 of 2**, 2026-10-29 → [`databases/normalization/gate_db_mock_3_2026-10-29.html`](databases/normalization/gate_db_mock_3_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Deterministic PDA (7) · Nondeterministic PDA (6) · Acceptance: empty store vs final state (5) ·
-  Equivalence with CFG (7)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Theory of
-  Computation** (draw index 6 of 11 in the fixed list order); all eleven subjects already had a paper dated
-  2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 10, unit 2, cfl-grammars, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` →
-  Unit 3. All four Theory of Computation units are at or above the cap (75, 75, 50, 50), so the second pass
-  continues (step B5) and Unit 3 was generated as **Set 1 of 2 (second pass)**, taking it from 50 to 75 questions.
-  No override was used.
-- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (second pass)**,
-  2026-10-28 →
-  [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html)
+- Subtopics: Functional dependencies & Armstrong's axioms (5) · Closure of attribute sets & keys (5) ·
+  1NF, 2NF, 3NF & BCNF (5) · Lossless join & dependency preservation (5) · Multivalued dependencies & 4NF (5)
+- Rotation: MODE A. A seeded `random.Random` draw (seed = `sha256("gate-mock-2026-10-29")`, draw index 9 of 11
+  in the fixed list order) gave **Databases**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 4, unit 3, normalization, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  Unit 3 was generated again as **Set 2 of 2**. 25 + 25 = 50 closes the unit exactly at the cap; the next Databases
+  run advances `(index_of(normalization) = 2 + 1) mod 5 = 3` → Unit 4, Transactions & Concurrency Control.
+  No override was used and no second pass has started for this subject.
+- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (second pass)**, 2026-10-28 →
+  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 81 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 11 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 41 current · 40 archived |
+| Papers published (current + archived) | 82 (17 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 11 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 41 current · 41 archived |
 | Test cards on the portal | 48 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2025 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 275 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2050 (425 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 275 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 40 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 41 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -100,6 +98,38 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Databases → Unit 3 (Database Normalization), Set 2 of 2.** MODE A: one subject was drawn from the
+  11 GATE CSE subjects with a seeded `random.Random` draw (seed = `sha256("gate-mock-2026-10-29")`, draw index 9 of
+  11 in the fixed list order), giving **Databases**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 4, unit 3, normalization, Set 1 of 2}`. Unit 3 held **25** questions — below
+  `UNIT_QUESTION_CAP = 50` — and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  the unit was generated again rather than advanced. No override was used.
+- Coverage this run: all five Unit 3 subtopics, five questions each — functional dependencies and Armstrong's
+  axioms, closure of attribute sets and keys, 1NF/2NF/3NF/BCNF, lossless join and dependency preservation, and
+  multivalued dependencies and 4NF. Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="databases"`, `data-unit="normalization"`,
+  `data-unit-number="3"`, its subtopic slug, its type, its lowercase difficulty and its source tag.
+- Set 2 repeats nothing from the 25 banked Unit 3 items: ids `DB-U3-Q26`..`DB-U3-Q50` are new and every stem was
+  compared with all 125 banked Databases stems (tags stripped, case and punctuation removed): zero collisions and no
+  id overlap. No item is a `GATE_PYQ_VARIATION` — no normalization previous-year question has been verified against
+  an official paper and key — so nothing on this paper is claimed as an official GATE question. Every item is
+  `STANDARD_TEXTBOOK` (9) or `ORIGINAL_SYNTHESIS` (16).
+- **Every answer was recomputed by script, not by hand.** Closure and candidate-key enumeration for the key
+  questions, superkey counting by subset enumeration, minimal-cover construction by the split-then-prune algorithm,
+  projection-and-union tests for dependency preservation, and a chase (tableau) implementation for losslessness.
+  **That pass corrected one first draft**: Q35 originally claimed 12 superkeys for
+  `F = {AB → C, BC → D, CD → E, DE → A}` because a third candidate key `{B, D, E}` had been missed; the true count
+  is 13, and both the options and the full solution were rewritten before the paper was built.
+- The paper is filed only at `databases/normalization/`. Set 1 moved to
+  `databases/normalization/archive/gate_db_mock_3_2026-10-28_run1.html` with its content frozen, so the unit folder
+  holds exactly one current paper and nothing was written at the repository root.
+- Set 2 is built from the same shell as every earlier paper: identical `<style>` block (hash `1ad7d3a6`), identical
+  `<script>` block (hash `70fcdfcb`), identical structural markup; only the payload, the meta strip, the header and
+  the tab contents differ. The Question Bank tab inside the paper lists the 125 banked items that are not in the
+  active set, and the portal's `data/questions-databases.js` now carries all 150.
+- Unit 3 now sits exactly at `UNIT_QUESTION_CAP = 50`, so the next Databases run advances to Unit 4,
+  Transactions & Concurrency Control. Units 4–5 of Databases are still untouched.
 
 - **2026-10-28, Theory of Computation → Unit 3 (Pushdown Automata), Set 1 of 2 (second pass).** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw
@@ -3733,7 +3763,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | ER Models & Relational Algebra | `er-relational-algebra` | 50 | yes |
 | 2 | SQL & Advanced Querying | `sql-querying` | 50 | yes |
-| 3 | Database Normalization | `normalization` | 25 | yes |
+| 3 | Database Normalization | `normalization` | 50 | yes |
 | 4 | Transactions & Concurrency Control | `transactions-concurrency` | 0 | — |
 | 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
 
