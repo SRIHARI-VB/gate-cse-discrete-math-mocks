@@ -7,29 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2 (second pass)**, 2026-10-28 → [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-28.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-28.html)
+- **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2**, 2026-10-28 → [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-10-28.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DFA construction & minimisation (11) · Regular expressions (6) · NFA to DFA: subset construction (4) ·
-  Pumping lemma for regular languages (4)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Theory of
-  Computation** (draw index 6 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the full
-  list. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 8, unit 4, turing-machines-decidability, Set 2 of 2}`. Unit 4 held **50** questions, exactly
+- Subtopics: IPv4 header & fragmentation (7) · Classful vs classless & CIDR (6) · Subnet masking & supernetting (7) ·
+  IPv6 basics & differences (5)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Computer Networks**
+  (draw index 10 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the full list.
+  `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 4, unit 2, data-link-mac, Set 2 of 2}`. Unit 2 held **50** questions, exactly
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` → **Unit 1, Regular Languages & Finite Automata**.
-  All four Theory of Computation units are at the cap, so the modulo wrapped and **a second pass over the subject has
-  begun** (step B5). No override was used.
-- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
+  `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**. Unit 3 had no
+  folder and no paper, so nothing was archived and no override was used.
+- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 2 of 2**, 2026-10-28 → [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 72 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 4 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 38 current · 34 archived |
-| Test cards on the portal | 44 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1800 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 100 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 73 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 39 current · 34 archived |
+| Test cards on the portal | 45 |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1825 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 125 Computer Networks, 225 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 34 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 5 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -85,6 +84,93 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Computer Networks → Unit 3 (Network Layer: IP Addressing & Subnetting), Set 1 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (draw index 10 of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic,
+  computer-architecture, programming-data-structures, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases, computer-networks), giving **Computer Networks**. All eleven subjects already had a
+  paper dated 2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the most recent
+  paper as `{date 2026-10-28, run 4, unit 2, data-link-mac, Set 2 of 2}`. Unit 2 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**
+  (`ipv4-subnetting`). Unit 3 had no folder and no paper, so nothing was archived and the unit folder holds exactly
+  one current paper. No override was used, no unit exceeded 50 questions and no second pass has started. The next
+  Computer Networks run re-selects Unit 3 (25 < 50) before advancing to `(2 + 1) mod 6 = 3`, Unit 4, Routing &
+  Protocols.
+- **A data-entry slip in this subject's bank was corrected before the rotation was computed.** 25 Unit 2 records
+  (`CN-DL2-Q01`..`CN-DL2-Q25`, the Set 2 items) stored `unit` and `unit_number` as the strings `"2"` rather than the
+  integers `2`, so a count of `q["unit"] == 2` returned 25 instead of 50 and step B3 would have held Unit 2 for a third
+  set. Both fields are now integers; Unit 2 reads 50 and the cap applies. The same class of slip was still present in
+  `operating-systems/question-bank/master_bank.json` (25 Unit 3 records, `OS-U3B-Q01`..`OS-U3B-Q25`), which an earlier
+  entry had reported as already fixed; those 50 fields were corrected in the same pass, so Operating Systems Unit 3
+  now reads 50 in the bank as it already did in the portal. No question content, id or answer changed in either file.
+- Coverage this run: all four Unit 3 subtopics — IPv4 header and fragmentation (7), classful against classless and
+  CIDR (6), subnet masking and supernetting (7), IPv6 basics and differences (5). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="computer-networks"`, `data-unit="ipv4-subnetting"`, `data-unit-number="3"`, its subtopic slug, its
+  type, its lowercase difficulty and its source tag.
+- All 25 items are new: `CN-U3-Q01`..`CN-U3-Q25` did not exist in the bank, and every stem was compared with the 125
+  question records in the portal data with a string-normalised check (tags stripped, case and punctuation removed):
+  zero collisions and no id overlap. No question is an official GATE PYQ — `verified_pyqs` is empty for this subject —
+  so nothing is claimed as official and no item is tagged `GATE_PYQ_VARIATION`. Every item is `STANDARD_TEXTBOOK` (12)
+  or `ORIGINAL_SYNTHESIS` (13).
+- **Every countable answer was recomputed by script, not by hand (23 independent checks, 0 disagreements).** The
+  fragmentation figures were produced by an explicit fragmenting routine rather than by quoting a formula: 3000 bytes
+  at MTU 1500 gives 3 fragments (Q03); 4000 bytes gives offsets 0, 185, 370, so the last offset is 370 (Q04) and the
+  Total Length fields are 1500, 1500, 1060 (Q05); the two-hop case cuts 5000 bytes into 1480/1480/1480/560 and then
+  each piece again at MTU 576 into 552-byte payloads, giving 9 + 2 = 11 fragments (Q07). All prefix arithmetic ran
+  through `ipaddress`: /27 gives 30 usable hosts (Q09); 192.168.10.130/26 lies in 192.168.10.128/26 (Q10); the four
+  candidate hosts in 10.20.30.0/23 were tested for membership and for the network/broadcast exclusion, confirming that
+  10.20.30.255 and 10.20.31.0 are ordinary hosts while 10.20.31.255 is the broadcast (Q11); /18 holds 64 /24s (Q12);
+  longest-prefix match over the four-route table selects the /24 (Q13); 192.168.1.64/26 broadcasts at .127 (Q14); /28
+  is 255.255.255.240 (Q15); /16 to /26 is 1024 subnets (Q16); the only prefix whose /24 list equals 192.168.0.0/24
+  through 192.168.7.0/24 is /21, found by enumerating candidates rather than by asserting it (Q17); /20 subnets of
+  172.16.0.0/16 number 16 with 4094 usable hosts, and 172.16.32.0 is a boundary while 172.16.40.0 is not (Q18);
+  10.1.2.3/22 and 10.1.6.5/22 mask to 10.1.0.0 and 10.1.4.0 (Q19); VLSM leaves 256 − 60 = 196 addresses (Q20); and a
+  /48 delegates 2¹⁶ = 65536 /64s (Q25). **Every fragment count, offset, prefix and address reproduced.**
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,B,C), (B,D), (A,B,D), (A,D) and (B,C,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab shows
+  **100 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`.
+- The Question Bank tab inside the paper lists the **100** banked items that are not part of the active set — the 50
+  questions of Unit 1 and the 50 of Unit 2 — under one accordion per unit and one heading per subtopic, every solution
+  collapsed. The 25 active questions do not appear there (verified: the string `CN-U3-Q` occurs nowhere in the bank
+  tab), and Units 3–6 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the nine payload regions replaced by placeholders (title, header sub-line, candidate ID, bank tab label, meta strip,
+  `#qhost`, bank tab, About tab, payload), the remaining **27 851 bytes are byte-identical** to the shell extracted
+  from the Computer Networks Unit 2 Set 2 paper, so the `<style>` block, the exam `<script>`, the palette, the
+  answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new paper, `index.html`
+  and `design-tokens.css`.
+- The paper was exercised in a jsdom harness before shipping (**35 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty, no option mark, no `ansline` markup in the question pane, key tab disabled
+  and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input enabled); the
+  palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response, and the `cur`
+  outline follows the current question; all four tabs open and the key tab stays locked until submit; a fully correct
+  paper scores **35 / 35** with 25 `ok` palette buttons, 25 key cards and a filled solution on every card; one wrong
+  MCQ, one MSQ one option short, one wrong NAT and one skipped MCQ score **29 / 35** with 21 correct, 3 wrong and 1
+  unattempted, confirming that an MSQ earns nothing unless the exact set is selected and that there is no negative
+  marking; an empty paper scores **0 / 35** with 25 `skip` buttons; every card carries `data-subject`, `data-unit`,
+  `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source` with lowercase difficulty
+  values; the Question Bank tab renders 100 cards with no active question repeated.
+- `index.html` holds all **1825** questions. Its data block was updated in place: the new Unit 3 record was inserted at
+  the head of `tests` with `archives: []`, and the 25 new records were appended to `data/questions-computer-networks.js`.
+  No unit had to be registered — Computer Networks Units 1–6 were already in the portal's `units` table. The static
+  header strings were recomputed from the data and now read 65 units, 45 sets published and 1825 solved questions /
+  records, with 281 subtopics. Every path in the data block resolves against the repository tree (85 links, 0 broken),
+  and a jsdom run of the portal renders 45 test cards and 1825 archive question cards with the new paper first.
+- Hygiene: the paper is filed at exactly one path, `computer-networks/ipv4-subnetting/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (74 files, 39 current and 34 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the literal
+  hex outside `:root` in the shared shell (measured 135 occurrences in the new paper, 85 in the portal); the two legacy
+  `proof-techniques` archive files that still carry an older `:root`; the two current papers in
+  `digital-logic/number-systems`; the two portal cards that launch an archived run while a current paper exists; and
+  the two pre-existing stem collisions inside Algorithms Unit 1. One further shell defect was found this run and is
+  added to the list below: `#view-about` is never closed in the shared shell, so `<footer class="foot">` and both
+  `<script>` elements sit inside the hidden About view and the provenance footer is therefore never visible.
+
 
 - **2026-10-28, Theory of Computation → Unit 1 (Regular Languages & Finite Automata), Set 1 of 2 (second pass).**
   MODE A: one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
@@ -3197,8 +3283,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
-| 2 | Data Link Protocols & MAC | `data-link-mac` | 25 | yes |
-| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 0 | — |
+| 2 | Data Link Protocols & MAC | `data-link-mac` | 50 | yes |
+| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 25 | yes |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
 | 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
@@ -3269,6 +3355,14 @@ options fail, common misconception, faster method, takeaway). Banked historical 
 review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
+
+- **`#view-about` is never closed, so the provenance footer is invisible (found 2026-10-28, not fixed).** In the
+  shared shell the About view opens with `<div class="hidden" id="view-about">` and ends after its last card with a
+  single `</div>`, which closes that card rather than the view. The parser therefore places `<footer class="foot">`
+  and both trailing `<script>` elements inside `#view-about`, and because that view carries `.hidden` the footer
+  defined by `5.4` never renders on any paper. The scripts still execute, so behaviour is unaffected; only the footer
+  is lost. Repairing it means adding one `</div>` before `<footer>` in the shell and re-issuing all 39 current and 34
+  archived papers together, so it is recorded here rather than fixed in one file and breaking shell parity.
 
 - **Two current papers in one unit folder (found 2026-10-27, not fixed).** `digital-logic/number-systems/` holds both
   `gate_dl_mock_1_2026-10-26.html` and `gate_dl_mock_1_2026-10-27.html`, so a single unit folder carries two files that
