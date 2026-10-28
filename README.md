@@ -7,31 +7,33 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (second pass)**, 2026-10-28 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html)
+- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (second pass)**, 2026-10-28 → [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: CFG derivation trees (7) · Ambiguity in grammars (6) · CNF & GNF normal forms (6) ·
-  Closure properties of CFLs (6)
+- Subtopics: Deterministic PDA (7) · Nondeterministic PDA (6) · Acceptance: empty store vs final state (5) ·
+  Equivalence with CFG (7)
 - Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Theory of
-  Computation** (draw index 6 of 11 in the fixed list order). All eleven subjects already had a paper dated
+  Computation** (draw index 6 of 11 in the fixed list order); all eleven subjects already had a paper dated
   2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 9, unit 1, regular-languages-fa, Set 1 of 2 (second pass)}`. Unit 1 held **75** questions,
-  above `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced `(0 + 1) mod 4 = 1` → Unit 2. Every Theory
-  of Computation unit is at or above the cap (75, 50, 50, 50), so the second pass begun at run 9 continues: Unit 2
-  was generated as **Set 1 of 2 (second pass)**, taking it from 50 to 75 questions.
-- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 2 of 2**, 2026-10-27 →
-  [`theory-of-computation/cfl-grammars/archive/gate_toc_mock_2_2026-10-27_run2.html`](theory-of-computation/cfl-grammars/archive/gate_toc_mock_2_2026-10-27_run2.html)
+  `{date 2026-10-28, run 10, unit 2, cfl-grammars, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` →
+  Unit 3. All four Theory of Computation units are at or above the cap (75, 75, 50, 50), so the second pass
+  continues (step B5) and Unit 3 was generated as **Set 1 of 2 (second pass)**, taking it from 50 to 75 questions.
+  No override was used.
+- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (second pass)**,
+  2026-10-28 →
+  [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 80 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 10 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 41 current · 39 archived |
+| Papers published (current + archived) | 81 (17 Discrete Mathematics, 4 Algorithms, 5 Databases, 7 Compiler Design, 8 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 11 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 41 current · 40 archived |
 | Test cards on the portal | 48 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 4 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2000 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 250 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2025 (425 Discrete Mathematics, 100 Algorithms, 125 Databases, 175 Compiler Design, 200 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 275 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 39 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 6 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 40 (9 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 7 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -66,7 +68,8 @@ errors.
 Theory of Computation is the first subject to enter a **second pass**: all four of its units (Regular Languages &
 Finite Automata, Grammars & Context-Free Languages, Pushdown Automata, Turing Machines & Decidability) reached
 `UNIT_QUESTION_CAP = 50`, so step B4 wrapped `(3 + 1) mod 4 = 0` and the series returned to Unit 1 instead of stopping.
-Unit 1 therefore holds **75** questions and, as of 2026-10-28, Unit 2 holds **75** as well — the same over-cap state
+Unit 1 therefore holds **75** questions, Unit 2 holds **75** as of 2026-10-28 and Unit 3 holds **75** as of the
+same date — the same over-cap state
 Discrete Mathematics Unit 16 has carried since before the cap existed, and for the same reason: the rotation must keep
 producing 25-question papers. A second pass is not a breach of the cap rule; it is what step B5 prescribes when every
 unit of a subject is full. The second pass walks the units in order, so the next Theory of Computation run continues
@@ -97,6 +100,92 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Theory of Computation → Unit 3 (Pushdown Automata), Set 1 of 2 (second pass).** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw
+  index 6 of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic,
+  computer-architecture, programming-data-structures, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases, computer-networks), giving **Theory of Computation** — the same subject as the
+  previous run, which is what a uniform unseeded draw does one time in eleven. All eleven subjects already had a
+  paper dated 2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the most recent
+  paper as `{date 2026-10-28, run 10, unit 2, cfl-grammars, Set 1 of 2 (second pass)}`. Unit 2 held **75**
+  questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced exactly one unit:
+  `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**. Every Theory of Computation unit is
+  at or above the cap (75, 75, 50, 50), so the second pass begun at run 9 continues (step B5) and Unit 3 was
+  generated as **Set 1 of 2 (second pass)**, taking it from 50 to 75 questions. No override was used.
+- Coverage this run: all four Unit 3 subtopics — deterministic PDA (7), nondeterministic PDA (6), acceptance by
+  empty store against acceptance by final state (5), equivalence with context-free grammars (7). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question
+  carries `data-subject="theory-of-computation"`, `data-unit="pushdown-automata"`, `data-unit-number="3"`, its
+  subtopic slug, its type, its lowercase difficulty and its source tag.
+- Set 1 of the second pass repeats nothing from the 50 banked Unit 3 items: ids `TOC-U3-Q51`..`TOC-U3-Q75` are new
+  and every stem was compared with all 250 banked Theory of Computation stems (tags stripped, case and punctuation
+  removed): zero collisions and no id overlap. Five first drafts did collide on their generic lead-in ("Select every
+  statement that is TRUE"), so Q61, Q66, Q71, Q74 and Q75 were reworded to name their subject matter before the
+  paper was built. No item is a `GATE_PYQ_VARIATION` — no theory-of-computation previous-year question on this unit
+  has been verified against an official paper and key, so nothing on this paper is claimed as an official GATE
+  question. Every item is `STANDARD_TEXTBOOK` (19) or `ORIGINAL_SYNTHESIS` (6).
+- **Every machine-dependent answer was recomputed by simulation, not by hand.** A configuration-graph search was
+  run over each machine in the paper: the DPDA of Q51 accepts exactly `{aⁿbⁿ : n ≥ 1}` on every word up to length 6
+  (ε, b, ba, abb, aab rejected; ab, aabb, aaabbb accepted); the DPDA of Q57 with all three states final accepts
+  exactly `{aⁱbʲ : i ≥ j ≥ 0}` up to length 6 and therefore **6** words of length ≤ 3 (ε, a, aa, ab, aaa, aab); the
+  NPDA of Q60 accepts exactly the palindromes up to length 6 (checked word by word against `w == wᴿ`) and therefore
+  **9** words of length ≤ 3 (ε, a, b, aa, bb, aaa, aba, bab, bbb); and the empty-stack PDA of Q65 accepts only `ab`
+  among its four options, its language being `{aⁿbⁿ : n ≥ 1}` up to length 4. The grammar-to-NPDA stack height of
+  Q73 was obtained by searching every accepting run of the construction on `aabb` and taking the maximum: **4**
+  (`Z₀ b b a`). The two counting questions follow from definitions that were checked arithmetically (5 moves for a
+  5-symbol input with no ε-moves; 9 steps for a GNF derivation of a 9-symbol word). **Two first drafts were wrong
+  and were corrected by that pass**: Q57 originally claimed `{aⁱbʲ : i ≥ j}` for a machine that rejects `aab`, and
+  Q60 originally counted 7 palindromes of length ≤ 3, overlooking `aaa` and `bbb`. Both were rewritten before the
+  paper was built.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are (A,B,D),
+  (A,C,D), (A,B,D), (A,B,C) and (A,C,D) — checked by script.
+- The new paper is filed only at `theory-of-computation/pushdown-automata/`; the superseded Set 2 paper was moved
+  into that unit's `archive/` as `gate_toc_mock_3_2026-10-27_run2.html` unchanged, so the unit folder never held two
+  current papers and no root copy was written. The portal card now launches the 2026-10-28 paper and links both
+  2026-10-27 sets from `archive/`.
+- The Question Bank tab inside the paper lists the **250** banked items that are not part of the active set — 75 of
+  Unit 1, 75 of Unit 2, the 50 of Unit 3 and the 50 of Unit 4 — under one accordion per unit and one heading per
+  subtopic, every solution collapsed. The 25 active questions do not appear there (verified: none of the ids `TOC-U3-Q51`..`TOC-U3-Q75`
+  occurs in the bank tab), and no unit is reported as empty because all four have banked questions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the eight payload regions normalised to placeholders (title, header sub-line, candidate ID, bank tab label, meta
+  strip, `#qhost`, bank tab, About tab, payload), the remaining **27 621 bytes are byte-identical** to the shell
+  extracted from the previous Theory of Computation paper, so the `<style>` block, the exam `<script>`, the palette,
+  the answer-key view, the Question Bank tab, the About tab and the footer are unchanged. The `:root` block is
+  byte-identical across the new paper, `index.html` and `design-tokens.css`, and the paper carries the same 91
+  literal hex values outside `:root` as its predecessor, so the known Section 6.4 deviation below is untouched and
+  was not partially fixed for one paper.
+- The paper was exercised in headless Chromium from `file://` before shipping (**44 checks, all passing**): nothing
+  is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question
+  pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible,
+  every input enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and
+  Clear response, `cur` follows the current question, and Save & Next / Previous move the selection; all four tabs
+  open and the key tab stays locked until submit; a fully correct paper scores **35 / 35** with 25 `ok` palette
+  buttons, 25 key cards and a filled solution on every card; a paper with one MSQ one option short scores
+  **33 / 35**, confirming that an MSQ earns nothing unless the exact set is selected; an empty paper scores
+  **0 / 35** with 25 `skip` buttons, confirming that there is no negative marking; every card carries all seven
+  data attributes with lowercase difficulty values; the Question Bank tab renders 250 cards under four accordions
+  with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **2025** questions. Its data block was updated in place: the Unit 3 record now carries the
+  2026-10-28 paper and both 2026-10-27 sets as archives, and the 25 new records were appended to
+  `data/questions-theory-of-computation.js`. The static header strings were recomputed from the data and now read
+  65 units, 48 test cards, 2025 solved questions / records and 281 subtopics — the previous strings still read 1950
+  after run 9 had already taken the banks to 2000, so this run corrected that drift. A headless run of the portal
+  renders **48 test cards** with the new paper first, **2025** archive question cards, and no console or page
+  errors.
+- One inherited data gap was closed on the way: the 25 records of run 9 (`TOC-U2-Q51`..`TOC-U2-Q75`) had been
+  written without `question_html` or `subtopic_label`, which the paper's Question Bank tab needs. Both fields were
+  backfilled from `data/questions-theory-of-computation.js` and from the sibling records of the same subtopic; no
+  question text, option, answer or solution was altered.
+- Hygiene: the paper is filed at exactly one path, `theory-of-computation/pushdown-automata/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (82 files, 41 current and 40 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the
+  literal hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry
+  an older `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an
+  archived run while a current paper exists; the two pre-existing stem collisions inside Algorithms Unit 1; and the
+  unclosed `#view-about` in the shared shell.
 
 - **2026-10-28, Theory of Computation → Unit 2 (Grammars & Context-Free Languages), Set 1 of 2 (second pass).** MODE A:
   one subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()`
