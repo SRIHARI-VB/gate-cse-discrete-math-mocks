@@ -7,30 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
+- **Computer Architecture · Unit 2 — CPU Control Design & Data Path, Set 2 of 2**, 2026-10-28 → [`computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html`](computer-architecture/datapath-control-unit/gate_co_mock_2_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: arrays and multidimensional arrays (7) · singly, doubly and circular linked lists (6) · stacks, infix and
-  postfix (6) · queues, circular queues and deques (6)
-- Rotation: MODE A drew **Programming and Data Structures** with an unseeded `random.SystemRandom()` draw over the 6
-  subjects that had no paper dated 2026-10-28 (draw index 5 of 6). `runs[]` sorted by `(date, run)` gives the most
-  recent paper for the subject as `{date 2026-10-27, run 4, unit 2, pointers-memory, Set 2 of 2}`. Unit 2 held **50**
-  questions — exactly `UNIT_QUESTION_CAP = 50` — so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(pointers-memory) = 1 + 1) mod 7 = 2` → **Unit 3, Linear Data Structures**. The modulo applied to the
-  advance, not to the day offset. Unit 3 had no folder and no papers, so nothing was moved to `archive/`. This is
-  Set 1 of 2. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 2 of 2**, 2026-10-28 → [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-28.html)
+- Subtopics: hardwired control (6) · microprogrammed control (6) · ALU & datapath timing (7) · bus architectures (6)
+- Rotation: MODE A drew **Computer Architecture** from the 5 subjects that had no paper dated 2026-10-28 (unseeded
+  `random.SystemRandom()` draw, index 1 of 5). `runs[]` sorted by `(date, run)` gives the most recent paper for the
+  subject as `{date 2026-10-27, run 1, unit 2, datapath-control-unit, Set 1 of 2}`. Unit 2 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step
+  B4 was not reached: Unit 2 was generated again and closes at exactly 50. The next Computer Architecture run advances
+  `(index_of(datapath-control-unit) = 1 + 1) mod 6 = 2` → **Unit 3, Memory Hierarchy & Cache Memory**. No override was
+  used, no unit exceeded 50 questions and no second pass has started.
+- Previous test: **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 63 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 1 Computer Architecture) |
-| Current papers / archived sets | 35 current · 28 archived |
-| Test cards on the portal | 37 |
+| Papers published (current + archived) | 64 (16 Discrete Mathematics, 3 Algorithms, 4 Databases, 6 Compiler Design, 5 Operating Systems, 6 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 35 current · 29 archived |
+| Test cards on the portal | 38 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 2 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 3 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1575 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 25 Computer Architecture) |
+| Questions in the subject banks | 1600 (400 Discrete Mathematics, 75 Algorithms, 100 Databases, 150 Compiler Design, 125 Operating Systems, 150 Engineering Mathematics, 125 Programming and Data Structures, 75 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 28 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 4 Theory of Computation, 2 Digital Logic) |
+| Archived sets (earlier runs) | 29 (8 Discrete Mathematics, 1 Algorithms, 2 Databases, 3 Compiler Design, 2 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 1 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -57,6 +56,82 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Computer Architecture → Unit 2 (CPU Control Design & Data Path), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 5 subjects that had no paper
+  dated 2026-10-28 (draw index 1 of 5), giving **Computer Architecture**. `runs[]` sorted by `(date, run)` gives the
+  most recent paper as `{date 2026-10-27, run 1, unit 2, datapath-control-unit, Set 1 of 2}`. Unit 2 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below `DAYS_PER_UNIT_MAX = 7`, so
+  step B3 held and step B4 was not reached: the current unit was generated again. This is Set 2 of 2, so Unit 2 now
+  holds exactly 50 questions — the cap — and the next Computer Architecture run advances
+  `(index_of(datapath-control-unit) + 1) mod 6 = (1 + 1) mod 6 = 2` → **Unit 3, Memory Hierarchy & Cache Memory**.
+  The Set 1 paper was moved to
+  `computer-architecture/datapath-control-unit/archive/gate_co_mock_2_2026-10-27_run1.html` with its content frozen,
+  and the Set 2 paper took the canonical filename. No override was used, no unit exceeded 50 questions and no second
+  pass has started.
+- Coverage this run: all four Unit 2 subtopics — hardwired control (6), microprogrammed control (6), ALU & datapath
+  timing (7) and bus architectures (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="computer-architecture"`,
+  `data-unit="datapath-control-unit"`, `data-unit-number="2"` and its subtopic slug.
+- All 25 items are new: `CO-U2-Q26`..`CO-U2-Q50` did not exist in the bank, and every stem and every option set was
+  compared against the 25 banked Computer Architecture items with a string-normalised check (tags stripped, case and
+  punctuation removed): zero collisions, and no id overlap.
+- **Every countable answer was recomputed by script, not by hand.** The PLA connection count of Q03 is
+  `12 × 8 + 8 × 10 = 176`; the one-hot sequencer of Q02 needs one flip-flop per state, so **11**; the microprogram
+  timing of Q08 is `6 × 5 ns × 10⁶ = 30 ms`; the block-ripple adder of Q16 needs `15 × 5 + 2 = 77 ns`, fifteen
+  inter-block carries and not sixteen; the address space of Q22 is `2²⁴ = 16 777 216`; the bus bandwidth of Q23 is
+  `(8 bytes / 2 clocks) × 100 MHz = 400 MB/s`; and the datapath of Q18 gives `2 + 7 + 1.5 + 1 = 11.5 ns`, a maximum
+  frequency of `86.96 MHz`, a pipelined period of `max(10, 4.5) = 10 ns`, and `54.05 MHz` when the ALU doubles —
+  a factor of 0.62, not 0.5. **6 of 6 computed answers reproduced; 0 disagreements.**
+- The conceptual items were settled against the standard rather than by taste: the control step matrix has one row
+  per T-state and one column per control signal (Q01); a don't-care entry lets the minimiser choose either value, so
+  the minimised network may assert a signal for an undefined opcode — safe only because no correct program fetches
+  one (Q05); an unconditional clause is a single term ORed with the conditional one, `T0 + T3 · MR` (Q06); the
+  sequencing field, not the condition-select field, supplies a branch target (Q07); the mapping ROM turns an opcode
+  into a microprogram address (Q09); the mapping ROM is a table, so two opcodes may share one microprogram, and a
+  microcoded call needs a return-address stack because one counter cannot remember where to return (Q10); vertical microcode pays extra clocks for decoding, so 2 microinstructions × 3 clocks lose
+  to 4 horizontal clocks (Q11); a conditional microinstruction multiplexes the microprogram counter between the
+  next-address field and the incrementer (Q12); the ALU's function-select inputs are driven by the control unit (Q13);
+  overflow is the XOR of the carries into and out of the sign bit, while the carry flag is the unsigned carry out
+  (Q17); one read port delivers one value per cycle (Q15); and a non-burst transfer must serialise the address and data phases
+  because the address is needed before the data can be selected, so the two phases cannot overlap (Q25).
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 3, (C) 4 and
+  (D) 4, and the five MSQ answer sets are (A,B,C), (A,C,D), (A,B,D), (A,C,D) and (A,B,C).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **25 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (10) or `ORIGINAL_SYNTHESIS` (15), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **25** banked items that are not part of the active set — the 25
+  questions of Unit 2 Set 1 — under one Unit 2 accordion and one heading per subtopic, every solution collapsed. The
+  25 active Set 2 questions do not appear there (verified: `CO-U2-Q26` and `CO-U2-Q50` occur nowhere in the bank
+  tab). Units 1 and 3–6 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the ten payload regions replaced by placeholders (title, brand line, header sub-line, candidate ID, bank tab label,
+  meta strip, `#qhost`, bank tab, About tab, payload), the remaining **27 615 bytes are byte-identical** to the shell
+  extracted from the Programming and Data Structures Unit 3 Set 1 paper, so the `<style>` block, the exam `<script>`,
+  the palette, the answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new
+  paper, `index.html` and `design-tokens.css`, and no new literal hex value was introduced, so the known Section 6.4
+  deviation below is untouched and was not partially fixed for one paper. The paper also inherits, unchanged, the
+  other open shell-level items recorded below.
+- The paper was exercised in a jsdom harness before shipping (**49 structural checks plus the behavioural run, all
+  passing**): nothing is revealed pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline`
+  markup in the question pane, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00,
+  one card visible, every input enabled); the palette reaches `na`, `ans`, `amr` and `mrk`; all four tabs open and
+  the key tab stays locked until submit; all 25 answered correctly scores **35 / 35** with 25 correct, 0 wrong and
+  25 `ok` palette buttons; one skipped MCQ, one wrong MCQ, an MSQ one option short and a wrong NAT score **31 / 35**
+  with 21 correct, 3 wrong and 1 unattempted; an empty paper scores **0 / 35** with 25 `skip` buttons; an MSQ with
+  one extra option ticked scores **0 / 35**, confirming that an MSQ earns nothing unless the exact set is selected;
+  every card carries `data-subject`, `data-unit`, `data-unit-number`, `data-subtopic`, `data-type`, `data-difficulty`
+  and `data-source`, with lowercase difficulty values; the Question Bank tab renders 25 cards with no active question
+  repeated; and the About tab carries its three sections.
+- `index.html` holds all **1600** questions. Its data block was updated in place: the new Computer Architecture Unit 2
+  record was inserted at the head of `tests`, and the superseded 2026-10-27 record was retargeted at the archived copy
+  so its link still resolves. The 25 new question records were appended. No unit had to be registered — Computer
+  Architecture Units 1–6 were already in the portal's `units` table. The static header strings were recomputed from
+  the data block and now read 65 units, 38 sets published and 1600 solved questions / records, with 281 subtopics.
+  Every path in the data block resolves against the repository tree.
+- Hygiene: the paper is filed at exactly one path, `computer-architecture/datapath-control-unit/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (65 files, 35 current and 29 archived); no
+  temporary or loose file was left at the repository root.
 
 - **2026-10-28, Programming and Data Structures → Unit 3 (Linear Data Structures), Set 1 of 2.** MODE A: one subject
   was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the 6 subjects that had no paper
