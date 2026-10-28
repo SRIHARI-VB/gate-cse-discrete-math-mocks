@@ -7,27 +7,28 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 2 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
+- **Programming and Data Structures · Unit 4 — Binary Trees & Tree Traversals, Set 1 of 2**, 2026-10-28 → [`programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html`](programming-data-structures/trees-traversals/gate_ds_mock_4_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Arrays & multidimensional arrays (6) · Singly, doubly & circular linked lists (6) ·
-  Stacks: infix, postfix & applications (7) · Queues, circular queues & deques (6)
+- Subtopics: Binary tree properties (7) · Inorder, preorder & postorder (6) · Threaded binary trees (6) ·
+  Expression trees (6)
 - Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Programming and
   Data Structures** (draw index 4 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the
   full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 5, unit 3, linear-data-structures, Set 1 of 2}`. Unit 3 held **25** questions — below the cap —
-  and had been current for 0 days, so step B3 held and step B4 was not reached: Unit 3 was generated again, giving
-  **Set 2 of 2** and closing the unit at exactly 50 questions. No override was used.
-- Previous test: **Databases · Unit 3 — Database Normalization, Set 1 of 2**, 2026-10-28 → [`databases/normalization/gate_db_mock_3_2026-10-28.html`](databases/normalization/gate_db_mock_3_2026-10-28.html)
+  `{date 2026-10-28, run 6, unit 3, linear-data-structures, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(linear-data-structures) = 2 + 1) mod 7 = 3` → **Unit 4, Binary Trees & Tree Traversals**, Set 1 of 2.
+  Unit 4 had no folder and no paper, so nothing was archived. No override was used.
+- Previous test: **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 2 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 70 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 6 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 37 current · 33 archived |
+| Papers published (current + archived) | 71 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 7 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 38 current · 33 archived |
 | Test cards on the portal | 43 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1750 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 150 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 1775 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 175 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 33 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -37,10 +38,10 @@ The verification checklist item "no hex colour outside `:root`" **fails in the s
 first paper: the locked `<style>` block carries raw hex values outside `:root` — 114 occurrences in a paper and 704
 in the portal (`#f8fafc`, `#9fb8cc`, `#eaf4fb` and others, mostly hover, focus and border shades that have no token
 name yet). Because one shell serves all papers and `6.8` treats shell parity as the hard gate, the block was not
-edited for this run — editing it would have changed all 35 current papers at once. The `:root` block itself is
+edited for this run — editing it would have changed all 38 current papers at once. The `:root` block itself is
 byte-identical across `design-tokens.css`, `index.html` and every paper, which is the part the token contract actually
 pins. Closing the deviation needs one coordinated pass: add the missing shades to `:root`, replace the literals, then
-re-verify all 35 current papers and 28 archived sets together.
+re-verify all 38 current papers and 33 archived sets together.
 
 Three further shell-level items are open and are deliberately left to that same coordinated pass, because each of them
 touches files this run did not create:
@@ -56,6 +57,87 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Programming and Data Structures → Unit 4 (Binary Trees & Tree Traversals), Set 1 of 2.** MODE A: one
+  subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw
+  (draw index 4 of 11 in the fixed list order discrete-mathematics, engineering-mathematics, digital-logic,
+  computer-architecture, programming-data-structures, algorithms, theory-of-computation, compiler-design,
+  operating-systems, databases, computer-networks), giving **Programming and Data Structures**. All eleven subjects
+  already had a paper dated 2026-10-28, so the draw ran over the full list. `runs[]` sorted by `(date, run)` gives the
+  most recent paper as `{date 2026-10-28, run 6, unit 3, linear-data-structures, Set 2 of 2}`. Unit 3 held **50**
+  questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(linear-data-structures) = 2 + 1) mod 7 = 3` → **Unit 4, Binary Trees & Tree Traversals**
+  (`trees-traversals`). Unit 4 had no folder and no paper, so nothing was archived and the unit folder holds exactly
+  one current paper. No override was used, no unit exceeded 50 questions and no second pass has started. The next
+  Programming and Data Structures run re-selects Unit 4 (25 < 50) before advancing to
+  `(3 + 1) mod 7 = 4`, Binary Search Trees & Balanced Trees.
+- Coverage this run: all four Unit 4 subtopics — binary tree properties (7), inorder/preorder/postorder and
+  reconstruction (6), threaded binary trees (6), expression trees (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="programming-data-structures"`, `data-unit="trees-traversals"`, `data-unit-number="4"`, its subtopic
+  slug, its type, its lowercase difficulty and its source tag.
+- All 25 items are new: `DS-U4-Q01`..`DS-U4-Q25` did not exist in the bank, and every stem was compared with the 1750
+  question records already in the portal data block with a string-normalised check (tags stripped, case and
+  punctuation removed): zero collisions and no id overlap. No question is an official GATE PYQ — `verified_pyqs` is
+  empty for this subject — so nothing is claimed as official and no item is tagged `GATE_PYQ_VARIATION`.
+- **Every countable answer was recomputed by script, not by hand (83 checks, 0 disagreements).** Tree shapes were
+  enumerated exhaustively up to 7 nodes and every labelled tree up to 4 nodes: `n0 = n2 + 1`, `n = n0 + n1 + n2` and
+  the height bound `h ≥ ⌈log2(n+1)⌉ − 1` were tested on every shape rather than asserted (Q05); the NULL-field count
+  `n + 2` for a record with a parent link was tested on every shape (Q07); the 42 shapes of 5 nodes were counted by
+  enumeration, not by quoting a Catalan table (Q06); `A B D E C F` + `D B E A C F` was rebuilt and re-traversed to
+  confirm `D E B F C A` (Q08); the level-order + inorder pair was rebuilt to `A B D E C F G` and the level order
+  re-read from the rebuilt tree (Q09); the four trees with preorder `A B C` and postorder `C B A` were found by
+  enumerating every labelled tree, and preorder+postorder was confirmed non-unique while preorder+inorder,
+  postorder+inorder and level-order+inorder were confirmed unique (Q10, Q12); the 9-node reconstruction gives exactly
+  two single-child nodes, `B` and `F` (Q13); 21 threads for 20 nodes follows from the `n + 1` NULL-pointer identity
+  tested above (Q15); the stated 8-node tree has 5 nodes without a right child and 4 without a left child, which is
+  the trap in Q19; `a b c * + d −` was produced by a shunting-yard implementation (Q20); `5 3 + 8 2 − * 4 /` evaluates
+  to 12 and its operand-swapped variant to −12 (Q22); the left subtree of the `a + b*c − d` tree holds 5 of the 7
+  nodes (Q24); and all three notations of a 9-operator tree carry 19 tokens (Q25). **Every traversal round-trip,
+  every enumeration and every arithmetic answer reproduced.**
+- The key is not clustered on one letter: across the 15 MCQs the correct option sits at (A) 4 times, (B) 4, (C) 4 and
+  (D) 3, and the five MSQ answer sets are (A,B,C), (A,B,D), (A,C,D), (B,C,D) and (A,B,D).
+- No verified PYQ exists for this unit: `verified_pyqs` is unchanged at 0 for this subject, the Question Bank tab
+  shows **150 solved** and **0 verified GATE PYQs**, and no item is tagged `GATE_PYQ_VARIATION`. Every item is
+  `STANDARD_TEXTBOOK` (12) or `ORIGINAL_SYNTHESIS` (13), so nothing on this paper claims previous-year status.
+- The Question Bank tab inside the paper lists the **150** banked items that are not part of the active set — the 50
+  questions of Unit 1, the 50 of Unit 2 and the 50 of Unit 3 — under one accordion per unit and one heading per
+  subtopic, every solution collapsed. The 25 active questions do not appear there (verified: the string `DS-U4-Q`
+  occurs nowhere in the bank tab), and Units 5–7 are reported on one line rather than as empty accordions.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it. With
+  the ten payload regions replaced by placeholders (title, brand line, header sub-line, candidate ID, bank tab label,
+  meta strip, `#qhost`, bank tab, About tab, payload), the remaining **27 320 bytes are byte-identical** to the shell
+  extracted from the Programming and Data Structures Unit 3 Set 2 paper, so the `<style>` block, the exam `<script>`,
+  the palette, the answer-key view and the footer are unchanged. The `:root` block is byte-identical across the new
+  paper, `index.html` and `design-tokens.css`, and the paper carries exactly the same 111 literal hex values outside
+  `:root` as its predecessor, so the known Section 6.4 deviation below is untouched and was not partially fixed for
+  one paper. The Question Bank tab generator was validated against the shipped paper: rebuilding the 125-card tab of
+  the Unit 3 Set 2 paper from `master_bank.json` reproduces it **byte for byte** (259 441 bytes).
+- The paper was exercised in a jsdom harness before shipping (**49 checks, all passing**): nothing is revealed
+  pre-submit (every active `.sol` empty and hidden, no option mark, no `ansline` markup in the question pane, key tab
+  disabled and labelled locked, key pane empty, summary hidden, timer at 60:00, one card visible, every input
+  enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting, answering, marking and Clear response,
+  and the `cur` outline follows the current question; all four tabs open and the key tab stays locked until submit; a
+  fully correct paper scores **35 / 35** with 25 `ok` palette buttons, 25 key cards and a filled solution on every
+  card; one wrong MCQ, one MSQ one option short, one wrong NAT and one skipped MCQ score **29 / 35** with 21 correct,
+  3 wrong and 1 unattempted, confirming that an MSQ earns nothing unless the exact set is selected and that there is
+  no negative marking; an MSQ with one extra option ticked takes the paper to **25 / 35** with 5 wrong; an empty paper
+  scores **0 / 35** with 25 `skip` buttons; every card carries `data-subject`, `data-unit`, `data-unit-number`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`, with lowercase difficulty values; the Question
+  Bank tab renders 150 cards with no active question repeated; and the About tab carries its three sections.
+- `index.html` holds all **1775** questions. Its data block was updated in place: the new Unit 4 record was inserted
+  at the head of `tests` with `archives: []`, and the 25 new question records were appended; every existing byte of
+  the data block was preserved by splicing rather than re-serialising. No unit had to be registered — Programming and
+  Data Structures Units 1–7 were already in the portal's `units` table. The static header strings were recomputed
+  from the data block and now read 65 units, 43 sets published and 1775 solved questions / records, with 281
+  subtopics. Every path in the data block resolves against the repository tree (71 links, 0 broken).
+- Hygiene: the paper is filed at exactly one path, `programming-data-structures/trees-traversals/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (72 files, 38 current and 33 archived); no
+  temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the literal
+  hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still carry an older
+  `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that launch an archived run
+  while a current paper exists; and the two pre-existing stem collisions inside Algorithms Unit 1.
 
 - **2026-10-28, Programming and Data Structures → Unit 3 (Linear Data Structures), Set 2 of 2.** MODE A: one subject
   was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
