@@ -7,32 +7,30 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2 (second pass)**, 2026-10-29 →
-  [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html)
+- **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 1 of 2**, 2026-10-29 →
+  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Standard TM models & variants (5) · Recursive vs recursively enumerable (5) · Halting problem &
-  undecidability (5) · Rice's theorem & reductions (5) · Chomsky hierarchy summary (5)
+- Subtopics: Characteristic equations (6) · Homogeneous & non-homogeneous (5) · Divide-and-conquer recurrences (4) ·
+  Ordinary generating functions (5) · Coefficient extraction (5)
 - Rotation: MODE A. One subject was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw (draw index 6 of 11 in the fixed list order), giving **Theory of Computation**.
-  Operating Systems and Databases already had a paper dated 2026-10-29, so the draw ran over the remaining nine
-  subjects. `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-28, run 11, unit 3,
-  pushdown-automata, Set 1 of 2 (second pass)}`. Unit 3 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so
-  step B4 advanced `(index_of(pushdown-automata) = 2 + 1) mod 4 = 3` → **Unit 4, Turing Machines & Decidability**.
-  All four Theory of Computation units are at or above the cap (75, 75, 75, 50), so the second pass begun at run 9
-  continues (step B5) and Unit 4 was generated as **Set 1 of 2 (second pass)**, taking it from 50 to 75 questions.
-  No override was used.
-- Previous test: **Operating Systems · Unit 5 — Virtual Memory & Page Replacement, Set 1 of 2**, 2026-10-29 →
-  [`operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html`](operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html)
+  `random.SystemRandom()` draw. Databases, Operating Systems and Theory of Computation already had a paper dated
+  2026-10-29, so the draw ran over the remaining eight subjects and returned **Discrete Mathematics**.
+  `runs[]` sorted by `(date, run)` gives the most recent Discrete Mathematics paper as `{date 2026-10-28, run 7,
+  unit 7, combinatorics, Set 2 of 2}`. Unit 7 held exactly **50** questions, the cap, so step B4 advanced
+  `(index_of(combinatorics) = 6 + 1) mod 16 = 7` → **Unit 8, Recurrence Relations & Generating Functions**,
+  generated as **Set 1 of 2**. No override was used.
+- Previous test: **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2 (second pass)**, 2026-10-29 →
+  [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 84 (17 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 42 current · 42 archived |
-| Test cards on the portal | 49 |
-| Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2100 (425 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 85 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 8 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 43 current · 42 archived |
+| Test cards on the portal | 50 |
+| Units covered | 9 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 4 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 2125 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 200 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 42 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
