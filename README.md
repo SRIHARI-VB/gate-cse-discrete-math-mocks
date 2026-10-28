@@ -7,29 +7,29 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 3 — Database Normalization, Set 1 of 2**, 2026-10-28 → [`databases/normalization/gate_db_mock_3_2026-10-28.html`](databases/normalization/gate_db_mock_3_2026-10-28.html)
+- **Programming and Data Structures · Unit 3 — Linear Data Structures, Set 2 of 2**, 2026-10-28 → [`programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html`](programming-data-structures/linear-data-structures/gate_ds_mock_3_2026-10-28.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Functional dependencies & Armstrong's axioms (5) · Closure of attribute sets & keys (5) ·
-  1NF, 2NF, 3NF & BCNF (5) · Lossless join & dependency preservation (5) · Multivalued dependencies & 4NF (5)
-- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Databases**
-  (draw index 9 of 11); every subject already had a paper dated 2026-10-28, so the draw was over the full list rather
-  than over subjects missing from today. `runs[]` sorted by `(date, run)` gives the most recent Databases paper as
-  `{date 2026-10-28, run 3, unit 2, sql-querying, Set 2 of 2}`. Unit 2 held **50** questions — exactly the cap — so
-  step B3 failed and step B4 advanced: `(index_of(sql-querying) = 1 + 1) mod 5 = 2` → **Unit 3, Database
-  Normalization**, Set 1 of 2. No override was used, no unit exceeded 50 questions and no second pass has started.
-- Previous test: **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 1 of 2**, 2026-10-28 → [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-28.html)
+- Subtopics: Arrays & multidimensional arrays (6) · Singly, doubly & circular linked lists (6) ·
+  Stacks: infix, postfix & applications (7) · Queues, circular queues & deques (6)
+- Rotation: MODE A. An unseeded `random.SystemRandom()` draw over all 11 GATE CSE subjects gave **Programming and
+  Data Structures** (draw index 4 of 11); every subject already had a paper dated 2026-10-28, so the draw ran over the
+  full list. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 5, unit 3, linear-data-structures, Set 1 of 2}`. Unit 3 held **25** questions — below the cap —
+  and had been current for 0 days, so step B3 held and step B4 was not reached: Unit 3 was generated again, giving
+  **Set 2 of 2** and closing the unit at exactly 50 questions. No override was used.
+- Previous test: **Databases · Unit 3 — Database Normalization, Set 1 of 2**, 2026-10-28 → [`databases/normalization/gate_db_mock_3_2026-10-28.html`](databases/normalization/gate_db_mock_3_2026-10-28.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 69 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 37 current · 32 archived |
-| Test cards on the portal | 42 |
+| Papers published (current + archived) | 70 (16 Discrete Mathematics, 4 Algorithms, 5 Databases, 6 Compiler Design, 6 Operating Systems, 7 Engineering Mathematics, 6 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 37 current · 33 archived |
+| Test cards on the portal | 43 |
 | Units covered | 8 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 3 of 5 in Compiler Design; 3 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 3 of 7 in Programming and Data Structures; 2 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 1725 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 125 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 1750 (400 Discrete Mathematics, 100 Algorithms, 125 Databases, 150 Compiler Design, 150 Operating Systems, 175 Engineering Mathematics, 150 Programming and Data Structures, 100 Computer Networks, 200 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 32 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 2 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 33 (8 Discrete Mathematics, 2 Algorithms, 2 Databases, 3 Compiler Design, 3 Operating Systems, 3 Engineering Mathematics, 3 Programming and Data Structures, 2 Computer Networks, 4 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Known deviation from the Section 6.4 token rule
 
@@ -56,6 +56,37 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-28, Programming and Data Structures → Unit 3 (Linear Data Structures), Set 2 of 2.** MODE A: one subject
+  was drawn uniformly at random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index
+  4 of 11), giving **Programming and Data Structures**. All eleven subjects already had a paper dated 2026-10-28, so the
+  draw ran over the full list rather than over the subjects still missing from today. `runs[]` sorted by
+  `(date, run)` gives the most recent paper as `{date 2026-10-28, run 5, unit 3, linear-data-structures, Set 1 of 2}`.
+  Unit 3 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit was generated again as
+  **Set 2 of 2**, which closes Unit 3 at exactly 50 questions. The next Programming and Data Structures run advances
+  `(index_of(linear-data-structures) = 2 + 1) mod 7 = 3` → **Unit 4, Binary Trees & Tree Traversals**. No override was
+  used, no unit exceeded 50 questions and no second pass has started.
+- Coverage this run: all four Unit 3 subtopics — arrays and multidimensional arrays (6), singly/doubly/circular linked
+  lists (6), stacks: infix, postfix and applications (7), queues, circular queues and deques (6). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="programming-data-structures"`, `data-unit="linear-data-structures"`, `data-unit-number="3"` and its
+  subtopic slug.
+- All 25 items are new: `DS-U3-Q26`..`DS-U3-Q50` did not exist in the bank, and every stem was compared with the 25
+  banked Unit 3 Set 1 items. No question is an official GATE PYQ — `verified_pyqs` is empty for this subject — so
+  nothing is claimed as official and no item is tagged `GATE_PYQ_VARIATION`.
+- **Every numeric answer was recomputed by script.** Address arithmetic for the four layout questions (168, 556, and
+  the element count 160); the two-pointer trace of the count loop gives 5 for `n = 10`; the shared-array gap gives 1
+  free slot; the postfix-depth trace peaks at 5; the deque trace leaves `6, 3`; the circular-queue rear is
+  `(3 + 5) mod 8 = 0`; the symmetric-matrix packing gives 55 and 5050; the circular-list predecessor is 11 steps away;
+  the infix-to-postfix conversion performs exactly 5 operator pops; the stack-permutation count is `C(4) = 14`,
+  confirmed by exhaustive enumeration; and the two-stack queue leaves 1 element. **7 of 7 numeric answers and 1 of 1
+  enumeration reproduced; 0 disagreements.**
+- Shell note: the Set 1 paper for this unit had lost the opening `<aside class="side">` and two closing `</div>` tags,
+  so its Answer Key, Question Bank and About views were nested inside `#view-test` and the tab switch hid them. This
+  paper takes the palette block from the balanced shell and its four views are siblings inside `.wrap`, verified with
+  a DOM parse and a jsdom tab test. The archived Set 1 file keeps its 25 questions, options, answers, solutions and
+  duration unchanged; only those two shell tags were repaired, so its tabs work as well.
 
 - **2026-10-28, Databases → Unit 3 (Database Normalization), Set 1 of 2.** MODE A: one subject was drawn uniformly at
   random from the 11 GATE CSE subjects with an unseeded `random.SystemRandom()` draw (draw index 9 of 11), giving
@@ -2968,7 +2999,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | C Programming Foundations | `c-programming-core` | 50 | yes |
 | 2 | Pointers, Memory & Preprocessors | `pointers-memory` | 50 | yes |
-| 3 | Linear Data Structures | `linear-data-structures` | 25 | yes |
+| 3 | Linear Data Structures | `linear-data-structures` | 50 | yes |
 | 4 | Binary Trees & Tree Traversals | `trees-traversals` | 0 | — |
 | 5 | Binary Search Trees & Balanced Trees | `search-trees` | 0 | — |
 | 6 | Heaps & Priority Queues | `heaps-priority-queues` | 0 | — |
@@ -2979,8 +3010,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | ER Models & Relational Algebra | `er-relational-algebra` | 50 | yes |
-| 2 | SQL & Advanced Querying | `sql-querying` | 25 | yes |
-| 3 | Database Normalization | `normalization` | 0 | — |
+| 2 | SQL & Advanced Querying | `sql-querying` | 50 | yes |
+| 3 | Database Normalization | `normalization` | 25 | yes |
 | 4 | Transactions & Concurrency Control | `transactions-concurrency` | 0 | — |
 | 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
 
