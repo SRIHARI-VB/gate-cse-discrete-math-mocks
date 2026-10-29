@@ -7,37 +7,114 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 2 of 2**, 2026-10-30 →
-  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html)
+- **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 1 of 2**, 2026-10-30 →
+  [`computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`](computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: characteristic equations (5) · homogeneous & non-homogeneous (5) · divide-and-conquer recurrences (5) ·
-  ordinary generating functions (5) · coefficient extraction (5)
+- Subtopics: UDP datagrams (6) · TCP header & connection management (7) · flow control & sliding window (6) ·
+  congestion control: slow start & AIMD (6)
 - Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects and it gave
-  **Discrete Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 8, unit 8, recurrence-generating-functions, Set 1 of 2}`. Unit 8 held **25** questions,
-  under `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, under `DAYS_PER_UNIT_MAX = 7`, so step B3
-  held and Unit 8 was generated again as **Set 2 of 2**. No override was used.
-- The previous current paper, Set 1 of 2 (2026-10-29), moved to
-  `discrete-mathematics/recurrence-generating-functions/archive/gate_dm_mock_8_2026-10-29_run1.html`, rebuilt on the
-  current shell with its questions, options, answers, solutions and duration frozen. Unit 8 now holds **50**
-  questions, exactly the cap, so the next Discrete Mathematics run advances `(7 + 1) mod 16 = 8` → Unit 9, Graph
-  Theory Fundamentals.
-- The paper's Question Bank tab lists **450** solved questions — Units 1–7, the 25 banked Unit 8 Set 1 questions and
-  Unit 16 — against the 25 active questions of this set, which stay out of that list.
-- Previous test: **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 1 of 2**, 2026-10-30 →
-  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html)
+  **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 8, unit 4, routing-protocols, Set 2 of 2}`. Unit 4 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(routing-protocols) = 3 + 1) mod 6 = 4` → zero-based index 4, i.e. **Unit 5 — Transport Layer:
+  TCP, UDP & Congestion**. Unit 5 had never been opened, so this is Set 1 of 2 and the first pass continues.
+  No override was used and no unit exceeds 50 questions.
+- Unit 5 carried no previous current paper, so nothing was archived and no `archive/` directory was created; the
+  unit folder holds exactly one current paper.
+- The paper's Question Bank tab lists **200** solved questions — the 50 questions each of Units 1–4 — against the
+  25 active questions of this set, which stay out of that list. Units 5 and 6 still collapse to one line each.
+- Previous test: **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 2 of 2**,
+  2026-10-30 →
+  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 103 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 51 current · 52 archived |
-| Test cards on the portal | 61 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2575 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Papers published (current + archived) | 104 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 9 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 52 current · 52 archived |
+| Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2600 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 225 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 52 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-30 — Computer Networks Unit 5, Set 1 of 2
+
+- New paper at `computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`. Unit 5 had no folder and no
+  earlier paper, so nothing was superseded and no `archive/` entry was created for it; the unit folder holds exactly
+  one current paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** One subject was drawn uniformly at random from the eleven GATE CSE subjects with
+  an unseeded `secrets.choice` over the fixed syllabus order, and it gave **Computer Networks**.
+  `computer-networks/question-bank/master_bank.json` read back `runs[]` sorted by `(date, run)` as
+  `{date 2026-10-29, run 8, unit 4, routing-protocols, Set 2 of 2}`. Unit 4 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(routing-protocols) = 3 + 1) mod 6 = 4` → zero-based index 4, i.e. **Unit 5 — Transport Layer:
+  TCP, UDP & Congestion**. No unit of this subject had ever been opened beyond Unit 4, so this is Set 1 of 2, the
+  first pass continues, no second pass has started, and no override was used.
+- Coverage: all four Unit 5 subtopics — UDP datagram simplicity (6), the TCP header, three-way handshake and
+  connection close (7), flow control and the sliding window (6), and congestion control from slow start to AIMD (6).
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="computer-networks"`, `data-unit="transport-layer"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and, for the first time, on every banked card in the Question Bank tab as well, which closes the gap left by
+  earlier runs where the archived cards carried no attributes at all.
+- All 25 ids are new (`CN-U5-Q01`..`CN-U5-Q25`) and every stem was compared with the 200 banked Computer Networks
+  items after normalisation (tags stripped, case and punctuation removed): zero id overlap and zero duplicated
+  stems. The highest remaining similarity score, 0.966, is between the MSQ stems &ldquo;Which of the following
+  statements about UDP are TRUE?&rdquo; and the banked &ldquo;&hellip; about iBGP are TRUE?&rdquo; — the shared words
+  are the question format, and the options have nothing in common. The set opens ground this subject has never
+  examined: UDP&rsquo;s eight-byte header and length field, the pseudo-header&rsquo;s real purpose, message
+  boundaries, all-or-nothing IP reassembly, the handshake flag pattern, the data offset in 32-bit words, half-close
+  and TIME_WAIT, byte-counting acknowledgements, random initial sequence numbers and SYN floods, the advertised
+  window as a byte range, the effective window as a minimum, zero-window probing, window scaling, Clark&rsquo;s
+  solution against Nagle, slow start against congestion avoidance, the timeout against three duplicate
+  acknowledgements, and Tahoe against Reno.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Computer Networks, and no TCP, UDP, flow-control or
+  congestion-control previous-year question has been verified against an official paper and answer key, so nothing
+  on this paper is claimed as an official GATE question. 14 items are `STANDARD_TEXTBOOK` and 11 are
+  `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A UDP length field of 1200 leaves
+  `1200 − 8 =` **1192** payload bytes; a 500-byte UDP payload in a 20-byte IPv4 packet inside Ethernet with a 14-byte
+  header and a 4-byte frame check sequence occupies `500 + 8 + 20 + 14 + 4 =` **546** bytes; a TCP data offset of 8
+  words is `8 × 4 =` **32** bytes of header, i.e. 12 bytes of options; a client SYN at sequence 1000 acknowledged
+  with 1001 whose next segment carries 300 bytes is acknowledged with **1301**; an initial sequence number of 4000
+  followed by 500, 1000 and 200 bytes (with two retransmissions that reuse their numbers) ends at
+  `4001 + 1700 =` **5701**; a congestion window of 8 MSS against an advertised window of 4 MSS allows **4** MSS;
+  a window of 4000 bytes with 3000 bytes in flight leaves **1000** bytes; a threshold of 32 MSS is reached in
+  **5** round trips from 1 MSS; and the post-timeout trace `1, 2, 4, 8, 9, 10` gives **10** MSS at the end of the
+  fifth round trip.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B), (A, B, C), (A, B, C), (A, B, C) and (A, B, C) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Computer Networks
+  Unit 4 Set 2 paper. The `<style>` block (13 243 bytes), the exam `<script>` (9 445 bytes) and the `:root` token
+  block are **byte-identical** to that paper, and the `:root` block still matches `design-tokens.css` and
+  `index.html` byte for byte. Only the title, header sub-line, candidate id, meta strip, question payload, bank tab,
+  About tab and payload differ.
+- The bank-tab renderer was validated before use: rebuilding Units 1–4 from `master_bank.json` reproduces the
+  shipped 175-question bank markup of the previous paper byte for byte, so the only change in this paper&rsquo;s bank
+  tab is the 25 added Unit 4 Set 2 questions plus the new data attributes.
+- Verified in headless Chromium 153 from `file://` (**34 checks, all passing**): 25 question cards with exactly one
+  visible, a 25-button palette, the timer at 60:00, the Answer Key tab disabled and labelled locked, an empty key
+  pane, a hidden summary, every active `.sol` empty and hidden, no `ansline` markup in the question pane and no
+  option marked; the palette reaches `na` and `cur` through navigation; the Question Bank tab renders **200** cards
+  under four unit accordions with Units 5 and 6 each collapsing to one line. After answering every item correctly
+  and submitting, the score reads **35 / 35** with 25 correct, 0 incorrect, 25 `ok` palette buttons, 25 key cards
+  and a revealed solution on every card. No page errors.
+- The portal&rsquo;s data block was updated in place, not rebuilt: the new Unit 5 record was inserted at the head of
+  `tests` with an empty `archives` list, and the 25 records were appended to
+  `data/questions-computer-networks.js`, which now carries 225. A headless run of the portal renders **62** test
+  cards, **51** unit cards and **2600** archive question cards with every one of its 238 internal links resolving.
+  The static header strings were recomputed from the data and now read **67** units, **62** test cards and
+  **2600** solved questions; the stale `1825 records` note in the portal script was corrected to **2600** in the
+  same pass.
+- **Repaired this run:** the archive view keys a banked question to its unit by strict equality on `q.unit`, and the
+  first write of the new records stored `unit` as a string, which silently dropped the 25 new questions from the
+  archive; the field is now an integer like every other subject&rsquo;s, and the archive count matches the banks at
+  2600.
+- Hygiene: the paper is filed at exactly one path, `computer-networks/transport-layer/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (52 current and 52 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-30 — Discrete Mathematics Unit 8, Set 2 of 2
 
