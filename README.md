@@ -7,33 +7,36 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 2 of 2**, 2026-10-29 →
-  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html)
+- **Computer Architecture · Unit 3 — Memory Hierarchy & Cache Memory, Set 1 of 2**, 2026-10-29 →
+  [`computer-architecture/cache-memory/gate_co_mock_3_2026-10-29.html`](computer-architecture/cache-memory/gate_co_mock_3_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: file allocation (7) · free-space management (6) · disk scheduling (7) · access control & protection (5)
-- Rotation: MODE A. One subject was drawn at random with `random.Random(20261029).choice` over the eleven subjects
-  and it gave **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 11, unit 6, storage-file-systems, Set 1 of 2}`. Unit 6 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days — well under
-  `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 6, Set 2 of
-  2**, which closes Unit 6 at exactly 50 questions and completes Operating Systems at **6 of 6 units**.
-  No override was used and no second pass has started for this subject.
-- The superseded Set 1 was archived, unchanged, as
-  `operating-systems/storage-file-systems/archive/gate_os_mock_6_2026-10-29_run1.html`.
-- The paper's Question Bank tab lists **275** solved questions (units 1–5 at 50 each, Unit 6 at 25) against the
-  25 active ones; Set 2's own 25 questions stay out of that list until a later paper banks them.
-- Previous test: **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 1 of 2**, 2026-10-29 →
-  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
+- Subtopics: address mapping (8) · cache hit/miss & miss penalty (7) · replacement algorithms (5) · write
+  policies (5)
+- Rotation: MODE A. Eight of the eleven subjects already had a paper dated 2026-10-29, so one subject was drawn
+  with `random.Random(20261029).choice` over the three that had not — engineering-mathematics, digital-logic and
+  computer-architecture — and it gave **Computer Architecture**. `runs[]` sorted by `(date, run)` gives the most
+  recent paper as `{date 2026-10-28, run 2, unit 2, datapath-control-unit, Set 2 of 2}`. Unit 2 held **50**
+  questions, exactly `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(datapath-control-unit) = 1 + 1) mod 6 = 2` → **Unit 3, Memory Hierarchy & Cache Memory**
+  (`cache-memory`). Unit 3 had no folder and no paper, so this is **Set 1 of 2**. No override was used and no
+  second pass has started for this subject.
+- Unit 3 now holds 25 questions, under the cap, so the next Computer Architecture run re-selects Unit 3 as Set 2
+  of 2 before advancing to `(index_of(cache-memory) = 2 + 1) mod 6 = 3` → Unit 4, Main Memory & Virtual Memory
+  Interface.
+- The paper's Question Bank tab lists **50** solved questions (all of Unit 2) against the 25 active ones; Unit 3's
+  own 25 questions stay out of that list until a later paper banks them.
+- Previous test: **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 2 of 2**, 2026-10-29 →
+  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 94 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 12 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 47 current · 47 archived |
-| Test cards on the portal | 55 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2350 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 300 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 95 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 12 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 48 current · 47 archived |
+| Test cards on the portal | 56 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2375 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 300 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 47 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 6 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -135,6 +138,76 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Computer Architecture → Unit 3 (Memory Hierarchy & Cache Memory), Set 1 of 2.**
+  MODE A: eight subjects already had a paper dated 2026-10-29 (algorithms, compiler-design, computer-networks,
+  databases, discrete-mathematics, operating-systems, programming-data-structures, theory-of-computation), so one
+  subject was drawn with a seeded `random.Random(20261029).choice` over the three that had not, in the fixed
+  syllabus order engineering-mathematics, digital-logic, computer-architecture, giving **Computer Architecture**.
+  `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{date 2026-10-28, run 2, unit 2, datapath-control-unit, Set 2 of 2}`. Unit 2 held **50** questions, at
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(datapath-control-unit) = 1 + 1) mod 6 = 2` → Unit 3. Unit 3
+  held no questions and had no folder, so this is **Set 1 of 2**; nothing was archived because nothing was
+  superseded. No override was used.
+- Coverage this run: all four Unit 3 subtopics — address mapping (8), cache hit/miss and miss penalty (7),
+  replacement algorithms (5), write policies (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries
+  `data-subject="computer-architecture"`, `data-unit="cache-memory"`, `data-unit-number="3"`, its subtopic slug,
+  its type, its lowercase difficulty and its source tag — `data-subject` included, which the older Computer
+  Architecture Unit 2 records carry too.
+- All 25 items are new: ids `CO-U3-Q01`..`CO-U3-Q25` did not exist in the bank, and every stem was compared with
+  the 2350 normalised stems held across the eleven subject banks (tags stripped, case and punctuation removed):
+  zero id overlap and no duplicated stem. Unit 2 is a control-and-datapath unit, so the ground is disjoint by
+  construction; within the unit, Set 1 deliberately spreads over mapping fields, two-level AMAT, LRU/FIFO/optimal
+  traces and write-back traffic rather than repeating one pattern.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Computer Architecture, and no cache or
+  memory-hierarchy previous-year question has been verified against an official paper and answer key, so nothing
+  on this paper is claimed as an official GATE question. Every item is `STANDARD_TEXTBOOK` (16) or
+  `ORIGINAL_SYNTHESIS` (9).
+- **Every countable answer was recomputed by script, not by hand.** Direct-mapped line for block 1500 is
+  1500 mod 256 = **220**; the 32-bit / 16 KB / 4-way / 32-byte split is offset 5, index 7, tag **20**; blocks 0
+  and 64 both reduce to set 0, so the alternating string gives **6** hits in 2-way against **0** in
+  direct-mapped; `0x2A40` = 10816 gives block 169 and set 169 mod 128 = **41**; AMAT figures are **3.0**
+  (1 + 0.04 × 50), **2.5** (1 + 0.05 × 30), **5.6** (2.0 + 1.5 × 0.03 × 80) and **3.26**
+  (2 + 0.03 × 42); LRU on 1, 2, 3, 1, 4 with 3 frames gives **1** hit; on the twelve-reference string, three
+  frames give LRU 2 hits / 10 misses, FIFO 3 / 9 and optimal 5 / 7, and four frames give FIFO 2 / **10** — the
+  Belady anomaly, one more miss than with three frames; the 256 KB 8-way cache has **512** sets; the 2.5% /
+  80-cycle cache has AMAT **3**; write-back over 16 rewritten blocks gives **16** write-backs; and the
+  16 KB write-back cache needs 256 lines × (512 + 20 + 1 + 1) = **136 704** bits.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B), (A, B, C), (A, B, D), (A, B, D) and (A, C, D) — checked by script.
+- Shell parity: the paper was produced by splicing new content into the shipped shell rather than re-typing it.
+  The `<style>` block, the exam `<script>` and the `:root` token block are **byte-identical** to the
+  Operating Systems Unit 6 Set 2 paper it was generated from (13 228, 9 399 bytes and the token block
+  respectively), and the `:root` block still matches `design-tokens.css` and `index.html` byte for byte. Only
+  the title, brand line, header sub-line, candidate id, Question Bank count, meta strip, question payload, bank
+  tab and About tab differ. The paper was taken from the Operating Systems shell rather than the Computer
+  Architecture Unit 2 shell because the latter predates the `aside.side` palette fix and still emits the palette
+  as a bare `div.card`.
+- The paper was exercised in headless Chromium 153 from `file://` before shipping (**22 checks, all passing**):
+  nothing is revealed pre-submit (every active `.sol` empty and hidden, no `ansline` markup in the question
+  pane, no option marked, key tab disabled and labelled locked, key pane empty, summary hidden, timer at 60:00,
+  one card visible, every input enabled); the palette reaches `na`, `ans`, `amr` and `mrk` through visiting,
+  answering, marking and Clear response, and `cur` follows the current question; all four tabs open and the key
+  tab stays locked until submit; a fully correct paper scores **35 / 35** with 25 `ok` palette buttons, 25 key
+  cards and a filled solution on every card; a paper whose five MSQ are each one option short scores
+  **25 / 35** with 5 wrong; an empty paper scores **0 / 35** with 25 `skip` buttons; the Question Bank tab
+  renders **50** cards under one unit accordion and four subtopic accordions with no active question repeated;
+  and the About tab carries its three sections.
+- The portal's data block was updated in place, not rebuilt: the new Unit 3 record was inserted at the head of
+  `tests` with an empty `archives` list, the new unit record was inserted after Computer Architecture Unit 2 in
+  `units`, and the 25 records were appended to `data/questions-computer-architecture.js`, which now carries 75.
+  The static header strings were recomputed from the data and now read **66** units, **2375** solved questions,
+  **56** test cards, 2375 records and 285 subtopics. A headless run of the portal renders 56 test cards,
+  2375 archive question cards and 95 paper links, every one of which resolves.
+- Hygiene: the paper is filed at exactly one path, `computer-architecture/cache-memory/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (96 files, 48 current and 47 archived);
+  no temporary or loose file was left at the repository root.
+- Open items inherited unchanged, and not fixed by this run because each touches files it did not create: the
+  literal hex outside `:root` in the shared shell; the two legacy `proof-techniques` archive files that still
+  carry an older `:root`; the two current papers in `digital-logic/number-systems`; the two portal cards that
+  launch an archived run while a current paper exists; the two pre-existing stem collisions inside Algorithms
+  Unit 1; and the unclosed `#view-about` in the shared shell.
 
 - **2026-10-29, Operating Systems → Unit 6 (File Systems & Disk Scheduling), Set 2 of 2.**
   MODE A: one subject was drawn at random with a seeded `random.Random(20261029).choice` over all eleven GATE CSE
