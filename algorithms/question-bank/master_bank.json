@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-29",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 125,
+  "total_questions": 150,
   "units_with_questions": [
    1,
    2,
@@ -305,6 +305,66 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. One subject was drawn uniformly at random from the five GATE CSE subjects that had no paper dated 2026-10-29 (engineering-mathematics, digital-logic, computer-architecture, algorithms, computer-networks) with an unseeded random.SystemRandom() draw at index 3 of 5 in that fixed list order, giving Algorithms. algorithms/question-bank/master_bank.json read back runs[-1] = {date 2026-10-28, run 4, unit 2, sorting-divide-conquer, \"Set 2 of 2\"}. Unit 2 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2 -> Unit 3, Greedy Algorithms (greedy-algorithms). Unit 3 had no folder and no paper, so nothing was archived and no override was used.",
    "note": "Set 1 of 2 for Algorithms Unit 3, which had no folder and no paper, so the unit folder holds exactly one current paper and no root copy was written. Unit 3 now holds 25 questions, below UNIT_QUESTION_CAP = 50, so the next Algorithms run re-selects Unit 3 as Set 2 of 2 before advancing to (index_of(greedy-algorithms) = 2 + 1) mod 7 = 3 -> Unit 4, Dynamic Programming. All 25 items are new (ALG-U3-Q01..Q25); no id and no normalised stem collides with the 100 banked Algorithms items. Coverage: fractional knapsack 7, Huffman coding 6, activity selection 6, optimal merge patterns 6 — every one of the four unit subtopics is represented. No question is an official GATE PYQ: verified_pyqs is unchanged and empty for this subject, so no item is tagged GATE_PYQ_VARIATION and nothing on this paper is claimed as official. Every numeric answer was recomputed by script: the ratio-greedy fill values (85 and 106), the two Huffman merge-cost sums (224 and 25) with a depth cross-check, the activity-selection count (4, confirmed by exhaustive subset search) and the two optimal merge costs (205 and 45)."
+  },
+  {
+   "run": 6,
+   "date": "2026-10-29",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "set": "2 of 2",
+   "file": "algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html",
+   "archived": "algorithms/greedy-algorithms/archive/gate_algo_mock_3_2026-10-29_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "fractional-knapsack",
+    "huffman-coding",
+    "activity-selection-interval-scheduling",
+    "optimal-merge-patterns"
+   ],
+   "question_ids": [
+    "ALG-U3-Q26",
+    "ALG-U3-Q27",
+    "ALG-U3-Q28",
+    "ALG-U3-Q29",
+    "ALG-U3-Q30",
+    "ALG-U3-Q31",
+    "ALG-U3-Q32",
+    "ALG-U3-Q33",
+    "ALG-U3-Q34",
+    "ALG-U3-Q35",
+    "ALG-U3-Q36",
+    "ALG-U3-Q37",
+    "ALG-U3-Q38",
+    "ALG-U3-Q39",
+    "ALG-U3-Q40",
+    "ALG-U3-Q41",
+    "ALG-U3-Q42",
+    "ALG-U3-Q43",
+    "ALG-U3-Q44",
+    "ALG-U3-Q45",
+    "ALG-U3-Q46",
+    "ALG-U3-Q47",
+    "ALG-U3-Q48",
+    "ALG-U3-Q49",
+    "ALG-U3-Q50"
+   ],
+   "mode": "MODE A (random subject, bank-driven unit rotation)",
+   "selection": "Unit 3 was current with 25 of 50 questions banked and had been current for 0 days, so step B3 re-selected it for the second and final set. 25 + 25 = 50 closes the unit at the cap."
   }
  ],
  "verified_pyqs": [],
@@ -4733,6 +4793,875 @@
     ],
     "final": "Options (A), (B) and (C).",
     "trap": "Assuming the optimal tree is balanced. Optimality here is about total cost, and the cheapest tree is often the most lopsided one."
+   }
+  },
+  {
+   "id": "ALG-U3-Q26",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "In the fractional knapsack problem the items are divisible. Which one of the following statements is TRUE?",
+   "options": [
+    "The problem is solved optimally in O(n log n) time by sorting the items on value per unit weight.",
+    "The problem needs dynamic programming, because a greedy choice may have to be undone later.",
+    "The problem is NP-hard, exactly like 0/1 knapsack.",
+    "The greedy algorithm may end up taking three or more items fractionally."
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Fractional knapsack is a continuous problem: the exchange rate between weight and value is the ratio v_i/w_i, and only that ratio decides which item deserves the scarce capacity.",
+    "steps": [
+     "Sorting on the ratio costs O(n log n) and filling the knapsack afterwards costs O(n), so the whole algorithm is O(n log n).",
+     "At most one item is split, because the first item that does not fit whole exhausts whatever capacity is left.",
+     "Divisibility is exactly what makes the exchange argument valid, so no dynamic program and no backtracking is needed.",
+     "0/1 knapsack is the NP-hard relative; the fractional version is polynomial and its greedy solution is optimal."
+    ],
+    "final": "Option (A).",
+    "trap": "Options C and D are the usual slips: confusing the fractional problem with its NP-hard 0/1 cousin, and imagining that several items get cut. The split happens at most once, at the boundary item."
+   }
+  },
+  {
+   "id": "ALG-U3-Q27",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "A knapsack has capacity 18. The available items, given as (weight, value), are (6, 42), (9, 54), (4, 20) and (5, 25). Items are divisible. What is the maximum total value that can be carried? (Enter an integer.)",
+   "options": [],
+   "answer": 111,
+   "solution": {
+    "concept": "Sort by value per unit weight in decreasing order, take whole items while they fit, then split the first item that does not fit.",
+    "steps": [
+     "Ratios: 42/6 = 7, 54/9 = 6, 20/4 = 5, 25/5 = 5.",
+     "Order: (6, 42) with ratio 7, then (9, 54) with ratio 6, then the two ratio-5 items in either order.",
+     "Take (6, 42): weight 6, value 42, capacity left 12.",
+     "Take (9, 54): weight 15, value 96, capacity left 3.",
+     "Take 3 of the 4 units of (4, 20): value 20 × (3/4) = 15.",
+     "Total value 96 + 15 = 111, with the knapsack exactly full."
+    ],
+    "final": "111.",
+    "trap": "Answering 96 by taking only the whole items, or splitting (5, 25) first because it looks lighter. The ratio order — not the weight and not the total value — decides."
+   }
+  },
+  {
+   "id": "ALG-U3-Q28",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "A knapsack has capacity 12 and the divisible items (weight, value) are (5, 30), (4, 20), (6, 36) and (3, 15). The maximum total value the ratio-greedy algorithm carries is:",
+   "options": [
+    "71",
+    "70",
+    "66",
+    "75"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Take items in decreasing ratio order and split only the boundary item.",
+    "steps": [
+     "Ratios: 30/5 = 6, 20/4 = 5, 36/6 = 6, 15/3 = 5.",
+     "The two ratio-6 items come first: (5, 30) and (6, 36).",
+     "Take (5, 30): weight 5, value 30, capacity left 7.",
+     "Take (6, 36): weight 11, value 66, capacity left 1.",
+     "Take 1 unit of a ratio-5 item: value 5. Total 66 + 5 = 71."
+    ],
+    "final": "71 (option A).",
+    "trap": "Answering 66 by stopping at the whole items, or 75 by using a capacity of 15. Check the fractional tail separately: 1 unit at ratio 5."
+   }
+  },
+  {
+   "id": "ALG-U3-Q29",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Which of the following statements about the fractional knapsack greedy algorithm are TRUE? (Select all that apply.)",
+   "options": [
+    "If every item has the same value per unit weight, then every order of the items gives an optimal solution.",
+    "If the total weight of all the items is at least the capacity, the greedy knapsack ends up completely full.",
+    "The algorithm takes a fraction of an item exactly when that item does not fit whole into the remaining capacity.",
+    "The algorithm may skip a high-ratio item in order to take two lower-ratio items whose total weight is larger."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "With divisible items the objective is linear in the fraction taken, so value per unit weight is the only thing that matters.",
+    "steps": [
+     "Option A: when all ratios are equal, any order fills the capacity with the same total value, so every order is optimal. True.",
+     "Option B: as long as the total weight reaches the capacity, the algorithm keeps taking whole items and then splits one, so the knapsack is exactly full. True.",
+     "Option C: whole items are taken while they fit; the first item that does not fit is split. True.",
+     "Option D: skipping a higher-ratio item for lower-ratio ones strictly lowers the value per unit of capacity, so it can never be optimal. False."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "Option D describes what 0/1 knapsack does — leaving capacity unused — and candidates carry that habit over. With divisible items the knapsack is always filled, so there is no reason to prefer a lower ratio."
+   }
+  },
+  {
+   "id": "ALG-U3-Q30",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "A knapsack has capacity 25 and the divisible items (10, 60), (8, 48), (7, 35), (5, 30) and (12, 72). The maximum total value that can be carried is:",
+   "options": [
+    "150",
+    "148",
+    "145",
+    "156"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Ratio order decides; ties in the ratio are harmless, but a lower-ratio item must never be preferred for the leftover capacity.",
+    "steps": [
+     "Ratios: 60/10 = 6, 48/8 = 6, 35/7 = 5, 30/5 = 6, 72/12 = 6.",
+     "Four items tie at ratio 6 and one sits at ratio 5.",
+     "Take (10, 60): weight 10, value 60, capacity left 15.",
+     "Take (8, 48): weight 18, value 108, capacity left 7.",
+     "Take (5, 30): weight 23, value 138, capacity left 2.",
+     "Take 2 units of (12, 72) at ratio 6: value 12. Total 138 + 12 = 150, knapsack exactly full."
+    ],
+    "final": "150 (option A).",
+    "trap": "148 comes from taking the leftover 2 units out of (7, 35), simply because it is the next item in the list. Its ratio is 5, not 6, so it is the wrong item for the leftover capacity."
+   }
+  },
+  {
+   "id": "ALG-U3-Q31",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "fractional-knapsack",
+   "subtopic": "fractional-knapsack",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "A knapsack has capacity 11 and the divisible items (4, 24), (5, 25), (6, 30) and (2, 10). What is the maximum total value that can be carried? (Enter an integer.)",
+   "options": [],
+   "answer": 59,
+   "solution": {
+    "concept": "Sort by value per unit weight, fill whole items, split the boundary item.",
+    "steps": [
+     "Ratios: 24/4 = 6, 25/5 = 5, 30/6 = 5, 10/2 = 5.",
+     "Take (4, 24): weight 4, value 24, capacity left 7.",
+     "Take (5, 25): weight 9, value 49, capacity left 2.",
+     "Take 2 units of any ratio-5 item: value 10.",
+     "Total 49 + 10 = 59, knapsack exactly full."
+    ],
+    "final": "59.",
+    "trap": "Answering 54 by stopping at the whole items, or 60 by rounding the capacity up to 12. The fractional tail of 2 units is worth 10, not 5."
+   }
+  },
+  {
+   "id": "ALG-U3-Q32",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Huffman's algorithm repeatedly merges the two smallest frequencies. Implemented with a binary min-heap, its running time for n symbols is:",
+   "options": [
+    "O(n log n)",
+    "O(n^2)",
+    "O(n)",
+    "O(2^n)"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "A Huffman tree on n leaves has exactly n − 1 merges, and each merge performs two extractions and one insertion on the heap.",
+    "steps": [
+     "There are n − 1 merges in total.",
+     "Each heap operation costs O(log n), and each merge performs three of them.",
+     "Total time O(n log n).",
+     "If the frequencies arrive already sorted, two FIFO queues replace the heap and the bound improves to O(n)."
+    ],
+    "final": "Option (A).",
+    "trap": "Option B comes from scanning an unsorted list for the two minima at every step, which is O(n) per merge. The heap, or the two-queue trick on sorted input, removes that factor."
+   }
+  },
+  {
+   "id": "ALG-U3-Q33",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Four symbols have frequencies 2, 3, 4 and 5. What is the total cost of a Huffman tree on these frequencies — that is, the sum over symbols of frequency × codeword length? (Enter an integer.)",
+   "options": [],
+   "answer": 28,
+   "solution": {
+    "concept": "The cost of a Huffman tree equals the sum of the weights of all its merges, which is the same as the weighted external path length.",
+    "steps": [
+     "Merge 2 and 3 into 5. Merge cost 5.",
+     "The queue now holds 4, 5 and the new 5.",
+     "Merge 4 and 5 into 9. Merge cost 9. Queue: 5, 9.",
+     "Merge 5 and 9 into 14. Merge cost 14.",
+     "Total cost 5 + 9 + 14 = 28."
+    ],
+    "final": "28.",
+    "trap": "Reporting only the final merge (14) or the sum of the original frequencies (14). The cost accumulates over every merge, not just the last one."
+   }
+  },
+  {
+   "id": "ALG-U3-Q34",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Five symbols have frequencies 1, 2, 3, 4 and 5. The total cost of a Huffman tree on these frequencies is:",
+   "options": [
+    "33",
+    "32",
+    "34",
+    "31"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Every merge inserts its own weight back into the queue, so a newly formed value competes with the original frequencies.",
+    "steps": [
+     "Merge 1 and 2 into 3. Cost 3. Queue: 3, 3, 4, 5.",
+     "Merge 3 and 3 into 6. Cost 6. Queue: 4, 5, 6.",
+     "Merge 4 and 5 into 9. Cost 9. Queue: 6, 9.",
+     "Merge 6 and 9 into 15. Cost 15.",
+     "Total 3 + 6 + 9 + 15 = 33."
+    ],
+    "final": "33 (option A).",
+    "trap": "32 comes from pairing 4 and 5 too early, or from forgetting to push the merged value back into the queue. After the first merge the value 3 must compete with the original 3, 4 and 5."
+   }
+  },
+  {
+   "id": "ALG-U3-Q35",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Which of the following statements about Huffman coding are TRUE? (Select all that apply.)",
+   "options": [
+    "For a given frequency distribution, Huffman's algorithm produces a prefix code of minimum expected codeword length.",
+    "The Huffman code for a given frequency distribution is unique.",
+    "Every full binary tree with n leaves defines a prefix code for n symbols.",
+    "In a Huffman tree no codeword is a prefix of another codeword."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "Reading the root-to-leaf paths of a full binary tree as codewords gives a prefix-free code; Huffman's merge rule makes that code optimal for the given frequencies.",
+    "steps": [
+     "Option A: Huffman's optimality is proved by the sibling and exchange arguments, so its expected length is minimal. True.",
+     "Option B: ties between equal frequencies, and the freedom to place either child on the left, produce several different optimal trees. False.",
+     "Option C: leaves are at distinct nodes of a binary tree, so no root-to-leaf path is a prefix of another. True.",
+     "Option D: codewords end at leaves, and no leaf is an ancestor of another leaf. True."
+    ],
+    "final": "Options (A), (C) and (D).",
+    "trap": "Option B is the standard trap: an optimal code is not the optimal code. With ties — and there are ties in almost every real distribution — several distinct Huffman trees have the same minimal cost."
+   }
+  },
+  {
+   "id": "ALG-U3-Q36",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Six symbols each have frequency 1. In a Huffman tree built on these frequencies, the length of the longest codeword is:",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Equal frequencies make Huffman behave like a balanced merge: each round pairs up the smallest values, and the tree depth is governed by how many rounds are needed.",
+    "steps": [
+     "Queue: 1, 1, 1, 1, 1, 1.",
+     "Merge 1 + 1 = 2. Queue: 1, 1, 1, 1, 2.",
+     "Merge 1 + 1 = 2. Queue: 1, 1, 2, 2.",
+     "Merge 1 + 1 = 2. Queue: 2, 2, 2.",
+     "Merge 2 + 2 = 4. Queue: 2, 4.",
+     "Merge 2 + 4 = 6. Total merge cost 2 + 2 + 2 + 4 + 6 = 16.",
+     "Leaf depths: the two symbols merged in the last step sit at depth 1 and 2, and the four symbols under the weight-4 subtree sit at depths 2 and 3.",
+     "So two codewords have length 2 and four have length 3; the longest codeword has length 3."
+    ],
+    "final": "3 (option A).",
+    "trap": "Assuming the answer is always ⌈log2 6⌉ = 3 for the wrong reason. Huffman guarantees nothing about balance in general — with frequencies 1, 1, 1, 1, 1, 1 a tree of depth up to 5 is possible for other merge orders, and the bound is n − 1, not log n."
+   }
+  },
+  {
+   "id": "ALG-U3-Q37",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "huffman-coding",
+   "subtopic": "huffman-coding",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Six symbols have frequencies 5, 7, 10, 15, 20 and 45. What is the total cost of a Huffman tree on these frequencies? (Enter an integer.)",
+   "options": [],
+   "answer": 228,
+   "solution": {
+    "concept": "Repeatedly merge the two smallest current values and add the merged value to the running cost.",
+    "steps": [
+     "Merge 5 and 7 into 12. Cost 12. Queue: 10, 12, 15, 20, 45.",
+     "Merge 10 and 12 into 22. Cost 22. Queue: 15, 20, 22, 45.",
+     "Merge 15 and 20 into 35. Cost 35. Queue: 22, 35, 45.",
+     "Merge 22 and 35 into 57. Cost 57. Queue: 45, 57.",
+     "Merge 45 and 57 into 102. Cost 102.",
+     "Total 12 + 22 + 35 + 57 + 102 = 228."
+    ],
+    "final": "228.",
+    "trap": "Re-sorting the original frequencies at every step instead of inserting the merged value. After the first merge the value 12 has to compete with 10, and missing that changes every later merge."
+   }
+  },
+  {
+   "id": "ALG-U3-Q38",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "To select the largest set of mutually compatible activities, the correct greedy rule is to:",
+   "options": [
+    "sort the activities by finishing time and repeatedly take the next activity that starts no earlier than the last chosen one finishes.",
+    "sort the activities by starting time and take them in that order.",
+    "always take the activity of shortest duration first.",
+    "always take the activity that starts earliest and finishes latest."
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Finishing as early as possible leaves the largest remaining window, so the earliest-finish choice is safe: some optimal solution contains it.",
+    "steps": [
+     "Exchange argument: let a be the activity of earliest finish in a compatible set that also starts after the current time. Any optimal solution can swap its first activity for a without losing compatibility, because a finishes no later.",
+     "Repeating the swap proves the greedy choice is optimal at every step.",
+     "Sorting by start time fails: an early-starting, long activity blocks many others.",
+     "Shortest duration fails: a short activity in the middle of the day can straddle two others.",
+     "Taking the earliest start with the latest finish is the worst of the four."
+    ],
+    "final": "Option (A).",
+    "trap": "Shortest-duration-first feels efficient and is wrong: duration says nothing about how much of the timeline is consumed at the edges. Only the finish time bounds the remaining schedule."
+   }
+  },
+  {
+   "id": "ALG-U3-Q39",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Five activities have the intervals (start, finish) (1, 3), (2, 4), (3, 5), (5, 6) and (4, 7). Activities that touch at an endpoint are compatible. What is the maximum number of mutually compatible activities?",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Sort by finishing time, then sweep left to right taking every activity whose start is at least the finish of the last one taken.",
+    "steps": [
+     "Sorted by finish: (1, 3), (2, 4), (3, 5), (5, 6), (4, 7).",
+     "Take (1, 3). Last finish is 3.",
+     "Next with start ≥ 3: (3, 5). Last finish is 5.",
+     "Next with start ≥ 5: (5, 6). Last finish is 6.",
+     "(4, 7) starts at 4, which is before 6, so it is rejected.",
+     "Three activities: (1, 3), (3, 5), (5, 6)."
+    ],
+    "final": "3 (option A).",
+    "trap": "Answering 2 by taking (1, 3) and then (4, 7) — a valid set, but not a maximum one. The endpoint rule also matters: (3, 5) is compatible with (1, 3) only because touching at 3 is allowed."
+   }
+  },
+  {
+   "id": "ALG-U3-Q40",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Five activities have the intervals (0, 5), (1, 2), (2, 3), (3, 4) and (4, 6). Activities that touch at an endpoint are compatible. The maximum number of mutually compatible activities is:",
+   "options": [
+    "4",
+    "3",
+    "2",
+    "5"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "The earliest-finish sweep never needs to look back, so one pass after sorting is enough.",
+    "steps": [
+     "Sorted by finish: (1, 2), (2, 3), (3, 4), (0, 5), (4, 6).",
+     "Take (1, 2); last finish 2.",
+     "Take (2, 3); last finish 3.",
+     "Take (3, 4); last finish 4.",
+     "Take (4, 6); last finish 6. The long activity (0, 5) is skipped.",
+     "Four activities in total."
+    ],
+    "final": "4 (option A).",
+    "trap": "Taking (0, 5) first because it is listed first, which leaves room for only two more. Listing order is irrelevant — the finish time is what the algorithm sorts on."
+   }
+  },
+  {
+   "id": "ALG-U3-Q41",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Which of the following statements about the unweighted activity-selection problem are TRUE? (Select all that apply.)",
+   "options": [
+    "Choosing the activity that finishes earliest leaves the maximum possible room for the remaining activities.",
+    "Choosing the activity of shortest duration first is optimal.",
+    "The running time of the greedy algorithm is dominated by the sorting step, O(n log n).",
+    "After an activity is chosen, only activities that start at or after its finishing time are considered."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "The greedy-choice property holds for the earliest-finish rule, and the rest of the algorithm is a single linear sweep after sorting.",
+    "steps": [
+     "Option A: an earlier finish can only enlarge the set of compatible successors, so it is always at least as good. True.",
+     "Option B: a short activity placed in the middle of the timeline can overlap two others. False.",
+     "Option C: sorting costs O(n log n); the sweep costs O(n). True.",
+     "Option D: compatibility is defined by start ≥ last finish, so that is exactly the filter used. True."
+    ],
+    "final": "Options (A), (C) and (D).",
+    "trap": "Option B is tempting because 'short' sounds like 'leaves more room', but duration measures length, not the position of the left edge. Only the finish time bounds what can follow."
+   }
+  },
+  {
+   "id": "ALG-U3-Q42",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "In weighted interval scheduling each interval carries a weight and the goal is to maximise the total weight of a compatible set. Which one of the following statements is TRUE?",
+   "options": [
+    "The earliest-finish greedy rule remains optimal once weights are added.",
+    "A dynamic program over the intervals sorted by finish time, with a binary search for the last compatible interval, solves the problem in O(n log n) time.",
+    "The problem is NP-hard for arbitrary positive weights.",
+    "Sorting by weight and taking intervals greedily is optimal, because all weights are positive."
+   ],
+   "answer": 1,
+   "solution": {
+    "concept": "Adding weights destroys the greedy-choice property: a single heavy interval can be worth more than several light compatible ones, so the choice must be optimised rather than fixed.",
+    "steps": [
+     "Option A: one long heavy interval can beat three short light ones, so earliest finish is no longer safe. False.",
+     "Option B: with intervals sorted by finish, let p(j) be the last interval compatible with j, found by binary search. Then OPT(j) = max(w_j + OPT(p(j)), OPT(j − 1)), giving O(n log n) after sorting. True.",
+     "Option C: the DP is polynomial, so the problem is not NP-hard. False.",
+     "Option D: a very heavy interval that blocks two moderately heavy ones defeats any weight-order rule. False."
+    ],
+    "final": "Option (B).",
+    "trap": "Option A is the most common error: candidates learn activity selection as a greedy problem and assume weights are a detail. The weight is precisely what breaks the exchange argument."
+   }
+  },
+  {
+   "id": "ALG-U3-Q43",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Six activities have the intervals (1, 4), (2, 3), (3, 5), (6, 7), (5, 8) and (8, 9). Activities that touch at an endpoint are compatible. The maximum number of mutually compatible activities is:",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "2"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Sort by finish and sweep, keeping the last finish time.",
+    "steps": [
+     "Sorted by finish: (2, 3), (1, 4), (3, 5), (6, 7), (5, 8), (8, 9).",
+     "Take (2, 3); last finish 3.",
+     "Next start ≥ 3: (3, 5); last finish 5.",
+     "Next start ≥ 5: (6, 7) — it finishes before (5, 8), so it comes first; last finish 7.",
+     "Next start ≥ 7: (8, 9); last finish 9.",
+     "Four activities: (2, 3), (3, 5), (6, 7), (8, 9)."
+    ],
+    "final": "4 (option A).",
+    "trap": "Stopping at 3 by taking (1, 4) or (5, 8). (6, 7) fits inside (5, 8), so choosing the shorter, earlier-finishing interval keeps (8, 9) available as well."
+   }
+  },
+  {
+   "id": "ALG-U3-Q44",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "activity-selection-interval-scheduling",
+   "subtopic": "activity-selection-interval-scheduling",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Build the interval graph of a set of activities: one vertex per activity, with an edge between two activities that overlap. Which quantity equals the minimum number of rooms needed to run every activity without a clash?",
+   "options": [
+    "the chromatic number of the interval graph, which equals its maximum clique — the largest number of activities overlapping at any single instant",
+    "the size of a maximum independent set of the interval graph",
+    "the number of activities minus the size of a maximum independent set",
+    "the number of activities"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Interval graphs are perfect, so the chromatic number equals the clique number; the clique number is the peak overlap.",
+    "steps": [
+     "A colouring assigns rooms so that overlapping activities get different colours.",
+     "The clique number is the maximum number of activities sharing a common instant, and those all need different rooms, so χ ≥ ω.",
+     "Interval graphs are perfect, so χ = ω: scheduling in peak-overlap many rooms always works.",
+     "The maximum independent set is the largest set of mutually compatible activities — the activity-selection answer, not the number of rooms."
+    ],
+    "final": "Option (A).",
+    "trap": "Option B is the activity-selection answer dressed up as a colouring question. A maximum independent set says how many activities can share one room, not how many rooms are needed."
+   }
+  },
+  {
+   "id": "ALG-U3-Q45",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "The optimal merge pattern for n sorted files is obtained by repeatedly merging:",
+   "options": [
+    "the two files of smallest current size",
+    "the two files of largest current size",
+    "the first two files in the order given",
+    "the smallest file with the largest file"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "This is Huffman's rule applied to file sizes: every record in a file pays one move for each merge the file takes part in, so small files should be merged often and large files rarely.",
+    "steps": [
+     "Total cost is the weighted external path length of the merge tree.",
+     "Deep leaves are merged more often, so they must be the cheapest files.",
+     "Hence the two smallest current sizes are merged first, and the result re-enters the pool.",
+     "The number of merges is fixed at n − 1; only their costs can be controlled."
+    ],
+    "final": "Option (A).",
+    "trap": "Option B maximises rather than minimises the cost — it is the classic 'wrong direction' distractor. Option C is what a naive left-to-right merge does and is generally not optimal."
+   }
+  },
+  {
+   "id": "ALG-U3-Q46",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Five sorted files hold 4, 6, 8, 10 and 12 records. Using the optimal merge pattern, what is the minimum total number of record moves needed to combine them into one file? (Enter an integer.)",
+   "options": [],
+   "answer": 90,
+   "solution": {
+    "concept": "Repeatedly merge the two smallest files; the total cost is the sum of all merge costs, which equals the weighted external path length.",
+    "steps": [
+     "Merge 4 and 6 into 10. Cost 10. Pool: 8, 10, 10, 12.",
+     "Merge 8 and 10 into 18. Cost 18. Pool: 10, 12, 18.",
+     "Merge 10 and 12 into 22. Cost 22. Pool: 18, 22.",
+     "Merge 18 and 22 into 40. Cost 40.",
+     "Total 10 + 18 + 22 + 40 = 90."
+    ],
+    "final": "90.",
+    "trap": "Merging left to right gives 10 + 18 + 28 + 40 = 96, which is not optimal. Also, the answer is the sum of the merge costs, not the size of the final file (40)."
+   }
+  },
+  {
+   "id": "ALG-U3-Q47",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Four sorted files hold 1, 2, 3 and 4 records. The minimum total number of record moves needed to merge them into one file is:",
+   "options": [
+    "19",
+    "20",
+    "18",
+    "21"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Merge the two smallest current files each time and accumulate every merge cost.",
+    "steps": [
+     "Merge 1 and 2 into 3. Cost 3. Pool: 3, 3, 4.",
+     "Merge 3 and 3 into 6. Cost 6. Pool: 4, 6.",
+     "Merge 4 and 6 into 10. Cost 10.",
+     "Total 3 + 6 + 10 = 19."
+    ],
+    "final": "19 (option A).",
+    "trap": "Merging any other pair first costs more: starting with 2 + 3 = 5 gives 5 + 5 + 10 = 20, and starting with 3 + 4 = 7 gives 7 + 3 + 10 = 20. Only the two-smallest rule reaches 19."
+   }
+  },
+  {
+   "id": "ALG-U3-Q48",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "question": "Which of the following statements about the optimal merge pattern are TRUE? (Select all that apply.)",
+   "options": [
+    "It minimises the total number of record moves needed to combine all the files.",
+    "It is produced by repeatedly merging the two files of smallest current size.",
+    "Its total cost equals the sum, over all files, of file size × depth of that file in the merge tree.",
+    "Merging the two largest files first minimises the total number of record moves."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "The merge process is exactly Huffman's algorithm on the file sizes, and its cost is the weighted external path length of the resulting full binary tree.",
+    "steps": [
+     "Option A: that is the objective the pattern is defined to minimise. True.",
+     "Option B: the two-smallest rule is Huffman's rule, and Huffman's tree is optimal. True.",
+     "Option C: a file at depth d takes part in d merges and pays its size once per merge, so the total is Σ size × depth. True.",
+     "Option D: putting the largest files at the greatest depth maximises the cost, the opposite of what is wanted. False."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "Option D is the mirror-image error. Deep positions are expensive, so they must be filled by the smallest files; putting the largest files deepest is precisely what the algorithm avoids."
+   }
+  },
+  {
+   "id": "ALG-U3-Q49",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "An optimal merge pattern combines n files into one. Which of the following statements about its merge tree are TRUE? (Select all that apply.)",
+   "options": [
+    "The tree is a full binary tree with n leaves and n − 1 internal nodes.",
+    "Exactly n − 1 pairwise merge operations are performed.",
+    "The largest file always ends up at depth 1 in the tree.",
+    "The total number of record moves equals the weighted external path length of the merge tree."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "solution": {
+    "concept": "Each merge replaces two nodes by their parent, so the tree is full and has n − 1 internal nodes; the cost is the weighted external path length.",
+    "steps": [
+     "Option A: every internal node has exactly two children and there are n leaves, so the internal count is n − 1. True.",
+     "Option B: each merge creates one internal node, and there are n − 1 of them. True.",
+     "Option C: a file sits at depth 1 only when n = 2. For n ≥ 3 the largest file is at the shallowest depth, which is at least 2. False.",
+     "Option D: a file at depth d is copied once per merge along its path, so the total is Σ size × depth. True."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "Option C confuses 'shallowest' with 'depth 1'. The largest file is merged last, so it is the child of the root only when there are just two files."
+   }
+  },
+  {
+   "id": "ALG-U3-Q50",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "greedy-algorithms",
+   "unit_name": "Greedy Algorithms",
+   "topic": "Greedy Algorithms",
+   "sub": "optimal-merge-patterns",
+   "subtopic": "optimal-merge-patterns",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "question": "Six sorted files hold 3, 5, 7, 9, 11 and 13 records. The minimum total number of record moves needed to merge them into one file is:",
+   "options": [
+    "119",
+    "120",
+    "118",
+    "125"
+   ],
+   "answer": 0,
+   "solution": {
+    "concept": "Take the two smallest current sizes at every step and accumulate the merge costs.",
+    "steps": [
+     "Merge 3 and 5 into 8. Cost 8. Pool: 7, 8, 9, 11, 13.",
+     "Merge 7 and 8 into 15. Cost 15. Pool: 9, 11, 13, 15.",
+     "Merge 9 and 11 into 20. Cost 20. Pool: 13, 15, 20.",
+     "Merge 13 and 15 into 28. Cost 28. Pool: 20, 28.",
+     "Merge 20 and 28 into 48. Cost 48.",
+     "Total 8 + 15 + 20 + 28 + 48 = 119."
+    ],
+    "final": "119 (option A).",
+    "trap": "120 comes from merging 9 and 13 instead of 9 and 11 at the third step — a single mis-step at any stage changes the total. Re-check that the pool is re-sorted after every merge."
    }
   }
  ]
