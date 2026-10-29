@@ -7,22 +7,22 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 1 of 2**, 2026-10-30 →
+- **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 2 of 2**, 2026-10-30 →
   [`computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`](computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: UDP datagrams (6) · TCP header & connection management (7) · flow control & sliding window (6) ·
   congestion control: slow start & AIMD (6)
 - Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects and it gave
   **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 8, unit 4, routing-protocols, Set 2 of 2}`. Unit 4 held **50** questions, exactly
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(routing-protocols) = 3 + 1) mod 6 = 4` → zero-based index 4, i.e. **Unit 5 — Transport Layer:
-  TCP, UDP & Congestion**. Unit 5 had never been opened, so this is Set 1 of 2 and the first pass continues.
-  No override was used and no unit exceeds 50 questions.
-- Unit 5 carried no previous current paper, so nothing was archived and no `archive/` directory was created; the
-  unit folder holds exactly one current paper.
-- The paper's Question Bank tab lists **200** solved questions — the 50 questions each of Units 1–4 — against the
-  25 active questions of this set, which stay out of that list. Units 5 and 6 still collapse to one line each.
+  `{date 2026-10-30, run 9, unit 5, transport-layer, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and produced
+  **Set 2 of 2**; step B4 was not reached. Unit 5 now holds **50** questions, exactly at the cap, so the next
+  Computer Networks run advances `(index_of(transport-layer) = 4 + 1) mod 6 = 5` → **Unit 6 — Application Layer
+  & Network Security**. No override was used and no unit exceeds 50 questions.
+- The superseded Set 1 paper moved to `archive/gate_cn_mock_5_2026-10-30_run1.html` with its content frozen; the
+  unit folder holds exactly one current paper and the repository root holds no copy.
+- The paper's Question Bank tab lists **225** solved questions — Units 1–4 at 50 each plus the 25 questions of
+  Set 1 — against the 25 active questions of this set, which stay out of that list. Unit 6 collapses to one line.
 - Previous test: **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 2 of 2**,
   2026-10-30 →
   [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html)
@@ -31,13 +31,61 @@ and no answer, option mark or hint visible until the test is submitted.
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 104 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 9 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 52 current · 52 archived |
+| Papers published (current + archived) | 105 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 52 current · 53 archived |
 | Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2600 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 225 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2625 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 52 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 53 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-30 — Computer Networks Unit 5, Set 2 of 2
+
+- New paper at `computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`. The Set 1 paper that held this
+  path was moved to `computer-networks/transport-layer/archive/gate_cn_mock_5_2026-10-30_run1.html` with its
+  questions, options, answers, solutions and duration frozen. The unit folder holds exactly one current paper and
+  the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** One subject was drawn uniformly at random from the eleven GATE CSE subjects
+  with an unseeded `secrets.choice` over the fixed syllabus order, and it gave **Computer Networks**.
+  `computer-networks/question-bank/master_bank.json` read back `runs[]` sorted by `(date, run)` as
+  `{date 2026-10-30, run 9, unit 5, transport-layer, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and this run produced
+  **Set 2 of 2**. Unit 5 now stands at exactly 50 questions, so the next Computer Networks run advances by the
+  modulo rule to Unit 6. No override was used, no second pass was needed, and no unit exceeds 50 questions.
+- Coverage: all four Unit 5 subtopics — UDP datagram simplicity (6), the TCP header, handshake and connection
+  close (7), flow control and the sliding window (6), congestion control from slow start to AIMD (6).
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="computer-networks"`, `data-unit="transport-layer"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`CN-U5-Q26`..`CN-U5-Q50`) and every stem was compared with the 225 banked Computer Networks
+  items after normalisation (tags stripped, entities removed, case and punctuation removed): zero id overlap and
+  zero duplicated stems. The set avoids the ground Set 1 already covered and opens new angles: the four UDP
+  header fields and the absent sequence number, the 65 536-value port space, the 65 507-byte IPv4 payload ceiling,
+  IPv4-optional versus IPv6-mandatory checksums, silent discard on a failed check, message boundaries, the IP
+  protocol number as the demultiplexing key, RST as the abort, why three segments and not two, the fields that
+  are misread most often (pseudo-header checksum, urgent pointer, 16-bit window, data offset in words), state
+  committed at the SYN and the half-open backlog, SYN-consuming sequence arithmetic, TIME_WAIT, the window as
+  free buffer space and as a byte range, window scaling by shift count, Nagle against Clark, the persist timer,
+  the right edge that never moves left, the threshold as the exit from slow start, +1 MSS per round trip, fast
+  retransmit on three duplicate acknowledgements, the Reno fast-recovery value, and why AIMD converges on fair
+  shares.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Computer Networks, and no TCP, UDP,
+  flow-control or congestion-control previous-year question has been verified against an official paper and
+  answer key, so nothing on this paper is claimed as an official GATE question. 15 items are `STANDARD_TEXTBOOK`
+  and 10 are `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A 16-bit port field addresses
+  `2¹⁶ =` **65 536** values; the largest IPv4-carried UDP payload is `65 535 − 20 − 8 =` **65 507** bytes; a
+  client whose SYN occupies 2000 and that then sends 300 bytes followed by 400 bytes is acknowledged at
+  `2001 + 300 + 400 =` **2701**; a shift count of 7 scales the window to `65 535 × 128 =` **8 388 480** bytes;
+  with a window of 3000 and 1000 bytes outstanding the sender may still send `3000 − 1000 =` **2000** bytes;
+  congestion avoidance takes `12 + 3 =` **15** MSS after three round trips; and Reno on three duplicate
+  acknowledgements at a window of 20 MSS sets threshold and window to `20 / 2 =` **10** MSS.
+- Answer positions were rebalanced after generation: the 15 MCQs split 4 A / 4 B / 4 C / 3 D, so no letter
+  pattern gives anything away. The five MSQs use four different correct sets — `{B,C,D}`, `{A,C,D}`, `{A,B,D}`,
+  `{B,C,D}` and `{A,B}` — so the last one is a genuine two-of-four.
+- The Question Bank tab lists 225 solved questions and 0 verified PYQs; the 25 active questions are excluded
+  from it until submit.
 
 ### 2026-10-30 — Computer Networks Unit 5, Set 1 of 2
 
@@ -609,6 +657,14 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Computer Networks → Unit 5 (Transport Layer: TCP, UDP & Congestion), Set 2 of 2.**
+  MODE A: one subject drawn with an unseeded `secrets.choice` over the eleven in syllabus order, giving
+  **Computer Networks**. Most recent run in `runs[]` was `{2026-10-30, run 9, unit 5, Set 1 of 2}`; Unit 5 held
+  25 questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and
+  produced Set 2 of 2 — step B4 was not reached. Unit 5 now holds **50** questions, exactly at the cap, so the
+  next Computer Networks run advances `(index_of(transport-layer) = 4 + 1) mod 6 = 5` → Unit 6, Application
+  Layer & Network Security. The superseded Set 1 paper was archived as
+  `gate_cn_mock_5_2026-10-30_run1.html`. No override, no second pass, no unit above 50.
 - **2026-10-29, Computer Networks → Unit 4 (Network Layer: Routing & Protocols), Set 2 of 2.**
   MODE A: all eleven subjects already carried a paper dated 2026-10-29, so one subject was drawn with
   `random.Random(2026102901).choice` over the eleven, giving **Computer Networks**. Most recent run in `runs[]`
@@ -4737,8 +4793,8 @@ Algorithms:
 | 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
 | 2 | Data Link Protocols & MAC | `data-link-mac` | 50 | yes |
 | 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 50 | yes |
-| 4 | Network Layer: Routing & Protocols | `routing-protocols` | 0 | — |
-| 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 0 | — |
+| 4 | Network Layer: Routing & Protocols | `routing-protocols` | 50 | yes |
+| 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 50 | yes |
 | 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
 
 ### Theory of Computation
