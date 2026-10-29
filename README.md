@@ -7,33 +7,100 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 1 of 2**, 2026-10-29 →
-  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-29.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-29.html)
+- **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 2 of 2**, 2026-10-29 →
+  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: synchronous & asynchronous counters (7) · FSM: Mealy & Moore machines (6) ·
-  state reduction & assignment (6) · timing analysis (6)
-- Rotation: MODE A. Ten of the eleven subjects already carried a paper dated 2026-10-29, so the draw covered the
-  one that had not and gave **Digital Logic**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 6, unit 3, sequential-flipflops, Set 2 of 2}`. Unit 3 held **50** questions, exactly
-  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(sequential-flipflops) = 2 + 1) mod 4 = 3` → **Unit 4,
-  Sequential Circuits: Counters & State Machines**. Unit 4 held no questions, so this is **Set 1 of 2** and
-  nothing was archived. No override was used and no unit exceeds 50 questions.
-- The paper's Question Bank tab lists **150** solved questions — Units 1–3 at 50 each — against the 25 active
-  Unit 4 questions, which stay out of that list.
-- Previous test: **Operating Systems · Unit 1 — Process Management & CPU Scheduling, Set 1 of 2 (second pass)**, 2026-10-29 →
-  [`operating-systems/process-scheduling/gate_os_mock_1_2026-10-29.html`](operating-systems/process-scheduling/gate_os_mock_1_2026-10-29.html)
+- Subtopics: distance vector & count to infinity (7) · link state, OSPF & Dijkstra (7) ·
+  BGP & path vector (6) · ARP, ICMP, DHCP & NAT (5)
+- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-29, so one subject was drawn with
+  `random.Random(2026102901).choice`, giving **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most
+  recent paper as `{date 2026-10-29, run 7, unit 4, routing-protocols, Set 1 of 2}`. Unit 4 held **25** questions,
+  below `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days —
+  under `DAYS_PER_UNIT_MAX = 7`. Step B3 held the rotation: this is **Set 2 of 2**, which closes Unit 4 at exactly
+  50 questions. The superseded Set 1 moved to that unit's `archive/` as
+  `gate_cn_mock_4_2026-10-29_run1.html`, content frozen. No override was used and no unit exceeds 50 questions.
+- The paper's Question Bank tab lists **175** solved questions — Units 1–3 at 50 each plus the 25 archived Unit 4
+  Set 1 items — against the 25 active Unit 4 Set 2 questions, which stay out of that list.
+- Previous test: **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 1 of 2**, 2026-10-29 →
+  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-29.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 99 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 13 Operating Systems, 8 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 50 current · 49 archived |
+| Papers published (current + archived) | 100 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 13 Operating Systems, 8 Engineering Mathematics, 10 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 50 current · 50 archived |
 | Test cards on the portal | 59 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2475 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 325 Operating Systems, 200 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Questions in the subject banks | 2500 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 325 Operating Systems, 200 Engineering Mathematics, 250 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 49 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 7 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 50 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 7 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-29 — Computer Networks Unit 4, Set 2 of 2
+
+- New paper at `computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`. Unit 4 already held 25
+  questions from Set 1, so the superseded `gate_cn_mock_4_2026-10-29.html` moved to that unit's `archive/` as
+  `gate_cn_mock_4_2026-10-29_run1.html`, content frozen: same questions, options, answers, solutions and duration.
+  The unit folder again holds exactly one current paper.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-29, so one subject
+  was drawn with `random.Random(2026102901).choice` over the eleven GATE CSE subjects, giving **Computer
+  Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 7, unit 4, routing-protocols, Set 1 of 2}`. Unit 4 held **25** questions — below
+  `UNIT_QUESTION_CAP = 50` — and its first paper is dated 2026-10-29, so it had been current for **0** days, well
+  under `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 4,
+  Set 2 of 2**, which closes Unit 4 at exactly 50 questions. No override was used and no unit exceeds 50.
+- Coverage: all four Unit 4 subtopics — distance vector & count to infinity (7), link state, OSPF & Dijkstra (7),
+  BGP & path vector (6), ARP, ICMP, DHCP & NAT (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="computer-networks"`, `data-unit="routing-protocols"`,
+  `data-unit-number="4"`, its subtopic slug, its type, its lowercase difficulty and its source tag.
+- All 25 ids are new (`CN-U4-Q26`..`CN-U4-Q50`) and every stem was compared with the 175 banked Computer Networks
+  items after normalisation (tags stripped, case and punctuation removed): zero id overlap and zero duplicated
+  stems. The set deliberately moves onto ground Set 1 left untouched — the Bellman–Ford rule itself, "routing by
+  rumour", the reserved infinity of 16 and the 15-hop RIP diameter, hold-down, periodic against triggered
+  updates, OSPF Hellos and the dead interval, originators against flooded copies, area structure and the backbone,
+  interface-cost clamping, LS memory/CPU/robustness trade-offs, transient inconsistency while flooding, eBGP
+  against iBGP, the reflector session count, LOCAL_PREF against MED, hot-potato routing, ICMP encapsulation,
+  traceroute arithmetic, NAPT port capacity and the DHCP relay agent.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Computer Networks, and no routing, OSPF, BGP,
+  ARP, DHCP or NAT previous-year question has been verified against an official paper and answer key, so nothing
+  on this paper is claimed as an official GATE question. 13 items are `STANDARD_TEXTBOOK` and 12 are
+  `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** In the three-router triangle with a reserved
+  infinity of 16 the metric climbs 3, 4, 5, … one step per round, so every router is unreachable after **14**
+  rounds; a single failed point-to-point link makes exactly **2** routers originate new LSAs out of 12 in the
+  area; one route reflector with 7 clients gives **7** iBGP sessions against 28 for a full mesh; a destination 4
+  hops away yields **3** ICMP Time Exceeded messages before the echo reply; and ports 1024–65535 give
+  **64 512** simultaneous NAPT translations. The 100 Mbps / 1 Gbps cost ratio is 0.1, which the floor of 1 raises
+  to **1**.
+- The correct option is spread 3 A / 4 B / 5 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B, C), (B, C, D), (A, B, D), (A, C, D) and (B, C, D) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell. The `<style>` block,
+  the exam `<script>` and the `:root` token block are **byte-identical** to the archived Set 1 paper it was
+  generated from, and the `:root` block still matches `design-tokens.css` and `index.html` byte for byte. Only
+  the title, header sub-line, Question Bank count, meta strip, question payload, bank tab, About tab and payload
+  differ. The bank-tab renderer was validated separately: rebuilding Units 1–3 from `master_bank.json`
+  reproduces the shipped bank markup byte for byte.
+- Verified in headless Chromium from `file://` (**36 checks, all passing**): 25 question cards with one visible, a
+  25-button palette, the timer at 60:00, the Answer Key tab disabled and labelled locked, no solution text, no
+  `ansline` markup and no option marked before submit, the palette reaching `na`, `ans`, `amr` and `mrk` through
+  visiting, answering, marking and Clear response, the Question Bank tab rendering **175** cards under four unit
+  accordions with no active question repeated, and the About tab carrying its three sections. After answering
+  every item correctly and submitting, the score reads **35 / 35** with 25 correct, 0 incorrect, 25 `ok` palette
+  buttons, 25 key cards and a revealed solution on every card; an empty paper scores **0 / 35** with 25 `skip`
+  buttons; and a paper whose five MSQ are each one option short scores **25 / 35** with 5 wrong, which confirms
+  that MSQ earns nothing without the exact set. No page errors.
+- The portal's data block was updated in place, not rebuilt: the existing Computer Networks Unit 4 card was
+  repointed at the new Set 2 paper with `set: "Set 2 of 2"` and one archive link, the 25 records were appended to
+  `data/questions-computer-networks.js`, which now carries 200, and the static header strings were recomputed from
+  the data to read **67** units, **2500** solved questions, **59** test cards and **289** subtopics. A headless run
+  of the portal renders 59 test cards and 2500 archive question cards with every internal link resolving.
+- **Repaired this run:** the portal's static chips still read `175 solved questions in the review archive` and
+  `175 records in the subject banks` from an earlier pass while the archive itself held 2475 records; both are now
+  recomputed from the data.
+- Hygiene: the paper is filed at exactly one path, `computer-networks/routing-protocols/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (50 current and 50 archived); no temporary
+  or loose file was left at the repository root.
 
 ### 2026-10-29 — Digital Logic Unit 4 opened
 
@@ -301,6 +368,14 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-29, Computer Networks → Unit 4 (Network Layer: Routing & Protocols), Set 2 of 2.**
+  MODE A: all eleven subjects already carried a paper dated 2026-10-29, so one subject was drawn with
+  `random.Random(2026102901).choice` over the eleven, giving **Computer Networks**. Most recent run in `runs[]`
+  was `{2026-10-29, run 7, unit 4, Set 1 of 2}`; Unit 4 held 25 questions, below `UNIT_QUESTION_CAP = 50`, and had
+  been current for 0 days, so step B3 held the rotation and produced Set 2 of 2. Unit 4 now holds **50** questions,
+  exactly at the cap; the next Computer Networks run advances `(index_of(routing-protocols) = 3 + 1) mod 6 = 4` →
+  Unit 5, Transport Layer. The superseded Set 1 paper was archived as
+  `gate_cn_mock_4_2026-10-29_run1.html`. No override, no second pass, no unit above 50.
 - **2026-10-29, Digital Logic → Unit 4 (Sequential Circuits: Counters & State Machines), Set 1 of 2.**
   MODE A: ten subjects already had a paper dated 2026-10-29, so one subject was drawn over the only one that had
   not, giving **Digital Logic**. Most recent run in `runs[]` was `{2026-10-28, run 6, unit 3, Set 2 of 2}`; Unit 3
