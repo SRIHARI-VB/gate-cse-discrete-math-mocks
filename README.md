@@ -7,34 +7,52 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2**, 2026-10-29 →
-  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html)
+- **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 1 of 2**, 2026-10-29 →
+  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: file allocation, indexed & linked (7) · free-space management (6) · disk scheduling, FCFS to C-LOOK (7) ·
-  access control & protection (5)
-- Rotation: MODE A. One subject was drawn at random with `random.Random(202610291206).randrange(11)` over the eleven
-  subjects and it gave index 8, **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper
-  as `{date 2026-10-29, run 10, unit 5, virtual-memory, Set 2 of 2}`. Unit 5 held **50** questions, exactly
+- Subtopics: distance vector & count to infinity (7) · link state, OSPF & Dijkstra (7) · BGP & path vector (5) ·
+  ARP, RARP, ICMP, DHCP & NAT (6)
+- Rotation: MODE A. One subject was drawn at random with `random.Random(202610291305).randrange(11)` over the eleven
+  subjects and it gave index 10, **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper
+  as `{date 2026-10-29, run 6, unit 3, ipv4-subnetting, Set 2 of 2}`. Unit 3 held **50** questions, exactly
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(virtual-memory) = 4 + 1) mod 6 = 5` → **Unit 6, File Systems & Disk Scheduling**. Unit 6 had no folder
-  and no paper, so this is Set 1 of 2; nothing was archived, because the new unit folder starts empty. No override
-  was used and no second pass has started for this subject. Operating Systems is now **6 of 6 units** covered.
-- The paper's Question Bank tab lists **250** solved questions (units 1–5) against the 25 active ones; Unit 6's own
+  `(index_of(ipv4-subnetting) = 2 + 1) mod 6 = 3` → **Unit 4, Network Layer: Routing & Protocols**. Unit 4 had no
+  folder and no paper, so this is Set 1 of 2; nothing was archived, because the new unit folder starts empty. No
+  override was used and no second pass has started for this subject. Computer Networks is now **4 of 6 units** covered.
+- The paper's Question Bank tab lists **150** solved questions (units 1–3) against the 25 active ones; Unit 4's own
   25 questions stay out of that list until a later paper banks them.
-- Previous test: **Operating Systems · Unit 5 — Virtual Memory & Page Replacement, Set 2 of 2**, 2026-10-29 →
-  [`operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html`](operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html)
+- Previous test: **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2**, 2026-10-29 →
+  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 92 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 11 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 46 current · 46 archived |
-| Test cards on the portal | 54 (one card per published set) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2300 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 275 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 93 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 11 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 47 current · 46 archived |
+| Test cards on the portal | 55 (one card per published set) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 2325 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 275 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 46 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-29 — Computer Networks Unit 4 opened
+
+- New paper at `computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`; the unit folder holds one
+  current paper and no `archive/` directory, because this is the first set for the unit.
+- 25 new questions `CN-U4-Q01`–`CN-U4-Q25` appended to `computer-networks/question-bank/master_bank.json`
+  (append-only, run 7) and mirrored into `data/questions-computer-networks.js`, which now carries 175 records.
+- No `GATE_PYQ_VARIATION` item. No distance-vector, link-state, BGP, ARP, ICMP, DHCP or NAT previous-year question
+  has been verified against an official paper and answer key, so none is claimed; every Unit 4 question is tagged
+  `STANDARD_TEXTBOOK` (15) or `ORIGINAL_SYNTHESIS` (10).
+- Shell parity: the new paper's `<style>` block, its `:root` token block and its script are byte-identical to the
+  Unit 6 Operating Systems paper it was generated from. Only the title, header sub-line, candidate id, Question Bank
+  count, meta strip, question payload, bank list and About text differ.
+- Verified in headless Chromium from `file://`: 25 question cards, a 25-button palette, 150 banked question cards in
+  the Question Bank tab, no solution text and a locked Answer Key tab before submit; after answering four questions
+  and submitting, the score reads 7 / 35 with 4 correct and 0 incorrect, 25 key cards and 25 revealed solutions, and
+  no console or page errors. The portal renders 55 test cards and 2325 archive question cards with every internal
+  link resolving.
 
 ### 2026-10-29 — Operating Systems Unit 6 opened
 
