@@ -7,31 +7,33 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 1 of 2**, 2026-10-29 →
-  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
+- **Compiler Design · Unit 4 — Syntax-Directed Translation & Intermediate Code, Set 2 of 2**, 2026-10-29 →
+  [`compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html`](compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: BST insertion & deletion (7) · AVL trees & rotations (6) · B-trees & B+ trees (6) · Trie basics (6)
+- Subtopics: S-attributed & L-attributed definitions (6) · Three-address code, quadruples & triples (7) ·
+  Syntax trees & DAGs (6) · Type checking (6)
 - Rotation: MODE A. One subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over
-  the seven subjects that had no paper dated 2026-10-29 (Databases, Discrete Mathematics, Operating Systems and
-  Theory of Computation already had one), and the draw returned **Programming and Data Structures**.
-  `runs[]` sorted by `(date, run)` gives the most recent Programming and Data Structures paper as
-  `{date 2026-10-28, run 8, unit 4, trees-traversals, Set 2 of 2}`. Unit 4 held exactly **50** questions, the cap,
-  so step B4 advanced `(index_of(trees-traversals) = 3 + 1) mod 7 = 4` → **Unit 5, Binary Search Trees & Balanced
-  Trees**, generated as **Set 1 of 2**. No override was used and no second pass has started for this subject.
-- Previous test: **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 1 of 2**, 2026-10-29 →
-  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-29.html)
+  all eleven subjects, and the draw returned **Compiler Design**, which had no paper dated 2026-10-29.
+  `runs[]` sorted by `(date, run)` gives the most recent Compiler Design paper as
+  `{date 2026-10-28, run 8, unit 4, sdt-intermediate-code, Set 1 of 2}`. Unit 4 held **25** questions — under
+  `UNIT_QUESTION_CAP = 50` — and had been current for **1 day**, so step B3 held the rotation on the same unit and
+  this paper is **Set 2 of 2**. Unit 4 now sits at 50 and the next Compiler Design run advances
+  `(index_of(sdt-intermediate-code) = 3 + 1) mod 5 = 4` → Unit 5, Runtime Environments & Code Optimization.
+  No override was used and no second pass has started for this subject.
+- Previous test: **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 1 of 2**, 2026-10-29 →
+  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 86 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 7 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 44 current · 42 archived |
-| Test cards on the portal | 51 |
+| Papers published (current + archived) | 87 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 44 current · 43 archived |
+| Test cards on the portal | 52 |
 | Units covered | 9 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2150 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 175 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2175 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 42 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 3 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 43 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -99,6 +101,27 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Compiler Design → Unit 4 (Syntax-Directed Translation & Intermediate Code), Set 2 of 2.** MODE A: one
+  subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over all eleven subjects, giving
+  **Compiler Design** — a subject that had no paper dated 2026-10-29, so the day's paper again lands where it has not
+  already been served. `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-28, run 8,
+  unit 4, sdt-intermediate-code, Set 1 of 2}`. Unit 4 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had
+  been current for 1 day, so step B3 held the rotation and step B4 was not reached: **Unit 4, Set 2 of 2**. Unit 4
+  now holds 50, at the cap, so the next Compiler Design run advances `(index_of(sdt-intermediate-code) = 3 + 1) mod 5
+  = 4` → **Unit 5, Runtime Environments & Code Optimization**. No override was used and no second pass has started for
+  this subject.
+  The 25 questions were checked against all 175 banked Compiler Design items with a string-normalised comparison
+  (tags stripped, case and punctuation removed): the highest stem similarity to any earlier question is **0.74** and the
+  next highest **0.71**, so Set 2 does not repeat Set 1 — every item is a distinct question, not a swap of numbers. Coverage is all four subtopics — S-attributed/L-attributed (6),
+  three-address code (7), syntax trees and DAGs (6), type checking (6) — with 15 MCQ, 5 MSQ, 5 NAT and a
+  10/10/5 easy/medium/hard split. No question is an official GATE PYQ: `verified_pyqs` is empty for this subject and
+  nothing in this paper is claimed as official.
+  Shell parity: the paper was generated by replacing only the payload regions of the Unit 4 Set 1 shell, so the
+  `<style>` block, the exam `<script>`, the palette and the meta strip are byte-identical to the previous paper —
+  verified by direct comparison of the extracted `<style>` and `<script>` blocks and the palette markup. The
+  superseded Set 1 paper moved to `archive/gate_cd_mock_4_2026-10-28_run1.html` with its content frozen, and the
+  portal card for 2026-10-28 was repointed at that archive file.
 
 - **2026-10-29, Programming and Data Structures → Unit 5 (Binary Search Trees & Balanced Trees), Set 1 of 2.**
   MODE A: one subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the seven
@@ -3941,7 +3964,7 @@ Algorithms:
 | 1 | Lexical Analysis | `lexical-analysis` | 50 | yes |
 | 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 50 | yes |
 | 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 50 | yes |
-| 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 25 | yes |
+| 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 50 | yes |
 | 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
 
 ### Operating Systems
@@ -3952,7 +3975,7 @@ Algorithms:
 | 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 50 | yes |
 | 3 | Deadlocks | `deadlocks` | 50 | yes |
 | 4 | Memory Management & Paging | `memory-paging` | 50 | yes |
-| 5 | Virtual Memory & Page Replacement | `virtual-memory` | 0 | — |
+| 5 | Virtual Memory & Page Replacement | `virtual-memory` | 25 | yes |
 | 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
 
 ### Engineering Mathematics
@@ -3981,9 +4004,9 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Regular Languages & Finite Automata | `regular-languages-fa` | 75 | yes |
-| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 50 | yes |
-| 3 | Pushdown Automata | `pushdown-automata` | 50 | yes |
-| 4 | Turing Machines & Decidability | `turing-machines-decidability` | 50 | yes |
+| 2 | Grammars & Context-Free Languages | `cfl-grammars` | 75 | yes |
+| 3 | Pushdown Automata | `pushdown-automata` | 75 | yes |
+| 4 | Turing Machines & Decidability | `turing-machines-decidability` | 75 | yes |
 
 ### Digital Logic
 

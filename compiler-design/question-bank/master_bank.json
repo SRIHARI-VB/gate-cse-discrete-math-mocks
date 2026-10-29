@@ -4,15 +4,16 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-28",
+  "last_updated": "2026-10-29",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 175,
+  "total_questions": 200,
   "units_with_questions": [
    1,
    2,
    3,
    4
-  ]
+  ],
+  "total_runs": 8
  },
  "runs": [
   {
@@ -423,6 +424,67 @@
    "mode": "A",
    "selection": "random subject draw (index 7 of 11) then cap-based unit advance (2 + 1) mod 5 = 3",
    "note": "Unit 3 reached UNIT_QUESTION_CAP = 50 after its 2026-10-28 Set 2 paper, so the rotation advanced one unit to Unit 4. Set 1 of 2 for Unit 4."
+  },
+  {
+   "run": 8,
+   "date": "2026-10-29",
+   "subject": "compiler-design",
+   "subject_name": "Compiler Design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html",
+   "archived_previous": "compiler-design/sdt-intermediate-code/archive/gate_cd_mock_4_2026-10-28_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "s-attributed-vs-l-attributed-definitions",
+    "three-address-code-quadruples-triples",
+    "syntax-trees-dags",
+    "type-checking"
+   ],
+   "question_ids": [
+    "CD-U4-Q26",
+    "CD-U4-Q27",
+    "CD-U4-Q28",
+    "CD-U4-Q29",
+    "CD-U4-Q30",
+    "CD-U4-Q31",
+    "CD-U4-Q32",
+    "CD-U4-Q33",
+    "CD-U4-Q34",
+    "CD-U4-Q35",
+    "CD-U4-Q36",
+    "CD-U4-Q37",
+    "CD-U4-Q38",
+    "CD-U4-Q39",
+    "CD-U4-Q40",
+    "CD-U4-Q41",
+    "CD-U4-Q42",
+    "CD-U4-Q43",
+    "CD-U4-Q44",
+    "CD-U4-Q45",
+    "CD-U4-Q46",
+    "CD-U4-Q47",
+    "CD-U4-Q48",
+    "CD-U4-Q49",
+    "CD-U4-Q50"
+   ],
+   "mode": "MODE A (random subject, bank-driven unit rotation)",
+   "note": "Unit 4 was still under the cap (25 of 50 banked) and had been current for 1 day, so step B3 regenerated it as Set 2 of 2."
   }
  ],
  "verified_pyqs": [],
@@ -6274,6 +6336,865 @@
    "answer": 3,
    "answer_display": "Option (D)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Soundness is a one-sided guarantee: whatever the checker accepts is safe. Completeness is the other side: whatever is safe is accepted. A sound checker may be conservative and reject safe programs; it may not accept unsafe ones.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) states completeness, not soundness.</li><li>(B) and (C) each state both directions at once, that is soundness <i>and</i> completeness. For a language with arbitrary computation such a checker cannot exist, since deciding whether a program raises a type error reduces to the halting problem.</li><li>(D) states exactly soundness, with the incompleteness made explicit. A typical witness: <code class=\"mm\">if (false) x = 1 / &quot;a&quot;;</code> is rejected by a sound checker although it never executes.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Expecting a good type checker to accept everything that would actually run safely. Real checkers are sound but incomplete on purpose: rejecting a safe program is a nuisance, accepting an unsafe one breaks the guarantee the type system exists to give.</p>"
+  },
+  {
+   "id": "CD-U4-Q26",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Consider the class of L-attributed definitions. Which one of the following statements is TRUE?",
+   "question_html": "<p class=\"qtext\">Consider the class of L-attributed definitions. Which one of the following statements is <b>TRUE</b>?</p>",
+   "options": [
+    "Every attribute of every symbol must be a synthesized attribute.",
+    "An inherited attribute of a symbol on the right side may be computed from attributes of the symbols to its left and from the inherited attributes of the head of the production.",
+    "An inherited attribute of a symbol on the right side may be computed from attributes of the symbols to its right.",
+    "Such a definition can be evaluated only by a bottom-up parser."
+   ],
+   "options_html": [
+    "Every attribute of every symbol must be a synthesized attribute.",
+    "An inherited attribute of a symbol on the right side may be computed from attributes of the symbols to its left and from the inherited attributes of the head of the production.",
+    "An inherited attribute of a symbol on the right side may be computed from attributes of the symbols to its right.",
+    "Such a definition can be evaluated only by a bottom-up parser."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A definition is L-attributed when every inherited attribute of a right-side symbol depends only on information already available when the parse tree is traversed left to right: the inherited attributes of the head, the attributes of the symbols to its left, and its own inherited attributes. Synthesized attributes may depend on anything at the node or below it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option (A) describes S-attributed, the special case in which there are no inherited attributes at all; it is not what L-attributed means.</li><li>Option (B) states the L-condition exactly: left siblings and the head are both visited before the current symbol, so their values are ready.</li><li>Option (C) is precisely what L-attributed forbids — a right sibling has not been visited yet when the current node is reached.</li><li>Option (D) is false: the standard use of an L-attributed definition is a single left-to-right depth-first pass, which is exactly what a top-down parser performs.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Treating L-attributed and S-attributed as opposites. S-attributed is a proper subset of L-attributed; the L-condition says nothing that an all-synthesized definition would violate.</p>"
+  },
+  {
+   "id": "CD-U4-Q27",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "An SDD has one production, S → A B, with the rules A.i = S.i, B.i = A.s and S.s = B.s. Which of the following is a valid order for evaluating all six attributes of one node of the parse tree?",
+   "question_html": "<p class=\"qtext\">An SDD has one production, <code class=\"mm\">S → A B</code>, with the rules <code class=\"mm\">A.i = S.i</code>, <code class=\"mm\">B.i = A.s</code> and <code class=\"mm\">S.s = B.s</code>. Which of the following is a valid order for evaluating all six attributes of one node of the parse tree?</p>",
+   "options": [
+    "S.i, A.i, A.s, B.i, B.s, S.s",
+    "S.i, A.i, B.i, A.s, B.s, S.s",
+    "A.s, A.i, S.i, B.i, B.s, S.s",
+    "S.s, S.i, A.i, A.s, B.i, B.s"
+   ],
+   "options_html": [
+    "S.i, A.i, A.s, B.i, B.s, S.s",
+    "S.i, A.i, B.i, A.s, B.s, S.s",
+    "A.s, A.i, S.i, B.i, B.s, S.s",
+    "S.s, S.i, A.i, A.s, B.i, B.s"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A valid evaluation order is any topological order of the dependency graph induced by the semantic rules: a rule can be applied only after every attribute it reads has been computed.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A.i</code> reads <code class=\"mm\">S.i</code>, so <code class=\"mm\">S.i</code> must come first.</li><li><code class=\"mm\">B.i</code> reads <code class=\"mm\">A.s</code>, so <code class=\"mm\">A.s</code> must precede <code class=\"mm\">B.i</code>.</li><li><code class=\"mm\">S.s</code> reads <code class=\"mm\">B.s</code>, so <code class=\"mm\">S.s</code> must come last.</li><li>Option (A) respects all three constraints: S.i, then A.i, then A.s, then B.i, then B.s, then S.s.</li><li>Option (B) evaluates <code class=\"mm\">B.i</code> before <code class=\"mm\">A.s</code>, which the rule forbids. Option (C) evaluates <code class=\"mm\">A.i</code> before <code class=\"mm\">S.i</code>. Option (D) evaluates <code class=\"mm\">S.s</code> first.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Reading the rules as if they were assignment statements executed in the order written. Only the data dependencies matter, and any order consistent with them is valid.</p>"
+  },
+  {
+   "id": "CD-U4-Q28",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which of the following claims about the relationship between S-attributed and L-attributed definitions hold? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following claims about the relationship between S-attributed and L-attributed definitions hold? (Select all that apply.)</p>",
+   "options": [
+    "Every S-attributed definition is also L-attributed.",
+    "Every L-attributed definition is also S-attributed.",
+    "An L-attributed definition can be evaluated in a single left-to-right, depth-first pass over the parse tree.",
+    "An S-attributed definition needs a separate stack for inherited attributes during bottom-up evaluation.",
+    "A definition in which one attribute of a node is computed from another attribute of the same node cannot be L-attributed."
+   ],
+   "options_html": [
+    "Every S-attributed definition is also L-attributed.",
+    "Every L-attributed definition is also S-attributed.",
+    "An L-attributed definition can be evaluated in a single left-to-right, depth-first pass over the parse tree.",
+    "An S-attributed definition needs a separate stack for inherited attributes during bottom-up evaluation.",
+    "A definition in which one attribute of a node is computed from another attribute of the same node cannot be L-attributed."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The L-condition restricts only inherited attributes of right-side symbols. A definition with no inherited attributes satisfies it vacuously.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true. S-attributed means all attributes are synthesized; the L-condition is then never triggered, so the definition is L-attributed as well.</li><li>(B) is false. <code class=\"mm\">L.type = L.inh</code> in the standard list grammar uses an inherited attribute, so that definition is L-attributed but not S-attributed.</li><li>(C) is true. That single pass is the defining motivation for the class: values flow down the left spine and up on return.</li><li>(D) is false. An S-attributed definition defines no inherited attributes at all, so no stack for them is needed; values travel on the parser's own value stack.</li><li>(E) is false. Rules such as <code class=\"mm\">L.type = L.inh</code> and <code class=\"mm\">A.s = A.i + 1</code> combine two attributes of the same node and are perfectly legal in an L-attributed definition.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A) and (C).</p><p class=\"row\"><b>Common misconception.</b> Assuming the two classes coincide. The proper inclusion S-attributed ⊂ L-attributed is the single most examined fact about them.</p>"
+  },
+  {
+   "id": "CD-U4-Q29",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "An SDD contains the productions S → A B with rules A.i = 1, B.i = A.s and S.s = B.s; A → id with rule A.s = A.i + 1; and B → id with rule B.s = B.i × 2. What is the value of S.s at the root? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">An SDD contains the productions <code class=\"mm\">S → A B</code> with rules <code class=\"mm\">A.i = 1</code>, <code class=\"mm\">B.i = A.s</code> and <code class=\"mm\">S.s = B.s</code>; <code class=\"mm\">A → id</code> with rule <code class=\"mm\">A.s = A.i + 1</code>; and <code class=\"mm\">B → id</code> with rule <code class=\"mm\">B.s = B.i × 2</code>. What is the value of <code class=\"mm\">S.s</code> at the root? (Enter an integer.)</p>",
+   "options": null,
+   "options_html": null,
+   "answer": 4,
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Evaluate the attributes in dependency order: inherited attributes flow down from the root, synthesized attributes flow up from the leaves.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A.i = 1</code> is set by the rule on <code class=\"mm\">S → A B</code>.</li><li><code class=\"mm\">A.s = A.i + 1 = 1 + 1 = 2</code>.</li><li><code class=\"mm\">B.i = A.s = 2</code> — a left-sibling dependency, which is what makes this definition L-attributed rather than S-attributed.</li><li><code class=\"mm\">B.s = B.i × 2 = 4</code>.</li><li><code class=\"mm\">S.s = B.s = 4</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 4.</p><p class=\"row\"><b>Common misconception.</b> Substituting <code class=\"mm\">A.s</code> as 1 by ignoring the <code class=\"mm\">+1</code> rule, which gives 2 at the root instead of 4.</p>"
+  },
+  {
+   "id": "CD-U4-Q30",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "During bottom-up (LR) parsing of an S-attributed definition, where are synthesized attribute values kept?",
+   "question_html": "<p class=\"qtext\">During bottom-up (LR) parsing of an S-attributed definition, where are synthesized attribute values kept?</p>",
+   "options": [
+    "In a separate attribute stack indexed by parse-tree node, allocated when each node is created.",
+    "On the parser's value stack beside each grammar symbol, so that a reduction finds the values of the right-side symbols at the top of the stack.",
+    "In a hash table keyed by parser state, filled in when each terminal is shifted.",
+    "Nowhere — a synthesized attribute cannot be computed during bottom-up parsing, so a separate pass over the parse tree is required."
+   ],
+   "options_html": [
+    "In a separate attribute stack indexed by parse-tree node, allocated when each node is created.",
+    "On the parser's value stack beside each grammar symbol, so that a reduction finds the values of the right-side symbols at the top of the stack.",
+    "In a hash table keyed by parser state, filled in when each terminal is shifted.",
+    "Nowhere — a synthesized attribute cannot be computed during bottom-up parsing, so a separate pass over the parse tree is required."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Bottom-up parsing reduces a handle after all of its right-side symbols have been shifted or reduced, so their synthesized values are already on top of the stack when the reduction fires.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A reduction pops <code class=\"mm\">k</code> states and symbols; the corresponding <code class=\"mm\">k</code> attribute values are the top <code class=\"mm\">k</code> entries of the value stack.</li><li>The semantic action computes the head's attribute from those values and pushes the single result together with the new state.</li><li>No node-indexed structure is needed, because a node's value is consumed exactly once, at the reduction that creates it.</li><li>Option (D) is the misconception that semantic analysis must follow parsing; the standard construction is a parser with an added value stack.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Believing an S-attributed definition is evaluated after parsing. It is evaluated during parsing, in lock-step with the reductions.</p>"
+  },
+  {
+   "id": "CD-U4-Q31",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "s-attributed-vs-l-attributed-definitions",
+   "subtopic": "s-attributed-vs-l-attributed-definitions",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which one of the following attributes must be an inherited attribute?",
+   "question_html": "<p class=\"qtext\">Which one of the following attributes <b>must</b> be an inherited attribute?</p>",
+   "options": [
+    "The value of an expression node, computed from the values of its children.",
+    "The data type of an identifier, passed down from its declaration to a use of that identifier.",
+    "The number of nodes in the subtree rooted at a node.",
+    "The lexical value of an identifier, returned by the scanner."
+   ],
+   "options_html": [
+    "The value of an expression node, computed from the values of its children.",
+    "The data type of an identifier, passed down from its declaration to a use of that identifier.",
+    "The number of nodes in the subtree rooted at a node.",
+    "The lexical value of an identifier, returned by the scanner."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A synthesized attribute is computed from the children of a node; an inherited attribute is computed from the parent, the siblings or the node itself.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option (A) reads only the children, so it is synthesized.</li><li>Option (B) flows from the enclosing declaration downward to a use — information that is not available from the use itself, so it must be inherited.</li><li>Option (C) reads only the subtree, so it is synthesized.</li><li>Option (D) is supplied by the lexer at the leaf, so it is synthesized (a lexical attribute).</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Deciding the direction from where the information \"lives\" in the program text rather than from the direction in which it travels in the tree.</p>"
+  },
+  {
+   "id": "CD-U4-Q32",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "In the triple representation of three-address code, how does a later instruction refer to a value produced by an earlier instruction?",
+   "question_html": "<p class=\"qtext\">In the <b>triple</b> representation of three-address code, how does a later instruction refer to a value produced by an earlier instruction?</p>",
+   "options": [
+    "By a named temporary variable.",
+    "By the position number of the triple that produced it.",
+    "By the address of the result operand.",
+    "By a register number assigned during code generation."
+   ],
+   "options_html": [
+    "By a named temporary variable.",
+    "By the position number of the triple that produced it.",
+    "By the address of the result operand.",
+    "By a register number assigned during code generation."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A triple stores only three fields — operator, operand, operand — and there is no result field. The result of a triple is the triple itself, identified by its index.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The triples for <code class=\"mm\">a = b * c + d</code> are (0) <code class=\"mm\">* b c</code>, (1) <code class=\"mm\">+ (0) d</code>, (2) <code class=\"mm\">= a (1)</code>.</li><li>Triple 1 names triple 0 by the parenthesised index (0); no temporary name is introduced.</li><li>Option (A) describes quadruples, which do carry a named result. Options (C) and (D) belong to later phases.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Expecting a result field in a triple. The absence of that field is exactly why triples are compact and why moving a triple renumbers its uses.</p>"
+  },
+  {
+   "id": "CD-U4-Q33",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which sequence correctly translates the short-circuit test if (x < y && y < z) goto L?",
+   "question_html": "<p class=\"qtext\">Which sequence correctly translates the short-circuit test <code class=\"mm\">if (x &lt; y &amp;&amp; y &lt; z) goto L</code>?</p>",
+   "options": [
+    "if x &lt; y goto L1; goto L2; L1: if y &lt; z goto L; L2:",
+    "if x &lt; y goto L; if y &lt; z goto L",
+    "if x &lt; y goto L; goto L",
+    "if y &lt; z goto L; if x &lt; y goto L"
+   ],
+   "options_html": [
+    "<code class=\"mm\">if x &lt; y goto L1</code>; <code class=\"mm\">goto L2</code>; <code class=\"mm\">L1: if y &lt; z goto L</code>; <code class=\"mm\">L2:</code>",
+    "<code class=\"mm\">if x &lt; y goto L</code>; <code class=\"mm\">if y &lt; z goto L</code>",
+    "<code class=\"mm\">if x &lt; y goto L</code>; <code class=\"mm\">goto L</code>",
+    "<code class=\"mm\">if y &lt; z goto L</code>; <code class=\"mm\">if x &lt; y goto L</code>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Short-circuit <code class=\"mm\">&amp;&amp;</code> evaluates the second operand only when the first is true. Control flow therefore falls through past the whole test as soon as one conjunct fails.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>If <code class=\"mm\">x &lt; y</code> holds, the decision depends on <code class=\"mm\">y &lt; z</code>, so control goes to the second test at <code class=\"mm\">L1</code>.</li><li>If <code class=\"mm\">x &lt; y</code> fails, the conjunction is false and <code class=\"mm\">y &lt; z</code> must not be evaluated; control jumps past the test to <code class=\"mm\">L2</code>.</li><li>At <code class=\"mm\">L1</code> the truth of <code class=\"mm\">y &lt; z</code> sends control to <code class=\"mm\">L</code>; failure simply falls through to <code class=\"mm\">L2</code>.</li><li>Option (B) evaluates <code class=\"mm\">y &lt; z</code> even when <code class=\"mm\">x &lt; y</code> is false, which is the non-short-circuit semantics.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Writing the two tests back to back with the same target. That implements <code class=\"mm\">or</code>-style fall-through, not <code class=\"mm\">and</code>.</p>"
+  },
+  {
+   "id": "CD-U4-Q34",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "In extended three-address code (the form that also allows indexed addresses), which of the following are valid instructions? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">In extended three-address code (the form that also allows indexed addresses), which of the following are valid instructions? (Select all that apply.)</p>",
+   "options": [
+    "x = y + z",
+    "x = y * z + w",
+    "x = y[z]",
+    "goto L",
+    "x = y = z"
+   ],
+   "options_html": [
+    "<code class=\"mm\">x = y + z</code>",
+    "<code class=\"mm\">x = y * z + w</code>",
+    "<code class=\"mm\">x = y[z]</code>",
+    "<code class=\"mm\">goto L</code>",
+    "<code class=\"mm\">x = y = z</code>"
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three-address code allows at most one operator on the right of an assignment, together with an assignment or a jump. Each instruction therefore has at most three addresses.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is the canonical form: one operator, three addresses, valid.</li><li>(B) has two operators and needs a temporary for the product, so it is not a three-address instruction.</li><li>(C) is an indexed copy, a standard extension used for arrays; it has three addresses and is valid.</li><li>(D) is a jump, which is one of the permitted instruction forms.</li><li>(E) is a double assignment, which requires two separate instructions.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (C) and (D).</p><p class=\"row\"><b>Common misconception.</b> Rejecting the indexed copy because it \"looks like an array expression\". The restriction is on the number of operators, not on the shape of an address.</p>"
+  },
+  {
+   "id": "CD-U4-Q35",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "In the quadruple form (op, arg1, arg2, result) a unary operation leaves arg2 empty: t1 = -b becomes (uminus, b, -, t1). For the code t1 = -b followed by t2 = a * t1, how many quadruples have an empty arg2 field? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">In the quadruple form <code class=\"mm\">(op, arg1, arg2, result)</code> a unary operation leaves <code class=\"mm\">arg2</code> empty: <code class=\"mm\">t1 = -b</code> becomes <code class=\"mm\">(uminus, b, -, t1)</code>. For the code <code class=\"mm\">t1 = -b</code> followed by <code class=\"mm\">t2 = a * t1</code>, how many quadruples have an empty <code class=\"mm\">arg2</code> field? (Enter an integer.)</p>",
+   "options": null,
+   "options_html": null,
+   "answer": 1,
+   "answer_display": "1",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A quadruple always has four fields; a field that an instruction does not use is filled with a placeholder. Unary operators use only <code class=\"mm\">arg1</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Quadruple 1 is <code class=\"mm\">(uminus, b, -, t1)</code>: <code class=\"mm\">arg2</code> is empty.</li><li>Quadruple 2 is <code class=\"mm\">(*, a, t1, t2)</code>: both operand fields are used.</li><li>Exactly one quadruple in the sequence has an empty <code class=\"mm\">arg2</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 1.</p><p class=\"row\"><b>Common misconception.</b> Expecting a third operand for a unary minus, or counting the placeholder in the result field of a jump as an empty <code class=\"mm\">arg2</code> when no jump is present.</p>"
+  },
+  {
+   "id": "CD-U4-Q36",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "For a = b * c + d * e, using one instruction per operator and one for the final assignment, what is the minimum number of distinct temporaries required if a temporary may be reused as soon as its value is no longer needed?",
+   "question_html": "<p class=\"qtext\">For <code class=\"mm\">a = b * c + d * e</code>, using one instruction per operator and one for the final assignment, what is the <b>minimum</b> number of distinct temporaries required if a temporary may be reused as soon as its value is no longer needed?</p>",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "options_html": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The number of temporaries needed at any point is the maximum number of values simultaneously live; temporaries can be recycled after their last use.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">t1 = b * c</code> — one temporary live.</li><li><code class=\"mm\">t2 = d * e</code> — two live, since <code class=\"mm\">t1</code> is still needed.</li><li><code class=\"mm\">t1 = t1 + t2</code> — <code class=\"mm\">t2</code> dies here and its slot is free, but only two were ever live at once.</li><li><code class=\"mm\">a = t1</code> — the final assignment consumes the last temporary.</li><li>The peak liveness is 2, so two temporaries suffice; one is impossible because both products must exist before they are added.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — 2.</p><p class=\"row\"><b>Common misconception.</b> Counting temporaries by counting operators. Four operators do not imply four temporaries; only simultaneous liveness matters.</p>"
+  },
+  {
+   "id": "CD-U4-Q37",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "An array is declared int a[1..10][1..20], each element occupying 4 bytes, stored in row-major order, with base address 1000. In the three-address code for a[i][j], what byte offset is added to the base address when i = 4 and j = 7? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">An array is declared <code class=\"mm\">int a[1..10][1..20]</code>, each element occupying 4 bytes, stored in row-major order, with base address 1000. In the three-address code for <code class=\"mm\">a[i][j]</code>, what byte offset is added to the base address when <code class=\"mm\">i = 4</code> and <code class=\"mm\">j = 7</code>? (Enter an integer.)</p>",
+   "options": null,
+   "options_html": null,
+   "answer": 264,
+   "answer_display": "264",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In row-major order the offset of <code class=\"mm\">a[i][j]</code> in an array declared <code class=\"mm\">a[lo₁..hi₁][lo₂..hi₂]</code> is <code class=\"mm\">((i − lo₁)·n₂ + (j − lo₂))·w</code>, where <code class=\"mm\">n₂ = hi₂ − lo₂ + 1</code> is the number of columns and <code class=\"mm\">w</code> is the element width.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Columns per row: <code class=\"mm\">n₂ = 20 − 1 + 1 = 20</code>.</li><li>Rows skipped: <code class=\"mm\">i − lo₁ = 4 − 1 = 3</code>, contributing <code class=\"mm\">3 × 20 = 60</code> elements.</li><li>Columns skipped within the row: <code class=\"mm\">j − lo₂ = 7 − 1 = 6</code>.</li><li>Total elements before <code class=\"mm\">a[4][7]</code>: <code class=\"mm\">60 + 6 = 66</code>.</li><li>Byte offset: <code class=\"mm\">66 × 4 = 264</code>, so the address is <code class=\"mm\">1000 + 264 = 1264</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 264 (the offset; the full address is 1264).</p><p class=\"row\"><b>Common misconception.</b> Using <code class=\"mm\">i·n₂ + j</code> and answering <code class=\"mm\">(80 + 7) × 4 = 348</code>. The lower bounds are 1, not 0, and the question asks for the offset from the base, not the absolute address.</p>"
+  },
+  {
+   "id": "CD-U4-Q38",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "three-address-code-quadruples-triples",
+   "subtopic": "three-address-code-quadruples-triples",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Consider while (a < b) do S, translated with the loop test at the top, a jump that leaves the loop when the test fails, and a jump at the end of the body back to the test. How many jump instructions appear in the generated three-address code?",
+   "question_html": "<p class=\"qtext\">Consider <code class=\"mm\">while (a &lt; b) do S</code>, translated with the loop test at the top, a jump that leaves the loop when the test fails, and a jump at the end of the body back to the test. How many jump instructions appear in the generated three-address code?</p>",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "options_html": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A while loop has one conditional exit jump at the test and one unconditional jump back from the end of the body; the exit path needs a jump over the body only when the body is placed before the test.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">L1: if a &lt; b goto L2</code> — the conditional jump that enters the body.</li><li><code class=\"mm\">goto L3</code> — leaves the loop when the test fails.</li><li><code class=\"mm\">L2:</code> code for <code class=\"mm\">S</code>.</li><li><code class=\"mm\">goto L1</code> — the unconditional jump back to the test.</li><li><code class=\"mm\">L3:</code> the statement after the loop. That is three jumps in total.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C) — 3.</p><p class=\"row\"><b>Common misconception.</b> Answering 2 by counting only the test and the back edge. The exit jump over the body is a separate instruction in this scheme, and a compiler that inverts the test (<code class=\"mm\">if a ≥ b goto L3</code>) would emit only two — which is why the stem fixes the scheme.</p>"
+  },
+  {
+   "id": "CD-U4-Q39",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "When a parse tree is condensed into a syntax tree, which one of the following is the result?",
+   "question_html": "<p class=\"qtext\">When a parse tree is condensed into a <b>syntax tree</b>, which one of the following is the result?</p>",
+   "options": [
+    "Every grammar symbol is kept as an interior node, including those introduced by single-production chains.",
+    "Nodes introduced by single-production chains and the parentheses are dropped, so operators become interior nodes and operands become leaves.",
+    "Every operator node is duplicated, so the syntax tree has strictly more nodes than the parse tree.",
+    "Only the leaves survive, and operator precedence is recovered from the order of the tokens."
+   ],
+   "options_html": [
+    "Every grammar symbol is kept as an interior node, including those introduced by single-production chains.",
+    "Nodes introduced by single-production chains and the parentheses are dropped, so operators become interior nodes and operands become leaves.",
+    "Every operator node is duplicated, so the syntax tree has strictly more nodes than the parse tree.",
+    "Only the leaves survive, and operator precedence is recovered from the order of the tokens."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A syntax tree is a condensed parse tree: nodes whose productions have a single symbol on the right, and punctuation such as parentheses, are removed because they carry no value.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>For <code class=\"mm\">id + id * id</code> the parse tree contains chains such as <code class=\"mm\">E → T → F → id</code>.</li><li>The syntax tree collapses each such chain to one node per operator, with the operands as leaves.</li><li>Precedence is preserved because the tree shape is unchanged: the multiplication subtree is still a child of the addition.</li><li>Hence the syntax tree never has more nodes than the parse tree, and it does represent precedence.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Believing the syntax tree loses information. It loses only nodes that carry no operator and no operand.</p>"
+  },
+  {
+   "id": "CD-U4-Q40",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "A DAG is built for the expression ((a + b) × (a + b)) − (a + b), merging two nodes exactly when they carry the same operator and the same children, and creating one leaf per distinct variable. How many nodes does the DAG contain in total?",
+   "question_html": "<p class=\"qtext\">A DAG is built for the expression <code class=\"mm\">((a + b) × (a + b)) − (a + b)</code>, merging two nodes exactly when they carry the same operator and the same children, and creating one leaf per distinct variable. How many nodes does the DAG contain in total?</p>",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "options_html": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A DAG shares every subexpression that denotes the same value, so a repeated subexpression is stored once and reached by several edges.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Leaves: <code class=\"mm\">a</code> and <code class=\"mm\">b</code> — 2 nodes.</li><li>Interior node <code class=\"mm\">n1 = +(a, b)</code>, built once and shared by all three occurrences.</li><li>Interior node <code class=\"mm\">n2 = ×(n1, n1)</code>.</li><li>Interior node <code class=\"mm\">n3 = −(n2, n1)</code>.</li><li>Total: 2 leaves + 3 interior nodes = 5.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — 5.</p><p class=\"row\"><b>Common misconception.</b> Counting three separate <code class=\"mm\">+</code> nodes and answering 7. Sharing is the whole point of the DAG.</p>"
+  },
+  {
+   "id": "CD-U4-Q41",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "For the expression a × b + a × b, identical operator nodes are shared and each distinct variable contributes one leaf. How many nodes does the resulting DAG contain in total? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">For the expression <code class=\"mm\">a × b + a × b</code>, identical operator nodes are shared and each distinct variable contributes one leaf. How many nodes does the resulting DAG contain in total? (Enter an integer.)</p>",
+   "options": null,
+   "options_html": null,
+   "answer": 4,
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Identical subexpressions collapse to one node in a DAG, which is how common subexpressions become visible.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Leaves <code class=\"mm\">a</code> and <code class=\"mm\">b</code>: 2 nodes.</li><li><code class=\"mm\">n1 = ×(a, b)</code>: the two products are the same node.</li><li><code class=\"mm\">n2 = +(n1, n1)</code>: 1 node.</li><li>Total 2 + 1 + 1 = 4.</li></ol><p class=\"row\"><b>Final answer.</b> 4.</p><p class=\"row\"><b>Common misconception.</b> Answering 6 by keeping both product nodes, which is the syntax tree, not the DAG.</p>"
+  },
+  {
+   "id": "CD-U4-Q42",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "A DAG for a basic block is built statement by statement. Which of the following statements about that construction are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">A DAG for a basic block is built statement by statement. Which of the following statements about that construction are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "Two interior nodes are merged exactly when they carry the same operator and the same ordered list of children.",
+    "A leaf labelled with a variable may have more than one parent.",
+    "Every interior node of the DAG has exactly one parent.",
+    "The DAG can be built incrementally, one statement at a time, reusing an existing node whenever an identical one is already present.",
+    "Building the DAG requires the whole basic block to be parsed into a syntax tree before any node is created."
+   ],
+   "options_html": [
+    "Two interior nodes are merged exactly when they carry the same operator and the same ordered list of children.",
+    "A leaf labelled with a variable may have more than one parent.",
+    "Every interior node of the DAG has exactly one parent.",
+    "The DAG can be built incrementally, one statement at a time, reusing an existing node whenever an identical one is already present.",
+    "Building the DAG requires the whole basic block to be parsed into a syntax tree before any node is created."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The DAG is built by a value-numbering style pass: each variable and each operator application is given a number, and a repeated number means the node already exists.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true and is the merge rule; the order of children matters, since subtraction and division are not commutative.</li><li>(B) is true — a variable used in several statements has one leaf with several parents, which is exactly the sharing the DAG records.</li><li>(C) is false. An interior node may also have several parents, for example the shared <code class=\"mm\">+(a, b)</code> in <code class=\"mm\">((a + b) × (a + b))</code>.</li><li>(D) is true; that single incremental pass is the standard construction and is equivalent to local value numbering.</li><li>(E) is false. No separate syntax tree is needed; nodes are created as each statement is processed.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Assuming a DAG is still a tree apart from its leaves. Any node, leaf or interior, may have several parents.</p>"
+  },
+  {
+   "id": "CD-U4-Q43",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which statement relating the syntax tree and the DAG of the same expression is TRUE?",
+   "question_html": "<p class=\"qtext\">Which statement relating the syntax tree and the DAG of the same expression is <b>TRUE</b>?</p>",
+   "options": [
+    "The DAG always has strictly fewer nodes than the syntax tree.",
+    "The DAG never has more nodes than the syntax tree, and has fewer exactly when some subexpression occurs more than once.",
+    "The DAG and the syntax tree always have the same number of nodes.",
+    "The DAG may have more nodes, because it records sharing with extra nodes."
+   ],
+   "options_html": [
+    "The DAG always has strictly fewer nodes than the syntax tree.",
+    "The DAG never has more nodes than the syntax tree, and has fewer exactly when some subexpression occurs more than once.",
+    "The DAG and the syntax tree always have the same number of nodes.",
+    "The DAG may have more nodes, because it records sharing with extra nodes."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A DAG is obtained from a syntax tree by merging nodes that denote the same value, so it is at most as large as the tree.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Every node of the DAG corresponds to at least one node of the syntax tree, so the DAG has no more nodes.</li><li>If no subexpression repeats, nothing can be merged and the two have the same size — which rules out option (A).</li><li>Sharing is recorded by extra <i>edges</i>, never by extra nodes, which rules out option (D).</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Thinking a DAG needs a new node to point at a shared value. A second edge from the existing node is enough.</p>"
+  },
+  {
+   "id": "CD-U4-Q44",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "syntax-trees-dags",
+   "subtopic": "syntax-trees-dags",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "A DAG is built for the basic block d = a + b; e = a + b; f = d + e. How many interior nodes does the DAG contain?",
+   "question_html": "<p class=\"qtext\">A DAG is built for the basic block <code class=\"mm\">d = a + b</code>; <code class=\"mm\">e = a + b</code>; <code class=\"mm\">f = d + e</code>. How many <b>interior</b> nodes does the DAG contain?</p>",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "options_html": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each statement adds at most one interior node, and an identical node is reused rather than created.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">d = a + b</code> creates <code class=\"mm\">n1 = +(a, b)</code>; <code class=\"mm\">d</code> is attached to <code class=\"mm\">n1</code>.</li><li><code class=\"mm\">e = a + b</code> finds the identical node <code class=\"mm\">n1</code> already present, so no node is created; <code class=\"mm\">e</code> is attached to the same <code class=\"mm\">n1</code>.</li><li><code class=\"mm\">f = d + e</code> becomes <code class=\"mm\">+(n1, n1)</code>, a new node <code class=\"mm\">n2</code>, because its children are node numbers, not the operands <code class=\"mm\">a</code> and <code class=\"mm\">b</code>.</li><li>Interior nodes: <code class=\"mm\">n1</code> and <code class=\"mm\">n2</code> — two. Adding the three leaves <code class=\"mm\">a</code>, <code class=\"mm\">b</code> and the variable labels gives the full node count, but only two are interior.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B) — 2.</p><p class=\"row\"><b>Common misconception.</b> Merging <code class=\"mm\">f</code>'s node with <code class=\"mm\">n1</code> because both are additions over the same values. Merging compares the child <i>nodes</i>; <code class=\"mm\">+(a, b)</code> and <code class=\"mm\">+(n1, n1)</code> are different nodes even though they compute the same value.</p>"
+  },
+  {
+   "id": "CD-U4-Q45",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which one of the following checks must be performed at run time rather than at compile time?",
+   "question_html": "<p class=\"qtext\">Which one of the following checks must be performed at run time rather than at compile time?</p>",
+   "options": [
+    "That both operands of + have compatible types.",
+    "That every variable is declared before it is used.",
+    "That an array subscript lies within the declared bounds.",
+    "That a function is called with the number of arguments given in its declaration."
+   ],
+   "options_html": [
+    "That both operands of <code class=\"mm\">+</code> have compatible types.",
+    "That every variable is declared before it is used.",
+    "That an array subscript lies within the declared bounds.",
+    "That a function is called with the number of arguments given in its declaration."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A static check is decidable from the program text alone; a dynamic check depends on values that exist only while the program runs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Operand types are known from the declarations, so compatibility is a static check.</li><li>Declaration before use is a scope rule enforced on the symbol table, again static.</li><li>A subscript is usually a computed value; whether it lies within bounds is not known until execution, so the check is dynamic — unless the language forces static bounds.</li><li>Arity is fixed by the declaration and is static.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Calling every semantic check static. Type checking is static only when types are declared or inferable before execution.</p>"
+  },
+  {
+   "id": "CD-U4-Q46",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "In type-expression notation, the type of an array of ten pointers to integers is:",
+   "question_html": "<p class=\"qtext\">In type-expression notation, the type of an array of ten pointers to integers is:</p>",
+   "options": [
+    "array(10, pointer(integer))",
+    "pointer(array(10, integer))",
+    "array(10, integer) → pointer(integer)",
+    "pointer(integer) × 10"
+   ],
+   "options_html": [
+    "<code class=\"mm\">array(10, pointer(integer))</code>",
+    "<code class=\"mm\">pointer(array(10, integer))</code>",
+    "<code class=\"mm\">array(10, integer) → pointer(integer)</code>",
+    "<code class=\"mm\">pointer(integer) × 10</code>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A type expression is built with constructors: <code class=\"mm\">array(n, T)</code> for <code class=\"mm\">n</code> consecutive objects of type <code class=\"mm\">T</code>, <code class=\"mm\">pointer(T)</code> for a pointer to <code class=\"mm\">T</code>, <code class=\"mm\">T₁ × T₂</code> for a product and <code class=\"mm\">T₁ → T₂</code> for a function.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The outermost object is the array of ten elements, so <code class=\"mm\">array(10, ·)</code> is the outer constructor.</li><li>Each element is a pointer to an integer, so the inner type is <code class=\"mm\">pointer(integer)</code>.</li><li>Composing gives <code class=\"mm\">array(10, pointer(integer))</code>.</li><li>Option (B) is the type of a single pointer to an array of ten integers — the constructors are swapped.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Reading \"array of pointers\" and \"pointer to array\" as the same type. Their type expressions differ in the order of the constructors, and so does their size.</p>"
+  },
+  {
+   "id": "CD-U4-Q47",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Soundness, completeness and coercion decide what a type checker can promise. Which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Soundness, completeness and coercion decide what a type checker can promise. Which of the following statements are <b>TRUE</b>? (Select all that apply.)</p>",
+   "options": [
+    "A sound type checker rejects every ill-typed program.",
+    "A complete type checker accepts every well-typed program.",
+    "A type checker that is sound is necessarily also complete.",
+    "A coercion is an implicit conversion inserted so that an operation which would otherwise be ill-typed becomes well-typed.",
+    "A language with no static types must still have its type errors detected at compile time."
+   ],
+   "options_html": [
+    "A sound type checker rejects every ill-typed program.",
+    "A complete type checker accepts every well-typed program.",
+    "A type checker that is sound is necessarily also complete.",
+    "A coercion is an implicit conversion inserted so that an operation which would otherwise be ill-typed becomes well-typed.",
+    "A language with no static types must still have its type errors detected at compile time."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Soundness means \"accepts only well-typed programs\"; completeness means \"accepts all well-typed programs\". They are independent properties, and real checkers usually trade completeness for decidability.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is the definition of soundness.</li><li>(B) is the definition of completeness.</li><li>(C) is false. A checker that rejects every program is sound but hopelessly incomplete.</li><li>(D) is true; a coercion such as widening an integer to a real keeps the program well-typed without an explicit cast.</li><li>(E) is false. Without static types, type errors can only be detected dynamically, at run time.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Using \"sound\" and \"complete\" interchangeably. A compiler that accepts everything is complete but unsound; one that rejects everything is sound but incomplete.</p>"
+  },
+  {
+   "id": "CD-U4-Q48",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "In type-expression notation, how many type constructors — occurrences of array, pointer, × or → — appear in the type of a function that takes an integer and returns a pointer to a function from an integer to an integer, written integer → pointer(integer → integer)? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">In type-expression notation, how many type constructors — occurrences of <code class=\"mm\">array</code>, <code class=\"mm\">pointer</code>, <code class=\"mm\">×</code> or <code class=\"mm\">→</code> — appear in the type of a function that takes an integer and returns a pointer to a function from an integer to an integer, written <code class=\"mm\">integer → pointer(integer → integer)</code>? (Enter an integer.)</p>",
+   "options": null,
+   "options_html": null,
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A type constructor is a symbol that builds a type from other types; a basic type such as <code class=\"mm\">integer</code> is not a constructor.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The outermost <code class=\"mm\">→</code> makes the whole thing a function type: 1.</li><li><code class=\"mm\">pointer(·)</code> applied to the result type: 2.</li><li>The inner <code class=\"mm\">→</code> inside the pointer, for the function from integer to integer: 3.</li><li>The three occurrences of <code class=\"mm\">integer</code> are basic types, not constructors, so they are not counted.</li></ol><p class=\"row\"><b>Final answer.</b> 3.</p><p class=\"row\"><b>Common misconception.</b> Counting the basic types as well and answering 6, or missing the inner arrow because it sits inside a pointer.</p>"
+  },
+  {
+   "id": "CD-U4-Q49",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Resolving an overloaded operator or function name to a particular definition is an example of:",
+   "question_html": "<p class=\"qtext\">Resolving an overloaded operator or function name to a particular definition is an example of:</p>",
+   "options": [
+    "lexical analysis.",
+    "syntax analysis.",
+    "static semantic analysis.",
+    "machine-independent code optimization."
+   ],
+   "options_html": [
+    "lexical analysis.",
+    "syntax analysis.",
+    "static semantic analysis.",
+    "machine-independent code optimization."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Overload resolution needs the types of the operands, which are recorded in the symbol table during semantic analysis; it is therefore not a syntactic decision.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The scanner returns the same token for <code class=\"mm\">+</code> whatever its operand types, so this is not lexical.</li><li>The parser accepts the same phrase structure for both interpretations, so this is not syntactic either.</li><li>Semantic analysis looks up the declared types and picks the definition, then annotates the tree with it.</li><li>Optimization works on the already-typed intermediate code.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Treating overloading as a parsing problem because it looks like an ambiguity. It is resolved by type information, not by grammar.</p>"
+  },
+  {
+   "id": "CD-U4-Q50",
+   "subject": "compiler-design",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "sdt-intermediate-code",
+   "unit_name": "Syntax-Directed Translation & Intermediate Code",
+   "topic": "Syntax-Directed Translation & Intermediate Code",
+   "sub": "type-checking",
+   "subtopic": "type-checking",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "Set 2 of 2",
+   "question": "Which of the following are checks a compiler can make at compile time? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following are checks a compiler can make at compile time? (Select all that apply.)</p>",
+   "options": [
+    "Every variable is declared before it is used.",
+    "No division by zero is ever performed.",
+    "The type of the left side of an assignment is compatible with the type of the right side.",
+    "A function is called with the number of arguments its declaration specifies.",
+    "An array subscript is always within the declared bounds."
+   ],
+   "options_html": [
+    "Every variable is declared before it is used.",
+    "No division by zero is ever performed.",
+    "The type of the left side of an assignment is compatible with the type of the right side.",
+    "A function is called with the number of arguments its declaration specifies.",
+    "An array subscript is always within the declared bounds."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A static check must be decidable from the source text; anything that depends on run-time values is a dynamic check.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is a scope rule, decided from the symbol table.</li><li>(B) depends on values of divisors, so it is undecidable in general and, at best, approximated by data-flow analysis.</li><li>(C) is ordinary type checking over declared types.</li><li>(D) is fixed by the declaration, so arity is checked statically.</li><li>(E) depends on the computed subscript; it is a run-time check unless the language restricts subscripts to constants.</li></ol><p class=\"row\"><b>Final answer.</b> Options (A), (C) and (D).</p><p class=\"row\"><b>Common misconception.</b> Assuming every semantic error can be caught statically. Division by zero and out-of-bounds subscripts are the standard examples that cannot.</p>"
   }
  ]
 }
