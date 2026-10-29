@@ -7,31 +7,34 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 4 — Syntax-Directed Translation & Intermediate Code, Set 2 of 2**, 2026-10-29 →
-  [`compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html`](compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html)
+- **Algorithms · Unit 3 — Greedy Algorithms, Set 1 of 2**, 2026-10-29 →
+  [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: S-attributed & L-attributed definitions (6) · Three-address code, quadruples & triples (7) ·
-  Syntax trees & DAGs (6) · Type checking (6)
-- Rotation: MODE A. One subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over
-  all eleven subjects, and the draw returned **Compiler Design**, which had no paper dated 2026-10-29.
-  `runs[]` sorted by `(date, run)` gives the most recent Compiler Design paper as
-  `{date 2026-10-28, run 8, unit 4, sdt-intermediate-code, Set 1 of 2}`. Unit 4 held **25** questions — under
-  `UNIT_QUESTION_CAP = 50` — and had been current for **1 day**, so step B3 held the rotation on the same unit and
-  this paper is **Set 2 of 2**. Unit 4 now sits at 50 and the next Compiler Design run advances
-  `(index_of(sdt-intermediate-code) = 3 + 1) mod 5 = 4` → Unit 5, Runtime Environments & Code Optimization.
+- Subtopics: fractional knapsack (7) · Huffman coding (6) · activity selection & interval scheduling (6) ·
+  optimal merge patterns (6)
+- Rotation: MODE A. One subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the
+  five subjects that had no paper dated 2026-10-29 (engineering-mathematics, digital-logic, computer-architecture,
+  algorithms, computer-networks), at index 3 of 5 in that fixed list order, giving **Algorithms**.
+  `runs[]` sorted by `(date, run)` gives the most recent Algorithms paper as
+  `{date 2026-10-28, run 4, unit 2, sorting-divide-conquer, Set 2 of 2}`. Unit 2 held **50** questions, exactly
+  `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms**, which had no folder and no
+  paper, so this is **Set 1 of 2** and nothing was archived. Unit 3 now holds 25, under the cap, so the next
+  Algorithms run re-selects Unit 3 as Set 2 of 2 before advancing to
+  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → Unit 4, Dynamic Programming.
   No override was used and no second pass has started for this subject.
-- Previous test: **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 1 of 2**, 2026-10-29 →
-  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
+- Previous test: **Compiler Design · Unit 4 — Syntax-Directed Translation & Intermediate Code, Set 2 of 2**, 2026-10-29 →
+  [`compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html`](compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 87 (18 Discrete Mathematics, 4 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 44 current · 43 archived |
-| Test cards on the portal | 52 |
-| Units covered | 9 of 16 in Discrete Mathematics; 2 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2175 (450 Discrete Mathematics, 100 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Papers published (current + archived) | 88 (18 Discrete Mathematics, 5 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 45 current · 43 archived |
+| Test cards on the portal | 53 |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
+| Questions in the subject banks | 2200 (450 Discrete Mathematics, 125 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 43 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
@@ -101,6 +104,41 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Algorithms → Unit 3 (Greedy Algorithms), Set 1 of 2.** MODE A: one subject was drawn uniformly at
+  random with an unseeded `random.SystemRandom()` draw over the five subjects that had no paper dated 2026-10-29 —
+  engineering-mathematics, digital-logic, computer-architecture, algorithms, computer-networks — at index 3 of 5 in
+  that fixed list order, giving **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-28, run 4, unit 2, sorting-divide-conquer, Set 2 of 2}`. Unit 2 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms** (`greedy-algorithms`).
+  Unit 3 had no folder and no paper, so this is **Set 1 of 2**, nothing was archived, and no override was used.
+  Unit 3 now holds 25 questions, below the cap, so the next Algorithms run re-selects Unit 3 as Set 2 of 2 before
+  advancing to `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → Unit 4, Dynamic Programming.
+- Coverage this run: all four Unit 3 subtopics — fractional knapsack (7), Huffman coding (6), activity selection and
+  interval scheduling (6), optimal merge patterns (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="algorithms"`,
+  `data-unit="greedy-algorithms"`, `data-unit-number="3"`, its subtopic slug, its type, its lowercase difficulty and
+  its source tag.
+- All 25 items are new: ids `ALG-U3-Q01`..`ALG-U3-Q25` did not exist in the bank, and every stem was checked against
+  the 2175 records already held in the eleven subject banks (tags stripped, case and punctuation removed): zero id
+  overlap and no duplicated stem. No item is a `GATE_PYQ_VARIATION` — `verified_pyqs` is empty for Algorithms, so
+  nothing on this paper is claimed as an official GATE question. Every item is `STANDARD_TEXTBOOK` (15) or
+  `ORIGINAL_SYNTHESIS` (10).
+- **Every numeric answer was recomputed by script, not by hand.** Ratio-greedy fills: capacity 15 over (10,60),
+  (5,25), (10,40) gives **85**; capacity 20 over (8,40), (6,36), (5,25), (4,16), (10,50) gives **106**, with the
+  knapsack exactly full. Huffman merge-cost sums: frequencies 5, 9, 12, 13, 16, 45 give **224**; frequencies
+  1, 1, 2, 3, 5 give **25**, cross-checked against the leaf depths (1, 2, 3, 4, 4). Activity selection on the
+  eleven-interval instance gives **4**, confirmed by exhaustive search over all subsets; the five touching intervals
+  give **5**. Optimal merge costs: 5, 10, 20, 30, 30 → **205**; 2, 3, 4, 5, 6 → **45**. Value per unit weight of a
+  12 kg, ₹180 item is **15**. The 0/1 counterexample was checked by enumerating all subsets: ratio-greedy returns
+  **30** while the optimum is **40**.
+- Shell parity: the paper was generated from the same shell as every other current paper — the `<style>` block and
+  the exam `<script>` are byte-identical to the 2026-10-29 Compiler Design paper (verified by direct comparison of
+  the extracted blocks) — and only the payload regions were replaced. One defect in that shell was fixed here: the
+  palette card had been emitted as a bare `<div class="card">` with a stray closing `</aside>` and no opening
+  `<aside class="side">`, so the sticky-palette rule `aside.side` never applied. This paper emits the palette inside
+  `<aside class="side">`; the other current papers still carry the old markup and should be rebuilt in one pass.
 
 - **2026-10-29, Compiler Design → Unit 4 (Syntax-Directed Translation & Intermediate Code), Set 2 of 2.** MODE A: one
   subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over all eleven subjects, giving
@@ -3913,7 +3951,7 @@ digital-logic/
 | 5 | Functions | `functions` | 50 | yes |
 | 6 | Mathematical Induction & Recursion | `induction-recursion` | 50 | yes |
 | 7 | Counting & Combinatorics | `combinatorics` | 50 | yes |
-| 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 0 | — |
+| 8 | Recurrence Relations & Generating Functions | `recurrence-generating-functions` | 25 | yes |
 | 9 | Graph Theory Fundamentals | `graph-theory-fundamentals` | 0 | — |
 | 10 | Graph Theory Advanced | `graph-theory-advanced` | 0 | — |
 | 11 | Boolean Algebra & Switching Logic | `boolean-algebra` | 0 | — |
@@ -3929,7 +3967,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
 | 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 50 | yes |
-| 3 | Greedy Algorithms | `greedy-algorithms` | 0 | — |
+| 3 | Greedy Algorithms | `greedy-algorithms` | 25 | yes |
 | 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
