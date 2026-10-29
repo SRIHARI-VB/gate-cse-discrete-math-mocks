@@ -7,36 +7,91 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html)
+- **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 1 of 2**, 2026-10-30 →
+  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: critical section & Peterson (6) · hardware primitives (6) · semaphores (6) ·
-  classic problems: philosophers, producer-consumer (7)
+- Subtopics: heap order & min-max heaps (6) · heapify & bottom-up build (7) · heap-sort (6) ·
+  priority queues & applications (6)
 - Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects and it gave
-  **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 13, unit 1, process-scheduling, Set 1 of 2 (second pass)}`. Unit 1 held **75** questions,
-  above `UNIT_QUESTION_CAP = 50`, so step B4 advanced exactly one unit:
-  `(index_of(process-scheduling) = 0 + 1) mod 6 = 1` → **Unit 2 — Inter-Process Communication & Synchronization**.
-  Every Operating Systems unit is at the cap, so the modulo stays inside the second pass that began on 2026-10-29.
-  No override was used.
-- The superseded first-pass Set 2 moved to that unit's `archive/` as
-  `gate_os_mock_2_2026-10-27_run1.html`, content frozen; the unit folder again holds exactly one current paper.
-- The paper's Question Bank tab lists **325** solved questions — all six units, including the 50 first-pass Unit 2
-  items — against the 25 active Unit 2 second-pass questions, which stay out of that list.
-- Previous test: **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 2 of 2**, 2026-10-29 →
-  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
+  **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 10, unit 5, search-trees, Set 2 of 2}`. Unit 5 held **50** questions, exactly at
+  `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(search-trees) = 4 + 1) mod 7 = 5` → **Unit 6 — Heaps & Priority Queues**. No override was used and
+  no second pass has started for this subject.
+- Unit 6 had no folder and no paper, so this is Set 1 of 2 and nothing was archived; the unit folder holds
+  exactly one current paper.
+- The paper's Question Bank tab lists **250** solved questions — Units 1 to 5 — against the 25 active Unit 6
+  questions, which stay out of that list.
+- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2
+  (second pass)**, 2026-10-30 →
+  [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 101 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 10 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 50 current · 51 archived |
-| Test cards on the portal | 60 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2525 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 250 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Papers published (current + archived) | 102 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 51 current · 51 archived |
+| Test cards on the portal | 61 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2550 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 51 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-30 — Programming and Data Structures Unit 6, Set 1 of 2
+
+- New paper at `programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html`, the first
+  paper this unit has ever carried. Nothing was archived because the unit had no previous current paper, so the
+  folder holds exactly one current paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** One subject was drawn uniformly at random from the eleven GATE CSE subjects
+  over the fixed syllabus order, and it gave **Programming and Data Structures**.
+  `programming-data-structures/question-bank/master_bank.json` read back `runs[]` sorted by `(date, run)` as
+  `{date 2026-10-29, run 10, unit 5, search-trees, Set 2 of 2}`. Unit 5 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(search-trees) = 4 + 1) mod 7 = 5` → zero-based index 5, i.e. **Unit 6 — Heaps & Priority Queues**.
+  No unit of this subject had ever been opened beyond Unit 5, so no second pass has started. No override was
+  used and no unit exceeds 50 questions.
+- Coverage: all four Unit 6 subtopics — heap order and min-max heaps (6), heapify and the bottom-up build (7),
+  heap-sort (6), and priority queues with their applications (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="programming-data-structures"`, `data-unit="heaps-priority-queues"`,
+  `data-unit-number="6"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the
+  active paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`DS-U6-Q01`..`DS-U6-Q25`). The set opens ground this subject has never examined: the local
+  parent–child invariant against the sorted-array property, where the minimum of a max-heap can lie, the single
+  node of a 1000-key heap that has one child, the two-level subtree guarantee of a min-max heap, the exact
+  exchange count of a bottom-up build on two given arrays, why Σ h/2^h makes the build linear, the
+  ⌊n/2⌋ + n − 1 MAX-HEAPIFY calls of a full heap-sort, why a min-heap used in place yields descending order, the
+  cache behaviour behind heap-sort's practical slowness, Huffman cost as a sum of merge weights, Dijkstra with
+  lazy deletion, the top-k stream pattern with a min-heap of size k, and k-way merging in O(n log k).
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for this subject, and no heaps, heap-sort or
+  priority-queue previous-year question has been verified against an official paper and answer key, so nothing
+  on this paper is claimed as an official GATE question. 11 items are `STANDARD_TEXTBOOK` and 14 are
+  `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** BUILD-MAX-HEAP on
+  `[10, 20, 30, 40, 50, 60, 70]` performs **4** exchanges and ends at `[70, 50, 60, 40, 20, 10, 30]`;
+  BUILD-MIN-HEAP on the descending `[8, 7, 6, 5, 4, 3, 2, 1]` performs **6** exchanges and ends at
+  `[1, 4, 2, 5, 8, 3, 6, 7]`; the build on `[5, 13, 2, 25, 7, 17, 20, 8, 4]` ends at
+  `[25, 13, 20, 8, 7, 17, 2, 5, 4]` with `A[3] = 20`; a 1000-key heap has exactly **1** node with one child; and
+  Huffman on frequencies 45, 13, 12, 16, 9, 5 costs **224** bits (average 2.24 against 3 for a fixed-length
+  code). The delete-max bound was checked against the height: 500 keys sit between 2⁸ and 2⁹, so at most **8**
+  exchanges.
+- The correct option is spread 4 A / 3 B / 4 C / 4 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B, D), (A, B, C), (A, B, C), (A, B, D) and (A, C, D) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Programming and
+  Data Structures Unit 5 Set 2 paper. The `<style>` block (13 235 bytes), the exam `<script>` (9 419 bytes) and
+  the `:root` token block are **byte-identical** to that paper and to `index.html`, and the `:root` block still
+  matches `design-tokens.css`. Only the header sub-line, candidate id, Question Bank count, meta strip, the 25
+  question cards, the bank tab, the About tab and the payload differ.
+- Checks run: 25 `.qcard` blocks and 25 palette buttons; 250 `.hcard` cards under five unit accordions in the
+  Question Bank tab, none of them one of the 25 active ids; 275 `data-subject` attributes on the paper (25 active
+  + 250 banked); zero new tag-nesting mismatches against the template (the parser reports the same two
+  pre-existing `</body>`/`</html>` notices on the template itself); every `href` in the portal's data block
+  resolves to a file that exists; the portal's data block was updated in place with the new card at the head of
+  `tests`, and the 25 records were appended to `data/questions-programming-data-structures.js`, which now
+  carries 275.
+- Hygiene: the paper is filed at exactly one path, `programming-data-structures/heaps-priority-queues/`, and
+  nowhere else; no temporary or loose file was left at the repository root.
 
 ### 2026-10-30 — Operating Systems Unit 2, Set 1 of 2 (second pass)
 
