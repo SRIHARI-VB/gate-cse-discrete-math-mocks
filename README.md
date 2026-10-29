@@ -7,37 +7,62 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 2 of 2**, 2026-10-29 →
-  [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-29.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-29.html)
+- **Compiler Design · Unit 5 — Runtime Environments & Code Optimization, Set 1 of 2**, 2026-10-29 →
+  [`compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-29.html`](compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: single-variable extrema (8) · multivariable extrema & saddle points (5) · definite integrals (7) ·
-  vector calculus basics (5)
-- Rotation: MODE A. Nine of the eleven subjects already had a paper dated 2026-10-29, so one subject was drawn with
-  `random.Random(20261029).choice` over the two that had not — digital-logic and engineering-mathematics — and it
-  gave **Engineering Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-28, run 7, unit 4, calculus-optimization-integrals, Set 1 of 2}`. Unit 4 held **25** questions,
-  under `UNIT_QUESTION_CAP` = 50, and had been current for **1 day** (first paper 2026-10-28), under
-  `DAYS_PER_UNIT_MAX` = 7, so step B3 re-selected the same unit: **Set 2 of 2**. No override was used and no second
-  pass has started for this subject.
-- Unit 4 now holds **50** questions, exactly the cap, so the next Engineering Mathematics run advances one unit:
-  `(index_of(calculus-optimization-integrals) = 3 + 1) mod 5 = 4` → **Unit 5, Continuous Probability &
-  Distributions** (`probability-distributions`), Set 1 of 2.
-- The paper's Question Bank tab lists **175** solved questions (Units 1–3 plus the 25 questions of Unit 4 Set 1)
-  against the 25 active ones; the Set 2 questions stay out of that list until a later paper banks them.
-- Previous test: **Computer Architecture · Unit 3 — Memory Hierarchy & Cache Memory, Set 1 of 2**, 2026-10-29 →
-  [`computer-architecture/cache-memory/gate_co_mock_3_2026-10-29.html`](computer-architecture/cache-memory/gate_co_mock_3_2026-10-29.html)
+- Subtopics: activation records & the call stack (6) · basic blocks & flow graphs (7) ·
+  local & loop optimizations (6) · data-flow analysis & liveness (6)
+- Rotation: MODE A. One subject was drawn with `random.choice` over all eleven subjects and gave **Compiler Design**.
+  `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 8, unit 4, sdt-intermediate-code, Set 2 of 2}`. Unit 4 held **50** questions, at
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(sdt-intermediate-code) = 3 + 1) mod 5 = 4` → **Unit 5,
+  Runtime Environments & Code Optimization**. Unit 5 held no questions and had no folder, so this is **Set 1 of 2**;
+  nothing was archived because nothing was superseded. No override was used and no second pass has started.
+- Unit 5 now holds **25** questions, under the cap, so the next Compiler Design run re-selects Unit 5 as Set 2 of 2.
+- The paper's Question Bank tab lists **200** solved questions (Units 1–4, all 200 banked items) against the 25
+  active Unit 5 questions, which stay out of that list until a later paper banks them.
+- Previous test: **Engineering Mathematics · Unit 4 — Calculus: Maxima, Minima & Integrals, Set 2 of 2**, 2026-10-29 →
+  [`engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-29.html`](engineering-mathematics/calculus-optimization-integrals/gate_em_mock_4_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 96 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 12 Operating Systems, 8 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 48 current · 48 archived |
-| Test cards on the portal | 56 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2400 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 300 Operating Systems, 200 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 75 Computer Architecture) |
+| Papers published (current + archived) | 97 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 12 Operating Systems, 8 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 49 current · 48 archived |
+| Test cards on the portal | 57 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2425 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 300 Operating Systems, 200 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 48 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 6 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-29 — Compiler Design Unit 5, Set 1 of 2
+
+- New paper at `compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-29.html`. Unit 5 had no folder and
+  no earlier paper, so nothing was superseded and no `archive/` entry was created for it.
+- **Rotation (Section 1, MODE A).** One subject was drawn with `random.choice` over the eleven GATE CSE subjects and
+  gave **Compiler Design**. Reading `compiler-design/question-bank/master_bank.json`, `runs[]` sorted by
+  `(date, run)` gives the most recent paper as `{date 2026-10-29, run 8, unit 4, sdt-intermediate-code, Set 2 of 2}`,
+  so `current_unit` was Unit 4 with **50** questions banked — exactly `UNIT_QUESTION_CAP`, so step B3 failed and step
+  B4 advanced one unit: `(index_of(sdt-intermediate-code) = 3 + 1) mod 5 = 4` → zero-based index 4, i.e.
+  **Unit 5 — Runtime Environments & Code Optimization**. No override was used, no unit exceeds 50 questions and no
+  second pass has started for this subject.
+- Coverage: all four Unit 5 subtopics — activation records and the call stack (6), basic blocks and flow graphs (7),
+  local and loop optimizations (6), data-flow analysis and liveness (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="compiler-design"`, `data-unit="runtime-code-optimization"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag.
+- All 25 ids are new (`CD-U5-Q01`..`CD-U5-Q25`) and every stem was compared against the 200 banked Compiler Design
+  items after normalisation: zero id overlap and zero duplicated stems.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Compiler Design, so nothing on this paper is
+  claimed as an official GATE question. 14 items are `STANDARD_TEXTBOOK` and 11 are `ORIGINAL_SYNTHESIS`.
+- Every countable answer was recomputed: the frame is 8 + 16 + 40 + 24 + 8 = **96** bytes; 12 frames plus 64 bytes of
+  base overhead is **1216**; the leader rules give **4** blocks for the first fragment and **6** blocks with **7**
+  edges for the second; 3 × (4 + 5) − 2 × 6 = **15**; and liveness before instruction 3 of the last fragment is
+  {y}, i.e. **1** variable.
+- Shell: the paper was generated from the 2026-10-29 Compiler Design Unit 4 paper, substituting only the payload, the
+  25 question cards, the Question Bank body, the About body and the header metadata. The `<style>` block, the exam
+  `<script>`, the palette, the answer-key view and the footer are byte-identical to that paper.
 
 ### 2026-10-29 — Engineering Mathematics Unit 4, Set 2 of 2
 
@@ -165,6 +190,11 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-29, Compiler Design → Unit 5 (Runtime Environments & Code Optimization), Set 1 of 2.** MODE A: one
+  subject drawn with `random.choice` over all eleven, giving **Compiler Design**. Most recent run in `runs[]` was
+  `{2026-10-29, run 8, unit 4, Set 2 of 2}`; Unit 4 held 50 questions, at `UNIT_QUESTION_CAP`, so step B4 advanced
+  `(3 + 1) mod 5 = 4` → Unit 5. Unit 5 held no questions, so this is Set 1 of 2 and nothing was archived.
+  Question Bank tab shows the 200 questions of Units 1–4; the 25 active Unit 5 questions are excluded.
 - **2026-10-29, Computer Architecture → Unit 3 (Memory Hierarchy & Cache Memory), Set 1 of 2.**
   MODE A: eight subjects already had a paper dated 2026-10-29 (algorithms, compiler-design, computer-networks,
   databases, discrete-mathematics, operating-systems, programming-data-structures, theory-of-computation), so one
@@ -4237,7 +4267,7 @@ Algorithms:
 | 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 50 | yes |
 | 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 50 | yes |
 | 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 50 | yes |
-| 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 0 | — |
+| 5 | Runtime Environments & Code Optimization | `runtime-code-optimization` | 25 | yes |
 
 ### Operating Systems
 
