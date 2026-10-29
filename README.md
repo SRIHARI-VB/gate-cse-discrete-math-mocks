@@ -7,32 +7,36 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 3 — Greedy Algorithms, Set 2 of 2**, 2026-10-29 →
-  [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
+- **Operating Systems · Unit 5 — Virtual Memory & Page Replacement, Set 2 of 2**, 2026-10-29 →
+  [`operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html`](operating-systems/virtual-memory/gate_os_mock_5_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: fractional knapsack (6) · Huffman coding (6) · activity selection & interval scheduling (7) ·
-  optimal merge patterns (6)
-- Rotation: MODE A. One subject was drawn at random with an unseeded draw over all eleven subjects, giving
-  **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 5, unit 3, greedy-algorithms, Set 1 of 2}`. Unit 3 held **25** questions, below
+- Subtopics: demand paging & page-fault rate (8) · FIFO, OPT & LRU replacement (6) · Belady's anomaly (5) ·
+  thrashing & the working-set model (6)
+- Rotation: MODE A. One subject was drawn at random with `random.Random(20261029).randrange(11)` over the eleven
+  subjects and it gave index 8, **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper
+  as `{date 2026-10-29, run 9, unit 5, virtual-memory, Set 1 of 2}`. Unit 5 held **25** questions, below
   `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and step B4 was never
-  reached: **Unit 3, Set 2 of 2**. Unit 3 now holds 50, exactly at the cap, so the next Algorithms run advances
-  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → **Unit 4, Dynamic Programming**.
+  reached: **Unit 5, Set 2 of 2**. Unit 5 now holds 50, exactly at the cap, so the next Operating Systems run
+  advances `(index_of(virtual-memory) = 4 + 1) mod 6 = 5` → **Unit 6, File Systems & Disk Scheduling**.
   No override was used and no second pass has started for this subject.
-- Previous test: **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 2 of 2**, 2026-10-29 →
-  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
+- Set 1 of this date moved to
+  [`operating-systems/virtual-memory/archive/gate_os_mock_5_2026-10-29_run1.html`](operating-systems/virtual-memory/archive/gate_os_mock_5_2026-10-29_run1.html),
+  so the unit folder holds exactly one current paper. Its 25 questions are now banked and appear in the paper's
+  Question Bank tab, which lists **225** solved questions against the new paper's 25 active ones.
+- Previous test: **Algorithms · Unit 3 — Greedy Algorithms, Set 2 of 2**, 2026-10-29 →
+  [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 90 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 45 current · 45 archived |
-| Test cards on the portal | 54 |
+| Papers published (current + archived) | 91 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 10 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 45 current · 46 archived |
+| Test cards on the portal | 53 (one card per published set) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2250 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2275 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 250 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 45 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 46 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
