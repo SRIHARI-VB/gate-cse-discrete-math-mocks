@@ -7,34 +7,35 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 1 of 2**, 2026-10-29 →
-  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
-- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: distance vector & count to infinity (7) · link state, OSPF & Dijkstra (7) · BGP & path vector (5) ·
-  ARP, RARP, ICMP, DHCP & NAT (6)
-- Rotation: MODE A. One subject was drawn at random with `random.Random(202610291305).randrange(11)` over the eleven
-  subjects and it gave index 10, **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper
-  as `{date 2026-10-29, run 6, unit 3, ipv4-subnetting, Set 2 of 2}`. Unit 3 held **50** questions, exactly
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(ipv4-subnetting) = 2 + 1) mod 6 = 3` → **Unit 4, Network Layer: Routing & Protocols**. Unit 4 had no
-  folder and no paper, so this is Set 1 of 2; nothing was archived, because the new unit folder starts empty. No
-  override was used and no second pass has started for this subject. Computer Networks is now **4 of 6 units** covered.
-- The paper's Question Bank tab lists **150** solved questions (units 1–3) against the 25 active ones; Unit 4's own
-  25 questions stay out of that list until a later paper banks them.
-- Previous test: **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2**, 2026-10-29 →
+- **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 2 of 2**, 2026-10-29 →
   [`operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html)
+- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
+- Subtopics: file allocation (7) · free-space management (6) · disk scheduling (7) · access control & protection (5)
+- Rotation: MODE A. One subject was drawn at random with `random.Random(20261029).choice` over the eleven subjects
+  and it gave **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 11, unit 6, storage-file-systems, Set 1 of 2}`. Unit 6 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days — well under
+  `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 6, Set 2 of
+  2**, which closes Unit 6 at exactly 50 questions and completes Operating Systems at **6 of 6 units**.
+  No override was used and no second pass has started for this subject.
+- The superseded Set 1 was archived, unchanged, as
+  `operating-systems/storage-file-systems/archive/gate_os_mock_6_2026-10-29_run1.html`.
+- The paper's Question Bank tab lists **275** solved questions (units 1–5 at 50 each, Unit 6 at 25) against the
+  25 active ones; Set 2's own 25 questions stay out of that list until a later paper banks them.
+- Previous test: **Computer Networks · Unit 4 — Network Layer: Routing & Protocols, Set 1 of 2**, 2026-10-29 →
+  [`computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html`](computer-networks/routing-protocols/gate_cn_mock_4_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 93 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 11 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 47 current · 46 archived |
-| Test cards on the portal | 55 (one card per published set) |
+| Papers published (current + archived) | 94 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 12 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 7 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 47 current · 47 archived |
+| Test cards on the portal | 55 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2325 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 275 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2350 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 300 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 175 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 46 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 5 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 47 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 6 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### 2026-10-29 — Computer Networks Unit 4 opened
 
@@ -135,6 +136,40 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-29, Operating Systems → Unit 6 (File Systems & Disk Scheduling), Set 2 of 2.**
+  MODE A: one subject was drawn at random with a seeded `random.Random(20261029).choice` over all eleven GATE CSE
+  subjects, giving **Operating Systems**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 11, unit 6, storage-file-systems, Set 1 of 2}`. Unit 6 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days — well under
+  `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 6, Set 2 of
+  2**, which closes Unit 6 at exactly 50 questions. The next Operating Systems run finds the unit at the cap and
+  advances `(index_of(storage-file-systems) = 5 + 1) mod 6 = 0` → **Unit 1, Process Management & CPU Scheduling**,
+  a second pass. No override was used.
+- Coverage this run: all four Unit 6 subtopics — file allocation methods (7), free-space management (6), disk
+  scheduling (7), access control and protection (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="operating-systems"`,
+  `data-unit="storage-file-systems"`, `data-unit-number="6"`, its subtopic slug, its type, its lowercase difficulty
+  and its source tag.
+- All 25 items are new: ids `OS-U6-Q26`..`OS-U6-Q50` did not exist in the bank, and every stem was checked against
+  the 275 Operating Systems records already held — zero id overlap and no duplicated stem. Set 2 deliberately moves
+  onto ground Set 1 left untouched: the FAT as an in-memory chain table, per-block pointer overhead, contiguous
+  growth by relocation, FAT entry-width limits, inode capacity with one level of indirection, permission-class
+  matching against a user's several groups, the access matrix as rows and columns, bitmap consistency after a lazy
+  write-back, and one shared disk queue costed under FCFS, SSTF, SCAN, LOOK and C-SCAN. Set 1 used the
+  53/98/183/37/122/14/124/65/67 queue; Set 2 uses 100 with 55, 58, 39, 18, 90, 160, 150, 38, 184 throughout.
+- No item is a `GATE_PYQ_VARIATION`: no file-systems previous-year question has been verified against an official
+  paper and answer key, so nothing on this paper is claimed as an official GATE question. Every item is
+  `STANDARD_TEXTBOOK` (13) or `ORIGINAL_SYNTHESIS` (12).
+- Every numeric answer was recomputed by script, not by hand: FCFS 498, SSTF 248 (order 90, 58, 55, 39, 38, 18,
+  150, 160, 184), SCAN 284, LOOK 248, C-SCAN 314; the 64 KB bitmap covering 524 288 blocks and the
+  2^31-block bitmap occupying 256 MB; linked blocks 5 × 508 = 2540 bytes; 12 direct plus 512 indirect pointers at
+  2 KB blocks giving 1048 KB; 12-bit FAT at 4 KB clusters giving 16 MB; the 2^32-entry FAT at 4 bytes giving 16 GB;
+  grouping 2 × (1024 − 1) = 2046; and mode 650.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  {A, C, D}, {A, B, D}, {A, B, D}, {A, B}, {A, B}.
+- Shell: built from the same shell as every other paper. The head, palette, answer-key view, JavaScript and footer
+  are byte-identical to the superseded Set 1 once the four metadata strings (title, sub-line, set chip, bank-tab
+  count) are normalised, and the archived Set 1 keeps its questions, options, answers, solutions and duration frozen.
 - **2026-10-29, Algorithms → Unit 3 (Greedy Algorithms), Set 2 of 2.**
   MODE A: one subject was drawn at random with an unseeded `random.choice` over all eleven GATE CSE subjects,
   giving **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper as
@@ -4113,8 +4148,8 @@ Algorithms:
 | 2 | Inter-Process Communication & Synchronization | `synchronization-ipc` | 50 | yes |
 | 3 | Deadlocks | `deadlocks` | 50 | yes |
 | 4 | Memory Management & Paging | `memory-paging` | 50 | yes |
-| 5 | Virtual Memory & Page Replacement | `virtual-memory` | 25 | yes |
-| 6 | File Systems & Disk Scheduling | `storage-file-systems` | 0 | — |
+| 5 | Virtual Memory & Page Replacement | `virtual-memory` | 50 | yes |
+| 6 | File Systems & Disk Scheduling | `storage-file-systems` | 50 | yes |
 
 ### Engineering Mathematics
 

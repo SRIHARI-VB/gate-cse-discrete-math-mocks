@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-29",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 275,
+  "total_questions": 300,
   "units_with_questions": [
    1,
    2,
@@ -14,7 +14,11 @@
    4,
    5,
    6
-  ]
+  ],
+  "total_runs": 12,
+  "unit_question_cap": 50,
+  "set_size": 25,
+  "sets_per_unit": 2
  },
  "runs": [
   {
@@ -477,6 +481,66 @@
    ],
    "selection": "MODE A. One subject was drawn at random with random.Random(202610291206).randrange(11) over the eleven GATE CSE subjects and it gave index 8, Operating Systems. runs[] sorted by (date, run) gives the most recent paper as {date 2026-10-29, run 10, unit 5, virtual-memory, Set 2 of 2}: unit 5 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced one unit: (index_of(virtual-memory) = 4 + 1) mod 6 = 5 -> Unit 6, File Systems & Disk Scheduling. Unit 6 had no folder and no paper, so this is Set 1 of 2. No override was used and no second pass has started for this subject; after this paper Operating Systems has all six units covered.",
    "note": "First set for Unit 6, and the last Operating Systems unit to be opened. 25 new questions OS-U6-Q01..Q25, all four subtopics represented (7 file allocation, 6 free-space management, 7 disk scheduling, 5 access control). Every numeric answer (bitmap sizes 125000 bytes and 128 MB, FCFS 640, SCAN 236, single-level index ceiling 256 KB, inode range for logical block 5000) was recomputed by script. No GATE_PYQ_VARIATION item: no file-systems PYQ has been verified against an official paper and key, so none is claimed."
+  },
+  {
+   "run": 12,
+   "date": "2026-10-29",
+   "subject": "operating-systems",
+   "subject_name": "Operating Systems",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "operating-systems/storage-file-systems/gate_os_mock_6_2026-10-29.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "file-allocation-methods-indexed-linked",
+    "free-space-management",
+    "disk-scheduling-fcfs-sstf-scan-cscan-look",
+    "access-control-protection"
+   ],
+   "question_ids": [
+    "OS-U6-Q26",
+    "OS-U6-Q27",
+    "OS-U6-Q28",
+    "OS-U6-Q29",
+    "OS-U6-Q30",
+    "OS-U6-Q31",
+    "OS-U6-Q32",
+    "OS-U6-Q33",
+    "OS-U6-Q34",
+    "OS-U6-Q35",
+    "OS-U6-Q36",
+    "OS-U6-Q37",
+    "OS-U6-Q38",
+    "OS-U6-Q39",
+    "OS-U6-Q40",
+    "OS-U6-Q41",
+    "OS-U6-Q42",
+    "OS-U6-Q43",
+    "OS-U6-Q44",
+    "OS-U6-Q45",
+    "OS-U6-Q46",
+    "OS-U6-Q47",
+    "OS-U6-Q48",
+    "OS-U6-Q49",
+    "OS-U6-Q50"
+   ],
+   "mode": "MODE A (random subject, bank-driven unit rotation)",
+   "note": "Unit 6 held 25 questions, below the cap of 50, so step B3 held the rotation and Set 2 was generated. The unit now closes at exactly 50 questions."
   }
  ],
  "verified_pyqs": [
@@ -8603,6 +8667,689 @@
    ],
    "answer_display": "Options (A), (B) and (C)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each policy is defined by a victim rule for the next request, and each rule has a fairness consequence. Greedy policies can starve; sweep policies bound the wait; the circular variant equalises it.</p>\n<p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. SSTF always takes the nearest pending request. If a steady stream of near requests arrives, the far one is never nearest and may wait indefinitely.</li><li>(B) True. SCAN passes every cylinder once per sweep, so a request waits at most the time for the head to reach it — one full sweep plus the return leg. That is a bound, unlike SSTF.</li><li>(C) True. Under SCAN a request just behind the head waits for almost two full sweeps, while one just ahead waits very little; under C-SCAN every request waits between zero and one sweep plus the fixed return, so the spread is narrower.</li><li>(D) False. LOOK reverses at the last pending request in each direction, exactly as SCAN reverses at the end of the disk. Both reverse; they differ in <i>where</i> they reverse.</li></ol>\n<p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C) are true; (D) is false.</span></p>\n<p class=\"row\"><b>Common misconception.</b> Believing a smarter policy cannot starve. SSTF is the classic starvation example on disks, just as shortest-job-first is on the CPU. Fairness comes from the sweep, not from the greedy choice.</p>\n<p class=\"row\"><b>Takeaway.</b> Greedy = fast average, possible starvation. SCAN = bounded wait. C-SCAN = bounded and uniform wait, at the cost of the return sweep.</p>"
+  },
+  {
+   "id": "OS-U6-Q26",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A FAT file system keeps one entry per disk block in the FAT, and the directory entry of a file stores only its first block number. Which one of the following follows directly from that design?",
+   "options": [
+    "Caching the FAT in main memory turns every step of the block chain into a table lookup, so the chain is followed at memory speed rather than at one disk read per block.",
+    "The directory entry has to be rewritten every time the file grows, because the FAT cannot record where the new block went.",
+    "The FAT stores the same block numbers as the directory entries, so the two structures can disagree about where a file starts.",
+    "A FAT entry is needed only for blocks that a file actually uses, so the FAT grows with the number of files rather than with the size of the disk."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The FAT is an array indexed by block number; entry <code class=\"mm\">i</code> holds the number of the block that follows block <code class=\"mm\">i</code> in the file that owns it. The directory entry supplies only the head of the chain, so growth appends a FAT entry and never moves the directory entry.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A file is a chain: directory entry → first block → FAT[first] → FAT[FAT[first]] → … → end-of-file marker.</li><li>Following that chain without caching costs one disk read of the FAT per link, which is why plain linked allocation is slow for random access.</li><li>The FAT is small enough to be held in memory (one entry per block), so the same traversal becomes a sequence of array accesses.</li><li>That is the whole point of FAT: it converts a per-block disk read into a memory lookup, at the cost of keeping the table resident and writing it back on change.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the FAT converts chain traversal into an in-memory table lookup.</span></p><p class=\"row\"><b>Common misconception.</b> Option (C) is the seductive one: students assume two structures holding block numbers must duplicate each other. The directory entry stores the first block only, so there is nothing to disagree about.</p><p class=\"row\"><b>Takeaway.</b> FAT = linked allocation with the links lifted out of the data blocks into one central table.</p>"
+  },
+  {
+   "id": "OS-U6-Q27",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file system tracks free space with a bitmap holding one bit per disk block. The bitmap is kept entirely in main memory and occupies 64 KB. How many blocks does the disk have?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": [
+    524288
+   ],
+   "answer_display": "524288",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> One bit per block means the number of blocks equals the number of bits in the bitmap. Convert bytes to bits with a factor of 8.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bitmap size = 64 KB = 64 × 1024 = 65 536 bytes.</li><li>Each byte carries 8 bits, so the bitmap holds 65 536 × 8 = 524 288 bits.</li><li>One bit per block, therefore 524 288 blocks.</li><li>Check the other way: 524 288 blocks need 524 288 bits = 65 536 bytes = 64 KB. ✔</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 524288 blocks (a 64 KB bitmap covers 2<sup>19</sup> blocks).</span></p><p class=\"row\"><b>Common misconception.</b> The usual slip is to answer 65 536 by forgetting the factor of 8, or to use 1000 instead of 1024 for KB.</p><p class=\"row\"><b>Takeaway.</b> Bitmap bits = blocks; bytes = blocks / 8; so blocks = 8 × bytes.</p>"
+  },
+  {
+   "id": "OS-U6-Q28",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Which one of the following statements about the LOOK disk-scheduling policy is TRUE?",
+   "options": [
+    "LOOK travels to the physical end of the disk in each direction, so its total head movement always equals that of SCAN for the same queue.",
+    "LOOK reverses direction at the last pending request in the current direction, so the head never travels past the outermost request.",
+    "LOOK serves requests strictly in arrival order, but only while the head is moving in the same direction as the request.",
+    "LOOK is C-SCAN with the return sweep removed, so its waiting time is unbounded."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SCAN and LOOK are both elevator policies. SCAN goes all the way to the disk edge (cylinder 0 or the last cylinder) before turning; LOOK turns as soon as no further request lies ahead.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In SCAN the head reaches the physical end of the disk even when the last request is far short of it, and that empty travel is wasted movement.</li><li>LOOK examines the queue: if nothing lies beyond the current position in the direction of travel, it reverses at the last request it has just served.</li><li>So LOOK's movement is never larger than SCAN's for the same queue, and it is strictly smaller whenever the outermost request is not at the disk edge.</li><li>Option (C) describes FCFS, not LOOK.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — LOOK turns back at the last request, not at the disk edge.</span></p><p class=\"row\"><b>Common misconception.</b> Students often think LOOK and SCAN are the same algorithm. They differ exactly in where the turn happens, and that difference changes the head-movement total whenever the outermost request is inside the edge.</p><p class=\"row\"><b>Takeaway.</b> SCAN = elevator to the wall. LOOK = elevator to the last passenger.</p>"
+  },
+  {
+   "id": "OS-U6-Q29",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "access-control-protection",
+   "subtopic": "access-control-protection",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file <code class=\"mm\">report.txt</code> is owned by user <code class=\"mm\">u1</code> and its group is <code class=\"mm\">g1</code>; its mode is 644. User <code class=\"mm\">u2</code> is a member of both <code class=\"mm\">g1</code> and <code class=\"mm\">g2</code>, but is not <code class=\"mm\">u1</code>. Which permission class decides what <code class=\"mm\">u2</code> may do with the file?",
+   "options": [
+    "The group class, because the file's group is <code class=\"mm\">g1</code> and <code class=\"mm\">u2</code> is a member of <code class=\"mm\">g1</code>; membership of <code class=\"mm\">g2</code> is irrelevant.",
+    "The owner class, because <code class=\"mm\">u2</code> belongs to the file's group and so inherits the owner's rights.",
+    "The union of the group class and the other class, since <code class=\"mm\">u2</code> qualifies for both.",
+    "The other class, because <code class=\"mm\">u2</code> is not the owner of the file."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Unix checks the three permission classes in the fixed order owner, then group, then other, and applies the first class that matches. Exactly one class applies, and it is the file's group — not the union of the user's groups.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The file records one group, here <code class=\"mm\">g1</code>. There is no per-user list in a mode word.</li><li><code class=\"mm\">u2</code> is not the owner, so the owner class does not apply.</li><li><code class=\"mm\">u2</code> is a member of <code class=\"mm\">g1</code>, so the group class applies: mode 644 gives the group read only.</li><li>The check stops there. The other class is never consulted, and the extra membership in <code class=\"mm\">g2</code> grants nothing, because <code class=\"mm\">g2</code> is not the file's group.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the group class of the file's own group decides, giving <code class=\"mm\">u2</code> read access only.</span></p><p class=\"row\"><b>Common misconception.</b> The common error is to take the union of every group the user belongs to, or to let a group member be treated as the owner. A mode word names one group and the first matching class wins.</p><p class=\"row\"><b>Takeaway.</b> Owner, then group, then other — first match, no union.</p>"
+  },
+  {
+   "id": "OS-U6-Q30",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file is stored by linked allocation in 5 disk blocks. The block size is 512 bytes, and 4 bytes of every block are used to hold the pointer to the next block. What is the largest amount of file data those 5 blocks can hold?",
+   "options": [
+    "2560 bytes",
+    "2556 bytes",
+    "2540 bytes",
+    "2048 bytes"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In linked allocation each block spends part of its payload on the link to the next block. Only the remainder is file data, and the last block still carries a pointer (an end-of-file marker) unless the design uses a separate terminator.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Payload per block = block size − pointer size = 512 − 4 = 508 bytes.</li><li>Five blocks therefore hold 5 × 508 = 2540 bytes of data.</li><li>The pointer overhead across the file is 5 × 4 = 20 bytes, so 2560 − 20 = 2540. ✔</li><li>2540 bytes is the answer; 2560 would be the answer only if the pointers lived outside the blocks.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 2540 bytes.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 2560 forgets the per-block pointer entirely; answering 2556 subtracts a single pointer instead of one per block.</p><p class=\"row\"><b>Takeaway.</b> Linked allocation costs one pointer per block, so usable capacity is (block size − pointer size) × blocks.</p>"
+  },
+  {
+   "id": "OS-U6-Q31",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A disk has 200 cylinders numbered 0 to 199. The head is at cylinder 100 and the pending requests, in arrival order, are 55, 58, 39, 18, 90, 160, 150, 38, 184. Under FCFS, what is the total head movement, in cylinders?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": [
+    498
+   ],
+   "answer_display": "498",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> FCFS serves the queue in arrival order and ignores where the head is, so the total is the sum of the absolute differences between consecutive positions, starting from the initial head position.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>100 → 55 = 45</li><li>55 → 58 = 3</li><li>58 → 39 = 19</li><li>39 → 18 = 21</li><li>18 → 90 = 72</li><li>90 → 160 = 70</li><li>160 → 150 = 10</li><li>150 → 38 = 112</li><li>38 → 184 = 146</li><li>Sum = 45 + 3 + 19 + 21 + 72 + 70 + 10 + 112 + 146 = 498.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 498 cylinders.</span></p><p class=\"row\"><b>Common misconception.</b> The frequent error is to sort the queue first, which is what SSTF or SCAN would do; FCFS keeps arrival order. A second error is to omit the move from the initial head position to the first request.</p><p class=\"row\"><b>Takeaway.</b> FCFS total = Σ |position<sub>i+1</sub> − position<sub>i</sub>| in arrival order, beginning at the head.</p>"
+  },
+  {
+   "id": "OS-U6-Q32",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "access-control-protection",
+   "subtopic": "access-control-protection",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Which of the following statements about Unix file and directory permissions are TRUE? (Select all that apply.)",
+   "options": [
+    "A directory needs the read bit for a user to list its entries, and the execute bit to traverse it or to reach a named file inside it.",
+    "Clearing the write bit on a file is enough to stop its owner from deleting it, because deleting a file requires write permission on that file.",
+    "The sticky bit on a directory restricts deletion of an entry to the owner of that entry, or to the owner of the directory, even when the directory is world-writable.",
+    "The set-group-ID bit on a directory makes files created inside it inherit the directory's group rather than the creator's primary group."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A directory is a table mapping names to inode numbers, so its own permission bits govern name lookup (execute), listing (read) and creating or removing entries (write). A file's own bits never govern whether its name may be unlinked.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Read on a directory lets a user list the names; execute lets the user traverse the directory to reach a known name. Both are needed for a full listing that includes attributes. So (A) is true.</li><li>Deleting a name edits the directory, not the file: the user needs write and execute on the directory. A file whose own write bit is clear can still be deleted by anyone with write access to its directory. So (B) is false.</li><li>The sticky bit on a shared directory such as <code class=\"mm\">/tmp</code> stops one user from deleting another user's file there. So (C) is true.</li><li>Set-group-ID on a directory is the inheritance rule: new entries take the directory's group. So (D) is true.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Option (B) is the classic trap: it confuses permission on the file with permission on the name. Removing a name is a directory operation.</p><p class=\"row\"><b>Takeaway.</b> On a file the bits guard its contents; on a directory the same three bits guard listing, traversal and name editing.</p>"
+  },
+  {
+   "id": "OS-U6-Q33",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A FAT file system uses 12-bit FAT entries and a cluster (allocation unit) size of 4 KB. What is the largest volume this design can address?",
+   "options": [
+    "4 MB",
+    "16 MB",
+    "64 MB",
+    "2 GB"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A FAT entry numbers the next cluster, so an n-bit FAT entry can name at most 2<sup>n</sup> distinct clusters. Volume size is that count multiplied by the cluster size.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>12-bit entries give 2<sup>12</sup> = 4096 addressable clusters.</li><li>Cluster size = 4 KB.</li><li>Maximum volume = 4096 × 4 KB = 16 384 KB = 16 MB.</li><li>The 4 MB option corresponds to 1024 clusters, i.e. 10-bit entries; 64 MB needs 14 bits.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 16 MB.</span></p><p class=\"row\"><b>Common misconception.</b> The frequent mistake is to multiply the entry width (12 bits = 1.5 bytes) by the cluster size, or to use 2<sup>12</sup> bytes instead of 2<sup>12</sup> clusters.</p><p class=\"row\"><b>Takeaway.</b> Volume limit = 2<sup>entry bits</sup> × cluster size.</p>"
+  },
+  {
+   "id": "OS-U6-Q34",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Why is a bitmap usually preferred to a linked free list for tracking free space on a large disk?",
+   "options": [
+    "A bitmap needs fewer bits per block than a free list needs bytes per block, so it is always the smaller structure on disk.",
+    "A bitmap never has to be written back to disk, because it can always be recomputed from the directory structure.",
+    "A bitmap is the only structure that allows a file to occupy non-contiguous blocks.",
+    "A bitmap can be held in main memory, so a free block is found without any disk I/O, whereas walking a free list costs a disk read for every block considered."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The dominant cost in free-space management is not the size of the structure but how many disk reads it takes to use it. A bitmap is dense and fixed-size, so it fits in memory and supports scanning.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A bitmap uses 1 bit per block; a linked free list uses at least one pointer per free block, so on disk the list is larger, not smaller. Option (A) is therefore backwards.</li><li>Because the bitmap is a dense array, it is normally cached in main memory and the first free block is found by scanning words — no disk access at all.</li><li>A free list is scattered through the free blocks themselves, so each step of the walk is a disk read.</li><li>Options (B) and (C) are simply false: the bitmap is persistent state that must be written back, and every allocation method supports non-contiguous blocks.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — the bitmap is compact and dense, so it lives in memory and costs no I/O to search.</span></p><p class=\"row\"><b>Common misconception.</b> Students often pick the option that says the bitmap is smaller on disk. It is smaller, but the decisive advantage is that it is searchable in memory.</p><p class=\"row\"><b>Takeaway.</b> Bitmaps win on search cost, not on disk footprint.</p>"
+  },
+  {
+   "id": "OS-U6-Q35",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "The head is at cylinder 100 on a 200-cylinder disk (0 to 199), and the pending queue is 55, 58, 39, 18, 90, 160, 150, 38, 184. In which order does SSTF service these requests?",
+   "options": [
+    "90, 58, 55, 39, 38, 18, 150, 160, 184",
+    "90, 150, 160, 184, 58, 55, 39, 38, 18",
+    "55, 58, 39, 18, 90, 160, 150, 38, 184",
+    "90, 58, 55, 39, 38, 18, 184, 160, 150"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SSTF always serves the pending request nearest the current head position, recomputing the nearest after each service. It is greedy and ignores direction of travel and arrival order.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>From 100 the distances are: 90 → 10, 58 → 42, 55 → 45, 39 → 61, 18 → 82, 150 → 50, 160 → 60, 184 → 84, 38 → 62. Nearest is 90.</li><li>From 90: 58 → 32 is nearest, then from 58 the nearest is 55 (3).</li><li>From 55: 39 → 16, then from 39 the nearest is 38 (1), then from 38 the nearest is 18 (20).</li><li>From 18 the remaining requests are 150, 160, 184: nearest is 150 (132), then 160 (10), then 184 (24).</li><li>Order: 90, 58, 55, 39, 38, 18, 150, 160, 184. Total movement 10 + 32 + 3 + 16 + 1 + 20 + 132 + 10 + 24 = 248 cylinders.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 90, 58, 55, 39, 38, 18, 150, 160, 184.</span></p><p class=\"row\"><b>Common misconception.</b> The trap is to sweep to one side and then the other (option B), which is SCAN-like, or to keep arrival order (option C), which is FCFS. SSTF interleaves: it can reverse direction at every step.</p><p class=\"row\"><b>Takeaway.</b> SSTF recomputes the nearest neighbour after every service; the path may zig-zag freely.</p>"
+  },
+  {
+   "id": "OS-U6-Q36",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "An inode holds 12 direct block pointers and one single-indirect pointer. The block size is 2 KB and a block pointer is 4 bytes. What is the largest file, in KB, that this inode can describe?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": [
+    1048
+   ],
+   "answer_display": "1048",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Direct pointers address data blocks one for one; a single-indirect pointer addresses one index block, and every pointer inside that index block addresses one further data block.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Pointers per index block = block size / pointer size = 2048 / 4 = 512.</li><li>Blocks reachable = 12 direct + 512 through the single-indirect block = 524 data blocks.</li><li>Each data block holds 2 KB of file data.</li><li>Maximum file size = 524 × 2 KB = 1048 KB.</li><li>Note that the index block itself is metadata, not file data, so it is not counted.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1048 KB.</span></p><p class=\"row\"><b>Common misconception.</b> Two errors recur: counting the index block as 513 addressable data blocks, and using 256 pointers because the solver assumes 1 KB blocks.</p><p class=\"row\"><b>Takeaway.</b> Capacity = (direct + pointers per indirect block) × block size, for one level of indirection.</p>"
+  },
+  {
+   "id": "OS-U6-Q37",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "access-control-protection",
+   "subtopic": "access-control-protection",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "The access matrix has one row per subject and one column per object, with the permitted operations in each cell. Which implementation stores the matrix row by row?",
+   "options": [
+    "An access-control list, because each object carries the set of subjects allowed to use it.",
+    "A bitmap of free blocks, because one bit per block records one row of the matrix.",
+    "A protection ring, because the ring number of a process is its row in the matrix.",
+    "A capability list, because each subject carries, for every object it may use, an unforgeable token naming that object and the rights held on it."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The access matrix can be decomposed by columns or by rows. Column decomposition stores, per object, the subjects and their rights — that is an access-control list. Row decomposition stores, per subject, the objects and its rights — that is a capability list.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A row of the matrix answers “what may this subject do?”. Storing one row per subject gives each subject a list of (object, rights) pairs: a capability list.</li><li>A column answers “who may use this object, and how?”. That is an ACL, so option (A) is the opposite decomposition.</li><li>A protection ring orders privilege levels; it is not a row of the matrix.</li><li>A free-space bitmap has nothing to do with protection.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — capabilities are the row-wise decomposition of the access matrix.</span></p><p class=\"row\"><b>Common misconception.</b> Because both structures ultimately describe the same matrix, students treat them as interchangeable. They are transposes of each other, which is why revocation is cheap for ACLs and expensive for capabilities.</p><p class=\"row\"><b>Takeaway.</b> Columns → ACLs (per object). Rows → capabilities (per subject).</p>"
+  },
+  {
+   "id": "OS-U6-Q38",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file system keeps its free-space bitmap in main memory and writes it to disk lazily, only when the buffer is flushed. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "A crash before the bitmap reaches disk can leave blocks marked free that are in fact in use, so a consistency check must rebuild the free list at boot.",
+    "Because the bitmap is in memory, a free block is located by scanning words in memory rather than by reading blocks from disk.",
+    "A bitmap needs no consistency check at all, because it is a derived structure that the file system can always recompute from the allocation chains.",
+    "If the bitmap reaches disk but the corresponding directory update does not, blocks can be marked in use while no file refers to them, which leaks space until the check repairs it."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Caching a metadata structure in memory decouples its on-disk copy from the real allocation state. Every crash between the two writes leaves the pair inconsistent in one of two directions.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bitmap written, allocation not: blocks are marked used but unreachable — a space leak. So (D) is true.</li><li>Allocation written, bitmap not: blocks are marked free while a file points at them, so a later allocation can hand out a live block and corrupt two files. So (A) is true.</li><li>The in-memory copy is what makes allocation cheap: the search is a memory scan. So (B) is true.</li><li>Option (C) is false in the sense that matters: the bitmap is persistent state, not a view. Rebuilding it is exactly what a consistency check (fsck) does precisely because it can disagree with the chains.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> The tempting answer is (C): “the bitmap is derived, so it can always be rebuilt”. It can be rebuilt — but only by a check that walks every inode, which is why the inconsistency is a real hazard, not a non-issue.</p><p class=\"row\"><b>Takeaway.</b> Lazy metadata caching always buys speed with a consistency window; fsck exists to close it.</p>"
+  },
+  {
+   "id": "OS-U6-Q39",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "On a 200-cylinder disk (0 to 199) the head is at cylinder 100 and the pending queue is 55, 58, 39, 18, 90, 160, 150, 38, 184. The head is moving toward cylinder 0. Under SCAN, counting the travel to cylinder 0 and the full sweep back, what is the total head movement?",
+   "options": [
+    "208 cylinders",
+    "248 cylinders",
+    "284 cylinders",
+    "314 cylinders"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> SCAN is the elevator: the head keeps moving in its current direction until it reaches the physical end of the disk, serving every request it passes, then reverses and serves the rest.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Moving toward 0 from 100, the requests passed are 90, 58, 55, 39, 38, 18 in that order.</li><li>The head does not stop at 18: SCAN runs on to the physical end of the disk, cylinder 0. That leg costs 100 − 0 = 100 cylinders.</li><li>The head then reverses and climbs, serving 150, 160 and finally 184. The upward leg is 184 − 0 = 184 cylinders.</li><li>Total = 100 + 184 = 284 cylinders. (The travel stops at the last request; no request lies between 184 and 199, so that stretch is not counted.)</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 284 cylinders.</span></p><p class=\"row\"><b>Common misconception.</b> The two wrong answers come from the two classic slips: 208 forgets the leg to cylinder 0 (LOOK, not SCAN, would give 82 + 166 = 248), and 314 counts the jump back to 199 as if this were C-SCAN.</p><p class=\"row\"><b>Takeaway.</b> SCAN pays for the trip to the wall; LOOK turns at the last request and saves that empty travel.</p>"
+  },
+  {
+   "id": "OS-U6-Q40",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file of 8 blocks is stored by contiguous allocation. It must grow by one block, but the block immediately after the file already belongs to another file. Which one of the following is TRUE?",
+   "options": [
+    "The file system can simply link the new block on, because a contiguous file is always followed by free space.",
+    "The new block can be placed anywhere, because the k-th block is still found at start + k.",
+    "Only the file's index block has to be updated, since the data blocks never move.",
+    "The file must be relocated to a hole large enough to hold 9 blocks, copying all 8 existing blocks, unless the system reserved room for growth in advance."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Contiguous allocation buys one-read direct access by promising that block k of a file lives at start + k. That promise is exactly what makes growth expensive: the file cannot be spliced.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The address of block k is computed as start + k, so the blocks must be physically adjacent.</li><li>If the neighbour is taken, there is no free slot at start + 8; the file cannot be extended in place.</li><li>The system must find a hole of at least 9 blocks, copy the 8 existing blocks, and free the old extent.</li><li>This copying cost, and the external fragmentation it leaves behind, is why systems use extents or reserve slack space when a file is created.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — the file is relocated, or growth must have been reserved in advance.</span></p><p class=\"row\"><b>Common misconception.</b> Option (C) is the standard confusion: “start + k” only works while the blocks stay adjacent. Placing the ninth block elsewhere destroys the addressing rule that is the whole point of contiguous allocation.</p><p class=\"row\"><b>Takeaway.</b> Contiguous allocation trades growth cost for address arithmetic.</p>"
+  },
+  {
+   "id": "OS-U6-Q41",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "access-control-protection",
+   "subtopic": "access-control-protection",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A file is to be readable and writable by its owner, readable and executable by its group, and inaccessible to everyone else. What is its permission mode as a three-digit octal number?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": [
+    650
+   ],
+   "answer_display": "650",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each permission class is one octal digit built from three bits in the order read (4), write (2), execute (1). The digits are given owner, group, other.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Owner: read + write = 4 + 2 = 6.</li><li>Group: read + execute = 4 + 1 = 5.</li><li>Other: nothing = 0.</li><li>Mode = 650, written <code class=\"mm\">rw- r-x ---</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 650.</span></p><p class=\"row\"><b>Common misconception.</b> The usual error is 750 or 640 — swapping the group digit's execute bit for write, or dropping execute from the group when the intent was “may run but not modify”.</p><p class=\"row\"><b>Takeaway.</b> 4 = read, 2 = write, 1 = execute; sum per class, concatenate owner-group-other.</p>"
+  },
+  {
+   "id": "OS-U6-Q42",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Free space on a disk consists of a few very long contiguous runs. Which free-space structure represents this state most compactly?",
+   "options": [
+    "A bitmap, because one bit per block is the smallest possible per-block record.",
+    "A linked free list, because it needs no space outside the free blocks themselves.",
+    "The counting method, because one entry describes a whole run of consecutive free blocks.",
+    "A grouping list, because it stores several free block addresses in one block."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The counting method is run-length encoding for free space: each entry stores a first free block and the length of the run that starts there. Its cost is proportional to the number of runs, not to the number of free blocks.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A bitmap always costs one bit per block on the disk, however the free blocks are arranged, so it does not exploit long runs.</li><li>A linked free list stores one pointer per free block, so a run of a million blocks costs a million pointers — worse than the bitmap.</li><li>Counting stores one (address, count) pair per run, so a few long runs collapse to a few entries.</li><li>Grouping reduces I/O when allocating many blocks, but it still records addresses individually, so it does not compress a long run.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — the counting method, which is run-length encoding.</span></p><p class=\"row\"><b>Common misconception.</b> The trap is to reason about worst case rather than this case. Counting is excellent for long runs and terrible for a disk of scattered single free blocks, where every run has length one.</p><p class=\"row\"><b>Takeaway.</b> Choose the free-space structure by the shape of the free space: runs favour counting, scatter favours a bitmap.</p>"
+  },
+  {
+   "id": "OS-U6-Q43",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "An inode holds 12 direct pointers, one single-indirect pointer and one double-indirect pointer. The block size is 4 KB and a block pointer is 4 bytes. Which one of the following statements is TRUE?",
+   "options": [
+    "The double-indirect pointer alone can address 1024 × 1024 = 1 048 576 data blocks, that is, 4 GB of file data.",
+    "A file of 8 MB is described entirely by the direct pointers and the single-indirect pointer.",
+    "The single-indirect block addresses 1024 data blocks, so the first 1024 blocks of every file are reached through it.",
+    "Every file needs at least one indirect block, because the inode can hold only 12 direct pointers."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Pointers per block = block size / pointer size = 4096 / 4 = 1024. One level of indirection addresses 1024 data blocks; two levels address 1024 × 1024.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Direct range: logical blocks 0–11, that is 48 KB.</li><li>Single-indirect range: 1024 blocks, that is 4 MB, covering logical blocks 12–1035.</li><li>Double-indirect range: 1024 × 1024 = 1 048 576 blocks, that is 4 GB, covering logical blocks 1036 onwards.</li><li>Check (B): 8 MB = 2048 blocks, and direct plus single-indirect reaches only 12 + 1024 = 1036 blocks, so a double-indirect block is required. False.</li><li>Check (C): the first 12 blocks are direct; the single-indirect block starts at block 12. False.</li><li>Check (D): a 1 KB file uses one direct pointer and no indirect block at all. False.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the double-indirect pointer addresses 1 048 576 blocks, i.e. 4 GB.</span></p><p class=\"row\"><b>Common misconception.</b> The common error is to multiply 1024 by the pointer size instead of the block size, or to assume the single-indirect block also serves the first 12 blocks.</p><p class=\"row\"><b>Takeaway.</b> One indirection multiplies capacity by 1024; each further level multiplies again.</p>"
+  },
+  {
+   "id": "OS-U6-Q44",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "On a 200-cylinder disk (0 to 199) the head is at cylinder 100 and the pending queue is 55, 58, 39, 18, 90, 160, 150, 38, 184. The head is moving toward cylinder 0. Under C-SCAN, and counting every cylinder crossed including the return sweep from cylinder 0 to cylinder 199, what is the total head movement?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": [
+    314
+   ],
+   "answer_display": "314",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> C-SCAN treats the disk as circular: it serves requests while moving in one direction only, then returns from one edge to the other without serving anything, and starts again in the same direction.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Downward leg: from 100 to cylinder 0, serving 90, 58, 55, 39, 38, 18 on the way. Movement = 100.</li><li>Return sweep: cylinder 0 to cylinder 199, serving nothing. Movement = 199.</li><li>Downward leg again from 199: the remaining requests 184, 160, 150 are served in that order, and the travel counted stops at 184. Movement = 199 − 184 = 15.</li><li>Total = 100 + 199 + 15 = 314 cylinders.</li><li>For comparison, SCAN on the same queue costs 100 + 184 = 284, because it reverses at 0 and climbs straight to 184 without the trip to 199.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 314 cylinders.</span></p><p class=\"row\"><b>Common misconception.</b> The classic error is to drop the 199-cylinder return sweep and answer 115, or to treat C-SCAN as SCAN and answer 284. The sweep is real head movement even though it serves nothing.</p><p class=\"row\"><b>Takeaway.</b> C-SCAN = one-directional service + a full-edge return sweep; the sweep is what makes waiting times uniform.</p>"
+  },
+  {
+   "id": "OS-U6-Q45",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A disk has 2<sup>31</sup> blocks and free space is tracked by a bitmap with one bit per block. What is the size of the bitmap?",
+   "options": [
+    "128 MB",
+    "256 MB",
+    "512 MB",
+    "2 GB"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The bitmap holds one bit per block, so its size in bits equals the block count; convert bits to bytes by dividing by 8, then bytes to MB by dividing by 2<sup>20</sup>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Bits = 2<sup>31</sup>.</li><li>Bytes = 2<sup>31</sup> / 8 = 2<sup>28</sup> bytes.</li><li>MB = 2<sup>28</sup> / 2<sup>20</sup> = 2<sup>8</sup> = 256 MB.</li><li>Sanity check: 2<sup>31</sup> blocks at 8 blocks per byte is 2<sup>28</sup> bytes, and 2<sup>28</sup> bytes is a quarter of a gigabyte. ✔</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 256 MB.</span></p><p class=\"row\"><b>Common misconception.</b> The standard slip is to forget the factor of 8 and answer 2 GB, or to mix powers of 2 with powers of 10.</p><p class=\"row\"><b>Takeaway.</b> Bitmap bytes = blocks / 8; keep everything in powers of two.</p>"
+  },
+  {
+   "id": "OS-U6-Q46",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "access-control-protection",
+   "subtopic": "access-control-protection",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Which of the following statements about protection mechanisms are TRUE? (Select all that apply.)",
+   "options": [
+    "A capability is held by the subject that owns it, so it can be prevented from being forged only if the system tags it and checks the tag on every use.",
+    "An access-control list that grants a right to a group and later denies it to one member of that group gives different results under first-match and deny-precedence semantics, so the system must fix one.",
+    "Creating a hard link to a file gives the creator of the link the same access rights as the file's owner.",
+    "The set-user-ID bit on a program lets an unprivileged user perform operations allowed to the program's owner, which makes any bug in that program a privilege-escalation risk."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A capability is a token the subject carries, so the system cannot rely on the subject's honesty; an ACL lives with the object and is consulted by the system. Both need well-defined conflict semantics.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Because a capability is presented by the subject, a forged one would grant the rights it names. The system must therefore make it unforgeable — a tagged, protected address space, or a cryptographic signature. So (A) is true.</li><li>If entry 1 grants read to group staff and entry 2 denies read to user bob, a first-match list lets bob read and a deny-precedence list refuses him. The two orders genuinely differ, so the semantics must be specified. So (B) is true.</li><li>(C) is false. A hard link is a second name for the same inode, so access is still decided by that inode's owner and mode word. The user who creates the link gains no rights at all.</li><li>Set-user-ID runs the program with the file owner's effective identity, which is exactly why a buffer overflow in a setuid-root program is a privilege escalation. So (D) is true.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> The trap in (C) is the word “creator”: a hard link adds a name, not a right. Ownership and the mode word belong to the inode and are unchanged by linking.</p><p class=\"row\"><b>Takeaway.</b> ACLs are checked by the system on the object; capabilities must be made unforgeable because the subject carries them.</p>"
+  },
+  {
+   "id": "OS-U6-Q47",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "file-allocation-methods-indexed-linked",
+   "subtopic": "file-allocation-methods-indexed-linked",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "A FAT file system uses 4-byte FAT entries and manages 2<sup>32</sup> blocks. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "The FAT occupies 2<sup>32</sup> × 4 bytes = 16 GB, so it is read on demand or partially cached rather than held whole in memory on an ordinary machine.",
+    "The directory entry of a file needs only its first block number and its length, because the rest of the chain lives in the FAT.",
+    "Because each FAT entry is 4 bytes wide, no single file can be larger than 4 GB.",
+    "A FAT-based file system can reach the k-th block of a file with a single disk read, just as contiguous allocation can."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The FAT is one table with an entry per block, so its size scales with the disk, not with the files. Traversal is a chain walk through that table.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Entries = 2<sup>32</sup>, each 4 bytes, so the table is 2<sup>34</sup> bytes = 16 GB. That is far beyond a resident table, so it is cached in pieces. (A) is true.</li><li>The directory entry stores the first block and the file length; the successor of every block is in the FAT. (B) is true.</li><li>(C) confuses the width of one link with the length of the chain. A 4-byte entry can name any of 2<sup>32</sup> blocks; the file size limit comes from the number of entries available, not from the entry width. False.</li><li>(D) is false: reaching block k means following k links, so it costs k table lookups — cheap in memory, but not one disk read in the way contiguous addressing is.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> Option (C) is the popular error: “4-byte entry means 4 GB file”. The entry width bounds the number of blocks addressable, not the size of one file.</p><p class=\"row\"><b>Takeaway.</b> FAT size scales with disk capacity; access cost scales with the position of the block in the chain.</p>"
+  },
+  {
+   "id": "OS-U6-Q48",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "On a 200-cylinder disk (0 to 199) the head is at 100 and the pending queue is 55, 58, 39, 18, 90, 160, 150, 38, 184. Which one of the following statements about total head movement is TRUE?",
+   "options": [
+    "FCFS moves 498 cylinders, which is more than SCAN but less than C-SCAN.",
+    "LOOK, moving first toward cylinder 0, moves 248 cylinders — exactly the same total as SSTF for this queue.",
+    "SCAN, moving toward 0 and travelling to cylinder 0, moves 314 cylinders.",
+    "C-SCAN moves 284 cylinders, which is less than SCAN."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four totals have to be computed separately for this queue; the interesting fact is that LOOK and SSTF coincide here even though they are different policies.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>FCFS, in arrival order: 45 + 3 + 19 + 21 + 72 + 70 + 10 + 112 + 146 = 498.</li><li>SSTF: 90, 58, 55, 39, 38, 18, 150, 160, 184 gives 10 + 32 + 3 + 16 + 1 + 20 + 132 + 10 + 24 = 248.</li><li>SCAN toward 0: 100 down to 0, then up to 184 = 100 + 184 = 284.</li><li>LOOK toward 0: down to the last request 18 (82 cylinders), then up to 184 (166 cylinders) = 248.</li><li>C-SCAN toward 0: 100 + 199 + 15 = 314.</li><li>So (A) is false because 498 is greater than C-SCAN's 314; (C) is false because SCAN is 284, not 314; (D) is false because C-SCAN is 314, not 284. (B) is true.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — LOOK and SSTF both total 248 cylinders on this queue.</span></p><p class=\"row\"><b>Common misconception.</b> The coincidence is the trap in reverse: students see 248 twice and assume one of the two figures must be wrong. LOOK and SSTF agree here by accident of the request positions, not by any theorem.</p><p class=\"row\"><b>Takeaway.</b> Compute each policy separately; never infer one total from another.</p>"
+  },
+  {
+   "id": "OS-U6-Q49",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "free-space-management",
+   "subtopic": "free-space-management",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "In the grouping method of free-space management, a free block stores as many free block addresses as will fit, together with the address of the block holding the next group. With a 4 KB block and 4-byte addresses, how many free blocks can be described by two chained group blocks?",
+   "options": [
+    "1024",
+    "1023",
+    "2046",
+    "2047"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> One block of size B with addresses of size P holds B/P slots. One of those slots is spent pointing at the next group block, so B/P − 1 free blocks are described per block.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Slots per block = 4096 / 4 = 1024.</li><li>One slot holds the pointer to the next group, leaving 1023 free block addresses per group block.</li><li>Two chained blocks describe 1023 + 1023 = 2046 free blocks.</li><li>The third block would describe 3069, and so on — the chain is what makes grouping scale.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 2046 free blocks.</span></p><p class=\"row\"><b>Common misconception.</b> The frequent error is 2048 (1024 slots × 2), which forgets that each group block spends one slot on the link to the next. 2047 comes from deducting the pointer only once.</p><p class=\"row\"><b>Takeaway.</b> Grouping: B/P − 1 addresses per block; n chained blocks describe n(B/P − 1) free blocks.</p>"
+  },
+  {
+   "id": "OS-U6-Q50",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "storage-file-systems",
+   "unit_name": "File Systems & Disk Scheduling",
+   "topic": "File Systems & Disk Scheduling",
+   "sub": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "subtopic": "disk-scheduling-fcfs-sstf-scan-cscan-look",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-29",
+   "set": "2 of 2",
+   "question": "Which of the following statements about disk-scheduling policies are TRUE? (Select all that apply.)",
+   "options": [
+    "C-SCAN bounds the waiting time of every request by roughly one full sweep plus the return sweep, so no request can be starved, whereas SSTF can postpone a distant request indefinitely while nearer ones keep arriving.",
+    "LOOK and SCAN differ only when no request lies beyond the current head position in the direction of travel: LOOK turns back at the last request, while SCAN continues to the disk edge.",
+    "SSTF minimises the total head movement over the whole pending queue, which is why it is preferred to FCFS.",
+    "For the same queue and starting position, C-SCAN always moves the head less than SCAN, because it never has to reverse direction."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Fairness and optimality are different questions. Sweeping policies bound waiting time; greedy policies lower the average but can starve.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>C-SCAN always moves in one direction for service, so every request waits at most one pass plus the return sweep — a bound independent of the arrival pattern. SSTF, being greedy, can keep a far request waiting while nearer ones arrive. (A) is true.</li><li>SCAN and LOOK are identical until the queue runs out in the direction of travel; then SCAN goes on to the disk edge and LOOK turns immediately. (B) is true.</li><li>(C) is false. SSTF is greedy, not optimal: choosing the nearest request now can force a long jump later, and the truly minimal tour is a travelling-salesman problem, not a nearest-neighbour walk.</li><li>(D) is false. C-SCAN adds the return sweep from one edge to the other, so for a queue whose requests lie away from that edge it usually moves more than SCAN, not less.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> Option (C) is the most common error in the whole topic: SSTF is described everywhere as “shortest seek time first”, which sounds optimal. It minimises the next seek, not the total.</p><p class=\"row\"><b>Takeaway.</b> Greedy lowers the average and forfeits the bound; sweeping buys the bound and pays for the trip to the edge.</p>"
   }
  ]
 }
