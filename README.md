@@ -7,31 +7,32 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 2 of 2**, 2026-10-29 →
-  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
-- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: BST insertion & deletion (7) · AVL trees & rotations (6) · B-trees & B+ trees (6) · trie basics (6)
-- Rotation: MODE A. One subject was drawn at random with an unseeded draw over all eleven subjects, giving
-  **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 9, unit 5, search-trees, Set 1 of 2}`. Unit 5 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and step B4 was never
-  reached: **Unit 5, Set 2 of 2**. Unit 5 now holds 50, exactly at the cap, so the next Programming and Data
-  Structures run advances `(index_of(search-trees) = 4 + 1) mod 7 = 5` → **Unit 6, Heaps & Priority Queues**.
-  No override was used and no second pass has started for this subject.
-- Previous test: **Algorithms · Unit 3 — Greedy Algorithms, Set 1 of 2**, 2026-10-29 →
+- **Algorithms · Unit 3 — Greedy Algorithms, Set 2 of 2**, 2026-10-29 →
   [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
+- 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
+- Subtopics: fractional knapsack (6) · Huffman coding (6) · activity selection & interval scheduling (7) ·
+  optimal merge patterns (6)
+- Rotation: MODE A. One subject was drawn at random with an unseeded draw over all eleven subjects, giving
+  **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 5, unit 3, greedy-algorithms, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and step B4 was never
+  reached: **Unit 3, Set 2 of 2**. Unit 3 now holds 50, exactly at the cap, so the next Algorithms run advances
+  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → **Unit 4, Dynamic Programming**.
+  No override was used and no second pass has started for this subject.
+- Previous test: **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 2 of 2**, 2026-10-29 →
+  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 89 (18 Discrete Mathematics, 5 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 45 current · 44 archived |
+| Papers published (current + archived) | 90 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 45 current · 45 archived |
 | Test cards on the portal | 54 |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2225 (450 Discrete Mathematics, 125 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2250 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 44 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 45 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -99,6 +100,31 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-29, Algorithms → Unit 3 (Greedy Algorithms), Set 2 of 2.**
+  MODE A: one subject was drawn at random with an unseeded `random.choice` over all eleven GATE CSE subjects,
+  giving **Algorithms**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 5, unit 3, greedy-algorithms, Set 1 of 2}`. Unit 3 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days — well under
+  `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 3, Set 2 of
+  2**, which closes Unit 3 at exactly 50 questions. The next Algorithms run finds the unit at the cap and advances
+  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → **Unit 4, Dynamic Programming**.
+  No override was used and no second pass has started for this subject.
+- Coverage this run: all four Unit 3 subtopics — fractional knapsack (6), Huffman coding (6), activity selection
+  and interval scheduling (7), optimal merge patterns (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="algorithms"`,
+  `data-unit="greedy-algorithms"`, `data-unit-number="3"`, its subtopic slug, its type, its lowercase difficulty and
+  its source tag.
+- All 25 items are new: ids `ALG-U3-Q26`..`ALG-U3-Q50` did not exist in the bank, and no stem repeats a Set 1
+  question. Set 2 deliberately moves onto ground Set 1 left untouched — ratio ties and an exactly-full knapsack,
+  the Huffman depth bound and merge-queue reinsertion, interval-graph colouring and weighted interval scheduling,
+  and the structure of the merge tree.
+- Every numeric answer was recomputed by script, not by hand: fractional fills 111, 71, 150 and 59 (subset and
+  ratio enumerations), Huffman costs 28, 33, 228 and the six-symbol depth of 3, merge costs 90, 19 and 119,
+  and the interval sweeps 3, 4 and 4.
+- Shell: built from the same shell as every other paper. The head, palette, key view, JavaScript and footer are
+  byte-identical to the superseded Set 1, which was archived as
+  `archive/gate_algo_mock_3_2026-10-29_run1.html` with its questions, options, answers, solutions and duration frozen.
 
 - **2026-10-29, Programming and Data Structures → Unit 5 (Binary Search Trees & Balanced Trees), Set 2 of 2.**
   MODE A: one subject was drawn at random with an unseeded `random.choice` over all eleven GATE CSE subjects,
@@ -4007,7 +4033,7 @@ Algorithms:
 | --- | --- | --- | --- | --- |
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
 | 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 50 | yes |
-| 3 | Greedy Algorithms | `greedy-algorithms` | 25 | yes |
+| 3 | Greedy Algorithms | `greedy-algorithms` | 50 | yes |
 | 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
