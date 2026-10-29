@@ -4,9 +4,9 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-29",
+  "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 325,
+  "total_questions": 350,
   "units_with_questions": [
    1,
    2,
@@ -15,7 +15,7 @@
    5,
    6
   ],
-  "total_runs": 13,
+  "total_runs": 14,
   "unit_question_cap": 50,
   "set_size": 25,
   "sets_per_unit": 2
@@ -609,6 +609,74 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. One subject was drawn from the eleven GATE CSE subjects with random.Random(20261029).randrange(11), giving index 8, Operating Systems. operating-systems/question-bank/master_bank.json read back runs[] sorted by (date, run) as {date 2026-10-29, run 12, unit 6, storage-file-systems, Set 2 of 2}. Unit 6 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(storage-file-systems) = 5 + 1) mod 6 = 0 -> Unit 1, Process Management & CPU Scheduling. Every Operating Systems unit is at the cap, so the modulo wrapped and a second pass began, as step B5 prescribes. No override was used.",
    "note": "Second pass, Set 1 of 2 for Operating Systems Unit 1, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/process-scheduling/archive/gate_os_mock_1_2026-10-26_run2.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U1-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 1 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, already used by OS-U1-Q21 in the first pass, so nothing on this paper is claimed as an official GATE question."
+  },
+  {
+   "run": 14,
+   "date": "2026-10-30",
+   "subject": "operating-systems",
+   "subject_name": "Operating Systems",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "set": "Set 1 of 2 (second pass)",
+   "count": 25,
+   "file": "operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html",
+   "archived_previous": "operating-systems/synchronization-ipc/archive/gate_os_mock_2_2026-10-27_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "critical-section-problem-peterson",
+    "hardware-primitives-test-and-set",
+    "semaphores-binary-counting",
+    "classic-problems-dining-philosophers-producer-consumer"
+   ],
+   "subtopic_counts": {
+    "critical-section-problem-peterson": 6,
+    "hardware-primitives-test-and-set": 6,
+    "semaphores-binary-counting": 6,
+    "classic-problems-dining-philosophers-producer-consumer": 7
+   },
+   "question_ids": [
+    "OS-U2-Q51",
+    "OS-U2-Q52",
+    "OS-U2-Q53",
+    "OS-U2-Q54",
+    "OS-U2-Q55",
+    "OS-U2-Q56",
+    "OS-U2-Q57",
+    "OS-U2-Q58",
+    "OS-U2-Q59",
+    "OS-U2-Q60",
+    "OS-U2-Q61",
+    "OS-U2-Q62",
+    "OS-U2-Q63",
+    "OS-U2-Q64",
+    "OS-U2-Q65",
+    "OS-U2-Q66",
+    "OS-U2-Q67",
+    "OS-U2-Q68",
+    "OS-U2-Q69",
+    "OS-U2-Q70",
+    "OS-U2-Q71",
+    "OS-U2-Q72",
+    "OS-U2-Q73",
+    "OS-U2-Q74",
+    "OS-U2-Q75"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. One subject was drawn at random from the eleven GATE CSE subjects and it gave Operating Systems. runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-29, run 13, unit 1, process-scheduling, Set 1 of 2 (second pass)}. Unit 1 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(process-scheduling) = 0 + 1) mod 6 = 1 -> Unit 2, Inter-Process Communication & Synchronization. Every Operating Systems unit is at the cap, so the modulo stays inside the second pass that began on 2026-10-29. No override was used.",
+   "note": "Second pass, Set 1 of 2 for Operating Systems Unit 2, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/synchronization-ipc/archive/gate_os_mock_2_2026-10-27_run1.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U2-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 2 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, already used by OS-U1-Q21, so nothing on this paper is claimed as an official GATE question."
   }
  ],
  "verified_pyqs": [
@@ -10093,6 +10161,680 @@
    ],
    "answer_display": "Options (A), (B) and (C)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A multilevel queue partitions the ready set permanently — typically foreground, background, system — and services the queues in a fixed priority order. Each queue may use its own internal algorithm. The multilevel <i>feedback</i> queue is the variant that lets processes move between queues.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: absolute priority means a lower queue is served only when every higher queue is empty, so a continuous higher-priority stream starves it.</li><li>(B) True: that is precisely the difference — feedback queues demote and promote.</li><li>(C) True: round robin in the interactive queue and FCFS in the batch queue is the standard arrangement.</li><li>(D) False: a lower-priority process has no bound at all under absolute priority.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(D) contradicts (A); only a time-sliced share between queues would give a bound.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating multilevel queue and multilevel feedback queue as synonyms. The word <i>feedback</i> is the migration.</p><p class=\"row\"><b>Takeaway.</b> Fixed partition → starvation possible; feedback → migration, starvation reduced but not eliminated.</p>"
+  },
+  {
+   "id": "OS-U2-Q51",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A correct software solution to the critical-section problem must satisfy three requirements. Which one of the following is <b>NOT</b> one of them?",
+   "options": [
+    "<b>Mutual exclusion.</b> At most one process may execute in its critical section at any instant.",
+    "<b>Progress.</b> A process that is not in its critical section cannot prevent another process from entering, and the choice of who enters next cannot be postponed indefinitely.",
+    "<b>Bounded waiting.</b> After a process has requested entry, there is a bound on how many times other processes may enter before its request is granted.",
+    "<b>Equal CPU share.</b> Every process must receive exactly the same amount of processor time while it waits to enter."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three requirements are mutual exclusion, progress and bounded waiting. They constrain who may be inside the critical section, who may decide the next entrant, and how long a waiting process may be delayed. Nothing in them mentions how much CPU time a process receives.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Mutual exclusion forbids two processes inside the critical section at once.</li><li>Progress forbids a process outside its critical section from blocking the entry of others, and forbids an indefinite postponement of the decision itself.</li><li>Bounded waiting forbids starvation: after a request, only finitely many other entries may precede it.</li><li>CPU share is a scheduling question. A solution can be perfectly correct while giving a waiting process no CPU at all for a long time, as a pure busy-wait does.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; equal CPU share is a scheduling goal, not a critical-section requirement.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A), (B) and (C) are the three textbook requirements, in order.</li><li>(D) is not required by any of them; a busy-wait solution deliberately burns CPU while waiting and is still correct.</li></ul><p class=\"row\"><b>Common misconception.</b> Adding &ldquo;fairness&rdquo; or &ldquo;no deadlock&rdquo; to the list. Fairness in the CPU sense is not required; what is required is that a process waiting to <i>enter</i> is not starved, which is bounded waiting.</p><p class=\"row\"><b>Takeaway.</b> Three words to recall under time pressure: exclusion, progress, bound.</p>"
+  },
+  {
+   "id": "OS-U2-Q52",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Peterson's two-process solution sets <code class=\"mm\">flag[i] = true</code> and then <code class=\"mm\">turn = j</code> before testing <code class=\"mm\">while (flag[j] &amp;&amp; turn == j);</code>. Suppose the assignment <code class=\"mm\">turn = j</code> is deleted, so that each process only sets its own flag and then spins while the other flag is true. Which property of the original algorithm is lost?",
+   "options": [
+    "Mutual exclusion is lost: both processes can be inside the critical section at the same time.",
+    "Bounded waiting is lost, but mutual exclusion and progress still hold.",
+    "Progress is lost: the two processes can set both flags and then wait for each other forever, while mutual exclusion still holds.",
+    "Nothing is lost; <code class=\"mm\">turn</code> is redundant because the flags already carry the information."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In Peterson's algorithm the flag array alone is not enough. Two processes can both raise their flags before either tests, and then each sees the other's flag true and waits: a deadlock in the entry section. That is a failure of <i>progress</i>, because the decision of who enters next is postponed forever. Mutual exclusion is untouched, because nobody is inside.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>P0 sets <code class=\"mm\">flag[0] = true</code>; P1 sets <code class=\"mm\">flag[1] = true</code>.</li><li>P0 tests <code class=\"mm\">flag[1]</code>, sees true, spins. P1 tests <code class=\"mm\">flag[0]</code>, sees true, spins.</li><li>Neither flag is ever cleared, because clearing happens only in the exit section, which neither process can reach. Both wait forever.</li><li>No process is inside the critical section at any moment, so mutual exclusion is not violated; the failure is that the system as a whole makes no progress.</li><li><code class=\"mm\">turn</code> breaks exactly this tie: whoever wrote <code class=\"mm\">turn</code> last lets the other one in, so at most one process is ever blocked by the other's flag.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) is the trap. A deadlock in the entry section means nobody enters, so the shared data is never touched concurrently. Mutual exclusion survives.</li><li>(B) misidentifies the casualty: the wait here is unbounded and simultaneous, which is progress, and bounded waiting cannot even be assessed once the system is stuck.</li><li>(D) <code class=\"mm\">turn</code> is not redundant; it is the only tie-breaker between two raised flags.</li></ul><p class=\"row\"><b>Common misconception.</b> Reading any failure as a mutual-exclusion failure. Ask instead <i>can two processes be inside?</i> Here they cannot; they cannot even get in.</p><p class=\"row\"><b>Takeaway.</b> Flags give exclusion; <code class=\"mm\">turn</code> gives progress and the bound. Delete either and a different requirement dies.</p>"
+  },
+  {
+   "id": "OS-U2-Q53",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In Peterson's two-process algorithm, what does the shared variable <code class=\"mm\">turn</code> accomplish that the <code class=\"mm\">flag</code> array cannot?",
+   "options": [
+    "It counts how many processes are waiting to enter the critical section.",
+    "It replaces the flag array, so a single variable is enough for mutual exclusion.",
+    "It makes the reads and writes of the flags atomic.",
+    "It breaks the tie when both processes want to enter, deciding which one waits, and that is what bounds the wait."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each flag says &ldquo;I want to enter&rdquo;. If both are raised, someone must be chosen to go second; <code class=\"mm\">turn</code> records whose turn it is to <i>yield</i>. The process that wrote <code class=\"mm\">turn</code> last is the one that defers.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Both processes may raise their flags simultaneously; the flags alone cannot resolve that.</li><li><code class=\"mm\">turn</code> is written by each process just before it tests, so the later writer is the one that lets the other in.</li><li>Consequently a process that is waiting is guaranteed to enter after the other process leaves at most once: the wait is bounded.</li><li>Mutual exclusion itself comes from the flags; <code class=\"mm\">turn</code> adds progress and the bound.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) <code class=\"mm\">turn</code> is a process index, not a counter.</li><li>(B) with <code class=\"mm\">turn</code> alone, strict alternation, a process that does not want to enter blocks the other: progress fails.</li><li>(C) atomicity of the individual loads and stores is an assumption of the algorithm, not something <code class=\"mm\">turn</code> provides.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing <code class=\"mm\">turn</code> provides mutual exclusion. In fact the flags do, and <code class=\"mm\">turn</code> is the courtesy variable that stops the two flags from deadlocking.</p><p class=\"row\"><b>Takeaway.</b> flag = &ldquo;I want in&rdquo;, turn = &ldquo;you go first&rdquo;.</p>"
+  },
+  {
+   "id": "OS-U2-Q54",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about Peterson's two-process algorithm are <b>TRUE</b>? (Select all that apply.)",
+   "options": [
+    "It assumes that a load or a store of <code class=\"mm\">flag[i]</code> or <code class=\"mm\">turn</code> is atomic and is not reordered with the other accesses in the entry section.",
+    "It works unchanged for any number of processes, provided each process has its own flag.",
+    "For two processes it satisfies mutual exclusion, progress and bounded waiting.",
+    "It remains correct on a weakly ordered multiprocessor even if no memory barrier or fence is used."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Peterson's algorithm is a two-process solution whose proof rests on the sequential consistency of its four shared accesses. It meets all three requirements for n = 2 and needs explicit fences on machines that reorder stores.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. If the store <code class=\"mm\">flag[i] = true</code> were delayed past the read of <code class=\"mm\">flag[j]</code>, both processes could read false and both enter.</li><li>(B) False. With three or more processes a single <code class=\"mm\">turn</code> cannot arbitrate; the algorithm needs the level/victim generalisation (filter lock) or the bakery algorithm.</li><li>(C) True. Mutual exclusion from the flags, progress from <code class=\"mm\">turn</code>, and bounded waiting because a process that waits is entered ahead of the other at most once.</li><li>(D) False. On x86-TSO or ARM the stores may become visible out of order, so a fence (or an atomic exchange) is required between raising the flag and reading the other's.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) is the commonest over-claim about Peterson's algorithm; its correctness proof is for two processes.</li><li>(D) ignores memory reordering, which breaks the algorithm without any change to the source code.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating a source-level algorithm as if the hardware executed it in program order. Every software solution to the critical-section problem silently assumes that.</p><p class=\"row\"><b>Takeaway.</b> Two processes, sequential consistency, three properties.</p>"
+  },
+  {
+   "id": "OS-U2-Q55",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The filter-lock generalisation of Peterson's algorithm for n threads keeps one entry per thread in the array <code class=\"mm\">level[n]</code> and one entry per level in the array <code class=\"mm\">victim[n &minus; 1]</code>, with levels numbered 0 to n &minus; 2. For <b>n = 7</b> threads, what is the total number of array cells used by the two arrays together?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 13,
+   "answer_display": "13",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The filter lock adds one &ldquo;waiting room&rdquo; per thread beyond the first, so n threads need n &minus; 1 levels. Each thread stores its current level, giving n cells in <code class=\"mm\">level[]</code>, and each level has one victim, giving n &minus; 1 cells in <code class=\"mm\">victim[]</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Levels run from 0 to n &minus; 2, so there are n &minus; 1 = 7 &minus; 1 = 6 levels.</li><li><code class=\"mm\">level[]</code> has one cell per thread: 7.</li><li><code class=\"mm\">victim[]</code> has one cell per level: 6.</li><li>Total: 7 + 6 = 13 cells.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 13 array cells (7 in <code class=\"mm\">level</code>, 6 in <code class=\"mm\">victim</code>).</span></p><p class=\"row\"><b>Common misconception.</b> Counting n cells for both arrays, or n levels instead of n &minus; 1. The top level is the critical section itself and needs no victim, because only one thread can be there.</p><p class=\"row\"><b>Takeaway.</b> n threads, n &minus; 1 levels, n + (n &minus; 1) = 2n &minus; 1 cells; here 13.</p>"
+  },
+  {
+   "id": "OS-U2-Q56",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "critical-section-problem-peterson",
+   "subtopic": "critical-section-problem-peterson",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Lamport's bakery algorithm has each process set <code class=\"mm\">choosing[i] = true</code>, read all ticket numbers to compute its own, publish it, and then clear <code class=\"mm\">choosing[i]</code>. A process entering the critical section waits for every other process j while j is choosing, or while j holds a smaller ticket (ties broken by process id). Why is the <code class=\"mm\">choosing</code> array necessary?",
+   "options": [
+    "Without it a process could read another's ticket number while that number was still being written, and two processes could end up with the same ticket and enter together.",
+    "Without it the ticket numbers would eventually overflow and wrap around.",
+    "Without it a process could never leave the critical section, because the exit section needs the flag.",
+    "Without it the algorithm would be unfair to processes with large ids, which would wait for ever."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The ticket is computed as <code class=\"mm\">1 + max(number[1..n])</code>, which is a read of n cells followed by a write of one. A reader that observes a stale or half-written value can compute a ticket that is not greater than the one it should have avoided, and two processes can then hold the same ticket with no ordering between them. <code class=\"mm\">choosing</code> is the flag that makes a process's number &ldquo;not yet valid&rdquo; while it is being computed.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>P1 sets <code class=\"mm\">choosing[1] = true</code> and starts scanning the other numbers.</li><li>P2 does the same at the same time; each reads the other's old number, say 0.</li><li>Both compute 1 and publish it. Equal tickets are broken by id, so ordering survives, but a process that read the other's number <i>before</i> it was published can also miss it entirely.</li><li>With <code class=\"mm\">choosing</code>, a waiting process must wait until the other has finished choosing, so the number it eventually compares against is final.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) overflow is a practical concern for a bounded integer, not the reason for the flag.</li><li>(C) the exit section only writes <code class=\"mm\">number[i] = 0</code>.</li><li>(D) id order is exactly what makes large-id processes wait a little longer, not for ever.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming the maximum is computed atomically. It is not; the flag is what turns a racy scan into a safe one.</p><p class=\"row\"><b>Takeaway.</b> Every software solution to the critical-section problem assumes atomic reads and writes of single cells; the bakery algorithm assumes nothing more, which is why it is famous.</p>"
+  },
+  {
+   "id": "OS-U2-Q57",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "An atomic instruction <code class=\"mm\">test_and_set(&amp;lock)</code> returns the previous value of <code class=\"mm\">lock</code> and sets <code class=\"mm\">lock</code> to true, indivisibly. Which statement about it is <b>TRUE</b>?",
+   "options": [
+    "It sets the variable to true and returns the new value, so every caller observes true.",
+    "It returns the old value and sets the variable to true in one indivisible step, so exactly one of several concurrent callers can observe false.",
+    "It blocks the calling process until the lock becomes false, then sets it to true.",
+    "It is really two instructions, a load and a store, and must itself be protected by another lock."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The value of <code class=\"mm\">test_and_set</code> is not that it reads or writes, but that it does both without any window in between. Returning the <i>old</i> value is what lets a caller learn whether it was the one that flipped the lock from false to true.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Caller reads the returned value: false means the lock was free and is now mine.</li><li>True means someone else held it; the caller spins and tries again.</li><li>Because the read and the write are one atomic step, two callers cannot both see false.</li><li>That single guarantee is enough for mutual exclusion; ordering (who goes next) is a separate matter.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) returning the new value would tell every caller true and no caller could tell whether it had won.</li><li>(C) blocking is not part of the instruction; blocking is built on top of it with a queue.</li><li>(D) the whole point of the instruction is that it is not a load followed by a store.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking the atomicity is about speed. It is about the absence of an interleaving point between the read and the write.</p><p class=\"row\"><b>Takeaway.</b> Returns old, writes true, one step.</p>"
+  },
+  {
+   "id": "OS-U2-Q58",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Why does disabling interrupts in the entry section fail to give mutual exclusion on a multiprocessor?",
+   "options": [
+    "Interrupts cannot be disabled for longer than a single instruction, so the protection lapses immediately.",
+    "Disabling interrupts also stalls the memory bus, which prevents the shared variable from being read.",
+    "The interrupt-disable instruction affects only the CPU that executes it, so a thread running on another CPU can still be inside, or enter, the critical section.",
+    "It does not fail: disabling interrupts is a correct general solution on any machine."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Disabling interrupts prevents a <i>context switch on that CPU</i>, so on a uniprocessor it does give mutual exclusion. On a multiprocessor the other CPUs keep running, and their threads reach the same shared data.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Thread T1 on CPU0 executes <code class=\"mm\">disable_interrupts()</code> and enters the critical section.</li><li>Thread T2 on CPU1 is unaffected; no interrupt mask is shared between processors.</li><li>T2 enters the critical section at the same time: mutual exclusion is violated.</li><li>Hence multiprocessors need an atomic instruction on a shared memory location, such as test-and-set or compare-and-swap.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) the disable lasts until it is re-enabled; duration is not the issue.</li><li>(B) disabling interrupts does not stall the memory bus.</li><li>(D) is true only for a uniprocessor kernel.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing an interrupt mask is a global machine state. It is per-CPU state.</p><p class=\"row\"><b>Takeaway.</b> Interrupt masking protects one CPU; atomic instructions protect a memory location across CPUs.</p>"
+  },
+  {
+   "id": "OS-U2-Q59",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A spinlock busy-waits on an atomic instruction until the lock is free. Under which condition is a spinlock preferable to a lock that blocks the waiting thread?",
+   "options": [
+    "The critical section is long and the machine has a single processor.",
+    "The expected wait is shorter than the time needed for two context switches, as with very short critical sections on a multiprocessor.",
+    "The waiting thread must sleep to save power, as on a battery-powered device.",
+    "The lock is held by a process running on a different machine in a distributed system."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Blocking costs two context switches, one out and one back. Spinning costs CPU time but no switches. Spinning wins exactly when the expected wait is shorter than that switch cost, and when there is another processor on which the holder can make progress.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let the expected wait be w and the cost of a block-and-wake be 2c.</li><li>If w &lt; 2c, spinning wastes less than blocking.</li><li>On a uniprocessor the holder cannot run while the spinner spins, so the spin can only waste a full quantum: blocking is then the right choice.</li><li>On a multiprocessor with short critical sections, spinning usually finds the lock free within a few attempts.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) long critical sections and a single processor make spinning the worst option.</li><li>(C) power saving argues for blocking.</li><li>(D) a lock on another machine cannot be spun on by a local atomic instruction; that needs a distributed protocol.</li></ul><p class=\"row\"><b>Common misconception.</b> &ldquo;Spinning is always wasteful.&rdquo; For a wait of a few hundred nanoseconds it is cheaper than two context switches of several microseconds.</p><p class=\"row\"><b>Takeaway.</b> Spin if wait &lt; 2 context switches and another CPU exists.</p>"
+  },
+  {
+   "id": "OS-U2-Q60",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about a lock built from <code class=\"mm\">test_and_set</code> are <b>TRUE</b>? (Select all that apply.)",
+   "options": [
+    "It guarantees mutual exclusion but gives no bounded-waiting guarantee.",
+    "Its release may be an ordinary store of false, because only the acquisition has to be atomic.",
+    "Under heavy contention the spinning threads keep re-executing the atomic instruction on the same cache line, and that traffic can slow the holder down.",
+    "It hands the lock to the waiting threads in the order in which they started spinning."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">test_and_set</code> gives exclusion, not fairness, and the release does not need to be atomic because only one thread can be inside. Contention turns the lock word into a hot cache line.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. Whichever spinner happens to execute next after the release wins; a thread can lose arbitrarily many times, so no bound exists.</li><li>(B) True. A plain store of false is safe because the exiting thread is the only writer at that moment.</li><li>(C) True. Every spin iteration is an atomic read-modify-write on the shared line, which invalidates the copies held by other cores.</li><li>(D) False. There is no queue; ordering is decided by timing and by the interconnect.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(D) describes a ticket lock or a queued lock, not a bare test-and-set spinlock.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming a fair lock because the code &ldquo;looks&rdquo; first-come first-served. A spinlock is a race restarted at every release.</p><p class=\"row\"><b>Takeaway.</b> Atomic acquire, ordinary release, no fairness, hot cache line.</p>"
+  },
+  {
+   "id": "OS-U2-Q61",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A ticket lock uses two integers, <code class=\"mm\">next_ticket</code> and <code class=\"mm\">now_serving</code>, both initially 0. A thread acquires a ticket with one atomic <code class=\"mm\">fetch_and_add(next_ticket, 1)</code> and then spins until <code class=\"mm\">now_serving</code> equals its ticket. Eight threads arrive and take tickets 0 to 7 in that order. The thread holding ticket 3 acquires the lock and is then preempted and never runs again. How many threads are blocked on the lock for ever?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A ticket lock is first-come first-served: <code class=\"mm\">now_serving</code> advances by one only when the current holder releases. A holder that never releases stops every thread behind it, for ever.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Tickets 0, 1 and 2 are served and released; <code class=\"mm\">now_serving</code> reaches 3.</li><li>The thread with ticket 3 acquires the lock and then never runs again, so <code class=\"mm\">now_serving</code> stays at 3.</li><li>Threads with tickets 4, 5, 6 and 7 spin for ever waiting for it to become 4, 5, 6 and 7.</li><li>That is 4 blocked threads. The stalled thread itself is not blocked on the lock; it owns it.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 threads.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 5 by counting the stalled holder. It is not waiting; it is the reason the others wait. Also note this is a liveness failure of the scheduler, not of the lock protocol, which is perfectly fair.</p><p class=\"row\"><b>Takeaway.</b> Tickets give FIFO order, and FIFO order means one preempted holder can stop everybody behind it.</p>"
+  },
+  {
+   "id": "OS-U2-Q62",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "hardware-primitives-test-and-set",
+   "subtopic": "hardware-primitives-test-and-set",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about atomic instructions and memory ordering are <b>TRUE</b>? (Select all that apply.)",
+   "options": [
+    "<code class=\"mm\">test_and_set</code> can be implemented as an ordinary load followed by an ordinary store with a memory barrier in between, and it stays atomic.",
+    "On a multiprocessor, mutual exclusion cannot be achieved by disabling interrupts alone.",
+    "On a weakly ordered machine the release of a spinlock needs a release fence so that the writes made inside the critical section become visible before the unlock does.",
+    "<code class=\"mm\">compare_and_swap</code> can emulate <code class=\"mm\">test_and_set</code>, but <code class=\"mm\">test_and_set</code> cannot emulate <code class=\"mm\">compare_and_swap</code>."
+   ],
+   "answer": [
+    1,
+    2,
+    3
+   ],
+   "answer_display": "Options (B), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Atomicity and ordering are different guarantees. A barrier orders accesses; it does not make a load-store pair indivisible. <code class=\"mm\">compare_and_swap</code> is strictly more expressive than <code class=\"mm\">test_and_set</code>, because it compares before it writes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) False. Another processor can slip between the load and the store even with a barrier; only a single indivisible instruction (or a load-linked/store-conditional pair) gives atomicity.</li><li>(B) True. An interrupt mask is per-CPU, so a thread on another CPU still enters.</li><li>(C) True. Without the fence, another core can observe the unlocked flag while the data written inside the critical section is still in flight, and then read stale values.</li><li>(D) True. <code class=\"mm\">test_and_set</code> is the special case of <code class=\"mm\">compare_and_swap</code> with expected value false; the converse emulation does not exist because test_and_set cannot test a value other than false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (B), (C) and (D).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(A) confuses ordering with atomicity. A fence says &ldquo;do not reorder&rdquo;; it does not say &ldquo;nobody else may look&rdquo;.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking a volatile variable or a fence is a substitute for an atomic read-modify-write. Locks need both: an atomic acquire and correctly ordered release.</p><p class=\"row\"><b>Takeaway.</b> Acquire = atomic; release = ordered. CAS &gt; TAS in power.</p>"
+  },
+  {
+   "id": "OS-U2-Q63",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A counting semaphore <code class=\"mm\">S</code> currently has the value &minus;3. What does that tell you?",
+   "options": [
+    "Three processes are blocked waiting on <code class=\"mm\">S</code>.",
+    "Three more <code class=\"mm\">wait</code> operations can complete without blocking.",
+    "The semaphore has been initialised wrongly, because a semaphore value can never be negative.",
+    "Three processes are inside the critical section protected by <code class=\"mm\">S</code>."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In the classic definition the value of a counting semaphore is the number of available units when it is non-negative, and minus the number of blocked processes when it is negative. A <code class=\"mm\">wait</code> decrements and blocks if the result is negative; a <code class=\"mm\">signal</code> increments and wakes one waiter if it was negative.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start from some value and apply each <code class=\"mm\">wait</code> as a decrement.</li><li>The first three decrements below zero each block the caller rather than letting it proceed.</li><li>So &minus;3 means exactly three blocked processes.</li><li>Those processes are queued on the semaphore, not inside the critical section.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) describes a positive value.</li><li>(C) is only true of the alternative definition in which the value is clamped at zero and the queue is counted separately; the classic formulation allows negatives.</li><li>(D) a semaphore with a negative value admits nobody.</li></ul><p class=\"row\"><b>Common misconception.</b> Reading a negative value as an error. It is the standard way of recording the length of the waiting queue.</p><p class=\"row\"><b>Takeaway.</b> Non-negative = free units; negative = blocked processes.</p>"
+  },
+  {
+   "id": "OS-U2-Q64",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which statement about a <b>binary semaphore</b> and a <b>mutex</b> is <b>TRUE</b>?",
+   "options": [
+    "They are identical in every respect, including ownership.",
+    "A mutex may take any integer value, whereas a binary semaphore is limited to 0 and 1.",
+    "A binary semaphore may be signalled by a process other than the one that waited on it; a mutex can be released only by the thread that locked it.",
+    "A binary semaphore guarantees that waiting processes are woken in FIFO order."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A mutex has an owner: the thread that locked it must unlock it, which lets a kernel detect misuse and supports priority inheritance. A binary semaphore has no owner, so it works as a signalling device between two threads, for example an interrupt handler that signals a waiting thread.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Binary semaphore: value 0 or 1, no owner, <code class=\"mm\">signal</code> allowed from anywhere.</li><li>Mutex: value locked or unlocked, an owner is recorded, unlock by a non-owner is an error.</li><li>Because ownership is what differs, a producer-consumer handshake can use semaphores, while a critical section is better guarded by a mutex.</li><li>Neither primitive promises FIFO wake-up unless the implementation says so.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) ignores ownership, the defining difference.</li><li>(B) reverses the definitions.</li><li>(D) wake-up order is an implementation property of the queue, not of the primitive.</li></ul><p class=\"row\"><b>Common misconception.</b> Using a binary semaphore as a mutex and then signalling it from a different thread. It &ldquo;works&rdquo; until someone unlocks a critical section they never locked.</p><p class=\"row\"><b>Takeaway.</b> Semaphore = signalling, mutex = ownership.</p>"
+  },
+  {
+   "id": "OS-U2-Q65",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A counting semaphore of capacity 5 must be implemented using only binary semaphores and ordinary integer variables. What is the minimum number of binary semaphores needed?",
+   "options": [
+    "1",
+    "2",
+    "5",
+    "6"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The value of a counting semaphore needs two things: a protected counter and a way to put a process to sleep when the counter would go negative. One binary semaphore protects the counter; a second is used as the block/wake channel.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">wait</code>: acquire <code class=\"mm\">mutex</code>, decrement the counter; if it became negative, release <code class=\"mm\">mutex</code> and block on <code class=\"mm\">delay</code>; otherwise release <code class=\"mm\">mutex</code>.</li><li><code class=\"mm\">signal</code>: acquire <code class=\"mm\">mutex</code>, increment the counter; if it is still not positive, release a waiter by signalling <code class=\"mm\">delay</code>; then release <code class=\"mm\">mutex</code>.</li><li><code class=\"mm\">mutex</code> keeps the counter consistent; <code class=\"mm\">delay</code> carries the &ldquo;you may proceed&rdquo; token.</li><li>Two binary semaphores suffice for any capacity, so 2 is the minimum.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 2.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) one semaphore cannot both protect the counter and block a process, because a blocked process would hold it.</li><li>(C) and (D) confuse the capacity of the counting semaphore with the number of binary semaphores needed to implement it.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking one binary semaphore per unit of capacity is needed. The counter is a plain integer; only its updates need protecting.</p><p class=\"row\"><b>Takeaway.</b> Counter + mutex + block channel = 2 binary semaphores, whatever the capacity.</p>"
+  },
+  {
+   "id": "OS-U2-Q66",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A counting semaphore <code class=\"mm\">S</code> is initialised to 12. Processes then perform 20 <code class=\"mm\">wait(S)</code> and 11 <code class=\"mm\">signal(S)</code> operations, in an order chosen so that no process ever blocks. What is the final value of <code class=\"mm\">S</code>?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each <code class=\"mm\">wait</code> decrements the semaphore by one and each <code class=\"mm\">signal</code> increments it by one, whatever the interleaving. If nobody ever blocks, the final value is just the initial value plus the signals minus the waits.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Signals first: 12 + 11 = 23 available.</li><li>Then the 20 waits: 23 &minus; 20 = 3.</li><li>No decrement ever takes the value below zero, so indeed no process blocks and the ordering is consistent with the question.</li><li>Final value: 3.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3.</span></p><p class=\"row\"><b>Common misconception.</b> Adding the operations as 12 + 20 &minus; 11 = 21. A <code class=\"mm\">wait</code> takes a unit away; a <code class=\"mm\">signal</code> gives one back.</p><p class=\"row\"><b>Takeaway.</b> Final value = initial &minus; waits + signals, provided nothing ever blocks.</p>"
+  },
+  {
+   "id": "OS-U2-Q67",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Five identical printers are guarded by a counting semaphore <code class=\"mm\">S</code> initialised to 5. Twelve processes each execute exactly one <code class=\"mm\">wait(S)</code> and, before any of them can reach its <code class=\"mm\">signal(S)</code>, all twelve have executed the <code class=\"mm\">wait</code>. How many processes are blocked at that moment?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 7,
+   "answer_display": "7",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A counting semaphore admits as many processes as it has units. Every further <code class=\"mm\">wait</code> decrements below zero and blocks, and the negative value counts the blocked processes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Five waits take the value 5 &rarr; 0; those five processes proceed.</li><li>The remaining 12 &minus; 5 = 7 waits each decrement below zero: &minus;1, &minus;2, &hellip;, &minus;7.</li><li>Each of those seven blocks, and the semaphore now has the value &minus;7.</li><li>So 7 processes are blocked and 5 are using the printers.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 7 processes.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 12 or 5. Only the processes beyond the capacity wait, and the value &minus;7 states that number directly.</p><p class=\"row\"><b>Takeaway.</b> Blocked count = max(0, waits &minus; units).</p>"
+  },
+  {
+   "id": "OS-U2-Q68",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "semaphores-binary-counting",
+   "subtopic": "semaphores-binary-counting",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A counting semaphore <code class=\"mm\">S</code> is initialised to 1 and an integer <code class=\"mm\">x</code> is initialised to 0. Process P executes<br/><code class=\"mm\">wait(S); x = x + 1; wait(S); x = x + 1; signal(S);</code><br/>and process Q executes<br/><code class=\"mm\">wait(S); print(x); signal(S);</code><br/>P starts first and runs until it blocks. What happens?",
+   "options": [
+    "Q prints 1.",
+    "Q prints 2.",
+    "P blocks for ever on its second <code class=\"mm\">wait(S)</code>, so Q never enters and nothing is printed.",
+    "Q prints 0."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A semaphore is not re-entrant. A process that acquires the same semaphore twice without releasing it in between holds the only unit and then waits for itself: a self-deadlock.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>P executes the first <code class=\"mm\">wait(S)</code>: S goes from 1 to 0, P enters.</li><li>P sets <code class=\"mm\">x = 1</code>.</li><li>P executes the second <code class=\"mm\">wait(S)</code>: S goes from 0 to &minus;1 and P blocks. P is the only process that could signal, and it is blocked.</li><li>Q is also blocked on its own <code class=\"mm\">wait(S)</code>, so the print never happens. The programme deadlocks with <code class=\"mm\">x = 1</code> and no output.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) and (B) assume the second <code class=\"mm\">wait</code> succeeds, which it cannot while S is 0.</li><li>(D) would require Q to run before P's first increment, which the stated schedule excludes.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating <code class=\"mm\">wait</code> as if a process could hold several units of the same semaphore. It can only hold what has been released, and here only one unit exists.</p><p class=\"row\"><b>Takeaway.</b> Never nest two waits on the same semaphore; that is a self-deadlock, not mutual exclusion.</p>"
+  },
+  {
+   "id": "OS-U2-Q69",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the bounded-buffer producer&ndash;consumer solution with n buffer slots, protected by a mutex and two counting semaphores, what are the correct initial values?",
+   "options": [
+    "<code class=\"mm\">mutex = 1</code>, <code class=\"mm\">empty = n</code>, <code class=\"mm\">full = 0</code>.",
+    "<code class=\"mm\">mutex = 1</code>, <code class=\"mm\">empty = 0</code>, <code class=\"mm\">full = n</code>.",
+    "<code class=\"mm\">empty = 1</code>, <code class=\"mm\">full = n</code>, and no mutex is needed.",
+    "<code class=\"mm\">mutex = n</code>, <code class=\"mm\">empty = 0</code>, <code class=\"mm\">full = 0</code>."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">empty</code> counts free slots and <code class=\"mm\">full</code> counts filled ones, so they start at n and 0. The mutex protects the buffer itself and starts unlocked, at 1.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Producer: <code class=\"mm\">wait(empty)</code>, <code class=\"mm\">wait(mutex)</code>, insert, <code class=\"mm\">signal(mutex)</code>, <code class=\"mm\">signal(full)</code>.</li><li>Consumer: <code class=\"mm\">wait(full)</code>, <code class=\"mm\">wait(mutex)</code>, remove, <code class=\"mm\">signal(mutex)</code>, <code class=\"mm\">signal(empty)</code>.</li><li>With n free slots at the start, the producer may fill the whole buffer before blocking.</li><li>The mutex is needed because the buffer update itself must be atomic, even though the semaphores already order producer against consumer.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) starts with no empty slot and n full ones, i.e. a full buffer with nothing in it.</li><li>(C) a single slot semaphore cannot express both counts, and without a mutex two producers can corrupt the buffer index.</li><li>(D) a mutex does not take the value n.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking the counting semaphores make the mutex redundant. They order the two roles; they do not protect the shared buffer from two producers at once.</p><p class=\"row\"><b>Takeaway.</b> mutex 1, empty n, full 0 &mdash; and always wait on the counting semaphore before the mutex.</p>"
+  },
+  {
+   "id": "OS-U2-Q70",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the dining-philosophers problem with five philosophers and five forks, each philosopher picks up the left fork and then the right one. Allowing at most four philosophers to sit at the table at any time prevents deadlock by removing which of the four necessary conditions?",
+   "options": [
+    "Mutual exclusion of the forks.",
+    "Hold and wait.",
+    "No preemption of a fork already picked up.",
+    "Circular wait."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The classic deadlock arises because every philosopher holds one fork and waits for the next: a cycle of five waiters around the table. With at most four seated, one fork is always free, so the cycle of five cannot close.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Deadlock requires a cycle of processes each waiting for a resource held by the next.</li><li>Each philosopher holds exactly one fork and needs exactly one more, so the wait-for graph is a cycle of the seated philosophers.</li><li>With only four seated, at most four forks are held, so at least one fork is free and some seated philosopher can proceed; no cycle can include all four.</li><li>Hence the condition removed is circular wait.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) forks are still held exclusively; mutual exclusion remains.</li><li>(B) each philosopher still holds one fork while waiting for another.</li><li>(C) a fork is still not taken away from a holder.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing the seating limit adds preemption. It only removes the possibility of a full cycle.</p><p class=\"row\"><b>Takeaway.</b> Ordering the forks globally or limiting the seated count both break circular wait.</p>"
+  },
+  {
+   "id": "OS-U2-Q71",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the readers&ndash;writers solution, the first reader locks <code class=\"mm\">wrt</code> and increments <code class=\"mm\">readcount</code>, later readers only increment <code class=\"mm\">readcount</code>, and the last reader unlocks <code class=\"mm\">wrt</code>. Suppose the first reader forgets to lock <code class=\"mm\">wrt</code>. What is the consequence?",
+   "options": [
+    "The readers deadlock among themselves on <code class=\"mm\">readcount</code>.",
+    "A writer can acquire <code class=\"mm\">wrt</code> and modify the data while readers are still reading.",
+    "<code class=\"mm\">readcount</code> becomes negative.",
+    "The last reader will be unable to unlock <code class=\"mm\">wrt</code>, so it stays locked for ever."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <code class=\"mm\">wrt</code> is the semaphore shared between the reader group and the writers. Readers as a group must hold it while any reader is inside; the first reader takes it on behalf of the group and the last one returns it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>If the first reader does not take <code class=\"mm\">wrt</code>, the semaphore remains free at value 1.</li><li>A writer arriving then succeeds in <code class=\"mm\">wait(wrt)</code> and enters.</li><li>Readers are inside concurrently, because they never gate themselves on <code class=\"mm\">wrt</code> after the first.</li><li>So a read and a write overlap: mutual exclusion between readers and writers is violated.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) readers only serialise on <code class=\"mm\">mutex</code> around <code class=\"mm\">readcount</code>, which is untouched.</li><li>(C) the counter is still incremented and decremented once per reader.</li><li>(D) the last reader's <code class=\"mm\">signal(wrt)</code> would simply be an extra signal, which is harmless for a semaphore but indicates a protocol error.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking each reader must hold <code class=\"mm\">wrt</code>. Only the group does, which is exactly why the first and last readers are special.</p><p class=\"row\"><b>Takeaway.</b> <code class=\"mm\">wrt</code> is a group lock: first in takes it, last out releases it.</p>"
+  },
+  {
+   "id": "OS-U2-Q72",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the bounded-buffer producer&ndash;consumer solution, suppose the producer executes <code class=\"mm\">wait(mutex)</code> before <code class=\"mm\">wait(empty)</code>. Which failure can result?",
+   "options": [
+    "Deadlock: a producer that finds the buffer full blocks while holding the mutex, so no consumer can enter to free a slot.",
+    "A lost update on the buffer index, but the system still makes progress.",
+    "Only a performance loss, because the producer spins instead of blocking.",
+    "Nothing changes, because the two semaphores commute."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A process must never block while holding a lock that the process able to unblock it also needs. The buffer-full condition is resolved by the consumer, and the consumer needs the mutex to work, so holding the mutex while waiting for a free slot deadlocks the pair.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Buffer full: <code class=\"mm\">empty = 0</code>, <code class=\"mm\">full = n</code>.</li><li>Producer executes <code class=\"mm\">wait(mutex)</code>, taking the mutex.</li><li>Producer executes <code class=\"mm\">wait(empty)</code> and blocks, because there is no free slot.</li><li>The consumer tries <code class=\"mm\">wait(full)</code>, succeeds, then blocks on <code class=\"mm\">wait(mutex)</code>, which the blocked producer holds. Neither can proceed: deadlock.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) there is no interleaving of the index updates; the failure is liveness, not consistency.</li><li>(C) a semaphore blocks; it does not spin.</li><li>(D) the two operations do not commute: the order decides whether a lock is held while blocking.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing the mutex only needs to cover the buffer statement. It does, but it must not be held across a blocking wait.</p><p class=\"row\"><b>Takeaway.</b> Always take the counting semaphore first, the mutex last, and release the mutex first.</p>"
+  },
+  {
+   "id": "OS-U2-Q73",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the standard dining-philosophers setup there are five philosophers around a circular table and exactly five forks, one between each pair of neighbours; a philosopher needs both adjacent forks to eat. What is the maximum number of philosophers who can be eating at the same time, whatever protocol they follow?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 2,
+   "answer_display": "2",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each eating philosopher consumes two distinct forks, and a fork cannot be shared. With five forks the count is bounded by the number of disjoint pairs of adjacent forks, which is floor(5/2) = 2.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each of the five forks can serve at most one eating philosopher.</li><li>Each eating philosopher needs exactly two forks.</li><li>So at most floor(5 / 2) = 2 philosophers can be eating.</li><li>Two is achievable: philosophers 1 and 3 use forks (1,2) and (3,4), leaving fork 5 idle.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2 philosophers.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 5 by counting one fork per philosopher, or answering 1 by assuming any eating philosopher blocks all neighbours. Only the two immediate neighbours are blocked, so two non-adjacent philosophers can eat together.</p><p class=\"row\"><b>Takeaway.</b> Concurrency here is a matching problem: floor(forks / 2).</p>"
+  },
+  {
+   "id": "OS-U2-Q74",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about the readers&ndash;writers problem are <b>TRUE</b>? (Select all that apply.)",
+   "options": [
+    "The readers-preference solution can starve a writer that is waiting.",
+    "A writer-preference solution can starve readers.",
+    "Under readers-preference, a reader that arrives while a writer is already waiting is still allowed to enter.",
+    "Guarding the whole database with a single mutex gives readers-preference behaviour."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The two classical variants trade one form of starvation for the other. Readers-preference lets any reader in whenever no writer is <i>inside</i>, so a stream of readers can hold the lock for ever. Writer-preference blocks new readers as soon as a writer is waiting, so a stream of writers can starve readers.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. The writer waits on <code class=\"mm\">wrt</code>, which the readers as a group hold continuously while any reader is inside.</li><li>(B) True. With writer-preference a waiting writer blocks new readers, and successive writers can keep the lock busy.</li><li>(C) True. In the readers-preference code a new reader only tests <code class=\"mm\">wrt</code>, which the waiting writer has not yet acquired.</li><li>(D) False. A single mutex serialises everyone, so readers do not proceed concurrently at all; that is not readers-preference.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(D) removes concurrency between readers, which is the whole point of distinguishing readers from writers.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming one of the two variants is &ldquo;correct&rdquo;. Both are correct solutions to different requirements; starvation-freedom needs a fair policy such as FIFO ordering of arrivals.</p><p class=\"row\"><b>Takeaway.</b> Preference decides who starves. Fairness needs an arrival order, not a preference.</p>"
+  },
+  {
+   "id": "OS-U2-Q75",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "synchronization-ipc",
+   "unit_name": "Inter-Process Communication & Synchronization",
+   "topic": "Inter-Process Communication & Synchronization",
+   "sub": "classic-problems-dining-philosophers-producer-consumer",
+   "subtopic": "classic-problems-dining-philosophers-producer-consumer",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about the classical synchronisation problems are <b>TRUE</b>? (Select all that apply.)",
+   "options": [
+    "Allowing at most four philosophers to sit at the table removes the possibility of a circular wait.",
+    "With one binary semaphore per fork and no other mechanism, deadlock is possible in the dining-philosophers problem.",
+    "In the producer&ndash;consumer problem with n slots, replacing the two counting semaphores by a single mutex still preserves correctness.",
+    "In the readers&ndash;writers solution, a semaphore <code class=\"mm\">wrt</code> initialised to 1 ensures that at most one writer is inside at a time."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each classical problem isolates one failure mode: circular wait for the philosophers, a full or empty buffer for the producer and consumer, and writer exclusion for the readers and writers.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. With four seated, at most four forks are held, so at least one is free and no cycle of all five can form.</li><li>(B) True. If all five pick up their left fork at once, each waits for the right one held by a neighbour: a cycle.</li><li>(C) False. A single mutex gives exclusion but no way to block a producer on a full buffer or a consumer on an empty one; busy-waiting inside the mutex deadlocks, and blocking outside it loses the count.</li><li>(D) True. Writers hold <code class=\"mm\">wrt</code> for the whole write, so two writers cannot overlap.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(C) confuses mutual exclusion with condition synchronisation. The counting semaphores carry state about the buffer that a mutex does not represent.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing one mutex is a universal fix. A mutex answers &ldquo;may I touch this?&rdquo;; a counting semaphore answers &ldquo;is there room, or an item?&rdquo;.</p><p class=\"row\"><b>Takeaway.</b> Exclusion and condition synchronisation are different jobs and need different primitives.</p>"
   }
  ]
 }
