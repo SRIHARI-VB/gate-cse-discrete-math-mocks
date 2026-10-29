@@ -7,36 +7,83 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 1 of 2**, 2026-10-30 →
-  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html)
+- **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 2 of 2**, 2026-10-30 →
+  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: heap order & min-max heaps (6) · heapify & bottom-up build (7) · heap-sort (6) ·
-  priority queues & applications (6)
+- Subtopics: characteristic equations (5) · homogeneous & non-homogeneous (5) · divide-and-conquer recurrences (5) ·
+  ordinary generating functions (5) · coefficient extraction (5)
 - Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects and it gave
-  **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 10, unit 5, search-trees, Set 2 of 2}`. Unit 5 held **50** questions, exactly at
-  `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(search-trees) = 4 + 1) mod 7 = 5` → **Unit 6 — Heaps & Priority Queues**. No override was used and
-  no second pass has started for this subject.
-- Unit 6 had no folder and no paper, so this is Set 1 of 2 and nothing was archived; the unit folder holds
-  exactly one current paper.
-- The paper's Question Bank tab lists **250** solved questions — Units 1 to 5 — against the 25 active Unit 6
-  questions, which stay out of that list.
-- Previous test: **Operating Systems · Unit 2 — Inter-Process Communication & Synchronization, Set 1 of 2
-  (second pass)**, 2026-10-30 →
-  [`operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html`](operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html)
+  **Discrete Mathematics**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 8, unit 8, recurrence-generating-functions, Set 1 of 2}`. Unit 8 held **25** questions,
+  under `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, under `DAYS_PER_UNIT_MAX = 7`, so step B3
+  held and Unit 8 was generated again as **Set 2 of 2**. No override was used.
+- The previous current paper, Set 1 of 2 (2026-10-29), moved to
+  `discrete-mathematics/recurrence-generating-functions/archive/gate_dm_mock_8_2026-10-29_run1.html`, rebuilt on the
+  current shell with its questions, options, answers, solutions and duration frozen. Unit 8 now holds **50**
+  questions, exactly the cap, so the next Discrete Mathematics run advances `(7 + 1) mod 16 = 8` → Unit 9, Graph
+  Theory Fundamentals.
+- The paper's Question Bank tab lists **450** solved questions — Units 1–7, the 25 banked Unit 8 Set 1 questions and
+  Unit 16 — against the 25 active questions of this set, which stay out of that list.
+- Previous test: **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 1 of 2**, 2026-10-30 →
+  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 102 (18 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 51 current · 51 archived |
+| Papers published (current + archived) | 103 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 8 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 51 current · 52 archived |
 | Test cards on the portal | 61 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 4 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2550 (450 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Questions in the subject banks | 2575 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 200 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 51 (9 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 52 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 4 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-30 — Discrete Mathematics Unit 8, Set 2 of 2
+
+- New paper at `discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`; the previous
+  current paper moved to `discrete-mathematics/recurrence-generating-functions/archive/gate_dm_mock_8_2026-10-29_run1.html`.
+  The unit folder holds exactly one current paper, the repository root holds no paper at all, and no file was written
+  twice.
+- **Rotation (Section 1, MODE A).** One subject was drawn uniformly at random from the eleven GATE CSE subjects over
+  the fixed syllabus order and it gave **Discrete Mathematics**.
+  `discrete-mathematics/question-bank/master_bank.json` read back `runs[]` sorted by `(date, run)` as
+  `{date 2026-10-29, run 8, unit 8, recurrence-generating-functions, Set 1 of 2}`. Unit 8 held **25** questions
+  (below the cap of 50) and had been current for **1** day (below the 7-day backstop), so step B3 held and Unit 8 was
+  generated again as **Set 2 of 2**; no unit advanced and no override was used. The unit now holds **50** questions,
+  exactly `UNIT_QUESTION_CAP`, so the next Discrete Mathematics run advances `(index_of(recurrence-generating-functions)
+  = 7 + 1) mod 16 = 8` → **Unit 9 — Graph Theory Fundamentals**. This is the first pass for the subject; no second
+  pass has started.
+- Coverage: all five Unit 8 subtopics, five questions each — characteristic equations, homogeneous &
+  non-homogeneous, divide-and-conquer recurrences, ordinary generating functions, coefficient extraction.
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="discrete-mathematics"`, `data-unit="recurrence-generating-functions"`,
+  `data-unit-number="8"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`DM-RR8-Q26`..`DM-RR8-Q50`); the bank is append-only and no id is repeated.
+- **No near-duplicate of Set 1.** Set 1 already examined distinct-root closed forms, resonance with base 2 against a
+  simple root, `T(n) = 2T(n/2) + n`, the geometric series `1/(1 − x)`, coefficients of `(1 + x)^n`, the Fibonacci
+  generating function and ordered compositions. Set 2 opens different ground: constant forcing with a fixed point,
+  a third-order recurrence with a double root and a negative root, `T(n) = T(n/2) + 1` and
+  `T(n) = 3T(n/2) + n` (watershed `n^log₂3`), a shift `x³/(1 − x)`, a numerator `(1 + x)` over a repeated pole,
+  a binomial with a non-unit constant, `(1 + x + x² + x³)³` by inclusion–exclusion, resonance of order two against
+  the base 3, and a non-resonant forcing against a double root at 1. The 25 stems were compared against the 25 Set 1
+  stems with a string-normalised similarity check; the highest remaining score (0.945) is between two
+  coefficient-extraction questions that ask for different series, `1/(1 − 2x)²` and `1/((1 − x)(1 − 2x))`.
+- **Every countable answer was recomputed by script or by direct substitution, not by hand.** Q21 larger root of
+  `r² − 3r − 4` is **4**; Q22 `T(8) = 56` for `T(n) = 2T(n/2) + n log₂ n` with `T(1) = 1` (4, 16, 56); Q23
+  `x + y + z = 7` has **36** non-negative solutions; Q24 `a₅ = 63`; Q25 `a₃ = 24` for
+  `aₙ = 4aₙ₋₁ − 4aₙ₋₂ + 2ⁿ` from two zero initial values. The five MSQ answer sets are (A, B), (A, D), (A, B, D),
+  (A, B, C) and (A, B, D). The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ.
+- No item is a `GATE_PYQ_VARIATION`: no recurrence or generating-function previous-year question has been verified
+  against an official paper and answer key, so nothing here is claimed as an official GATE question. 10 items are
+  `STANDARD_TEXTBOOK` and 15 are `ORIGINAL_SYNTHESIS`.
+- Verification run before this push: the `<style>` block and the exam `<script>` are byte-identical to the current
+  shell (Programming and Data Structures Unit 6, 2026-10-30); the four views are siblings inside `.wrap`, the palette
+  sits inside `.layout`, and the `:root` token block is byte-identical to `design-tokens.css` and to `index.html`;
+  the paper renders 25 test cards, a 25-button palette and 450 banked cards; the 25 active questions do not appear in
+  the Question Bank tab; every `href` in `index.html` resolves; `find . -name "*.html"` shows `index.html` plus one
+  file per paper.
 
 ### 2026-10-30 — Programming and Data Structures Unit 6, Set 1 of 2
 
