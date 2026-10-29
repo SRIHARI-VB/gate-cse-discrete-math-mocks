@@ -7,36 +7,31 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 3 — Greedy Algorithms, Set 1 of 2**, 2026-10-29 →
-  [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
+- **Programming and Data Structures · Unit 5 — Binary Search Trees & Balanced Trees, Set 2 of 2**, 2026-10-29 →
+  [`programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html`](programming-data-structures/search-trees/gate_ds_mock_5_2026-10-29.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: fractional knapsack (7) · Huffman coding (6) · activity selection & interval scheduling (6) ·
-  optimal merge patterns (6)
-- Rotation: MODE A. One subject was drawn uniformly at random with an unseeded `random.SystemRandom()` draw over the
-  five subjects that had no paper dated 2026-10-29 (engineering-mathematics, digital-logic, computer-architecture,
-  algorithms, computer-networks), at index 3 of 5 in that fixed list order, giving **Algorithms**.
-  `runs[]` sorted by `(date, run)` gives the most recent Algorithms paper as
-  `{date 2026-10-28, run 4, unit 2, sorting-divide-conquer, Set 2 of 2}`. Unit 2 held **50** questions, exactly
-  `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(sorting-divide-conquer) = 1 + 1) mod 7 = 2` → **Unit 3, Greedy Algorithms**, which had no folder and no
-  paper, so this is **Set 1 of 2** and nothing was archived. Unit 3 now holds 25, under the cap, so the next
-  Algorithms run re-selects Unit 3 as Set 2 of 2 before advancing to
-  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → Unit 4, Dynamic Programming.
+- Subtopics: BST insertion & deletion (7) · AVL trees & rotations (6) · B-trees & B+ trees (6) · trie basics (6)
+- Rotation: MODE A. One subject was drawn at random with an unseeded draw over all eleven subjects, giving
+  **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 9, unit 5, search-trees, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and step B4 was never
+  reached: **Unit 5, Set 2 of 2**. Unit 5 now holds 50, exactly at the cap, so the next Programming and Data
+  Structures run advances `(index_of(search-trees) = 4 + 1) mod 7 = 5` → **Unit 6, Heaps & Priority Queues**.
   No override was used and no second pass has started for this subject.
-- Previous test: **Compiler Design · Unit 4 — Syntax-Directed Translation & Intermediate Code, Set 2 of 2**, 2026-10-29 →
-  [`compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html`](compiler-design/sdt-intermediate-code/gate_cd_mock_4_2026-10-29.html)
+- Previous test: **Algorithms · Unit 3 — Greedy Algorithms, Set 1 of 2**, 2026-10-29 →
+  [`algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html`](algorithms/greedy-algorithms/gate_algo_mock_3_2026-10-29.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 88 (18 Discrete Mathematics, 5 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 9 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
-| Current papers / archived sets | 45 current · 43 archived |
-| Test cards on the portal | 53 |
+| Papers published (current + archived) | 89 (18 Discrete Mathematics, 5 Algorithms, 6 Databases, 8 Compiler Design, 9 Operating Systems, 7 Engineering Mathematics, 10 Programming and Data Structures, 6 Computer Networks, 12 Theory of Computation, 6 Digital Logic, 2 Computer Architecture) |
+| Current papers / archived sets | 45 current · 44 archived |
+| Test cards on the portal | 54 |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 4 of 5 in Compiler Design; 5 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 5 of 7 in Programming and Data Structures; 3 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 3 of 4 in Digital Logic; 1 of 6 in Computer Architecture |
-| Questions in the subject banks | 2200 (450 Discrete Mathematics, 125 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 225 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
+| Questions in the subject banks | 2225 (450 Discrete Mathematics, 125 Algorithms, 150 Databases, 200 Compiler Design, 225 Operating Systems, 175 Engineering Mathematics, 250 Programming and Data Structures, 150 Computer Networks, 300 Theory of Computation, 150 Digital Logic, 50 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 43 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 4 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 44 (9 Discrete Mathematics, 2 Algorithms, 3 Databases, 4 Compiler Design, 4 Operating Systems, 3 Engineering Mathematics, 5 Programming and Data Structures, 3 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
 
 ### Portal data externalised (`data/questions-<subject>.js`)
 
@@ -105,6 +100,51 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-29, Programming and Data Structures → Unit 5 (Binary Search Trees & Balanced Trees), Set 2 of 2.**
+  MODE A: one subject was drawn at random with an unseeded `random.choice` over all eleven GATE CSE subjects,
+  giving **Programming and Data Structures**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 9, unit 5, search-trees, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and its first paper is dated 2026-10-29, so it had been current for 0 days — well under
+  `DAYS_PER_UNIT_MAX = 7`. Step B3 therefore held the rotation and step B4 was never reached: **Unit 5, Set 2 of
+  2**, which closes Unit 5 at exactly 50 questions. The next Programming and Data Structures run finds the unit at
+  the cap and advances `(index_of(search-trees) = 4 + 1) mod 7 = 5` → **Unit 6, Heaps & Priority Queues**.
+  No override was used and no second pass has started for this subject.
+- Coverage this run: all four Unit 5 subtopics — BST insertion and deletion (7), AVL trees and rotations (6),
+  B-trees and B+ trees (6), tries (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = 35. Every question carries `data-subject="programming-data-structures"`,
+  `data-unit="search-trees"`, `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its
+  source tag.
+- All 25 items are new: ids `DS-U5-Q26`..`DS-U5-Q50` did not exist in the bank, and the stem of every item was
+  checked against the 225 Programming and Data Structures records already held (tags stripped, case and
+  punctuation removed): zero id overlap, no duplicated stem, and no item is a numeric swap of a Set 1 question.
+  The set deliberately moves onto ground Set 1 left untouched — one-child deletion, insertion orders that rebuild
+  a given shape, the balance-factor sign convention, maximum-node counts, split cascades, and the memory cost of
+  an array-based trie. No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for this subject, so nothing on
+  this paper is claimed as an official GATE question. Every item is `STANDARD_TEXTBOOK` (13) or
+  `ORIGINAL_SYNTHESIS` (12).
+- **Every countable answer was recomputed by script, not by hand.** A BST was built by insertion and every
+  deletion performed by the stated rule: the seven-key balanced tree 40,20,60,10,30,50,70 has **0** nodes with
+  exactly one child; the preorder of 15,10,25,5,20,30 is **15, 10, 5, 25, 20, 30**; the height of
+  8,4,12,2,6,10,14 is **2**; splicing the one-child node 40 out of the ten-key tree makes **35** the right child
+  of 30; deleting 30 by successor from 50,30,70,20,40,60,80,35,45,65 leaves **4** leaves. An AVL implementation
+  with the four rotation cases confirmed the preorder of 15,10,20,5,12,25,30 as **15, 10, 5, 12, 25, 20, 30**
+  (one single rotation), the root of 1..7 as **4** (four elementary rotations), and the rotation count of
+  100,50,150,25,75,60,90,55,58 as **4** elementary rotations, two RL and one LR case, final preorder
+  75, 50, 25, 58, 55, 60, 100, 90, 150. AVL node bounds: maximum nodes at height 3 is **15** = 2⁴ − 1 and the
+  minimum-node sequence 1, 2, 4, 7, 12, 20 makes height 5 reachable with exactly 20 nodes, which is why the
+  statement that it cannot be is FALSE. B-tree arithmetic: minimum keys in an order-4 tree of height 3 is
+  **1 + 2 + 4 + 8 = 15**; minimum keys in an order-5 tree of height 1 is **1 + 2·2 = 5**; inserting
+  10,20,30,40,50 into an order-3 tree was simulated split by split and leaves the root holding **20 and 40**.
+  Trie node counts were produced by building the trie: banana → **7**, in/inn/int → **5**, and
+  ant/ante/anti/bat/batch/ban/band → **13**.
+- The correct option is spread 3 A / 4 B / 4 C / 4 D across the 15 MCQ, and the five MSQ answer sets are
+  (A,B), (A,B,C), (A,B,C), (A,B,C) and (A,B,C) — checked by script.
+- Shell parity: the paper was generated by replacing only the payload regions of the Unit 5 Set 1 shell — the
+  `<style>` block, the `:root` block and the exam `<script>` are byte-identical to it, verified by direct
+  comparison of the extracted blocks, and the palette markup is unchanged. The superseded Set 1 paper moved to
+  `archive/gate_ds_mock_5_2026-10-29_run1.html` with its content frozen, and the portal card for 2026-10-29 now
+  carries `set: "Set 2 of 2"` with `archives[0]` pointing at that file. The paper is filed only at
+  `programming-data-structures/search-trees/`; nothing was written at the repository root.
 - **2026-10-29, Algorithms → Unit 3 (Greedy Algorithms), Set 1 of 2.** MODE A: one subject was drawn uniformly at
   random with an unseeded `random.SystemRandom()` draw over the five subjects that had no paper dated 2026-10-29 —
   engineering-mathematics, digital-logic, computer-architecture, algorithms, computer-networks — at index 3 of 5 in
