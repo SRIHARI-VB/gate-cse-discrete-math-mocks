@@ -7,37 +7,93 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 3 — Memory Hierarchy & Cache Memory, Set 2 of 2**, 2026-10-30 →
-  [`computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html`](computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html)
+- **Compiler Design · Unit 5 — Runtime Environments & Code Optimization, Set 2 of 2**, 2026-10-30 →
+  [`compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html`](compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: direct, associative & set-associative mapping (6) · cache hit/miss & miss penalty (7) ·
-  replacement algorithms (6) · write policies: write-through & write-back (6)
-- Rotation: MODE A. Five subjects already carried a paper dated 2026-10-30 (computer-networks,
-  discrete-mathematics, operating-systems, programming-data-structures, digital-logic), so the draw was made over the
-  other six and gave **Computer Architecture**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 3, unit 3, cache-memory, Set 1 of 2}`. Unit 3 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held the
-  rotation and produced **Set 2 of 2**; step B4 was not reached. Unit 3 now holds **50** questions, exactly at the
-  cap, so the next Computer Architecture run advances `(index_of(cache-memory) = 2 + 1) mod 6 = 3` → **Unit 4 —
-  Main Memory & Virtual Memory Interface**. No override was used and no unit exceeds 50 questions.
-- The superseded Set 1 paper moved to `archive/gate_co_mock_3_2026-10-29_run1.html` with its content frozen; the
+- Subtopics: activation records & the call stack (6) · basic blocks & flow graphs (6) ·
+  local & loop optimizations (7) · data-flow analysis & liveness (6)
+- Rotation: MODE A. Six subjects already carried a paper dated 2026-10-30 (computer-architecture,
+  computer-networks, digital-logic, discrete-mathematics, operating-systems, programming-data-structures), so the
+  draw was made over the other five and gave **Compiler Design**. `runs[]` sorted by `(date, run)` gives the most
+  recent paper as `{date 2026-10-29, run 9, unit 5, runtime-code-optimization, Set 1 of 2}`. Unit 5 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step
+  B3 held the rotation and produced **Set 2 of 2**; step B4 was not reached. Unit 5 now holds **50** questions,
+  exactly at the cap, so the next Compiler Design run advances
+  `(index_of(runtime-code-optimization) = 4 + 1) mod 5 = 0` → **Unit 1 — Lexical Analysis**, and a second pass
+  begins. No override was used and no unit exceeds 50 questions.
+- The superseded Set 1 paper moved to `archive/gate_cd_mock_5_2026-10-29_run1.html` with its content frozen; the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- The paper's Question Bank tab lists **75** solved questions — Unit 2 at 50 plus the 25 questions of Set 1 — against
-  the 25 active questions of this set, which stay out of that list.
-- Previous test: **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 2 of 2**, 2026-10-30 →
-  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html)
+- The paper's Question Bank tab lists **225** solved questions — Units 1–4 at 50 each plus the 25 questions of
+  Set 1 — against the 25 active questions of this set, which stay out of that list.
+- Previous test: **Computer Architecture · Unit 3 — Memory Hierarchy & Cache Memory, Set 2 of 2**, 2026-10-30 →
+  [`computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html`](computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 107 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 52 current · 55 archived |
-| Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 108 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 10 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
+| Current papers / archived sets | 52 current · 56 archived |
+| Test cards on the portal | 63 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2675 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
+| Questions in the subject banks | 2700 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 250 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 55 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 56 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Compiler Design Unit 5, Set 2 of 2
+
+- New paper at `compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html`. The Set 1 paper that
+  held this path was moved to `compiler-design/runtime-code-optimization/archive/gate_cd_mock_5_2026-10-29_run1.html`
+  with its content frozen (same 25 questions, options, answers, solutions and duration); the unit folder now holds
+  exactly one current paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** Six subjects already carried a 2026-10-30 paper — computer-architecture,
+  computer-networks, digital-logic, discrete-mathematics, operating-systems and programming-data-structures — so the
+  draw was restricted to the five that had not (engineering-mathematics, algorithms, theory-of-computation,
+  compiler-design, databases), and an unseeded `secrets.choice` gave **Compiler Design**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{date 2026-10-29, run 9, unit 5, runtime-code-optimization,
+  Set 1 of 2}`. Unit 5 held **25** questions, under `UNIT_QUESTION_CAP = 50`, and had been current since
+  2026-10-29, one day, under `DAYS_PER_UNIT_MAX = 7`, so step B3 held and Unit 5 was generated again as **Set 2 of
+  2**. Step B4 was not reached. Unit 5 now holds **50** questions, so the next Compiler Design run advances
+  `(4 + 1) mod 5 = 0` → **Unit 1 — Lexical Analysis**, and a second pass begins. No override, no unit above 50.
+- Coverage: all four Unit 5 subtopics — activation records & the call stack (6), basic blocks & flow graphs (6),
+  local & loop optimizations (7), data-flow analysis & liveness (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="compiler-design"`, `data-unit="runtime-code-optimization"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`CD-U5-Q26`..`CD-U5-Q50`) and the bank is append-only. The set opens ground Set 1 left
+  untouched: the display, access-link traversal by nesting-depth difference, the division of labour in the calling
+  sequence, stack space at a stated recursion depth, the frame pointer against the stack pointer, closures captured
+  by reference; dominance, the immediate dominator, reducibility by T1 and T2, fall-through predecessors, what a
+  `break` adds to a loop's flow graph, and a fresh block count on new three-address code; copy propagation,
+  unrolling and its costs, strength reduction on an induction variable, the available-expressions precondition,
+  constant propagation and its kill at a call, and the preconditions behind dead-code elimination and code motion;
+  and the liveness equations, gen and kill, dead assignments in a block, a loop-header live-in set, meet operators,
+  iteration order and the may-versus-must quantifier.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Compiler Design, and no run-time-environment,
+  flow-graph, loop-optimization or liveness previous-year question has been verified against an official paper and
+  answer key, so nothing on this paper is claimed as an official GATE question. 14 items are `STANDARD_TEXTBOOK`
+  and 11 are `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** 20 frames × 48 bytes plus 512 bytes of base
+  overhead leaves **14912** of 16384 bytes free; a leader-based partition of the new code gives **7** basic blocks
+  (the conditional test `if t == 0 goto L3` follows an assignment, so it does not begin a block); the reduced
+  induction variable holds **396** = 4 × 99 in the last of 100 iterations; backward liveness finds **2** dead
+  assignments in the five-line block (lines 1 and 5); and the fixed point for the loop header of the second block
+  is `{i, n, s}`, that is **3** variables, with `u` excluded because line 5 is overwritten at line 7 before any use.
+  The block count and both liveness answers were produced by a leader-detection pass and a fixed-point liveness
+  solver rather than by hand; the first draft of the block-count item answered 8 and was corrected to 7 after that
+  pass.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B, C), (A, B), (A, C), (A, B, C) and (A, B, C) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Compiler Design
+  Unit 5 Set 1 paper. The `<style>` block, the exam `<script>` and the `:root` token block are **byte-identical**
+  to that paper (13243 and 9428 bytes respectively), and the `:root` block still matches `design-tokens.css` and
+  `index.html` byte for byte. Only the title, header sub-line, Question Bank count, meta strip, question payload,
+  bank tab, About tab and payload differ.
+- Portal: `index.html` gained one card (Compiler Design · Unit 5 · 2026-10-30) with an "Earlier sets for this date"
+  link to the archived Set 1, and the 2026-10-29 card now points at that archive file. `data/questions-compiler-design.js`
+  gained the 25 new records, so the Topic & Subtopic archive shows Unit 5 with **50 solved** and a `Practise Set 1`
+  button beside `Practise Set 2`.
 
 ### 2026-10-30 — Computer Architecture Unit 3, Set 2 of 2
 
