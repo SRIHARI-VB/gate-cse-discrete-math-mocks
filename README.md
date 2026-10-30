@@ -7,33 +7,80 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 1 of 2**, 2026-10-30 →
-  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html)
+- **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: degree sum & handshaking lemma (4) · walks, trails, paths & circuits (5) · graph connectivity (4) ·
-  isomorphism (5) · complete & bipartite graphs (3) · graph representations (4)
-- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over subjects whose
-  rotation still had an unbanked unit to advance into; it gave **Discrete Mathematics**. The most recent run for the
-  subject was `{2026-10-30, run 9, unit 8, recurrence-generating-functions, Set 2 of 2}`. Unit 8 held **50**
-  questions, exactly `UNIT_QUESTION_CAP`, so step B3 failed and step B4 advanced:
-  `(index_of(recurrence-generating-functions) = 7 + 1) mod 16 = 8` → **Unit 9**, Graph Theory Fundamentals, which
-  held **0** questions. No override, no partial set, no unit above the cap.
-- First paper for Unit 9, so no earlier set moved to `archive/`; the unit folder holds exactly one paper and the
-  repository root holds no copy.
-- Previous test: **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 2 of 2**, 2026-10-30 →
-  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
+- Subtopics: four conditions & RAG (7) · prevention, avoidance & Banker's (7) · detection & recovery (6) ·
+  starvation vs deadlock (5)
+- Rotation: MODE A. The draw gave **Operating Systems**. The most recent run for the subject was
+  `{2026-10-30, run 14, unit 2, synchronization-ipc, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(synchronization-ipc) = 1 + 1) mod 6 = 2` → **Unit 3**, Deadlocks, which already held 50 first-pass
+  questions. Every Operating Systems unit is at or above the cap (75, 75, 50, 50, 50, 50), so step B5 applies: the
+  modulo wraps inside the second pass that began on 2026-10-29. No override, no partial set.
+- The superseded first-pass Set 2 paper moved to
+  [`archive/gate_os_mock_3_2026-10-28_run2.html`](operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html);
+  the unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 1 of 2**, 2026-10-30 →
+  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 117 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 57 current · 60 archived |
+| Papers published (current + archived) | 118 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 15 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 57 current · 61 archived |
 | Test cards on the portal | 71 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2925 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 2950 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 375 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 60 (11 Compiler Design, 10 Discrete Mathematics, 8 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 5 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 61 (11 Compiler Design, 10 Discrete Mathematics, 9 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 5 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Operating Systems Unit 3, Set 1 of 2 (second pass)
+
+- New paper at `operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html`. The 2026-10-28 paper that held this
+  path (first pass, Set 2 of 2) was moved to `operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html`
+  with its content frozen (same 25 questions, options, answers, solutions and duration); the unit folder now holds
+  exactly one current paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** The subject draw was seeded with the run date (`20261030`) and gave **Operating
+  Systems**. `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 14, unit 2,
+  synchronization-ipc, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so
+  step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(synchronization-ipc) = 1 + 1) mod 6 = 2` → **Unit 3 — Deadlocks**. Every Operating Systems unit is at or
+  above the cap (75, 75, 50, 50, 50, 50), so step B5 applies: the modulo wraps and the **second pass** that began on
+  2026-10-29 with Unit 1 continues into Unit 3. Unit 3 now holds **75** questions (50 first pass + 25 here). No
+  override, no partial set.
+- Coverage: all four Unit 3 subtopics — four conditions & RAG (7); prevention, avoidance & Banker's (7); detection &
+  recovery (6); starvation vs deadlock (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; 60 minutes, 35 marks.
+- Every question carries `data-subject="operating-systems"`, `data-unit="deadlocks"`, `data-unit-number="3"`, its
+  subtopic slug, its type, its lowercase difficulty and its source tag — on the active paper and on all 350 banked
+  cards in the Question Bank tab.
+- All 25 ids are new (`OS-U3-Q51` … `OS-U3-Q75`) and the bank is append-only; the subject bank now holds **375**
+  questions across units 1–6, and the paper's Question Bank tab shows the 350 that are not on it (no duplicate
+  content between the test and the bank).
+- The first pass covered the four conditions, cycle-versus-deadlock on specific graphs, the safety-state
+  definition, one Banker's table and its requests, detection frequency, recovery techniques, and single-type
+  resource counts. This set takes other ground: which edges an instance count permits; a cycle that is *not* a
+  deadlock because instances are free; the knot; a cycle that *is* a deadlock because every instance on it is held
+  inside it; the claim-edge cycle test; the same one-unit request granted to one process and refused to two others;
+  the `Request ≤ Available` test; the O(mn²) cost of an invocation; a multi-instance deadlock with **no cycle**;
+  safe-sequence checking; and starvation under readers-preference and under a total resource ordering.
+- Every numeric claim was recomputed by script before the paper was written: the Banker's safety scan for the base
+  state and all four requests of Q57 (exactly one is safe), the four candidate sequences of Q70 (exactly two are
+  safe), the largest safe request of Q72 (1), the smallest extra instance count of Q74 (2), the reduction of the
+  Q60 table (3 processes finish, 2 are deadlocked) and the strongly-connected components of the Q73 wait-for graph
+  (5 processes on a cycle).
+- Source tags: 13 `STANDARD_TEXTBOOK`, 12 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. No deadlock previous-year
+  question has been verified against an official paper and answer key, so nothing in this paper is called an
+  official GATE question or a PYQ variation.
+- Shell parity: the `:root` token block, the whole `<style>` block and the whole exam `<script>` are byte-identical
+  to `operating-systems/synchronization-ipc/gate_os_mock_2_2026-10-30.html`; only the payload and the metadata
+  strings (title, header sub-line, Set chip, Question Bank count) and the question content differ.
+- Portal: one new card in *Daily Mock Tests (Date-wise)* — Unit 3 had no card at all before this run — with both
+  first-pass sets listed as its earlier sets, and the `deadlocks` card in *Topic & Subtopic Question Archive* now
+  reads **75 solved** with three practise buttons, from the 25 records appended to
+  `data/questions-operating-systems.js`.
 
 ### 2026-10-30 — Discrete Mathematics Unit 9, Set 1 of 2
 
