@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 350,
+  "total_questions": 375,
   "units_with_questions": [
    1,
    2,
@@ -15,7 +15,7 @@
    5,
    6
   ],
-  "total_runs": 14,
+  "total_runs": 15,
   "unit_question_cap": 50,
   "set_size": 25,
   "sets_per_unit": 2
@@ -677,6 +677,74 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. One subject was drawn at random from the eleven GATE CSE subjects and it gave Operating Systems. runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-29, run 13, unit 1, process-scheduling, Set 1 of 2 (second pass)}. Unit 1 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(process-scheduling) = 0 + 1) mod 6 = 1 -> Unit 2, Inter-Process Communication & Synchronization. Every Operating Systems unit is at the cap, so the modulo stays inside the second pass that began on 2026-10-29. No override was used.",
    "note": "Second pass, Set 1 of 2 for Operating Systems Unit 2, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/synchronization-ipc/archive/gate_os_mock_2_2026-10-27_run1.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U2-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 2 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, already used by OS-U1-Q21, so nothing on this paper is claimed as an official GATE question."
+  },
+  {
+   "run": 15,
+   "date": "2026-10-30",
+   "subject": "operating-systems",
+   "subject_name": "Operating Systems",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "set": "Set 1 of 2 (second pass)",
+   "count": 25,
+   "file": "operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html",
+   "archived_previous": "operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "four-conditions-resource-allocation-graph",
+    "deadlock-prevention-avoidance-bankers",
+    "deadlock-detection-recovery",
+    "starvation-vs-deadlock"
+   ],
+   "subtopic_counts": {
+    "four-conditions-resource-allocation-graph": 7,
+    "deadlock-prevention-avoidance-bankers": 7,
+    "deadlock-detection-recovery": 6,
+    "starvation-vs-deadlock": 5
+   },
+   "question_ids": [
+    "OS-U3-Q51",
+    "OS-U3-Q52",
+    "OS-U3-Q53",
+    "OS-U3-Q54",
+    "OS-U3-Q55",
+    "OS-U3-Q56",
+    "OS-U3-Q57",
+    "OS-U3-Q58",
+    "OS-U3-Q59",
+    "OS-U3-Q60",
+    "OS-U3-Q61",
+    "OS-U3-Q62",
+    "OS-U3-Q63",
+    "OS-U3-Q64",
+    "OS-U3-Q65",
+    "OS-U3-Q66",
+    "OS-U3-Q67",
+    "OS-U3-Q68",
+    "OS-U3-Q69",
+    "OS-U3-Q70",
+    "OS-U3-Q71",
+    "OS-U3-Q72",
+    "OS-U3-Q73",
+    "OS-U3-Q74",
+    "OS-U3-Q75"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. One subject was drawn at random from the eleven GATE CSE subjects and it gave Operating Systems. runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-30, run 14, unit 2, synchronization-ipc, Set 1 of 2 (second pass)}. Unit 2 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(synchronization-ipc) = 1 + 1) mod 6 = 2 -> Unit 3, Deadlocks. Every Operating Systems unit is at or above the cap (75, 75, 50, 50, 50, 50), so step B5 applies and the modulo stays inside the second pass that began on 2026-10-29. No override was used.",
+   "note": "Second pass, Set 1 of 2 for Operating Systems Unit 3, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U3-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 3 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, already used by OS-U1-Q21, so nothing on this paper is claimed as an official GATE question."
   }
  ],
  "verified_pyqs": [
@@ -10835,6 +10903,680 @@
    ],
    "answer_display": "Options (A), (B) and (D)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each classical problem isolates one failure mode: circular wait for the philosophers, a full or empty buffer for the producer and consumer, and writer exclusion for the readers and writers.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. With four seated, at most four forks are held, so at least one is free and no cycle of all five can form.</li><li>(B) True. If all five pick up their left fork at once, each waits for the right one held by a neighbour: a cycle.</li><li>(C) False. A single mutex gives exclusion but no way to block a producer on a full buffer or a consumer on an empty one; busy-waiting inside the mutex deadlocks, and blocking outside it loses the count.</li><li>(D) True. Writers hold <code class=\"mm\">wrt</code> for the whole write, so two writers cannot overlap.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(C) confuses mutual exclusion with condition synchronisation. The counting semaphores carry state about the buffer that a mutex does not represent.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing one mutex is a universal fix. A mutex answers &ldquo;may I touch this?&rdquo;; a counting semaphore answers &ldquo;is there room, or an item?&rdquo;.</p><p class=\"row\"><b>Takeaway.</b> Exclusion and condition synchronisation are different jobs and need different primitives.</p>"
+  },
+  {
+   "id": "OS-U3-Q51",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A system has one resource type <code class=\"mm\">R₁</code> with 2 instances and another resource type <code class=\"mm\">R₂</code> with 1 instance. Which one of the following <b>CANNOT</b> appear in a valid resource allocation graph of this system?",
+   "options": [
+    "Two assignment edges, <code class=\"mm\">R₁ → P₁</code> and <code class=\"mm\">R₁ → P₂</code>",
+    "Two assignment edges, <code class=\"mm\">R₂ → P₁</code> and <code class=\"mm\">R₂ → P₂</code>",
+    "A request edge <code class=\"mm\">P₁ → R₁</code> while <code class=\"mm\">P₁</code> already holds an instance of <code class=\"mm\">R₁</code>",
+    "Two request edges, <code class=\"mm\">P₁ → R₁</code> and <code class=\"mm\">P₃ → R₁</code>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An assignment edge <code class=\"mm\">R → P</code> records that one instance of <code class=\"mm\">R</code> is held by <code class=\"mm\">P</code>. A resource type drawn with <i>k</i> dots can therefore carry at most <i>k</i> assignment edges. Request edges carry no such limit: any number of processes may queue for the same type, because a request is only a claim on a future free instance.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">R₁</code> has 2 instances, so 2 assignment edges are possible — (A) is valid.</li><li><code class=\"mm\">R₂</code> has 1 instance, so at most one process can hold it. Two assignment edges out of <code class=\"mm\">R₂</code> would hand out two units of a one-unit resource — (B) is impossible.</li><li>(C) is valid and common: a process holds one unit and asks for another unit of the same type. That is how multi-unit contention arises.</li><li>(D) is valid: request edges are unlimited, and two processes competing for <code class=\"mm\">R₁</code> is exactly the state the graph is meant to show.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <code class=\"mm\">R₂</code> has one instance, so it cannot be assigned to two processes.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) uses both instances of <code class=\"mm\">R₁</code>, which is allowed.</li><li>(C) is the hold-and-request pattern, not an error.</li><li>(D) request edges are not bounded by the instance count.</li></ul><p class=\"row\"><b>Common misconception.</b> Students bound <i>all</i> edges touching a resource type by its instance count. Only assignment edges consume instances; request edges consume nothing yet.</p><p class=\"row\"><b>Takeaway.</b> Count dots against outgoing assignment edges. If the assignment edges exceed the dots, the graph is not a picture of any reachable state.</p>"
+  },
+  {
+   "id": "OS-U3-Q52",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "<code class=\"mm\">R₁</code> has 2 instances and <code class=\"mm\">R₂</code> has 2 instances. <code class=\"mm\">P₁</code> holds one instance of <code class=\"mm\">R₁</code> and requests one instance of <code class=\"mm\">R₂</code>; <code class=\"mm\">P₂</code> holds one instance of <code class=\"mm\">R₂</code> and requests one instance of <code class=\"mm\">R₁</code>. The graph therefore contains the cycle <code class=\"mm\">P₁ → R₂ → P₂ → R₁ → P₁</code>. Which one of the following is TRUE?",
+   "options": [
+    "The system is deadlocked, because a cycle in a resource allocation graph always means a deadlock.",
+    "The system is not deadlocked: one instance of each type is still free, so a request can be granted and the cycle breaks.",
+    "The system is deadlocked only if <code class=\"mm\">P₁</code> and <code class=\"mm\">P₂</code> issue their requests at the same instant.",
+    "The system is not deadlocked only because <code class=\"mm\">R₁</code> and <code class=\"mm\">R₂</code> are different resource types."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With several instances per resource type a cycle is <i>necessary</i> but not <i>sufficient</i> for deadlock. The cycle only records who holds and who asks; whether anyone is actually stuck depends on the free instances.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Free instances of <code class=\"mm\">R₁</code> = 2 − 1 = 1.</li><li>Free instances of <code class=\"mm\">R₂</code> = 2 − 1 = 1.</li><li><code class=\"mm\">P₁</code>'s request for one <code class=\"mm\">R₂</code> can be met immediately, so <code class=\"mm\">P₁</code> is not blocked.</li><li><code class=\"mm\">P₁</code> finishes and releases both its units, so <code class=\"mm\">R₁</code> now has 2 free instances and <code class=\"mm\">P₂</code>'s request succeeds.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — a free instance on each side of the cycle means no process on it is blocked.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) treats a necessary condition as a sufficient one — true only when every type has a single instance.</li><li>(C) deadlock is a property of a state, not of a timing accident. Since both requests are grantable, no interleaving of the two requests produces a deadlock.</li><li>(D) the identity of the types is irrelevant; only the free instances matter.</li></ul><p class=\"row\"><b>Common misconception.</b> Spotting the cycle and stopping. Before calling it a deadlock, check whether every instance on the cycle is held by a process on the cycle.</p><p class=\"row\"><b>Takeaway.</b> Cycle = a warning. Deadlock = a cycle with no free instance able to break it.</p>"
+  },
+  {
+   "id": "OS-U3-Q53",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In a wait-for graph a <i>knot</i> is a set <code class=\"mm\">S</code> of vertices such that every vertex reachable from a vertex of <code class=\"mm\">S</code> also lies in <code class=\"mm\">S</code>, and no edge leaves <code class=\"mm\">S</code>. Which one of the following is TRUE?",
+   "options": [
+    "A knot is exactly the same thing as a cycle.",
+    "The system is deadlocked if and only if its wait-for graph contains a knot.",
+    "A knot is a single vertex whose out-degree is zero.",
+    "A knot can exist only when exactly one process is deadlocked."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A knot is a set of processes closed under reachability with no edge leaving it. Every process in a knot waits only on processes inside the knot, so nothing outside can ever release it. For single-instance resources the standard result is: a deadlock exists if and only if the wait-for graph contains a knot.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A simple cycle is not automatically a knot. Take <code class=\"mm\">P₁ → P₂ → P₁</code> together with an edge <code class=\"mm\">P₂ → P₃</code> where <code class=\"mm\">P₃</code> is not blocked: the set <code class=\"mm\">{P₁, P₂}</code> is a cycle but an edge leaves it, so it is not a knot.</li><li>Here <code class=\"mm\">P₃</code> will run and release what <code class=\"mm\">P₂</code> needs, so the cycle dissolves. Nothing is deadlocked.</li><li>Now close the set: if every edge from the set stays inside it, no process in it can ever be released, which is exactly a deadlock.</li><li>So the existence of a knot characterises deadlock, while a bare cycle does not.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — a knot is necessary and sufficient for deadlock in a wait-for graph.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) a cycle with an outgoing edge is not a knot.</li><li>(C) out-degree zero means the process is waiting for nothing — it is runnable, the opposite of a knot.</li><li>(D) a knot may contain any number of processes.</li></ul><p class=\"row\"><b>Common misconception.</b> Using \"cycle\" and \"knot\" interchangeably. The distinction is the whole point: a knot is a cycle that nothing can escape.</p><p class=\"row\"><b>Takeaway.</b> Reachability closure is the test. If a blocked set can reach a runnable process, it is not a knot and not a deadlock.</p>"
+  },
+  {
+   "id": "OS-U3-Q54",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Every resource type in a system has several instances. The graph contains the cycle <code class=\"mm\">P₁ → R₁ → P₂ → R₂ → P₁</code>, and <i>every</i> instance of <code class=\"mm\">R₁</code> and of <code class=\"mm\">R₂</code> is held by <code class=\"mm\">P₁</code> or by <code class=\"mm\">P₂</code>. Which one of the following is TRUE?",
+   "options": [
+    "Nothing can be concluded, because a cycle never implies a deadlock once resource types have several instances.",
+    "The system is deadlocked, because each process on the cycle waits for a type whose every instance is held by a process on the cycle.",
+    "The system is deadlocked only if <code class=\"mm\">P₁</code> and <code class=\"mm\">P₂</code> are the only two processes in the system.",
+    "The system cannot be deadlocked, because a deadlock needs at least three processes."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With multiple instances the useful <i>sufficient</i> condition is: a cycle in which every resource type on the cycle has all of its instances held by processes on the cycle. Then no process on the cycle can ever be satisfied from outside, because there is nothing outside to release.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">P₁</code> requests <code class=\"mm\">R₁</code>. Every instance of <code class=\"mm\">R₁</code> is held by <code class=\"mm\">P₁</code> or <code class=\"mm\">P₂</code>, and <code class=\"mm\">P₁</code> is the requester, so it holds none — all instances are with <code class=\"mm\">P₂</code>.</li><li><code class=\"mm\">P₂</code> requests <code class=\"mm\">R₂</code>, and by the same argument every instance is with <code class=\"mm\">P₁</code>.</li><li>Neither can proceed until the other releases, and neither will release before it is satisfied.</li><li>No process outside the cycle holds an instance of either type, so no outside event can break the cycle.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — a cycle whose every instance is held inside the cycle is a deadlock.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) over-corrects: a cycle is not sufficient <i>in general</i>, but this extra condition makes it sufficient.</li><li>(C) processes outside the cycle hold nothing on it, so their existence changes nothing.</li><li>(D) two processes deadlocking on two resources is the smallest possible deadlock.</li></ul><p class=\"row\"><b>Common misconception.</b> Having learned \"a cycle does not always mean a deadlock\", students reject every cycle. The right test is where the instances on the cycle are held.</p><p class=\"row\"><b>Takeaway.</b> Two questions, in order: is there a cycle? Are all instances on it held inside it? Yes to both — deadlock.</p>"
+  },
+  {
+   "id": "OS-U3-Q55",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which one of the following implements deadlock prevention by denying the <i>no preemption</i> condition?",
+   "options": [
+    "Requiring a process to request, in a single operation, every resource it will ever need before it starts.",
+    "Allowing the system to take resources away from a process that holds them and to give them to a requester, saving the victim's state so it can be restored later.",
+    "Requiring every process to request resource types in one fixed global order.",
+    "Admitting a new process only when enough resources are free for it to run to completion."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four necessary conditions are mutual exclusion, hold and wait, no preemption and circular wait. Prevention denies one of them structurally. <i>No preemption</i> says a resource is released only voluntarily; denying it means the system may reclaim a held resource.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option (A) forces a process to hold everything or nothing — that denies <i>hold and wait</i>.</li><li>Option (B) lets the system take a held resource away. The victim must be rolled back to a state from which it can re-acquire the resource later, so its state is saved — that denies <i>no preemption</i>.</li><li>Option (C) makes a cycle impossible — that denies <i>circular wait</i>.</li><li>Option (D) is deadlock avoidance (a Banker's-style admission test), not prevention.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — preemption of held resources denies the no-preemption condition.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) denies hold and wait.</li><li>(C) denies circular wait.</li><li>(D) avoids rather than prevents: it checks the future state instead of removing a condition.</li></ul><p class=\"row\"><b>Common misconception.</b> Reading \"request everything at once\" as preemption. It is the opposite — nothing is ever taken back; the process simply never holds partially.</p><p class=\"row\"><b>Takeaway.</b> Keep a four-row table in memory: all-at-once → hold and wait; preemption → no preemption; ordering → circular wait; spooling or read-only sharing → mutual exclusion.</p>"
+  },
+  {
+   "id": "OS-U3-Q56",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the resource-allocation-graph scheme for deadlock avoidance, a claim edge <code class=\"mm\">Pᵢ → Rⱼ</code> drawn dashed records that <code class=\"mm\">Pᵢ</code> may request <code class=\"mm\">Rⱼ</code> in the future. A request may be granted only if:",
+   "options": [
+    "<code class=\"mm\">Rⱼ</code> still has a free instance.",
+    "converting the claim edge <code class=\"mm\">Pᵢ → Rⱼ</code> into a request edge leaves the graph acyclic.",
+    "the total number of claim edges in the graph does not increase.",
+    "<code class=\"mm\">Pᵢ</code> is holding no other resource at the moment of the request."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Avoidance needs knowledge of the future, which the claim edge supplies. A request is simulated: the claim edge becomes a request edge, and the grant is allowed only if the graph still has no cycle. If a cycle would appear, the process must wait.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Every resource type is single-instance in this scheme, so a cycle is exactly a deadlock.</li><li>Before granting, convert <code class=\"mm\">Pᵢ → Rⱼ</code> from claim to request.</li><li>If that conversion creates a cycle, the grant is refused and <code class=\"mm\">Pᵢ</code> waits; the edge reverts to a claim edge.</li><li>When <code class=\"mm\">Pᵢ</code> releases <code class=\"mm\">Rⱼ</code>, the request edge becomes a claim edge again.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — the grant must not create a cycle.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) a free instance is necessary but not sufficient; granting on availability alone is precisely how deadlock arises under naive allocation.</li><li>(C) the number of claim edges is bookkeeping, not a safety test.</li><li>(D) holding other resources is normal and is exactly what makes the cycle test necessary.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating availability as permission. Availability answers \"can I physically hand it over?\"; the cycle test answers \"should I?\".</p><p class=\"row\"><b>Takeaway.</b> Prevention asks which condition to remove; avoidance asks whether granting this request keeps the graph acyclic.</p>"
+  },
+  {
+   "id": "OS-U3-Q57",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Four processes share three resource types A, B and C, with 9, 8 and 6 instances in total. <code class=\"mm\">P₁</code> holds (2,0,2), <code class=\"mm\">P₂</code> holds (3,2,1), <code class=\"mm\">P₃</code> holds (0,2,1) and <code class=\"mm\">P₄</code> holds (2,1,1), so the available vector is (2,3,1). Their remaining needs are <code class=\"mm\">P₁</code> (2,3,0), <code class=\"mm\">P₂</code> (3,2,1), <code class=\"mm\">P₃</code> (2,2,1) and <code class=\"mm\">P₄</code> (1,2,2). Which one of the following requests can be granted without leaving the system in an unsafe state?",
+   "options": [
+    "<code class=\"mm\">P₁</code> requests (1,0,0)",
+    "<code class=\"mm\">P₂</code> requests (1,0,0)",
+    "<code class=\"mm\">P₄</code> requests (1,0,0)",
+    "<code class=\"mm\">P₂</code> requests (0,2,0)"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A request passes three tests: it must not exceed the process's remaining need, it must not exceed the available vector, and the state left after a <i>pretend</i> allocation must still be safe. All four requests here pass the first two tests, so the safety scan alone decides.</p><p class=\"row\"><b>Step by step.</b> The current state is safe: <code class=\"mm\">P₁</code> (2,3,0) fits in (2,3,1), and once it finishes everything else follows.</p><ol><li><b>(A)</b> <code class=\"mm\">P₁</code> takes one A: available becomes (1,3,1) and its need (1,3,0), which still fits. <code class=\"mm\">P₁</code> finishes and returns its (3,0,2) of allocation, giving (4,3,3); <code class=\"mm\">P₂</code>, <code class=\"mm\">P₃</code> and <code class=\"mm\">P₄</code> then fit in turn. Safe, so the request is granted.</li><li><b>(B)</b> the same unit given to <code class=\"mm\">P₂</code> leaves available (1,3,1) with <code class=\"mm\">P₂</code> needing (2,2,1). <code class=\"mm\">P₁</code> needs 2 of A and so do <code class=\"mm\">P₂</code> and <code class=\"mm\">P₃</code>; <code class=\"mm\">P₄</code> needs 2 of C but only 1 is free. Nothing fits — unsafe.</li><li><b>(C)</b> the same unit given to <code class=\"mm\">P₄</code> leaves (1,3,1) with <code class=\"mm\">P₄</code> needing (0,2,2). Again no need fits: the three others want 2 of A and <code class=\"mm\">P₄</code> still wants 2 of C. Unsafe.</li><li><b>(D)</b> <code class=\"mm\">P₂</code> taking two B leaves (2,1,1) with its need (3,0,1). <code class=\"mm\">P₁</code> and <code class=\"mm\">P₃</code> want 3 and 2 of B, and only 1 is free. Unsafe.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — one unit of A is safe for <code class=\"mm\">P₁</code> and unsafe for <code class=\"mm\">P₂</code> and <code class=\"mm\">P₄</code>.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) and (C) are the identical request aimed at a process whose need is larger, so the freed resources do not cover the remaining needs.</li><li>(D) takes away B, which three processes still want.</li></ul><p class=\"row\"><b>Common misconception.</b> Judging a request by its size. Options (A), (B) and (C) are the same one-unit request; whether it is safe depends entirely on what the receiving process still needs.</p><p class=\"row\"><b>Takeaway.</b> Always run the pretend allocation and then a full safety scan. Never judge a request by availability, and never by its magnitude.</p>"
+  },
+  {
+   "id": "OS-U3-Q58",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the deadlock-detection algorithm for a system in which a resource type may have several instances, a process <code class=\"mm\">Pᵢ</code> is marked as able to finish in the current pass exactly when:",
+   "options": [
+    "<code class=\"mm\">Requestᵢ ≤ Available</code> component by component.",
+    "<code class=\"mm\">Allocationᵢ ≤ Available</code> component by component.",
+    "both <code class=\"mm\">Requestᵢ</code> and <code class=\"mm\">Allocationᵢ</code> are zero.",
+    "<code class=\"mm\">Pᵢ</code> has not been marked finished in an earlier pass."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Detection is the safety algorithm with a different question. A process can finish when everything it is still asking for is available right now; when it finishes, its whole allocation returns to the available vector.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Initialise <code class=\"mm\">Work = Available</code> and <code class=\"mm\">Finishᵢ = false</code> for every process.</li><li>Find an <code class=\"mm\">i</code> with <code class=\"mm\">Finishᵢ = false</code> and <code class=\"mm\">Requestᵢ ≤ Work</code>.</li><li>Set <code class=\"mm\">Work = Work + Allocationᵢ</code> and <code class=\"mm\">Finishᵢ = true</code>, then repeat.</li><li>When no such <code class=\"mm\">i</code> remains, every process still false is deadlocked.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the test is <code class=\"mm\">Requestᵢ ≤ Available</code>.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(B) compares what the process already holds, which is irrelevant: holding more never stops it finishing.</li><li>(C) is too strong; a process with a pending request can still finish if the request can be met.</li><li>(D) is a condition on the bookkeeping, not a test of whether the process can proceed.</li></ul><p class=\"row\"><b>Common misconception.</b> Testing <code class=\"mm\">Allocation</code> instead of <code class=\"mm\">Request</code>. The allocation is what the process will <i>give back</i>, not what it <i>needs</i>.</p><p class=\"row\"><b>Takeaway.</b> Need is the avoidance word, Request is the detection word. Both compare against the work vector, never against the allocation.</p>"
+  },
+  {
+   "id": "OS-U3-Q59",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The detection algorithm for <i>n</i> processes and <i>m</i> resource types repeatedly scans the whole process list, marking a process finished whenever its request can be met from the current work vector. What is the cost of one invocation of the algorithm?",
+   "options": [
+    "O(<i>m</i>)",
+    "O(<i>n</i>)",
+    "O(<i>mn</i>²)",
+    "O(<i>mn</i> log <i>n</i>)"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The algorithm is a scan inside a loop that repeats while any progress is made. Each scan compares up to <i>n</i> request vectors of length <i>m</i>, and there can be at most <i>n</i> successful scans, because each one finishes at least one process.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>One comparison of a request vector with the work vector costs O(<i>m</i>).</li><li>One scan tests all <i>n</i> processes: O(<i>mn</i>).</li><li>At most <i>n</i> scans can make progress, since each scan marks at least one new process finished.</li><li>Total: O(<i>mn</i>) × O(<i>n</i>) = O(<i>mn</i>²).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — O(<i>mn</i>²) per invocation.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) and (B) ignore the repeated scans.</li><li>(D) suggests sorting or a divide-and-conquer structure, but the algorithm has neither.</li></ul><p class=\"row\"><b>Common misconception.</b> Answering O(<i>mn</i>) by counting one scan. The outer repetition is the expensive part.</p><p class=\"row\"><b>Takeaway.</b> This is why the invocation frequency is a policy decision: each call costs O(<i>mn</i>²), so calling it after every request is expensive.</p>"
+  },
+  {
+   "id": "OS-U3-Q60",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Five processes share three resource types with 4, 3 and 3 instances. The allocation is <code class=\"mm\">P₁</code> (2,0,1), <code class=\"mm\">P₂</code> (0,1,0), <code class=\"mm\">P₃</code> (2,0,1), <code class=\"mm\">P₄</code> (0,0,1) and <code class=\"mm\">P₅</code> (0,1,0), leaving the available vector (0,1,0). The outstanding requests are <code class=\"mm\">P₁</code> (2,0,0), <code class=\"mm\">P₂</code> (0,0,0), <code class=\"mm\">P₃</code> (2,0,0), <code class=\"mm\">P₄</code> (0,0,0) and <code class=\"mm\">P₅</code> (0,1,0). How many processes are deadlocked?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With multiple instances, deadlock is decided by the reduction, not by looking for cycles: repeatedly finish every process whose request can be met, adding its allocation back to the work vector. Whatever is left unfinished at the end is deadlocked.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">P₁</code> wants 2 of A, but A is 0 — blocked. <code class=\"mm\">P₂</code> requests nothing — it finishes, returning (0,1,0): work becomes (0,2,0).</li><li><code class=\"mm\">P₄</code> requests nothing — it finishes, returning (0,0,1): work becomes (0,2,1).</li><li><code class=\"mm\">P₅</code> requests (0,1,0) ≤ (0,2,1) — it finishes, returning (0,1,0): work becomes (0,3,1).</li><li><code class=\"mm\">P₁</code> still wants 2 of A and <code class=\"mm\">P₃</code> still wants 2 of A, but no process outside them holds an instance of A: the three that finished released only B and C.</li><li>So A stays at 0 while two processes each need 2 units of it — both are permanently blocked.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 2 processes are deadlocked.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) ignores that A can never become free for <code class=\"mm\">P₁</code> and <code class=\"mm\">P₃</code>.</li><li>(B) counts only one of the two symmetric waiters.</li><li>(D) wrongly counts the processes that finish; <code class=\"mm\">P₂</code>, <code class=\"mm\">P₄</code> and <code class=\"mm\">P₅</code> all complete.</li></ul><p class=\"row\"><b>Common misconception.</b> Expecting a cycle. This deadlock has no cycle at all — two processes simply wait for the same type that neither holds enough of. Cycles only characterise single-instance deadlocks.</p><p class=\"row\"><b>Takeaway.</b> Run the reduction to the end. The count of unfinished processes is the answer, whether or not a cycle appears.</p>"
+  },
+  {
+   "id": "OS-U3-Q61",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In the readers-preference solution to the readers-writers problem, a writer may wait forever while readers keep arriving. Which one of the following describes that situation?",
+   "options": [
+    "A deadlock, because the writer holds a resource that the readers need.",
+    "Starvation, because the writer is blocked indefinitely without any cycle in the wait-for relation.",
+    "A circular wait, because the writer and the readers wait for each other.",
+    "Hold and wait, because the writer holds a resource while it waits."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation is indefinite blocking with no cycle: the process is not deadlocked, because the resource it waits for is repeatedly released and immediately re-acquired by others. Deadlock needs a cycle in which each holder waits for another.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The writer waits on the mutual-exclusion semaphore for the data.</li><li>Under reader preference, a new reader is never blocked by a waiting writer, so it increments the reader count and enters.</li><li>The writer's condition — no reader inside — never becomes true while readers arrive faster than they leave.</li><li>Nothing is circular and nothing is permanently held by a blocked process: the resource is being used and released all the time. That is starvation.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — starvation without deadlock.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) the writer holds nothing; it is waiting, not holding.</li><li>(C) no cycle exists: the writer waits for a resource, and no process waits for the writer.</li><li>(D) hold and wait requires the process to be holding one resource while requesting another.</li></ul><p class=\"row\"><b>Common misconception.</b> Calling every indefinite wait a deadlock. Deadlock is a cycle; starvation is an unfair queue.</p><p class=\"row\"><b>Takeaway.</b> Ask two questions: is there a cycle? Is anything permanently held? No and no means starvation.</p>"
+  },
+  {
+   "id": "OS-U3-Q62",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A system prevents deadlock by numbering its resource types and requiring every process to request them in strictly increasing order. Which one of the following can <b>still</b> happen?",
+   "options": [
+    "A circular wait, because two processes may each hold a lower-numbered resource.",
+    "A process can wait indefinitely if requests for the higher-numbered resources keep being granted to other processes first.",
+    "Two processes can deadlock by each holding an instance of the same resource type.",
+    "A process that already holds a resource can be forced to give it up before it finishes."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A total order on resource types removes circular wait, and with it deadlock. It says nothing about fairness: the scheme only forbids certain <i>orderings</i> of requests, not certain <i>outcomes</i> of contention.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A cycle needs a process holding a higher-numbered resource and requesting a lower-numbered one. The rule forbids exactly that edge, so no cycle can form — (A) and (C) are impossible.</li><li>Fairness is a different matter. If several processes keep requesting <code class=\"mm\">R₅</code> and each is granted it before a particular waiter, that waiter can be postponed without bound.</li><li>Nothing in the scheme preempts a held resource, so (D) is also impossible.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — deadlock-free does not mean starvation-free.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) and (C) both describe a cycle, which the ordering rules out.</li><li>(D) ordering is a request discipline; it does not add preemption.</li></ul><p class=\"row\"><b>Common misconception.</b> Reading \"prevents deadlock\" as \"guarantees every process finishes\". The two guarantees are independent.</p><p class=\"row\"><b>Takeaway.</b> Prevention removes cycles; bounded waiting needs a queue or aging on top of it.</p>"
+  },
+  {
+   "id": "OS-U3-Q63",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which one of the following statements is TRUE?",
+   "options": [
+    "Every starved process is deadlocked.",
+    "Every deadlocked process is starved.",
+    "Starvation always appears as a cycle in the wait-for graph.",
+    "A deadlocked process is not blocked."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Deadlock implies indefinite blocking, and indefinite blocking is starvation. The converse fails: starvation can occur with no cycle at all, for example under strict priority scheduling or reader preference.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>If a process is deadlocked it will never receive what it waits for, so it waits forever — it is starved. Hence (B) is true.</li><li>A low-priority process can be starved forever while every other process keeps finishing. Nothing is permanently held by a blocked process, so there is no deadlock — (A) is false.</li><li>Starvation needs no cycle, so (C) is false.</li><li>A deadlocked process is by definition blocked, so (D) is false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — deadlock is a special case of starvation.</span></p><p class=\"row\"><b>Common misconception.</b> Treating the two as synonyms in either direction. The containment is one-way: deadlock ⊂ starvation.</p><p class=\"row\"><b>Takeaway.</b> If a question says \"starved but not deadlocked\", the answer must involve unfair scheduling with no permanent holder.</p>"
+  },
+  {
+   "id": "OS-U3-Q64",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A deadlock is broken by repeatedly pre-empting resources, and the same process can be chosen as victim again and again. Which one of the following is the standard remedy?",
+   "options": [
+    "Always choose as victim the process that holds the largest number of resources.",
+    "Include the number of times a process has already been rolled back in the cost of choosing it as victim.",
+    "Terminate every deadlocked process at the first detection.",
+    "Stop running the detection algorithm once a deadlock has been broken."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Recovery by preemption must itself be starvation-free. The standard cost measure for a victim combines the resources it holds, the work it has already done, and the number of times it has been rolled back. Making the last term grow with each rollback guarantees that no process is chosen forever.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Without the rollback term, a process that is cheap to pre-empt stays cheap for ever.</li><li>Adding its rollback count raises its cost each time it is chosen.</li><li>Eventually another process becomes the cheapest victim, so the choice rotates.</li><li>This is aging applied to victim selection.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — charge each rollback to the victim's cost.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) the largest holder is not necessarily the cheapest to pre-empt; that is what the cost function decides.</li><li>(C) terminating everyone is the blunt option and loses the most work.</li><li>(D) new deadlocks would then go undetected.</li></ul><p class=\"row\"><b>Common misconception.</b> Thinking recovery ends the problem. Recovery creates a second scheduling problem — which victim — that can itself starve a process.</p><p class=\"row\"><b>Takeaway.</b> Every time a system is allowed to choose a victim, add aging or the choice becomes a starvation source.</p>"
+  },
+  {
+   "id": "OS-U3-Q65",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A resource allocation graph in which some resource types have several instances contains no cycle. Which one of the following is TRUE?",
+   "options": [
+    "The system may still be deadlocked.",
+    "The system cannot be deadlocked.",
+    "Exactly one process must be blocked.",
+    "Nothing can be concluded, because a cycle is irrelevant when instances are multiple."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A cycle is a <i>necessary</i> condition for deadlock in every resource allocation graph, whatever the instance counts. A graph with no cycle therefore describes a state that is not deadlocked.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In a deadlock every process on the deadlock is blocked, waiting for a resource held by another member.</li><li>Following those wait relations must return to the starting process, which traces a cycle.</li><li>So a deadlock always leaves a cycle behind; no cycle means no deadlock.</li><li>The converse fails only in the other direction: with multiple instances a cycle may exist without a deadlock.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — no cycle means no deadlock.</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(A) contradicts the necessity of a cycle.</li><li>(C) nothing follows about how many processes are blocked; several may be waiting with no deadlock.</li><li>(D) the necessity direction is unaffected by instance counts.</li></ul><p class=\"row\"><b>Common misconception.</b> Having learned \"a cycle is not sufficient with multiple instances\", students drop the necessity too. Necessity survives; only sufficiency is lost.</p><p class=\"row\"><b>Takeaway.</b> No cycle → definitely safe. Cycle → need the free-instance or reduction check before concluding anything.</p>"
+  },
+  {
+   "id": "OS-U3-Q66",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about resource allocation graphs are TRUE? (Select all that apply.)",
+   "options": [
+    "When every resource type has exactly one instance, a cycle is both necessary and sufficient for deadlock.",
+    "When a resource type has several instances, a cycle is necessary but not sufficient for deadlock.",
+    "A graph with no cycle may still describe a deadlocked system.",
+    "If the graph can be reduced completely, by repeatedly removing a process whose requests can all be met, then no process is deadlocked."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three facts govern the graph. A cycle is always necessary for deadlock. With single instances it is also sufficient. With several instances it is not, and there the reduction test is decisive.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: with one instance per type, a cycle means each process on it waits for something held by the next, so none can proceed.</li><li>(B) True: a free instance somewhere on the cycle may let a member finish and break the cycle.</li><li>(C) False: since a cycle is necessary, no cycle means no deadlock.</li><li>(D) True: complete reducibility means every process can, in some order, be satisfied and finish, which is exactly the absence of deadlock.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(C) reverses the necessity of a cycle — the classic misreading of the multi-instance case.</li></ul><p class=\"row\"><b>Common misconception.</b> Learning that \"cycles do not always mean deadlock\" and concluding that cycles are unrelated to deadlock. Only sufficiency is lost.</p><p class=\"row\"><b>Takeaway.</b> Necessity always; sufficiency only for single instances; reduction for everything else.</p>"
+  },
+  {
+   "id": "OS-U3-Q67",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about the banker's algorithm are TRUE? (Select all that apply.)",
+   "options": [
+    "Every process must declare in advance its maximum claim on each resource type.",
+    "If every request is granted only when the resulting state is safe, a deadlock cannot occur.",
+    "An unsafe state proves that the system will deadlock.",
+    "The algorithm works when a resource type has several instances."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The banker's algorithm is avoidance: it needs future knowledge, checks each request against a simulated state, and refuses any grant that would leave an unsafe state.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: the maximum-claim matrix is the algorithm's input; without it there is no way to look ahead.</li><li>(B) True: safety means some completion order exists, and granting only safe requests preserves that invariant, so no deadlock can arise.</li><li>(C) False: unsafe means \"deadlock is possible\", not \"deadlock will happen\". The processes may still behave well and finish.</li><li>(D) True: unlike the claim-edge graph scheme, the banker's algorithm handles multiple instances through the allocation, max and available matrices.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(C) confuses an unsafe state with a deadlocked one. Unsafe is a warning; deadlock is a fact.</li></ul><p class=\"row\"><b>Common misconception.</b> Treating unsafe as deadlocked. A system can run for a long time in an unsafe state and never deadlock — it has simply lost its guarantee.</p><p class=\"row\"><b>Takeaway.</b> Safe → no deadlock possible. Unsafe → no guarantee, but not a deadlock.</p>"
+  },
+  {
+   "id": "OS-U3-Q68",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about deadlock detection and recovery are TRUE? (Select all that apply.)",
+   "options": [
+    "Running the detection algorithm after every allocation request removes the need for prevention and avoidance, but costs O(<i>mn</i>²) per request.",
+    "Detection through the wait-for graph is valid only when every resource type has a single instance.",
+    "A process left unfinished when the detection algorithm terminates is deadlocked.",
+    "Recovery by terminating one process at a time always needs at most one termination."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Detection is an alternative to prevention and avoidance: let deadlock happen, find it, then recover. Its cost is paid per invocation, and the frequency of invocation is a policy choice.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: detecting immediately after every grant means a deadlock is caught the instant it forms, so no structural prevention is needed — at O(<i>mn</i>²) per request.</li><li>(B) True: the wait-for graph collapses a resource to a single edge, which only makes sense when the resource has one instance. With several instances a reduction over the allocation and request matrices is required.</li><li>(C) True: that is precisely how the algorithm reports a deadlock — the unfinished set.</li><li>(D) False: terminating one process may not break every cycle, and the algorithm has to be re-run; several terminations may be needed.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(D) overstates what one termination achieves; recovery is iterative, and each round costs another detection pass.</li></ul><p class=\"row\"><b>Common misconception.</b> Assuming detection is free because it is \"just a graph search\". At O(<i>mn</i>²) per call, invoking it after every request can dominate the system's cost.</p><p class=\"row\"><b>Takeaway.</b> Detection frequency trades CPU for the size of the deadlock you may have to undo. Wait-for graphs are single-instance only.</p>"
+  },
+  {
+   "id": "OS-U3-Q69",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about starvation are TRUE? (Select all that apply.)",
+   "options": [
+    "Aging raises the priority of a long-waiting process until it is eventually selected.",
+    "First-come first-served scheduling cannot starve a process.",
+    "Strict priority scheduling can starve a low-priority process indefinitely.",
+    "A deadlocked process will eventually proceed if it waits long enough."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Starvation is indefinite postponement. It is a fairness property of a policy, not a correctness property, and it is cured by bounding the wait, not by removing a cycle.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True: aging increases the priority of a waiting process, so its wait is bounded.</li><li>(B) True: under FCFS every process is served in arrival order, so the number of processes ahead of any one is fixed and finite.</li><li>(C) True: a steady stream of higher-priority work can postpone a low-priority process for ever — the classic case.</li><li>(D) False: deadlock is not a waiting-time problem. No amount of waiting releases a resource that is held in a cycle.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Why the other option is wrong.</b></p><ul><li>(D) confuses starvation with deadlock; the first is cured by fairness, the second only by breaking a cycle.</li></ul><p class=\"row\"><b>Common misconception.</b> Believing that a long enough wait fixes everything. For a starved process it may; for a deadlocked one it never will.</p><p class=\"row\"><b>Takeaway.</b> Aging and bounded waiting cure starvation. Only preemption, rollback or termination cure deadlock.</p>"
+  },
+  {
+   "id": "OS-U3-Q70",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Four processes share three resource types with 5, 4 and 3 instances. <code class=\"mm\">P₁</code> holds (1,0,1) and needs (1,1,0); <code class=\"mm\">P₂</code> holds (1,1,0) and needs (2,1,0); <code class=\"mm\">P₃</code> holds (1,1,1) and needs (1,2,0); <code class=\"mm\">P₄</code> holds (1,1,1) and needs (2,2,0). The available vector is (1,1,0). Which of the following are safe sequences? (Select all that apply.)",
+   "options": [
+    "⟨P₁, P₂, P₃, P₄⟩",
+    "⟨P₁, P₂, P₄, P₃⟩",
+    "⟨P₁, P₃, P₂, P₄⟩",
+    "⟨P₂, P₁, P₃, P₄⟩"
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A sequence is safe if, taking the processes in that order, each one's remaining need fits in the available vector at its turn, after which its whole allocation is added back.</p><p class=\"row\"><b>Step by step.</b> Start from available (1,1,0).</p><ol><li><code class=\"mm\">P₁</code> needs (1,1,0) and fits exactly — available becomes (1,1,0) + (1,0,1) = (2,1,1).</li><li><code class=\"mm\">P₂</code> needs (2,1,0), which fits in (2,1,1) — available becomes (2,1,1) + (1,1,0) = (3,2,1).</li><li>From (3,2,1) both <code class=\"mm\">P₃</code> (1,2,0) and <code class=\"mm\">P₄</code> (2,2,0) fit, so the last two can be taken in either order. Options (A) and (B) are safe.</li><li>Option (C) takes <code class=\"mm\">P₃</code> second: it needs 2 of B but only 1 is available at that point. Unsafe.</li><li>Option (D) takes <code class=\"mm\">P₂</code> first: it needs 2 of A but only 1 is available. Unsafe.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Why the other options are wrong.</b></p><ul><li>(C) fails at the second position — <code class=\"mm\">P₃</code> wants more B than is free.</li><li>(D) fails at the first position — <code class=\"mm\">P₂</code> wants more A than is free.</li></ul><p class=\"row\"><b>Common misconception.</b> Checking only whether each process can eventually finish, ignoring the order. Safety is about an order that works step by step.</p><p class=\"row\"><b>Takeaway.</b> Simulate the sequence position by position; a process that would be fine later may be impossible now.</p>"
+  },
+  {
+   "id": "OS-U3-Q71",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "four-conditions-resource-allocation-graph",
+   "subtopic": "four-conditions-resource-allocation-graph",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "<code class=\"mm\">R₁</code> has 4 instances, <code class=\"mm\">R₂</code> has 3 and <code class=\"mm\">R₃</code> has 2. <code class=\"mm\">P₁</code> holds 2 instances of <code class=\"mm\">R₁</code> and 1 of <code class=\"mm\">R₂</code>; <code class=\"mm\">P₂</code> holds 1 instance of <code class=\"mm\">R₁</code> and 1 of <code class=\"mm\">R₃</code>. No other instance is allocated. How many instances in the system are currently unallocated?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Instances are conserved: the unallocated count is the total number of instances minus the number of assignment edges in the graph. Each assignment edge consumes exactly one instance.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Total instances = 4 + 3 + 2 = 9.</li><li>Allocated = 2 + 1 (from <code class=\"mm\">P₁</code>) + 1 + 1 (from <code class=\"mm\">P₂</code>) = 5.</li><li>Unallocated = 9 − 5 = 4.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 instances (any integer value 4 is accepted).</span></p><p class=\"row\"><b>Common misconception.</b> Counting resource <i>types</i> instead of instances. Three types hold nine instances; the answer is not 3 − 2.</p><p class=\"row\"><b>Takeaway.</b> The available vector is simply total minus the column sums of the allocation matrix. Compute it that way, never by eye.</p>"
+  },
+  {
+   "id": "OS-U3-Q72",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Three processes share two resource types A and B with 6 and 5 instances. <code class=\"mm\">P₁</code> holds (1,2) and needs (1,1); <code class=\"mm\">P₂</code> holds (2,1) and needs (2,3); <code class=\"mm\">P₃</code> holds (1,0) and needs (2,2). The available vector is (2,2). <code class=\"mm\">P₂</code> now asks for <i>k</i> instances of B in a single request. What is the largest <i>k</i> for which the resulting state is still safe?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 1,
+   "answer_display": "1",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three tests again: the request must not exceed the remaining need, must not exceed availability, and the state after a pretend allocation must be safe. The claim limit alone is never the answer.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><i>k</i> is bounded by <code class=\"mm\">P₂</code>'s need of 3 units of B, and by the 2 free units of B.</li><li><i>k</i> = 1: available becomes (2,1) and <code class=\"mm\">P₂</code>'s need (2,2). <code class=\"mm\">P₁</code> (1,1) fits, releasing (1,2) to give (3,3); then <code class=\"mm\">P₂</code> fits, then <code class=\"mm\">P₃</code>. Safe.</li><li><i>k</i> = 2: available becomes (2,0) and the need (2,1). Nothing fits — <code class=\"mm\">P₁</code> wants 1 of B, <code class=\"mm\">P₂</code> wants 1 of B, <code class=\"mm\">P₃</code> wants 2 of B, and B is 0. Unsafe.</li><li><i>k</i> = 3 would exceed the available 2 units of B and could not be granted at all.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 3 because the remaining need is 3. The claim limit is an upper bound on what may be <i>asked</i>, not on what may be <i>granted</i>.</p><p class=\"row\"><b>Takeaway.</b> Take the minimum of three bounds: the remaining need, the available units, and the largest value that keeps the state safe.</p>"
+  },
+  {
+   "id": "OS-U3-Q73",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-detection-recovery",
+   "subtopic": "deadlock-detection-recovery",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Every resource type in a system has exactly one instance. The wait-for graph has the edges <code class=\"mm\">P₁ → P₂</code>, <code class=\"mm\">P₂ → P₃</code>, <code class=\"mm\">P₃ → P₁</code>, <code class=\"mm\">P₄ → P₃</code>, <code class=\"mm\">P₅ → P₆</code> and <code class=\"mm\">P₆ → P₅</code>. How many processes lie on a cycle in this graph?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 5,
+   "answer_display": "5",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With single-instance resources the wait-for graph is exact: a cycle is a deadlock. Identify every cycle, then count the distinct processes that lie on one.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">P₁ → P₂ → P₃ → P₁</code> is a 3-cycle: <code class=\"mm\">P₁, P₂, P₃</code>.</li><li><code class=\"mm\">P₅ → P₆ → P₅</code> is a 2-cycle: <code class=\"mm\">P₅, P₆</code>.</li><li><code class=\"mm\">P₄ → P₃</code> is an edge into the first cycle, not part of any cycle, so <code class=\"mm\">P₄</code> is not counted.</li><li>Distinct processes on a cycle: 3 + 2 = 5.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5.</span></p><p class=\"row\"><b>Common misconception.</b> Counting <code class=\"mm\">P₄</code> because it is blocked forever too. The question asks for cycle membership; a process that merely waits on a cycle is blocked, but it is not on the cycle.</p><p class=\"row\"><b>Takeaway.</b> Read the question's exact wording: \"on a cycle\" and \"blocked\" are different counts, and both appear in GATE papers.</p>"
+  },
+  {
+   "id": "OS-U3-Q74",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "deadlock-prevention-avoidance-bankers",
+   "subtopic": "deadlock-prevention-avoidance-bankers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A system has three processes and three resource types, with 2 instances of A, 2 of B and 2 of C. <code class=\"mm\">P₁</code> holds (0,1,1) and needs (2,0,0); <code class=\"mm\">P₂</code> has been allocated nothing yet and needs (2,1,0); <code class=\"mm\">P₃</code> holds (2,0,1) and needs (0,2,0). The available vector is (0,1,0). What is the smallest number of additional instances of resource A that must be added so that a safe sequence exists?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 2,
+   "answer_display": "2",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A safe sequence exists when some process's remaining need can be met, releasing its allocation and repeating. Adding instances enlarges the available vector, and the question asks for the smallest enlargement that makes the first step possible.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>With 0 extra: available (0,1,0). <code class=\"mm\">P₁</code> and <code class=\"mm\">P₂</code> each want 2 of A with none free, and <code class=\"mm\">P₃</code> wants 2 of B with only 1 free. Unsafe.</li><li>With 1 extra: available (1,1,0). Still nothing fits — both A-needers want 2, and <code class=\"mm\">P₃</code> still wants 2 of B.</li><li>With 2 extra: available (2,1,0). <code class=\"mm\">P₁</code> (2,0,0) fits, releasing (0,1,1) to give (2,2,1).</li><li><code class=\"mm\">P₂</code> (2,1,0) fits, releasing nothing, so the work vector stays (2,2,1).</li><li><code class=\"mm\">P₃</code> (0,2,0) fits. Safe.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 1 because a process becomes satisfiable — it does not: with one extra A the available vector is (1,1,0) and both A-needers still want 2 units.</p><p class=\"row\"><b>Takeaway.</b> Find the smallest remaining need on the scarce resource, add exactly enough to meet it, then confirm that the rest of the sequence follows.</p>"
+  },
+  {
+   "id": "OS-U3-Q75",
+   "unit": 3,
+   "unit_number": 3,
+   "unit_slug": "deadlocks",
+   "unit_name": "Deadlocks",
+   "topic": "Deadlocks",
+   "sub": "starvation-vs-deadlock",
+   "subtopic": "starvation-vs-deadlock",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A readers-writers solution gives readers preference: a writer waits until no reader is inside the critical section, and a waiting writer never delays a new reader. From <code class=\"mm\">t = 0</code> a writer waits, and readers arrive so that at least one reader is inside the critical section for the whole of the next 500 seconds. How many times does the writer enter its critical section during those 500 seconds?<br/>(Enter an integer.)",
+   "options": [],
+   "answer": 0,
+   "answer_display": "0",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Reader preference gives readers priority over any waiting writer. The writer's entry condition — no reader inside — is therefore never satisfied while readers keep arriving.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The writer can enter only when the reader count is zero and no new reader is admitted ahead of it.</li><li>Reader preference explicitly allows a new reader to enter even while a writer waits.</li><li>Since at least one reader is inside for the entire interval, the count never reaches zero.</li><li>So the writer's condition never becomes true and it enters 0 times — indefinite postponement, that is, starvation.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the writer must eventually get a turn. Under reader preference there is no bound on the number of readers that may pass a waiting writer, so no turn is guaranteed.</p><p class=\"row\"><b>Takeaway.</b> Preference rules decide who starves. Readers-preference starves writers; writers-preference starves readers; a fair solution bounds the wait for both.</p>"
   }
  ]
 }
