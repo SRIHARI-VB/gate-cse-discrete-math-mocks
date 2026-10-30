@@ -7,34 +7,102 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 6 — Application Layer & Network Security, Set 1 of 2**, 2026-10-31 →
-  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
+- **Databases · Unit 4 — Transactions & Concurrency Control, Set 2 of 2**, 2026-10-31 →
+  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DNS hierarchy & resolution (6) · HTTP, HTTPS, SMTP & FTP (7) · symmetric, asymmetric & RSA (7) ·
-  digital signatures & firewalls (5)
-- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Operating Systems**, which had
-  already produced a paper dated 2026-10-31 earlier the same day; rather than ship a second Operating Systems paper
-  on the same date, one documented re-draw excluding that subject was taken and gave **Computer Networks**. The most
-  recent run for the subject was `{2026-10-30, run 10, unit 5, transport-layer, Set 2 of 2}`. Unit 5 held **50**
-  questions, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(transport-layer) = 4 + 1) mod 6 = 5` → **Unit 6 — Application Layer & Network Security**. Unit 6 held
-  **0** questions, so this is its **Set 1 of 2** and it now holds **25**. No override, no partial set.
-- This unit had no earlier current paper, so nothing was archived; the unit folder holds exactly one paper and the
-  repository root holds no copy.
-- Previous test: **Operating Systems · Unit 5 — Virtual Memory & Page Replacement, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`operating-systems/virtual-memory/gate_os_mock_5_2026-10-31.html`](operating-systems/virtual-memory/gate_os_mock_5_2026-10-31.html)
+- Subtopics: ACID properties (5) · schedules, serializability, conflict & view (5) · recoverability &
+  cascadelessness (5) · 2PL, strict & rigorous locking (5) · timestamp ordering & deadlocks (5)
+- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Databases**, whose most recent run
+  is `{2026-10-30, run 6, unit 4, transactions-concurrency, Set 1 of 2}`. Unit 4 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
+  same unit ran again: **Set 2 of 2**. Unit 4 now holds exactly **50** and closes; the next Databases run advances
+  `(3 + 1) mod 5 = 4` → Unit 5, Indexing, B-Trees & Storage. No override, no partial set.
+- The paper that held this unit (`gate_db_mock_4_2026-10-30.html`, Set 1 of 2) moved to
+  `databases/transactions-concurrency/archive/gate_db_mock_4_2026-10-30_run1.html` with its content frozen, so the
+  unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Computer Networks · Unit 6 — Application Layer & Network Security, Set 1 of 2**, 2026-10-31 →
+  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 123 (20 Discrete Mathematics, 8 Algorithms, 7 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
-| Current papers / archived sets | 58 current · 65 archived |
-| Test cards on the portal | 74 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 124 (20 Discrete Mathematics, 8 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
+| Current papers / archived sets | 58 current · 66 archived |
+| Test cards on the portal | 75 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3075 (500 Discrete Mathematics, 200 Algorithms, 175 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
+| Questions in the subject banks | 3100 (500 Discrete Mathematics, 200 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 65 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 3 Databases, 3 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 66 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 3 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Databases Unit 4, Set 2 of 2
+
+- New paper at `databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html`. The paper that held this unit
+  (`gate_db_mock_4_2026-10-30.html`, Set 1 of 2) was moved to
+  `databases/transactions-concurrency/archive/gate_db_mock_4_2026-10-30_run1.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the eleven GATE CSE subjects gave
+  **Databases**. `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 6, unit 4,
+  transactions-concurrency, Set 1 of 2}`. Unit 4 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had
+  been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the same unit ran again: **Set 2 of
+  2**. Unit 4 now holds exactly **50** questions and closes; the next Databases run advances
+  `(index_of(transactions-concurrency) = 3 + 1) mod 5 = 4` → Unit 5, Indexing, B-Trees & Storage. No override, no
+  unit above 50, no partial set, no second pass for this subject.
+- Coverage: all five Unit 4 subtopics, five questions each — ACID properties; schedules, serializability,
+  conflict & view; recoverability & cascadelessness; 2PL, strict & rigorous locking; timestamp ordering & deadlocks.
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in
+  60 minutes.
+- Every question carries `data-subject="databases"`, `data-unit="transactions-concurrency"`,
+  `data-unit-number="4"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on all 175 banked cards in the Question Bank tab.
+- All 25 ids are new (`DB-U4-Q26` … `DB-U4-Q50`); no id and no normalised stem collides with the 25 Set 1 items or
+  with the 150 other banked Databases items. The subject bank now holds **200** questions and the paper's Question
+  Bank tab shows the 175 that are not on it, so the active set does not reappear in the bank tab.
+- Set 1 covered the definition of each ACID property, conflict and view serializability in outline, the
+  recoverable and cascadeless definitions, basic 2PL and lock sequences, and the basic timestamp-ordering rejection
+  rules. This set takes other ground: which property demands an undo; forcing the log at commit as the durability
+  mechanism; steal-and-force as the undo-without-redo policy; write-ahead logging, durable commit records and
+  isolation in practice in MSQ; counting redone transactions from a deferred-update log; the non-conflicting
+  R–R pair; a precedence graph read off four operations; view serializability and its NP-completeness; a blind-write
+  schedule that is view- but not conflict-serializable; counting the edges of a precedence graph; the exact
+  non-recoverable pattern; strict ⊂ cascadeless ⊂ recoverable; a dirty read whose reader commits first; the nesting
+  of the three classes; a cascading-rollback count; strict 2PL lock release; which protocol gives both serializability
+  and no cascades; rigorous and conservative 2PL in MSQ; upgrades in the growing phase and downgrades in the
+  shrinking phase; disjoint cycles as the number of victims; timestamp assignment at start; deadlock freedom without
+  waiting; wait–die from the older transaction's side; Thomas's write rule and the missing recoverability guarantee
+  in MSQ; and a six-operation timestamp-ordering trace.
+- Every numeric answer was recomputed by script, not by hand: the deferred-update log redoes **2** transactions (T1
+  and T3; T2 has no commit record); the precedence graph of `r1(X); w2(X); r2(Y); w3(Y); w1(Y)` has **4** edges
+  (T1→T2, T2→T3, T2→T1, T3→T1); the abort of T1 in `r1(X); w1(X); r2(X); r1(Y); w2(Y)` rolls back **2**
+  transactions; **2** victims break the two disjoint wait-for cycles; and the timestamp-ordering trace
+  `r1(X); w3(X); r2(X); w2(Y); r1(Y); w3(Y)` rejects **2** operations (r2(X) and r1(Y)).
+- The correct option is spread 5 A / 4 B / 3 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, C, D),
+  (B, C, D), (A, B), (A, B, D) and (A, B, C).
+- Source tags: 8 `STANDARD_TEXTBOOK`, 17 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` holds one
+  Databases entry, `PYQ-GATE2014S3-Q30`, which belongs to Unit 1; no transactions or concurrency-control
+  previous-year question has been verified against an official paper and answer key, so nothing in this paper is
+  called an official GATE question and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Operating Systems
+  Unit 5 paper of 2026-10-31. The `<style>` block (13,243 bytes) and the exam `<script>` (9,445 bytes) are
+  **byte-identical** to that paper, the `:root` block still matches `design-tokens.css` and `index.html` byte for
+  byte, and the 40 hex values outside `:root` are exactly the donor's 40 (the documented known deviation), so no new
+  raw hex was introduced.
+- The bank-tab renderer was re-validated before use: the 175 non-active cards are rebuilt from `master_bank.json`,
+  including the 100 Unit 1–3 entries that carry no `question_html` and are rendered from their `question` text and
+  `options` list.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 ×
+  "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 175 bank cards under four unit
+  accordions plus the single line for Unit 5, the Answer Key tab disabled, every active `.sol` empty and hidden, no
+  `ansline` text in the question pane before submit (the only match before the bank tab is the CSS rule), and a
+  payload that decodes to 25 answers and 25 solutions whose display strings agree with the stored answer sets.
+- Portal: one new card at the head of `tests` — Databases · Unit 4 · 2026-10-31 — with the frozen 2026-10-30 Set 1
+  as its earlier set; the 2026-10-30 card now points at `archive/gate_db_mock_4_2026-10-30_run1.html`.
+  `data/questions-databases.js` grew to 200 records and the header counters were recomputed to **75 test cards** and
+  **3100 solved questions**.
+- Hygiene: the paper is filed at exactly one path, `databases/transactions-concurrency/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (58 current and 66 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-31 — Computer Networks Unit 6, Set 1 of 2
 
@@ -1580,6 +1648,15 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-31, Databases → Unit 4 (Transactions & Concurrency Control), Set 2 of 2.**
+  MODE A: an unseeded `secrets.choice` over the eleven-subject list gave **Databases**. Most recent run in `runs[]`
+  was `{2026-10-30, run 6, unit 4, transactions-concurrency, Set 1 of 2}`. Unit 4 held 25 questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
+  same unit ran again: Set 2 of 2. Unit 4 now holds exactly **50** questions and closes; the next Databases run
+  advances `(3 + 1) mod 5 = 4` → Unit 5, Indexing, B-Trees & Storage. The 175 solved items shown in the Question
+  Bank tab are everything banked except this paper's own 25. No override, no unit above 50, no partial set, no
+  second pass for this subject.
 
 - **2026-10-30, Algorithms → Unit 4 (Dynamic Programming), Set 2 of 2.**
   MODE A: an unseeded `secrets.choice` over the eleven-subject list gave **Algorithms**. Most recent run in `runs[]`
@@ -5733,7 +5810,7 @@ Algorithms:
 | 1 | ER Models & Relational Algebra | `er-relational-algebra` | 50 | yes |
 | 2 | SQL & Advanced Querying | `sql-querying` | 50 | yes |
 | 3 | Database Normalization | `normalization` | 50 | yes |
-| 4 | Transactions & Concurrency Control | `transactions-concurrency` | 25 | yes |
+| 4 | Transactions & Concurrency Control | `transactions-concurrency` | 50 | yes |
 | 5 | Indexing, B-Trees & Storage | `indexing-storage` | 0 | — |
 
 ### Compiler Design

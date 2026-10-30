@@ -183,9 +183,9 @@ footer.foot p{margin:6px 0}
   <div id="view-tests">
     <div class="banner info"><b>Test series portal.</b> One 25-question mock test per day on a rotating unit order; every test is a single self-contained HTML file that opens offline with a question palette, a running timer and answers locked until submission.</div>
     <div class="meta-strip">
-      <span class="chip"><b>68</b> units in the series &middot; <b>73</b> test cards</span>
-      <span class="chip"><b>3050</b> solved questions in the review archive</span>
-      <span class="chip"><b>3050</b> records in the subject banks</span>
+      <span class="chip"><b>68</b> units in the series &middot; <b>75</b> test cards</span>
+      <span class="chip"><b>200</b> solved questions in the review archive</span>
+      <span class="chip"><b>200</b> records in the subject banks</span>
       <span class="chip">Syllabus covered: 68 units &middot; 293 subtopics</span>
     </div>
     <div class="grid2" id="testList"></div>
@@ -202,6 +202,35 @@ footer.foot p{margin:6px 0}
 
 <script id="data" type="text/plain">{
  "tests": [
+  {
+   "date": "2026-10-31",
+   "subject": "databases",
+   "subject_name": "Databases",
+   "unit": 4,
+   "unit_name": "Transactions & Concurrency Control",
+   "questions": 25,
+   "duration": 60,
+   "marks": 35,
+   "easy": 10,
+   "medium": 10,
+   "hard": 5,
+   "subtopics": [
+    "ACID properties",
+    "Schedules, serializability, conflict &amp; view",
+    "Recoverability &amp; cascadelessness",
+    "2PL, strict &amp; rigorous locking",
+    "Timestamp ordering &amp; deadlocks"
+   ],
+   "path": "databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html",
+   "set": "Set 2 of 2",
+   "archives": [
+    {
+     "date": "2026-10-30",
+     "label": "Set 1",
+     "path": "databases/transactions-concurrency/archive/gate_db_mock_4_2026-10-30_run1.html"
+    }
+   ]
+  },
   {
    "date": "2026-10-31",
    "subject": "computer-networks",
@@ -2186,7 +2215,7 @@ footer.foot p{margin:6px 0}
     "Two-phase locking: 2PL, strict & rigorous",
     "Timestamp ordering & deadlocks"
    ],
-   "path": "databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html",
+   "path": "databases/transactions-concurrency/archive/gate_db_mock_4_2026-10-30_run1.html",
    "set": "Set 1 of 2",
    "archives": []
   }
