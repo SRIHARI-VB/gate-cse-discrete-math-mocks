@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 275,
+  "total_questions": 300,
   "units_with_questions": [
    1,
    2,
@@ -14,7 +14,7 @@
    4,
    5
   ],
-  "total_runs": 11
+  "total_runs": 12
  },
  "runs": [
   {
@@ -683,6 +683,64 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full syllabus list of eleven and an unseeded secrets.choice gave Compiler Design. compiler-design/question-bank/master_bank.json read back runs[] sorted by (date, run) as {date 2026-10-30, run 10, unit 5, runtime-code-optimization, Set 2 of 2}. Unit 5 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B4 advanced (index_of(runtime-code-optimization) = 4 + 1) mod 5 = 0 -> Unit 1, Lexical Analysis. Every unit of Compiler Design is at the cap, so the modulo wrapped and a second pass over the subject began, as Section 1.B5 requires. No override was used and no unit exceeds 50 questions.",
    "note": "Second pass, Set 1 of 2 for Compiler Design Unit 1. The superseded current paper moved to archive/gate_cd_mock_1_2026-10-26_run2.html with its content frozen, so the unit folder holds exactly one current paper. 25 new questions (CD-U1-Q51..Q75), none repeating any of the 50 first-pass items; all four subtopics are represented (7 tokens/lexemes/patterns, 6 regular expressions to lexers, 6 Lex input structure, 6 input buffering and lookahead). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15x1 + 10x2 = 35. Unit 1 now holds 75 questions across two passes. No GATE_PYQ_VARIATION item: verified_pyqs is empty for Compiler Design, so nothing on this paper is claimed as an official GATE question."
+  },
+  {
+   "run": 12,
+   "date": "2026-10-30",
+   "subject": "compiler-design",
+   "subject_name": "Compiler Design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "set": "Set 1 of 2 (second pass)",
+   "file": "compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "question_ids": [
+    "CD-U2-Q51",
+    "CD-U2-Q52",
+    "CD-U2-Q53",
+    "CD-U2-Q54",
+    "CD-U2-Q55",
+    "CD-U2-Q56",
+    "CD-U2-Q57",
+    "CD-U2-Q58",
+    "CD-U2-Q59",
+    "CD-U2-Q60",
+    "CD-U2-Q61",
+    "CD-U2-Q62",
+    "CD-U2-Q63",
+    "CD-U2-Q64",
+    "CD-U2-Q65",
+    "CD-U2-Q66",
+    "CD-U2-Q67",
+    "CD-U2-Q68",
+    "CD-U2-Q69",
+    "CD-U2-Q70",
+    "CD-U2-Q71",
+    "CD-U2-Q72",
+    "CD-U2-Q73",
+    "CD-U2-Q74",
+    "CD-U2-Q75"
+   ],
+   "subtopics": [
+    "first-and-follow-sets",
+    "ll1-parsing-tables",
+    "recursive-descent-parsers",
+    "left-recursion-and-factoring"
+   ],
+   "selection": "MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject list with an unseeded secrets.choice and gave Compiler Design. runs[] sorted by (date, run) gives the most recent paper as {2026-10-30, run 11, unit 1, lexical-analysis, Set 1 of 2 (second pass)}. Unit 1 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(lexical-analysis) = 0 + 1) mod 5 = 1 -> Unit 2, Syntax Analysis: Top-Down Parsing. Every unit of the subject is at or above the cap, so step B5 applies: the second pass continues and Unit 2 receives its first set of that pass (its third set overall, now 75 questions). No override; no partial set."
   }
  ],
  "verified_pyqs": [],
@@ -9909,6 +9967,860 @@
    "answer": 2,
    "answer_display": "2",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Count the buffer boundaries the token has to cross. The token occupies offsets 1000 to 1000 + 1500 − 1 = 2499, and the halves are 0–1023, 1024–2047, 2048–3071, and so on.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The token starts at offset 1000, inside the first half (0–1023).</li><li>The sentinel at the end of the first half is reached at offset 1024: first switch, into the second half (1024–2047).</li><li>The sentinel at the end of the second half is reached at offset 2048: second switch, back to the first half, refilled with 2048–3071.</li><li>The token ends at offset 2499, which is inside that third block, so no further switch occurs. Total: 2 switches.</li></ol><p class=\"row\"><b>Final answer.</b> 2 buffer switches.</p><p class=\"row\"><b>Common misconception.</b> Counting the halves the token touches (three blocks) instead of the boundaries between them (two). A token that lies in three blocks crosses two sentinels.</p>"
+  },
+  {
+   "id": "CD-U2-Q51",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The set FIRST(A) is defined for a nonterminal A. Which one of the following states exactly what x ∈ FIRST(A) means, where x is a terminal?",
+   "question_html": "<p class=\"qtext\">The set <code class=\"mm\">FIRST(A)</code> is defined for a nonterminal <code class=\"mm\">A</code>. Which one of the following states exactly what <code class=\"mm\">x ∈ FIRST(A)</code> means, where <code class=\"mm\">x</code> is a terminal?</p>",
+   "options": [
+    "A ⇒* x γ for some (possibly empty) string γ of grammar symbols.",
+    "A ⇒* γ x for some (possibly empty) string γ of grammar symbols.",
+    "x ⇒* A γ for some (possibly empty) string γ of grammar symbols.",
+    "A ⇒* x, and x must be the last symbol of the derived string."
+   ],
+   "options_html": [
+    "<code class=\"mm\">A ⇒* x γ</code> for some (possibly empty) string <code class=\"mm\">γ</code> of grammar symbols.",
+    "<code class=\"mm\">A ⇒* γ x</code> for some (possibly empty) string <code class=\"mm\">γ</code> of grammar symbols.",
+    "<code class=\"mm\">x ⇒* A γ</code> for some (possibly empty) string <code class=\"mm\">γ</code> of grammar symbols.",
+    "<code class=\"mm\">A ⇒* x</code>, and <code class=\"mm\">x</code> must be the last symbol of the derived string."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> <code class=\"mm\">FIRST(A)</code> collects the terminals that can begin a string derived from <code class=\"mm\">A</code>, together with <code class=\"mm\">ε</code> when <code class=\"mm\">A</code> can derive the empty string. The quantifier is \"some derivation, some suffix\", never \"every derivation\".</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A ⇒* x γ</code> says: from <code class=\"mm\">A</code> one can derive a string whose first symbol is <code class=\"mm\">x</code>. That is precisely the definition.</li><li>Option (B) says <code class=\"mm\">x</code> is the <i>last</i> symbol. That is the shape of a FOLLOW set, not a FIRST set.</li><li>Option (C) reverses the derivation arrow, so it says <code class=\"mm\">x</code> derives something containing <code class=\"mm\">A</code>; that is not a statement about <code class=\"mm\">A</code> at all.</li><li>Option (D) demands that nothing follow <code class=\"mm\">x</code>. That is too strong: for <code class=\"mm\">A → a B</code>, <code class=\"mm\">a ∈ FIRST(A)</code> even though <code class=\"mm\">B</code> follows.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Reading FIRST as \"the symbols that can appear somewhere in a string derived from <code class=\"mm\">A</code>\". FIRST is only about the leftmost position; symbols in the middle or at the end belong to FIRST of other symbols or to FOLLOW.</p>"
+  },
+  {
+   "id": "CD-U2-Q52",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "For three nonterminals of a grammar, FIRST(A) = {a, ε}, FIRST(B) = {b, ε} and FIRST(C) = {c, d}. Which one of the following is FIRST(A B C)?",
+   "question_html": "<p class=\"qtext\">For three nonterminals of a grammar, <code class=\"mm\">FIRST(A) = {a, ε}</code>, <code class=\"mm\">FIRST(B) = {b, ε}</code> and <code class=\"mm\">FIRST(C) = {c, d}</code>. Which one of the following is <code class=\"mm\">FIRST(A B C)</code>?</p>",
+   "options": [
+    "{a, b, c, d, ε}",
+    "{a, b, c}",
+    "{a, b, c, d}",
+    "{a, b, c, d, $}"
+   ],
+   "options_html": [
+    "<code class=\"mm\">{a, b, c, d, ε}</code>",
+    "<code class=\"mm\">{a, b, c}</code>",
+    "<code class=\"mm\">{a, b, c, d}</code>",
+    "<code class=\"mm\">{a, b, c, d, $}</code>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> FIRST of a string is read left to right: take <code class=\"mm\">FIRST</code> of the first symbol, drop <code class=\"mm\">ε</code>, and continue with the next symbol only if the previous one is nullable. Add <code class=\"mm\">ε</code> to the result only if every symbol of the string is nullable.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">A</code> contributes <code class=\"mm\">a</code>. It is nullable, so the scan continues.</li><li><code class=\"mm\">B</code> contributes <code class=\"mm\">b</code>. It is nullable too, so the scan continues.</li><li><code class=\"mm\">C</code> contributes <code class=\"mm\">c</code> and <code class=\"mm\">d</code>. It is not nullable, so the scan stops and <code class=\"mm\">ε</code> is not added.</li><li>Union: <code class=\"mm\">{a} ∪ {b} ∪ {c, d} = {a, b, c, d}</code>.</li></ol><p class=\"row\"><b>Final answer.</b> <code class=\"mm\">{a, b, c, d}</code> — option (C).</p><p class=\"row\"><b>Common misconception.</b> Adding <code class=\"mm\">ε</code> because some symbol of the string is nullable. The whole string is nullable only when <i>every</i> symbol in it is, and <code class=\"mm\">C</code> is not.</p>"
+  },
+  {
+   "id": "CD-U2-Q53",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Consider the grammar S → A B | c, A → a | ε, B → b | ε. How many of the three nonterminals have $ in their FOLLOW set? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Consider the grammar <code class=\"mm\">S → A B | c</code>, <code class=\"mm\">A → a | ε</code>, <code class=\"mm\">B → b | ε</code>. How many of the three nonterminals have <code class=\"mm\">$</code> in their <code class=\"mm\">FOLLOW</code> set? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> <code class=\"mm\">$</code> enters <code class=\"mm\">FOLLOW(S)</code> because <code class=\"mm\">S</code> is the start symbol, and it spreads to other nonterminals only through nullable suffixes: if <code class=\"mm\">A</code> is followed in some right side by a string that can derive <code class=\"mm\">ε</code>, then <code class=\"mm\">FOLLOW</code> of the head flows into <code class=\"mm\">FOLLOW(A)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FOLLOW(S) = {$}</code> — the start symbol, and <code class=\"mm\">S</code> appears on no right side.</li><li>In <code class=\"mm\">S → A B</code>, <code class=\"mm\">A</code> is followed by <code class=\"mm\">B</code>, so <code class=\"mm\">FIRST(B) − {ε} = {b} ⊆ FOLLOW(A)</code>. Since <code class=\"mm\">B</code> is nullable, <code class=\"mm\">FOLLOW(S) ⊆ FOLLOW(A)</code> as well. Hence <code class=\"mm\">FOLLOW(A) = {b, $}</code>.</li><li><code class=\"mm\">B</code> ends the right side of <code class=\"mm\">S → A B</code>, so <code class=\"mm\">FOLLOW(S) ⊆ FOLLOW(B)</code>: <code class=\"mm\">FOLLOW(B) = {$}</code>.</li><li>All three sets contain <code class=\"mm\">$</code>: <code class=\"mm\">S</code>, <code class=\"mm\">A</code> and <code class=\"mm\">B</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 3.</p><p class=\"row\"><b>Common misconception.</b> Assuming <code class=\"mm\">$</code> belongs only to <code class=\"mm\">FOLLOW(S)</code>. Whenever the start symbol can be followed by a nullable run of symbols, <code class=\"mm\">$</code> reaches every nonterminal on that run.</p>"
+  },
+  {
+   "id": "CD-U2-Q54",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "FIRST and FOLLOW sets are computed by starting from empty sets and repeatedly applying the set rules until nothing changes. Which one of the following statements about that iteration is TRUE?",
+   "question_html": "<p class=\"qtext\">FIRST and FOLLOW sets are computed by starting from empty sets and repeatedly applying the set rules until nothing changes. Which one of the following statements about that iteration is TRUE?</p>",
+   "options": [
+    "A symbol added in one round can be removed in a later round once a production is found that does not derive it.",
+    "The final sets depend on the order in which the nonterminals are visited, so two different visiting orders can produce two different FIRST sets.",
+    "The iteration is guaranteed to stop only when the grammar is LL(1).",
+    "Every symbol added is justified by a rule applied to symbols already present, so the sets only grow, and because each set is finite the iteration must stop."
+   ],
+   "options_html": [
+    "A symbol added in one round can be removed in a later round once a production is found that does not derive it.",
+    "The final sets depend on the order in which the nonterminals are visited, so two different visiting orders can produce two different FIRST sets.",
+    "The iteration is guaranteed to stop only when the grammar is LL(1).",
+    "Every symbol added is justified by a rule applied to symbols already present, so the sets only grow, and because each set is finite the iteration must stop."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> FIRST and FOLLOW are the least fixed point of a monotone system: each rule has the form \"if these symbols are present, then add that one\". Adding symbols can only enable more additions, never disable them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>No rule removes a symbol, so option (A) is false: the sets are monotone non-decreasing.</li><li>Because the rules are monotone, any fair order of application reaches the same least fixed point. Order changes only how many rounds are needed, not the answer, so option (B) is false.</li><li>The sets are subsets of a finite universe — the grammar's terminals plus <code class=\"mm\">$</code>, plus <code class=\"mm\">ε</code> for FIRST — so a strictly growing chain cannot continue for ever. Termination does not depend on LL(1)-ness, so option (C) is false.</li><li>That is exactly the fixed-point argument: finite universe plus monotone rules gives termination at a unique least fixed point.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Believing that a grammar must be well behaved for FIRST and FOLLOW to be well defined. They are defined, and computable, for every context-free grammar, LL(1) or not.</p>"
+  },
+  {
+   "id": "CD-U2-Q55",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Consider the grammar S → A S | b, A → a, where S is the start symbol. Which one of the following is FOLLOW(S)?",
+   "question_html": "<p class=\"qtext\">Consider the grammar <code class=\"mm\">S → A S | b</code>, <code class=\"mm\">A → a</code>, where <code class=\"mm\">S</code> is the start symbol. Which one of the following is <code class=\"mm\">FOLLOW(S)</code>?</p>",
+   "options": [
+    "{$}",
+    "{a, b, $}",
+    "{b, $}",
+    "{a, b}"
+   ],
+   "options_html": [
+    "<code class=\"mm\">{$}</code>",
+    "<code class=\"mm\">{a, b, $}</code>",
+    "<code class=\"mm\">{b, $}</code>",
+    "<code class=\"mm\">{a, b}</code>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> <code class=\"mm\">FOLLOW(X)</code> holds the terminals that can appear immediately after <code class=\"mm\">X</code> in some sentential form, plus <code class=\"mm\">$</code> when <code class=\"mm\">X</code> is the start symbol. A nonterminal's own FIRST set is irrelevant to its FOLLOW set.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FIRST(S) = {a, b}</code>, because <code class=\"mm\">S ⇒ A S ⇒ a S</code> and <code class=\"mm\">S ⇒ b</code>. This is the trap, not the answer.</li><li>The only right side containing <code class=\"mm\">S</code> is <code class=\"mm\">A S</code>, and there <code class=\"mm\">S</code> is the <i>last</i> symbol. Nothing can follow it from that production.</li><li>No production of this grammar places any symbol after <code class=\"mm\">S</code>, so no terminal is added.</li><li><code class=\"mm\">S</code> is the start symbol, so <code class=\"mm\">$ ∈ FOLLOW(S)</code>. Hence <code class=\"mm\">FOLLOW(S) = {$}</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Copying <code class=\"mm\">FIRST(S)</code> into <code class=\"mm\">FOLLOW(S)</code> because <code class=\"mm\">S</code> appears on a right side. Appearance on a right side matters only through what stands <i>after</i> the occurrence — here, nothing.</p>"
+  },
+  {
+   "id": "CD-U2-Q56",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "first-and-follow-sets",
+   "subtopic": "first-and-follow-sets",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about FIRST and FOLLOW sets are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about FIRST and FOLLOW sets are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "If A is nullable and B is not, then FIRST(A B) = (FIRST(A) − {ε}) ∪ FIRST(B).",
+    "A nonterminal that is unreachable from the start symbol necessarily has an empty FOLLOW set.",
+    "No FOLLOW set ever contains ε.",
+    "FIRST sets are computed from the productions alone, without first checking which nonterminals are reachable from the start symbol.",
+    "Every nonterminal that has ε in its FIRST set also has ε in its FOLLOW set."
+   ],
+   "options_html": [
+    "If <code class=\"mm\">A</code> is nullable and <code class=\"mm\">B</code> is not, then <code class=\"mm\">FIRST(A B) = (FIRST(A) − {ε}) ∪ FIRST(B)</code>.",
+    "A nonterminal that is unreachable from the start symbol necessarily has an empty FOLLOW set.",
+    "No FOLLOW set ever contains <code class=\"mm\">ε</code>.",
+    "FIRST sets are computed from the productions alone, without first checking which nonterminals are reachable from the start symbol.",
+    "Every nonterminal that has <code class=\"mm\">ε</code> in its FIRST set also has <code class=\"mm\">ε</code> in its FOLLOW set."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> FIRST describes what a string can begin with and whether it can vanish; FOLLOW describes what can follow a nonterminal and always contains terminals and <code class=\"mm\">$</code> only. Both are purely syntactic — they are defined over the production list, not over reachability from the start symbol.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is the standard rule for a two-symbol string with a nullable first symbol: <code class=\"mm\">a</code> can begin the string, and so can anything that begins <code class=\"mm\">B</code>. The string is nullable only if <code class=\"mm\">B</code> is, and <code class=\"mm\">B</code> is not. TRUE.</li><li>(B) is false. FOLLOW is computed from every production, reachable or not: an unreachable nonterminal can inherit FOLLOW from productions of other nonterminals.</li><li>(C) is true by definition: FOLLOW contains terminals and <code class=\"mm\">$</code>, and <code class=\"mm\">ε</code> is a string, not a terminal.</li><li>(D) is true: FIRST and FOLLOW are defined for the grammar as written. Deleting useless symbols is a separate, later simplification.</li><li>(E) is false: nullable means <code class=\"mm\">ε ∈ FIRST</code>; FOLLOW never holds <code class=\"mm\">ε</code> at all.</li></ol><p class=\"row\"><b>Final answer.</b> (A), (C) and (D).</p><p class=\"row\"><b>Common misconception.</b> Treating FIRST and FOLLOW as semantic notions that need the grammar to be cleaned up first. They are syntactic fixed points over the productions, and they are defined even for grammars with useless symbols.</p>"
+  },
+  {
+   "id": "CD-U2-Q57",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A grammar has 6 nonterminals and 9 terminals, and its LL(1) parsing table has one row per nonterminal and one column per terminal. How many cells does the table have?",
+   "question_html": "<p class=\"qtext\">A grammar has 6 nonterminals and 9 terminals, and its LL(1) parsing table has one row per nonterminal and one column per terminal. How many cells does the table have?</p>",
+   "options": [
+    "54",
+    "60",
+    "55",
+    "15"
+   ],
+   "options_html": [
+    "54",
+    "60",
+    "55",
+    "15"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The LL(1) table <code class=\"mm\">M[A, a]</code> is indexed by nonterminals on the rows and by terminals <i>plus the end marker</i> <code class=\"mm\">$</code> on the columns.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Rows: one per nonterminal, so 6.</li><li>Columns: one per terminal, 9, plus the column for <code class=\"mm\">$</code>, which is needed for the <code class=\"mm\">ε</code>-entries of nullable nonterminals and for matching the end of input. That is 10.</li><li><code class=\"mm\">6 × 10 = 60</code> cells.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B), 60 cells.</p><p class=\"row\"><b>Common misconception.</b> Computing <code class=\"mm\">6 × 9 = 54</code> by forgetting the <code class=\"mm\">$</code> column. Without it there is nowhere to record that a nullable nonterminal may vanish at the end of the input.</p>"
+  },
+  {
+   "id": "CD-U2-Q58",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "In a grammar whose start symbol is S, the production S → ε is entered into which cell of the LL(1) parsing table?",
+   "question_html": "<p class=\"qtext\">In a grammar whose start symbol is <code class=\"mm\">S</code>, the production <code class=\"mm\">S → ε</code> is entered into which cell of the LL(1) parsing table?</p>",
+   "options": [
+    "M[S, ε], the column labelled ε.",
+    "M[S, $], but only if some other nonterminal can follow S.",
+    "Every cell of row S, because ε can begin nothing.",
+    "M[S, $], because $ is the only symbol in FOLLOW(S)."
+   ],
+   "options_html": [
+    "<code class=\"mm\">M[S, ε]</code>, the column labelled <code class=\"mm\">ε</code>.",
+    "<code class=\"mm\">M[S, $]</code>, but only if some other nonterminal can follow <code class=\"mm\">S</code>.",
+    "Every cell of row <code class=\"mm\">S</code>, because <code class=\"mm\">ε</code> can begin nothing.",
+    "<code class=\"mm\">M[S, $]</code>, because <code class=\"mm\">$</code> is the only symbol in <code class=\"mm\">FOLLOW(S)</code>."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A production <code class=\"mm\">A → α</code> goes into <code class=\"mm\">M[A, a]</code> for every <code class=\"mm\">a ∈ FIRST(α)</code>, and, when <code class=\"mm\">α</code> is nullable, also for every <code class=\"mm\">a ∈ FOLLOW(A)</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FIRST(ε) = {ε}</code>, so the FIRST rule contributes no terminal column.</li><li>The FOLLOW rule then places the production in every column named by <code class=\"mm\">FOLLOW(S)</code>.</li><li><code class=\"mm\">S</code> is the start symbol and appears on no right side, so <code class=\"mm\">FOLLOW(S) = {$}</code>.</li><li>Hence the single entry is <code class=\"mm\">M[S, $] = S → ε</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Looking for a column headed <code class=\"mm\">ε</code>. There is no such column: <code class=\"mm\">ε</code> is not a terminal, and a nullable production is reached through the FOLLOW set of its head.</p>"
+  },
+  {
+   "id": "CD-U2-Q59",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Consider the grammar S → A B, A → a | ε, B → b | ε. How many cells of its LL(1) parsing table contain an ε-production? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Consider the grammar <code class=\"mm\">S → A B</code>, <code class=\"mm\">A → a | ε</code>, <code class=\"mm\">B → b | ε</code>. How many cells of its LL(1) parsing table contain an <code class=\"mm\">ε</code>-production? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> An <code class=\"mm\">ε</code>-production for <code class=\"mm\">A</code> is written into exactly the cells <code class=\"mm\">M[A, a]</code> with <code class=\"mm\">a ∈ FOLLOW(A)</code>. So the count is the sum of <code class=\"mm\">|FOLLOW(A)|</code> over the nullable nonterminals <code class=\"mm\">A</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FOLLOW(S) = {$}</code>.</li><li><code class=\"mm\">FOLLOW(A)</code>: <code class=\"mm\">A</code> is followed by <code class=\"mm\">B</code>, so <code class=\"mm\">{b} ⊆ FOLLOW(A)</code>; <code class=\"mm\">B</code> is nullable, so <code class=\"mm\">FOLLOW(S) ⊆ FOLLOW(A)</code>. Hence <code class=\"mm\">{b, $}</code>, giving two cells: <code class=\"mm\">M[A, b]</code> and <code class=\"mm\">M[A, $]</code>.</li><li><code class=\"mm\">FOLLOW(B) = {$}</code>, giving one cell: <code class=\"mm\">M[B, $]</code>.</li><li><code class=\"mm\">2 + 1 = 3</code> cells.</li></ol><p class=\"row\"><b>Final answer.</b> 3.</p><p class=\"row\"><b>Common misconception.</b> Counting one cell per <code class=\"mm\">ε</code>-production, or placing the entries in the FIRST columns of the nonterminal. The FOLLOW set, not the FIRST set, decides where a nullable production lands.</p>"
+  },
+  {
+   "id": "CD-U2-Q60",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The grammar S → a A | a B, A → b, B → c is not LL(1). Which one of the following is the correct reason?",
+   "question_html": "<p class=\"qtext\">The grammar <code class=\"mm\">S → a A | a B</code>, <code class=\"mm\">A → b</code>, <code class=\"mm\">B → c</code> is not LL(1). Which one of the following is the correct reason?</p>",
+   "options": [
+    "Because A and B each derive a single terminal, so no lookahead can tell them apart.",
+    "Because FOLLOW(A) and FOLLOW(B) both contain $.",
+    "Because both alternatives of S begin with a, so both are entered in the single cell M[S, a].",
+    "Because the grammar has no ε-production, so row S is left empty."
+   ],
+   "options_html": [
+    "Because <code class=\"mm\">A</code> and <code class=\"mm\">B</code> each derive a single terminal, so no lookahead can tell them apart.",
+    "Because <code class=\"mm\">FOLLOW(A)</code> and <code class=\"mm\">FOLLOW(B)</code> both contain <code class=\"mm\">$</code>.",
+    "Because both alternatives of <code class=\"mm\">S</code> begin with <code class=\"mm\">a</code>, so both are entered in the single cell <code class=\"mm\">M[S, a]</code>.",
+    "Because the grammar has no <code class=\"mm\">ε</code>-production, so row <code class=\"mm\">S</code> is left empty."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> An LL(1) table cell may hold at most one production. A conflict means that the lookahead token alone does not decide which alternative to take.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FIRST(a A) = {a}</code> and <code class=\"mm\">FIRST(a B) = {a}</code>.</li><li>Both rules therefore write into <code class=\"mm\">M[S, a]</code>, which ends up holding <code class=\"mm\">S → a A</code> and <code class=\"mm\">S → a B</code>.</li><li>The two alternatives share the one-symbol prefix <code class=\"mm\">a</code>; the parser would have to read past <code class=\"mm\">a</code> to choose, which is exactly what one token of lookahead cannot do.</li><li>The conflict is removed by left factoring: <code class=\"mm\">S → a S′</code>, <code class=\"mm\">S′ → A | B</code>, which is LL(1).</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Blaming the shared FOLLOW sets. FOLLOW plays no part here: neither alternative is nullable, so the FOLLOW rule adds nothing and the whole conflict comes from FIRST.</p>"
+  },
+  {
+   "id": "CD-U2-Q61",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about the LL(1) parsing table are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about the LL(1) parsing table are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "A cell may hold two entries only if the grammar is not LL(1).",
+    "If some cell of the table holds two entries, then the grammar is ambiguous.",
+    "The table is built from the FIRST and FOLLOW sets alone; no parse tree has to be constructed.",
+    "In the table of an LL(1) grammar every cell of every row is non-empty."
+   ],
+   "options_html": [
+    "A cell may hold two entries only if the grammar is not LL(1).",
+    "If some cell of the table holds two entries, then the grammar is ambiguous.",
+    "The table is built from the FIRST and FOLLOW sets alone; no parse tree has to be constructed.",
+    "In the table of an LL(1) grammar every cell of every row is non-empty."
+   ],
+   "answer": [
+    0,
+    2
+   ],
+   "answer_display": "Options (A) and (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The table is a two-dimensional lookup built mechanically from FIRST and FOLLOW. LL(1)-ness is exactly the absence of multi-entry cells.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true by the definition of LL(1): at most one production per cell is the whole condition.</li><li>(B) is false. A conflict means the grammar cannot be parsed with one token of lookahead, which is a weaker failure than ambiguity. The dangling-else grammar has a conflict in <code class=\"mm\">M[S′, e]</code> and is still unambiguous.</li><li>(C) is true: the construction walks the productions once, using <code class=\"mm\">FIRST(α)</code> and, for nullable <code class=\"mm\">α</code>, <code class=\"mm\">FOLLOW(A)</code>.</li><li>(D) is false. Most cells are empty; for the grammar of the expression nonterminals, row <code class=\"mm\">E</code> has entries only under <code class=\"mm\">id</code> and <code class=\"mm\">(</code>.</li></ol><p class=\"row\"><b>Final answer.</b> (A) and (C).</p><p class=\"row\"><b>Common misconception.</b> Equating \"not LL(1)\" with \"ambiguous\". Not LL(1) only says one token of lookahead is insufficient; the grammar may still have exactly one parse tree per string.</p>"
+  },
+  {
+   "id": "CD-U2-Q62",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Consider the grammar S → A B, A → a | ε, B → b | ε, in which both A and B are nullable. Which one of the following statements is TRUE?",
+   "question_html": "<p class=\"qtext\">Consider the grammar <code class=\"mm\">S → A B</code>, <code class=\"mm\">A → a | ε</code>, <code class=\"mm\">B → b | ε</code>, in which both <code class=\"mm\">A</code> and <code class=\"mm\">B</code> are nullable. Which one of the following statements is TRUE?</p>",
+   "options": [
+    "It is not LL(1), because a nullable nonterminal always creates a conflict.",
+    "It is not LL(1), because the cell M[S, b] receives both S → A B and B → b.",
+    "It is LL(1): every cell of its table holds at most one entry, even though both A and B are nullable.",
+    "It is LL(1), but only after the two ε-productions are deleted from the grammar."
+   ],
+   "options_html": [
+    "It is not LL(1), because a nullable nonterminal always creates a conflict.",
+    "It is not LL(1), because the cell <code class=\"mm\">M[S, b]</code> receives both <code class=\"mm\">S → A B</code> and <code class=\"mm\">B → b</code>.",
+    "It is LL(1): every cell of its table holds at most one entry, even though both <code class=\"mm\">A</code> and <code class=\"mm\">B</code> are nullable.",
+    "It is LL(1), but only after the two <code class=\"mm\">ε</code>-productions are deleted from the grammar."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Nullability is not a defect. A nullable nonterminal merely spreads its entries over its FOLLOW set, and the grammar stays LL(1) as long as no cell ends up with two entries.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">FOLLOW(S) = {$}</code>; <code class=\"mm\">FOLLOW(A) = {b, $}</code>; <code class=\"mm\">FOLLOW(B) = {$}</code>.</li><li>Row <code class=\"mm\">S</code>: <code class=\"mm\">FIRST(A B) = {a, b, ε}</code>, so <code class=\"mm\">S → A B</code> goes into <code class=\"mm\">M[S, a]</code>, <code class=\"mm\">M[S, b]</code> and <code class=\"mm\">M[S, $]</code>. One entry in each.</li><li>Row <code class=\"mm\">A</code>: <code class=\"mm\">A → a</code> in <code class=\"mm\">M[A, a]</code>; <code class=\"mm\">A → ε</code> in <code class=\"mm\">M[A, b]</code> and <code class=\"mm\">M[A, $]</code>.</li><li>Row <code class=\"mm\">B</code>: <code class=\"mm\">B → b</code> in <code class=\"mm\">M[B, b]</code>; <code class=\"mm\">B → ε</code> in <code class=\"mm\">M[B, $]</code>.</li><li>Eight non-empty cells, none with two entries. In particular <code class=\"mm\">M[S, b]</code> holds only <code class=\"mm\">S → A B</code>: <code class=\"mm\">B → b</code> is a production of <code class=\"mm\">B</code> and can only ever be entered in row <code class=\"mm\">B</code>.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Believing that a nullable nonterminal forces a conflict, or that a production of <code class=\"mm\">B</code> can be written into row <code class=\"mm\">S</code>. Entries live in the row of the production's head.</p>"
+  },
+  {
+   "id": "CD-U2-Q63",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "ll1-parsing-tables",
+   "subtopic": "ll1-parsing-tables",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about LL(1) grammars are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about LL(1) grammars are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "No grammar that is left recursive can be LL(1).",
+    "Every LL(1) grammar is unambiguous.",
+    "If a language has an LL(1) grammar, then every grammar for that language is LL(1).",
+    "Every grammar that is not LL(1) can be rewritten into an LL(1) grammar for the same language."
+   ],
+   "options_html": [
+    "No grammar that is left recursive can be LL(1).",
+    "Every LL(1) grammar is unambiguous.",
+    "If a language has an LL(1) grammar, then every grammar for that language is LL(1).",
+    "Every grammar that is not LL(1) can be rewritten into an LL(1) grammar for the same language."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> LL(1)-ness is a property of a grammar, not of a language. It implies unambiguity, but it is not implied by unambiguity, and it is not preserved by arbitrary re-grammaring.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true. With <code class=\"mm\">A → A α | β</code>, the alternative <code class=\"mm\">A α</code> begins with a symbol that derives <code class=\"mm\">A</code> again, so <code class=\"mm\">FIRST(A α)</code> and <code class=\"mm\">FIRST(β)</code> cannot be kept apart; a top-down parser would recurse on <code class=\"mm\">A</code> for ever. Left recursion must be removed first.</li><li>(B) is true: an LL(1) parser produces exactly one leftmost derivation for each accepted string, so two distinct parse trees are impossible.</li><li>(C) is false. The classic expression language has the LL(1) grammar <code class=\"mm\">E → T E′</code>, <code class=\"mm\">E′ → + T E′ | ε</code> and the non-LL(1) grammar <code class=\"mm\">E → E + T | T</code>.</li><li>(D) is false. Not every context-free language has an LL(1) grammar — a language with an inherently ambiguous grammar, or one needing unbounded lookahead, is a counterexample.</li></ol><p class=\"row\"><b>Final answer.</b> (A) and (B).</p><p class=\"row\"><b>Common misconception.</b> Swapping \"LL(1) implies unambiguous\" for its converse. Unambiguous grammars can still fail LL(1), for example when two alternatives share a prefix.</p>"
+  },
+  {
+   "id": "CD-U2-Q64",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A table-driven predictive parser for a grammar with start symbol S begins with which stack contents?",
+   "question_html": "<p class=\"qtext\">A table-driven predictive parser for a grammar with start symbol <code class=\"mm\">S</code> begins with which stack contents?</p>",
+   "options": [
+    "An empty stack.",
+    "S with $ beneath it, so that S is on top.",
+    "$ with S beneath it, so that $ is on top.",
+    "The first token of the input."
+   ],
+   "options_html": [
+    "An empty stack.",
+    "<code class=\"mm\">S</code> with <code class=\"mm\">$</code> beneath it, so that <code class=\"mm\">S</code> is on top.",
+    "<code class=\"mm\">$</code> with <code class=\"mm\">S</code> beneath it, so that <code class=\"mm\">$</code> is on top.",
+    "The first token of the input."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The stack holds the <i>unexpanded remainder</i> of the current sentential form, with the leftmost symbol on top, and <code class=\"mm\">$</code> at the bottom to mark the end of the input.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The parser must expand <code class=\"mm\">S</code> first, so <code class=\"mm\">S</code> has to be on top.</li><li>Underneath it sits <code class=\"mm\">$</code>, matching the end marker appended to the input string.</li><li>Expanding a nonterminal pops it and pushes its right side in reverse, so the leftmost symbol of the alternative ends up on top. That is what keeps the derivation leftmost.</li><li>Option (C) has the two symbols the wrong way round: the parser would try to match <code class=\"mm\">$</code> before expanding anything.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Pushing the right side of a production in reading order. It must be pushed in reverse so that its first symbol is on top.</p>"
+  },
+  {
+   "id": "CD-U2-Q65",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A recursive-descent parser has just returned successfully from the procedure for the start symbol, but input tokens remain. What should it do?",
+   "question_html": "<p class=\"qtext\">A recursive-descent parser has just returned successfully from the procedure for the start symbol, but input tokens remain. What should it do?</p>",
+   "options": [
+    "Report a syntax error, because the input contains tokens that the start symbol does not derive.",
+    "Call the procedure for the start symbol again on the remaining input.",
+    "Accept, because the start symbol has been matched.",
+    "Discard the remaining tokens and accept."
+   ],
+   "options_html": [
+    "Report a syntax error, because the input contains tokens that the start symbol does not derive.",
+    "Call the procedure for the start symbol again on the remaining input.",
+    "Accept, because the start symbol has been matched.",
+    "Discard the remaining tokens and accept."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The start symbol must derive the <i>whole</i> input, so success of its procedure counts only when the input pointer has reached the end marker.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The procedure for <code class=\"mm\">S</code> has consumed the prefix that <code class=\"mm\">S</code> derives.</li><li>Any token still unread lies outside that prefix, so the input is not a string of the language.</li><li>In a table-driven parser the same situation is detected by the final stack check: after matching <code class=\"mm\">$</code> both stack and input must be empty.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Treating the start symbol's return as acceptance. A prefix of a sentence is not a sentence.</p>"
+  },
+  {
+   "id": "CD-U2-Q66",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A table-driven predictive parser uses E → T E′, E′ → + T E′ | ε, T → F T′, T′ → * F T′ | ε, F → ( E ) | id, starting with E on top of the stack and $ beneath it. For the input id * id + id, what is the largest number of symbols that are on the stack at the same moment at any point of the parse, counting $ as one of them? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">A table-driven predictive parser uses <code class=\"mm\">E → T E′</code>, <code class=\"mm\">E′ → + T E′ | ε</code>, <code class=\"mm\">T → F T′</code>, <code class=\"mm\">T′ → * F T′ | ε</code>, <code class=\"mm\">F → ( E ) | id</code>, starting with <code class=\"mm\">E</code> on top of the stack and <code class=\"mm\">$</code> beneath it. For the input <code class=\"mm\">id * id + id</code>, what is the largest number of symbols that are on the stack at the same moment at any point of the parse, counting <code class=\"mm\">$</code> as one of them? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 5,
+   "answer_display": "5",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The stack height is the length of the unexpanded remainder of the sentential form, plus the end marker. Expanding a nonterminal pops one symbol and pushes the symbols of its right side.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start: <code class=\"mm\">[$ , E]</code>, height 2.</li><li><code class=\"mm\">E → T E′</code> gives <code class=\"mm\">[$ , E′ , T]</code>, height 3; then <code class=\"mm\">T → F T′</code> gives <code class=\"mm\">[$ , E′ , T′ , F]</code>, height 4.</li><li><code class=\"mm\">F → id</code> matches <code class=\"mm\">id</code>, leaving <code class=\"mm\">[$ , E′ , T′]</code>. The lookahead is <code class=\"mm\">*</code>, so <code class=\"mm\">T′ → * F T′</code> pushes three symbols and the stack becomes <code class=\"mm\">[$ , E′ , T′ , F , *]</code> — height <b>5</b>, the maximum.</li><li>After the second <code class=\"mm\">id</code>, <code class=\"mm\">T′ → ε</code> drops the height to 2; <code class=\"mm\">E′ → + T E′</code> raises it to 4 again, and the rest of the parse stays at 4 or below.</li><li>The parse ends with <code class=\"mm\">$</code> matching, height 1 and then 0.</li></ol><p class=\"row\"><b>Final answer.</b> 5.</p><p class=\"row\"><b>Common misconception.</b> Measuring the height just after pushing a right side of three symbols while ignoring the symbols already on the stack beneath it. The height is the whole stack, not the production's right side.</p>"
+  },
+  {
+   "id": "CD-U2-Q67",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A table-driven predictive parser for an LL(1) grammar is run on an input string that is not in the language. Which one of the following is guaranteed?",
+   "question_html": "<p class=\"qtext\">A table-driven predictive parser for an LL(1) grammar is run on an input string that is not in the language. Which one of the following is guaranteed?</p>",
+   "options": [
+    "It reports the error before applying any production.",
+    "It always backtracks to the most recent point at which more than one alternative was possible.",
+    "It reports the error only after the whole input has been consumed.",
+    "It may apply several productions and then report the error at the first point where the table lookup fails or a terminal does not match the lookahead."
+   ],
+   "options_html": [
+    "It reports the error before applying any production.",
+    "It always backtracks to the most recent point at which more than one alternative was possible.",
+    "It reports the error only after the whole input has been consumed.",
+    "It may apply several productions and then report the error at the first point where the table lookup fails or a terminal does not match the lookahead."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> A predictive parser never backtracks, so it cannot \"try again\". It detects an error at the first step where the table gives no action or a terminal fails to match the lookahead.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Productions that are consistent with the prefix read so far are applied normally; nothing marks them as wrong yet, so option (A) is false.</li><li>There is no choice point to return to — the table gave one answer at every step — so option (B) is false.</li><li>Error detection happens at the first offending token, not at the end, so option (C) is false.</li><li>Option (D) describes the mechanism exactly: the failure is reported where <code class=\"mm\">M[top, lookahead]</code> is empty, or where a stack terminal differs from the lookahead.</li></ol><p class=\"row\"><b>Final answer.</b> Option (D).</p><p class=\"row\"><b>Common misconception.</b> Assuming a non-backtracking parser must catch the error immediately. It catches it as soon as the error becomes detectable, which may be several productions into the parse.</p>"
+  },
+  {
+   "id": "CD-U2-Q68",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about recursive-descent parsing are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about recursive-descent parsing are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "A recursive-descent parser for a grammar that is not left factored may need backtracking even when the grammar is unambiguous.",
+    "The call stack of the host language plays the role that the explicit stack plays in a table-driven parser.",
+    "Removing left recursion from a grammar can change the language it generates.",
+    "A table-driven parser and a recursive-descent parser for the same LL(1) grammar apply the same sequence of productions to a given input.",
+    "A recursive-descent parser cannot handle a grammar with ε-productions."
+   ],
+   "options_html": [
+    "A recursive-descent parser for a grammar that is not left factored may need backtracking even when the grammar is unambiguous.",
+    "The call stack of the host language plays the role that the explicit stack plays in a table-driven parser.",
+    "Removing left recursion from a grammar can change the language it generates.",
+    "A table-driven parser and a recursive-descent parser for the same LL(1) grammar apply the same sequence of productions to a given input.",
+    "A recursive-descent parser cannot handle a grammar with <code class=\"mm\">ε</code>-productions."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Recursive descent is the same algorithm as table-driven predictive parsing with the explicit stack replaced by procedure calls. The two differ in representation, not in the derivation they build.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: without left factoring the alternatives of a nonterminal can share a prefix, so the procedure cannot choose from one token and must be allowed to retry. Unambiguity does not help.</li><li>(B) is true: each recursive call records \"which alternative am I in, and where did I get to\", which is exactly what the explicit stack holds.</li><li>(C) is false. Both the direct and the general elimination preserve the generated language; they only reshape the derivations.</li><li>(D) is true: both consult the same FIRST/FOLLOW information, so both apply the unique LL(1) choice at every step.</li><li>(E) is false. An <code class=\"mm\">ε</code>-alternative becomes a procedure body that simply returns when the lookahead is in <code class=\"mm\">FOLLOW</code> of the nonterminal.</li></ol><p class=\"row\"><b>Final answer.</b> (A), (B) and (D).</p><p class=\"row\"><b>Common misconception.</b> Thinking recursive descent is a weaker technique than the table-driven parser. For the same LL(1) grammar the two are step-for-step identical.</p>"
+  },
+  {
+   "id": "CD-U2-Q69",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "recursive-descent-parsers",
+   "subtopic": "recursive-descent-parsers",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "A table-driven predictive parser for a fixed LL(1) grammar scans the input once and never backtracks. On an input of n tokens, how does its running time grow?",
+   "question_html": "<p class=\"qtext\">A table-driven predictive parser for a fixed LL(1) grammar scans the input once and never backtracks. On an input of <code class=\"mm\">n</code> tokens, how does its running time grow?</p>",
+   "options": [
+    "O(n log n)",
+    "O(n)",
+    "O(n²)",
+    "exponentially in n"
+   ],
+   "options_html": [
+    "<code class=\"mm\">O(n log n)</code>",
+    "<code class=\"mm\">O(n)</code>",
+    "<code class=\"mm\">O(n²)</code>",
+    "exponentially in <code class=\"mm\">n</code>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Each step of the parser either pops a stack symbol or shifts one input token, and each step is a constant-time table lookup. The total number of steps is proportional to the length of the parse.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>One production application pops one symbol and pushes at most <code class=\"mm\">k</code> symbols, where <code class=\"mm\">k</code> is the longest right side of the fixed grammar.</li><li>The number of productions applied to derive a string of <code class=\"mm\">n</code> terminals is <code class=\"mm\">O(n)</code>, because every application contributes at least one terminal eventually.</li><li>Hence the total work is <code class=\"mm\">O(n)</code> table lookups — linear, with a constant that depends on the grammar, not on the input.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B), <code class=\"mm\">O(n)</code>.</p><p class=\"row\"><b>Common misconception.</b> Confusing predictive parsing with general CFG parsing. The cubic and exponential bounds belong to algorithms for arbitrary grammars (CYK, Earley, backtracking descent), not to LL(1) table-driven parsing.</p>"
+  },
+  {
+   "id": "CD-U2-Q70",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which one of the following grammars must be left factored before a predictive parser can be written for it?",
+   "question_html": "<p class=\"qtext\">Which one of the following grammars must be left factored before a predictive parser can be written for it?</p>",
+   "options": [
+    "S → a S b | ε",
+    "S → a b | a c",
+    "S → S a | b",
+    "S → a | b"
+   ],
+   "options_html": [
+    "<code class=\"mm\">S → a S b | ε</code>",
+    "<code class=\"mm\">S → a b | a c</code>",
+    "<code class=\"mm\">S → S a | b</code>",
+    "<code class=\"mm\">S → a | b</code>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Left factoring is the rewrite for alternatives that share a common prefix: the common part is pulled out and the remainder becomes a new nonterminal. Left recursion is a different defect with a different rewrite.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) has one alternative beginning with <code class=\"mm\">a</code> and one that is <code class=\"mm\">ε</code>; <code class=\"mm\">FIRST(a S b) = {a}</code> and <code class=\"mm\">FOLLOW(S)</code> decides the other, so it is already LL(1).</li><li>(B) has two alternatives with the common prefix <code class=\"mm\">a</code>, so both would occupy <code class=\"mm\">M[S, a]</code>. Factoring gives <code class=\"mm\">S → a S′</code>, <code class=\"mm\">S′ → b | c</code>.</li><li>(C) suffers from immediate left recursion, which is removed, not factored.</li><li>(D) has alternatives beginning with different terminals and needs nothing.</li></ol><p class=\"row\"><b>Final answer.</b> Option (B).</p><p class=\"row\"><b>Common misconception.</b> Applying the wrong rewrite. Left factoring cures a shared prefix; left recursion removal cures an alternative that begins with its own head.</p>"
+  },
+  {
+   "id": "CD-U2-Q71",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Immediate left recursion is removed from every nonterminal of E → E + T | T, T → T * F | F, F → ( E ) | id. How many new nonterminals does the transformation introduce? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">Immediate left recursion is removed from every nonterminal of <code class=\"mm\">E → E + T | T</code>, <code class=\"mm\">T → T * F | F</code>, <code class=\"mm\">F → ( E ) | id</code>. How many new nonterminals does the transformation introduce? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 2,
+   "answer_display": "2",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Removing immediate left recursion from a nonterminal that has it always introduces exactly one new nonterminal, whatever the number of left-recursive alternatives.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">E → E + T | T</code> is left recursive, so a new nonterminal is created: <code class=\"mm\">E → T E′</code>, <code class=\"mm\">E′ → + T E′ | ε</code>. That is one.</li><li><code class=\"mm\">T → T * F | F</code> is left recursive, so <code class=\"mm\">T′</code> is created: <code class=\"mm\">T → F T′</code>, <code class=\"mm\">T′ → * F T′ | ε</code>. That is two.</li><li><code class=\"mm\">F → ( E ) | id</code> has no left-recursive alternative — neither right side begins with <code class=\"mm\">F</code> — so nothing is introduced for <code class=\"mm\">F</code>.</li><li>Total: <code class=\"mm\">E′</code> and <code class=\"mm\">T′</code>, that is 2.</li></ol><p class=\"row\"><b>Final answer.</b> 2.</p><p class=\"row\"><b>Common misconception.</b> Adding a new nonterminal for every nonterminal, or adding one per left-recursive alternative. One per nonterminal that actually has immediate left recursion.</p>"
+  },
+  {
+   "id": "CD-U2-Q72",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The grammar S → S a | b c | b d is transformed in two steps: immediate left recursion is removed from S, and the result is then left factored as far as possible. How many productions does the final grammar contain in total? (Enter an integer.)",
+   "question_html": "<p class=\"qtext\">The grammar <code class=\"mm\">S → S a | b c | b d</code> is transformed in two steps: immediate left recursion is removed from <code class=\"mm\">S</code>, and the result is then left factored as far as possible. How many productions does the final grammar contain in total? (Enter an integer.)</p>",
+   "options": [],
+   "options_html": [],
+   "answer": 5,
+   "answer_display": "5",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> The two rewrites solve different problems and are applied in sequence: left recursion removal keeps the language, then left factoring removes the shared prefix that the first step leaves behind.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Left recursion removal on <code class=\"mm\">S → S a | b c | b d</code> gives <code class=\"mm\">S → b c S′ | b d S′</code> and <code class=\"mm\">S′ → a S′ | ε</code> — four productions.</li><li>The two alternatives of <code class=\"mm\">S</code> now share the prefix <code class=\"mm\">b</code>, so factor: <code class=\"mm\">S → b S″</code>, <code class=\"mm\">S″ → c S′ | d S′</code>.</li><li><code class=\"mm\">S″</code>'s alternatives begin with <code class=\"mm\">c</code> and <code class=\"mm\">d</code>, so no further factoring is possible.</li><li>Count: one production for <code class=\"mm\">S</code>, two for <code class=\"mm\">S″</code>, two for <code class=\"mm\">S′</code> — <code class=\"mm\">1 + 2 + 2 = 5</code>.</li></ol><p class=\"row\"><b>Final answer.</b> 5.</p><p class=\"row\"><b>Common misconception.</b> Stopping after the first rewrite and reporting four productions. The grammar is not LL(1) at that point: <code class=\"mm\">M[S, b]</code> would hold two entries.</p>"
+  },
+  {
+   "id": "CD-U2-Q73",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which of the following statements about left factoring are TRUE? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about left factoring are TRUE? (Select all that apply.)</p>",
+   "options": [
+    "Left factoring leaves the language generated by the grammar unchanged.",
+    "Left factoring can turn an unambiguous grammar into an ambiguous one.",
+    "A grammar in which two alternatives of one nonterminal begin with the same terminal cannot be LL(1).",
+    "Left factoring alone removes the conflict caused by a left-recursive alternative.",
+    "Left factoring three alternatives that share a two-symbol prefix may introduce more than one new nonterminal."
+   ],
+   "options_html": [
+    "Left factoring leaves the language generated by the grammar unchanged.",
+    "Left factoring can turn an unambiguous grammar into an ambiguous one.",
+    "A grammar in which two alternatives of one nonterminal begin with the same terminal cannot be LL(1).",
+    "Left factoring alone removes the conflict caused by a left-recursive alternative.",
+    "Left factoring three alternatives that share a two-symbol prefix may introduce more than one new nonterminal."
+   ],
+   "answer": [
+    0,
+    2,
+    4
+   ],
+   "answer_display": "Options (A), (C) and (E)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Left factoring defers a choice: the shared prefix is matched once and the choice between the remainders is made later. It is a language-preserving rewrite that attacks FIRST/FIRST conflicts, and it does nothing about left recursion.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: factoring rewrites <code class=\"mm\">A → α β | α γ</code> as <code class=\"mm\">A → α A′</code>, <code class=\"mm\">A′ → β | γ</code>, and the set of derived strings is identical.</li><li>(B) is false. Factoring can only reduce the number of ways to begin an alternative; it cannot create a second parse tree where none existed.</li><li>(C) is true: both alternatives would be entered in <code class=\"mm\">M[A, a]</code>, whatever follows <code class=\"mm\">a</code>.</li><li>(D) is false. <code class=\"mm\">A → A a | b</code> begins one alternative with <code class=\"mm\">A</code> itself; only left recursion removal can fix that.</li><li>(E) is true: factoring <code class=\"mm\">x y z | x y w | x v</code> needs two levels — <code class=\"mm\">A → x A′</code>, <code class=\"mm\">A′ → y A″ | v</code>, <code class=\"mm\">A″ → z | w</code> — so two new nonterminals appear.</li></ol><p class=\"row\"><b>Final answer.</b> (A), (C) and (E).</p><p class=\"row\"><b>Common misconception.</b> Believing one factoring pass always suffices. Alternatives that share a prefix of length greater than one usually need one new nonterminal per level of the shared prefix.</p>"
+  },
+  {
+   "id": "CD-U2-Q74",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "The left-recursive grammar E → E + T | T is replaced by E → T E′, E′ → + T E′ | ε, which generates the same language. Which one of the following statements is TRUE?",
+   "question_html": "<p class=\"qtext\">The left-recursive grammar <code class=\"mm\">E → E + T | T</code> is replaced by <code class=\"mm\">E → T E′</code>, <code class=\"mm\">E′ → + T E′ | ε</code>, which generates the same language. Which one of the following statements is TRUE?</p>",
+   "options": [
+    "The new grammar generates a different language, because the recursion has been moved.",
+    "The new grammar generates the same language and keeps the left-associative meaning without any change to the semantic actions.",
+    "The new grammar generates the same language, but its parse trees nest to the right, so the semantic actions must fold each left operand in as the recursion unwinds.",
+    "The new grammar is ambiguous on a + b + c."
+   ],
+   "options_html": [
+    "The new grammar generates a different language, because the recursion has been moved.",
+    "The new grammar generates the same language and keeps the left-associative meaning without any change to the semantic actions.",
+    "The new grammar generates the same language, but its parse trees nest to the right, so the semantic actions must fold each left operand in as the recursion unwinds.",
+    "The new grammar is ambiguous on <code class=\"mm\">a + b + c</code>."
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Eliminating left recursion preserves the language but changes the shape of the parse trees. In the left-recursive grammar the tree for <code class=\"mm\">a + b + c</code> groups from the left; in the rewritten grammar <code class=\"mm\">E′</code> recurses on the right, so the tree nests to the right.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Both grammars derive exactly the strings <code class=\"mm\">T (+ T)*</code>, so option (A) is false.</li><li>In <code class=\"mm\">E ⇒ T E′ ⇒ T + T E′ ⇒ T + T + T E′ ⇒ T + T + T</code>, each <code class=\"mm\">E′</code> owns everything to its right. The tree is right-nested.</li><li>Left associativity is therefore recovered by the semantic rule, not by the tree: <code class=\"mm\">E′.val</code> is computed from the inherited left operand and the value of the <code class=\"mm\">T</code> it just read, so <code class=\"mm\">(a + b) + c</code> is still what is evaluated.</li><li>Option (B) is false because the actions cannot be left untouched; option (D) is false because the rewritten grammar is LL(1) and hence unambiguous.</li></ol><p class=\"row\"><b>Final answer.</b> Option (C).</p><p class=\"row\"><b>Common misconception.</b> Reading right-nested parse trees as right-associative meaning. Associativity is a property of the semantics you attach, and the rewritten grammar needs an inherited attribute to keep the left-associative one.</p>"
+  },
+  {
+   "id": "CD-U2-Q75",
+   "subject": "compiler-design",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "top-down-parsing",
+   "unit_name": "Syntax Analysis: Top-Down Parsing",
+   "topic": "Syntax Analysis: Top-Down Parsing",
+   "sub": "left-recursion-and-factoring",
+   "subtopic": "left-recursion-and-factoring",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2 (second pass)",
+   "question": "Which one of the following statements about left recursion is TRUE?",
+   "question_html": "<p class=\"qtext\">Which one of the following statements about left recursion is TRUE?</p>",
+   "options": [
+    "Left recursion is a property of grammars, not of languages: any context-free language that has a left-recursive grammar also has a grammar with no left recursion.",
+    "Left recursion is a property of languages, so a left-recursive language has no left-recursion-free grammar.",
+    "Only immediate left recursion can be removed; indirect left recursion can never be removed.",
+    "A grammar with indirect left recursion always generates an ambiguous language."
+   ],
+   "options_html": [
+    "Left recursion is a property of grammars, not of languages: any context-free language that has a left-recursive grammar also has a grammar with no left recursion.",
+    "Left recursion is a property of languages, so a left-recursive language has no left-recursion-free grammar.",
+    "Only immediate left recursion can be removed; indirect left recursion can never be removed.",
+    "A grammar with indirect left recursion always generates an ambiguous language."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<p class=\"row\"><b>Concept.</b> Left recursion is a syntactic property of a particular grammar. The elimination procedure — order the nonterminals, substitute, then remove the immediate recursion — works for any grammar and returns a grammar for the same language.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is the correct reading: the rewrite is language preserving, so the language of a left-recursive grammar always has a left-recursion-free grammar too.</li><li>(B) confuses the two levels. Languages are not left recursive; grammars are.</li><li>(C) is false: indirect recursion is removed by substituting <code class=\"mm\">A</code>'s productions into <code class=\"mm\">B</code> for each pair <code class=\"mm\">A</code> before <code class=\"mm\">B</code> in the chosen order, which turns it into immediate recursion that is then removed.</li><li>(D) is false: <code class=\"mm\">S → A a | b</code>, <code class=\"mm\">A → S c | d</code> has indirect left recursion and exactly one parse tree per string it derives.</li></ol><p class=\"row\"><b>Final answer.</b> Option (A).</p><p class=\"row\"><b>Common misconception.</b> Supposing that some languages are inherently left recursive. Any context-free grammar can be rewritten without left recursion, so no language is.</p>"
   }
  ]
 }

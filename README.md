@@ -7,36 +7,118 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 4 — Main Memory & Virtual Memory Interface, Set 1 of 2**, 2026-10-30 →
-  [`computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`](computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html)
+- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DRAM & SRAM organisation (6) · Paging & TLB hit ratio (8) · Effective access time (6) ·
-  Segmentation (5)
+- Subtopics: FIRST and FOLLOW sets (6) · LL(1) parsing tables (7) · Recursive-descent parsers (6) ·
+  Left recursion & factoring (6)
 - Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full
-  eleven-subject list and gave **Computer Architecture**. `runs[]` sorted by `(date, run)` gave the most recent
-  paper as `{2026-10-30, run 4, unit 3, cache-memory, Set 2 of 2}`. Unit 3 held **50** questions, exactly
-  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(cache-memory) = 2 + 1) mod 6 = 3` →
-  **Unit 4 — Main Memory & Virtual Memory Interface**.
-- Unit 4 had no folder and no paper, so nothing was archived: the unit folder holds exactly one current paper and
-  the repository root holds no copy.
-- Unit 4 now holds **25** questions, below the cap, so the next Computer Architecture run re-selects Unit 4 as
-  Set 2 of 2 before advancing to `(3 + 1) mod 6 = 4` → Unit 5, Instruction Pipelining.
-- The Question Bank tab lists the **100** solved items of Units 2–3 that are not on this paper, against the 25
-  active questions of this set.
-- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html)
+  eleven-subject list and gave **Compiler Design**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{2026-10-30, run 11, unit 1, lexical-analysis, Set 1 of 2 (second pass)}`. Unit 1 held **75** questions, above
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(lexical-analysis) = 0 + 1) mod 5 = 1` → **Unit 2 — Syntax
+  Analysis: Top-Down Parsing**. Every unit of the subject is at or above the cap, so step B5 applies: the second
+  pass continues and Unit 2 takes its first set of that pass (third set overall, now 75 questions).
+- Unit 2's previous paper moved to `archive/gate_cd_mock_2_2026-10-27_run2.html` with its content frozen; the unit
+  folder now holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Computer Architecture · Unit 4 — Main Memory & Virtual Memory Interface, Set 1 of 2**, 2026-10-30 →
+  [`computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`](computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 114 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 11 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 56 current · 58 archived |
-| Test cards on the portal | 69 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 115 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 56 current · 59 archived |
+| Test cards on the portal | 70 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2850 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 275 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 2875 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 58 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 6 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 59 (11 Compiler Design, 10 Discrete Mathematics, 8 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 4 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Compiler Design Unit 2, Set 1 of 2 (second pass)
+
+- New paper at `compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html`. The 2026-10-27 paper that held
+  this path (first pass, Set 2 of 2) was moved to
+  `compiler-design/top-down-parsing/archive/gate_cd_mock_2_2026-10-27_run2.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-30, so the draw ran
+  over the full eleven-subject list with an unseeded `secrets.choice` and gave **Compiler Design**. `runs[]` sorted
+  by `(date, run)` gave the most recent paper as `{2026-10-30, run 11, unit 1, lexical-analysis, Set 1 of 2 (second
+  pass)}`. Unit 1 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4
+  advanced exactly one unit: `(index_of(lexical-analysis) = 0 + 1) mod 5 = 1` → **Unit 2 — Syntax Analysis:
+  Top-Down Parsing**. Every unit of the subject is at or above the cap (75, 50, 50, 50, 50), so step B5 applies:
+  the modulo wraps and the second pass continues. Unit 2 now holds **75** questions. No override, no partial set.
+- Coverage: all four Unit 2 subtopics — FIRST and FOLLOW sets (6), LL(1) parsing tables (7), recursive-descent
+  parsers (6), left recursion & factoring (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; 60 minutes, 35 marks.
+- Every question carries `data-subject="compiler-design"`, `data-unit="top-down-parsing"`,
+  `data-unit-number="2"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`CD-U2-Q51` … `CD-U2-Q75`) and the bank is append-only. The 50 items already banked for
+  Unit 2 cover FIRST/FOLLOW computations from explicit grammars, the basic left-recursion and left-factoring
+  rewrites, standard table cell counts and production counts on short inputs. This set deliberately takes ground
+  they leave open: the definition of `x ∈ FIRST(A)` as "some derivation, some suffix"; FIRST of a *string* as set
+  arithmetic over nullable symbols; which nonterminals inherit `$`; the least-fixed-point nature of the
+  computation; and `FOLLOW(S)` for a start symbol that occurs at the end of its own right side, where
+  `FIRST(S) ≠ FOLLOW(S)`. From the table: its size as `|N| × (|T| + 1)`; where `S → ε` goes when `S` is the start
+  symbol; how many cells carry an `ε`-production; the shared-prefix cause of a conflict as against the FOLLOW
+  sets; and a grammar nullable throughout that is nevertheless LL(1). From recursive descent: the initial stack,
+  the end-of-input check, the maximum stack height during a parse, the error behaviour of a parser that cannot
+  backtrack, the equivalence with the table-driven algorithm, and its linear running time. From the rewrites:
+  telling factoring from recursion removal, how many new nonterminals each introduces, applying both in sequence,
+  the right-nested parse trees the rewrite produces and the semantic actions that recover left associativity, and
+  the fact that left recursion is a property of grammars rather than of languages.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Compiler Design, and no top-down-parsing
+  previous-year question has been verified against an official paper and answer key, so nothing on this paper is
+  claimed as an official GATE question. 11 items are `STANDARD_TEXTBOOK` and 14 are `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A FIRST/FOLLOW fixed-point solver and an
+  LL(1) table builder were run over each grammar: `FIRST(A B C) = {a, b, c, d}` from the stated sets; three
+  nonterminals (`S`, `A`, `B`) carry `$` for `S → A B | c, A → a | ε, B → b | ε`; `FOLLOW(S) = {$}` for
+  `S → A S | b, A → a` while `FIRST(S) = {a, b}`; three cells hold an `ε`-production for
+  `S → A B, A → a | ε, B → b | ε`, and the same grammar's table has eight non-empty cells and no cell with two
+  entries, which is what makes the "it is LL(1)" option correct and the `M[S, b]` distractor wrong. A
+  table-driven parser was traced over `id * id + id` with `E → T E′, E′ → + T E′ | ε, T → F T′, T′ → * F T′ | ε,
+  F → ( E ) | id`: 11 productions applied and a maximum stack height of **5**, counting `$`. The rewrite counts
+  were derived by hand on the printed grammars and checked: two new nonterminals for the expression grammar, and
+  `1 + 2 + 2 = 5` productions for `S → S a | b c | b d` after recursion removal followed by factoring.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, C, D), (A, C), (A, B), (A, B, D) and (A, C, E) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Compiler Design
+  Unit 1 Set 1 (second pass) paper. The `<style>` block (13243 bytes) and the exam `<script>` (9445 bytes) are
+  **byte-identical** to that paper, and the `:root` block still matches `design-tokens.css` and `index.html` byte
+  for byte. Only the title, header sub-line, candidate id, Question Bank count, meta strip, question payload,
+  bank tab, About tab and payload differ.
+- The bank-tab renderer was validated before use: rebuilding the donor's 250 bank cards from `master_bank.json`
+  reproduces its shipped markup **byte for byte**.
+- Verified in headless Chromium 153 from `file://`: 25 question cards with exactly one visible, a 25-button
+  palette, the timer at 60:00, the Answer Key tab disabled and labelled locked, an empty key pane, a hidden
+  summary, every active `.sol` empty and hidden, and no option marked; the palette reaches `na` and `cur` through
+  navigation and `mrk` through Mark for review; the Question Bank tab renders **275** cards under five unit
+  accordions and twenty subtopic accordions, and the active 25 ids do not appear in it. The two-column layout
+  measures 854 px for the question column and 300 px for the palette at 1280 px. After answering every item
+  correctly and submitting, the score reads **35 / 35** with 25 correct, 0 incorrect, 25 `ok` palette buttons,
+  25 key cards and a revealed solution on every card; an empty paper scores **0 / 35** with 25 `skip` buttons; and
+  a paper whose five MSQ are each one option short scores **25 / 35** with 5 wrong, which confirms that MSQ earns
+  nothing without the exact set. No page errors.
+- **Defect found and fixed in passing:** the shipped shell leaves the last `.qcard` unclosed, so `#qhost` never
+  closes and the palette `<aside>`, the key view, the bank view and the About view all end up nested inside the
+  last question card. The new paper closes the card, so `#qhost` closes where it should. The `<style>` and
+  `<script>` bytes are untouched, so shell parity is unaffected; earlier papers keep the old nesting until they
+  are rebuilt.
+- **Also fixed in passing:** the Question Bank tab of every earlier paper wrote the *subtopic* slug into
+  `data-unit` on each banked card. The new paper writes the unit slug (`top-down-parsing`), as Section 3 requires.
+- Portal: `index.html` gained one card (Compiler Design · Unit 2 · 2026-10-30) at the head of `tests`, with
+  "Earlier sets" links to both first-pass sets, and the 2026-10-27 Unit 2 card now points at the archived Set 2.
+  `data/questions-compiler-design.js` grew to 300 records. A headless run of the portal renders **70** test cards
+  and **2875** archive question cards, and all **115** internal links resolve.
+- **Repaired this run:** the portal's static header strings were 50 records and 1 unit behind the files (they read
+  2800 records and 67 units while the eleven banks already summed to 2850 and the data block carried 68 units), so
+  the counters were recomputed and now read **2875** records, **68** units, **70** test cards and **293**
+  subtopics.
+- Hygiene: the paper is filed at exactly one path, `compiler-design/top-down-parsing/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (56 current and 59 archived); no temporary
+  or loose file was left at the repository root.
 
 ### 2026-10-30 — Computer Architecture Unit 4, Set 1 of 2
 
