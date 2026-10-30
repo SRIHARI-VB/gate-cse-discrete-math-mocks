@@ -7,33 +7,61 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 2 of 2**, 2026-10-30 →
-  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
+- **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 1 of 2**, 2026-10-30 →
+  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: random variables, CDF & PDF (5) · uniform distribution (5) · exponential distribution (5) ·
-  normal distribution (5) · correlation & covariance (5)
-- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full
-  eleven-subject list and gave **Engineering Mathematics**. The most recent run for the subject was
-  `{2026-10-30, run 9, unit 5, probability-distributions, Set 1 of 2}`. Unit 5 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
-  same unit was generated again: this is Set 2 of 2, Unit 5 reaches exactly **50** and closes. The next Engineering
-  Mathematics run advances `(4 + 1) mod 5 = 0` → Unit 1.
-- The Set 1 paper moved to `archive/gate_em_mock_5_2026-10-30_run1.html` with its content frozen; the unit folder
-  now holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html)
+- Subtopics: degree sum & handshaking lemma (4) · walks, trails, paths & circuits (5) · graph connectivity (4) ·
+  isomorphism (5) · complete & bipartite graphs (3) · graph representations (4)
+- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over subjects whose
+  rotation still had an unbanked unit to advance into; it gave **Discrete Mathematics**. The most recent run for the
+  subject was `{2026-10-30, run 9, unit 8, recurrence-generating-functions, Set 2 of 2}`. Unit 8 held **50**
+  questions, exactly `UNIT_QUESTION_CAP`, so step B3 failed and step B4 advanced:
+  `(index_of(recurrence-generating-functions) = 7 + 1) mod 16 = 8` → **Unit 9**, Graph Theory Fundamentals, which
+  held **0** questions. No override, no partial set, no unit above the cap.
+- First paper for Unit 9, so no earlier set moved to `archive/`; the unit folder holds exactly one paper and the
+  repository root holds no copy.
+- Previous test: **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 2 of 2**, 2026-10-30 →
+  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 116 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 56 current · 60 archived |
-| Test cards on the portal | 70 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2900 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Papers published (current + archived) | 117 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 57 current · 60 archived |
+| Test cards on the portal | 71 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
+| Questions in the subject banks | 2925 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 60 (11 Compiler Design, 10 Discrete Mathematics, 8 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 5 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Discrete Mathematics Unit 9, Set 1 of 2
+
+- New paper at `discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html`. Unit 9 had no paper
+  before this run, so nothing was archived and the unit folder holds exactly one current paper.
+- **Rotation (Section 1, MODE A).** Every one of the eleven subjects already carried a paper dated 2026-10-30, so the
+  draw was restricted to subjects whose rotation still advanced into a unit with no banked questions — otherwise a
+  second paper for the same unit and date would have overwritten a live path. The draw gave **Discrete Mathematics**.
+  The most recent entry in `runs[]` was `{2026-10-30, run 9, unit 8, recurrence-generating-functions, Set 2 of 2}`.
+  Unit 8 held **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed and step B4 advanced one unit:
+  `(7 + 1) mod 16 = 8` → Unit 9 — Graph Theory Fundamentals. Unit 9 held 0 questions and 0 days as current. The next
+  Discrete Mathematics run repeats Unit 9 (Set 2 of 2), which will close it at 50.
+- Coverage: all six Unit 9 subtopics — degree sum & handshaking lemma (4); walks, trails, paths & circuits (5); graph
+  connectivity (4); isomorphism (5); complete & bipartite graphs (3); graph representations (4). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; 60 minutes, 35 marks.
+- Every question carries `data-subject="discrete-mathematics"`, `data-unit="graph-theory-fundamentals"`,
+  `data-unit-number="9"`, its subtopic slug, its type, its lowercase difficulty and its source tag, on the active paper
+  and on every one of the 475 banked cards in the Question Bank tab.
+- All 25 ids are new (`DM-GTF9-Q01` … `DM-GTF9-Q25`) and the bank is append-only; the subject bank now holds **500**
+  questions across units 1–9 and 16.
+- No previous-year question was used: no graph-theory PYQ has been verified against an official paper and answer key
+  for this run, so the set contains `STANDARD_TEXTBOOK` and `ORIGINAL_SYNTHESIS` items only and claims no official
+  question.
+- Shell parity: the `:root` token block, the stylesheet and the exam JavaScript of this paper are byte-identical to
+  those of `gate_dm_mock_8_2026-10-30.html`; only the payload and the question content differ.
+- Portal: one new card in *Daily Mock Tests (Date-wise)* and a Unit 9 card in *Topic & Subtopic Question Archive*
+  (the `graph-theory-fundamentals` archive view reads the 25 new records appended to
+  `data/questions-discrete-mathematics.js`).
 
 ### 2026-10-30 — Engineering Mathematics Unit 5, Set 2 of 2
 
