@@ -32,7 +32,7 @@ and no answer, option mark or hint visible until the test is submitted.
 | Item | Value |
 | --- | --- |
 | Papers published (current + archived) | 107 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 53 current · 55 archived |
+| Current papers / archived sets | 52 current · 55 archived |
 | Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
 | Questions in the subject banks | 2675 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
