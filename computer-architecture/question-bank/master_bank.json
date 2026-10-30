@@ -6,11 +6,13 @@
   "created": "2026-10-27",
   "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 100,
+  "total_questions": 125,
   "units_with_questions": [
    2,
-   3
-  ]
+   3,
+   4
+  ],
+  "total_runs": 5
  },
  "runs": [
   {
@@ -216,6 +218,74 @@
     "CO-U3-Q49",
     "CO-U3-Q50"
    ]
+  },
+  {
+   "run": 5,
+   "date": "2026-10-30",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "set": "Set 1 of 2",
+   "count": 25,
+   "file": "computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html",
+   "archived_previous": null,
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "dram-sram-organization",
+    "paging-tlb-hit-ratio",
+    "effective-access-time",
+    "segmentation"
+   ],
+   "subtopic_counts": {
+    "dram-sram-organization": 6,
+    "paging-tlb-hit-ratio": 8,
+    "effective-access-time": 6,
+    "segmentation": 5
+   },
+   "question_ids": [
+    "CO-U4-Q01",
+    "CO-U4-Q02",
+    "CO-U4-Q03",
+    "CO-U4-Q04",
+    "CO-U4-Q05",
+    "CO-U4-Q06",
+    "CO-U4-Q07",
+    "CO-U4-Q08",
+    "CO-U4-Q09",
+    "CO-U4-Q10",
+    "CO-U4-Q11",
+    "CO-U4-Q12",
+    "CO-U4-Q13",
+    "CO-U4-Q14",
+    "CO-U4-Q15",
+    "CO-U4-Q16",
+    "CO-U4-Q17",
+    "CO-U4-Q18",
+    "CO-U4-Q19",
+    "CO-U4-Q20",
+    "CO-U4-Q21",
+    "CO-U4-Q22",
+    "CO-U4-Q23",
+    "CO-U4-Q24",
+    "CO-U4-Q25"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject list with an unseeded secrets.choice and gave Computer Architecture. runs[] sorted by (date, run) gave the most recent paper as {2026-10-30, run 4, unit 3, cache-memory, Set 2 of 2}. Unit 3 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B4 advanced (index_of(cache-memory) = 2 + 1) mod 6 = 3 -> Unit 4, Main Memory & Virtual Memory Interface (memory-management-unit). Unit 4 had no folder and no paper, so nothing was archived. No override was used.",
+   "note": "Set 1 of 2 for Computer Architecture Unit 4. Unit 4 now holds 25 questions, below UNIT_QUESTION_CAP = 50, so the next Computer Architecture run re-selects Unit 4 as Set 2 of 2 before advancing to (index_of(memory-management-unit) = 3 + 1) mod 6 = 4 -> Unit 5, Instruction Pipelining. All 25 items are new (CO-U4-Q01..Q25). Coverage: DRAM & SRAM organisation 6, paging & TLB 8, effective access time 6, segmentation 5. verified_pyqs is unchanged and empty, so no item is tagged GATE_PYQ_VARIATION and nothing on this paper is claimed as official. Every numeric answer was recomputed by script: the 20 address lines and 32 chips of the memory arithmetic, the 15.625 microsecond refresh interval, the 2^20 and 2^19 counts, the 98 ns and 112 ns effective access times, the 120/115 ns pair behind the 5 ns drop, the 70 percent hit ratio solved from EAT = 150 ns, and the 16 KB page table of a 2^24-byte segment."
   }
  ],
  "verified_pyqs": [],
@@ -3327,6 +3397,1066 @@
    "answer_display": "11",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The minimum is the optimal (MIN) count: on every miss, evict the resident block whose next use is furthest in the future, or one that is never used again. No policy can do better, because a miss is unavoidable whenever the requested block is absent.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>1, 2, 3 are cold misses: 3 misses, frames {1, 2, 3}.</li><li>4 misses. Next uses are 1 at position 6, 2 at position 5 and 3 at position 12, so 3 is furthest away and is evicted: 4 misses, frames {1, 2, 4}.</li><li>2 and 1 hit. 5 misses and evicts 4, which is never used again: 5 misses, frames {1, 2, 5}.</li><li>6 misses and evicts 5, also never used again: 6 misses, frames {1, 2, 6}.</li><li>2, 1 and 2 hit. 3 misses and evicts 1, whose next use is at position 17 against 13 for 6 and 16 for 2: 7 misses, frames {2, 6, 3}.</li><li>7 misses and evicts 2, whose next use is at position 16 against 14 for 6 and 15 for 3: 8 misses, frames {6, 3, 7}.</li><li>6 and 3 hit. 2 misses and evicts 7, never used again: 9 misses, frames {6, 3, 2}.</li><li>1 misses and evicts 6, whose next use is at position 20 against 18 for 2 and 19 for 3: 10 misses, frames {3, 2, 1}.</li><li>2 and 3 hit. The final 6 misses, and any frame may go: 11 misses.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 11 misses</span></p><p class=\"row\"><b>Common misconception.</b> Reporting the LRU count of 15, which is a property of LRU rather than a lower bound, or forgetting that the last reference to 6 is a miss because 6 was evicted at position 14.</p><p class=\"row\"><b>Takeaway.</b> Optimal is a bound. Any implementable policy, including LRU and FIFO, can only do worse on the same string.</p>",
    "answer": 11
+  },
+  {
+   "id": "CO-U4-Q01",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following is TRUE of SRAM but NOT of DRAM?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"1\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 1</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following is TRUE of SRAM but NOT of DRAM?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">Each bit is stored as charge on a capacitor.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">It holds its contents without periodic refresh as long as power is applied.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">It offers higher storage density per unit area.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"1\" data-typ=\"MCQ\" name=\"q1\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It is the technology normally used for main memory.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "Each bit is stored as charge on a capacitor.",
+    "It holds its contents without periodic refresh as long as power is applied.",
+    "It offers higher storage density per unit area.",
+    "It is the technology normally used for main memory."
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An SRAM cell is a bistable latch of about six transistors, so the stored bit is held by active feedback and stays valid while power is on. A DRAM cell is one transistor plus one capacitor, and the charge leaks away.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>An SRAM cell keeps its value through the feedback loop of its cross-coupled inverters, so no refresh is needed while power is applied.</li><li>A DRAM cell stores the bit as charge, which leaks, so every row must be re-read and re-written within the retention interval.</li><li>The capacitor cell is far smaller than the six-transistor cell, so DRAM is denser and cheaper per bit, and it is what main memory is built from.</li><li>SRAM is faster and needs no refresh, which is why it is used for cache.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: It needs no periodic refresh while powered — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Option A describes DRAM, not SRAM. Option C is the DRAM advantage: the capacitor cell is denser, which is exactly why main memory is DRAM.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "An SRAM cell is a bistable latch of about six transistors, so the stored bit is held by active feedback and stays valid while power is on. A DRAM cell is one transistor plus one capacitor, and the charge leaks away.",
+    "steps": [
+     "An SRAM cell keeps its value through the feedback loop of its cross-coupled inverters, so no refresh is needed while power is applied.",
+     "A DRAM cell stores the bit as charge, which leaks, so every row must be re-read and re-written within the retention interval.",
+     "The capacitor cell is far smaller than the six-transistor cell, so DRAM is denser and cheaper per bit, and it is what main memory is built from.",
+     "SRAM is faster and needs no refresh, which is why it is used for cache."
+    ],
+    "final": "It needs no periodic refresh while powered — option B.",
+    "trap": "Option A describes DRAM, not SRAM. Option C is the DRAM advantage: the capacitor cell is denser, which is exactly why main memory is DRAM."
+   }
+  },
+  {
+   "id": "CO-U4-Q02",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A DRAM chip is organised as 1M &times; 8 bits, where 1M = 2<sup>20</sup>. How many address lines does the chip need?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"2\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 2</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A DRAM chip is organised as 1M &times; 8 bits, where 1M = 2<sup>20</sup>. How many address lines does the chip need?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">8</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">20</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">23</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"2\" data-typ=\"MCQ\" name=\"q2\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">28</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "8",
+    "20",
+    "23",
+    "28"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The address lines must be able to name every storage location. The second factor of the organisation is the data width, which affects the data pins, not the address pins.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The chip holds 2<sup>20</sup> locations, since 1M = 2<sup>20</sup>.</li><li>Naming 2<sup>20</sup> locations requires 20 address lines.</li><li>The &times; 8 refers to 8 data bits read or written at a time, so it sets the number of data pins.</li><li>Hence the chip needs 20 address lines and 8 data lines.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 20 address lines — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Adding the two numbers to get 28, or answering 8 because the word 'bits' appears. Address width comes from the location count only.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "The address lines must be able to name every storage location. The second factor of the organisation is the data width, which affects the data pins, not the address pins.",
+    "steps": [
+     "The chip holds 2<sup>20</sup> locations, since 1M = 2<sup>20</sup>.",
+     "Naming 2<sup>20</sup> locations requires 20 address lines.",
+     "The &times; 8 refers to 8 data bits read or written at a time, so it sets the number of data pins.",
+     "Hence the chip needs 20 address lines and 8 data lines."
+    ],
+    "final": "20 address lines — option B.",
+    "trap": "Adding the two numbers to get 28, or answering 8 because the word 'bits' appears. Address width comes from the location count only."
+   }
+  },
+  {
+   "id": "CO-U4-Q03",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A 64 MB main memory is built from 4M &times; 4-bit DRAM chips, where 1M = 2<sup>20</sup>. How many chips are required?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"3\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 3</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A 64 MB main memory is built from 4M &times; 4-bit DRAM chips, where 1M = 2<sup>20</sup>. How many chips are required?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">8</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">16</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">32</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"3\" data-typ=\"MCQ\" name=\"q3\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">64</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "8",
+    "16",
+    "32",
+    "64"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The number of chips is the total number of bits needed divided by the number of bits one chip supplies.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>One chip holds 2<sup>22</sup> &times; 4 bits = 2<sup>24</sup> bits = 16 Mbit = 2 MB.</li><li>The memory to be built is 64 MB.</li><li>Chips = 64 MB / 2 MB = 32.</li><li>Cross-check by the other route: 64 MB = 2<sup>29</sup> bits, and 2<sup>29</sup> / 2<sup>24</sup> = 2<sup>5</sup> = 32.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 32 chips — option C.</span></p><p class=\"row\"><b>Common misconception.</b> Dividing 64 MB by 4M to get 16 and forgetting that each chip supplies only 4 bits per location, so chips must also be grouped to make a byte.</p>",
+   "answer_indices": [
+    2
+   ],
+   "solution": {
+    "concept": "The number of chips is the total number of bits needed divided by the number of bits one chip supplies.",
+    "steps": [
+     "One chip holds 2<sup>22</sup> &times; 4 bits = 2<sup>24</sup> bits = 16 Mbit = 2 MB.",
+     "The memory to be built is 64 MB.",
+     "Chips = 64 MB / 2 MB = 32.",
+     "Cross-check by the other route: 64 MB = 2<sup>29</sup> bits, and 2<sup>29</sup> / 2<sup>24</sup> = 2<sup>5</sup> = 32."
+    ],
+    "final": "32 chips — option C.",
+    "trap": "Dividing 64 MB by 4M to get 16 and forgetting that each chip supplies only 4 bits per location, so chips must also be grouped to make a byte."
+   }
+  },
+  {
+   "id": "CO-U4-Q04",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A DRAM array has 4096 rows and is refreshed by refreshing one row per refresh cycle. Every cell must be refreshed within 64 ms. How long may a single refresh cycle last?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"4\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 4</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A DRAM array has 4096 rows and is refreshed by refreshing one row per refresh cycle. Every cell must be refreshed within 64 ms. How long may a single refresh cycle last?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"4\" data-typ=\"MCQ\" name=\"q4\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">1.95 &micro;s</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"4\" data-typ=\"MCQ\" name=\"q4\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">15.625 &micro;s</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"4\" data-typ=\"MCQ\" name=\"q4\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">64 &micro;s</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"4\" data-typ=\"MCQ\" name=\"q4\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">256 &micro;s</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "1.95 &micro;s",
+    "15.625 &micro;s",
+    "64 &micro;s",
+    "256 &micro;s"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Refreshing one row per cycle means the whole array is covered in (rows &times; cycle time). Setting that equal to the retention interval fixes the cycle time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>All 4096 rows must be visited within 64 ms.</li><li>Time per row = 64 ms / 4096.</li><li>64 &times; 10<sup>&minus;3</sup> / 4096 = 15.625 &times; 10<sup>&minus;6</sup> s.</li><li>So one refresh cycle may last 15.625 &micro;s.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 15.625 &micro;s — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 64 &micro;s by treating the retention interval as the per-row interval. The interval must be divided among all the rows.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "Refreshing one row per cycle means the whole array is covered in (rows &times; cycle time). Setting that equal to the retention interval fixes the cycle time.",
+    "steps": [
+     "All 4096 rows must be visited within 64 ms.",
+     "Time per row = 64 ms / 4096.",
+     "64 &times; 10<sup>&minus;3</sup> / 4096 = 15.625 &times; 10<sup>&minus;6</sup> s.",
+     "So one refresh cycle may last 15.625 &micro;s."
+    ],
+    "final": "15.625 &micro;s — option B.",
+    "trap": "Answering 64 &micro;s by treating the retention interval as the per-row interval. The interval must be divided among all the rows."
+   }
+  },
+  {
+   "id": "CO-U4-Q05",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A system uses 32-bit logical addresses and 4 KB pages. How many bits form the page offset, and how many entries does a single-level page table need?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"5\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 5</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A system uses 32-bit logical addresses and 4 KB pages. How many bits form the page offset, and how many entries does a single-level page table need?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">12 bits and 2<sup>20</sup> entries</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">12 bits and 2<sup>12</sup> entries</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">20 bits and 2<sup>12</sup> entries</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"5\" data-typ=\"MCQ\" name=\"q5\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">10 bits and 2<sup>22</sup> entries</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "12 bits and 2<sup>20</sup> entries",
+    "12 bits and 2<sup>12</sup> entries",
+    "20 bits and 2<sup>12</sup> entries",
+    "10 bits and 2<sup>22</sup> entries"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The offset selects a byte inside a page, so its width is log<sub>2</sub>(page size). Whatever remains of the logical address is the page number, and a single-level table has one entry per page.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Page size 4 KB = 2<sup>12</sup> bytes, so the offset is 12 bits.</li><li>The page number takes the remaining 32 &minus; 12 = 20 bits.</li><li>A page number of 20 bits names 2<sup>20</sup> = 1,048,576 pages.</li><li>A single-level page table therefore needs 2<sup>20</sup> entries, one per page.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12 offset bits and 2<sup>20</sup> table entries — option A.</span></p><p class=\"row\"><b>Common misconception.</b> Swapping the two widths, or assuming the table has one entry per offset value. The offset addresses bytes inside a page and never indexes the page table.</p>",
+   "answer_indices": [
+    0
+   ],
+   "solution": {
+    "concept": "The offset selects a byte inside a page, so its width is log<sub>2</sub>(page size). Whatever remains of the logical address is the page number, and a single-level table has one entry per page.",
+    "steps": [
+     "Page size 4 KB = 2<sup>12</sup> bytes, so the offset is 12 bits.",
+     "The page number takes the remaining 32 &minus; 12 = 20 bits.",
+     "A page number of 20 bits names 2<sup>20</sup> = 1,048,576 pages.",
+     "A single-level page table therefore needs 2<sup>20</sup> entries, one per page."
+    ],
+    "final": "12 offset bits and 2<sup>20</sup> table entries — option A.",
+    "trap": "Swapping the two widths, or assuming the table has one entry per offset value. The offset addresses bytes inside a page and never indexes the page table."
+   }
+  },
+  {
+   "id": "CO-U4-Q06",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A TLB has 64 entries and is 4-way set associative. How many sets does it have, and how many bits of the page number select the set?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"6\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 6</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A TLB has 64 entries and is 4-way set associative. How many sets does it have, and how many bits of the page number select the set?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">16 sets and 4 bits</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">16 sets and 6 bits</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">64 sets and 6 bits</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"6\" data-typ=\"MCQ\" name=\"q6\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">4 sets and 2 bits</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "16 sets and 4 bits",
+    "16 sets and 6 bits",
+    "64 sets and 6 bits",
+    "4 sets and 2 bits"
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a set-associative structure the entries are partitioned into sets of equal size: sets = entries / ways. The set index width is the logarithm of the set count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Sets = 64 entries / 4 ways = 16 sets.</li><li>16 = 2<sup>4</sup>, so 4 bits of the page number select the set.</li><li>The remaining high-order bits of the page number form the tag compared against the 4 ways.</li><li>Cross-check: 16 sets &times; 4 ways &times; 1 entry = 64 entries.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 16 sets and a 4-bit set index — option A.</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by the wrong factor, or quoting 6 bits because 64 = 2<sup>6</sup>. The 6 bits index entries, not sets; associativity removes them.</p>",
+   "answer_indices": [
+    0
+   ],
+   "solution": {
+    "concept": "In a set-associative structure the entries are partitioned into sets of equal size: sets = entries / ways. The set index width is the logarithm of the set count.",
+    "steps": [
+     "Sets = 64 entries / 4 ways = 16 sets.",
+     "16 = 2<sup>4</sup>, so 4 bits of the page number select the set.",
+     "The remaining high-order bits of the page number form the tag compared against the 4 ways.",
+     "Cross-check: 16 sets &times; 4 ways &times; 1 entry = 64 entries."
+    ],
+    "final": "16 sets and a 4-bit set index — option A.",
+    "trap": "Dividing by the wrong factor, or quoting 6 bits because 64 = 2<sup>6</sup>. The 6 bits index entries, not sets; associativity removes them."
+   }
+  },
+  {
+   "id": "CO-U4-Q07",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "What does a single TLB entry hold?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"7\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 7</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">What does a single TLB entry hold?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">The full contents of one page frame.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">A page-number to frame-number mapping together with protection and valid bits.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">The complete page table of the running process.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"7\" data-typ=\"MCQ\" name=\"q7\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The physical address of the page-table base register.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "The full contents of one page frame.",
+    "A page-number to frame-number mapping together with protection and valid bits.",
+    "The complete page table of the running process.",
+    "The physical address of the page-table base register."
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The TLB is a small, fast, fully or set-associative cache of page-table entries. Each entry caches one translation, not the data and not the table.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A translation maps a virtual page number to a physical frame number.</li><li>The entry stores that page number as its tag, the frame number as its data, and control bits: valid, dirty, reference and protection.</li><li>The page data itself lives in the frame in main memory, not in the TLB.</li><li>The page-table base register is a separate CPU register, and the page table is far larger than a TLB.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: A page-number to frame-number mapping with protection and valid bits — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the TLB with a data cache. The TLB caches translations; a data cache caches the contents of frames.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "The TLB is a small, fast, fully or set-associative cache of page-table entries. Each entry caches one translation, not the data and not the table.",
+    "steps": [
+     "A translation maps a virtual page number to a physical frame number.",
+     "The entry stores that page number as its tag, the frame number as its data, and control bits: valid, dirty, reference and protection.",
+     "The page data itself lives in the frame in main memory, not in the TLB.",
+     "The page-table base register is a separate CPU register, and the page table is far larger than a TLB."
+    ],
+    "final": "A page-number to frame-number mapping with protection and valid bits — option B.",
+    "trap": "Confusing the TLB with a data cache. The TLB caches translations; a data cache caches the contents of frames."
+   }
+  },
+  {
+   "id": "CO-U4-Q08",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A TLB is accessed in 10 ns and main memory in 80 ns. The TLB hit ratio is 90%. On a miss the page-table entry is read from memory and then the data word is fetched. The effective access time is",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"8\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 8</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A TLB is accessed in 10 ns and main memory in 80 ns. The TLB hit ratio is 90%. On a miss the page-table entry is read from memory and then the data word is fetched. The effective access time is</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">90 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">98 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">106 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"8\" data-typ=\"MCQ\" name=\"q8\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">170 ns</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "90 ns",
+    "98 ns",
+    "106 ns",
+    "170 ns"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Effective access time is the probability-weighted sum of the hit path and the miss path, and both paths include the TLB lookup.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Hit path = TLB access + one memory access = 10 + 80 = 90 ns.</li><li>Miss path = TLB access + page-table read + data read = 10 + 80 + 80 = 170 ns.</li><li>EAT = 0.90 &times; 90 + 0.10 &times; 170.</li><li>0.90 &times; 90 = 81 and 0.10 &times; 170 = 17, so EAT = 98 ns.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 98 ns — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Option A is the hit path alone, quoted as if every access hit. Option D is the miss path alone. The TLB time must appear in both terms.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "Effective access time is the probability-weighted sum of the hit path and the miss path, and both paths include the TLB lookup.",
+    "steps": [
+     "Hit path = TLB access + one memory access = 10 + 80 = 90 ns.",
+     "Miss path = TLB access + page-table read + data read = 10 + 80 + 80 = 170 ns.",
+     "EAT = 0.90 &times; 90 + 0.10 &times; 170.",
+     "0.90 &times; 90 = 81 and 0.10 &times; 170 = 17, so EAT = 98 ns."
+    ],
+    "final": "98 ns — option B.",
+    "trap": "Option A is the hit path alone, quoted as if every access hit. Option D is the miss path alone. The TLB time must appear in both terms."
+   }
+  },
+  {
+   "id": "CO-U4-Q09",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A system uses two-level paging. The TLB is accessed in 2 ns and main memory in 100 ns, and the TLB hit ratio is 95%. On a TLB miss both page-table levels are read from memory and then the data word is fetched. The effective access time is",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"9\" data-type=\"MCQ\" data-difficulty=\"hard\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 9</span><span class=\"tag mcq\">MCQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A system uses two-level paging. The TLB is accessed in 2 ns and main memory in 100 ns, and the TLB hit ratio is 95%. On a TLB miss both page-table levels are read from memory and then the data word is fetched. The effective access time is</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"9\" data-typ=\"MCQ\" name=\"q9\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">102 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"9\" data-typ=\"MCQ\" name=\"q9\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">112 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"9\" data-typ=\"MCQ\" name=\"q9\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">117 ns</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"9\" data-typ=\"MCQ\" name=\"q9\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">302 ns</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "102 ns",
+    "112 ns",
+    "117 ns",
+    "302 ns"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each level of paging adds one memory access to the miss path only. The hit path stays at TLB access plus one memory access.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Hit path = 2 + 100 = 102 ns.</li><li>Miss path = 2 + 100 + 100 + 100 = 302 ns, that is the TLB, level 1, level 2 and the data word.</li><li>EAT = 0.95 &times; 102 + 0.05 &times; 302.</li><li>0.95 &times; 102 = 96.9 and 0.05 &times; 302 = 15.1, so EAT = 112 ns.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 112 ns — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Option C comes from charging three memory accesses on the hit path as well, and option D is the miss path used as if it were the average.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "Each level of paging adds one memory access to the miss path only. The hit path stays at TLB access plus one memory access.",
+    "steps": [
+     "Hit path = 2 + 100 = 102 ns.",
+     "Miss path = 2 + 100 + 100 + 100 = 302 ns, that is the TLB, level 1, level 2 and the data word.",
+     "EAT = 0.95 &times; 102 + 0.05 &times; 302.",
+     "0.95 &times; 102 = 96.9 and 0.05 &times; 302 = 15.1, so EAT = 112 ns."
+    ],
+    "final": "112 ns — option B.",
+    "trap": "Option C comes from charging three memory accesses on the hit path as well, and option D is the miss path used as if it were the average."
+   }
+  },
+  {
+   "id": "CO-U4-Q10",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "segmentation",
+   "subtopic": "segmentation",
+   "subtopic_label": "Segmentation",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "In a segmented memory system a logical address is the pair (s, d). What does d denote?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"10\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"segmentation\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 10</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">segmentation</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">In a segmented memory system a logical address is the pair (s, d). What does d denote?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">The offset within segment s.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">The segment number.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">The frame number in physical memory.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"10\" data-typ=\"MCQ\" name=\"q10\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The page index inside the segment.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "The offset within segment s.",
+    "The segment number.",
+    "The frame number in physical memory.",
+    "The page index inside the segment."
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Segmentation divides the logical address space into variable-length named segments. The first component names the segment; the second gives the displacement inside it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>s is an index into the segment table, which yields the base address and the limit of that segment.</li><li>d is the displacement from the base of the segment.</li><li>The hardware checks d &lt; limit; if the check fails a trap is raised.</li><li>The physical address is base(s) + d.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: The offset within segment s — option A.</span></p><p class=\"row\"><b>Common misconception.</b> Reading d as a page index assumes paging, where the second component really is a page number. In segmentation the second component is a byte displacement inside a variable-length segment.</p>",
+   "answer_indices": [
+    0
+   ],
+   "solution": {
+    "concept": "Segmentation divides the logical address space into variable-length named segments. The first component names the segment; the second gives the displacement inside it.",
+    "steps": [
+     "s is an index into the segment table, which yields the base address and the limit of that segment.",
+     "d is the displacement from the base of the segment.",
+     "The hardware checks d &lt; limit; if the check fails a trap is raised.",
+     "The physical address is base(s) + d."
+    ],
+    "final": "The offset within segment s — option A.",
+    "trap": "Reading d as a page index assumes paging, where the second component really is a page number. In segmentation the second component is a byte displacement inside a variable-length segment."
+   }
+  },
+  {
+   "id": "CO-U4-Q11",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "segmentation",
+   "subtopic": "segmentation",
+   "subtopic_label": "Segmentation",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A process has the segment table below. Which logical address causes a trap?<br/>Segment 0: base 219, limit 600 &middot; Segment 1: base 2300, limit 14 &middot; Segment 2: base 90, limit 100",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"11\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"segmentation\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 11</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">segmentation</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A process has the segment table below. Which logical address causes a trap?<br/>Segment 0: base 219, limit 600 &middot; Segment 1: base 2300, limit 14 &middot; Segment 2: base 90, limit 100</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">(0, 430)</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">(1, 13)</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">(2, 500)</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"11\" data-typ=\"MCQ\" name=\"q11\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">(2, 99)</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "(0, 430)",
+    "(1, 13)",
+    "(2, 500)",
+    "(2, 99)"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The hardware compares the offset with the segment limit before forming the physical address. The offset must satisfy 0 &le; d &lt; limit.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(0, 430): 430 &lt; 600, valid, and maps to 219 + 430 = 649.</li><li>(1, 13): 13 &lt; 14, valid, and maps to 2300 + 13 = 2313.</li><li>(2, 500): 500 &gt; 100, so the offset is outside the segment and the access traps.</li><li>(2, 99): 99 &lt; 100, valid, and maps to 90 + 99 = 189.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (2, 500) traps — option C.</span></p><p class=\"row\"><b>Common misconception.</b> Using the base instead of the limit for the check, or forgetting that the bound is strict: an offset exactly equal to the limit is already outside a segment of that length.</p>",
+   "answer_indices": [
+    2
+   ],
+   "solution": {
+    "concept": "The hardware compares the offset with the segment limit before forming the physical address. The offset must satisfy 0 &le; d &lt; limit.",
+    "steps": [
+     "(0, 430): 430 &lt; 600, valid, and maps to 219 + 430 = 649.",
+     "(1, 13): 13 &lt; 14, valid, and maps to 2300 + 13 = 2313.",
+     "(2, 500): 500 &gt; 100, so the offset is outside the segment and the access traps.",
+     "(2, 99): 99 &lt; 100, valid, and maps to 90 + 99 = 189."
+    ],
+    "final": "(2, 500) traps — option C.",
+    "trap": "Using the base instead of the limit for the check, or forgetting that the bound is strict: an offset exactly equal to the limit is already outside a segment of that length."
+   }
+  },
+  {
+   "id": "CO-U4-Q12",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A single-level page table maps a 32-bit logical address space with 4 KB pages, and each page-table entry is 4 bytes. How large is the page table?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"12\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 12</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">A single-level page table maps a 32-bit logical address space with 4 KB pages, and each page-table entry is 4 bytes. How large is the page table?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">4 KB</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">1 MB</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">4 MB</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"12\" data-typ=\"MCQ\" name=\"q12\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">2<sup>32</sup> bytes</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "4 KB",
+    "1 MB",
+    "4 MB",
+    "2<sup>32</sup> bytes"
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Page-table size is the number of entries times the size of one entry, and the number of entries is the number of virtual pages.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Pages = 2<sup>32</sup> / 2<sup>12</sup> = 2<sup>20</sup>.</li><li>Entries = 2<sup>20</sup>, one per page.</li><li>Size = 2<sup>20</sup> &times; 4 bytes = 2<sup>22</sup> bytes.</li><li>2<sup>22</sup> bytes = 4 MB.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 MB — option C.</span></p><p class=\"row\"><b>Common misconception.</b> Option D forgets that the table has one entry per page, not one per byte of address space. Option A confuses the page size with the table size.</p>",
+   "answer_indices": [
+    2
+   ],
+   "solution": {
+    "concept": "Page-table size is the number of entries times the size of one entry, and the number of entries is the number of virtual pages.",
+    "steps": [
+     "Pages = 2<sup>32</sup> / 2<sup>12</sup> = 2<sup>20</sup>.",
+     "Entries = 2<sup>20</sup>, one per page.",
+     "Size = 2<sup>20</sup> &times; 4 bytes = 2<sup>22</sup> bytes.",
+     "2<sup>22</sup> bytes = 4 MB."
+    ],
+    "final": "4 MB — option C.",
+    "trap": "Option D forgets that the table has one entry per page, not one per byte of address space. Option A confuses the page size with the table size."
+   }
+  },
+  {
+   "id": "CO-U4-Q13",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "For the same system (32-bit logical addresses, 4 KB pages, 4-byte entries), two-level paging is used so that each page table fits in exactly one page. How many bits of the page number form the outer (first-level) index?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"13\" data-type=\"MCQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 13</span><span class=\"tag mcq\">MCQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">For the same system (32-bit logical addresses, 4 KB pages, 4-byte entries), two-level paging is used so that each page table fits in exactly one page. How many bits of the page number form the outer (first-level) index?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">8</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">10</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">12</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"13\" data-typ=\"MCQ\" name=\"q13\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">20</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "8",
+    "10",
+    "12",
+    "20"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A page table that fits in one page holds (page size / entry size) entries, and each level therefore consumes exactly log<sub>2</sub> of that many bits of the page number.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>One page holds 4096 / 4 = 1024 entries.</li><li>1024 = 2<sup>10</sup>, so each level consumes 10 bits.</li><li>The page number is 32 &minus; 12 = 20 bits.</li><li>Two levels of 10 bits each account for exactly the 20 bits, so the outer index is 10 bits.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 10 bits — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Splitting the 20 bits unevenly, or taking 12 bits because that is the offset width. The offset is not part of the page number and is never indexed by a table.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "A page table that fits in one page holds (page size / entry size) entries, and each level therefore consumes exactly log<sub>2</sub> of that many bits of the page number.",
+    "steps": [
+     "One page holds 4096 / 4 = 1024 entries.",
+     "1024 = 2<sup>10</sup>, so each level consumes 10 bits.",
+     "The page number is 32 &minus; 12 = 20 bits.",
+     "Two levels of 10 bits each account for exactly the 20 bits, so the outer index is 10 bits."
+    ],
+    "final": "10 bits — option B.",
+    "trap": "Splitting the 20 bits unevenly, or taking 12 bits because that is the offset width. The offset is not part of the page number and is never indexed by a table."
+   }
+  },
+  {
+   "id": "CO-U4-Q14",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "With a TLB of access time t, a main-memory access time m and a TLB hit ratio h, and with a single-level page table held in memory, the effective access time is",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"14\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 14</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">With a TLB of access time t, a main-memory access time m and a TLB hit ratio h, and with a single-level page table held in memory, the effective access time is</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"14\" data-typ=\"MCQ\" name=\"q14\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">h &times; t + (1 &minus; h) &times; m</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"14\" data-typ=\"MCQ\" name=\"q14\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">h &times; (t + m) + (1 &minus; h) &times; (t + 2m)</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"14\" data-typ=\"MCQ\" name=\"q14\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">t + (1 &minus; h) &times; m</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"14\" data-typ=\"MCQ\" name=\"q14\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">m / h</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "h &times; t + (1 &minus; h) &times; m",
+    "h &times; (t + m) + (1 &minus; h) &times; (t + 2m)",
+    "t + (1 &minus; h) &times; m",
+    "m / h"
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every access pays the TLB lookup; only a miss pays the extra page-table read. The two paths are averaged by their probabilities.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A hit costs t + m: the TLB lookup and then the data access.</li><li>A miss costs t + 2m: the TLB lookup, the page-table read and then the data access.</li><li>Weighting by h and 1 &minus; h gives EAT = h(t + m) + (1 &minus; h)(t + 2m).</li><li>Check the endpoints: h = 1 gives t + m and h = 0 gives t + 2m.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: EAT = h(t + m) + (1 &minus; h)(t + 2m) — option B.</span></p><p class=\"row\"><b>Common misconception.</b> Option A drops the TLB time from both paths, which is the classic slip. The TLB is consulted on every access, hit or miss.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "Every access pays the TLB lookup; only a miss pays the extra page-table read. The two paths are averaged by their probabilities.",
+    "steps": [
+     "A hit costs t + m: the TLB lookup and then the data access.",
+     "A miss costs t + 2m: the TLB lookup, the page-table read and then the data access.",
+     "Weighting by h and 1 &minus; h gives EAT = h(t + m) + (1 &minus; h)(t + 2m).",
+     "Check the endpoints: h = 1 gives t + m and h = 0 gives t + 2m."
+    ],
+    "final": "EAT = h(t + m) + (1 &minus; h)(t + 2m) — option B.",
+    "trap": "Option A drops the TLB time from both paths, which is the classic slip. The TLB is consulted on every access, hit or miss."
+   }
+  },
+  {
+   "id": "CO-U4-Q15",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "segmentation",
+   "subtopic": "segmentation",
+   "subtopic_label": "Segmentation",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following is a disadvantage of segmentation compared with paging?",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"15\" data-type=\"MCQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"segmentation\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 15</span><span class=\"tag mcq\">MCQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">segmentation</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 1</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following is a disadvantage of segmentation compared with paging?</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"15\" data-typ=\"MCQ\" name=\"q15\" type=\"radio\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">It hides the logical structure of the program from the programmer.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"15\" data-typ=\"MCQ\" name=\"q15\" type=\"radio\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Because segments have variable length, main memory suffers from external fragmentation.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"15\" data-typ=\"MCQ\" name=\"q15\" type=\"radio\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">It makes sharing of code between processes impossible.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"15\" data-typ=\"MCQ\" name=\"q15\" type=\"radio\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">It provides no protection mechanism.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "It hides the logical structure of the program from the programmer.",
+    "Because segments have variable length, main memory suffers from external fragmentation.",
+    "It makes sharing of code between processes impossible.",
+    "It provides no protection mechanism."
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Segments are allocated as contiguous variable-length blocks, so the free space between them is broken into pieces that may be individually too small.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A segment must occupy one contiguous run of physical memory.</li><li>As segments are created and destroyed, the free memory is fragmented into variable-size holes.</li><li>A new segment may fail to fit even though the total free space is large enough: external fragmentation.</li><li>Paging avoids this because every frame is the same size.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: External fragmentation caused by variable-length segments — option B.</span></p><p class=\"row\"><b>Common misconception.</b> The other three options describe the opposite of what segmentation does. Segmentation exposes logical structure, supports sharing through segment-table entries and carries protection bits.</p>",
+   "answer_indices": [
+    1
+   ],
+   "solution": {
+    "concept": "Segments are allocated as contiguous variable-length blocks, so the free space between them is broken into pieces that may be individually too small.",
+    "steps": [
+     "A segment must occupy one contiguous run of physical memory.",
+     "As segments are created and destroyed, the free memory is fragmented into variable-size holes.",
+     "A new segment may fail to fit even though the total free space is large enough: external fragmentation.",
+     "Paging avoids this because every frame is the same size."
+    ],
+    "final": "External fragmentation caused by variable-length segments — option B.",
+    "trap": "The other three options describe the opposite of what segmentation does. Segmentation exposes logical structure, supports sharing through segment-table entries and carries protection bits."
+   }
+  },
+  {
+   "id": "CO-U4-Q16",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about SRAM and DRAM are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"16\" data-type=\"MSQ\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 16</span><span class=\"tag msq\">MSQ</span><span class=\"tag easy\">easy</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about SRAM and DRAM are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"16\" data-typ=\"MSQ\" name=\"q16\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">An SRAM cell is a bistable latch of about six transistors and needs no refresh.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"16\" data-typ=\"MSQ\" name=\"q16\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">A DRAM cell stores a bit as charge on a capacitor and must be refreshed periodically.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"16\" data-typ=\"MSQ\" name=\"q16\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">DRAM is faster than SRAM but less dense.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"16\" data-typ=\"MSQ\" name=\"q16\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">SRAM is used for cache memory while DRAM is used for main memory.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "An SRAM cell is a bistable latch of about six transistors and needs no refresh.",
+    "A DRAM cell stores a bit as charge on a capacitor and must be refreshed periodically.",
+    "DRAM is faster than SRAM but less dense.",
+    "SRAM is used for cache memory while DRAM is used for main memory."
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The two technologies trade density against speed and refresh cost, and that trade is what fixes their places in the memory hierarchy.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. The cross-coupled inverter pair holds the bit actively, so no refresh is required.</li><li>(B) True. The capacitor leaks, so each row is read and rewritten within the retention interval.</li><li>(C) False. It is the other way round: SRAM is faster and less dense, DRAM is denser and slower.</li><li>(D) True. Cache needs the speed of SRAM, main memory needs the density and cost of DRAM.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Option C reverses the trade-off. Density and speed pull in opposite directions here, and DRAM wins only on density.</p>",
+   "answer_indices": [
+    0,
+    1,
+    3
+   ],
+   "solution": {
+    "concept": "The two technologies trade density against speed and refresh cost, and that trade is what fixes their places in the memory hierarchy.",
+    "steps": [
+     "(A) True. The cross-coupled inverter pair holds the bit actively, so no refresh is required.",
+     "(B) True. The capacitor leaks, so each row is read and rewritten within the retention interval.",
+     "(C) False. It is the other way round: SRAM is faster and less dense, DRAM is denser and slower.",
+     "(D) True. Cache needs the speed of SRAM, main memory needs the density and cost of DRAM."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "Option C reverses the trade-off. Density and speed pull in opposite directions here, and DRAM wins only on density."
+   }
+  },
+  {
+   "id": "CO-U4-Q17",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about TLBs are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"17\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 17</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about TLBs are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"17\" data-typ=\"MSQ\" name=\"q17\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A TLB hit avoids one or more page-table memory accesses.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"17\" data-typ=\"MSQ\" name=\"q17\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">A TLB is usually fully associative or set associative because its hit time matters.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"17\" data-typ=\"MSQ\" name=\"q17\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">A TLB must be flushed, or its entries tagged with an address-space identifier, on a context switch.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"17\" data-typ=\"MSQ\" name=\"q17\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">Doubling the number of TLB entries halves the number of page faults.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "A TLB hit avoids one or more page-table memory accesses.",
+    "A TLB is usually fully associative or set associative because its hit time matters.",
+    "A TLB must be flushed, or its entries tagged with an address-space identifier, on a context switch.",
+    "Doubling the number of TLB entries halves the number of page faults."
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The TLB caches translations, so it shortens the address-translation path. It never changes which pages are resident.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. A hit supplies the frame number directly, so the page-table walk is skipped.</li><li>(B) True. A fully or set-associative search in parallel keeps the hit time low despite the tag comparison against several entries.</li><li>(C) True. Entries are per-process mappings, so a switch either invalidates them or requires an address-space identifier in the tag.</li><li>(D) False. A page fault means the page is not in memory; a larger TLB only reduces translation misses, not page faults.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Option D confuses a TLB miss with a page fault. A TLB miss usually costs a page-table walk; a page fault costs a disk or flash transfer.</p>",
+   "answer_indices": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "The TLB caches translations, so it shortens the address-translation path. It never changes which pages are resident.",
+    "steps": [
+     "(A) True. A hit supplies the frame number directly, so the page-table walk is skipped.",
+     "(B) True. A fully or set-associative search in parallel keeps the hit time low despite the tag comparison against several entries.",
+     "(C) True. Entries are per-process mappings, so a switch either invalidates them or requires an address-space identifier in the tag.",
+     "(D) False. A page fault means the page is not in memory; a larger TLB only reduces translation misses, not page faults."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "Option D confuses a TLB miss with a page fault. A TLB miss usually costs a page-table walk; a page fault costs a disk or flash transfer."
+   }
+  },
+  {
+   "id": "CO-U4-Q18",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about effective access time (EAT) in a paged system are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"18\" data-type=\"MSQ\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 18</span><span class=\"tag msq\">MSQ</span><span class=\"tag medium\">medium</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about effective access time (EAT) in a paged system are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"18\" data-typ=\"MSQ\" name=\"q18\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">With a single-level page table in memory, EAT = h(t + m) + (1 &minus; h)(t + 2m), where t is the TLB time, m the memory time and h the hit ratio.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"18\" data-typ=\"MSQ\" name=\"q18\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">EAT is the probability-weighted average of the hit path and the miss path.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"18\" data-typ=\"MSQ\" name=\"q18\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Because the page-fault service time is bounded, it can be added as a fixed constant.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"18\" data-typ=\"MSQ\" name=\"q18\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">With a two-level page table the miss path reads two page-table entries and then the data word.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "With a single-level page table in memory, EAT = h(t + m) + (1 &minus; h)(t + 2m), where t is the TLB time, m the memory time and h the hit ratio.",
+    "EAT is the probability-weighted average of the hit path and the miss path.",
+    "Because the page-fault service time is bounded, it can be added as a fixed constant.",
+    "With a two-level page table the miss path reads two page-table entries and then the data word."
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> EAT is an expectation over the paths an access can take, so each path must be charged in full and weighted by its probability.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. That expression is the standard one-level formula.</li><li>(B) True. That is the definition of an expectation over the two outcomes.</li><li>(C) False. A page-fault service time is dominated by a device access and varies with the device and the queue; it is modelled as a large, not a small fixed, penalty and it is not a constant of the machine.</li><li>(D) True. Each level costs one memory read, and the data word costs one more.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Option C treats a fault as a fixed overhead like a cache miss. Fault handling involves a trap to the operating system and a device transfer, and its cost is neither small nor constant.</p>",
+   "answer_indices": [
+    0,
+    1,
+    3
+   ],
+   "solution": {
+    "concept": "EAT is an expectation over the paths an access can take, so each path must be charged in full and weighted by its probability.",
+    "steps": [
+     "(A) True. That expression is the standard one-level formula.",
+     "(B) True. That is the definition of an expectation over the two outcomes.",
+     "(C) False. A page-fault service time is dominated by a device access and varies with the device and the queue; it is modelled as a large, not a small fixed, penalty and it is not a constant of the machine.",
+     "(D) True. Each level costs one memory read, and the data word costs one more."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "Option C treats a fault as a fixed overhead like a cache miss. Fault handling involves a trap to the operating system and a device transfer, and its cost is neither small nor constant."
+   }
+  },
+  {
+   "id": "CO-U4-Q19",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "segmentation",
+   "subtopic": "segmentation",
+   "subtopic_label": "Segmentation",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about segmented memory are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"19\" data-type=\"MSQ\" data-difficulty=\"hard\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"segmentation\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 19</span><span class=\"tag msq\">MSQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">segmentation</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">Which of the following statements about segmented memory are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">A logical address is a (segment number, offset) pair, and the offset is checked against the segment limit.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">Two processes can share a segment by pointing their segment-table entries at the same base with matching protection.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Because segments have variable length, main memory suffers from external fragmentation.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"19\" data-typ=\"MSQ\" name=\"q19\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">The segment number is translated to a frame number through a page table.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "A logical address is a (segment number, offset) pair, and the offset is checked against the segment limit.",
+    "Two processes can share a segment by pointing their segment-table entries at the same base with matching protection.",
+    "Because segments have variable length, main memory suffers from external fragmentation.",
+    "The segment number is translated to a frame number through a page table."
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Segmentation is a logical, variable-length division of the address space; the segment table supplies a base and a limit per segment, and that is all the hardware needs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) True. The limit check is what makes segmentation a protection mechanism as well as an addressing scheme.</li><li>(B) True. Sharing needs only that both segment tables name the same base with compatible permissions.</li><li>(C) True. Variable-length contiguous allocation leaves holes that may be too small individually.</li><li>(D) False. A segment table maps a segment number to a base and a limit. Frame numbers belong to paging.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Option D mixes the two schemes. Segments are located by a base and bounded by a limit; only pages are located by a frame number.</p>",
+   "answer_indices": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Segmentation is a logical, variable-length division of the address space; the segment table supplies a base and a limit per segment, and that is all the hardware needs.",
+    "steps": [
+     "(A) True. The limit check is what makes segmentation a protection mechanism as well as an addressing scheme.",
+     "(B) True. Sharing needs only that both segment tables name the same base with compatible permissions.",
+     "(C) True. Variable-length contiguous allocation leaves holes that may be too small individually.",
+     "(D) False. A segment table maps a segment number to a base and a limit. Frame numbers belong to paging."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "Option D mixes the two schemes. Segments are located by a base and bounded by a limit; only pages are located by a frame number."
+   }
+  },
+  {
+   "id": "CO-U4-Q20",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A paged system has a TLB access time of 10 ns, a memory access time of 100 ns and a single-level page table in memory. Which of the following statements are TRUE? (Select all that apply.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"20\" data-type=\"MSQ\" data-difficulty=\"hard\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 20</span><span class=\"tag msq\">MSQ</span><span class=\"tag hard\">hard</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A paged system has a TLB access time of 10 ns, a memory access time of 100 ns and a single-level page table in memory. Which of the following statements are TRUE? (Select all that apply.)</p><div class=\"opts\"><label class=\"opt\" data-i=\"0\"><input data-n=\"20\" data-typ=\"MSQ\" name=\"q20\" type=\"checkbox\" value=\"0\"/><span class=\"lbl\">A</span><span class=\"txt\">With a 100% TLB hit ratio the effective access time is 110 ns.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"1\"><input data-n=\"20\" data-typ=\"MSQ\" name=\"q20\" type=\"checkbox\" value=\"1\"/><span class=\"lbl\">B</span><span class=\"txt\">With a 0% TLB hit ratio the effective access time is 210 ns.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"2\"><input data-n=\"20\" data-typ=\"MSQ\" name=\"q20\" type=\"checkbox\" value=\"2\"/><span class=\"lbl\">C</span><span class=\"txt\">Raising the hit ratio from 90% to 95% reduces the effective access time by 5 ns.</span><span class=\"mark\"></span></label><label class=\"opt\" data-i=\"3\"><input data-n=\"20\" data-typ=\"MSQ\" name=\"q20\" type=\"checkbox\" value=\"3\"/><span class=\"lbl\">D</span><span class=\"txt\">Doubling the memory access time doubles the effective access time at every hit ratio.</span><span class=\"mark\"></span></label></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [
+    "With a 100% TLB hit ratio the effective access time is 110 ns.",
+    "With a 0% TLB hit ratio the effective access time is 210 ns.",
+    "Raising the hit ratio from 90% to 95% reduces the effective access time by 5 ns.",
+    "Doubling the memory access time doubles the effective access time at every hit ratio."
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> EAT = h(t + m) + (1 &minus; h)(t + 2m) = t + m + (1 &minus; h)m. In this form the TLB time and one memory access are paid unconditionally, and only the page-table read is proportional to the miss rate.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>h = 1: EAT = 10 + 100 = 110 ns. Statement A is true.</li><li>h = 0: EAT = 10 + 2 &times; 100 = 210 ns. Statement B is true.</li><li>h = 0.90: EAT = 10 + 100 + 0.10 &times; 100 = 120 ns. h = 0.95: EAT = 10 + 100 + 0.05 &times; 100 = 115 ns. The drop is 5 ns, so statement C is true.</li><li>Doubling m changes the h = 1 case from 110 to 210 ns, not to 220 ns, because the TLB time does not double. Statement D is false.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Statement D looks like a scaling law but fails because one component of EAT, the TLB access, is independent of memory time. Only the terms containing m scale.</p>",
+   "answer_indices": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "EAT = h(t + m) + (1 &minus; h)(t + 2m) = t + m + (1 &minus; h)m. In this form the TLB time and one memory access are paid unconditionally, and only the page-table read is proportional to the miss rate.",
+    "steps": [
+     "h = 1: EAT = 10 + 100 = 110 ns. Statement A is true.",
+     "h = 0: EAT = 10 + 2 &times; 100 = 210 ns. Statement B is true.",
+     "h = 0.90: EAT = 10 + 100 + 0.10 &times; 100 = 120 ns. h = 0.95: EAT = 10 + 100 + 0.05 &times; 100 = 115 ns. The drop is 5 ns, so statement C is true.",
+     "Doubling m changes the h = 1 case from 110 to 210 ns, not to 220 ns, because the TLB time does not double. Statement D is false."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "Statement D looks like a scaling law but fails because one component of EAT, the TLB access, is independent of memory time. Only the terms containing m scale."
+   }
+  },
+  {
+   "id": "CO-U4-Q21",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "dram-sram-organization",
+   "subtopic": "dram-sram-organization",
+   "subtopic_label": "DRAM & SRAM organization",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A DRAM chip has 10 row-address pins and 10 column-address pins, and the row and column addresses are multiplexed onto the same pins. How many addressable locations does the chip have?<br/>(Enter an integer.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"21\" data-type=\"NAT\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"dram-sram-organization\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 21</span><span class=\"tag nat\">NAT</span><span class=\"tag easy\">easy</span><span class=\"tag src\">dram-sram-organization</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A DRAM chip has 10 row-address pins and 10 column-address pins, and the row and column addresses are multiplexed onto the same pins. How many addressable locations does the chip have?<br/>(Enter an integer.)</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 21\" autocomplete=\"off\" class=\"natinput\" data-n=\"21\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [],
+   "answer_display": "1048576",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Address multiplexing halves the pin count without reducing the address space: the row address is latched first, then the column address, and together they name one cell.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The row address contributes 10 bits and the column address contributes 10 bits.</li><li>Together they form a 20-bit address.</li><li>2<sup>20</sup> = 1,048,576.</li><li>So the chip has 1,048,576 addressable locations, that is 1M.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1048576</span></p><p class=\"row\"><b>Common misconception.</b> Answering 1024, the number of locations on one address, or 20, the number of address bits. The two 10-bit halves combine into a 20-bit address.</p>",
+   "answer_indices": [
+    "1048576"
+   ],
+   "solution": {
+    "concept": "Address multiplexing halves the pin count without reducing the address space: the row address is latched first, then the column address, and together they name one cell.",
+    "steps": [
+     "The row address contributes 10 bits and the column address contributes 10 bits.",
+     "Together they form a 20-bit address.",
+     "2<sup>20</sup> = 1,048,576.",
+     "So the chip has 1,048,576 addressable locations, that is 1M."
+    ],
+    "final": "1048576",
+    "trap": "Answering 1024, the number of locations on one address, or 20, the number of address bits. The two 10-bit halves combine into a 20-bit address."
+   }
+  },
+  {
+   "id": "CO-U4-Q22",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A TLB has 128 entries and is 8-way set associative. How many sets does it have?<br/>(Enter an integer.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"22\" data-type=\"NAT\" data-difficulty=\"easy\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 22</span><span class=\"tag nat\">NAT</span><span class=\"tag easy\">easy</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A TLB has 128 entries and is 8-way set associative. How many sets does it have?<br/>(Enter an integer.)</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 22\" autocomplete=\"off\" class=\"natinput\" data-n=\"22\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [],
+   "answer_display": "16",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a set-associative array the entries are divided equally among the sets, so the set count is the entry count divided by the associativity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Entries = 128 and ways = 8.</li><li>Sets = 128 / 8 = 16.</li><li>Cross-check: 16 sets &times; 8 ways = 128 entries.</li><li>The set index therefore takes log<sub>2</sub> 16 = 4 bits of the page number.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 16</span></p><p class=\"row\"><b>Common misconception.</b> Answering 128, the entry count, or 8, the associativity. The set count is the quotient of the two.</p>",
+   "answer_indices": [
+    "16"
+   ],
+   "solution": {
+    "concept": "In a set-associative array the entries are divided equally among the sets, so the set count is the entry count divided by the associativity.",
+    "steps": [
+     "Entries = 128 and ways = 8.",
+     "Sets = 128 / 8 = 16.",
+     "Cross-check: 16 sets &times; 8 ways = 128 entries.",
+     "The set index therefore takes log<sub>2</sub> 16 = 4 bits of the page number."
+    ],
+    "final": "16",
+    "trap": "Answering 128, the entry count, or 8, the associativity. The set count is the quotient of the two."
+   }
+  },
+  {
+   "id": "CO-U4-Q23",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "paging-tlb-hit-ratio",
+   "subtopic": "paging-tlb-hit-ratio",
+   "subtopic_label": "Paging & TLB hit ratio",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A machine has 2 GB of physical memory and a page size of 4 KB. How many frames does physical memory contain?<br/>(Enter an integer.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"23\" data-type=\"NAT\" data-difficulty=\"medium\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"paging-tlb-hit-ratio\" data-source=\"STANDARD_TEXTBOOK\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 23</span><span class=\"tag nat\">NAT</span><span class=\"tag medium\">medium</span><span class=\"tag src\">paging-tlb-hit-ratio</span><span class=\"tag src\">standard textbook</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A machine has 2 GB of physical memory and a page size of 4 KB. How many frames does physical memory contain?<br/>(Enter an integer.)</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 23\" autocomplete=\"off\" class=\"natinput\" data-n=\"23\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [],
+   "answer_display": "524288",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A frame is one page-sized slot in physical memory, so the frame count is physical memory size divided by page size.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>2 GB = 2 &times; 2<sup>30</sup> = 2<sup>31</sup> bytes.</li><li>4 KB = 2<sup>12</sup> bytes.</li><li>Frames = 2<sup>31</sup> / 2<sup>12</sup> = 2<sup>19</sup>.</li><li>2<sup>19</sup> = 524,288.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 524288</span></p><p class=\"row\"><b>Common misconception.</b> Answering 2<sup>31</sup>, the number of bytes, or 2<sup>21</sup> by using 1 KB = 1000. Both GB and KB here are powers of two.</p>",
+   "answer_indices": [
+    "524288"
+   ],
+   "solution": {
+    "concept": "A frame is one page-sized slot in physical memory, so the frame count is physical memory size divided by page size.",
+    "steps": [
+     "2 GB = 2 &times; 2<sup>30</sup> = 2<sup>31</sup> bytes.",
+     "4 KB = 2<sup>12</sup> bytes.",
+     "Frames = 2<sup>31</sup> / 2<sup>12</sup> = 2<sup>19</sup>.",
+     "2<sup>19</sup> = 524,288."
+    ],
+    "final": "524288",
+    "trap": "Answering 2<sup>31</sup>, the number of bytes, or 2<sup>21</sup> by using 1 KB = 1000. Both GB and KB here are powers of two."
+   }
+  },
+  {
+   "id": "CO-U4-Q24",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "effective-access-time",
+   "subtopic": "effective-access-time",
+   "subtopic_label": "Effective access time",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A TLB is accessed in 20 ns and main memory in 100 ns, and the page table is single-level and held in memory. The measured effective access time is 150 ns. What is the TLB hit ratio, in percent?<br/>(Enter an integer.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"24\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"effective-access-time\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 24</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">effective-access-time</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A TLB is accessed in 20 ns and main memory in 100 ns, and the page table is single-level and held in memory. The measured effective access time is 150 ns. What is the TLB hit ratio, in percent?<br/>(Enter an integer.)</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 24\" autocomplete=\"off\" class=\"natinput\" data-n=\"24\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [],
+   "answer_display": "70",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> EAT = h(t + m) + (1 &minus; h)(t + 2m). Given EAT, solve the linear equation for h.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Hit path = 20 + 100 = 120 ns. Miss path = 20 + 100 + 100 = 220 ns.</li><li>120h + 220(1 &minus; h) = 150.</li><li>220 &minus; 100h = 150.</li><li>100h = 70, so h = 0.70, that is 70%.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 70</span></p><p class=\"row\"><b>Common misconception.</b> Setting the miss path to 2m = 200 and forgetting the TLB time, which gives 200 &minus; 80h = 150 and hence 62.5%. The TLB is read on the miss path too.</p>",
+   "answer_indices": [
+    "70"
+   ],
+   "solution": {
+    "concept": "EAT = h(t + m) + (1 &minus; h)(t + 2m). Given EAT, solve the linear equation for h.",
+    "steps": [
+     "Hit path = 20 + 100 = 120 ns. Miss path = 20 + 100 + 100 = 220 ns.",
+     "120h + 220(1 &minus; h) = 150.",
+     "220 &minus; 100h = 150.",
+     "100h = 70, so h = 0.70, that is 70%."
+    ],
+    "final": "70",
+    "trap": "Setting the miss path to 2m = 200 and forgetting the TLB time, which gives 200 &minus; 80h = 150 and hence 62.5%. The TLB is read on the miss path too."
+   }
+  },
+  {
+   "id": "CO-U4-Q25",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-management-unit",
+   "unit_name": "Main Memory & Virtual Memory Interface",
+   "topic": "Main Memory & Virtual Memory Interface",
+   "sub": "segmentation",
+   "subtopic": "segmentation",
+   "subtopic_label": "Segmentation",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 1 of 2",
+   "question": "A system uses segmentation with paging. Each logical address consists of an 8-bit segment number and a 24-bit offset, pages are 4 KB, and each page-table entry is 4 bytes. What is the maximum size, in KB, of one segment's page table?<br/>(Enter an integer.)",
+   "question_html": "<div class=\"qcard hidden\" data-n=\"25\" data-type=\"NAT\" data-difficulty=\"hard\" data-subject=\"computer-architecture\" data-unit=\"memory-management-unit\" data-unit-number=\"4\" data-subtopic=\"segmentation\" data-source=\"ORIGINAL_SYNTHESIS\"><div class=\"card\"><div class=\"qhead\"><span class=\"qno\">Question 25</span><span class=\"tag nat\">NAT</span><span class=\"tag hard\">hard</span><span class=\"tag src\">segmentation</span><span class=\"tag src\">original synthesis</span><span style=\"margin-left:auto;font-size:12.5px;color:var(--muted)\">Marks: 2</span></div><div class=\"qbody\"><p class=\"qtext\">A system uses segmentation with paging. Each logical address consists of an 8-bit segment number and a 24-bit offset, pages are 4 KB, and each page-table entry is 4 bytes. What is the maximum size, in KB, of one segment's page table?<br/>(Enter an integer.)</p><div class=\"natrow\"><label style=\"font-size:13.5px;color:#5b6b7a\">Your answer:</label><input aria-label=\"Numerical answer for question 25\" autocomplete=\"off\" class=\"natinput\" data-n=\"25\" inputmode=\"decimal\" placeholder=\"numeric value\" type=\"text\"/></div></div><div class=\"qfoot\"><button class=\"btn warn sm\" id=\"btnMark\">Mark for review</button><button class=\"btn sm\" id=\"btnClear\">Clear response</button><span style=\"flex:1\"></span><button class=\"btn sm\" id=\"btnPrev\">&larr; Previous</button><button class=\"btn primary sm\" id=\"btnNext\">Save &amp; Next &rarr;</button></div><div class=\"sol hidden\"></div></div></div>",
+   "options": [],
+   "answer_display": "16",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With segmentation plus paging, the segment's offset is itself divided into a page number and a page offset, so the number of page-table entries for a segment is (maximum offset size) / (page size).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The maximum segment size is 2<sup>24</sup> bytes, since the offset is 24 bits.</li><li>Pages per segment = 2<sup>24</sup> / 2<sup>12</sup> = 2<sup>12</sup> = 4096.</li><li>Page-table size = 4096 entries &times; 4 bytes = 16,384 bytes.</li><li>16,384 bytes = 16 KB.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 16</span></p><p class=\"row\"><b>Common misconception.</b> Using the 8-bit segment number instead of the 24-bit offset, which gives 256 entries and 1 KB. The page table is per segment, so it is sized by the segment, not by the number of segments.</p>",
+   "answer_indices": [
+    "16"
+   ],
+   "solution": {
+    "concept": "With segmentation plus paging, the segment's offset is itself divided into a page number and a page offset, so the number of page-table entries for a segment is (maximum offset size) / (page size).",
+    "steps": [
+     "The maximum segment size is 2<sup>24</sup> bytes, since the offset is 24 bits.",
+     "Pages per segment = 2<sup>24</sup> / 2<sup>12</sup> = 2<sup>12</sup> = 4096.",
+     "Page-table size = 4096 entries &times; 4 bytes = 16,384 bytes.",
+     "16,384 bytes = 16 KB."
+    ],
+    "final": "16",
+    "trap": "Using the 8-bit segment number instead of the 24-bit offset, which gives 256 entries and 1 KB. The page table is per segment, so it is sized by the segment, not by the number of segments."
+   }
   }
  ]
 }
