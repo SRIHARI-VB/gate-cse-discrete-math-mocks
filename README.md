@@ -7,35 +7,77 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 2 of 2**, 2026-10-31 →
-  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html)
+- **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: heap order & min-max heaps (7) · heapify & the bottom-up build (6) · heap sort (6) ·
-  priority queue applications (6)
-- Rotation: MODE A. An unseeded `secrets.choice` over the seven subjects that carry no paper dated 2026-10-31 gave
-  **Programming and Data Structures**, whose most recent run is `{2026-10-30, run 11, unit 6, heaps-priority-queues,
-  Set 1 of 2}`. Unit 6 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below
-  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the same unit ran again as **Set 2 of 2**.
-  Unit 6 now holds exactly **50** questions and closes, so the next Programming and Data Structures run advances
-  `(index_of(heaps-priority-queues) = 5 + 1) mod 7 = 6` → **Unit 7 — Hashing & Hash Tables**. No override, no partial
-  set, no unit above the cap.
-- The Set 1 paper of 2026-10-30 was moved to
-  `programming-data-structures/heaps-priority-queues/archive/gate_ds_mock_6_2026-10-30_run1.html` with its content
-  frozen: the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
-  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
+- Subtopics: base conversions (7) · one's and two's complement (6) · floating point and IEEE 754 (6) ·
+  range and overflow (6)
+- Rotation: MODE A. Five subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining six
+  and `random.Random(20261031).choice` gave **Digital Logic**, whose most recent run is
+  `{2026-10-30, run 8, unit 4, sequential-fsm-counters, Set 2 of 2}`. Unit 4 held **50** questions, at
+  `UNIT_QUESTION_CAP = 50`, so step B4 advanced `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` →
+  **Unit 1 — Number Systems & Representation**. Unit 1 already held 50 questions, so every Digital Logic unit sits at
+  the cap (50, 50, 50, 50) and step B5 applies: the second pass continues and Unit 1 takes its third set overall
+  (75 questions). No override, no partial set.
+- The unit folder held two current papers (2026-10-26 and 2026-10-27). Both were moved into
+  `digital-logic/number-systems/archive/` as `..._run1.html` and `..._run2.html` with their content frozen, so the
+  folder now holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 2 of 2**, 2026-10-31 →
+  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 126 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
-| Current papers / archived sets | 59 current · 67 archived |
-| Test cards on the portal | 77 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 127 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 6 Computer Architecture) |
+| Current papers / archived sets | 58 current · 69 archived |
+| Test cards on the portal | 76 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3150 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
+| Questions in the subject banks | 3175 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 150 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 67 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 3 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 69 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Digital Logic Unit 1, Set 1 of 2 (second pass)
+
+- New paper at `digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html`. The unit folder previously held two
+  current papers, `gate_dl_mock_1_2026-10-26.html` and `gate_dl_mock_1_2026-10-27.html`; both were moved to
+  `archive/gate_dl_mock_1_2026-10-26_run1.html` and `archive/gate_dl_mock_1_2026-10-27_run2.html` with their content
+  frozen (same questions, options, answers, solutions and duration), so the folder holds exactly one current paper.
+- **Rotation (Section 1, MODE A).** Algorithms, Computer Networks, Databases, Operating Systems and Programming and
+  Data Structures already carry a paper dated 2026-10-31, so the draw ran over the remaining six subjects in
+  alphabetical order with `random.Random(20261031).choice` and returned **Digital Logic**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-30, run 8, unit 4, sequential-fsm-counters, Set 2 of 2}`.
+  Unit 4 held **50** questions, at `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` → **Unit 1, Number Systems & Representation**. Unit 1
+  already held 50 questions, so every unit of the subject is at the cap and step B5 applies: the modulo wraps, the
+  second pass continues, and Unit 1 receives the first set of that pass — its third set overall, taking it to 75
+  questions. No override, no partial set.
+- Coverage: all four Unit 1 subtopics — base conversions (7); one's and two's complement (6); floating point and
+  IEEE 754 (6); range and overflow (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = **35** in 60 minutes.
+- All 25 ids are new (`DL-U1-Q51` … `DL-U1-Q75`); no id and no normalised stem collides with the 50 Set 1 and Set 2
+  items or with the other 150 banked Digital Logic items. The subject bank now holds **225** questions and the paper's
+  Question Bank tab shows the 200 that are not on it, so the active set does not reappear in the bank tab.
+- New ground taken: hex to octal through binary (5C7 → 2707), weighted expansion in base 5, a product carried in
+  base 5, comparing numerals across four bases, a mixed hex/binary/octal evaluation, and recovering an unknown base
+  from (444)<sub>b</sub> = 364; reading a 4-bit and a 6-bit signed pattern by weight, forming the 8-bit pattern of
+  −100, subtraction by complement, arithmetic against logical shifting, and a 12-bit read-back of 0xFB6; the encoding
+  of 1.0, the bias for a general k-bit exponent, decoding 0x42C80000 and 0x41C80000, the 2²⁴ + 1 rounding tie, and the
+  statements that separate patterns from values; and unsigned wrap with its carry-out, the asymmetric two's
+  complement range, doubling 64, unsigned carry against signed overflow on a 12-bit adder, and the largest operand
+  that survives multiplication by 3 in 10 bits.
+- Every numeric answer was recomputed by script, not by hand: (5C7)₁₆ = (2707)₈; (243)₅ = 73; (34)₅ × 2 = (123)₅;
+  (2A7)₁₆ + (1111 0110)₂ − (507)₈ = **598**; the base of (444)<sub>b</sub> = 364 is **9**; 25 − 37 in 8 bits is
+  1111 0100; the 6-bit 101101 is **−19**; the 12-bit 0xFB6 is **−74**; 1.0 is 0x3F800000; the bias for k = 6 is **31**;
+  0x42C80000 is **100.0**; 2²⁴ + 1 rounds to **16 777 216**; 0x41C80000 is **25**; 250 + 10 stores **4** with
+  carry-out 1; only **64** overflows when doubled in 8 bits; the carry-out pairs are (130,140), (200,100), (255,1);
+  the 12-bit overflow pairs are (1500,1000), (−1500,−1000), (2000,100) and not (−2000,−48); and the largest x with
+  3x inside a 10-bit range is **170**.
+- Every question carries `data-subject="digital-logic"`, `data-unit="number-systems"`, `data-unit-number="1"`, its
+  subtopic slug, its type, its lowercase difficulty and its source tag — on the active paper and on all 200 banked
+  cards in the Question Bank tab.
+- No item is `GATE_PYQ_VARIATION`: no number-system previous-year question has been verified against an official
+  paper and answer key, so nothing on this paper is claimed as an official GATE question.
 
 ### 2026-10-31 — Programming and Data Structures Unit 6, Set 2 of 2
 
