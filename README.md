@@ -7,33 +7,72 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html)
+- **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 2 of 2**, 2026-10-30 →
+  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: FIRST and FOLLOW sets (6) · LL(1) parsing tables (7) · Recursive-descent parsers (6) ·
-  Left recursion & factoring (6)
+- Subtopics: random variables, CDF & PDF (5) · uniform distribution (5) · exponential distribution (5) ·
+  normal distribution (5) · correlation & covariance (5)
 - Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full
-  eleven-subject list and gave **Compiler Design**. `runs[]` sorted by `(date, run)` gave the most recent paper as
-  `{2026-10-30, run 11, unit 1, lexical-analysis, Set 1 of 2 (second pass)}`. Unit 1 held **75** questions, above
-  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(lexical-analysis) = 0 + 1) mod 5 = 1` → **Unit 2 — Syntax
-  Analysis: Top-Down Parsing**. Every unit of the subject is at or above the cap, so step B5 applies: the second
-  pass continues and Unit 2 takes its first set of that pass (third set overall, now 75 questions).
-- Unit 2's previous paper moved to `archive/gate_cd_mock_2_2026-10-27_run2.html` with its content frozen; the unit
-  folder now holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Computer Architecture · Unit 4 — Main Memory & Virtual Memory Interface, Set 1 of 2**, 2026-10-30 →
-  [`computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`](computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html)
+  eleven-subject list and gave **Engineering Mathematics**. The most recent run for the subject was
+  `{2026-10-30, run 9, unit 5, probability-distributions, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
+  same unit was generated again: this is Set 2 of 2, Unit 5 reaches exactly **50** and closes. The next Engineering
+  Mathematics run advances `(4 + 1) mod 5 = 0` → Unit 1.
+- The Set 1 paper moved to `archive/gate_em_mock_5_2026-10-30_run1.html` with its content frozen; the unit folder
+  now holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Compiler Design · Unit 2 — Syntax Analysis: Top-Down Parsing, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html`](compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 115 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 56 current · 59 archived |
+| Papers published (current + archived) | 116 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 14 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 56 current · 60 archived |
 | Test cards on the portal | 70 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2875 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 2900 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 350 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 59 (11 Compiler Design, 10 Discrete Mathematics, 8 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 4 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 60 (11 Compiler Design, 10 Discrete Mathematics, 8 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 5 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Engineering Mathematics Unit 5, Set 2 of 2
+
+- New paper at `engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`. The Set 1 paper
+  that held this path was moved to `archive/gate_em_mock_5_2026-10-30_run1.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over
+  the full eleven-subject list and gave **Engineering Mathematics**. The most recent entry in `runs[]` was
+  `{2026-10-30, run 9, unit 5, probability-distributions, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
+  same unit was generated again rather than advancing. This is Set 2 of 2; Unit 5 now holds exactly **50** questions
+  and is closed. The next Engineering Mathematics run advances `(index_of(probability-distributions) = 4 + 1) mod 5 =
+  0` → Unit 1 — Linear Algebra: Matrices & Systems. No override, no partial set, no unit above the cap.
+- Coverage: all five Unit 5 subtopics, five questions each — random variables, CDF & PDF; uniform distribution;
+  exponential distribution; normal distribution; correlation & covariance. Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; 60 minutes, 35 marks.
+- Every question carries `data-subject="engineering-mathematics"`, `data-unit="probability-distributions"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab. The 225 banked cards of that tab now all carry the full
+  attribute set as well; the legacy cards of Units 1–4 previously carried none.
+- All 25 ids are new (`EM-U5-Q26` … `EM-U5-Q50`) and the bank is append-only. Set 1 covered normalising a linear
+  density, recovering a density from a CDF, CDF properties, `E[X]` for a quadratic density, `Var` of a uniform,
+  a uniform mean–variance inversion, the memoryless conditional, the exponential median, the `N(μ,σ²)` tail
+  landmarks and the covariance identities. This set deliberately takes other ground: a triangular density
+  `k(1 − x)`; interval probability from `F(x) = x³`; a conditional probability inside a continuous law; the
+  almost-everywhere meaning of `F′ = f`; `E[X]` for `c x²(1 − x)`; a uniform on a negative-left support; a
+  conditional uniform on a surviving interval; recovering `b` from a standard deviation; the uniform density as a
+  rate rather than a mass; `E[min(X,Y)]` on the unit square; survival probabilities with `λ = 1/mean`; variance of
+  an exponential; `1 − e^(−λt)` versus `e^(−λt)`; the exponential median and rate scaling; the race
+  `P(X < Y) = λ_X/(λ_X + λ_Y)`; the `±1.96` tail; inverting a tail to `σ`; a two-sided normal area; affine
+  invariance and joint normality; inverting to `c`; `Var(2X − 3Y)`; `Cov(X,X)`; `Cov` from `ρ`; uncorrelated
+  versus independent; and a negative correlation.
+- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. No Engineering Mathematics
+  previous-year question has been verified against an official paper and answer key, so nothing in this paper is
+  called an official GATE question.
+- Shell parity: the `<style>` block and the whole `<script>` are byte-identical to the Set 1 paper now in
+  `archive/`; only the question payload and the metadata strings (title, header sub-line, Set chip, Question Bank
+  count, tab label) differ.
 
 ### 2026-10-30 — Compiler Design Unit 2, Set 1 of 2 (second pass)
 
@@ -1185,6 +1224,14 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Engineering Mathematics → Unit 5 (Continuous Probability & Distributions), Set 2 of 2.**
+  MODE A: all eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject
+  list and gave **Engineering Mathematics**. Most recent run in `runs[]` was `{2026-10-30, run 9, unit 5,
+  probability-distributions, Set 1 of 2}`. Unit 5 held 25 questions, below `UNIT_QUESTION_CAP = 50`, and had been
+  current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the same unit ran again: Set 2 of 2. Unit 5
+  now holds exactly **50** questions and closes; the next run advances `(4 + 1) mod 5 = 0` → Unit 1. The 225 solved
+  items shown in the Question Bank tab are everything banked except this paper's own 25. No override, no unit above
+  50, no partial set.
 - **2026-10-30, Compiler Design → Unit 1 (Lexical Analysis), Set 1 of 2 (second pass).**
   MODE A: all eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject
   list with an unseeded `secrets.choice` and gave **Compiler Design**. Most recent run in `runs[]` was
@@ -5353,7 +5400,7 @@ Algorithms:
 | 2 | Linear Algebra: Eigenvalues & Vectors | `eigenvalues-eigenvectors` | 50 | yes |
 | 3 | Calculus: Limits, Continuity & Differentiability | `calculus-limits-derivatives` | 50 | yes |
 | 4 | Calculus: Maxima, Minima & Integrals | `calculus-optimization-integrals` | 25 | yes |
-| 5 | Continuous Probability & Distributions | `probability-distributions` | 25 | yes |
+| 5 | Continuous Probability & Distributions | `probability-distributions` | 50 | yes |
 
 ### Computer Networks
 
@@ -5518,3 +5565,8 @@ review interface.
   around `</aside>` differently; and several close `.layout`/`#view-test` with one extra `</div>`, which puts the
   Answer Key panel outside `.wrap`. All three render identically or are the known nesting defect already recorded
   above, and normalising them belongs to the one-pass re-issue.
+
+- The Engineering Mathematics Unit 5 Set 2 paper inherits the three open shell items above unchanged (literal hex
+  outside `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens
+  rather than their `-d` variants), for the same reason: re-typing any of them in one paper would break shell parity.
+  Its `<style>` block and its script are byte-identical to the Set 1 paper now in `archive/`.

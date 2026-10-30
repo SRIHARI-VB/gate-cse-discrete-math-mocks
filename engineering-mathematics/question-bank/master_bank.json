@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such. total_questions was stale at 25 after the second run (50 records were present); it is recomputed from len(questions) on every append as of 2026-10-26.",
-  "total_questions": 225,
+  "total_questions": 250,
   "units_with_questions": [
    1,
    2,
@@ -14,7 +14,7 @@
    4,
    5
   ],
-  "total_runs": 9
+  "total_runs": 10
  },
  "runs": [
   {
@@ -567,6 +567,76 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. Ten of the eleven subjects already carried a paper dated 2026-10-30 (algorithms, compiler-design, computer-architecture, computer-networks, databases, digital-logic, discrete-mathematics, operating-systems, programming-data-structures, theory-of-computation), so the draw ran over the single remaining subject, engineering-mathematics, and gave it. engineering-mathematics/question-bank/master_bank.json read back runs[] sorted by (date, run) as {2026-10-29, run 8, unit 4, calculus-optimization-integrals, Set 2 of 2}. Unit 4 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B4 advanced one unit: (index_of(calculus-optimization-integrals) = 3 + 1) mod 5 = 4 -> Unit 5, Continuous Probability & Distributions (probability-distributions). Unit 5 had no folder and no paper, so this is Set 1 of 2, nothing was archived and no root copy was written. No override was used and no unit exceeds 50.",
    "note": "Set 1 of 2 for Engineering Mathematics Unit 5. 25 new questions (EM-U5-Q01..Q25), none repeated from Units 1-4; all five subtopics are represented exactly five times (random variables / CDF and PDF, uniform, exponential, normal, correlation and covariance). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15x1 + 10x2 = 35. Unit 5 now holds 25 questions, below the cap, so the next Engineering Mathematics run takes Unit 5 as Set 2 of 2 before advancing to (4 + 1) mod 5 = 0 -> Unit 1, Linear Algebra: Matrices & Systems. No GATE_PYQ_VARIATION item: verified_pyqs is empty for Engineering Mathematics, so nothing on this paper is claimed as an official GATE question. Every numeric answer was recomputed by script (2.25, 0.75, 2.77, 70, 0.67)."
+  },
+  {
+   "run": 10,
+   "date": "2026-10-30",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html",
+   "archived_previous": "engineering-mathematics/probability-distributions/archive/gate_em_mock_5_2026-10-30_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "random-variables-cdf-pdf",
+    "uniform-distribution",
+    "exponential-distribution",
+    "normal-distribution",
+    "correlation-and-covariance"
+   ],
+   "subtopic_counts": {
+    "random-variables-cdf-pdf": 5,
+    "uniform-distribution": 5,
+    "exponential-distribution": 5,
+    "normal-distribution": 5,
+    "correlation-and-covariance": 5
+   },
+   "question_ids": [
+    "EM-U5-Q26",
+    "EM-U5-Q27",
+    "EM-U5-Q28",
+    "EM-U5-Q29",
+    "EM-U5-Q30",
+    "EM-U5-Q31",
+    "EM-U5-Q32",
+    "EM-U5-Q33",
+    "EM-U5-Q34",
+    "EM-U5-Q35",
+    "EM-U5-Q36",
+    "EM-U5-Q37",
+    "EM-U5-Q38",
+    "EM-U5-Q39",
+    "EM-U5-Q40",
+    "EM-U5-Q41",
+    "EM-U5-Q42",
+    "EM-U5-Q43",
+    "EM-U5-Q44",
+    "EM-U5-Q45",
+    "EM-U5-Q46",
+    "EM-U5-Q47",
+    "EM-U5-Q48",
+    "EM-U5-Q49",
+    "EM-U5-Q50"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject list and gave Engineering Mathematics. The most recent run for the subject was 2026-10-30, Unit 5, probability-distributions, Set 1 of 2: Unit 5 held 25 questions, below UNIT_QUESTION_CAP = 50, and had been current for 0 days, below DAYS_PER_UNIT_MAX = 7, so step B3 held and the same unit was generated again. This is Set 2 of 2, taking Unit 5 to 50 questions and closing it; the next Engineering Mathematics run advances to (4 + 1) mod 5 = 0, Unit 1.",
+   "note": "Set 2 of 2. The 2026-10-30 Set 1 paper was moved to archive/gate_em_mock_5_2026-10-30_run1.html with its content frozen; the unit folder holds exactly one current paper."
   }
  ],
  "verified_pyqs": [],
@@ -9085,6 +9155,1010 @@
     "trap": "Using <code class=\"mm\">E[XY] = 10</code> as the covariance, which ignores the <code class=\"mm\">E[X]E[Y] = 6</code> correction and would give <code class=\"mm\">ρ = 10/6 > 1</code>. A correlation above <code class=\"mm\">1</code> is an immediate signal that the centring step was skipped."
    },
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Two steps: recover the covariance from <code class=\"mm\">Cov(X, Y) = E[XY] − E[X]E[Y]</code>, then divide by the product of the standard deviations.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Covariance: <code class=\"mm\">Cov(X, Y) = 10 − (2)(3) = 10 − 6 = 4</code>.</li><li>Standard deviations: <code class=\"mm\">σ<sub>X</sub> = 2</code> and <code class=\"mm\">σ<sub>Y</sub> = 3</code>, so the denominator is <code class=\"mm\">6</code>.</li><li>Hence <code class=\"mm\">ρ = 4/6 = 2/3 ≈ 0.6667</code>, that is <code class=\"mm\">0.67</code> to two places.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.67 (exactly <code class=\"mm\">2/3</code>).</span></p><p class=\"row\"><b>Common misconception.</b> Using <code class=\"mm\">E[XY] = 10</code> as the covariance, which ignores the <code class=\"mm\">E[X]E[Y] = 6</code> correction and would give <code class=\"mm\">ρ = 10/6 > 1</code>. A correlation above <code class=\"mm\">1</code> is an immediate signal that the centring step was skipped.</p>"
+  },
+  {
+   "id": "EM-U5-Q26",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "random-variables-cdf-pdf",
+   "subtopic": "random-variables-cdf-pdf",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A continuous random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = k(1 − x)</span> for <span class=\"mm\">0 ≤ x ≤ 1</span> and <span class=\"mm\">f(x) = 0</span> otherwise. Then <span class=\"mm\">k</span> equals",
+   "text": "A continuous random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = k(1 − x)</span> for <span class=\"mm\">0 ≤ x ≤ 1</span> and <span class=\"mm\">f(x) = 0</span> otherwise. Then <span class=\"mm\">k</span> equals",
+   "options": [
+    "<span class=\"mm\">1/2</span>",
+    "<span class=\"mm\">1</span>",
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">4</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A density must integrate to `1` over its whole support, and that single condition fixes the normalising constant.",
+    "steps": [
+     "Set the total area to one: `∫₀¹ k(1 − x) dx = 1`.",
+     "Integrate the bracket: `∫₀¹ (1 − x) dx = [x − x²/2]₀¹ = 1/2`.",
+     "So `k/2 = 1`, giving `k = 2`."
+    ],
+    "final": "Answer: Option (C) — `k = 2`.",
+    "trap": "Reading the constant off one ordinate, `f(0) = k = 1`. A density is a height, not a probability; only its integral is pinned to `1`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A density must integrate to <span class=\"mm\">1</span> over its whole support, and that single condition fixes the normalising constant.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Set the total area to one: <span class=\"mm\">∫₀¹ k(1 − x) dx = 1</span>.</li><li>Integrate the bracket: <span class=\"mm\">∫₀¹ (1 − x) dx = [x − x²/2]₀¹ = 1/2</span>.</li><li>So <span class=\"mm\">k/2 = 1</span>, giving <span class=\"mm\">k = 2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">k = 2</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Reading the constant off one ordinate, <span class=\"mm\">f(0) = k = 1</span>. A density is a height, not a probability; only its integral is pinned to <span class=\"mm\">1</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q27",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "random-variables-cdf-pdf",
+   "subtopic": "random-variables-cdf-pdf",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A random variable <span class=\"mm\">X</span> has distribution function <span class=\"mm\">F(x) = x³</span> for <span class=\"mm\">0 ≤ x ≤ 1</span>. Then <span class=\"mm\">P(0.5 &lt; X ≤ 0.8)</span> equals",
+   "text": "A random variable <span class=\"mm\">X</span> has distribution function <span class=\"mm\">F(x) = x³</span> for <span class=\"mm\">0 ≤ x ≤ 1</span>. Then <span class=\"mm\">P(0.5 &lt; X ≤ 0.8)</span> equals",
+   "options": [
+    "<span class=\"mm\">0.512</span>",
+    "<span class=\"mm\">0.387</span>",
+    "<span class=\"mm\">0.125</span>",
+    "<span class=\"mm\">0.216</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "For a continuous variable the probability of an interval is the difference of the distribution function at the endpoints.",
+    "steps": [
+     "`P(0.5 < X ≤ 0.8) = F(0.8) − F(0.5)`.",
+     "`F(0.8) = 0.8³ = 0.512` and `F(0.5) = 0.5³ = 0.125`.",
+     "`0.512 − 0.125 = 0.387`."
+    ],
+    "final": "Answer: Option (B) — `0.387`.",
+    "trap": "Reporting `F(0.8) = 0.512` and forgetting the lower endpoint, or differentiating and using the density instead of the distribution function."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a continuous variable the probability of an interval is the difference of the distribution function at the endpoints.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">P(0.5 &lt; X ≤ 0.8) = F(0.8) − F(0.5)</span>.</li><li><span class=\"mm\">F(0.8) = 0.8³ = 0.512</span> and <span class=\"mm\">F(0.5) = 0.5³ = 0.125</span>.</li><li><span class=\"mm\">0.512 − 0.125 = 0.387</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">0.387</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">F(0.8) = 0.512</span> and forgetting the lower endpoint, or differentiating and using the density instead of the distribution function.</p>"
+  },
+  {
+   "id": "EM-U5-Q28",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "random-variables-cdf-pdf",
+   "subtopic": "random-variables-cdf-pdf",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = x/2</span> for <span class=\"mm\">0 ≤ x ≤ 2</span> and <span class=\"mm\">f(x) = 0</span> otherwise. Then <span class=\"mm\">P(X ≤ 1 | X ≤ 1.5)</span> equals",
+   "text": "A random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = x/2</span> for <span class=\"mm\">0 ≤ x ≤ 2</span> and <span class=\"mm\">f(x) = 0</span> otherwise. Then <span class=\"mm\">P(X ≤ 1 | X ≤ 1.5)</span> equals",
+   "options": [
+    "<span class=\"mm\">1/4</span>",
+    "<span class=\"mm\">1/2</span>",
+    "<span class=\"mm\">2/3</span>",
+    "<span class=\"mm\">4/9</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Conditioning on an event of positive probability rescales probability: `P(A | B) = P(A ∩ B)/P(B)`. For nested intervals the intersection is the smaller interval.",
+    "steps": [
+     "Here `F(x) = x²/4` on `[0,2]`.",
+     "`P(X ≤ 1) = 1/4` and `P(X ≤ 1.5) = 2.25/4 = 9/16`.",
+     "`P(X ≤ 1 | X ≤ 1.5) = (1/4)/(9/16) = 4/9 ≈ 0.444`."
+    ],
+    "final": "Answer: Option (D) — `4/9`.",
+    "trap": "Dividing by the length of the whole support instead of by `P(X ≤ 1.5)`, which returns `1/4` and silently ignores the conditioning."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Conditioning on an event of positive probability rescales probability: <span class=\"mm\">P(A | B) = P(A ∩ B)/P(B)</span>. For nested intervals the intersection is the smaller interval.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <span class=\"mm\">F(x) = x²/4</span> on <span class=\"mm\">[0,2]</span>.</li><li><span class=\"mm\">P(X ≤ 1) = 1/4</span> and <span class=\"mm\">P(X ≤ 1.5) = 2.25/4 = 9/16</span>.</li><li><span class=\"mm\">P(X ≤ 1 | X ≤ 1.5) = (1/4)/(9/16) = 4/9 ≈ 0.444</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — <span class=\"mm\">4/9</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by the length of the whole support instead of by <span class=\"mm\">P(X ≤ 1.5)</span>, which returns <span class=\"mm\">1/4</span> and silently ignores the conditioning.</p>"
+  },
+  {
+   "id": "EM-U5-Q29",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "random-variables-cdf-pdf",
+   "subtopic": "random-variables-cdf-pdf",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> be a continuous random variable with density <span class=\"mm\">f</span> and distribution function <span class=\"mm\">F</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "text": "Let <span class=\"mm\">X</span> be a continuous random variable with density <span class=\"mm\">f</span> and distribution function <span class=\"mm\">F</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">E[X] = ∫ x f(x) dx</span> taken over the whole real line.",
+    "If <span class=\"mm\">f(x) = 0</span> on an interval <span class=\"mm\">[a, b]</span>, then <span class=\"mm\">P(a ≤ X ≤ b) = 0</span>.",
+    "<span class=\"mm\">F</span> is differentiable at every real <span class=\"mm\">x</span>, with <span class=\"mm\">F′(x) = f(x)</span> at every <span class=\"mm\">x</span>.",
+    "<span class=\"mm\">f(x) ≥ 0</span> for all <span class=\"mm\">x</span>, and <span class=\"mm\">f</span> integrates to <span class=\"mm\">1</span>."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "A density is non-negative and integrates to one; probability is the integral of the density. The identity `F′ = f` holds almost everywhere, not at every point.",
+    "steps": [
+     "A is the definition of expectation for an absolutely continuous law.",
+     "B holds because the probability of the interval is the integral of `f` over it, and the integrand is identically zero there.",
+     "C fails at corners: `F(x) = 2x` on `[0, 1/2]` and `F(x) = 2 − 2x` on `(1/2, 1]` is a valid distribution function that is not differentiable at `1/2`.",
+     "D is exactly the pair of defining properties of a density."
+    ],
+    "final": "Answer: Options (A), (B) and (D).",
+    "trap": "Assuming every distribution function is differentiable with derivative equal to the density at every point. A density is only determined up to sets of measure zero."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A density is non-negative and integrates to one; probability is the integral of the density. The identity <span class=\"mm\">F′ = f</span> holds almost everywhere, not at every point.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A is the definition of expectation for an absolutely continuous law.</li><li>B holds because the probability of the interval is the integral of <span class=\"mm\">f</span> over it, and the integrand is identically zero there.</li><li>C fails at corners: <span class=\"mm\">F(x) = 2x</span> on <span class=\"mm\">[0, 1/2]</span> and <span class=\"mm\">F(x) = 2 − 2x</span> on <span class=\"mm\">(1/2, 1]</span> is a valid distribution function that is not differentiable at <span class=\"mm\">1/2</span>.</li><li>D is exactly the pair of defining properties of a density.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming every distribution function is differentiable with derivative equal to the density at every point. A density is only determined up to sets of measure zero.</p>"
+  },
+  {
+   "id": "EM-U5-Q30",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "random-variables-cdf-pdf",
+   "subtopic": "random-variables-cdf-pdf",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A continuous random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = c x²(1 − x)</span> for <span class=\"mm\">0 ≤ x ≤ 1</span> and <span class=\"mm\">f(x) = 0</span> otherwise. The expected value <span class=\"mm\">E[X]</span> is ______.",
+   "text": "A continuous random variable <span class=\"mm\">X</span> has density <span class=\"mm\">f(x) = c x²(1 − x)</span> for <span class=\"mm\">0 ≤ x ≤ 1</span> and <span class=\"mm\">f(x) = 0</span> otherwise. The expected value <span class=\"mm\">E[X]</span> is ______.",
+   "options": [],
+   "answer": 0.6,
+   "answer_display": "0.6",
+   "solution": {
+    "concept": "Normalise the density first, then take the first moment `E[X] = ∫ x f(x) dx`.",
+    "steps": [
+     "`∫₀¹ c(x² − x³) dx = c(1/3 − 1/4) = c/12 = 1`, so `c = 12`.",
+     "`E[X] = 12 ∫₀¹ (x³ − x⁴) dx = 12(1/4 − 1/5)`.",
+     "`12 · (1/20) = 0.6`."
+    ],
+    "final": "Answer: 0.6 (exact).",
+    "trap": "Taking the moment with an un-normalised constant, or integrating `x²(1 − x)` and reporting `1/20 = 0.05`, which is the normalising integral and not a moment."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Normalise the density first, then take the first moment <span class=\"mm\">E[X] = ∫ x f(x) dx</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">∫₀¹ c(x² − x³) dx = c(1/3 − 1/4) = c/12 = 1</span>, so <span class=\"mm\">c = 12</span>.</li><li><span class=\"mm\">E[X] = 12 ∫₀¹ (x³ − x⁴) dx = 12(1/4 − 1/5)</span>.</li><li><span class=\"mm\">12 · (1/20) = 0.6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.6 (exact).</span></p><p class=\"row\"><b>Common misconception.</b> Taking the moment with an un-normalised constant, or integrating <span class=\"mm\">x²(1 − x)</span> and reporting <span class=\"mm\">1/20 = 0.05</span>, which is the normalising integral and not a moment.</p>"
+  },
+  {
+   "id": "EM-U5-Q31",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "uniform-distribution",
+   "subtopic": "uniform-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "If <span class=\"mm\">X</span> is uniformly distributed on <span class=\"mm\">[−2, 6]</span>, then <span class=\"mm\">P(X &lt; 1)</span> equals",
+   "text": "If <span class=\"mm\">X</span> is uniformly distributed on <span class=\"mm\">[−2, 6]</span>, then <span class=\"mm\">P(X &lt; 1)</span> equals",
+   "options": [
+    "<span class=\"mm\">1/8</span>",
+    "<span class=\"mm\">5/8</span>",
+    "<span class=\"mm\">3/8</span>",
+    "<span class=\"mm\">1/2</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "For a uniform law on `[a, b]` probability is length over total length.",
+    "steps": [
+     "Total length `= 6 − (−2) = 8`.",
+     "Favourable length `= 1 − (−2) = 3`.",
+     "`P(X < 1) = 3/8`."
+    ],
+    "final": "Answer: Option (C) — `3/8`.",
+    "trap": "Measuring the favourable part from `0` instead of from the left endpoint `a = −2`, which gives `1/8`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a uniform law on <span class=\"mm\">[a, b]</span> probability is length over total length.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Total length <span class=\"mm\">= 6 − (−2) = 8</span>.</li><li>Favourable length <span class=\"mm\">= 1 − (−2) = 3</span>.</li><li><span class=\"mm\">P(X &lt; 1) = 3/8</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">3/8</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Measuring the favourable part from <span class=\"mm\">0</span> instead of from the left endpoint <span class=\"mm\">a = −2</span>, which gives <span class=\"mm\">1/8</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q32",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "uniform-distribution",
+   "subtopic": "uniform-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "If <span class=\"mm\">X</span> is uniformly distributed on <span class=\"mm\">[0, 10]</span>, then <span class=\"mm\">P(X &gt; 7 | X &gt; 4)</span> equals",
+   "text": "If <span class=\"mm\">X</span> is uniformly distributed on <span class=\"mm\">[0, 10]</span>, then <span class=\"mm\">P(X &gt; 7 | X &gt; 4)</span> equals",
+   "options": [
+    "<span class=\"mm\">3/10</span>",
+    "<span class=\"mm\">2/5</span>",
+    "<span class=\"mm\">7/10</span>",
+    "<span class=\"mm\">1/2</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Conditioning a uniform law on a sub-interval leaves it uniform on that sub-interval, so the conditional probability is again a length ratio.",
+    "steps": [
+     "`P(X > 4) = 6/10`.",
+     "`P(X > 7) = 3/10`.",
+     "`P(X > 7 | X > 4) = (3/10)/(6/10) = 1/2`."
+    ],
+    "final": "Answer: Option (D) — `1/2`.",
+    "trap": "Answering `3/10`, the unconditional probability, which ignores that the variable is already known to exceed 4."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Conditioning a uniform law on a sub-interval leaves it uniform on that sub-interval, so the conditional probability is again a length ratio.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">P(X &gt; 4) = 6/10</span>.</li><li><span class=\"mm\">P(X &gt; 7) = 3/10</span>.</li><li><span class=\"mm\">P(X &gt; 7 | X &gt; 4) = (3/10)/(6/10) = 1/2</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — <span class=\"mm\">1/2</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">3/10</span>, the unconditional probability, which ignores that the variable is already known to exceed 4.</p>"
+  },
+  {
+   "id": "EM-U5-Q33",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "uniform-distribution",
+   "subtopic": "uniform-distribution",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A random variable <span class=\"mm\">X</span> is uniform on <span class=\"mm\">[a, b]</span> with <span class=\"mm\">E[X] = 4</span> and standard deviation <span class=\"mm\">√3</span>. Then <span class=\"mm\">b</span> equals",
+   "text": "A random variable <span class=\"mm\">X</span> is uniform on <span class=\"mm\">[a, b]</span> with <span class=\"mm\">E[X] = 4</span> and standard deviation <span class=\"mm\">√3</span>. Then <span class=\"mm\">b</span> equals",
+   "options": [
+    "<span class=\"mm\">6</span>",
+    "<span class=\"mm\">10</span>",
+    "<span class=\"mm\">7</span>",
+    "<span class=\"mm\">4</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "`E[X] = (a + b)/2` and `Var(X) = (b − a)²/12` recover the endpoints from a stated mean and variance.",
+    "steps": [
+     "`Var(X) = 3`, so `(b − a)²/12 = 3` and `(b − a)² = 36`, giving `b − a = 6`.",
+     "`(a + b)/2 = 4`, so `a + b = 8`.",
+     "Adding the two relations, `2b = 14`, so `b = 7` and `a = 1`."
+    ],
+    "final": "Answer: Option (C) — `b = 7`.",
+    "trap": "Using the standard deviation `3` as the variance, which gives `(b − a)² = 3` and a non-integer span; or keeping both roots of `(b − a)² = 36` and getting the endpoints in the wrong order."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">E[X] = (a + b)/2</span> and <span class=\"mm\">Var(X) = (b − a)²/12</span> recover the endpoints from a stated mean and variance.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">Var(X) = 3</span>, so <span class=\"mm\">(b − a)²/12 = 3</span> and <span class=\"mm\">(b − a)² = 36</span>, giving <span class=\"mm\">b − a = 6</span>.</li><li><span class=\"mm\">(a + b)/2 = 4</span>, so <span class=\"mm\">a + b = 8</span>.</li><li>Adding the two relations, <span class=\"mm\">2b = 14</span>, so <span class=\"mm\">b = 7</span> and <span class=\"mm\">a = 1</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">b = 7</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Using the standard deviation <span class=\"mm\">3</span> as the variance, which gives <span class=\"mm\">(b − a)² = 3</span> and a non-integer span; or keeping both roots of <span class=\"mm\">(b − a)² = 36</span> and getting the endpoints in the wrong order.</p>"
+  },
+  {
+   "id": "EM-U5-Q34",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "uniform-distribution",
+   "subtopic": "uniform-distribution",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> be uniform on <span class=\"mm\">[a, b]</span> with <span class=\"mm\">a &lt; b</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "text": "Let <span class=\"mm\">X</span> be uniform on <span class=\"mm\">[a, b]</span> with <span class=\"mm\">a &lt; b</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">E[X] = (a + b)/2</span>.",
+    "<span class=\"mm\">Var(X) = (b − a)²/12</span>.",
+    "The density is <span class=\"mm\">1/(b − a)</span> on <span class=\"mm\">[a, b]</span> and <span class=\"mm\">0</span> outside it.",
+    "<span class=\"mm\">P(X = a) = 1/(b − a)</span>."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "The uniform law has constant density `1/(b − a)` on its support, mean at the midpoint and variance `(b − a)²/12`; single points carry probability zero.",
+    "steps": [
+     "A and B are the standard mean and variance of `U[a, b]`.",
+     "C is the density itself: constant on the support and zero outside.",
+     "D fails because `X` is continuous, so `P(X = a) = 0` for every `a`."
+    ],
+    "final": "Answer: Options (A), (B) and (C).",
+    "trap": "Reading the density height `1/(b − a)` as the probability of the point `a`. A density is a rate per unit length, not a mass."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The uniform law has constant density <span class=\"mm\">1/(b − a)</span> on its support, mean at the midpoint and variance <span class=\"mm\">(b − a)²/12</span>; single points carry probability zero.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A and B are the standard mean and variance of <span class=\"mm\">U[a, b]</span>.</li><li>C is the density itself: constant on the support and zero outside.</li><li>D fails because <span class=\"mm\">X</span> is continuous, so <span class=\"mm\">P(X = a) = 0</span> for every <span class=\"mm\">a</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reading the density height <span class=\"mm\">1/(b − a)</span> as the probability of the point <span class=\"mm\">a</span>. A density is a rate per unit length, not a mass.</p>"
+  },
+  {
+   "id": "EM-U5-Q35",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "uniform-distribution",
+   "subtopic": "uniform-distribution",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent random variables, each uniform on <span class=\"mm\">[0, 1]</span>. Then <span class=\"mm\">E[min(X, Y)]</span> is ______.",
+   "text": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent random variables, each uniform on <span class=\"mm\">[0, 1]</span>. Then <span class=\"mm\">E[min(X, Y)]</span> is ______.",
+   "options": [],
+   "answer": 0.33,
+   "answer_display": "0.33",
+   "solution": {
+    "concept": "For independent uniforms the joint density is `1` on the unit square, so `E[min(X, Y)] = ∫₀¹ P(min(X, Y) > t) dt`.",
+    "steps": [
+     "`P(min(X, Y) > t) = P(X > t)P(Y > t) = (1 − t)²` for `0 ≤ t ≤ 1`.",
+     "`E[min(X, Y)] = ∫₀¹ (1 − t)² dt`.",
+     "`= [−(1 − t)³/3]₀¹ = 1/3 ≈ 0.33`."
+    ],
+    "final": "Answer: 0.33 (exactly `1/3`).",
+    "trap": "Squaring the mean, `(1/2)² = 0.25`, as if `E[min]` equalled `(E[X])²`. The minimum of two variables is not the square of the mean."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For independent uniforms the joint density is <span class=\"mm\">1</span> on the unit square, so <span class=\"mm\">E[min(X, Y)] = ∫₀¹ P(min(X, Y) &gt; t) dt</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">P(min(X, Y) &gt; t) = P(X &gt; t)P(Y &gt; t) = (1 − t)²</span> for <span class=\"mm\">0 ≤ t ≤ 1</span>.</li><li><span class=\"mm\">E[min(X, Y)] = ∫₀¹ (1 − t)² dt</span>.</li><li><span class=\"mm\">= [−(1 − t)³/3]₀¹ = 1/3 ≈ 0.33</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.33 (exactly <span class=\"mm\">1/3</span>).</span></p><p class=\"row\"><b>Common misconception.</b> Squaring the mean, <span class=\"mm\">(1/2)² = 0.25</span>, as if <span class=\"mm\">E[min]</span> equalled <span class=\"mm\">(E[X])²</span>. The minimum of two variables is not the square of the mean.</p>"
+  },
+  {
+   "id": "EM-U5-Q36",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "exponential-distribution",
+   "subtopic": "exponential-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "An exponentially distributed random variable <span class=\"mm\">X</span> has mean <span class=\"mm\">5</span>. Then <span class=\"mm\">P(X &gt; 10)</span> equals",
+   "text": "An exponentially distributed random variable <span class=\"mm\">X</span> has mean <span class=\"mm\">5</span>. Then <span class=\"mm\">P(X &gt; 10)</span> equals",
+   "options": [
+    "<span class=\"mm\">e⁻¹</span>",
+    "<span class=\"mm\">e⁻²</span>",
+    "<span class=\"mm\">1 − e⁻²</span>",
+    "<span class=\"mm\">e⁻¹⁰</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "For an exponential law the survival function is the compact form `P(X > t) = e^(−λt)`, with `λ = 1/mean`.",
+    "steps": [
+     "Mean `5` gives `λ = 1/5`.",
+     "`P(X > 10) = e^(−10/5) = e⁻²`.",
+     "Numerically `e⁻² ≈ 0.1353`."
+    ],
+    "final": "Answer: Option (B) — `e⁻²`.",
+    "trap": "Using `λ = 5` straight from the mean, which gives `e⁻⁵⁰`, or answering `1 − e⁻²`, which is the probability of the complementary event."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For an exponential law the survival function is the compact form <span class=\"mm\">P(X &gt; t) = e^(−λt)</span>, with <span class=\"mm\">λ = 1/mean</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Mean <span class=\"mm\">5</span> gives <span class=\"mm\">λ = 1/5</span>.</li><li><span class=\"mm\">P(X &gt; 10) = e^(−10/5) = e⁻²</span>.</li><li>Numerically <span class=\"mm\">e⁻² ≈ 0.1353</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">e⁻²</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">λ = 5</span> straight from the mean, which gives <span class=\"mm\">e⁻⁵⁰</span>, or answering <span class=\"mm\">1 − e⁻²</span>, which is the probability of the complementary event.</p>"
+  },
+  {
+   "id": "EM-U5-Q37",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "exponential-distribution",
+   "subtopic": "exponential-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "An exponentially distributed random variable <span class=\"mm\">X</span> has rate <span class=\"mm\">λ = 0.5</span>. Then <span class=\"mm\">Var(X)</span> equals",
+   "text": "An exponentially distributed random variable <span class=\"mm\">X</span> has rate <span class=\"mm\">λ = 0.5</span>. Then <span class=\"mm\">Var(X)</span> equals",
+   "options": [
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">1/4</span>",
+    "<span class=\"mm\">0.5</span>",
+    "<span class=\"mm\">4</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "An exponential law has mean `1/λ` and variance `1/λ²`, so its standard deviation equals its mean.",
+    "steps": [
+     "`λ = 0.5`.",
+     "`Var(X) = 1/λ² = 1/(0.5)²`.",
+     "`= 4`."
+    ],
+    "final": "Answer: Option (D) — `4`.",
+    "trap": "Reporting `1/λ = 2`, which is both the mean and the standard deviation, but not the variance."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An exponential law has mean <span class=\"mm\">1/λ</span> and variance <span class=\"mm\">1/λ²</span>, so its standard deviation equals its mean.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">λ = 0.5</span>.</li><li><span class=\"mm\">Var(X) = 1/λ² = 1/(0.5)²</span>.</li><li><span class=\"mm\">= 4</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — <span class=\"mm\">4</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">1/λ = 2</span>, which is both the mean and the standard deviation, but not the variance.</p>"
+  },
+  {
+   "id": "EM-U5-Q38",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "exponential-distribution",
+   "subtopic": "exponential-distribution",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "An exponentially distributed random variable <span class=\"mm\">X</span> has mean <span class=\"mm\">2</span>. Then <span class=\"mm\">P(X ≤ 4)</span> equals",
+   "text": "An exponentially distributed random variable <span class=\"mm\">X</span> has mean <span class=\"mm\">2</span>. Then <span class=\"mm\">P(X ≤ 4)</span> equals",
+   "options": [
+    "<span class=\"mm\">1 − e⁻²</span>",
+    "<span class=\"mm\">1 − e⁻⁴</span>",
+    "<span class=\"mm\">e⁻²</span>",
+    "<span class=\"mm\">1/2</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Integrate the density from `0` to the point, or use the distribution function `F(t) = 1 − e^(−λt)`.",
+    "steps": [
+     "Mean `2` gives `λ = 1/2`.",
+     "`P(X ≤ 4) = 1 − e^(−4 · 1/2)`.",
+     "`= 1 − e⁻² ≈ 0.8647`."
+    ],
+    "final": "Answer: Option (A) — `1 − e⁻²`.",
+    "trap": "Writing `e⁻²` and dropping the complement, which answers `P(X > 4)` instead of `P(X ≤ 4)`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Integrate the density from <span class=\"mm\">0</span> to the point, or use the distribution function <span class=\"mm\">F(t) = 1 − e^(−λt)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Mean <span class=\"mm\">2</span> gives <span class=\"mm\">λ = 1/2</span>.</li><li><span class=\"mm\">P(X ≤ 4) = 1 − e^(−4 · 1/2)</span>.</li><li><span class=\"mm\">= 1 − e⁻² ≈ 0.8647</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — <span class=\"mm\">1 − e⁻²</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Writing <span class=\"mm\">e⁻²</span> and dropping the complement, which answers <span class=\"mm\">P(X &gt; 4)</span> instead of <span class=\"mm\">P(X ≤ 4)</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q39",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "exponential-distribution",
+   "subtopic": "exponential-distribution",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> be exponentially distributed with rate <span class=\"mm\">λ &gt; 0</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "text": "Let <span class=\"mm\">X</span> be exponentially distributed with rate <span class=\"mm\">λ &gt; 0</span>. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "The median of <span class=\"mm\">X</span> is <span class=\"mm\">(ln 2)/λ</span>.",
+    "<span class=\"mm\">Var(X) = 1/λ²</span>.",
+    "<span class=\"mm\">P(X &gt; t) = 1 − e^(−λt)</span> for <span class=\"mm\">t ≥ 0</span>.",
+    "Doubling <span class=\"mm\">λ</span> halves the mean."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "The exponential law has mean `1/λ`, variance `1/λ²`, survival function `e^(−λt)` and median `(ln 2)/λ`, which lies below the mean because the density is skewed to the right.",
+    "steps": [
+     "A: solve `1 − e^(−λm) = 1/2` to obtain `m = (ln 2)/λ`.",
+     "B: `Var(X) = 1/λ²` by the standard moments.",
+     "C fails: `P(X > t) = e^(−λt)`, whereas `1 − e^(−λt)` is the distribution function `F(t)`.",
+     "D: the mean `1/λ` is inversely proportional to `λ`."
+    ],
+    "final": "Answer: Options (A), (B) and (D).",
+    "trap": "Confusing `P(X > t)` with `F(t)`, and assuming the median equals the mean, which fails for every skewed law."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The exponential law has mean <span class=\"mm\">1/λ</span>, variance <span class=\"mm\">1/λ²</span>, survival function <span class=\"mm\">e^(−λt)</span> and median <span class=\"mm\">(ln 2)/λ</span>, which lies below the mean because the density is skewed to the right.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: solve <span class=\"mm\">1 − e^(−λm) = 1/2</span> to obtain <span class=\"mm\">m = (ln 2)/λ</span>.</li><li>B: <span class=\"mm\">Var(X) = 1/λ²</span> by the standard moments.</li><li>C fails: <span class=\"mm\">P(X &gt; t) = e^(−λt)</span>, whereas <span class=\"mm\">1 − e^(−λt)</span> is the distribution function <span class=\"mm\">F(t)</span>.</li><li>D: the mean <span class=\"mm\">1/λ</span> is inversely proportional to <span class=\"mm\">λ</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing <span class=\"mm\">P(X &gt; t)</span> with <span class=\"mm\">F(t)</span>, and assuming the median equals the mean, which fails for every skewed law.</p>"
+  },
+  {
+   "id": "EM-U5-Q40",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "exponential-distribution",
+   "subtopic": "exponential-distribution",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent exponential random variables with means <span class=\"mm\">3</span> and <span class=\"mm\">6</span> respectively. Then <span class=\"mm\">P(X &lt; Y)</span> is ______.",
+   "text": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent exponential random variables with means <span class=\"mm\">3</span> and <span class=\"mm\">6</span> respectively. Then <span class=\"mm\">P(X &lt; Y)</span> is ______.",
+   "options": [],
+   "answer": 0.67,
+   "answer_display": "0.67",
+   "solution": {
+    "concept": "For independent exponential variables the smaller rate wins: `P(X < Y) = λ_X/(λ_X + λ_Y)`.",
+    "steps": [
+     "The rates are `λ_X = 1/3` and `λ_Y = 1/6`.",
+     "`P(X < Y) = ∫ (1/3)e^(−x/3) · e^(−x/6) dx` over `[0, ∞)`.",
+     "The integrand is `(1/3)e^(−x/2)`, whose integral is `(1/3)·2 = 2/3 ≈ 0.67`."
+    ],
+    "final": "Answer: 0.67 (exactly `2/3`).",
+    "trap": "Putting the means in the ratio, `3/(3 + 6) = 1/3`, instead of the rates. The comparison is between rates, and the smaller rate belongs to the larger mean."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For independent exponential variables the smaller rate wins: <span class=\"mm\">P(X &lt; Y) = λ_X/(λ_X + λ_Y)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The rates are <span class=\"mm\">λ_X = 1/3</span> and <span class=\"mm\">λ_Y = 1/6</span>.</li><li><span class=\"mm\">P(X &lt; Y) = ∫ (1/3)e^(−x/3) · e^(−x/6) dx</span> over <span class=\"mm\">[0, ∞)</span>.</li><li>The integrand is <span class=\"mm\">(1/3)e^(−x/2)</span>, whose integral is <span class=\"mm\">(1/3)·2 = 2/3 ≈ 0.67</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.67 (exactly <span class=\"mm\">2/3</span>).</span></p><p class=\"row\"><b>Common misconception.</b> Putting the means in the ratio, <span class=\"mm\">3/(3 + 6) = 1/3</span>, instead of the rates. The comparison is between rates, and the smaller rate belongs to the larger mean.</p>"
+  },
+  {
+   "id": "EM-U5-Q41",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "normal-distribution",
+   "subtopic": "normal-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "For a standard normal variable <span class=\"mm\">Z</span>, the probability <span class=\"mm\">P(Z &gt; 1.96)</span> is closest to",
+   "text": "For a standard normal variable <span class=\"mm\">Z</span>, the probability <span class=\"mm\">P(Z &gt; 1.96)</span> is closest to",
+   "options": [
+    "<span class=\"mm\">0.0500</span>",
+    "<span class=\"mm\">0.4750</span>",
+    "<span class=\"mm\">0.0250</span>",
+    "<span class=\"mm\">0.9750</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "The tabulated fact `P(|Z| < 1.96) = 0.95` splits the remaining `0.05` equally between the two tails.",
+    "steps": [
+     "The central `95%` of the standard normal lies within `±1.96`.",
+     "The two tails share the remaining `5%`.",
+     "`P(Z > 1.96) = 0.025`."
+    ],
+    "final": "Answer: Option (C) — `0.025`.",
+    "trap": "Reporting `0.05`, the total two-tail area, or `0.975`, which is the cumulative probability `Φ(1.96)`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The tabulated fact <span class=\"mm\">P(|Z| &lt; 1.96) = 0.95</span> splits the remaining <span class=\"mm\">0.05</span> equally between the two tails.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The central <span class=\"mm\">95%</span> of the standard normal lies within <span class=\"mm\">±1.96</span>.</li><li>The two tails share the remaining <span class=\"mm\">5%</span>.</li><li><span class=\"mm\">P(Z &gt; 1.96) = 0.025</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">0.025</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">0.05</span>, the total two-tail area, or <span class=\"mm\">0.975</span>, which is the cumulative probability <span class=\"mm\">Φ(1.96)</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q42",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "normal-distribution",
+   "subtopic": "normal-distribution",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "A random variable <span class=\"mm\">X</span> is normal with mean <span class=\"mm\">20</span> and variance <span class=\"mm\">σ²</span>, where <span class=\"mm\">P(X &lt; 14) = 0.0228</span>. Then <span class=\"mm\">σ</span> equals",
+   "text": "A random variable <span class=\"mm\">X</span> is normal with mean <span class=\"mm\">20</span> and variance <span class=\"mm\">σ²</span>, where <span class=\"mm\">P(X &lt; 14) = 0.0228</span>. Then <span class=\"mm\">σ</span> equals",
+   "options": [
+    "<span class=\"mm\">2</span>",
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">4</span>",
+    "<span class=\"mm\">6</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Standardise and invert: `z = (x − μ)/σ`, so a known tail probability pins down `σ`.",
+    "steps": [
+     "`P(X < 14) = 0.0228` corresponds to `z = −2`.",
+     "`−2 = (14 − 20)/σ = −6/σ`.",
+     "`σ = 3`."
+    ],
+    "final": "Answer: Option (B) — `σ = 3`.",
+    "trap": "Answering `9`, which is the variance. The notation `N(20, σ²)` names the variance, so the spread in the units of `X` is `σ`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Standardise and invert: <span class=\"mm\">z = (x − μ)/σ</span>, so a known tail probability pins down <span class=\"mm\">σ</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">P(X &lt; 14) = 0.0228</span> corresponds to <span class=\"mm\">z = −2</span>.</li><li><span class=\"mm\">−2 = (14 − 20)/σ = −6/σ</span>.</li><li><span class=\"mm\">σ = 3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">σ = 3</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">9</span>, which is the variance. The notation <span class=\"mm\">N(20, σ²)</span> names the variance, so the spread in the units of <span class=\"mm\">X</span> is <span class=\"mm\">σ</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q43",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "normal-distribution",
+   "subtopic": "normal-distribution",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "If <span class=\"mm\">X</span> is normal with mean <span class=\"mm\">100</span> and variance <span class=\"mm\">25</span>, then <span class=\"mm\">P(95 &lt; X &lt; 110)</span> is closest to",
+   "text": "If <span class=\"mm\">X</span> is normal with mean <span class=\"mm\">100</span> and variance <span class=\"mm\">25</span>, then <span class=\"mm\">P(95 &lt; X &lt; 110)</span> is closest to",
+   "options": [
+    "<span class=\"mm\">0.7745</span>",
+    "<span class=\"mm\">0.1359</span>",
+    "<span class=\"mm\">0.8413</span>",
+    "<span class=\"mm\">0.8185</span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution": {
+    "concept": "Standardise both endpoints and subtract cumulative probabilities: `P(a < X < b) = Φ(z_b) − Φ(z_a)`.",
+    "steps": [
+     "`σ = 5`, since the variance is `25`.",
+     "`z₁ = (95 − 100)/5 = −1` and `z₂ = (110 − 100)/5 = 2`.",
+     "`Φ(2) − Φ(−1) = 0.9772 − 0.1587 = 0.8185`."
+    ],
+    "final": "Answer: Option (D) — `0.8185`.",
+    "trap": "Using `σ = 25`, which pushes both endpoints far into the tails, or subtracting the two tail areas instead of adding the two inner pieces."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Standardise both endpoints and subtract cumulative probabilities: <span class=\"mm\">P(a &lt; X &lt; b) = Φ(z_b) − Φ(z_a)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">σ = 5</span>, since the variance is <span class=\"mm\">25</span>.</li><li><span class=\"mm\">z₁ = (95 − 100)/5 = −1</span> and <span class=\"mm\">z₂ = (110 − 100)/5 = 2</span>.</li><li><span class=\"mm\">Φ(2) − Φ(−1) = 0.9772 − 0.1587 = 0.8185</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — <span class=\"mm\">0.8185</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">σ = 25</span>, which pushes both endpoints far into the tails, or subtracting the two tail areas instead of adding the two inner pieces.</p>"
+  },
+  {
+   "id": "EM-U5-Q44",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "normal-distribution",
+   "subtopic": "normal-distribution",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Which of the following statements about the normal distribution are TRUE? (Select all that apply.)",
+   "text": "Which of the following statements about the normal distribution are TRUE? (Select all that apply.)",
+   "options": [
+    "If <span class=\"mm\">X</span> is normal then <span class=\"mm\">aX + b</span> is normal for any constants <span class=\"mm\">a ≠ 0</span> and <span class=\"mm\">b</span>.",
+    "For a normal variable the mean, the median and the mode coincide.",
+    "If <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> are jointly normal with <span class=\"mm\">Cov(X, Y) = 0</span>, then <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> are independent.",
+    "Every symmetric distribution is normal."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "Normality is preserved by affine maps and by linear combinations of jointly normal variables; for a jointly normal pair, zero covariance is the same as independence.",
+    "steps": [
+     "A: `aX + b` has mean `aμ + b` and variance `a²σ²`, and remains normal.",
+     "B: the density is symmetric about `μ`, so the three central measures agree.",
+     "C is the special property that separates the joint normal from other joint laws.",
+     "D fails: the uniform and the logistic laws are symmetric but not normal."
+    ],
+    "final": "Answer: Options (A), (B) and (C).",
+    "trap": "Extending 'uncorrelated implies independent' beyond the jointly normal case, where it is false, and assuming that symmetry alone forces normality."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Normality is preserved by affine maps and by linear combinations of jointly normal variables; for a jointly normal pair, zero covariance is the same as independence.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: <span class=\"mm\">aX + b</span> has mean <span class=\"mm\">aμ + b</span> and variance <span class=\"mm\">a²σ²</span>, and remains normal.</li><li>B: the density is symmetric about <span class=\"mm\">μ</span>, so the three central measures agree.</li><li>C is the special property that separates the joint normal from other joint laws.</li><li>D fails: the uniform and the logistic laws are symmetric but not normal.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Extending 'uncorrelated implies independent' beyond the jointly normal case, where it is false, and assuming that symmetry alone forces normality.</p>"
+  },
+  {
+   "id": "EM-U5-Q45",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "normal-distribution",
+   "subtopic": "normal-distribution",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> be normal with mean <span class=\"mm\">50</span> and variance <span class=\"mm\">16</span>. If <span class=\"mm\">P(X &gt; c) = 0.0228</span>, then <span class=\"mm\">c</span> equals ______. (Use <span class=\"mm\">z = 2.00</span> for the cumulative probability <span class=\"mm\">0.9772</span>.)",
+   "text": "Let <span class=\"mm\">X</span> be normal with mean <span class=\"mm\">50</span> and variance <span class=\"mm\">16</span>. If <span class=\"mm\">P(X &gt; c) = 0.0228</span>, then <span class=\"mm\">c</span> equals ______. (Use <span class=\"mm\">z = 2.00</span> for the cumulative probability <span class=\"mm\">0.9772</span>.)",
+   "options": [],
+   "answer": 58,
+   "answer_display": "58",
+   "solution": {
+    "concept": "Invert a tabulated tail probability with `x = μ + zσ`, reading `z` from the cumulative probability.",
+    "steps": [
+     "`P(X > c) = 0.0228` gives `P(X < c) = 0.9772`, so `z = 2`.",
+     "The variance is `16`, so `σ = 4`.",
+     "`c = 50 + 2(4) = 58`."
+    ],
+    "final": "Answer: 58.",
+    "trap": "Using `z = −2`, which gives `42` and answers the lower tail instead; or adding the variance `16` in place of `zσ = 8`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Invert a tabulated tail probability with <span class=\"mm\">x = μ + zσ</span>, reading <span class=\"mm\">z</span> from the cumulative probability.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">P(X &gt; c) = 0.0228</span> gives <span class=\"mm\">P(X &lt; c) = 0.9772</span>, so <span class=\"mm\">z = 2</span>.</li><li>The variance is <span class=\"mm\">16</span>, so <span class=\"mm\">σ = 4</span>.</li><li><span class=\"mm\">c = 50 + 2(4) = 58</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 58.</span></p><p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">z = −2</span>, which gives <span class=\"mm\">42</span> and answers the lower tail instead; or adding the variance <span class=\"mm\">16</span> in place of <span class=\"mm\">zσ = 8</span>.</p>"
+  },
+  {
+   "id": "EM-U5-Q46",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "correlation-and-covariance",
+   "subtopic": "correlation-and-covariance",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent with <span class=\"mm\">Var(X) = 2</span> and <span class=\"mm\">Var(Y) = 3</span>. Then <span class=\"mm\">Var(2X − 3Y)</span> equals",
+   "text": "Let <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> be independent with <span class=\"mm\">Var(X) = 2</span> and <span class=\"mm\">Var(Y) = 3</span>. Then <span class=\"mm\">Var(2X − 3Y)</span> equals",
+   "options": [
+    "<span class=\"mm\">35</span>",
+    "<span class=\"mm\">5</span>",
+    "<span class=\"mm\">13</span>",
+    "<span class=\"mm\">30</span>"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "For independent variables `Var(aX + bY) = a²Var(X) + b²Var(Y)`, whatever the signs of `a` and `b`.",
+    "steps": [
+     "`Var(2X − 3Y) = 4 Var(X) + 9 Var(Y)`.",
+     "`= 4(2) + 9(3)`.",
+     "`= 8 + 27 = 35`."
+    ],
+    "final": "Answer: Option (A) — `35`.",
+    "trap": "Subtracting the second term because of the minus sign, giving `8 − 27` or `8 − 9`. Variance always adds; the sign disappears when the coefficient is squared."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For independent variables <span class=\"mm\">Var(aX + bY) = a²Var(X) + b²Var(Y)</span>, whatever the signs of <span class=\"mm\">a</span> and <span class=\"mm\">b</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">Var(2X − 3Y) = 4 Var(X) + 9 Var(Y)</span>.</li><li><span class=\"mm\">= 4(2) + 9(3)</span>.</li><li><span class=\"mm\">= 8 + 27 = 35</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — <span class=\"mm\">35</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Subtracting the second term because of the minus sign, giving <span class=\"mm\">8 − 27</span> or <span class=\"mm\">8 − 9</span>. Variance always adds; the sign disappears when the coefficient is squared.</p>"
+  },
+  {
+   "id": "EM-U5-Q47",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "correlation-and-covariance",
+   "subtopic": "correlation-and-covariance",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "For a random variable <span class=\"mm\">X</span> with finite second moment, <span class=\"mm\">Cov(X, X)</span> equals",
+   "text": "For a random variable <span class=\"mm\">X</span> with finite second moment, <span class=\"mm\">Cov(X, X)</span> equals",
+   "options": [
+    "<span class=\"mm\">0</span>",
+    "<span class=\"mm\">E[X²]</span>",
+    "<span class=\"mm\">Var(X)</span>",
+    "<span class=\"mm\">1</span>"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Covariance of a variable with itself is its variance: `Cov(X, X) = E[X²] − (E[X])²`.",
+    "steps": [
+     "`Cov(X, X) = E[(X − μ)(X − μ)]`.",
+     "`= E[(X − μ)²]`.",
+     "`= Var(X)`."
+    ],
+    "final": "Answer: Option (C) — `Var(X)`.",
+    "trap": "Answering `E[X²]`, which is the second moment about the origin, not the centred second moment."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Covariance of a variable with itself is its variance: <span class=\"mm\">Cov(X, X) = E[X²] − (E[X])²</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">Cov(X, X) = E[(X − μ)(X − μ)]</span>.</li><li><span class=\"mm\">= E[(X − μ)²]</span>.</li><li><span class=\"mm\">= Var(X)</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">Var(X)</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">E[X²]</span>, which is the second moment about the origin, not the centred second moment.</p>"
+  },
+  {
+   "id": "EM-U5-Q48",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "correlation-and-covariance",
+   "subtopic": "correlation-and-covariance",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Random variables <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> have <span class=\"mm\">Var(X) = 9</span>, <span class=\"mm\">Var(Y) = 16</span> and correlation coefficient <span class=\"mm\">ρ(X, Y) = 0.5</span>. Then <span class=\"mm\">Cov(X, Y)</span> equals",
+   "text": "Random variables <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> have <span class=\"mm\">Var(X) = 9</span>, <span class=\"mm\">Var(Y) = 16</span> and correlation coefficient <span class=\"mm\">ρ(X, Y) = 0.5</span>. Then <span class=\"mm\">Cov(X, Y)</span> equals",
+   "options": [
+    "<span class=\"mm\">3</span>",
+    "<span class=\"mm\">6</span>",
+    "<span class=\"mm\">12</span>",
+    "<span class=\"mm\">24</span>"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "`ρ = Cov(X, Y)/(σ_X σ_Y)`, so `Cov(X, Y) = ρ σ_X σ_Y` — the product of the standard deviations, not of the variances.",
+    "steps": [
+     "`σ_X = 3` and `σ_Y = 4`.",
+     "`Cov(X, Y) = 0.5 × 3 × 4`.",
+     "`= 6`."
+    ],
+    "final": "Answer: Option (B) — `6`.",
+    "trap": "Multiplying `ρ` by the variances `9 × 16`, which gives `72`, or by `9 × 4` and losing the square roots."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">ρ = Cov(X, Y)/(σ_X σ_Y)</span>, so <span class=\"mm\">Cov(X, Y) = ρ σ_X σ_Y</span> — the product of the standard deviations, not of the variances.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">σ_X = 3</span> and <span class=\"mm\">σ_Y = 4</span>.</li><li><span class=\"mm\">Cov(X, Y) = 0.5 × 3 × 4</span>.</li><li><span class=\"mm\">= 6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">6</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Multiplying <span class=\"mm\">ρ</span> by the variances <span class=\"mm\">9 × 16</span>, which gives <span class=\"mm\">72</span>, or by <span class=\"mm\">9 × 4</span> and losing the square roots.</p>"
+  },
+  {
+   "id": "EM-U5-Q49",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "correlation-and-covariance",
+   "subtopic": "correlation-and-covariance",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "For random variables with finite variances, which of the following statements are TRUE? (Select all that apply.)",
+   "text": "For random variables with finite variances, which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "<span class=\"mm\">Cov(X, Y) = 0</span> does not imply that <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> are independent in general.",
+    "<span class=\"mm\">Var(X − Y) = Var(X) + Var(Y) − 2Cov(X, Y)</span>.",
+    "If <span class=\"mm\">Y = −2X + 3</span> then <span class=\"mm\">ρ(X, Y) = −1</span>.",
+    "<span class=\"mm\">ρ(X, Y) = 1</span> implies <span class=\"mm\">Y = aX + b</span> with <span class=\"mm\">a &lt; 0</span>."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "Zero covariance removes the cross term from the variance of a sum but does not force independence; `|ρ| = 1` exactly when the pair is affinely related, and the sign of the slope fixes the sign of `ρ`.",
+    "steps": [
+     "A: take `X` uniform on `[−1, 1]` and `Y = X²`; then `Cov(X, Y) = 0` while the two are dependent.",
+     "B is the expansion `Var(X − Y) = Var X + Var Y − 2Cov(X, Y)`.",
+     "C: the slope is `−2`, which is negative, so `ρ = −1`.",
+     "D fails: `ρ = 1` forces a positive slope `a > 0`."
+    ],
+    "final": "Answer: Options (A), (B) and (C).",
+    "trap": "Treating zero correlation as independence, and reading `|ρ| = 1` as 'some straight-line relation' while ignoring that the sign of `ρ` fixes the sign of the slope."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Zero covariance removes the cross term from the variance of a sum but does not force independence; <span class=\"mm\">|ρ| = 1</span> exactly when the pair is affinely related, and the sign of the slope fixes the sign of <span class=\"mm\">ρ</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: take <span class=\"mm\">X</span> uniform on <span class=\"mm\">[−1, 1]</span> and <span class=\"mm\">Y = X²</span>; then <span class=\"mm\">Cov(X, Y) = 0</span> while the two are dependent.</li><li>B is the expansion <span class=\"mm\">Var(X − Y) = Var X + Var Y − 2Cov(X, Y)</span>.</li><li>C: the slope is <span class=\"mm\">−2</span>, which is negative, so <span class=\"mm\">ρ = −1</span>.</li><li>D fails: <span class=\"mm\">ρ = 1</span> forces a positive slope <span class=\"mm\">a &gt; 0</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating zero correlation as independence, and reading <span class=\"mm\">|ρ| = 1</span> as 'some straight-line relation' while ignoring that the sign of <span class=\"mm\">ρ</span> fixes the sign of the slope.</p>"
+  },
+  {
+   "id": "EM-U5-Q50",
+   "subject": "engineering-mathematics",
+   "subject_name": "Engineering Mathematics",
+   "unit": 5,
+   "unit_number": 5,
+   "unit_slug": "probability-distributions",
+   "unit_name": "Continuous Probability & Distributions",
+   "topic": "Continuous Probability & Distributions",
+   "sub": "correlation-and-covariance",
+   "subtopic": "correlation-and-covariance",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "Set 2 of 2",
+   "question": "Random variables <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> satisfy <span class=\"mm\">Var(X) = 4</span>, <span class=\"mm\">Var(Y) = 9</span> and <span class=\"mm\">Cov(X, Y) = −3</span>. The correlation coefficient <span class=\"mm\">ρ(X, Y)</span> is ______.",
+   "text": "Random variables <span class=\"mm\">X</span> and <span class=\"mm\">Y</span> satisfy <span class=\"mm\">Var(X) = 4</span>, <span class=\"mm\">Var(Y) = 9</span> and <span class=\"mm\">Cov(X, Y) = −3</span>. The correlation coefficient <span class=\"mm\">ρ(X, Y)</span> is ______.",
+   "options": [],
+   "answer": -0.5,
+   "answer_display": "-0.5",
+   "solution": {
+    "concept": "`ρ = Cov(X, Y)/(σ_X σ_Y)`, with `σ` the square root of the stated variance; the sign of the covariance carries over to `ρ`.",
+    "steps": [
+     "`σ_X = 2` and `σ_Y = 3`.",
+     "`ρ = −3/(2 × 3)`.",
+     "`= −0.5`."
+    ],
+    "final": "Answer: -0.5.",
+    "trap": "Dropping the sign, which loses the direction of the relation, or dividing by the variances `4 × 9` instead of by `2 × 3`."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">ρ = Cov(X, Y)/(σ_X σ_Y)</span>, with <span class=\"mm\">σ</span> the square root of the stated variance; the sign of the covariance carries over to <span class=\"mm\">ρ</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">σ_X = 2</span> and <span class=\"mm\">σ_Y = 3</span>.</li><li><span class=\"mm\">ρ = −3/(2 × 3)</span>.</li><li><span class=\"mm\">= −0.5</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: -0.5.</span></p><p class=\"row\"><b>Common misconception.</b> Dropping the sign, which loses the direction of the relation, or dividing by the variances <span class=\"mm\">4 × 9</span> instead of by <span class=\"mm\">2 × 3</span>.</p>"
   }
  ]
 }
