@@ -7,38 +7,65 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2 (third pass)**, 2026-10-30 →
-  [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html)
+- **Algorithms · Unit 4 — Dynamic Programming, Set 1 of 2**, 2026-10-30 →
+  [`algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`](algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DFA construction & minimisation (7) · NFA to DFA: subset construction (6) ·
-  regular expressions (6) · pumping lemma for regular languages (6)
-- Rotation: MODE A. Eight subjects already carried a paper dated 2026-10-30, so the draw ran over the remaining
-  three (engineering-mathematics, algorithms, theory-of-computation) and gave **Theory of Computation**.
-  `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-29, run 12, unit 4,
-  turing-machines-decidability, Set 1 of 2 (second pass)}`. Unit 4 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B4 advanced `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` →
-  **Unit 1 — Regular Languages & Finite Automata**. Every unit of the subject is at or above the cap
-  (75 / 75 / 75 / 75), so the modulo wrapped and step B5 applied: Unit 1 takes its **fourth** set and now holds
-  **100** questions. No override was used.
-- This superseded the 2026-10-28 paper, which moved to
-  `theory-of-computation/regular-languages-fa/archive/gate_toc_mock_1_2026-10-28_run1.html` with its content frozen;
-  the unit folder holds exactly one current paper and the repository root holds no copy.
-- The paper's Question Bank tab lists **300** solved questions (Units 1–4) against the 25 active questions of this
+- Subtopics: Matrix-chain multiplication (7) · Longest common subsequence (6) · 0-1 knapsack (6) ·
+  All-pairs shortest paths — Floyd–Warshall (6)
+- Rotation: MODE A. Nine subjects already carried a paper dated 2026-10-30, so the draw ran over the remaining two
+  (engineering-mathematics, algorithms) and gave **Algorithms**. `runs[]` sorted by `(date, run)` gave the most recent
+  paper as `{2026-10-29, run 6, unit 3, greedy-algorithms, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → **Unit 4 — Dynamic
+  Programming**. Unit 4 had no folder and no paper, so nothing was archived and no root copy was written.
+- Unit 4 now holds **25** questions, below the cap, so the next Algorithms run takes Unit 4 as Set 2 of 2 before
+  advancing to `(3 + 1) mod 7 = 4` → Unit 5. No override was used.
+- The paper's Question Bank tab lists **150** solved questions (Units 1–3) against the 25 active questions of this
   set, which stay out of that list.
-- Previous test: **Databases · Unit 4 — Transactions & Concurrency Control, Set 1 of 2**, 2026-10-30 →
-  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html)
+- Previous test: **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2 (third pass)**,
+  2026-10-30 →
+  [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 110 (19 Discrete Mathematics, 6 Algorithms, 7 Databases, 10 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 53 current · 57 archived |
-| Test cards on the portal | 65 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2750 (475 Discrete Mathematics, 150 Algorithms, 175 Databases, 250 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
+| Papers published (current + archived) | 111 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 10 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
+| Current papers / archived sets | 54 current · 57 archived |
+| Test cards on the portal | 66 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
+| Questions in the subject banks | 2775 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 250 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 57 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Algorithms Unit 4, Set 1 of 2
+
+- New paper at `algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`. Unit 4 had no folder and no
+  paper, so nothing was archived and the unit folder holds exactly one current paper; the repository root holds no
+  copy.
+- **Rotation (Section 1, MODE A).** Nine subjects already carried a paper dated 2026-10-30 — discrete-mathematics,
+  digital-logic, computer-architecture, programming-data-structures, compiler-design, operating-systems, databases,
+  computer-networks and theory-of-computation — so the draw was restricted to the two that had not
+  (engineering-mathematics, algorithms), and an unseeded `secrets.choice` gave **Algorithms**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-29, run 6, unit 3, greedy-algorithms, Set 2 of 2}`. Unit 3
+  held **50** questions, exactly `UNIT_QUESTION_CAP`, so step B4 advanced
+  `(index_of(greedy-algorithms) = 2 + 1) mod 7 = 3` → **Unit 4 — Dynamic Programming**. No override, no partial set.
+- Coverage: all four Unit 4 subtopics — matrix-chain multiplication (7), longest common subsequence (6), 0-1
+  knapsack (6), all-pairs shortest paths / Floyd–Warshall (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; 60 minutes, 35 marks.
+- All 25 items are new (`ALG-U4-Q01` … `ALG-U4-Q25`); no id and no normalised stem collides with the 150 banked
+  Algorithms items.
+- **No official PYQ is claimed.** `verified_pyqs` for Algorithms is empty, so no item carries
+  `data-source="GATE_PYQ_VARIATION"` and nothing on this paper is described as an official GATE question.
+- **Every numeric answer recomputed by script**, not by hand: `m[1][4] = 405` for `p = ⟨5,10,3,12,5⟩` (all three
+  top-level splits computed: 580, 405, 630), `m[1][6] = 2010` for `p = ⟨5,10,3,12,5,50,6⟩` (splits 2250, 2010,
+  2550, 2055, 3155), the 64 for the `2×3, 3×4, 4×5` chain, LCS lengths 4 (`TRANSFER`/`REFERENT`) and 5
+  (`CHARACTER`), the 48-cell table for lengths 7 and 5, knapsack optima 220, 9, 19 and 9, all confirmed by exhaustive
+  subset enumeration, and the Floyd–Warshall distances 5 and 7 read off a full min/+ table over the stated graphs.
+- Question Bank tab: **150** solved questions (Units 1–3) with 0 verified PYQs; the active 25 are excluded from it.
+  Units 4–7 collapse to the single line the spec asks for.
+- Shell parity: the `<style>` block and the `<script>` block are byte-identical to the 2026-10-30 Theory of
+  Computation paper they were built from, and only the payload, the metadata strings, the question cards, the bank
+  tab and the About tab differ.
 
 ### 2026-10-30 — Theory of Computation Unit 1, Set 1 of 2 (third pass)
 
@@ -971,6 +998,13 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Algorithms → Unit 4 (Dynamic Programming), Set 1 of 2.**
+  MODE A: nine subjects already carried a paper dated 2026-10-30, so the draw ran over the remaining two
+  (engineering-mathematics, algorithms) with an unseeded `secrets.choice`, giving **Algorithms**. Most recent run in
+  `runs[]` was `{2026-10-29, run 6, unit 3, greedy-algorithms, Set 2 of 2}`; Unit 3 held 50 questions, exactly at
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(2 + 1) mod 7 = 3` → Unit 4. Unit 4 held no questions and had no folder,
+  so this is Set 1 of 2 and nothing was archived. Unit 4 now holds **25** questions; the Question Bank tab shows the
+  150 solved items that are not on this paper. No override, no second pass, no unit above 50.
 - **2026-10-30, Databases → Unit 4 (Transactions & Concurrency Control), Set 1 of 2.**
   MODE A: seven subjects already carried a paper dated 2026-10-30 (compiler-design, computer-architecture,
   computer-networks, digital-logic, discrete-mathematics, operating-systems, programming-data-structures), so the
@@ -5061,7 +5095,7 @@ Algorithms:
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
 | 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 50 | yes |
 | 3 | Greedy Algorithms | `greedy-algorithms` | 50 | yes |
-| 4 | Dynamic Programming | `dynamic-programming` | 0 | — |
+| 4 | Dynamic Programming | `dynamic-programming` | 25 | yes |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
 | 7 | Complexity Theory & NP-Completeness | `complexity-np-complete` | 0 | — |

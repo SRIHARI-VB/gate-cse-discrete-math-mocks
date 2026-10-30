@@ -4,14 +4,16 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-29",
+  "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 150,
+  "total_questions": 175,
   "units_with_questions": [
    1,
    2,
-   3
-  ]
+   3,
+   4
+  ],
+  "total_runs": 7
  },
  "runs": [
   {
@@ -365,6 +367,74 @@
    ],
    "mode": "MODE A (random subject, bank-driven unit rotation)",
    "selection": "Unit 3 was current with 25 of 50 questions banked and had been current for 0 days, so step B3 re-selected it for the second and final set. 25 + 25 = 50 closes the unit at the cap."
+  },
+  {
+   "run": 7,
+   "date": "2026-10-30",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "set": "Set 1 of 2",
+   "count": 25,
+   "file": "algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html",
+   "archived_previous": null,
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "matrix-chain-multiplication",
+    "longest-common-subsequence",
+    "0-1-knapsack",
+    "all-pairs-shortest-paths-floyd-warshall"
+   ],
+   "subtopic_counts": {
+    "matrix-chain-multiplication": 7,
+    "longest-common-subsequence": 6,
+    "0-1-knapsack": 6,
+    "all-pairs-shortest-paths-floyd-warshall": 6
+   },
+   "question_ids": [
+    "ALG-U4-Q01",
+    "ALG-U4-Q02",
+    "ALG-U4-Q03",
+    "ALG-U4-Q04",
+    "ALG-U4-Q05",
+    "ALG-U4-Q06",
+    "ALG-U4-Q07",
+    "ALG-U4-Q08",
+    "ALG-U4-Q09",
+    "ALG-U4-Q10",
+    "ALG-U4-Q11",
+    "ALG-U4-Q12",
+    "ALG-U4-Q13",
+    "ALG-U4-Q14",
+    "ALG-U4-Q15",
+    "ALG-U4-Q16",
+    "ALG-U4-Q17",
+    "ALG-U4-Q18",
+    "ALG-U4-Q19",
+    "ALG-U4-Q20",
+    "ALG-U4-Q21",
+    "ALG-U4-Q22",
+    "ALG-U4-Q23",
+    "ALG-U4-Q24",
+    "ALG-U4-Q25"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. Nine subjects already carried a paper dated 2026-10-30, so the draw ran over the two that did not (engineering-mathematics, algorithms) with an unseeded secrets.choice, giving Algorithms. runs[] sorted by (date, run) gave the most recent paper as {2026-10-29, run 6, unit 3, greedy-algorithms, Set 2 of 2}. Unit 3 held 50 questions, exactly UNIT_QUESTION_CAP = 50, so step B4 advanced one unit: (index_of(greedy-algorithms) = 2 + 1) mod 7 = 3 -> Unit 4, Dynamic Programming (dynamic-programming). Unit 4 had no folder and no paper, so nothing was archived. No override was used.",
+   "note": "Set 1 of 2 for Algorithms Unit 4. Unit 4 now holds 25 questions, below UNIT_QUESTION_CAP = 50, so the next Algorithms run re-selects Unit 4 as Set 2 of 2 before advancing to (index_of(dynamic-programming) = 3 + 1) mod 7 = 4 -> Unit 5, Graph Algorithms: Traversals & Spanning Trees. All 25 items are new (ALG-U4-Q01..Q25). Coverage: matrix-chain multiplication 7, LCS 6, 0-1 knapsack 6, Floyd-Warshall 6. verified_pyqs is unchanged and empty, so no item is tagged GATE_PYQ_VARIATION and nothing on this paper is claimed as official. Every numeric answer was recomputed by script: m[1][4] = 405 for p = <5,10,3,12,5>, m[1][6] = 2010 for p = <5,10,3,12,5,50,6>, the 64 for the 2x3,3x4,4x5 chain, the LCS lengths 4 (TRANSFER/REFERENT) and 5 (CHARACTER), the 48-cell table, the knapsack optima 9, 19 and 220 (all confirmed by exhaustive subset search), and the Floyd-Warshall distances 5 and 7 from a full min/+ table."
   }
  ],
  "verified_pyqs": [],
@@ -5663,6 +5733,895 @@
     "final": "119 (option A).",
     "trap": "120 comes from merging 9 and 13 instead of 9 and 11 at the third step — a single mis-step at any stage changes the total. Re-check that the pool is re-sorted after every merge."
    }
+  },
+  {
+   "id": "ALG-U4-Q01",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "The matrix-chain problem multiplies <span class=\"mm\">n</span> matrices <span class=\"mm\">A₁ A₂ … Aₙ</span>. In the dynamic-programming solution, how many distinct subproblems <span class=\"mm\">m[i][j]</span> (with <span class=\"mm\">1 ≤ i ≤ j ≤ n</span>) does the table hold?",
+   "options": [
+    "n(n+1)/2",
+    "n²",
+    "(n − 1)²",
+    "2ⁿ"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The DP state is an interval of the chain: m[i][j] is the minimum number of scalar multiplications needed to compute the product Aᵢ Aᵢ₊₁ … Aⱼ. The state is identified by the two end indices, and the end indices satisfy i ≤ j.",
+    "steps": [
+     "Every subproblem is a pair (i, j) with 1 ≤ i ≤ j ≤ n.",
+     "For a fixed i, the possible j are i, i+1, …, n, which is n − i + 1 choices.",
+     "Summing over i = 1 … n gives n + (n−1) + … + 1 = n(n+1)/2.",
+     "The diagonal i = j (a single matrix, cost 0) is part of the table: it is the base case the recurrence builds on."
+    ],
+    "final": "n(n+1)/2 subproblems — option (A).",
+    "trap": "n² counts ordered pairs, and (n−1)² or n(n−1)/2 drops the diagonal. The diagonal is needed: m[i][i] = 0 is the base case without which the recurrence has no bottom."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The DP state is an interval of the chain: m[i][j] is the minimum number of scalar multiplications needed to compute the product Aᵢ Aᵢ₊₁ … Aⱼ. The state is identified by the two end indices, and the end indices satisfy i ≤ j.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Every subproblem is a pair (i, j) with 1 ≤ i ≤ j ≤ n.</li><li>For a fixed i, the possible j are i, i+1, …, n, which is n − i + 1 choices.</li><li>Summing over i = 1 … n gives n + (n−1) + … + 1 = n(n+1)/2.</li><li>The diagonal i = j (a single matrix, cost 0) is part of the table: it is the base case the recurrence builds on.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: n(n+1)/2 subproblems — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> n² counts ordered pairs, and (n−1)² or n(n−1)/2 drops the diagonal. The diagonal is needed: m[i][i] = 0 is the base case without which the recurrence has no bottom.</p>"
+  },
+  {
+   "id": "ALG-U4-Q02",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Three matrices are given: <span class=\"mm\">A₁</span> is <span class=\"mm\">10 × 20</span>, <span class=\"mm\">A₂</span> is <span class=\"mm\">20 × 30</span> and <span class=\"mm\">A₃</span> is <span class=\"mm\">30 × 40</span>. What is the minimum number of scalar multiplications needed to form <span class=\"mm\">A₁A₂A₃</span>?",
+   "options": [
+    "18 000",
+    "24 000",
+    "32 000",
+    "38 000"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "A parenthesisation fixes the order of multiplication, and the cost of multiplying a p×q matrix by a q×r matrix is p·q·r scalar multiplications. The dimensions of an intermediate product are the outer dimensions of the two operands.",
+    "steps": [
+     "Option 1, (A₁A₂)A₃: A₁A₂ costs 10·20·30 = 6000 and yields a 10×30 matrix. Multiplying that by A₃ (30×40) costs 10·30·40 = 12 000. Total 18 000.",
+     "Option 2, A₁(A₂A₃): A₂A₃ costs 20·30·40 = 24 000 and yields a 20×40 matrix. Multiplying A₁ (10×20) by it costs 10·20·40 = 8000. Total 32 000.",
+     "The minimum is min(18 000, 32 000) = 18 000."
+    ],
+    "final": "18 000 scalar multiplications — option (A).",
+    "trap": "24 000 is only the cost of A₂A₃, a partial cost. 32 000 is the other parenthesisation; 38 000 comes from adding 24 000 and 14 000 of nothing in particular. Multiply only the three relevant dimensions at each step and add the two step costs."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A parenthesisation fixes the order of multiplication, and the cost of multiplying a p×q matrix by a q×r matrix is p·q·r scalar multiplications. The dimensions of an intermediate product are the outer dimensions of the two operands.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Option 1, (A₁A₂)A₃: A₁A₂ costs 10·20·30 = 6000 and yields a 10×30 matrix. Multiplying that by A₃ (30×40) costs 10·30·40 = 12 000. Total 18 000.</li><li>Option 2, A₁(A₂A₃): A₂A₃ costs 20·30·40 = 24 000 and yields a 20×40 matrix. Multiplying A₁ (10×20) by it costs 10·20·40 = 8000. Total 32 000.</li><li>The minimum is min(18 000, 32 000) = 18 000.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 18 000 scalar multiplications — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> 24 000 is only the cost of A₂A₃, a partial cost. 32 000 is the other parenthesisation; 38 000 comes from adding 24 000 and 14 000 of nothing in particular. Multiply only the three relevant dimensions at each step and add the two step costs.</p>"
+  },
+  {
+   "id": "ALG-U4-Q03",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "The chain has dimensions <span class=\"mm\">p = ⟨5, 10, 3, 12, 5⟩</span>, so <span class=\"mm\">A₁</span> is <span class=\"mm\">5×10</span>, <span class=\"mm\">A₂</span> is <span class=\"mm\">10×3</span>, <span class=\"mm\">A₃</span> is <span class=\"mm\">3×12</span> and <span class=\"mm\">A₄</span> is <span class=\"mm\">12×5</span>. The minimum number of scalar multiplications <span class=\"mm\">m[1][4]</span> is:",
+   "options": [
+    "405",
+    "580",
+    "630",
+    "330"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "m[i][j] = min over i ≤ k &lt; j of ( m[i][k] + m[k+1][j] + pᵢ₋₁·p_k·p_j ). The last term is the cost of the single multiplication that joins the two halves, so the split k must be tried at every position.",
+    "steps": [
+     "Length 2: m[1][2] = 5·10·3 = 150; m[2][3] = 10·3·12 = 360; m[3][4] = 3·12·5 = 180.",
+     "Length 3: m[1][3] = min(k=1: 0 + 360 + 5·10·12 = 960; k=2: 150 + 0 + 5·3·12 = 330) = 330. Similarly m[2][4] = min(k=2: 0 + 180 + 10·3·5 = 330; k=3: 360 + 0 + 10·12·5 = 960) = 330.",
+     "Length 4, three splits: k=1 gives 0 + 330 + 5·10·5 = 580; k=2 gives 150 + 180 + 5·3·5 = 405; k=3 gives 330 + 0 + 5·12·5 = 630.",
+     "The minimum over the three splits is 405, attained at k = 2, i.e. the parenthesisation A₁(A₂A₃A₄)."
+    ],
+    "final": "m[1][4] = 405 — option (A).",
+    "trap": "580 and 630 are the other two splits at the top level, and 330 is m[1][3] = m[2][4], a subproblem rather than the whole chain. Filling the table by increasing interval length, and keeping the pᵢ₋₁·p_k·p_j term, is what prevents all three errors."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> m[i][j] = min over i ≤ k &lt; j of ( m[i][k] + m[k+1][j] + pᵢ₋₁·p_k·p_j ). The last term is the cost of the single multiplication that joins the two halves, so the split k must be tried at every position.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Length 2: m[1][2] = 5·10·3 = 150; m[2][3] = 10·3·12 = 360; m[3][4] = 3·12·5 = 180.</li><li>Length 3: m[1][3] = min(k=1: 0 + 360 + 5·10·12 = 960; k=2: 150 + 0 + 5·3·12 = 330) = 330. Similarly m[2][4] = min(k=2: 0 + 180 + 10·3·5 = 330; k=3: 360 + 0 + 10·12·5 = 960) = 330.</li><li>Length 4, three splits: k=1 gives 0 + 330 + 5·10·5 = 580; k=2 gives 150 + 180 + 5·3·5 = 405; k=3 gives 330 + 0 + 5·12·5 = 630.</li><li>The minimum over the three splits is 405, attained at k = 2, i.e. the parenthesisation A₁(A₂A₃A₄).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: m[1][4] = 405 — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> 580 and 630 are the other two splits at the top level, and 330 is m[1][3] = m[2][4], a subproblem rather than the whole chain. Filling the table by increasing interval length, and keeping the pᵢ₋₁·p_k·p_j term, is what prevents all three errors.</p>"
+  },
+  {
+   "id": "ALG-U4-Q04",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "A chain of three matrices is given by <span class=\"mm\">A₁: 2×3</span>, <span class=\"mm\">A₂: 3×4</span>, <span class=\"mm\">A₃: 4×5</span>. What is the minimum number of scalar multiplications required to compute <span class=\"mm\">A₁A₂A₃</span>? Give an exact integer.",
+   "options": [],
+   "answer": "64",
+   "answer_display": "64",
+   "solution": {
+    "concept": "With three matrices there are only two parenthesizations, so the DP reduces to comparing two totals. Each multiplication of a p×q matrix by a q×r matrix costs p·q·r.",
+    "steps": [
+     "(A₁A₂)A₃: A₁A₂ costs 2·3·4 = 24 and gives a 2×4 matrix; then 2·4·5 = 40. Total 64.",
+     "A₁(A₂A₃): A₂A₃ costs 3·4·5 = 60 and gives a 3×5 matrix; then 2·3·5 = 30. Total 90.",
+     "Minimum = min(64, 90) = 64."
+    ],
+    "final": "64 scalar multiplications.",
+    "trap": "90 is the other parenthesisation. Reporting 24 or 60 alone reports one multiplication instead of the whole chain. The cheap first step is not always part of the cheap overall plan."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With three matrices there are only two parenthesizations, so the DP reduces to comparing two totals. Each multiplication of a p×q matrix by a q×r matrix costs p·q·r.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A₁A₂)A₃: A₁A₂ costs 2·3·4 = 24 and gives a 2×4 matrix; then 2·4·5 = 40. Total 64.</li><li>A₁(A₂A₃): A₂A₃ costs 3·4·5 = 60 and gives a 3×5 matrix; then 2·3·5 = 30. Total 90.</li><li>Minimum = min(64, 90) = 64.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 64 scalar multiplications.</span></p><p class=\"row\"><b>Common misconception.</b> 90 is the other parenthesisation. Reporting 24 or 60 alone reports one multiplication instead of the whole chain. The cheap first step is not always part of the cheap overall plan.</p>"
+  },
+  {
+   "id": "ALG-U4-Q05",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "Which statement about matrix-chain multiplication is TRUE?",
+   "options": [
+    "An optimal parenthesisation of Aᵢ…Aⱼ splits the chain at some k, and the two parts Aᵢ…A_k and A_{k+1}…Aⱼ must themselves be parenthesised optimally — this is what makes dynamic programming applicable.",
+    "At each step, multiplying the adjacent pair whose dimensions give the smallest product is an optimal strategy.",
+    "The dynamic program runs in Θ(n²) time.",
+    "Every full parenthesisation of a fixed chain costs the same number of scalar multiplications."
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Optimal substructure: an optimal solution contains optimal solutions to subproblems. If a cheaper way existed to compute Aᵢ…A_k, replacing the expensive part of an optimal plan by it would lower the total, contradicting optimality.",
+    "steps": [
+     "Statement (A) is the cut-and-paste argument that justifies the recurrence: fix the outermost multiplication, which splits the chain at some k, then both halves are independent subproblems.",
+     "Statement (B) is false: a locally cheapest adjacent product can force an expensive multiplication later. For p = ⟨5, 10, 3, 12, 5⟩ the greedy first step picks m[1][2] = 150, and the total then exceeds the optimum.",
+     "Statement (C) is false: three nested loops (length, start, split) give Θ(n³) time over a Θ(n²) table.",
+     "Statement (D) is false: the two parenthesisations in Question 2 cost 18 000 and 32 000."
+    ],
+    "final": "Option (A) is the true statement.",
+    "trap": "Greedy intuition is the standard error here: the matrix-chain problem is the textbook case where the locally cheapest merge is not globally optimal, which is exactly why DP rather than a greedy algorithm is needed."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Optimal substructure: an optimal solution contains optimal solutions to subproblems. If a cheaper way existed to compute Aᵢ…A_k, replacing the expensive part of an optimal plan by it would lower the total, contradicting optimality.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Statement (A) is the cut-and-paste argument that justifies the recurrence: fix the outermost multiplication, which splits the chain at some k, then both halves are independent subproblems.</li><li>Statement (B) is false: a locally cheapest adjacent product can force an expensive multiplication later. For p = ⟨5, 10, 3, 12, 5⟩ the greedy first step picks m[1][2] = 150, and the total then exceeds the optimum.</li><li>Statement (C) is false: three nested loops (length, start, split) give Θ(n³) time over a Θ(n²) table.</li><li>Statement (D) is false: the two parenthesisations in Question 2 cost 18 000 and 32 000.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) is the true statement.</span></p><p class=\"row\"><b>Common misconception.</b> Greedy intuition is the standard error here: the matrix-chain problem is the textbook case where the locally cheapest merge is not globally optimal, which is exactly why DP rather than a greedy algorithm is needed.</p>"
+  },
+  {
+   "id": "ALG-U4-Q06",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Which of the following statements about matrix-chain multiplication are TRUE?",
+   "options": [
+    "The number of distinct full parenthesizations of a product of n matrices is the Catalan number C_{n−1} = (1/n)·C(2n−2, n−1).",
+    "In m[i][j] = min over k of ( m[i][k] + m[k+1][j] + p_{i−1}·p_k·p_j ), the term p_{i−1}·p_k·p_j is the cost of the final multiplication that joins the two halves.",
+    "The table can be filled in Θ(n³) time using Θ(n²) space.",
+    "The optimal split of Aᵢ…Aⱼ is always the middle one, k = ⌊(i+j)/2⌋."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A, B and C)",
+   "solution": {
+    "concept": "Three separate facts: the count of parenthesizations is Catalan, the recurrence's third term is the cost of the joining multiplication, and the DP fills a triangular Θ(n²) table in Θ(n³) time.",
+    "steps": [
+     "(A) TRUE. The parenthesizations satisfy P(n) = Σ_{k=1..n−1} P(k)·P(n−k) with P(1) = 1, the Catalan recurrence, so P(n) = C_{n−1}. Check: n = 2 gives 1, n = 3 gives 2, n = 4 gives 5.",
+     "(B) TRUE. After Aᵢ…A_k (a pᵢ₋₁×p_k matrix) and A_{k+1}…Aⱼ (a p_k×p_j matrix) are formed, joining them multiplies a pᵢ₋₁×p_k matrix by a p_k×p_j matrix, which costs pᵢ₋₁·p_k·p_j.",
+     "(C) TRUE. There are Θ(n²) intervals and each takes Θ(n) split trials, giving Θ(n³) time; storing m and the split table s costs Θ(n²).",
+     "(D) FALSE. The best split depends on the dimensions. In Question 3 the optimal split of the length-4 chain is k = 2, but for p = ⟨5, 10, 3, 12, 5⟩ the middle of 1…4 is also 2 — shift the dimensions and the optimal k moves, which is why all splits must be tried."
+    ],
+    "final": "(A), (B) and (C) are TRUE; (D) is FALSE.",
+    "trap": "(D) survives because small symmetric examples sometimes do split in the middle. The number of parenthesizations grows as a Catalan number — exponentially — and the DP's whole purpose is to avoid enumerating them, not to pick a fixed shape."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three separate facts: the count of parenthesizations is Catalan, the recurrence's third term is the cost of the joining multiplication, and the DP fills a triangular Θ(n²) table in Θ(n³) time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) TRUE. The parenthesizations satisfy P(n) = Σ_{k=1..n−1} P(k)·P(n−k) with P(1) = 1, the Catalan recurrence, so P(n) = C_{n−1}. Check: n = 2 gives 1, n = 3 gives 2, n = 4 gives 5.</li><li>(B) TRUE. After Aᵢ…A_k (a pᵢ₋₁×p_k matrix) and A_{k+1}…Aⱼ (a p_k×p_j matrix) are formed, joining them multiplies a pᵢ₋₁×p_k matrix by a p_k×p_j matrix, which costs pᵢ₋₁·p_k·p_j.</li><li>(C) TRUE. There are Θ(n²) intervals and each takes Θ(n) split trials, giving Θ(n³) time; storing m and the split table s costs Θ(n²).</li><li>(D) FALSE. The best split depends on the dimensions. In Question 3 the optimal split of the length-4 chain is k = 2, but for p = ⟨5, 10, 3, 12, 5⟩ the middle of 1…4 is also 2 — shift the dimensions and the optimal k moves, which is why all splits must be tried.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (C) are TRUE; (D) is FALSE.</span></p><p class=\"row\"><b>Common misconception.</b> (D) survives because small symmetric examples sometimes do split in the middle. The number of parenthesizations grows as a Catalan number — exponentially — and the DP's whole purpose is to avoid enumerating them, not to pick a fixed shape.</p>"
+  },
+  {
+   "id": "ALG-U4-Q07",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "matrix-chain-multiplication",
+   "subtopic": "matrix-chain-multiplication",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "The chain has dimensions <span class=\"mm\">p = ⟨5, 10, 3, 12, 5, 50, 6⟩</span>, i.e. six matrices <span class=\"mm\">A₁ … A₆</span>. What is the minimum number of scalar multiplications needed to compute the product? Give an exact integer.",
+   "options": [],
+   "answer": "2010",
+   "answer_display": "2010",
+   "solution": {
+    "concept": "The same recurrence, applied by increasing interval length: m[i][j] = min over k of m[i][k] + m[k+1][j] + pᵢ₋₁·p_k·p_j. With six matrices the table has 21 entries and each interval of length L costs L−1 split trials.",
+    "steps": [
+     "Length 2: m[1][2] = 5·10·3 = 150; m[2][3] = 10·3·12 = 360; m[3][4] = 3·12·5 = 180; m[4][5] = 12·5·50 = 3000; m[5][6] = 5·50·6 = 1500.",
+     "Length 3: m[1][3] = 330 (as in Question 3); m[2][4] = 330; m[3][5] = min(k=3: 0 + 3000 + 3·12·50 = 4800; k=4: 180 + 0 + 3·5·50 = 930) = 930; m[4][6] = min(k=4: 0 + 1500 + 12·5·6 = 1860; k=5: 3000 + 0 + 12·50·6 = 6600) = 1860.",
+     "Continuing by increasing length, the five top-level splits of 1…6 give 2250 (k=1), 2010 (k=2), 2550 (k=3), 2055 (k=4) and 3155 (k=5).",
+     "The minimum is 2010 at k = 2, i.e. A₁·(A₂…A₆): m[1][2] = 150, m[2][6] = 1770, and the joining multiplication costs p₀·p₂·p₆ = 5·3·6 = 90. Total 150 + 1770 + 90 = 2010."
+    ],
+    "final": "2010 scalar multiplications.",
+    "trap": "2055 (k = 4) is the near miss: a plan that isolates the expensive 5×50 block early looks natural but costs 45 more. Only a full table, filled by length, settles it — the answer cannot be read off the dimensions."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The same recurrence, applied by increasing interval length: m[i][j] = min over k of m[i][k] + m[k+1][j] + pᵢ₋₁·p_k·p_j. With six matrices the table has 21 entries and each interval of length L costs L−1 split trials.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Length 2: m[1][2] = 5·10·3 = 150; m[2][3] = 10·3·12 = 360; m[3][4] = 3·12·5 = 180; m[4][5] = 12·5·50 = 3000; m[5][6] = 5·50·6 = 1500.</li><li>Length 3: m[1][3] = 330 (as in Question 3); m[2][4] = 330; m[3][5] = min(k=3: 0 + 3000 + 3·12·50 = 4800; k=4: 180 + 0 + 3·5·50 = 930) = 930; m[4][6] = min(k=4: 0 + 1500 + 12·5·6 = 1860; k=5: 3000 + 0 + 12·50·6 = 6600) = 1860.</li><li>Continuing by increasing length, the five top-level splits of 1…6 give 2250 (k=1), 2010 (k=2), 2550 (k=3), 2055 (k=4) and 3155 (k=5).</li><li>The minimum is 2010 at k = 2, i.e. A₁·(A₂…A₆): m[1][2] = 150, m[2][6] = 1770, and the joining multiplication costs p₀·p₂·p₆ = 5·3·6 = 90. Total 150 + 1770 + 90 = 2010.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2010 scalar multiplications.</span></p><p class=\"row\"><b>Common misconception.</b> 2055 (k = 4) is the near miss: a plan that isolates the expensive 5×50 block early looks natural but costs 45 more. Only a full table, filled by length, settles it — the answer cannot be read off the dimensions.</p>"
+  },
+  {
+   "id": "ALG-U4-Q08",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "What is the length of a longest common subsequence of <span class=\"mm\">X = TRANSFER</span> and <span class=\"mm\">Y = REFERENT</span>?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "A subsequence keeps the original order but may skip symbols. The LCS length is the value c[m][n] of the DP table c[i][j] = length of the LCS of the first i symbols of X and the first j symbols of Y.",
+    "steps": [
+     "One common subsequence of length 4 is R-F-E-R: in X = T R A N S F E R the symbols sit at positions 2, 6, 7, 8; in Y = R E F E R E N T they sit at positions 1, 3, 4, 5. Order is preserved in both.",
+     "No common subsequence of length 5 exists. Running the recurrence c[i][j] = c[i−1][j−1] + 1 when the symbols match, else max(c[i−1][j], c[i][j−1]), gives c[8][8] = 4.",
+     "So the LCS length is 4."
+    ],
+    "final": "4 — option (B).",
+    "trap": "5 and 6 come from counting matching letters without regard to order, or from looking for a common substring. TRANSFER and REFERENT share many letters, but a subsequence must respect position order in both strings."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A subsequence keeps the original order but may skip symbols. The LCS length is the value c[m][n] of the DP table c[i][j] = length of the LCS of the first i symbols of X and the first j symbols of Y.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>One common subsequence of length 4 is R-F-E-R: in X = T R A N S F E R the symbols sit at positions 2, 6, 7, 8; in Y = R E F E R E N T they sit at positions 1, 3, 4, 5. Order is preserved in both.</li><li>No common subsequence of length 5 exists. Running the recurrence c[i][j] = c[i−1][j−1] + 1 when the symbols match, else max(c[i−1][j], c[i][j−1]), gives c[8][8] = 4.</li><li>So the LCS length is 4.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> 5 and 6 come from counting matching letters without regard to order, or from looking for a common substring. TRANSFER and REFERENT share many letters, but a subsequence must respect position order in both strings.</p>"
+  },
+  {
+   "id": "ALG-U4-Q09",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "Let <span class=\"mm\">c[i][j]</span> be the length of an LCS of <span class=\"mm\">X[1..i]</span> and <span class=\"mm\">Y[1..j]</span>. Which recurrence is correct?",
+   "options": [
+    "c[i][j] = c[i−1][j−1] + 1 if xᵢ = yⱼ, and c[i][j] = max(c[i−1][j], c[i][j−1]) otherwise.",
+    "c[i][j] = max(c[i−1][j], c[i][j−1]) + 1 for all i, j ≥ 1.",
+    "c[i][j] = c[i−1][j−1] + 1 for all i, j ≥ 1.",
+    "c[i][j] = min(c[i−1][j], c[i][j−1]) if xᵢ ≠ yⱼ."
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "If the last symbols agree, some LCS ends with them, so the answer is 1 plus the LCS of the prefixes without those symbols. If they disagree, no LCS uses both last symbols, so at least one of them is dropped.",
+    "steps": [
+     "Case xᵢ = yⱼ: appending xᵢ to an LCS of X[1..i−1] and Y[1..j−1] gives a common subsequence of length c[i−1][j−1] + 1, and no longer one exists, so c[i][j] = c[i−1][j−1] + 1.",
+     "Case xᵢ ≠ yⱼ: an LCS of the two prefixes either does not use xᵢ (giving at most c[i−1][j]) or does not use yⱼ (giving at most c[i][j−1]); hence c[i][j] = max of the two.",
+     "Base cases c[i][0] = c[0][j] = 0, since a prefix of length 0 shares nothing."
+    ],
+    "final": "Option (A).",
+    "trap": "Option (B) adds 1 on every step, so the table counts steps rather than matches. Option (C) ignores mismatches entirely. Option (D) takes the min, which computes something like a shortest common supersequence bookkeeping, not an LCS."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> If the last symbols agree, some LCS ends with them, so the answer is 1 plus the LCS of the prefixes without those symbols. If they disagree, no LCS uses both last symbols, so at least one of them is dropped.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Case xᵢ = yⱼ: appending xᵢ to an LCS of X[1..i−1] and Y[1..j−1] gives a common subsequence of length c[i−1][j−1] + 1, and no longer one exists, so c[i][j] = c[i−1][j−1] + 1.</li><li>Case xᵢ ≠ yⱼ: an LCS of the two prefixes either does not use xᵢ (giving at most c[i−1][j]) or does not use yⱼ (giving at most c[i][j−1]); hence c[i][j] = max of the two.</li><li>Base cases c[i][0] = c[0][j] = 0, since a prefix of length 0 shares nothing.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Option (B) adds 1 on every step, so the table counts steps rather than matches. Option (C) ignores mismatches entirely. Option (D) takes the min, which computes something like a shortest common supersequence bookkeeping, not an LCS.</p>"
+  },
+  {
+   "id": "ALG-U4-Q10",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "What is the length of the longest palindromic subsequence of the string <span class=\"mm\">CHARACTER</span>?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "answer": 2,
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "A longest palindromic subsequence of s is exactly a longest common subsequence of s and its reverse: a palindrome read backwards is itself, so any common subsequence of s and reverse(s) is a palindromic subsequence of s, and conversely.",
+    "steps": [
+     "s = C H A R A C T E R and reverse(s) = R E T C A R A H C.",
+     "The subsequence C-A-R-A-C is palindromic and appears in s at positions 1, 3, 4, 5, 6, so the length is at least 5.",
+     "Running the LCS DP on s and reverse(s) gives 5, so no palindromic subsequence of length 6 exists.",
+     "Answer: 5, from CARAC."
+    ],
+    "final": "5 — option (C).",
+    "trap": "3 is the length of the longest palindromic substring (ARA): a substring must be contiguous, a subsequence need not be. Reading the question as 'substring' is the standard slip, and it also explains the answer 4 (ARAC is not a palindrome)."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A longest palindromic subsequence of s is exactly a longest common subsequence of s and its reverse: a palindrome read backwards is itself, so any common subsequence of s and reverse(s) is a palindromic subsequence of s, and conversely.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>s = C H A R A C T E R and reverse(s) = R E T C A R A H C.</li><li>The subsequence C-A-R-A-C is palindromic and appears in s at positions 1, 3, 4, 5, 6, so the length is at least 5.</li><li>Running the LCS DP on s and reverse(s) gives 5, so no palindromic subsequence of length 6 exists.</li><li>Answer: 5, from CARAC.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> 3 is the length of the longest palindromic substring (ARA): a substring must be contiguous, a subsequence need not be. Reading the question as 'substring' is the standard slip, and it also explains the answer 4 (ARAC is not a palindrome).</p>"
+  },
+  {
+   "id": "ALG-U4-Q11",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "The LCS dynamic program for strings of lengths <span class=\"mm\">m = 7</span> and <span class=\"mm\">n = 5</span> uses the table <span class=\"mm\">c[0..m][0..n]</span>, including the zero row and zero column. How many cells does the table have? Give an exact integer.",
+   "options": [],
+   "answer": "48",
+   "answer_display": "48",
+   "solution": {
+    "concept": "The table is indexed by prefix lengths, and a prefix length ranges from 0 to the full length, so each dimension contributes one more index than the string has symbols.",
+    "steps": [
+     "Rows are indexed by i = 0, 1, …, m, which is m + 1 = 8 rows.",
+     "Columns are indexed by j = 0, 1, …, n, which is n + 1 = 6 columns.",
+     "Cells = 8 × 6 = 48."
+    ],
+    "final": "48 cells.",
+    "trap": "35 is 7 × 5, the product of the string lengths, which omits the zero row and column that hold the base cases. Without them the recurrence c[i−1][j−1] has no defined value at i = 1 or j = 1."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The table is indexed by prefix lengths, and a prefix length ranges from 0 to the full length, so each dimension contributes one more index than the string has symbols.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Rows are indexed by i = 0, 1, …, m, which is m + 1 = 8 rows.</li><li>Columns are indexed by j = 0, 1, …, n, which is n + 1 = 6 columns.</li><li>Cells = 8 × 6 = 48.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 48 cells.</span></p><p class=\"row\"><b>Common misconception.</b> 35 is 7 × 5, the product of the string lengths, which omits the zero row and column that hold the base cases. Without them the recurrence c[i−1][j−1] has no defined value at i = 1 or j = 1.</p>"
+  },
+  {
+   "id": "ALG-U4-Q12",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "The LCS length can be computed with two rolling rows, using <span class=\"mm\">Θ(min(m, n))</span> space. To reconstruct an actual longest common subsequence while keeping <span class=\"mm\">Θ(min(m, n))</span> space and <span class=\"mm\">Θ(mn)</span> time, the standard technique is:",
+   "options": [
+    "Hirschberg's divide-and-conquer: cut one string in half, locate the split point of the optimal path using a forward and a backward row computation, then recurse on the two halves.",
+    "It is impossible: reconstructing the sequence needs the full Θ(mn) table.",
+    "Run the DP once on (X, Y) and once on (Y, X), then intersect the two reconstructed sequences.",
+    "Take the first pair of matching symbols greedily, delete the prefixes up to them, and recurse."
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The full table is only needed because backtracking follows the arrows. Hirschberg replaces backtracking by a divide-and-conquer search for one cell on the optimal path, which needs only two rows at a time.",
+    "steps": [
+     "Split X into a left half X_L and a right half X_R. For each j, compute L(j) = LCS length of X_L and Y[1..j] with a forward pass, and R(j) = LCS length of X_R and Y[j+1..n] with a backward pass, each in Θ(min) space.",
+     "The optimal path crosses the cut at the j maximising L(j) + R(j); that j is the split point of an optimal solution.",
+     "Recurse on (X_L, Y[1..j]) and (X_R, Y[j+1..n]). The total work is Θ(mn) because the two passes at each level cost Θ(mn) and the recursion halves one string, so the levels form a geometric series.",
+     "The reconstruction is therefore exact, and the space is Θ(min(m, n)) apart from the Θ(m + n) output."
+    ],
+    "final": "Option (A) — Hirschberg's algorithm.",
+    "trap": "Option (B) is the common belief: it confuses 'the length needs only two rows' with 'the sequence needs the whole table'. Option (D) is greedy matching, which is not optimal — a locally matched symbol can block a longer common subsequence."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The full table is only needed because backtracking follows the arrows. Hirschberg replaces backtracking by a divide-and-conquer search for one cell on the optimal path, which needs only two rows at a time.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Split X into a left half X_L and a right half X_R. For each j, compute L(j) = LCS length of X_L and Y[1..j] with a forward pass, and R(j) = LCS length of X_R and Y[j+1..n] with a backward pass, each in Θ(min) space.</li><li>The optimal path crosses the cut at the j maximising L(j) + R(j); that j is the split point of an optimal solution.</li><li>Recurse on (X_L, Y[1..j]) and (X_R, Y[j+1..n]). The total work is Θ(mn) because the two passes at each level cost Θ(mn) and the recursion halves one string, so the levels form a geometric series.</li><li>The reconstruction is therefore exact, and the space is Θ(min(m, n)) apart from the Θ(m + n) output.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — Hirschberg's algorithm.</span></p><p class=\"row\"><b>Common misconception.</b> Option (B) is the common belief: it confuses 'the length needs only two rows' with 'the sequence needs the whole table'. Option (D) is greedy matching, which is not optimal — a locally matched symbol can block a longer common subsequence.</p>"
+  },
+  {
+   "id": "ALG-U4-Q13",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "longest-common-subsequence",
+   "subtopic": "longest-common-subsequence",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Let <span class=\"mm\">X = x₁x₂…x_m</span> and <span class=\"mm\">Y = y₁y₂…y_n</span>, and let <span class=\"mm\">c[i][j]</span> be the LCS length of the prefixes. Which of the following statements are TRUE?",
+   "options": [
+    "If x_m = y_n, then some longest common subsequence of X and Y ends with that common symbol.",
+    "If x_m ≠ y_n and c[m−1][n] ≥ c[m][n−1], then some longest common subsequence of X and Y is a longest common subsequence of X[1..m−1] and Y.",
+    "Every longest common subsequence of X and Y is a substring of both X and Y.",
+    "If X is a subsequence of Y, then the LCS length of X and Y is |X|."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A, B and D)",
+   "solution": {
+    "concept": "The three structural lemmas behind the LCS recurrence: matching last symbols can be taken, mismatching last symbols can be dropped from one side, and the LCS of two strings one of which contains the other is the shorter string.",
+    "steps": [
+     "(A) TRUE. If x_m = y_n, take an LCS of X[1..m−1] and Y[1..n−1] and append x_m: the result has length c[m−1][n−1] + 1 = c[m][n], which is optimal, so an optimal LCS ending in that symbol exists.",
+     "(B) TRUE. When x_m ≠ y_n the recurrence gives c[m][n] = max(c[m−1][n], c[m][n−1]); if the left term is the larger, an LCS of X[1..m−1] and Y of that length is also an LCS of X and Y, since appending x_m cannot help.",
+     "(C) FALSE. Subsequence is not substring: in X = TRANSFER and Y = REFERENT the LCS RFER is not contiguous in either string. Contiguity would make this the longest common substring problem, a different (and smaller-valued) quantity.",
+     "(D) TRUE. If every symbol of X appears in Y in order, X itself is a common subsequence of length |X|, and no common subsequence can exceed the shorter length, so the LCS length is exactly |X|."
+    ],
+    "final": "(A), (B) and (D) are TRUE; (C) is FALSE.",
+    "trap": "(C) is the trap for candidates who have also met the longest common substring problem; the DP recurrence for the two is different (a substring DP resets to 0 on mismatch, while the LCS DP takes a maximum). (B) is easy to over-generalise: it holds only for the larger of the two terms."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three structural lemmas behind the LCS recurrence: matching last symbols can be taken, mismatching last symbols can be dropped from one side, and the LCS of two strings one of which contains the other is the shorter string.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) TRUE. If x_m = y_n, take an LCS of X[1..m−1] and Y[1..n−1] and append x_m: the result has length c[m−1][n−1] + 1 = c[m][n], which is optimal, so an optimal LCS ending in that symbol exists.</li><li>(B) TRUE. When x_m ≠ y_n the recurrence gives c[m][n] = max(c[m−1][n], c[m][n−1]); if the left term is the larger, an LCS of X[1..m−1] and Y of that length is also an LCS of X and Y, since appending x_m cannot help.</li><li>(C) FALSE. Subsequence is not substring: in X = TRANSFER and Y = REFERENT the LCS RFER is not contiguous in either string. Contiguity would make this the longest common substring problem, a different (and smaller-valued) quantity.</li><li>(D) TRUE. If every symbol of X appears in Y in order, X itself is a common subsequence of length |X|, and no common subsequence can exceed the shorter length, so the LCS length is exactly |X|.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (D) are TRUE; (C) is FALSE.</span></p><p class=\"row\"><b>Common misconception.</b> (C) is the trap for candidates who have also met the longest common substring problem; the DP recurrence for the two is different (a substring DP resets to 0 on mismatch, while the LCS DP takes a maximum). (B) is easy to over-generalise: it holds only for the larger of the two terms.</p>"
+  },
+  {
+   "id": "ALG-U4-Q14",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "For the 0-1 knapsack problem with <span class=\"mm\">n</span> items and integer capacity <span class=\"mm\">W</span>, the standard dynamic program runs in:",
+   "options": [
+    "Θ(nW) time and Θ(nW) space, reducible to Θ(W) space with one rolling row",
+    "Θ(n log W) time",
+    "Θ(2ⁿ) time, because every subset must be examined",
+    "Θ(n²W) time"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The state is (item prefix, capacity used so far): K[i][w] is the best value obtainable from the first i items with capacity w. There are n·(W+1) states and each takes constant time from two earlier states.",
+    "steps": [
+     "Recurrence: K[i][w] = K[i−1][w] if wᵢ &gt; w, otherwise max(K[i−1][w], K[i−1][w−wᵢ] + vᵢ).",
+     "The table has n + 1 rows and W + 1 columns, so Θ(nW) states; each is filled in Θ(1) time.",
+     "Row i depends only on row i−1, so keeping one row (scanning w from W down to wᵢ) reduces the space to Θ(W) while preserving the 0-1 rule."
+    ],
+    "final": "Θ(nW) time and Θ(nW) space, reducible to Θ(W) — option (A).",
+    "trap": "Θ(2ⁿ) is the brute-force subset enumeration; the DP avoids it. But note the DP is pseudo-polynomial: W is a numeric value, not the length of the input, which is why 0-1 knapsack stays NP-hard despite this running time."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The state is (item prefix, capacity used so far): K[i][w] is the best value obtainable from the first i items with capacity w. There are n·(W+1) states and each takes constant time from two earlier states.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Recurrence: K[i][w] = K[i−1][w] if wᵢ &gt; w, otherwise max(K[i−1][w], K[i−1][w−wᵢ] + vᵢ).</li><li>The table has n + 1 rows and W + 1 columns, so Θ(nW) states; each is filled in Θ(1) time.</li><li>Row i depends only on row i−1, so keeping one row (scanning w from W down to wᵢ) reduces the space to Θ(W) while preserving the 0-1 rule.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Θ(nW) time and Θ(nW) space, reducible to Θ(W) — option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Θ(2ⁿ) is the brute-force subset enumeration; the DP avoids it. But note the DP is pseudo-polynomial: W is a numeric value, not the length of the input, which is why 0-1 knapsack stays NP-hard despite this running time.</p>"
+  },
+  {
+   "id": "ALG-U4-Q15",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Three items are offered with <span class=\"mm\">(weight, value)</span> pairs <span class=\"mm\">(10, 60)</span>, <span class=\"mm\">(20, 100)</span>, <span class=\"mm\">(30, 120)</span>, and the knapsack capacity is <span class=\"mm\">W = 50</span>. Items are indivisible (0-1 knapsack). The maximum total value is:",
+   "options": [
+    "160",
+    "180",
+    "220",
+    "240"
+   ],
+   "answer": 2,
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "In the 0-1 knapsack an item is either taken whole or not at all, so the best solution must be found over subsets, not by filling the capacity with the best ratio.",
+    "steps": [
+     "Enumerate the feasible subsets. Taking items 2 and 3 gives weight 20 + 30 = 50 and value 100 + 120 = 220.",
+     "Taking items 1 and 2 gives weight 30 and value 160, with 20 units of capacity wasted — no third item fits (item 3 needs 30).",
+     "Taking items 1 and 3 gives weight 40 and value 180; item 2 does not fit in the remaining 10.",
+     "No subset exceeds 220, and the DP table confirms K[3][50] = 220."
+    ],
+    "final": "220 — option (C).",
+    "trap": "160 is what the value/weight greedy produces: ratios are 6, 5 and 4, so greedy takes item 1 (10, 60) then item 2 (20, 100) and cannot fit item 3, leaving 20 units unused. In the fractional version the same greedy would fill the last 20 units with two-thirds of item 3 and reach 240, which is option (D) — that is the fractional answer, not the 0-1 answer."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In the 0-1 knapsack an item is either taken whole or not at all, so the best solution must be found over subsets, not by filling the capacity with the best ratio.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Enumerate the feasible subsets. Taking items 2 and 3 gives weight 20 + 30 = 50 and value 100 + 120 = 220.</li><li>Taking items 1 and 2 gives weight 30 and value 160, with 20 units of capacity wasted — no third item fits (item 3 needs 30).</li><li>Taking items 1 and 3 gives weight 40 and value 180; item 2 does not fit in the remaining 10.</li><li>No subset exceeds 220, and the DP table confirms K[3][50] = 220.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 220 — option (C).</span></p><p class=\"row\"><b>Common misconception.</b> 160 is what the value/weight greedy produces: ratios are 6, 5 and 4, so greedy takes item 1 (10, 60) then item 2 (20, 100) and cannot fit item 3, leaving 20 units unused. In the fractional version the same greedy would fill the last 20 units with two-thirds of item 3 and reach 240, which is option (D) — that is the fractional answer, not the 0-1 answer.</p>"
+  },
+  {
+   "id": "ALG-U4-Q16",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "In the knapsack recurrence, if the term <span class=\"mm\">K[i−1][w−wᵢ]</span> is replaced by <span class=\"mm\">K[i][w−wᵢ]</span>, the resulting dynamic program solves:",
+   "options": [
+    "the unbounded knapsack, in which each item may be used any number of times",
+    "the fractional knapsack",
+    "the same 0-1 problem, only faster",
+    "the subset-sum problem only"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The row index encodes how many items have been considered. Referring to row i−1 forbids reusing item i; referring to row i allows the same item to be chosen again in the same row.",
+    "steps": [
+     "0-1: K[i][w] = max(K[i−1][w], K[i−1][w−wᵢ] + vᵢ). The second term comes from row i−1, so item i is used at most once.",
+     "Unbounded: K[i][w] = max(K[i−1][w], K[i][w−wᵢ] + vᵢ). The second term comes from row i, so after taking item i the state may take it again.",
+     "Hence the substitution changes the problem from 0-1 to unbounded. With a single rolling row, the same distinction appears as the direction of the inner loop: w descending gives 0-1, w ascending gives unbounded."
+    ],
+    "final": "Option (A) — the unbounded knapsack.",
+    "trap": "Candidates often call the two recurrences 'the same with an index slip'. The index is the whole difference between 'each item once' and 'each item any number of times', and it is the most common source of wrong answers in both directions."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The row index encodes how many items have been considered. Referring to row i−1 forbids reusing item i; referring to row i allows the same item to be chosen again in the same row.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>0-1: K[i][w] = max(K[i−1][w], K[i−1][w−wᵢ] + vᵢ). The second term comes from row i−1, so item i is used at most once.</li><li>Unbounded: K[i][w] = max(K[i−1][w], K[i][w−wᵢ] + vᵢ). The second term comes from row i, so after taking item i the state may take it again.</li><li>Hence the substitution changes the problem from 0-1 to unbounded. With a single rolling row, the same distinction appears as the direction of the inner loop: w descending gives 0-1, w ascending gives unbounded.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the unbounded knapsack.</span></p><p class=\"row\"><b>Common misconception.</b> Candidates often call the two recurrences 'the same with an index slip'. The index is the whole difference between 'each item once' and 'each item any number of times', and it is the most common source of wrong answers in both directions.</p>"
+  },
+  {
+   "id": "ALG-U4-Q17",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Which of the following statements about the 0-1 knapsack problem are TRUE?",
+   "options": [
+    "It has optimal substructure and overlapping subproblems, so dynamic programming applies.",
+    "The Θ(nW) dynamic program is pseudo-polynomial: W is a numeric value rather than the length of the input, so the algorithm is not polynomial in the input size.",
+    "The problem is NP-hard, yet the dynamic program solves it in Θ(nW) time.",
+    "Sorting the items by value/weight and taking them greedily while they fit is optimal."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A, B and C)",
+   "solution": {
+    "concept": "Three facts that must be held together: the problem has the two DP properties; the DP's running time is polynomial in the numeric capacity, not in the input length; and the decision version of 0-1 knapsack is NP-complete.",
+    "steps": [
+     "(A) TRUE. An optimal solution restricted to the first i items is optimal for the residual capacity, and the same (i, w) states recur across different choices, so both properties hold.",
+     "(B) TRUE. The input is n items plus the binary representation of W, which is Θ(log W) bits. Θ(nW) is exponential in log W, hence not polynomial in the input size.",
+     "(C) TRUE. 0-1 knapsack (decision version) is NP-complete, and Θ(nW) does not contradict that, because a pseudo-polynomial bound is not a polynomial bound.",
+     "(D) FALSE. For (10, 60), (20, 100), (30, 120) and W = 50, the ratio greedy returns 160 while the optimum is 220 (Question 15)."
+    ],
+    "final": "(A), (B) and (C) are TRUE; (D) is FALSE.",
+    "trap": "(C) looks like a contradiction to many candidates. It is not: NP-hardness forbids a polynomial-time algorithm in the input size, and Θ(nW) is exponential in the number of bits of W. The ratio-greedy in (D) is optimal only for the fractional version."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three facts that must be held together: the problem has the two DP properties; the DP's running time is polynomial in the numeric capacity, not in the input length; and the decision version of 0-1 knapsack is NP-complete.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) TRUE. An optimal solution restricted to the first i items is optimal for the residual capacity, and the same (i, w) states recur across different choices, so both properties hold.</li><li>(B) TRUE. The input is n items plus the binary representation of W, which is Θ(log W) bits. Θ(nW) is exponential in log W, hence not polynomial in the input size.</li><li>(C) TRUE. 0-1 knapsack (decision version) is NP-complete, and Θ(nW) does not contradict that, because a pseudo-polynomial bound is not a polynomial bound.</li><li>(D) FALSE. For (10, 60), (20, 100), (30, 120) and W = 50, the ratio greedy returns 160 while the optimum is 220 (Question 15).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (C) are TRUE; (D) is FALSE.</span></p><p class=\"row\"><b>Common misconception.</b> (C) looks like a contradiction to many candidates. It is not: NP-hardness forbids a polynomial-time algorithm in the input size, and Θ(nW) is exponential in the number of bits of W. The ratio-greedy in (D) is optimal only for the fractional version.</p>"
+  },
+  {
+   "id": "ALG-U4-Q18",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Items are given as <span class=\"mm\">(weight, value)</span>: <span class=\"mm\">(1, 1)</span>, <span class=\"mm\">(3, 4)</span>, <span class=\"mm\">(4, 5)</span>, <span class=\"mm\">(5, 7)</span>, and the capacity is <span class=\"mm\">W = 7</span>. The maximum total value of a 0-1 knapsack is:",
+   "options": [
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Fill K[i][w] for increasing i, or enumerate subsets of total weight at most 7 and compare. Both must agree.",
+    "steps": [
+     "Item 2 with item 3: weight 3 + 4 = 7, value 4 + 5 = 9. Feasible and uses the whole capacity.",
+     "Item 1 with item 4: weight 1 + 5 = 6, value 1 + 7 = 8.",
+     "Item 1 with item 2 with item 3: weight 8 &gt; 7, infeasible. Item 1 with item 3 with item 4: weight 10, infeasible.",
+     "No other feasible subset reaches 9, so the optimum is 9."
+    ],
+    "final": "9 — option (B).",
+    "trap": "10 and 11 are reached by ignoring the weight of one item, typically by taking the three best values 7, 5, 4 (weight 12). 8 is the greedy-by-value answer. Always re-check the total weight of the subset you have chosen."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Fill K[i][w] for increasing i, or enumerate subsets of total weight at most 7 and compare. Both must agree.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Item 2 with item 3: weight 3 + 4 = 7, value 4 + 5 = 9. Feasible and uses the whole capacity.</li><li>Item 1 with item 4: weight 1 + 5 = 6, value 1 + 7 = 8.</li><li>Item 1 with item 2 with item 3: weight 8 &gt; 7, infeasible. Item 1 with item 3 with item 4: weight 10, infeasible.</li><li>No other feasible subset reaches 9, so the optimum is 9.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 9 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> 10 and 11 are reached by ignoring the weight of one item, typically by taking the three best values 7, 5, 4 (weight 12). 8 is the greedy-by-value answer. Always re-check the total weight of the subset you have chosen.</p>"
+  },
+  {
+   "id": "ALG-U4-Q19",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "0-1-knapsack",
+   "subtopic": "0-1-knapsack",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Five items are given as <span class=\"mm\">(weight, value)</span>: <span class=\"mm\">(3, 4)</span>, <span class=\"mm\">(4, 5)</span>, <span class=\"mm\">(5, 8)</span>, <span class=\"mm\">(6, 9)</span>, <span class=\"mm\">(7, 11)</span>. The knapsack capacity is <span class=\"mm\">W = 12</span> and items are indivisible. What is the maximum total value? Give an exact integer.",
+   "options": [],
+   "answer": "19",
+   "answer_display": "19",
+   "solution": {
+    "concept": "0-1 knapsack: maximise total value subject to total weight ≤ W, each item taken at most once. The DP table K[i][w] settles it, and a brute-force check over all 32 subsets confirms it.",
+    "steps": [
+     "Items 3 and 5: weight 5 + 7 = 12, value 8 + 11 = 19. Feasible and uses the whole capacity.",
+     "Items 3 and 4: weight 11, value 17, with 1 unit unused. Items 1, 2 and 3: weight 12, value 17. Items 1, 2 and 4: weight 13, infeasible. Items 4 and 5: weight 13, infeasible.",
+     "Item 1, 2, 3 gives 17; item 2, 4 gives 14; item 1, 3, 5 gives weight 15, infeasible.",
+     "The maximum over all feasible subsets is 19, at {item 3, item 5}."
+    ],
+    "final": "19.",
+    "trap": "17 (items 1, 2 and 3, weight exactly 12) is the natural near miss: it fills the capacity with three items but wastes value. Filling the capacity exactly is not the objective — maximising value is."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> 0-1 knapsack: maximise total value subject to total weight ≤ W, each item taken at most once. The DP table K[i][w] settles it, and a brute-force check over all 32 subsets confirms it.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Items 3 and 5: weight 5 + 7 = 12, value 8 + 11 = 19. Feasible and uses the whole capacity.</li><li>Items 3 and 4: weight 11, value 17, with 1 unit unused. Items 1, 2 and 3: weight 12, value 17. Items 1, 2 and 4: weight 13, infeasible. Items 4 and 5: weight 13, infeasible.</li><li>Item 1, 2, 3 gives 17; item 2, 4 gives 14; item 1, 3, 5 gives weight 15, infeasible.</li><li>The maximum over all feasible subsets is 19, at {item 3, item 5}.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 19.</span></p><p class=\"row\"><b>Common misconception.</b> 17 (items 1, 2 and 3, weight exactly 12) is the natural near miss: it fills the capacity with three items but wastes value. Filling the capacity exactly is not the objective — maximising value is.</p>"
+  },
+  {
+   "id": "ALG-U4-Q20",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "Which statement about the Floyd&ndash;Warshall algorithm is TRUE?",
+   "options": [
+    "It runs in Θ(n³) time and is correct with negative edge weights as long as no negative-weight cycle is reachable.",
+    "It runs in Θ(n²) time on a dense graph.",
+    "It requires every edge weight to be non-negative.",
+    "It is a greedy algorithm, so it fails whenever an edge has negative weight."
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Floyd–Warshall is a dynamic program over the set of allowed intermediate vertices; it never commits to a locally cheapest edge, so negative edge weights are harmless. What it cannot survive is a negative-weight cycle, because then shortest paths are undefined.",
+    "steps": [
+     "Three nested loops over k (intermediate vertex), i and j give Θ(n³) time on an n-vertex graph.",
+     "The recurrence d^(k)[i][j] = min(d^(k−1)[i][j], d^(k−1)[i][k] + d^(k−1)[k][j]) only adds and compares path lengths; negative values are handled correctly.",
+     "A negative cycle shows up as some d[i][i] &lt; 0 after the last iteration, which is how the algorithm detects it rather than silently failing.",
+     "Dijkstra is the greedy algorithm that requires non-negative weights; Floyd–Warshall is not Dijkstra."
+    ],
+    "final": "Option (A).",
+    "trap": "Option (D) confuses Floyd–Warshall with Dijkstra. The greedy requirement (non-negative weights) belongs to Dijkstra; the DP requirement is the absence of a negative-weight cycle."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Floyd–Warshall is a dynamic program over the set of allowed intermediate vertices; it never commits to a locally cheapest edge, so negative edge weights are harmless. What it cannot survive is a negative-weight cycle, because then shortest paths are undefined.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Three nested loops over k (intermediate vertex), i and j give Θ(n³) time on an n-vertex graph.</li><li>The recurrence d^(k)[i][j] = min(d^(k−1)[i][j], d^(k−1)[i][k] + d^(k−1)[k][j]) only adds and compares path lengths; negative values are handled correctly.</li><li>A negative cycle shows up as some d[i][i] &lt; 0 after the last iteration, which is how the algorithm detects it rather than silently failing.</li><li>Dijkstra is the greedy algorithm that requires non-negative weights; Floyd–Warshall is not Dijkstra.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Option (D) confuses Floyd–Warshall with Dijkstra. The greedy requirement (non-negative weights) belongs to Dijkstra; the DP requirement is the absence of a negative-weight cycle.</p>"
+  },
+  {
+   "id": "ALG-U4-Q21",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "question": "In the recurrence <span class=\"mm\">d^(k)[i][j] = min( d^(k−1)[i][j], d^(k−1)[i][k] + d^(k−1)[k][j] )</span>, what does the superscript <span class=\"mm\">k</span> represent?",
+   "options": [
+    "The path may use intermediate vertices only from the set {1, 2, …, k}.",
+    "The path has exactly k edges.",
+    "It is the k-th shortest path discovered so far.",
+    "Vertex k must be an endpoint of the path."
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "The DP's third dimension is the set of vertices allowed in the interior of the path. Restricting that set to a growing prefix {1…k} makes the state finite and gives the recurrence its two cases.",
+    "steps": [
+     "d^(0)[i][j] is the direct edge weight (or ∞), because no intermediate vertex is allowed.",
+     "Going from k−1 to k, a shortest i→j path either avoids vertex k — value d^(k−1)[i][j] — or passes through it, in which case it splits into a shortest i→k path and a shortest k→j path, both using only {1…k−1} inside.",
+     "Taking the minimum of the two cases gives the recurrence.",
+     "After k = n, every vertex is allowed as an intermediate, so d^(n)[i][j] is the true shortest-path distance."
+    ],
+    "final": "Option (A) — the allowed set of intermediate vertices.",
+    "trap": "'Exactly k edges' describes the Bellman–Ford style layering, not Floyd–Warshall. Endpoints are never restricted: only interior vertices are counted in k."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The DP's third dimension is the set of vertices allowed in the interior of the path. Restricting that set to a growing prefix {1…k} makes the state finite and gives the recurrence its two cases.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>d^(0)[i][j] is the direct edge weight (or ∞), because no intermediate vertex is allowed.</li><li>Going from k−1 to k, a shortest i→j path either avoids vertex k — value d^(k−1)[i][j] — or passes through it, in which case it splits into a shortest i→k path and a shortest k→j path, both using only {1…k−1} inside.</li><li>Taking the minimum of the two cases gives the recurrence.</li><li>After k = n, every vertex is allowed as an intermediate, so d^(n)[i][j] is the true shortest-path distance.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — the allowed set of intermediate vertices.</span></p><p class=\"row\"><b>Common misconception.</b> 'Exactly k edges' describes the Bellman–Ford style layering, not Floyd–Warshall. Endpoints are never restricted: only interior vertices are counted in k.</p>"
+  },
+  {
+   "id": "ALG-U4-Q22",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Which of the following statements about the Floyd&ndash;Warshall algorithm are TRUE?",
+   "options": [
+    "Replacing min by logical OR and + by logical AND in the recurrence computes the transitive closure of the graph.",
+    "A negative-weight cycle exists if and only if some d[i][i] &lt; 0 after the final iteration.",
+    "The dynamic program is correct only if the graph is strongly connected.",
+    "d^(k)[i][j] is the length of a shortest i→j path all of whose intermediate vertices lie in {1, …, k}."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A, B and D)",
+   "solution": {
+    "concept": "Floyd–Warshall is a semiring algorithm: the same loop structure computes shortest paths over (min, +) and reachability over (OR, AND). Its state is the allowed intermediate set, and its self-distances expose negative cycles.",
+    "steps": [
+     "(A) TRUE. Over the Boolean semiring the recurrence becomes reach^(k)[i][j] = reach^(k−1)[i][j] OR (reach^(k−1)[i][k] AND reach^(k−1)[k][j]), which is exactly Warshall's transitive-closure algorithm.",
+     "(B) TRUE. A negative cycle through i means a strictly negative closed walk i→i exists, so d[i][i] &lt; 0 once all vertices are allowed; conversely a negative d[i][i] certifies such a walk.",
+     "(C) FALSE. Disconnected pairs simply keep d[i][j] = ∞; the algorithm is correct on any graph, connected or not.",
+     "(D) TRUE. That is the definition of the state; the recurrence builds it by deciding whether vertex k is used as an interior vertex."
+    ],
+    "final": "(A), (B) and (D) are TRUE; (C) is FALSE.",
+    "trap": "(C) is the usual over-restriction: connectivity is needed for finite distances, not for correctness. Candidates also miss (A) because they treat the min/+ form as the only form; the loop is identical, only the semiring changes."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Floyd–Warshall is a semiring algorithm: the same loop structure computes shortest paths over (min, +) and reachability over (OR, AND). Its state is the allowed intermediate set, and its self-distances expose negative cycles.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) TRUE. Over the Boolean semiring the recurrence becomes reach^(k)[i][j] = reach^(k−1)[i][j] OR (reach^(k−1)[i][k] AND reach^(k−1)[k][j]), which is exactly Warshall's transitive-closure algorithm.</li><li>(B) TRUE. A negative cycle through i means a strictly negative closed walk i→i exists, so d[i][i] &lt; 0 once all vertices are allowed; conversely a negative d[i][i] certifies such a walk.</li><li>(C) FALSE. Disconnected pairs simply keep d[i][j] = ∞; the algorithm is correct on any graph, connected or not.</li><li>(D) TRUE. That is the definition of the state; the recurrence builds it by deciding whether vertex k is used as an interior vertex.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (B) and (D) are TRUE; (C) is FALSE.</span></p><p class=\"row\"><b>Common misconception.</b> (C) is the usual over-restriction: connectivity is needed for finite distances, not for correctness. Candidates also miss (A) because they treat the min/+ form as the only form; the loop is identical, only the semiring changes.</p>"
+  },
+  {
+   "id": "ALG-U4-Q23",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "A directed graph has vertices <span class=\"mm\">A, B, C, D</span> and weighted edges <span class=\"mm\">A→B (3)</span>, <span class=\"mm\">A→C (8)</span>, <span class=\"mm\">B→C (2)</span>, <span class=\"mm\">B→D (5)</span>, <span class=\"mm\">C→D (1)</span>, <span class=\"mm\">D→A (2)</span>. The shortest-path distance from <span class=\"mm\">D</span> to <span class=\"mm\">B</span> is:",
+   "options": [
+    "3",
+    "5",
+    "6",
+    "7"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "All-pairs shortest paths must consider routes that leave the direct neighbourhood. Here no edge D→B exists, so the answer comes from a path through A.",
+    "steps": [
+     "There is no direct edge D→B, so the distance starts at ∞.",
+     "D→A costs 2, and A→B costs 3, giving D→A→B = 5.",
+     "Alternatives: D→A→C→B is not a path (C has no edge to B); D→A→C→D→A→B repeats vertices and costs more; D→A→B→D→A→B is a cycle, never optimal with positive weights.",
+     "So the shortest distance is 5. The final Floyd–Warshall matrix has d[D][B] = 5 and also d[B][D] = 3 (B→C→D), which is why direction matters."
+    ],
+    "final": "5 — option (B).",
+    "trap": "3 is d[B][D], the reverse direction; 6 is d[C][B] in the reverse graph or the length of D→A→C→D. In a directed graph the matrix is not symmetric, and reading the entry off the wrong row is the common error."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> All-pairs shortest paths must consider routes that leave the direct neighbourhood. Here no edge D→B exists, so the answer comes from a path through A.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>There is no direct edge D→B, so the distance starts at ∞.</li><li>D→A costs 2, and A→B costs 3, giving D→A→B = 5.</li><li>Alternatives: D→A→C→B is not a path (C has no edge to B); D→A→C→D→A→B repeats vertices and costs more; D→A→B→D→A→B is a cycle, never optimal with positive weights.</li><li>So the shortest distance is 5. The final Floyd–Warshall matrix has d[D][B] = 5 and also d[B][D] = 3 (B→C→D), which is why direction matters.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5 — option (B).</span></p><p class=\"row\"><b>Common misconception.</b> 3 is d[B][D], the reverse direction; 6 is d[C][B] in the reverse graph or the length of D→A→C→D. In a directed graph the matrix is not symmetric, and reading the entry off the wrong row is the common error.</p>"
+  },
+  {
+   "id": "ALG-U4-Q24",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "A directed graph has vertices <span class=\"mm\">A, B, C, D, E</span> and edges <span class=\"mm\">A→B (3)</span>, <span class=\"mm\">B→C (−2)</span>, <span class=\"mm\">A→C (4)</span>, <span class=\"mm\">C→D (5)</span>, <span class=\"mm\">D→E (1)</span>, <span class=\"mm\">B→D (9)</span>, <span class=\"mm\">C→E (12)</span>, <span class=\"mm\">A→E (20)</span>. The graph has no negative-weight cycle. What is the shortest-path distance from <span class=\"mm\">A</span> to <span class=\"mm\">E</span>? Give an exact integer.",
+   "options": [],
+   "answer": "7",
+   "answer_display": "7",
+   "solution": {
+    "concept": "With a negative edge present, Dijkstra's greedy rule is unsafe, but Floyd–Warshall's DP is not: it compares complete path lengths rather than extending the cheapest prefix. The shortest path is found by allowing more intermediate vertices step by step.",
+    "steps": [
+     "Start with the direct edges: d[A][B] = 3, d[A][C] = 4, d[A][E] = 20; every other pair is ∞ except the listed edges.",
+     "Allow B as an intermediate: d[A][C] = min(4, d[A][B] + w(B,C)) = min(4, 3 − 2) = 1. The negative edge is now doing the work.",
+     "Allow C: d[A][D] = min(3 + 9, 1 + 5) = 6, and d[A][E] = min(20, 1 + 12) = 13.",
+     "Allow D: d[A][E] = min(13, d[A][D] + 1) = min(13, 7) = 7.",
+     "Allowing E changes nothing. The final table gives d[A][E] = 7 along the path A→B→C→D→E."
+    ],
+    "final": "7.",
+    "trap": "13 is the answer if the negative edge is used too late or not at all: A→C→E costs 16 with the direct A→C = 4, and A→B→D→E costs 13. The gain is compounded — A→C drops from 4 to 1, which pulls A→D from 12 down to 6, which pulls A→E from 13 down to 7 — so every intermediate stage must be recomputed, not just the last one."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With a negative edge present, Dijkstra's greedy rule is unsafe, but Floyd–Warshall's DP is not: it compares complete path lengths rather than extending the cheapest prefix. The shortest path is found by allowing more intermediate vertices step by step.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Start with the direct edges: d[A][B] = 3, d[A][C] = 4, d[A][E] = 20; every other pair is ∞ except the listed edges.</li><li>Allow B as an intermediate: d[A][C] = min(4, d[A][B] + w(B,C)) = min(4, 3 − 2) = 1. The negative edge is now doing the work.</li><li>Allow C: d[A][D] = min(3 + 9, 1 + 5) = 6, and d[A][E] = min(20, 1 + 12) = 13.</li><li>Allow D: d[A][E] = min(13, d[A][D] + 1) = min(13, 7) = 7.</li><li>Allowing E changes nothing. The final table gives d[A][E] = 7 along the path A→B→C→D→E.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 7.</span></p><p class=\"row\"><b>Common misconception.</b> 13 is the answer if the negative edge is used too late or not at all: A→C→E costs 16 with the direct A→C = 4, and A→B→D→E costs 13. The gain is compounded — A→C drops from 4 to 1, which pulls A→D from 12 down to 6, which pulls A→E from 13 down to 7 — so every intermediate stage must be recomputed, not just the last one.</p>"
+  },
+  {
+   "id": "ALG-U4-Q25",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "dynamic-programming",
+   "unit_name": "Dynamic Programming",
+   "topic": "Dynamic Programming",
+   "sub": "all-pairs-shortest-paths-floyd-warshall",
+   "subtopic": "all-pairs-shortest-paths-floyd-warshall",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "question": "Which of the following statements about all-pairs shortest paths are TRUE?",
+   "options": [
+    "On an unweighted graph, a breadth-first search from every vertex computes all-pairs distances faster than Floyd&ndash;Warshall.",
+    "If a graph has negative edges but no negative-weight cycle, running Dijkstra's algorithm from every source computes correct all-pairs distances.",
+    "Johnson's algorithm reweights the edges with a potential function obtained from one Bellman&ndash;Ford run from a new source, then runs Dijkstra from every vertex, in O(V² log V + VE) with a binary heap.",
+    "If a negative-weight cycle is reachable, the final Floyd&ndash;Warshall matrix satisfies d[i][i] &lt; 0 for every vertex i on that cycle."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A, C and D)",
+   "solution": {
+    "concept": "Three different all-pairs strategies, each with its own precondition: BFS exploits unit weights, Dijkstra requires non-negative weights, Johnson repairs negative weights before using Dijkstra, and Floyd–Warshall needs no precondition but detects negative cycles instead of returning nonsense.",
+    "steps": [
+     "(A) TRUE. BFS from each vertex costs O(V·(V+E)), which on a sparse graph is far below Θ(V³); Floyd–Warshall ignores the sparsity.",
+     "(B) FALSE. Dijkstra finalises a vertex when it is popped, assuming no later path can be shorter. Take A→B (1), A→C (2), C→B (−2): Dijkstra from A pops B at distance 1 and finalises it, although the true distance is 0 through C. One negative edge is enough; no cycle is needed.",
+     "(C) TRUE. Bellman–Ford from a new source s with 0-weight edges to all vertices gives potentials h(v) = δ(s,v) satisfying w(u,v) + h(u) − h(v) ≥ 0. Reweighting preserves shortest paths, so V Dijkstra runs give O(V² log V + VE) with a binary heap.",
+     "(D) TRUE. A vertex i on a negative cycle can reach itself through that cycle with negative total weight, so d[i][i] &lt; 0 after all vertices are allowed as intermediates; vertices not on the cycle keep d[i][i] = 0."
+    ],
+    "final": "(A), (C) and (D) are TRUE; (B) is FALSE.",
+    "trap": "(B) is the persistent error: 'Dijkstra is fine as long as there is no negative cycle' is false — a single negative edge is enough to break it. (D) is often mis-stated as 'd[i][i] &lt; 0 for all i', which would wrongly include vertices off the cycle."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three different all-pairs strategies, each with its own precondition: BFS exploits unit weights, Dijkstra requires non-negative weights, Johnson repairs negative weights before using Dijkstra, and Floyd–Warshall needs no precondition but detects negative cycles instead of returning nonsense.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) TRUE. BFS from each vertex costs O(V·(V+E)), which on a sparse graph is far below Θ(V³); Floyd–Warshall ignores the sparsity.</li><li>(B) FALSE. Dijkstra finalises a vertex when it is popped, assuming no later path can be shorter. Take A→B (1), A→C (2), C→B (−2): Dijkstra from A pops B at distance 1 and finalises it, although the true distance is 0 through C. One negative edge is enough; no cycle is needed.</li><li>(C) TRUE. Bellman–Ford from a new source s with 0-weight edges to all vertices gives potentials h(v) = δ(s,v) satisfying w(u,v) + h(u) − h(v) ≥ 0. Reweighting preserves shortest paths, so V Dijkstra runs give O(V² log V + VE) with a binary heap.</li><li>(D) TRUE. A vertex i on a negative cycle can reach itself through that cycle with negative total weight, so d[i][i] &lt; 0 after all vertices are allowed as intermediates; vertices not on the cycle keep d[i][i] = 0.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: (A), (C) and (D) are TRUE; (B) is FALSE.</span></p><p class=\"row\"><b>Common misconception.</b> (B) is the persistent error: 'Dijkstra is fine as long as there is no negative cycle' is false — a single negative edge is enough to break it. (D) is often mis-stated as 'd[i][i] &lt; 0 for all i', which would wrongly include vertices off the cycle.</p>"
   }
  ]
 }
