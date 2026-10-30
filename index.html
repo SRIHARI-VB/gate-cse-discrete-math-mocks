@@ -171,7 +171,7 @@ footer.foot p{margin:6px 0}
   <div class="brand">GATE CSE 2027 · Mock Test Portal</div>
   <div class="sub">Daily mock tests &amp; solved question archive · 11 subjects</div>
   <div class="spacer"></div>
-  <div class="candidate"><b>SRIHARI V B</b>67 units &middot; 2675 solved questions banked</div>
+  <div class="candidate"><b>SRIHARI V B</b>67 units &middot; 2750 solved questions banked</div>
 </header>
 
 <nav class="tabs">
@@ -183,9 +183,9 @@ footer.foot p{margin:6px 0}
   <div id="view-tests">
     <div class="banner info"><b>Test series portal.</b> One 25-question mock test per day on a rotating unit order; every test is a single self-contained HTML file that opens offline with a question palette, a running timer and answers locked until submission.</div>
     <div class="meta-strip">
-      <span class="chip"><b>67</b> units in the series &middot; <b>62</b> test cards</span>
-      <span class="chip"><b>2675</b> solved questions in the review archive</span>
-      <span class="chip"><b>2675</b> records in the subject banks</span>
+      <span class="chip"><b>67</b> units in the series &middot; <b>65</b> test cards</span>
+      <span class="chip"><b>2750</b> solved questions in the review archive</span>
+      <span class="chip"><b>2750</b> records in the subject banks</span>
       <span class="chip">Syllabus covered: 67 units &middot; 289 subtopics</span>
     </div>
     <div class="grid2" id="testList"></div>
@@ -202,6 +202,28 @@ footer.foot p{margin:6px 0}
 
 <script id="data" type="text/plain">{
  "tests": [
+  {
+   "date": "2026-10-30",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 1,
+   "unit_name": "Regular Languages & Finite Automata",
+   "questions": 25,
+   "duration": 60,
+   "marks": 35,
+   "easy": 10,
+   "medium": 10,
+   "hard": 5,
+   "subtopics": [
+    "DFA construction & minimisation",
+    "NFA to DFA: subset construction",
+    "Regular expressions",
+    "Pumping lemma for regular languages"
+   ],
+   "path": "theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html",
+   "archives": [],
+   "set": "Set 1 of 2 (third pass)"
+  },
   {
    "date": "2026-10-30",
    "subject": "compiler-design",
@@ -845,7 +867,7 @@ footer.foot p{margin:6px 0}
     "NFA to DFA: subset construction",
     "Pumping lemma for regular languages"
    ],
-   "path": "theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-28.html",
+   "path": "theory-of-computation/regular-languages-fa/archive/gate_toc_mock_1_2026-10-28_run1.html",
    "archives": [],
    "set": "Set 1 of 2 (second pass)"
   },
@@ -3676,7 +3698,7 @@ footer.foot p{margin:6px 0}
   "use strict";
   var D = JSON.parse(document.getElementById('data').textContent);
   // the question archive is externalised per subject (data/questions-<subject>.js)
-  // because a single portal file carrying 2675 records outgrew the delivery channel.
+  // because a single portal file carrying 2750 records outgrew the delivery channel.
   D.questions = [];
   if (window.GATE_BANK){
     Object.keys(window.GATE_BANK).forEach(function(k){

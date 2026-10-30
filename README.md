@@ -7,37 +7,115 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 4 — Transactions & Concurrency Control, Set 1 of 2**, 2026-10-30 →
-  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html)
+- **Theory of Computation · Unit 1 — Regular Languages & Finite Automata, Set 1 of 2 (third pass)**, 2026-10-30 →
+  [`theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html`](theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: ACID properties (5) · schedules, conflict & view serializability (5) ·
-  recoverability & cascadeless schedules (5) · two-phase locking: 2PL, strict & rigorous (5) ·
-  timestamp ordering & deadlocks (5)
-- Rotation: MODE A. Seven subjects already carried a paper dated 2026-10-30 (compiler-design,
-  computer-architecture, computer-networks, digital-logic, discrete-mathematics, operating-systems,
-  programming-data-structures), so the draw ran over the remaining four and gave **Databases**.
-  `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 5, unit 3, normalization, Set 2 of 2}`. Unit 3 held **50** questions, exactly
-  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(normalization) = 2 + 1) mod 5 = 3` →
-  **Unit 4 — Transactions & Concurrency Control**. No override was used and no unit exceeds 50 questions.
-- This is the first paper for Unit 4, so nothing was archived: the unit folder holds exactly one current
-  paper and the repository root holds no copy.
-- The paper's Question Bank tab lists **150** solved questions — Units 1–3 at 50 each — against the 25
-  active questions of this set, which stay out of that list.
-- Previous test: **Compiler Design · Unit 5 — Runtime Environments & Code Optimization, Set 2 of 2**, 2026-10-30 →
-  [`compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html`](compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html)
+- Subtopics: DFA construction & minimisation (7) · NFA to DFA: subset construction (6) ·
+  regular expressions (6) · pumping lemma for regular languages (6)
+- Rotation: MODE A. Eight subjects already carried a paper dated 2026-10-30, so the draw ran over the remaining
+  three (engineering-mathematics, algorithms, theory-of-computation) and gave **Theory of Computation**.
+  `runs[]` sorted by `(date, run)` gives the most recent paper as `{date 2026-10-29, run 12, unit 4,
+  turing-machines-decidability, Set 1 of 2 (second pass)}`. Unit 4 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B4 advanced `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` →
+  **Unit 1 — Regular Languages & Finite Automata**. Every unit of the subject is at or above the cap
+  (75 / 75 / 75 / 75), so the modulo wrapped and step B5 applied: Unit 1 takes its **fourth** set and now holds
+  **100** questions. No override was used.
+- This superseded the 2026-10-28 paper, which moved to
+  `theory-of-computation/regular-languages-fa/archive/gate_toc_mock_1_2026-10-28_run1.html` with its content frozen;
+  the unit folder holds exactly one current paper and the repository root holds no copy.
+- The paper's Question Bank tab lists **300** solved questions (Units 1–4) against the 25 active questions of this
+  set, which stay out of that list.
+- Previous test: **Databases · Unit 4 — Transactions & Concurrency Control, Set 1 of 2**, 2026-10-30 →
+  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 109 (19 Discrete Mathematics, 6 Algorithms, 7 Databases, 10 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 53 current · 56 archived |
-| Test cards on the portal | 64 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 110 (19 Discrete Mathematics, 6 Algorithms, 7 Databases, 10 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
+| Current papers / archived sets | 53 current · 57 archived |
+| Test cards on the portal | 65 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2725 (475 Discrete Mathematics, 150 Algorithms, 175 Databases, 250 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
+| Questions in the subject banks | 2750 (475 Discrete Mathematics, 150 Algorithms, 175 Databases, 250 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 56 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 57 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Theory of Computation Unit 1, Set 1 of 2 (third pass)
+
+- New paper at `theory-of-computation/regular-languages-fa/gate_toc_mock_1_2026-10-30.html`. The 2026-10-28 paper
+  that held this path was moved to
+  `theory-of-computation/regular-languages-fa/archive/gate_toc_mock_1_2026-10-28_run1.html` with its content frozen
+  (same 25 questions, options, answers, solutions and duration); the unit folder now holds exactly one current
+  paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** Eight subjects already carried a 2026-10-30 paper — discrete-mathematics,
+  digital-logic, computer-architecture, programming-data-structures, compiler-design, operating-systems, databases
+  and computer-networks — so the draw was restricted to the three that had not (engineering-mathematics, algorithms,
+  theory-of-computation), and an unseeded `secrets.choice` gave **Theory of Computation**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{date 2026-10-29, run 12, unit 4, turing-machines-decidability,
+  Set 1 of 2 (second pass)}`. Unit 4 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B4 advanced
+  `(index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0` → **Unit 1 — Regular Languages & Finite Automata**.
+  Every unit of the subject is at or above the cap (75, 75, 75, 75), so the modulo wrapped and step B5 applies:
+  Unit 1 receives its **fourth** set and stands at **100** questions. No override, no partial set.
+- Coverage: all four Unit 1 subtopics — DFA construction & minimisation (7), NFA to DFA: subset construction (6),
+  regular expressions (6), pumping lemma for regular languages (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="theory-of-computation"`, `data-unit="regular-languages-fa"`,
+  `data-unit-number="1"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`TOC-U1-Q76`..`TOC-U1-Q100`) and the bank is append-only. The 75 items already banked for
+  Unit 1 cover parity and modulo DFAs, ends-in-ab and contains-aba counts, subset-construction counts for 3-state
+  NFAs, ε-closure statements, pumping-lemma quantifiers, Myhill–Nerode statements and regex identities; this set
+  deliberately takes ground they leave open: complementation of a complete DFA, "at most two a's", strings
+  containing both 01 and 10, "every b immediately followed by a", the Myhill–Nerode index of `a*b`; the
+  `ε-closure` table, the `δ_D(S,a)` formula, two NFAs for one language, a 4-state NFA's reachable subsets, and
+  the limits of the subset construction; `(a*b*)* = Σ*`, Arden's lemma, Brzozowski derivatives, closure under
+  infinite union, and the even-a-even-b expression; vacuous pumping for finite languages, a unary squares
+  argument, the witness set for `#a = #b`, the smallest pumping constant of `(ab)*`, the closure argument
+  `L ∩ a*b*`, and the pumping lemma's quantifier structure.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Theory of Computation, and no regular-language
+  previous-year question has been verified against an official paper and answer key, so nothing on this paper is
+  claimed as an official GATE question. 12 items are `STANDARD_TEXTBOOK` and 13 are `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A minimal-DFA minimiser (reachability removal
+  plus Moore partition refinement) was run on an explicit automaton for each state-count question: `{ε, a, ab}`
+  → **4**, "at most two a's" → **4**, "contains both 01 and 10" → **6** (9 raw states, 2 unreachable, 2 accepting
+  states merged), "every b followed by a" → **3**, `a*b` → **3**, `#a ≡ #b (mod 3)` → **3**, `(ab)*` → **3**
+  as a complete DFA. A breadth-first subset construction over the published 4-state NFA reached exactly
+  **5** subsets (`{p}, {p,q}, {p,r}, {p,q,s}, {p,r,s}`). A brute-force derivative confirmed
+  `D_a((ab)*) = b(ab)*` and `D_b((ab)*) = ∅`; a regex check over all strings of length ≤ 9 found **zero**
+  mismatches for the even-a-even-b expression; a pumping search confirmed the smallest constant for `(ab)*`
+  is **2** (p = 1 fails on `ab`); and the length-4 count in `a*b*` is **5**.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, C, D), (A, B, D), (A, B, C), (A, B, D) and (A, B) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Theory of
+  Computation Unit 4 Set 1 (second pass) paper. The `<style>` block (13243 bytes) and the exam `<script>`
+  (9428 bytes) are **byte-identical** to that paper, and the `:root` block still matches `design-tokens.css` and
+  `index.html` byte for byte. Only the title, header sub-line, candidate id, Question Bank count, meta strip,
+  question payload, bank tab, About tab and payload differ.
+- The bank-tab renderer was validated before use: rebuilding the 275-question bank markup of the donor paper from
+  `master_bank.json` reproduces it **byte for byte**, including the subtopic-label normalisation that folds the
+  three `nfa-to-dfa-subset-construction` label variants into one heading.
+- Verified in headless Chromium from `file://`: 25 question cards with exactly one visible, a 25-button palette,
+  the timer at 60:00, the Answer Key tab disabled and labelled locked, an empty key pane, a hidden summary, every
+  active `.sol` empty and hidden, no `ansline` markup in the question pane and no option marked; the Question Bank
+  tab renders **300** cards and the active 25 ids do not appear in it. After answering every item correctly and
+  submitting, the score reads **35 / 35** with 25 correct, 0 incorrect, 25 `ok` palette buttons, 25 key cards and a
+  revealed solution on every card; an empty paper scores **0 / 35** with 25 `skip` buttons; and a paper whose five
+  MSQ are each one option short scores **25 / 35** with 5 wrong, which confirms that MSQ earns nothing without the
+  exact set. No page errors.
+- Portal: `index.html` gained one card (Theory of Computation · Unit 1 · 2026-10-30) at the head of `tests`, and
+  the 2026-10-28 Unit 1 card now points at the archived file. `data/questions-theory-of-computation.js` grew to
+  325 records. A headless run of the portal renders **65** test cards, **52** unit cards and **2750** archive
+  question cards, and all **252** internal links resolve.
+- **Repaired this run:** the portal's static header strings were 50 records behind the banks (they read 2675 while
+  the eleven banks already summed to 2725), so the three counters were recomputed from the files and now read
+  **2750**; the card counter was advanced from 62 to **65**.
+- **Noted, not repaired:** `digital-logic/number-systems/` still holds two current papers
+  (`gate_dl_mock_1_2026-10-26.html` and `gate_dl_mock_1_2026-10-27.html`), a state left by an earlier run. Both are
+  linked from the portal, so moving one would change a published link; it is recorded here rather than repaired
+  silently.
+- Hygiene: the paper is filed at exactly one path, `theory-of-computation/regular-languages-fa/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (53 current and 57 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-30 — Databases Unit 4, Set 1 of 2
 
