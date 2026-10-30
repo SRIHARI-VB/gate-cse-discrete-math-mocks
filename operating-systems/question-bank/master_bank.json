@@ -6,7 +6,7 @@
   "created": "2026-10-26",
   "last_updated": "2026-10-30",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 375,
+  "total_questions": 400,
   "units_with_questions": [
    1,
    2,
@@ -15,7 +15,7 @@
    5,
    6
   ],
-  "total_runs": 15,
+  "total_runs": 16,
   "unit_question_cap": 50,
   "set_size": 25,
   "sets_per_unit": 2
@@ -745,6 +745,74 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. One subject was drawn at random from the eleven GATE CSE subjects and it gave Operating Systems. runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-30, run 14, unit 2, synchronization-ipc, Set 1 of 2 (second pass)}. Unit 2 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(synchronization-ipc) = 1 + 1) mod 6 = 2 -> Unit 3, Deadlocks. Every Operating Systems unit is at or above the cap (75, 75, 50, 50, 50, 50), so step B5 applies and the modulo stays inside the second pass that began on 2026-10-29. No override was used.",
    "note": "Second pass, Set 1 of 2 for Operating Systems Unit 3, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U3-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 3 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, already used by OS-U1-Q21, so nothing on this paper is claimed as an official GATE question."
+  },
+  {
+   "run": 16,
+   "date": "2026-10-30",
+   "subject": "operating-systems",
+   "subject_name": "Operating Systems",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "set": "Set 1 of 2 (second pass)",
+   "count": 25,
+   "file": "operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html",
+   "archived_previous": "operating-systems/memory-paging/archive/gate_os_mock_4_2026-10-28_run2.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "contiguous-allocation-first-best-worst-fit",
+    "paging-page-table-structures",
+    "inverted-page-tables",
+    "segmentation-paged-segmentation"
+   ],
+   "subtopic_counts": {
+    "contiguous-allocation-first-best-worst-fit": 6,
+    "paging-page-table-structures": 7,
+    "inverted-page-tables": 6,
+    "segmentation-paged-segmentation": 6
+   },
+   "question_ids": [
+    "OS-U4-Q51",
+    "OS-U4-Q52",
+    "OS-U4-Q53",
+    "OS-U4-Q54",
+    "OS-U4-Q55",
+    "OS-U4-Q56",
+    "OS-U4-Q57",
+    "OS-U4-Q58",
+    "OS-U4-Q59",
+    "OS-U4-Q60",
+    "OS-U4-Q61",
+    "OS-U4-Q62",
+    "OS-U4-Q63",
+    "OS-U4-Q64",
+    "OS-U4-Q65",
+    "OS-U4-Q66",
+    "OS-U4-Q67",
+    "OS-U4-Q68",
+    "OS-U4-Q69",
+    "OS-U4-Q70",
+    "OS-U4-Q71",
+    "OS-U4-Q72",
+    "OS-U4-Q73",
+    "OS-U4-Q74",
+    "OS-U4-Q75"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. One subject was drawn at random from the eleven GATE CSE subjects with an unseeded secrets.choice and it gave Operating Systems. runs[] sorted by (date, run) gave the most recent paper as {date 2026-10-30, run 15, unit 3, deadlocks, Set 1 of 2 (second pass)}. Unit 3 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced exactly one unit: (index_of(deadlocks) = 2 + 1) mod 6 = 3 -> Unit 4, Memory Management & Paging. No override was used.",
+   "note": "Second pass, Set 1 of 2 for Operating Systems Unit 4, which already held 50 questions from the first pass. The superseded first-pass Set 2 paper moved to operating-systems/memory-paging/archive/gate_os_mock_4_2026-10-28_run2.html with its content frozen, so the unit folder holds exactly one current paper. All 25 items are new (OS-U4-Q51..Q75) and no stem repeats any of the 50 first-pass Unit 4 questions. No item is a GATE_PYQ_VARIATION: verified_pyqs holds one entry, PYQ-GATE2021S1-Q25, which belongs to Unit 1, so nothing on this paper is claimed as an official GATE question."
   }
  ],
  "verified_pyqs": [
@@ -11577,6 +11645,680 @@
    "answer": 0,
    "answer_display": "0",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Reader preference gives readers priority over any waiting writer. The writer's entry condition — no reader inside — is therefore never satisfied while readers keep arriving.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The writer can enter only when the reader count is zero and no new reader is admitted ahead of it.</li><li>Reader preference explicitly allows a new reader to enter even while a writer waits.</li><li>Since at least one reader is inside for the entire interval, the count never reaches zero.</li><li>So the writer's condition never becomes true and it enters 0 times — indefinite postponement, that is, starvation.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 0.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the writer must eventually get a turn. Under reader preference there is no bound on the number of readers that may pass a waiting writer, so no turn is guaranteed.</p><p class=\"row\"><b>Takeaway.</b> Preference rules decide who starves. Readers-preference starves writers; writers-preference starves readers; a fair solution bounds the wait for both.</p>"
+  },
+  {
+   "id": "OS-U4-Q51",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A process is loaded into a contiguous region whose base register holds <code class=\"mm\">8000</code> and whose limit register holds <code class=\"mm\">600</code>. The memory unit adds the base to every offset it is given, but only after the limit check. Which one of the following offsets is <b>rejected</b> with a trap?",
+   "options": [
+    "0",
+    "350",
+    "599",
+    "600"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A base&ndash;limit pair defines the legal window of a process. The limit register holds the <i>size</i> of the region, not its last address, so the legal offsets are <code class=\"mm\">0 &le; offset &lt; limit</code>. The hardware compares the offset with the limit before it forms <code class=\"mm\">base + offset</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The window is <code class=\"mm\">[8000, 8000 + 600) = [8000, 8600)</code> in physical memory.</li><li>Offset <code class=\"mm\">0</code> gives physical address 8000 &mdash; legal.</li><li>Offset <code class=\"mm\">350</code> gives 8350 &mdash; legal.</li><li>Offset <code class=\"mm\">599</code> gives 8599, the last byte of the region &mdash; legal.</li><li>Offset <code class=\"mm\">600</code> gives 8600, one byte past the region. The comparison <code class=\"mm\">600 &lt; 600</code> is false, so the reference traps.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; offset 600 is the first offset that fails the limit check.</span></p><p class=\"row\"><b>Common misconception.</b> Treating the limit as the highest legal address. It is a length, so the highest legal offset is <code class=\"mm\">limit &minus; 1</code>. Reading the limit as an inclusive bound makes 600 look legal and also lets a one-byte overrun through.</p>"
+  },
+  {
+   "id": "OS-U4-Q52",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which one of the following schemes can suffer <b>internal</b> fragmentation but can never suffer <b>external</b> fragmentation?",
+   "options": [
+    "Contiguous allocation with first fit",
+    "Fixed-size partitions",
+    "Pure segmentation",
+    "Dynamic contiguous allocation with compaction"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Internal fragmentation is space wasted <i>inside</i> an allocated block, because the block is larger than the request. External fragmentation is free space wasted <i>outside</i> the allocated blocks, in holes too small to serve a request. A scheme in which every block is the same fixed size always wastes the tail of the block and never produces holes of varying size, so it has the first and not the second.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Fixed partitions are of one size. A request smaller than the partition wastes the remainder inside the partition &mdash; internal fragmentation.</li><li>Every free partition is exactly one partition in size, so any request that fits the partition size fits some free partition. No free space is stranded in odd-sized holes &mdash; no external fragmentation.</li><li>First fit, worst fit and the rest allocate variable-size blocks from variable-size holes, so they can strand space externally.</li><li>Pure segmentation allocates variable-size segments, which also strands space externally.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; fixed-size partitions.</span></p><p class=\"row\"><b>Common misconception.</b> Believing that paging-style schemes have neither kind. Paging and fixed partitions have internal fragmentation only; pure segmentation and dynamic contiguous allocation have external fragmentation only; paged segmentation has internal fragmentation and no external fragmentation.</p>"
+  },
+  {
+   "id": "OS-U4-Q53",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Four free holes of <code class=\"mm\">100 KB</code>, <code class=\"mm\">500 KB</code>, <code class=\"mm\">300 KB</code> and <code class=\"mm\">600 KB</code> lie in that address order. A request for <code class=\"mm\">250 KB</code> arrives. Which one of the following states correctly which hole <b>first fit</b> and <b>best fit</b> choose?",
+   "options": [
+    "First fit takes the 500 KB hole; best fit also takes the 500 KB hole.",
+    "First fit takes the 500 KB hole; best fit takes the 300 KB hole.",
+    "First fit takes the 300 KB hole; best fit also takes the 300 KB hole.",
+    "First fit takes the 600 KB hole; best fit takes the 300 KB hole."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> First fit scans the free list in address order and stops at the first hole that is large enough. Best fit scans the whole list and takes the <i>smallest</i> hole that is large enough. Worst fit takes the largest hole.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>First fit meets 100 KB (too small) and then 500 KB, which is the first hole that fits <code class=\"mm\">250 KB</code>. It takes 500 KB and leaves a 250 KB remnant.</li><li>Best fit compares every hole that fits: 500 KB, 300 KB and 600 KB. The smallest is 300 KB.</li><li>Best fit therefore takes the 300 KB hole and leaves a 50 KB remnant.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; first fit takes 500 KB, best fit takes 300 KB.</span></p><p class=\"row\"><b>Common misconception.</b> Thinking first fit and best fit coincide whenever the first hole that fits is also a good fit. Here the first fitting hole is 500 KB while the smallest fitting hole is 300 KB, so the two policies split different holes and leave different remnants (250 KB against 50 KB).</p>"
+  },
+  {
+   "id": "OS-U4-Q54",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Free holes of <code class=\"mm\">300 KB</code>, <code class=\"mm\">150 KB</code>, <code class=\"mm\">500 KB</code> and <code class=\"mm\">250 KB</code> lie in that address order. Three requests arrive in the order <code class=\"mm\">200 KB</code>, <code class=\"mm\">120 KB</code> and <code class=\"mm\">400 KB</code>. The allocator uses <b>first fit</b> with no compaction. What is the total size of all free memory remaining, in KB, after the three requests have been placed?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 480,
+   "answer_display": "480",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> First fit walks the holes in address order and splits the first hole that is large enough, leaving the remainder in place. The remainders of earlier requests are therefore still candidates for later requests, and the order of the requests changes the outcome.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Request 200 KB: 300 KB is the first hole that fits. It becomes 100 KB. Holes: 100, 150, 500, 250.</li><li>Request 120 KB: 100 is too small, 150 fits. It becomes 30 KB. Holes: 100, 30, 500, 250.</li><li>Request 400 KB: 100 and 30 are too small, 500 fits. It becomes 100 KB. Holes: 100, 30, 100, 250.</li><li>Total free memory = <code class=\"mm\">100 + 30 + 100 + 250 = 480</code> KB.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 480 KB.</span></p><p class=\"row\"><b>Common misconception.</b> Subtracting the request sizes from the total and reporting <code class=\"mm\">1200 &minus; 720 = 480</code> as if it were a check on the allocation. The arithmetic agrees here only because every request was placed; it would not detect a request that failed for want of a large enough hole. Track the holes, not just the totals.</p>"
+  },
+  {
+   "id": "OS-U4-Q55",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which of the following statements about dynamic contiguous allocation are TRUE? (Select all that apply.)",
+   "options": [
+    "Under the 50-percent rule, if <i>N</i> blocks have been allocated, about <i>N</i>/2 further blocks are expected to be lost to fragmentation.",
+    "Next fit restarts its scan at the beginning of the free list on every request.",
+    "Worst fit tends to leave behind holes that are too small to be useful.",
+    "Compaction removes external fragmentation but costs processor time and requires that every process be able to move at run time."
+   ],
+   "answer": [
+    0,
+    3
+   ],
+   "answer_display": "Options (A) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four facts that decide these options are the 50-percent rule, the difference between next fit and first fit, the remnant each policy leaves, and the price of compaction.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) True.</b> The statistical result is that for every <i>N</i> allocated blocks roughly <i>N</i>/2 more blocks are lost to fragmentation, so about a third of memory is unusable. The reason is that the average remnant is half the average request.</li><li><b>(B) False.</b> That describes first fit. Next fit continues the scan from the point where the previous allocation finished, wrapping to the start of the list, so that the search does not always begin at low addresses.</li><li><b>(C) False.</b> Worst fit takes the <i>largest</i> hole, so the remnant it leaves is the largest of the three policies. It is best fit that leaves tiny, unusable remnants.</li><li><b>(D) True.</b> Compaction slides the allocated blocks together, which is a copy of memory and therefore processor time, and it is only possible if addresses can be relocated at run time &mdash; which is why base&ndash;limit or paging hardware is a precondition.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> The names invite the error in (C): \"worst\" suggests the worst outcome. Worst fit is the policy that leaves the <i>best</i> remnants; it is merely wasteful because it never preserves a large hole for a large request.</p>"
+  },
+  {
+   "id": "OS-U4-Q56",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "contiguous-allocation-first-best-worst-fit",
+   "subtopic": "contiguous-allocation-first-best-worst-fit",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Free holes of <code class=\"mm\">120 KB</code>, <code class=\"mm\">150 KB</code> and <code class=\"mm\">400 KB</code> lie in that address order. Three requests arrive in the order <code class=\"mm\">260 KB</code>, <code class=\"mm\">140 KB</code> and <code class=\"mm\">150 KB</code>, and no compaction is available. Which allocation policy can satisfy all three requests?",
+   "options": [
+    "First fit only",
+    "Best fit only",
+    "Both first fit and best fit",
+    "Neither first fit nor best fit"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> No policy dominates. First fit is faster and usually at least as good, but it can consume a large hole that a later request needs while best fit happens to leave that hole untouched. The only way to answer is to simulate both.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>First fit.</b> 260 KB: the first hole that fits is 400 KB, which becomes 140 KB. Holes: 120, 150, 140. Next, 140 KB: the first hole that fits is 150 KB, which becomes 10 KB. Holes: 120, 10, 140. Next, 150 KB: no hole is large enough &mdash; the request <b>fails</b>.</li><li><b>Best fit.</b> 260 KB: the only hole that fits is 400 KB, which becomes 140 KB. Holes: 120, 150, 140. Next, 140 KB: the smallest fitting hole is the 140 KB remnant, which becomes 0. Holes: 120, 150, 0. Next, 150 KB: the 150 KB hole fits exactly and becomes 0. All three requests are placed.</li><li>So the sequence is feasible under best fit and infeasible under first fit.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; best fit only.</span></p><p class=\"row\"><b>Common misconception.</b> Remembering \"first fit is generally better than best fit\" as a theorem. It is an empirical average over workloads, not a guarantee: the counterexample above shows a request sequence on which first fit fails and best fit succeeds.</p>"
+  },
+  {
+   "id": "OS-U4-Q57",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A system uses single-level paging with the page table held in main memory and has no TLB. How many main-memory accesses does one ordinary load or store take?",
+   "options": [
+    "Two: one to read the page-table entry and one to reach the data",
+    "One: the page table is consulted by dedicated hardware that does not touch memory",
+    "Three: the page table, a segment table and then the data",
+    "One extra access for every level of the page table, and none for the data"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With the page table in memory, the page number must be translated into a frame number before the data can be addressed, and that translation is itself a memory read.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The CPU forms a virtual address; its page number indexes the page table.</li><li>Access 1: read the page-table entry at <code class=\"mm\">PTBR + page &times; entry size</code>. This yields the frame number and the valid and protection bits.</li><li>Access 2: form <code class=\"mm\">frame &times; page size + offset</code> and read or write the data.</li><li>So a reference costs two memory accesses, which is why the effective access time roughly doubles and why a TLB is worth its cost.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; two accesses.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the page table lives in fast registers or in a cache the hardware consults for free. Only the page-table base register is a register; the table itself is in memory, and with two levels of paging a reference without a TLB costs three accesses.</p>"
+  },
+  {
+   "id": "OS-U4-Q58",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A TLB has <code class=\"mm\">128</code> entries and the page size is <code class=\"mm\">8 KB</code>. Assuming perfect replacement, what is the <b>TLB reach</b> &mdash; the amount of memory that can be mapped without a page-table walk?",
+   "options": [
+    "128 KB",
+    "512 KB",
+    "1 MB",
+    "8 MB"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The TLB reach is the number of TLB entries multiplied by the page size: it is the working set that the TLB can cover at once.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Entries = <code class=\"mm\">128 = 2&#8311;</code>.</li><li>Page size = <code class=\"mm\">8 KB = 2&#185;&#179;</code> bytes.</li><li>Reach = <code class=\"mm\">2&#8311; &times; 2&#185;&#179; = 2&#178;&#8304; = 1 MB</code>.</li><li>The practical consequence: with 8 KB pages, 128 entries cover 1 MB, so a program whose hot working set exceeds 1 MB will thrash the TLB unless the page size or the number of entries is increased.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 1 MB.</span></p><p class=\"row\"><b>Common misconception.</b> Multiplying by the frame number width or by the entry size. The reach counts <i>bytes of address space</i> covered, so it is entries &times; page size; entry size affects the cost of the TLB, not its coverage.</p>"
+  },
+  {
+   "id": "OS-U4-Q59",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A single-level page table has <code class=\"mm\">2&#185;&#8313;</code> entries and each entry is <code class=\"mm\">8 bytes</code> wide. How much main memory does the table itself occupy?",
+   "options": [
+    "2 MB",
+    "4 MB",
+    "8 MB",
+    "512 KB"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A page table is an array: its size is the number of entries times the width of one entry. The entries are needed for the whole virtual page range of the process, whether or not the pages are in use.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Entries = <code class=\"mm\">2&#185;&#8313; = 524288</code>.</li><li>Size = <code class=\"mm\">2&#185;&#8313; &times; 8 = 2&#185;&#8313; &times; 2&#179; = 2&#178;&#178; = 4194304</code> bytes.</li><li><code class=\"mm\">2&#178;&#178; bytes = 4 MB</code>.</li><li>This is exactly the pressure that motivates two-level and inverted tables: a 4 MB array per process, most of it empty, is wasteful when the process touches a few megabytes.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) &mdash; 4 MB.</span></p><p class=\"row\"><b>Common misconception.</b> Confusing the number of entries with the number of bytes, or using 2&#185;&#8313; entries as if it were 2&#178;&#8304;. Keep the two powers of two separate: the entry count and the entry width multiply.</p>"
+  },
+  {
+   "id": "OS-U4-Q60",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A TLB search costs <code class=\"mm\">20 ns</code> and a main-memory access costs <code class=\"mm\">100 ns</code>. The system uses a single-level page table in memory. The effective access time is <code class=\"mm\">20 + 100 + (1 &minus; h) &times; 100</code> ns, where <code class=\"mm\">h</code> is the TLB hit ratio. What is the smallest hit ratio, in per cent, that keeps the effective access time at or below <code class=\"mm\">130 ns</code>?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 90,
+   "answer_display": "90",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every reference pays the TLB search and the data access. A hit adds nothing more; a miss adds one extra memory access for the page-table entry.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Hit path: <code class=\"mm\">20 + 100 = 120</code> ns.</li><li>Miss path: <code class=\"mm\">20 + 100 + 100 = 220</code> ns.</li><li>Expected time: <code class=\"mm\">h &times; 120 + (1 &minus; h) &times; 220 = 220 &minus; 100h</code>, which is the same as <code class=\"mm\">120 + 100(1 &minus; h)</code>.</li><li>Require <code class=\"mm\">120 + 100(1 &minus; h) &le; 130</code>, so <code class=\"mm\">100(1 &minus; h) &le; 10</code> and <code class=\"mm\">1 &minus; h &le; 0.1</code>.</li><li>Hence <code class=\"mm\">h &ge; 0.9</code>, that is 90 per cent. At exactly 90 per cent the effective time is 130 ns, which meets the bound.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 90 (per cent).</span></p><p class=\"row\"><b>Common misconception.</b> Charging the TLB search only on a hit. The TLB is looked up on every reference, so its 20 ns is paid unconditionally; only the extra 100 ns is probabilistic.</p>"
+  },
+  {
+   "id": "OS-U4-Q61",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "On a machine with 64-bit virtual addresses and <code class=\"mm\">4 KB</code> pages, a single-level page table would need <code class=\"mm\">2&#8309;&#178;</code> entries. The main reason two-level paging helps is that it:",
+   "options": [
+    "halves the width of each page-table entry",
+    "reduces the number of page faults",
+    "lets the system allocate page tables only for the parts of the address space a process actually uses",
+    "removes the need for a TLB"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A single-level table must be <i>contiguous</i> and must cover the whole virtual range, so its size is set by the address width, not by what the process touches. Splitting the page number into an outer and an inner index lets the outer table point at inner tables that are created only when the corresponding region is used.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Single level: one array of 2&#8309;&#178; entries &mdash; petabytes of table for a process that may touch a few megabytes.</li><li>Two levels: an outer table of 2&#178;&#8313; entries (for an 18/18/12 split) whose entries point at inner tables of 2&#185;&#8312; entries each. An inner table exists only if some page in that region is mapped.</li><li>Total table memory therefore grows with the <i>used</i> address space, which is the saving.</li><li>The costs are an extra memory access per miss and a worse locality pattern; the entry width and the page-fault rate are unchanged.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Believing a multi-level table is smaller per entry or cheaper per reference. It is neither &mdash; it is exactly the opposite per reference. The gain is purely that unused regions cost nothing.</p>"
+  },
+  {
+   "id": "OS-U4-Q62",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which of the following statements about the choice of page size are TRUE? (Select all that apply.)",
+   "options": [
+    "Increasing the page size reduces the number of page-table entries and increases the TLB reach.",
+    "Increasing the page size increases internal fragmentation, because the last page of an object is partly unused.",
+    "Increasing the page size increases the number of page faults for a program that scans memory sequentially.",
+    "Decreasing the page size reduces the number of bytes transferred per page fault but increases the size of the page tables."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Page size trades three quantities against one another: table size, TLB coverage and internal fragmentation, with fault granularity riding on the same choice.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) True.</b> Doubling the page size removes one bit from the page number, so the number of entries halves; the TLB reach, entries &times; page size, grows.</li><li><b>(B) True.</b> Allocation is in whole pages, so on average half a page is wasted per object. A larger page wastes more per object.</li><li><b>(C) False.</b> Sequential scanning touches every byte, so the number of pages covered &mdash; and hence the number of faults &mdash; falls as the page size grows. Larger pages mean fewer, larger transfers.</li><li><b>(D) True.</b> Smaller pages mean more pages, hence more entries, hence larger tables and a smaller TLB reach; the benefit is that each fault brings in less data and internal fragmentation falls.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Reading (C) as \"larger pages cause more faults\" because each fault costs more. The <i>number</i> of faults falls with larger pages; what rises is the bytes moved per fault and the internal fragmentation.</p>"
+  },
+  {
+   "id": "OS-U4-Q63",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "paging-page-table-structures",
+   "subtopic": "paging-page-table-structures",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A machine has <code class=\"mm\">48-bit</code> virtual addresses and <code class=\"mm\">4 KB</code> pages. Paging is two-level, with the page number split into an 18-bit outer index and an 18-bit inner index, and each page-table entry is <code class=\"mm\">8 bytes</code>. What is the size of one <b>second-level</b> page table, in KB?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2048,
+   "answer_display": "2048",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A second-level table is indexed by the inner index, so it has <code class=\"mm\">2&#185;&#8312;</code> entries, each of the stated width. Its size is the product, whatever the outer table does.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Check the split: 4 KB pages give <code class=\"mm\">log&#8322;4096 = 12</code> offset bits; <code class=\"mm\">18 + 18 + 12 = 48</code>, so the whole address is accounted for.</li><li>Entries in a second-level table = <code class=\"mm\">2&#185;&#8312; = 262144</code>.</li><li>Size = <code class=\"mm\">262144 &times; 8 = 2097152</code> bytes <code class=\"mm\">= 2 MB</code>.</li><li><code class=\"mm\">2 MB = 2048 KB</code>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2048 KB (2 MB).</span></p><p class=\"row\"><b>Common misconception.</b> Using all 36 index bits for one table. Each level is indexed by its own field only; using 36 bits gives 2&#179;&#8310; entries, a table 262144 times too large.</p>"
+  },
+  {
+   "id": "OS-U4-Q64",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which one of the following is a direct consequence of keying an inverted page table by <b>frame</b> rather than by virtual page?",
+   "options": [
+    "The table has one entry per physical frame, so its size is fixed by physical memory and not by the size of any address space.",
+    "The table has one entry per virtual page of each process, so its size grows with the number of processes.",
+    "The table has one entry per segment, so its size grows with the segment count.",
+    "The table has one entry per page-table entry of each process, so it is the same size as the sum of all per-process tables."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An inverted page table stores exactly one entry for each physical frame. The frame number is the index, and the entry records which process and which virtual page currently occupy that frame.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The number of frames is <code class=\"mm\">physical memory &divide; page size</code>, a property of the machine.</li><li>So the table size is one system-wide array of that many entries &mdash; no per-process tables at all.</li><li>The saving is large: 64-bit address spaces can be supported with a table of a few million entries instead of 2&#8309;&#178; entries per process.</li><li>The cost is that the table is no longer indexed by what the hardware supplies (the page number), so a lookup needs a search or a hash.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the table is per process. There is exactly one inverted table for the whole system, which is why an entry must carry a process identifier.</p>"
+  },
+  {
+   "id": "OS-U4-Q65",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which field must an inverted page-table entry contain that a per-process page table does not need?",
+   "options": [
+    "A frame number",
+    "A valid bit",
+    "A reference bit",
+    "A process identifier"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a per-process page table the owner of the table is implicit: the table belongs to one process, so the page number alone identifies the mapping. A single system-wide inverted table holds mappings of every process, and page 5 of one process has nothing to do with page 5 of another.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The index of an inverted entry is the frame number, so the frame number itself need not be stored as a lookup key &mdash; that rules out (A).</li><li>Valid and reference bits are ordinary control bits that per-process tables carry as well &mdash; that rules out (B) and (C).</li><li>What is genuinely new is ownership: the entry must say <i>whose</i> page this frame holds, otherwise two processes mapping the same virtual page number would be indistinguishable.</li><li>Hence the entry is a triple (pid, page, control bits) for each frame.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; a process identifier (or address-space identifier).</span></p><p class=\"row\"><b>Common misconception.</b> Thinking the frame number must be stored because the table is \"about frames\". The frame number is the array index; storing it would duplicate the index.</p>"
+  },
+  {
+   "id": "OS-U4-Q66",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A machine has <code class=\"mm\">512 MB</code> of physical memory and <code class=\"mm\">4 KB</code> pages. Its inverted page table has one <code class=\"mm\">8-byte</code> entry per frame. What is the size of the table, in KB?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 1024,
+   "answer_display": "1024",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The number of inverted entries equals the number of frames, and each entry costs its stated width.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Frames = <code class=\"mm\">512 MB &divide; 4 KB = 2&#178;&#8313; &divide; 2&#185;&#178; = 2&#185;&#8311; = 131072</code>.</li><li>Table size = <code class=\"mm\">131072 &times; 8 = 1048576</code> bytes.</li><li><code class=\"mm\">1048576 bytes = 1 MB = 1024 KB</code>.</li><li>Compare that with a per-process single-level table for a 48-bit address space, which would need 2&#179;&#8310; entries &mdash; the inverted table is smaller by many orders of magnitude.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 1024 KB (1 MB).</span></p><p class=\"row\"><b>Common misconception.</b> Using the virtual address width to size the table. Only physical memory and the page size matter; the virtual address width plays no part.</p>"
+  },
+  {
+   "id": "OS-U4-Q67",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Two processes share one physical frame that holds a read-only library page. Why is this awkward in a system with a single inverted page table?",
+   "options": [
+    "Because the frame number of a shared page would have to change for each process",
+    "Because the TLB can hold only one entry per frame and would keep evicting the shared page",
+    "Because each frame has exactly one entry, so the frame can name only one (process, virtual page) mapping; sharing needs extra entries or an auxiliary structure",
+    "Because sharing requires both processes to place the page at the same virtual page number"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An inverted table is a function <i>frame &rarr; (process, page)</i>. It is one-to-one by construction. Sharing needs the inverse: two distinct virtual pages must map to the same frame, which is two domain elements with one image.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Per-process page tables express sharing trivially: both tables point their own entries at the same frame number.</li><li>In an inverted table there is one slot per frame, and that slot can record only one owner. A second process mapping the same frame has nowhere to be recorded.</li><li>The usual fixes are to allow chains of mappings in one entry, or to keep a small side table of shared mappings &mdash; both add work to every miss.</li><li>The frame number is a property of the frame and does not vary per process, so (A) is wrong; the TLB is not limited to one entry per frame, so (B) is wrong; virtual addresses need not agree, so (D) is wrong.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming sharing works as it does with per-process tables. The direction of the mapping is reversed, and that is precisely what makes sharing the standard objection to inverted tables.</p>"
+  },
+  {
+   "id": "OS-U4-Q68",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Consider a machine whose only translation structure is one system-wide inverted page table. Which of the following statements are TRUE? (Select all that apply.)",
+   "options": [
+    "There is one entry per physical frame, so the table size is independent of the virtual address width.",
+    "A translation that misses the TLB may require a hash-table search on the (process, page) pair, because the table is not indexed by the page number.",
+    "The table is system-wide rather than per process, so a context switch does not have to change the table base register to a different table.",
+    "Sharing a frame between two processes is easier than with per-process page tables, because the frame has a single entry."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The inverted table is one array indexed by frame. Everything that follows &mdash; its size, its lookup cost, its sharing behaviour &mdash; follows from that one decision.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) True.</b> Entries = frames = physical memory &divide; page size. A 64-bit address space costs nothing extra.</li><li><b>(B) True.</b> The hardware supplies a page number, but the table is keyed by frame, so the entry must be found by a search. Real systems hash on (pid, page) and chain collisions.</li><li><b>(C) True.</b> One table serves every process, so switching processes does not switch tables; only the entries' ownership changes meaning.</li><li><b>(D) False.</b> One entry per frame means one (process, page) mapping per frame, so a shared frame cannot be named by both processes. Sharing is the weak point of this design.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> Reading (D) as a benefit of the single entry. The single entry is exactly the obstruction: sharing requires two mappings into one frame.</p>"
+  },
+  {
+   "id": "OS-U4-Q69",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "inverted-page-tables",
+   "subtopic": "inverted-page-tables",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A machine has <code class=\"mm\">16 GB</code> of physical memory and <code class=\"mm\">8 KB</code> pages. How many entries does its inverted page table contain?<br/>(Enter an integer.)",
+   "options": null,
+   "answer": 2097152,
+   "answer_display": "2097152",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> One entry per frame: the count is physical memory divided by the page size, with both quantities in the same unit.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><code class=\"mm\">16 GB = 2&#8308; &times; 2&#179;&#8304; = 2&#179;&#8308;</code> bytes.</li><li><code class=\"mm\">8 KB = 2&#179; &times; 2&#185;&#8304; = 2&#185;&#179;</code> bytes.</li><li>Entries = <code class=\"mm\">2&#179;&#8308; &divide; 2&#185;&#179; = 2&#178;&#185; = 2097152</code>.</li><li>With 16-byte entries the table would occupy 32 MB &mdash; a fixed cost, whatever the processes' virtual address spaces look like.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 2097152 entries.</span></p><p class=\"row\"><b>Common misconception.</b> Mixing GB and KB by treating 16 GB as 16 &times; 10&#8310; KB. Work in powers of two: the quotient is exact only when both sides use the same base.</p>"
+  },
+  {
+   "id": "OS-U4-Q70",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "In a segmented memory system, a logical address is a pair that consists of:",
+   "options": [
+    "a segment number and an offset within the segment",
+    "a page number and an offset within the page",
+    "a frame number and an offset within the frame",
+    "a single linear address that the segment table is not consulted for"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Segmentation is a <i>visible</i> division of the address space into variable-length, logically meaningful pieces: code, data, stack, a procedure, an array. The programmer or compiler names a segment and an offset inside it, so the logical address is two-dimensional.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The segment number indexes the segment table.</li><li>The entry supplies a base and a limit.</li><li>The offset is checked against the limit and then added to the base to give a physical address.</li><li>Paging, by contrast, is invisible: the compiler emits one linear address and the hardware splits it into page number and offset.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) &mdash; segment number and offset.</span></p><p class=\"row\"><b>Common misconception.</b> Describing the segmented address as (page, offset). That is the paged form; the two schemes differ in whether the split is visible to the program and in whether the pieces have a fixed size.</p>"
+  },
+  {
+   "id": "OS-U4-Q71",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A segment table entry holds base <code class=\"mm\">8000</code> and limit <code class=\"mm\">500</code>. What happens for the offsets <code class=\"mm\">400</code> and <code class=\"mm\">500</code>?",
+   "options": [
+    "Offset 400 gives physical address 8400; offset 500 traps.",
+    "Offset 400 gives 8400; offset 500 gives 8500.",
+    "Offset 400 gives 8000; offset 500 gives 8500.",
+    "Both offsets trap, because only the base is known."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The limit is the length of the segment, so legal offsets are <code class=\"mm\">0 &le; offset &lt; limit</code>. A legal offset is added to the base.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Offset 400: <code class=\"mm\">400 &lt; 500</code>, so it is legal; physical address = <code class=\"mm\">8000 + 400 = 8400</code>.</li><li>Offset 500: <code class=\"mm\">500 &lt; 500</code> is false, so the hardware raises a trap (a segmentation fault) before any address is formed.</li><li>This check is what makes segmentation a protection mechanism: a wild index into an array cannot reach another segment.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Treating the limit as an inclusive bound and returning 8500. That would let a process read one byte outside its segment &mdash; the classic off-by-one that segmentation exists to prevent.</p>"
+  },
+  {
+   "id": "OS-U4-Q72",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A segmented machine uses a <code class=\"mm\">12-bit</code> segment number and <code class=\"mm\">8-byte</code> segment-table entries. How large is the segment table of a process that can name any segment?",
+   "options": [
+    "8 KB",
+    "16 KB",
+    "32 KB",
+    "64 KB"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The segment number is an index, so the table must have one entry for every value the field can take; the entry width then fixes the total.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Entries = <code class=\"mm\">2&#185;&#178; = 4096</code>.</li><li>Size = <code class=\"mm\">4096 &times; 8 = 32768</code> bytes.</li><li><code class=\"mm\">32768 bytes = 32 KB</code>.</li><li>The table is per process and small compared with a page table for the same address width, which is one reason segmentation is attractive when the number of segments is modest.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) &mdash; 32 KB.</span></p><p class=\"row\"><b>Common misconception.</b> Sizing the table by the number of segments the program actually uses. The hardware indexes with the full field, so the table must cover every encodable segment number unless the entry count is stored separately and checked.</p>"
+  },
+  {
+   "id": "OS-U4-Q73",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which of the following statements about segment tables and paged segmentation are TRUE? (Select all that apply.)",
+   "options": [
+    "A segment-table entry normally holds a base and a limit, and the limit check is made before the base is used.",
+    "Because the segment table is held in ordinary registers, a segmented reference never needs an extra memory access.",
+    "Paging each segment removes external fragmentation while keeping the two-dimensional (segment, offset) view of the address space.",
+    "In paged segmentation the offset within a segment is itself split into a page number and a page displacement."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Paged segmentation combines the logical view of segmentation with the allocation granularity of paging: a segment is divided into pages, and the segment-table entry points at that segment's page table.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) True.</b> The entry gives the segment's location and its length; the offset is checked against the length so that a reference cannot escape the segment.</li><li><b>(B) False.</b> The segment table is in main memory, not in registers &mdash; only its base register is. Without a TLB, the reference costs an extra access for the segment-table entry, and in paged segmentation two extra accesses.</li><li><b>(C) True.</b> Segments are no longer contiguous in physical memory; each is paged, so no odd-sized holes are created, yet the program still names (segment, offset).</li><li><b>(D) True.</b> The offset is decomposed into a page number that indexes the segment's page table and a displacement inside the page.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Believing paging under segmentation restores the single-access translation of pure paging. It adds a level: the segment table must be read before the segment's page table.</p>"
+  },
+  {
+   "id": "OS-U4-Q74",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "Which of the following statements comparing segmentation with paging are TRUE? (Select all that apply.)",
+   "options": [
+    "Segmentation is visible to the programmer and the compiler; paging is transparent to them.",
+    "Pure segmentation can suffer external fragmentation, while pure paging cannot.",
+    "A pure paging system can give a procedure its own protection as naturally as segmentation does, because every page can carry its own protection bits.",
+    "Paged segmentation offers both the logical two-dimensional address space of segmentation and the absence of external fragmentation that paging provides."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Segmentation divides by <i>meaning</i>, paging by <i>size</i>. The first gives a visible, variable-length structure and therefore external fragmentation; the second gives fixed-size frames and therefore internal fragmentation.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) True.</b> The compiler emits segment-relative addresses; nobody emits page-relative ones, because the page split is the hardware's business.</li><li><b>(B) True.</b> Variable-length segments leave holes of odd sizes. Paging allocates whole frames, so the only waste is the tail of the last page.</li><li><b>(C) False.</b> Page protection bits exist, but pages are arbitrary slices of the address space: a procedure may straddle a page boundary, so per-procedure protection is not natural. Segmentation makes the boundary coincide with the protection unit.</li><li><b>(D) True.</b> That is exactly the motivation for paged segmentation &mdash; logical units for the programmer, fixed-size allocation for the memory manager.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Concluding from (C) that paging gives protection and segmentation does not, or the reverse. Both protect; the difference is whether the protection unit coincides with a logical unit.</p>"
+  },
+  {
+   "id": "OS-U4-Q75",
+   "unit": 4,
+   "unit_number": 4,
+   "unit_slug": "memory-paging",
+   "unit_name": "Memory Management & Paging",
+   "topic": "Memory Management & Paging",
+   "sub": "segmentation-paged-segmentation",
+   "subtopic": "segmentation-paged-segmentation",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-30",
+   "set": "1 of 2 (second pass)",
+   "question": "A paged segmentation system uses <code class=\"mm\">1 KB</code> pages. The segment-table entry for segment 3 gives a page-table base of <code class=\"mm\">20000</code> and a limit of <code class=\"mm\">3000</code> bytes; page-table entries are 4 bytes each. Page-table entry 2 of that table holds frame <code class=\"mm\">40</code>. What physical address does the offset <code class=\"mm\">2050</code> map to?",
+   "options": [
+    "40960",
+    "43010",
+    "2250",
+    "40962"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In paged segmentation the offset inside a segment is itself split into a page number (index into that segment's page table) and a displacement (offset inside the page). The segment limit is checked against the whole offset first.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Limit check: <code class=\"mm\">2050 &lt; 3000</code>, so the offset is inside the segment.</li><li>Split the offset with 1 KB pages: page number = <code class=\"mm\">2050 &divide; 1024 = 2</code>, displacement = <code class=\"mm\">2050 &minus; 2 &times; 1024 = 2</code>.</li><li>Locate the entry: <code class=\"mm\">20000 + 2 &times; 4 = 20008</code>. It holds frame 40.</li><li>Physical address = <code class=\"mm\">40 &times; 1024 + 2 = 40960 + 2 = 40962</code>.</li><li>The distractors are the frame base without the displacement (40960), the offset added to the page-table base (2250) and the displacement added to the wrong frame base (43010).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) &mdash; 40962.</span></p><p class=\"row\"><b>Common misconception.</b> Adding the whole offset to the page-table base, or adding the displacement to the page-table base rather than to the frame base. Two multiplications are needed: one by the entry width to find the entry, one by the page size to find the frame.</p>"
   }
  ]
 }

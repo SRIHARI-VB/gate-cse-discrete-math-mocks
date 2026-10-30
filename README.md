@@ -7,34 +7,108 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html)
+- **Operating Systems · Unit 4 — Memory Management & Paging, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html`](operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: four conditions & RAG (7) · prevention, avoidance & Banker's (7) · detection & recovery (6) ·
-  starvation vs deadlock (5)
+- Subtopics: contiguous allocation (6) · paging & page-table structures (7) · inverted page tables (6) ·
+  segmentation & paged segmentation (6)
 - Rotation: MODE A. The draw gave **Operating Systems**. The most recent run for the subject was
-  `{2026-10-30, run 14, unit 2, synchronization-ipc, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(synchronization-ipc) = 1 + 1) mod 6 = 2` → **Unit 3**, Deadlocks, which already held 50 first-pass
-  questions. Every Operating Systems unit is at or above the cap (75, 75, 50, 50, 50, 50), so step B5 applies: the
-  modulo wraps inside the second pass that began on 2026-10-29. No override, no partial set.
+  `{2026-10-30, run 15, unit 3, deadlocks, Set 1 of 2 (second pass)}`. Unit 3 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4**, Memory Management & Paging, which already held 50
+  first-pass questions. No override, no partial set.
 - The superseded first-pass Set 2 paper moved to
-  [`archive/gate_os_mock_3_2026-10-28_run2.html`](operating-systems/deadlocks/archive/gate_os_mock_3_2026-10-28_run2.html);
+  [`archive/gate_os_mock_4_2026-10-28_run2.html`](operating-systems/memory-paging/archive/gate_os_mock_4_2026-10-28_run2.html);
   the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 1 of 2**, 2026-10-30 →
-  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-30.html)
+- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 118 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 15 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 57 current · 61 archived |
-| Test cards on the portal | 71 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 119 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 16 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 57 current · 62 archived |
+| Test cards on the portal | 72 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2950 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 375 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 2975 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 400 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 61 (11 Compiler Design, 10 Discrete Mathematics, 9 Operating Systems, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 5 Engineering Mathematics, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 62 (10 Discrete Mathematics, 10 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Operating Systems Unit 4, Set 1 of 2 (second pass)
+
+- New paper at `operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html`. The 2026-10-28 paper that held this
+  path (first pass, Set 2 of 2) was moved to
+  `operating-systems/memory-paging/archive/gate_os_mock_4_2026-10-28_run2.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the eleven subjects gave **Operating Systems**.
+  `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 15, unit 3, deadlocks, Set 1 of 2
+  (second pass)}`. Unit 3 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
+  B4 advanced exactly one unit: `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4 — Memory Management & Paging**.
+  Unit 4 held 50 first-pass questions, so this is its **Set 1 of 2 (second pass)** and it now holds **75**. No
+  override, no partial set, no unit above the cap.
+- Coverage: all four Unit 4 subtopics — contiguous allocation, first/best/worst fit (6); paging & page-table
+  structures (7); inverted page tables (6); segmentation & paged segmentation (6). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes.
+- Every question carries `data-subject="operating-systems"`, `data-unit="memory-paging"`, `data-unit-number="4"`, its
+  subtopic slug, its type, its lowercase difficulty and its source tag — on the active paper and on all 375 banked
+  cards in the Question Bank tab.
+- All 25 ids are new (`OS-U4-Q51` … `OS-U4-Q75`); no id and no normalised stem collides with the 50 first-pass Unit 4
+  items or with the other 350 banked Operating Systems items. The subject bank now holds **400** questions and the
+  paper's Question Bank tab shows the 375 that are not on it (no duplicate content between the test and the bank).
+- The first pass covered hole traces under first fit, internal against external fragmentation, the page-table entry,
+  the page-number width for 32- and 48-bit addresses, one-level effective access time, the two-level split, the
+  inverted table's entry count and cost, and segment base/limit arithmetic. This set takes other ground: the limit
+  register as a length rather than a last address; which scheme has internal fragmentation only; a first-fit/best-fit
+  comparison on one hole list; a full hole trace with a numeric remainder; the 50-percent rule, next fit and
+  compaction; and a request sequence on which **first fit fails and best fit succeeds**. From paging: the two
+  accesses an unassisted translation costs, TLB reach as entries × page size, page-table size from entries × width,
+  the hit ratio needed to hold effective access time to a bound, why multi-level tables exist at all, page-size
+  trade-offs, and the size of one second-level table. From inverted tables: size set by physical memory, the process
+  identifier a per-process table does not need, table size in KB, the sharing objection, and an entry count on 16 GB.
+  From segmentation: the (segment, offset) address, a limit trap, segment-table size, the limit check and the
+  per-level table costs, segmentation against paging, and a full physical-address computation through a segment
+  table, a page table and a frame.
+- Every numeric answer was recomputed by script, not by hand: the first-fit/best-fit hole choices on the stated list;
+  the four-hole trace leaving 100 + 30 + 100 + 250 = **480 KB** free; both policies simulated on 120/150/400 KB with
+  requests 260/140/150 KB (first fit strands the request, best fit places all three); TLB reach 128 × 8 KB = **1 MB**;
+  page table 2¹⁹ × 8 B = **4 MB**; the hit-ratio bound solved from 120 + 100(1 − h) ≤ 130 → **h = 90 %**;
+  2¹⁸ × 8 B = 2 MB = **2048 KB** for a second-level table; the inverted table on 512 MB with 4 KB pages =
+  2¹⁷ × 8 B = **1024 KB**; 2³⁴ ÷ 2¹³ = **2097152** entries on 16 GB; 2¹² × 8 B = **32 KB** for a segment table; and
+  2050 → page 2, displacement 2, frame 40 → **40962**.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are (A, D),
+  (A, B, D), (A, B, C), (A, C, D) and (A, B, D) — checked by script.
+- Source tags: 13 `STANDARD_TEXTBOOK`, 12 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` holds one
+  Operating Systems entry, `PYQ-GATE2021S1-Q25`, which belongs to Unit 1; no memory-management previous-year question
+  has been verified against an official paper and answer key, so nothing in this paper is called an official GATE
+  question.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Operating Systems
+  Unit 3 paper. The `<style>` block (13243 bytes) and the exam `<script>` (9445 bytes) are **byte-identical** to that
+  paper, and the `:root` block still matches `design-tokens.css` and `index.html` byte for byte. Only the title,
+  header sub-line, candidate id, Question Bank count, meta strip, question payload, bank tab and About tab differ.
+- The bank-tab renderer was validated before use: rebuilding the donor's 350 bank cards from `master_bank.json`
+  reproduces its shipped markup **byte for byte**.
+- Verification by text and structure checks: 25 question cards with exactly one visible, 25 palette buttons, 25
+  `qno` labels, 15 × "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 375 bank cards
+  under six unit accordions, a balanced element tree (no unclosed or mismatched tags), the Answer Key tab disabled,
+  every active `.sol` empty and hidden, no `ansline` markup and no option marked in the question pane before submit,
+  and a payload that decodes to 25 answers and 25 solutions.
+- **Defect found and fixed in passing:** `data/questions-operating-systems.js` shipped with one extra closing bracket
+  at the end of the array, so the whole file failed to parse (`node`: `Unexpected token ']'`) and the portal's
+  archive view had no Operating Systems records at all. The bracket is removed and every `data/questions-*.js` file
+  now parses.
+- **Also repaired:** the status table's archived-set breakdown did not match the files (it read 61 sets with
+  "11 Compiler Design" and "9 Operating Systems" while disk held 65 in that breakdown and 61 in total). Every count
+  in the table below is now recomputed from the files: 119 papers, 57 current + 62 archived, 72 test cards, 2975
+  banked questions.
+- Portal: `index.html` gained one card (Operating Systems · Unit 4 · 2026-10-30) at the head of `tests`, with both
+  first-pass sets as its earlier sets; the 2026-10-28 Unit 4 card now points at the archived Set 2.
+  `data/questions-operating-systems.js` grew to 400 records, and the header counters were recomputed to **68 units**,
+  **72 test cards**, **2975 solved questions** and **293 subtopics**.
+- Hygiene: the paper is filed at exactly one path, `operating-systems/memory-paging/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (57 current and 62 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-30 — Operating Systems Unit 3, Set 1 of 2 (second pass)
 
