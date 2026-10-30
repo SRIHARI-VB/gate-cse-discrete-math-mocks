@@ -7,37 +7,108 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 2 of 2**, 2026-10-30 →
-  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html)
+- **Computer Architecture · Unit 3 — Memory Hierarchy & Cache Memory, Set 2 of 2**, 2026-10-30 →
+  [`computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html`](computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: synchronous & asynchronous counters (6) · FSM: Mealy & Moore machines (6) · state reduction &
-  assignment (6) · timing analysis (7)
-- Rotation: MODE A. Four subjects already carried a paper dated 2026-10-30 (computer-networks,
-  discrete-mathematics, operating-systems, programming-data-structures), so the draw was made over the other seven
-  and gave **Digital Logic**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-29, run 7, unit 4, sequential-fsm-counters, Set 1 of 2}`. Unit 4 held **25** questions, below
+- Subtopics: direct, associative & set-associative mapping (6) · cache hit/miss & miss penalty (7) ·
+  replacement algorithms (6) · write policies: write-through & write-back (6)
+- Rotation: MODE A. Five subjects already carried a paper dated 2026-10-30 (computer-networks,
+  discrete-mathematics, operating-systems, programming-data-structures, digital-logic), so the draw was made over the
+  other six and gave **Computer Architecture**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 3, unit 3, cache-memory, Set 1 of 2}`. Unit 3 held **25** questions, below
   `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held the
-  rotation and produced **Set 2 of 2**; step B4 was not reached. Unit 4 now holds **50** questions, exactly at the
-  cap, so the next Digital Logic run advances `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` → **Unit 1 —
-  Number Systems & Representation**. No override was used and no unit exceeds 50 questions.
-- The superseded Set 1 paper moved to `archive/gate_dl_mock_4_2026-10-29_run1.html` with its content frozen; the
+  rotation and produced **Set 2 of 2**; step B4 was not reached. Unit 3 now holds **50** questions, exactly at the
+  cap, so the next Computer Architecture run advances `(index_of(cache-memory) = 2 + 1) mod 6 = 3` → **Unit 4 —
+  Main Memory & Virtual Memory Interface**. No override was used and no unit exceeds 50 questions.
+- The superseded Set 1 paper moved to `archive/gate_co_mock_3_2026-10-29_run1.html` with its content frozen; the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- The paper's Question Bank tab lists **175** solved questions — Units 1–3 at 50 each plus the 25 questions of
-  Set 1 — against the 25 active questions of this set, which stay out of that list.
-- Previous test: **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 2 of 2**, 2026-10-30 →
-  [`computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`](computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html)
+- The paper's Question Bank tab lists **75** solved questions — Unit 2 at 50 plus the 25 questions of Set 1 — against
+  the 25 active questions of this set, which stay out of that list.
+- Previous test: **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 2 of 2**, 2026-10-30 →
+  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 106 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 52 current · 54 archived |
+| Papers published (current + archived) | 107 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
+| Current papers / archived sets | 53 current · 55 archived |
 | Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2650 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 75 Computer Architecture) |
+| Questions in the subject banks | 2675 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 54 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 55 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Computer Architecture Unit 3, Set 2 of 2
+
+- New paper at `computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html`. The Set 1 paper that held this
+  path was moved to `computer-architecture/cache-memory/archive/gate_co_mock_3_2026-10-29_run1.html` with its content
+  frozen (same 25 questions, options, answers, solutions and duration); the unit folder now holds exactly one current
+  paper.
+- **Rotation (Section 1, MODE A).** Five subjects already carried a 2026-10-30 paper — computer-networks,
+  discrete-mathematics, operating-systems, programming-data-structures and digital-logic — so the draw was restricted
+  to the six that had not (engineering-mathematics, computer-architecture, algorithms, theory-of-computation,
+  compiler-design, databases), and an unseeded `secrets.choice` gave **Computer Architecture**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{date 2026-10-29, run 3, unit 3, cache-memory, Set 1 of 2}`. Unit 3
+  held **25** questions, under `UNIT_QUESTION_CAP = 50`, and had been current since 2026-10-29, one day, under
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and Unit 3 was generated again as **Set 2 of 2**. Step B4 was not reached.
+  Unit 3 now holds **50** questions, so the next Computer Architecture run advances `(2 + 1) mod 6 = 3` → **Unit 4 —
+  Main Memory & Virtual Memory Interface**. No override, no second pass, no unit above 50.
+- Coverage: all four Unit 3 subtopics — direct, associative & set-associative mapping (6), cache hit/miss & miss
+  penalty (7), replacement algorithms (6), write policies: write-through & write-back (6). Composition 15 MCQ /
+  5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="computer-architecture"`, `data-unit="cache-memory"`,
+  `data-unit-number="3"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on every banked card in the Question Bank tab.
+- All 25 ids are new (`CO-U3-Q26`..`CO-U3-Q50`) and the bank is append-only. The set deliberately opens ground Set 1
+  left untouched: index and offset widths as separate questions, capacity from sets × ways, the number of memory
+  blocks competing for one line, the position of the index bits in the address, an AMAT budget solved for a miss
+  rate, the global-versus-local miss rate product, a two-level AMAT with a 30% L2 miss rate, LRU on four frames,
+  FIFO and LRU/optimal traces on new strings, a write-through store loop with and without write-allocate, the CPI cost
+  of an unbuffered store, and write-back traffic counted in dirty blocks rather than in stores.
+- No item is a `GATE_PYQ_VARIATION`: `verified_pyqs` is empty for Computer Architecture, and no cache, AMAT,
+  replacement or write-policy previous-year question has been verified against an official paper and answer key, so
+  nothing on this paper is claimed as an official GATE question. 13 items are `STANDARD_TEXTBOOK` and 12 are
+  `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A 64 KB direct-mapped cache with 32-byte blocks
+  has 2048 lines and **11** index bits; 512 sets × 16 ways × 32 B is **256 KB**; 2<sup>28</sup> blocks over
+  2<sup>11</sup> lines leaves **131072** blocks per line; 16-byte blocks and 256 sets put the index at **bits 4 to
+  11**; `2 + 0.05 × 60 =` **5** cycles; `1.2 + 1.2 × 0.02 × 100 = 3.6` CPI gives **1.8 s** at 2 GHz;
+  `(3 − 1)/100 =` **2%**; `0.06 × 0.20 =` **1.2%**; `1 + 0.04 × (8 + 0.3 × 150) =` **3.12** cycles; LRU on four frames
+  gives **6** hits; FIFO on the 15-reference string gives **12** misses; LRU and optimal give **(7, 6)**; the
+  write-through loop issues **400** writes; write-allocate plus write-through issues `8 + 2000 =` **2008** accesses;
+  `1 + 0.12 × 20 =` **3.4** CPI; and the NAT answers **1024**, **7.6**, **8**, **64** and **11** were each produced by
+  a trace or a formula in script, including a partition-free LRU/FIFO/OPT simulator for the three replacement counts.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, B, C), (A, B), (A, B, D), (A, B, C) and (A, B, C) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Computer
+  Architecture Unit 3 Set 1 paper. The `<style>` block, the exam `<script>` and the `:root` token block are
+  **byte-identical** to that paper, and the `:root` block still matches `design-tokens.css` and `index.html` byte for
+  byte. Only the title, header sub-line, Question Bank count, meta strip, question payload, bank tab, About tab and
+  payload differ.
+- The bank-tab renderer was validated before use: rebuilding Units 2 and 3 from `master_bank.json` reproduces the
+  shipped 50-question bank markup of the Set 1 paper exactly, once the donor's two raw `&` characters are normalised
+  to `&amp;` (the renderer escapes them correctly).
+- Verified in headless Chromium 153 from `file://` (**33 checks, all passing**): 25 question cards with exactly one
+  visible, a 25-button palette, the timer at 60:00, the Answer Key tab disabled and labelled locked, an empty key
+  pane, a hidden summary, every active `.sol` empty and hidden, no `ansline` markup in the question pane and no
+  option marked; the palette reaches `na` and `cur` through navigation and `mrk` through Mark for review; the Question
+  Bank tab renders **75** cards under two unit accordions and eight subtopic accordions with every answer collapsed,
+  and the active 25 ids do not appear in it. After answering every item correctly and submitting, the score reads
+  **35 / 35** with 25 correct, 0 incorrect, 25 `ok` palette buttons, 25 key cards and a revealed solution on every
+  card; an empty paper scores **0 / 35** with 25 `skip` buttons; and a paper whose five MSQ are each one option short
+  scores **25 / 35** with 5 wrong, which confirms that MSQ earns nothing without the exact set. No page errors.
+- The portal's data block was updated in place: the Computer Architecture Unit 3 record was replaced by this run's
+  record with `set: "Set 2 of 2"` and the Set 1 paper in `archives`, and the 25 records were appended to
+  `data/questions-computer-architecture.js`, which now carries 100. The static header strings were recomputed from the
+  data and now read **67** units, **62** test cards and **2675** solved questions; a headless run of the portal
+  renders **62** test cards and **2675** archive question cards, and every internal link resolves.
+- **Repaired this run:** the 25 Digital Logic Unit 4 Set 2 records in `data/questions-digital-logic.js` stored `unit`
+  as a string, so the archive view's strict `q.unit === u.n` test silently dropped them and the portal counted 2650
+  archive cards against 2675 banked questions; the field is now an integer like every other subject's, and the archive
+  count matches the banks at 2675.
+- Hygiene: the paper is filed at exactly one path, `computer-architecture/cache-memory/`, and nowhere else; no
+  temporary or loose file was left at the repository root.
 
 ### 2026-10-30 — Digital Logic Unit 4, Set 2 of 2
 

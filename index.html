@@ -171,7 +171,7 @@ footer.foot p{margin:6px 0}
   <div class="brand">GATE CSE 2027 · Mock Test Portal</div>
   <div class="sub">Daily mock tests &amp; solved question archive · 11 subjects</div>
   <div class="spacer"></div>
-  <div class="candidate"><b>SRIHARI V B</b>67 units &middot; 2600 solved questions banked</div>
+  <div class="candidate"><b>SRIHARI V B</b>67 units &middot; 2675 solved questions banked</div>
 </header>
 
 <nav class="tabs">
@@ -184,8 +184,8 @@ footer.foot p{margin:6px 0}
     <div class="banner info"><b>Test series portal.</b> One 25-question mock test per day on a rotating unit order; every test is a single self-contained HTML file that opens offline with a question palette, a running timer and answers locked until submission.</div>
     <div class="meta-strip">
       <span class="chip"><b>67</b> units in the series &middot; <b>62</b> test cards</span>
-      <span class="chip"><b>2600</b> solved questions in the review archive</span>
-      <span class="chip"><b>2600</b> records in the subject banks</span>
+      <span class="chip"><b>2675</b> solved questions in the review archive</span>
+      <span class="chip"><b>2675</b> records in the subject banks</span>
       <span class="chip">Syllabus covered: 67 units &middot; 289 subtopics</span>
     </div>
     <div class="grid2" id="testList"></div>
@@ -202,6 +202,34 @@ footer.foot p{margin:6px 0}
 
 <script id="data" type="text/plain">{
  "tests": [
+  {
+   "date": "2026-10-30",
+   "subject": "computer-architecture",
+   "subject_name": "Computer Architecture",
+   "unit": 3,
+   "unit_name": "Memory Hierarchy & Cache Memory",
+   "questions": 25,
+   "duration": 60,
+   "marks": 35,
+   "easy": 10,
+   "medium": 10,
+   "hard": 5,
+   "subtopics": [
+    "Direct, associative & set-associative mapping",
+    "Cache hit/miss & miss penalty",
+    "Replacement algorithms",
+    "Write policies: write-through & write-back"
+   ],
+   "path": "computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html",
+   "set": "Set 2 of 2",
+   "archives": [
+    {
+     "date": "2026-10-29",
+     "label": "Set 1",
+     "path": "computer-architecture/cache-memory/archive/gate_co_mock_3_2026-10-29_run1.html"
+    }
+   ]
+  },
   {
    "date": "2026-10-30",
    "subject": "digital-logic",
@@ -347,28 +375,6 @@ footer.foot p{margin:6px 0}
     "Data-flow analysis &amp; liveness"
    ],
    "path": "compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-29.html",
-   "set": "Set 1 of 2",
-   "archives": []
-  },
-  {
-   "date": "2026-10-29",
-   "subject": "computer-architecture",
-   "subject_name": "Computer Architecture",
-   "unit": 3,
-   "unit_name": "Memory Hierarchy & Cache Memory",
-   "questions": 25,
-   "duration": 60,
-   "marks": 35,
-   "easy": 10,
-   "medium": 10,
-   "hard": 5,
-   "subtopics": [
-    "Address mapping: direct, set-associative, fully associative",
-    "Cache hit/miss &amp; miss penalty (AMAT)",
-    "Replacement: LRU, FIFO, optimal",
-    "Write policies: write-through &amp; write-back"
-   ],
-   "path": "computer-architecture/cache-memory/gate_co_mock_3_2026-10-29.html",
    "set": "Set 1 of 2",
    "archives": []
   },
@@ -3619,7 +3625,7 @@ footer.foot p{margin:6px 0}
   "use strict";
   var D = JSON.parse(document.getElementById('data').textContent);
   // the question archive is externalised per subject (data/questions-<subject>.js)
-  // because a single portal file carrying 2600 records outgrew the delivery channel.
+  // because a single portal file carrying 2675 records outgrew the delivery channel.
   D.questions = [];
   if (window.GATE_BANK){
     Object.keys(window.GATE_BANK).forEach(function(k){
