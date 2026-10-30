@@ -7,33 +7,97 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Databases · Unit 4 — Transactions & Concurrency Control, Set 2 of 2**, 2026-10-31 →
-  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html)
+- **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
+  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: ACID properties (5) · schedules, serializability, conflict & view (5) · recoverability &
-  cascadelessness (5) · 2PL, strict & rigorous locking (5) · timestamp ordering & deadlocks (5)
-- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Databases**, whose most recent run
-  is `{2026-10-30, run 6, unit 4, transactions-concurrency, Set 1 of 2}`. Unit 4 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
-  same unit ran again: **Set 2 of 2**. Unit 4 now holds exactly **50** and closes; the next Databases run advances
-  `(3 + 1) mod 5 = 4` → Unit 5, Indexing, B-Trees & Storage. No override, no partial set.
-- The paper that held this unit (`gate_db_mock_4_2026-10-30.html`, Set 1 of 2) moved to
-  `databases/transactions-concurrency/archive/gate_db_mock_4_2026-10-30_run1.html` with its content frozen, so the
-  unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Computer Networks · Unit 6 — Application Layer & Network Security, Set 1 of 2**, 2026-10-31 →
-  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
+- Subtopics: BFS/DFS & edge classification (7) · topological sort (6) · Prim's algorithm (6) ·
+  Kruskal's algorithm & disjoint sets (6)
+- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Algorithms**, whose most recent run is
+  `{2026-10-30, run 8, unit 4, dynamic-programming, Set 2 of 2}`. Unit 4 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(dynamic-programming) = 3 + 1) mod 7 = 4` → **Unit 5 — Graph Algorithms: Traversals & Spanning Trees**.
+  Unit 5 held 0 questions, so this is its **Set 1 of 2**. No override, no partial set, no unit above 50.
+- The unit had no earlier paper, so nothing was archived: the unit folder holds exactly one current paper and the
+  repository root holds no copy.
+- Previous test: **Databases · Unit 4 — Transactions & Concurrency Control, Set 2 of 2**, 2026-10-31 →
+  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 124 (20 Discrete Mathematics, 8 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
-| Current papers / archived sets | 58 current · 66 archived |
-| Test cards on the portal | 75 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3100 (500 Discrete Mathematics, 200 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
+| Papers published (current + archived) | 125 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
+| Current papers / archived sets | 59 current · 66 archived |
+| Test cards on the portal | 76 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
+| Questions in the subject banks | 3125 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 66 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 3 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Algorithms Unit 5, Set 1 of 2
+
+- New paper at `algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`. Unit 5 had no earlier
+  paper, so nothing was archived and no `archive/` set exists for this unit yet; the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the eleven GATE CSE subjects was restricted to
+  the eight subjects that do not already carry a paper dated 2026-10-31 (Operating Systems, Databases and Computer
+  Networks do, and a second paper for one of those on the same date would be a defect rather than a rotation) and gave
+  **Algorithms**. `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 8, unit 4,
+  dynamic-programming, Set 2 of 2}`. Unit 4 held **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed
+  on the cap and step B4 advanced exactly one unit: `(index_of(dynamic-programming) = 3 + 1) mod 7 = 4` →
+  **Unit 5 — Graph Algorithms: Traversals & Spanning Trees**. Unit 5 held 0 questions, so this is its **Set 1 of 2**.
+  No override was used, no partial set was written, and no unit is above the cap.
+- Coverage: all four Unit 5 subtopics — BFS/DFS & edge classification (7); topological sort (6); Prim's algorithm (6);
+  Kruskal's algorithm & disjoint sets (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes.
+- Every question carries `data-subject="algorithms"`, `data-unit="graph-algorithms-traversals-mst"`,
+  `data-unit-number="5"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on all 200 banked cards in the Question Bank tab.
+- All 25 ids are new (`ALG-U5-Q01` … `ALG-U5-Q25`). The subject bank now holds **225** questions and the paper's
+  Question Bank tab shows the 200 that are not on it, so the active set does not reappear in the bank tab.
+- What the set asks. From traversal and edge classification: a full DFS discovery order; the back-edge count of an
+  undirected graph from `m − n + 1`; a cross edge in a directed DFS read off discovery times; a BFS level table and
+  the non-tree edges inside a level; the trees of a full DFS scan; and a forward-edge count that turns on
+  `d[v] > d[u]` for a black target. From topological sort: the acyclicity criterion; counting linear extensions of a
+  four-vertex and of a five-vertex DAG; Kahn's algorithm with a min-priority ready set, where a valid but
+  non-lexicographic order is the distractor; uniqueness forcing a Hamiltonian path; and a cycle that Kahn's
+  in-degree peel cannot reach. From Prim: a full MST weight; the vertex-addition order from a stated root; the cut
+  property as the correctness argument, with the cycle property inverted as the trap; three distinct minimum trees
+  when weights tie; and an MST with a negative edge. From Kruskal and disjoint sets: the first rejected edge; a path
+  compression that changes exactly two parent pointers; the `O(E log E)` bound with sorting dominant; union-by-rank
+  and inverse-Ackermann statements; and a seven-vertex Kruskal run with ties.
+- Every numeric answer was recomputed by script, not by hand: the DFS preorder `A, B, C, F, E, G, D`; the cross edge
+  `D→C` at discovery times `d[C] = 3 < d[D] = 6`; BFS levels `{A} / {B, C} / {D, E, F, G}` with **4** same-level
+  non-tree edges; **3** trees in the DFS forest; **2** forward edges (`A→C`, `B→E`); **2** topological orders for the
+  four-vertex DAG and **5** for the five-vertex DAG; the lexicographic Kahn order `A, B, D, C, E, F`; **3** vertices
+  removed before Kahn stalls; MST weight **15** with Prim's order `A, D, B, C, E, F`; **3** distinct minimum spanning
+  trees of the tied four-vertex graph; MST weight **4** with the negative edge; the first rejected edge `DE (6)`;
+  **2** changed parent entries after `find(4)`; and MST weight **15** on the seven-vertex graph.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, C),
+  (A, B, D), (A, B, D), (A, B, C) and (A, B, C).
+- Source tags: 15 `STANDARD_TEXTBOOK`, 10 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Algorithms: no traversal, topological-order, Prim, Kruskal or disjoint-set previous-year question has been verified
+  against an official paper and answer key, so nothing in this paper is called an official GATE question and the bank
+  tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Algorithms Unit 4
+  paper of 2026-10-30. The `<style>` block (13,243 bytes) and the exam `<script>` (9,411 bytes) are **byte-identical**
+  to that paper, the `:root` block still matches `design-tokens.css` and `index.html` byte for byte, and the 255 hex
+  values outside `:root` are exactly the donor's 255, so no new raw hex was introduced.
+- The bank-tab renderer was rebuilt from `master_bank.json` for this run, so the 200 bank cards carry the full
+  `data-*` attribute set that the newest shells already use. Unit 5's 25 questions are all on the active paper, so the
+  tab states that they are not repeated below, and Units 6–7 collapse to one line.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 ×
+  "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 200 bank cards under four unit
+  accordions plus the two-line empty note, a balanced element tree (the single `head` warning is the donor's own and
+  is unchanged), the Answer Key tab disabled, every active `.sol` empty and hidden, no `ansline` text in the question
+  pane before submit, and a payload that decodes to 25 answers and 25 solutions whose display strings agree with the
+  stored answer sets. A simulated perfect attempt scores **35 / 35**.
+- Portal: one new card at the head of `tests` — Algorithms · Unit 5 · 2026-10-31 — with no earlier sets.
+  `data/questions-algorithms.js` grew to 225 records and now parses. The header counters were recomputed from the
+  files to **68 units**, **76 test cards** and **3125 solved questions**; the two archive chips previously read 200
+  and are now the real record count of 3125.
+- Hygiene: the paper is filed at exactly one path, `algorithms/graph-algorithms-traversals-mst/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (59 current and 66 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-31 — Databases Unit 4, Set 2 of 2
 
