@@ -7,35 +7,74 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 1 of 2**, 2026-10-30 →
-  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
+- **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Random variables, CDF & PDF (5) · Uniform distribution (5) · Exponential distribution (5) ·
-  Normal distribution (5) · Correlation & covariance (5)
-- Rotation: MODE A. Ten subjects already carried a paper dated 2026-10-30, so the draw ran over the single
-  remaining subject (engineering-mathematics) and gave **Engineering Mathematics**. `runs[]` sorted by
-  `(date, run)` gave the most recent paper as `{2026-10-29, run 8, unit 4, calculus-optimization-integrals,
-  Set 2 of 2}`. Unit 4 held **50** questions, exactly `UNIT_QUESTION_CAP`, so step B4 advanced
-  `(index_of(calculus-optimization-integrals) = 3 + 1) mod 5 = 4` → **Unit 5 — Continuous Probability &
-  Distributions**. Unit 5 had no folder and no paper, so nothing was archived and no root copy was written.
-- Unit 5 now holds **25** questions, below the cap, so the next Engineering Mathematics run takes Unit 5 as
-  Set 2 of 2 before advancing to `(4 + 1) mod 5 = 0` → Unit 1, Linear Algebra: Matrices & Systems.
-- The paper's Question Bank tab lists **200** solved questions (Units 1–4) against the 25 active questions of
-  this set, which stay out of that list.
-- Previous test: **Algorithms · Unit 4 — Dynamic Programming, Set 1 of 2**, 2026-10-30 →
-  [`algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`](algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html)
+- Subtopics: Tokens, lexemes & patterns (7) · Regular expressions to lexers (6) · Lex input structure (6) ·
+  Input buffering & lookahead (6)
+- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full
+  eleven-subject list and gave **Compiler Design**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{2026-10-30, run 10, unit 5, runtime-code-optimization, Set 2 of 2}`. Unit 5 held **50** questions, exactly
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(runtime-code-optimization) = 4 + 1) mod 5 = 0` →
+  **Unit 1 — Lexical Analysis**. Every unit of Compiler Design is at the cap, so the modulo wrapped and a
+  **second pass** over the subject began (Section 1.B5).
+- The superseded current paper moved to
+  [`archive/gate_cd_mock_1_2026-10-26_run2.html`](compiler-design/lexical-analysis/archive/gate_cd_mock_1_2026-10-26_run2.html)
+  with its content frozen, so the unit folder holds exactly one current paper and the repository root holds no copy.
+- Unit 1 now holds **75** questions across two passes; the Question Bank tab lists the **250** solved items of
+  Units 1–5 that are not on this paper, against the 25 active questions of this set.
+- Previous test: **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 1 of 2**, 2026-10-30 →
+  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 112 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 10 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 55 current · 57 archived |
-| Test cards on the portal | 67 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 113 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 11 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
+| Current papers / archived sets | 55 current · 58 archived |
+| Test cards on the portal | 68 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2800 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 250 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
+| Questions in the subject banks | 2825 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 275 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 57 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 5 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 58 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 6 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Compiler Design Unit 1, Set 1 of 2 (second pass)
+
+- New paper at `compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html`. The 2026-10-26 paper that held
+  this path (first pass, Set 2 of 2) was moved to
+  `compiler-design/lexical-analysis/archive/gate_cd_mock_1_2026-10-26_run2.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-30, so the draw ran
+  over the full syllabus list of eleven with an unseeded `secrets.choice` and gave **Compiler Design**. `runs[]`
+  sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 10, unit 5, runtime-code-optimization,
+  Set 2 of 2}`. Unit 5 held **50** questions, exactly `UNIT_QUESTION_CAP`, so step B4 advanced
+  `(index_of(runtime-code-optimization) = 4 + 1) mod 5 = 0` → **Unit 1 — Lexical Analysis**. Every unit of the
+  subject is at the cap, so step B5 applied: the modulo wrapped and a **second pass** over Compiler Design began.
+  No override, no partial set.
+- Coverage: all four Unit 1 subtopics — tokens, lexemes & patterns (7), regular expressions to lexers (6), Lex input
+  structure (6), input buffering & lookahead (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; 60 minutes, 35 marks.
+- All 25 items are new (`CD-U1-Q51` … `CD-U1-Q75`); no id and no normalised stem collides with the 50 first-pass
+  Unit 1 items or with the other 200 banked Compiler Design items.
+- **No official PYQ is claimed.** `verified_pyqs` for Compiler Design is empty, so no item carries
+  `data-source="GATE_PYQ_VARIATION"` and nothing on this paper is described as an official GATE question.
+- **Every numeric answer recomputed by script**, not by hand: 5 distinct token names for `total = total + 1;`;
+  `1 + 3 + 5 + 4 + 6 = 19` states for the union NFA; rule 3 for `abc` under maximal munch; `10000 − 2(4096) = 1808`
+  bytes in the last read; 2 sentinel hits for a token spanning offsets 1000–2499 with halves of 1024. The DFA
+  claims were checked by brute force over all strings up to length 6: `[A-Za-z_][A-Za-z0-9_]*[0-9]` and its three
+  distractors over every string up to length 4, `(a*b*)*`, `(a*|b*)*` and `(ε|a|b)*` against `(a|b)*` up to length 6,
+  and the four comment patterns against `/**/`, `/***/`, `/* a * b */` and a multi-line comment.
+- **Shell parity.** The new paper's `<style>` block and its exam JavaScript are byte-identical to the
+  2026-10-30 Compiler Design Unit 5 paper; only the metadata, the question payload and the bank list differ.
+- Question Bank tab: **250** solved questions from Units 1–5 with the 25 active items excluded, 0 verified PYQs.
+- Verification: 25 test cards numbered 1–25, 25 palette buttons, 250 bank cards, `:root` byte-identical to
+  `design-tokens.css` and `index.html`, every `href`/path in the portal resolving, 113 papers on disk against
+  68 cards (superseded sets are links on their card), and the portal counts regenerated from the banks (2825 records).
+- **Defect found and fixed in passing:** `compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html`
+  shipped with its cards numbered `data-n="26"…"50"` while its palette and its grading script used 1–25, so no card
+  was ever shown and no answer was ever scored. Cards, `qno` labels, input `data-n`/`name` attributes and payload keys
+  were renumbered 26–50 → 1–25. Content, answers and solutions are unchanged.
 
 ### 2026-10-30 — Engineering Mathematics Unit 5, Set 1 of 2
 
@@ -1030,6 +1069,13 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Compiler Design → Unit 1 (Lexical Analysis), Set 1 of 2 (second pass).**
+  MODE A: all eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject
+  list with an unseeded `secrets.choice` and gave **Compiler Design**. Most recent run in `runs[]` was
+  `{2026-10-30, run 10, unit 5, runtime-code-optimization, Set 2 of 2}`; Unit 5 held 50 questions, exactly at
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(4 + 1) mod 5 = 0` → Unit 1. Every unit of the subject is at the cap, so
+  step B5 applied and a second pass began. Unit 1 now holds **75** questions across two passes; the Question Bank tab
+  shows the 250 solved items that are not on this paper. No override, no unit above 50.
 - **2026-10-30, Engineering Mathematics → Unit 5 (Continuous Probability & Distributions), Set 1 of 2.**
   MODE A: ten subjects already carried a paper dated 2026-10-30, so the draw ran over the single remaining
   subject (engineering-mathematics) and gave **Engineering Mathematics**. Most recent run in `runs[]` was
@@ -5166,7 +5212,7 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Lexical Analysis | `lexical-analysis` | 50 | yes |
+| 1 | Lexical Analysis | `lexical-analysis` | 75 | yes |
 | 2 | Syntax Analysis: Top-Down Parsing | `top-down-parsing` | 50 | yes |
 | 3 | Syntax Analysis: Bottom-Up Parsing | `bottom-up-parsing` | 50 | yes |
 | 4 | Syntax-Directed Translation & Intermediate Code | `sdt-intermediate-code` | 50 | yes |
@@ -5270,6 +5316,12 @@ options fail, common misconception, faster method, takeaway). Banked historical 
 review interface.
 
 ## Known deviations (to be fixed in one pass across every paper)
+
+- ~~`compiler-design/runtime-code-optimization/gate_cd_mock_5_2026-10-30.html` numbered its cards
+  `data-n="26"…"50"` while the palette and the grading loop used 1–25, so `show(1)` found no card and `P.ans[n]` was
+  `undefined` for every n.~~ **Fixed 2026-10-30** in the same commit as the Compiler Design Unit 1 paper: cards,
+  `qno` labels, input `data-n`/`name` attributes and the base64 payload keys were renumbered 26–50 → 1–25, content
+  untouched. No other paper was affected (checked across all 113 files).
 
 - **`#view-about` is never closed, so the provenance footer is invisible (found 2026-10-28, not fixed).** In the
   shared shell the About view opens with `<div class="hidden" id="view-about">` and ends after its last card with a
