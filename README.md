@@ -7,33 +7,66 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 4 — Dynamic Programming, Set 2 of 2**, 2026-10-30 →
-  [`algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`](algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html)
+- **Computer Architecture · Unit 4 — Main Memory & Virtual Memory Interface, Set 2 of 2**, 2026-10-30 →
+  [`computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`](computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: matrix-chain multiplication (7) · longest common subsequence (6) · 0-1 knapsack (6) ·
-  all-pairs shortest paths, Floyd–Warshall (6)
-- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Algorithms**. The most recent run
-  for the subject was `{2026-10-30, run 7, unit 4, dynamic-programming, Set 1 of 2}`. Unit 4 held **25** questions,
-  below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so step B3
-  held and the same unit ran again as **Set 2 of 2**. Unit 4 now holds exactly 50 and closes. No override, no
-  partial set.
+- Subtopics: paging and the TLB (9) · DRAM and SRAM organisation (7) · effective access time (5) · segmentation (4)
+- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Computer Architecture**. The most
+  recent run for the subject was `{2026-10-30, run 5, unit 4, memory-management-unit, Set 1 of 2}`. Unit 4 held
+  **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the same unit ran again as **Set 2 of 2**. Unit 4 now holds exactly
+  50 and closes. No override, no partial set.
 - The superseded Set 1 paper moved to
-  [`archive/gate_algo_mock_4_2026-10-30_run1.html`](algorithms/dynamic-programming/archive/gate_algo_mock_4_2026-10-30_run1.html);
+  [`archive/gate_co_mock_4_2026-10-30_run1.html`](computer-architecture/memory-management-unit/archive/gate_co_mock_4_2026-10-30_run1.html);
   the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Operating Systems · Unit 4 — Memory Management & Paging, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html`](operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html)
+- Previous test: **Algorithms · Unit 4 — Dynamic Programming, Set 2 of 2**, 2026-10-30 →
+  [`algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`](algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 120 (20 Discrete Mathematics, 8 Algorithms, 7 Databases, 12 Compiler Design, 16 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 57 current · 63 archived |
+| Papers published (current + archived) | 121 (20 Discrete Mathematics, 8 Algorithms, 7 Databases, 12 Compiler Design, 16 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
+| Current papers / archived sets | 57 current · 64 archived |
 | Test cards on the portal | 72 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3000 (500 Discrete Mathematics, 200 Algorithms, 175 Databases, 300 Compiler Design, 400 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 3025 (500 Discrete Mathematics, 200 Algorithms, 175 Databases, 300 Compiler Design, 400 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 63 (10 Discrete Mathematics, 10 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 64 (10 Discrete Mathematics, 10 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 3 Databases, 3 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-30 — Computer Architecture Unit 4, Set 2 of 2
+
+- New paper at `computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`. The paper that held this
+  path (Set 1 of 2) was moved to
+  `computer-architecture/memory-management-unit/archive/gate_co_mock_4_2026-10-30_run1.html` with its content frozen
+  (same 25 questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper
+  and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the eleven GATE CSE subjects gave **Computer
+  Architecture**. `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 5, unit 4,
+  memory-management-unit, Set 1 of 2}`. Unit 4 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been
+  current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit
+  was generated again as **Set 2 of 2**. 25 + 25 = 50 closes the unit at the cap. No override, no partial set, no unit
+  above 50, no second pass started.
+- Coverage: all four Unit 4 subtopics — paging and the TLB (9), DRAM and SRAM organisation (7), effective access time
+  (5), segmentation (4). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = **35** in 60 minutes.
+- Every question carries `data-subject="computer-architecture"`, `data-unit="memory-management-unit"`,
+  `data-unit-number="4"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active paper
+  and on all 125 banked cards in the Question Bank tab.
+- All 25 ids are new (`CO-U4-Q26` … `CO-U4-Q50`); no id and no normalised stem collides with the 25 Set 1 items or with
+  the other 100 banked Computer Architecture items. The subject bank now holds **150** questions and the paper's
+  Question Bank tab shows the 125 that are not on it (no duplicate content between the test and the bank).
+- Set 1 tested cell structure, refresh interval, address multiplexing, chip counts, page-offset widths, page-table size,
+  multi-level splitting, TLB sets, EAT arithmetic, solving for the hit ratio and base/limit trapping. Set 2 moves to
+  capacity from address lines, refresh *overhead*, low-order interleaving, an inverted page table, frame-number width,
+  a worked logical-address split, chip-select decoding, level count for 48-bit addresses, expected memory accesses,
+  TLB reach, page-size trade-offs and segmentation combined with paging. Only three themes overlap (EAT arithmetic,
+  page-table sizing, segmentation addressing) and each is asked from a different angle with different numbers.
+- Verified official PYQs in this paper: none. No previous-year question on this unit has been checked against an
+  official paper and answer key, so nothing here is labelled official.
+- Portal: `index.html` data block updated in place — the Computer Architecture Unit 4 card now reads **Set 2 of 2**
+  and carries the "Earlier sets for this date: Set 1" link; no card was added, since the unit-date already had one.
+  `data/questions-computer-architecture.js` gained the 25 new records for the archive view.
 
 ### 2026-10-30 — Algorithms Unit 4, Set 2 of 2
 
