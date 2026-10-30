@@ -7,32 +7,107 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
-  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
+- **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 2 of 2**, 2026-10-31 →
+  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: BFS/DFS & edge classification (7) · topological sort (6) · Prim's algorithm (6) ·
-  Kruskal's algorithm & disjoint sets (6)
-- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Algorithms**, whose most recent run is
-  `{2026-10-30, run 8, unit 4, dynamic-programming, Set 2 of 2}`. Unit 4 held **50** questions, exactly
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(dynamic-programming) = 3 + 1) mod 7 = 4` → **Unit 5 — Graph Algorithms: Traversals & Spanning Trees**.
-  Unit 5 held 0 questions, so this is its **Set 1 of 2**. No override, no partial set, no unit above 50.
-- The unit had no earlier paper, so nothing was archived: the unit folder holds exactly one current paper and the
-  repository root holds no copy.
-- Previous test: **Databases · Unit 4 — Transactions & Concurrency Control, Set 2 of 2**, 2026-10-31 →
-  [`databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html`](databases/transactions-concurrency/gate_db_mock_4_2026-10-31.html)
+- Subtopics: heap order & min-max heaps (7) · heapify & the bottom-up build (6) · heap sort (6) ·
+  priority queue applications (6)
+- Rotation: MODE A. An unseeded `secrets.choice` over the seven subjects that carry no paper dated 2026-10-31 gave
+  **Programming and Data Structures**, whose most recent run is `{2026-10-30, run 11, unit 6, heaps-priority-queues,
+  Set 1 of 2}`. Unit 6 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the same unit ran again as **Set 2 of 2**.
+  Unit 6 now holds exactly **50** questions and closes, so the next Programming and Data Structures run advances
+  `(index_of(heaps-priority-queues) = 5 + 1) mod 7 = 6` → **Unit 7 — Hashing & Hash Tables**. No override, no partial
+  set, no unit above the cap.
+- The Set 1 paper of 2026-10-30 was moved to
+  `programming-data-structures/heaps-priority-queues/archive/gate_ds_mock_6_2026-10-30_run1.html` with its content
+  frozen: the unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
+  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 125 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
-| Current papers / archived sets | 59 current · 66 archived |
-| Test cards on the portal | 76 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 126 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 6 Computer Architecture) |
+| Current papers / archived sets | 59 current · 67 archived |
+| Test cards on the portal | 77 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3125 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
+| Questions in the subject banks | 3150 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 150 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 66 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 3 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 67 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 3 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Programming and Data Structures Unit 6, Set 2 of 2
+
+- New paper at `programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html`. The paper that held
+  this unit (`gate_ds_mock_6_2026-10-30.html`, Set 1 of 2) was moved to
+  `programming-data-structures/heaps-priority-queues/archive/gate_ds_mock_6_2026-10-30_run1.html` with its content
+  frozen (same 25 questions, options, answers, solutions and duration); the unit folder now holds exactly one current
+  paper and the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the seven GATE CSE subjects that do not already
+  carry a paper dated 2026-10-31 (Algorithms, Databases, Computer Networks and Operating Systems do, and a second paper
+  for one of those on the same date would be a defect rather than a rotation) gave **Programming and Data Structures**.
+  `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 11, unit 6, heaps-priority-queues,
+  Set 1 of 2}`. Unit 6 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit was generated again as
+  **Set 2 of 2**. Unit 6 now holds exactly **50** questions and closes at the cap, so the next Programming and Data
+  Structures run advances `(index_of(heaps-priority-queues) = 5 + 1) mod 7 = 6` → Unit 7, Hashing & Hash Tables. No
+  override, no partial set, no unit above the cap, no second pass started.
+- Coverage: all four Unit 6 subtopics — heap order & min-max heaps (7); heapify & the bottom-up build (6); heap sort
+  (6); priority queue applications (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = **35** in 60 minutes.
+- Every question carries `data-subject="programming-data-structures"`, `data-unit="heaps-priority-queues"`,
+  `data-unit-number="6"`, its subtopic slug, its type, its lowercase difficulty and its source tag — on the active
+  paper and on all 275 banked cards in the Question Bank tab.
+- All 25 ids are new (`DS-U6-Q26` … `DS-U6-Q50`); no id and no normalised stem collides with the 25 Set 1 items or with
+  the other 250 banked Programming and Data Structures items. The subject bank now holds **300** questions and the
+  paper's Question Bank tab shows the 275 that are not on it, so the active set does not reappear in the bank tab.
+- Set 1 tested the parent–child invariant, where the smallest key of a max-heap can lie, a valid-array check, the
+  one-child node count, the definition of a min-max heap, the build's complexity, two build traces, a heapify result,
+  the height-weighted proof, delete-max, the extraction loop's complexity and space, the min-heap variant, cache
+  behaviour, the MAX-HEAPIFY call count, heap-versus-array bounds, Huffman totals, the top-k stream and k-way merging.
+  This set takes other ground: leaves against internal nodes, the position of the second largest and of the second
+  smallest key, the last index with two children, counting the distinct max-heaps on six keys, the subtree guarantees
+  of a min-max heap on each level and why its maximum is not confined to the root's children; the last internal node,
+  the single subtree MAX-HEAPIFY recurses into, a build-min-heap trace, a heapify result, the ascending-array exchange
+  count and the statements that make the build linear; heapsort's instability, its extraction-exchange count, two
+  extraction traces, its Θ(n log n) accounting and the number of inputs that need no exchange at all; and the linear
+  cost of searching a heap by value, O(1) access to the minimum, two Huffman runs and the trade-off between arrays,
+  heaps, Fibonacci heaps and balanced trees.
+- Every numeric answer was recomputed by script, not by hand: the last index with two children for n = 45 is **22**;
+  there are **20** distinct max-heaps on 6 keys and **8** input permutations of 5 keys that need no exchange;
+  build-min-heap on the descending array `[9,8,7,6,5,4,3,2,1]` ends at `[1,2,3,6,5,4,7,8,9]` with **A[4] = 6**;
+  MAX-HEAPIFY(A,2) on `[20,5,12,11,9,8,7]` gives `[20,11,12,5,9,8,7]`; build-max-heap on `[1..7]` performs **4**
+  exchanges; heapsort on `[3,9,2,7,5,8,1,6]` leaves **A[1] = 8** after the first extraction; the same step on
+  `[16,14,10,8,7,9,3,2,4,1]` gives `[14,8,10,4,7,9,3,2,1,16]`; Huffman on 4, 5, 6, 9, 11, 15 costs **124** bits and the
+  symbol of frequency 45 in 5, 9, 12, 13, 16, 45 gets a **1-bit** codeword; and the top-10 stream over 1000 numbers
+  performs at most **990** sift-downs.
+- The correct option is spread 4 A / 4 B / 3 C / 4 D across the 15 MCQ; the five MSQ answer sets are (A, B, D),
+  (B, C, D), (A, C, D), (A, B, D) and (A, C, D).
+- Source tags: 16 `STANDARD_TEXTBOOK`, 9 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Programming and Data Structures: no heaps, heap-construction, heap-sort or priority-queue previous-year question has
+  been verified against an official paper and answer key, so nothing in this paper is called an official GATE question
+  and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Algorithms Unit 5
+  paper of 2026-10-31. The `<style>` block (13,243 bytes) and the exam `<script>` (9,445 bytes) are **byte-identical**
+  to that paper, the `:root` block still matches `design-tokens.css` and `index.html` byte for byte, and the 145 hex
+  values outside `:root` are a subset of the donor's 255, so no new raw hex was introduced.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 × "Marks: 1"
+  and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 275 bank cards under six unit accordions plus
+  the single line for Unit 7, a balanced element tree (the single `head` warning is the donor's own and unchanged),
+  the Answer Key tab disabled, every active `.sol` empty and hidden, no `ansline` text in the question pane before
+  submit, and a payload that decodes to 25 answers and 25 solutions whose display strings agree with the stored answer
+  sets. A simulated perfect attempt scores **35 / 35**.
+- Portal: one new card at the head of `tests` — Programming and Data Structures · Unit 6 · 2026-10-31 — with the frozen
+  2026-10-30 Set 1 as its earlier set; the 2026-10-30 card now points at `archive/gate_ds_mock_6_2026-10-30_run1.html`.
+  `data/questions-programming-data-structures.js` grew to 300 records and the header counters were recomputed from the
+  files to **68 units**, **77 test cards** and **3150 solved questions**.
+- Hygiene: the paper is filed at exactly one path, `programming-data-structures/heaps-priority-queues/`, and nowhere
+  else; `find . -name "*.html"` returns `index.html` plus one file per paper (59 current and 67 archived); no temporary
+  or loose file was left at the repository root.
+- Known pre-existing deviation, unchanged by this run: `digital-logic/number-systems/` holds two current papers
+  (`gate_dl_mock_1_2026-10-26.html` and `gate_dl_mock_1_2026-10-27.html`), both of which the portal lists as separate
+  cards. No file of that subject was touched here; the unit needs one of the two archived on a later Digital Logic run.
 
 ### 2026-10-31 — Algorithms Unit 5, Set 1 of 2
 
