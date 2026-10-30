@@ -95,6 +95,12 @@ and no answer, option mark or hint visible until the test is submitted.
   **52** current, **54** archived, **62** test cards, **2650** banked questions.
 - Hygiene: the paper is filed at exactly one path, `digital-logic/sequential-fsm-counters/`, and nowhere else; no
   temporary or loose file was left at the repository root.
+- Correction after the first push (commit `9d1998d`): Q15's two path delay ranges were transposed in the draft —
+  the path with the *smallest* minimum delay is the hold risk, not the one with the largest maximum — so the two
+  ranges were swapped (P now 3.5–5.0 ns, Q now 0.5–4.0 ns) and option (A) now reads "P sets the maximum clock
+  frequency and Q is the path that can violate hold". Q4's step for the 010 → 111 transition now says which bits
+  toggle instead of claiming all three do. Both fixes were rebuilt into the paper, the bank, `data/questions-
+  digital-logic.js` and re-verified in headless Chromium (35/35, 0/35 and 25/35 all unchanged).
 
 ### 2026-10-30 — Computer Networks Unit 5, Set 2 of 2
 
