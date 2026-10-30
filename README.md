@@ -7,36 +7,70 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html)
+- **Computer Architecture · Unit 4 — Main Memory & Virtual Memory Interface, Set 1 of 2**, 2026-10-30 →
+  [`computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`](computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Tokens, lexemes & patterns (7) · Regular expressions to lexers (6) · Lex input structure (6) ·
-  Input buffering & lookahead (6)
+- Subtopics: DRAM & SRAM organisation (6) · Paging & TLB hit ratio (8) · Effective access time (6) ·
+  Segmentation (5)
 - Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full
-  eleven-subject list and gave **Compiler Design**. `runs[]` sorted by `(date, run)` gave the most recent paper as
-  `{2026-10-30, run 10, unit 5, runtime-code-optimization, Set 2 of 2}`. Unit 5 held **50** questions, exactly
-  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(runtime-code-optimization) = 4 + 1) mod 5 = 0` →
-  **Unit 1 — Lexical Analysis**. Every unit of Compiler Design is at the cap, so the modulo wrapped and a
-  **second pass** over the subject began (Section 1.B5).
-- The superseded current paper moved to
-  [`archive/gate_cd_mock_1_2026-10-26_run2.html`](compiler-design/lexical-analysis/archive/gate_cd_mock_1_2026-10-26_run2.html)
-  with its content frozen, so the unit folder holds exactly one current paper and the repository root holds no copy.
-- Unit 1 now holds **75** questions across two passes; the Question Bank tab lists the **250** solved items of
-  Units 1–5 that are not on this paper, against the 25 active questions of this set.
-- Previous test: **Engineering Mathematics · Unit 5 — Continuous Probability & Distributions, Set 1 of 2**, 2026-10-30 →
-  [`engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html`](engineering-mathematics/probability-distributions/gate_em_mock_5_2026-10-30.html)
+  eleven-subject list and gave **Computer Architecture**. `runs[]` sorted by `(date, run)` gave the most recent
+  paper as `{2026-10-30, run 4, unit 3, cache-memory, Set 2 of 2}`. Unit 3 held **50** questions, exactly
+  `UNIT_QUESTION_CAP`, so step B4 advanced `(index_of(cache-memory) = 2 + 1) mod 6 = 3` →
+  **Unit 4 — Main Memory & Virtual Memory Interface**.
+- Unit 4 had no folder and no paper, so nothing was archived: the unit folder holds exactly one current paper and
+  the repository root holds no copy.
+- Unit 4 now holds **25** questions, below the cap, so the next Computer Architecture run re-selects Unit 4 as
+  Set 2 of 2 before advancing to `(3 + 1) mod 6 = 4` → Unit 5, Instruction Pipelining.
+- The Question Bank tab lists the **100** solved items of Units 2–3 that are not on this paper, against the 25
+  active questions of this set.
+- Previous test: **Compiler Design · Unit 1 — Lexical Analysis, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html`](compiler-design/lexical-analysis/gate_cd_mock_1_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 113 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 11 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 4 Computer Architecture) |
-| Current papers / archived sets | 55 current · 58 archived |
-| Test cards on the portal | 68 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2825 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 275 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 100 Computer Architecture) |
+| Papers published (current + archived) | 114 (19 Discrete Mathematics, 7 Algorithms, 7 Databases, 11 Compiler Design, 14 Operating Systems, 9 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 56 current · 58 archived |
+| Test cards on the portal | 69 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 9 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
+| Questions in the subject banks | 2850 (475 Discrete Mathematics, 175 Algorithms, 175 Databases, 275 Compiler Design, 350 Operating Systems, 225 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 58 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 6 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 9 Theory of Computation, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Computer Architecture Unit 4, Set 1 of 2
+
+- New paper at `computer-architecture/memory-management-unit/gate_co_mock_4_2026-10-30.html`. Unit 4 had no folder
+  and no paper before this run, so nothing was archived; the unit folder now holds exactly one current paper and
+  the repository root holds no copy.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-30, so the draw ran
+  over the full eleven-subject list with an unseeded `secrets.choice` and gave **Computer Architecture**. `runs[]`
+  sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 4, unit 3, cache-memory, Set 2 of 2}`.
+  Unit 3 held **50** questions, exactly `UNIT_QUESTION_CAP = 50`, so step B4 advanced
+  `(index_of(cache-memory) = 2 + 1) mod 6 = 3` → **Unit 4 — Main Memory & Virtual Memory Interface**
+  (`memory-management-unit`). No override was used and no partial set was generated.
+- Coverage: all four Unit 4 subtopics — DRAM & SRAM organisation (6), paging & TLB hit ratio (8), effective access
+  time (6), segmentation (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  60 minutes, 35 marks.
+- All 25 items are new (`CO-U4-Q01` … `CO-U4-Q25`); no id collides with the 100 banked Computer Architecture items
+  of Units 2–3.
+- **Every numeric answer was recomputed by script, not by hand.** The memory arithmetic: 20 address lines for a
+  1M × 8 chip, 32 chips for 64 MB from 4M × 4-bit parts, a 15.625 µs refresh cycle over 4096 rows in 64 ms,
+  2²⁰ addressable locations from 10 + 10 multiplexed pins. The virtual-memory arithmetic: 2²⁰ page-table entries
+  and a 4 MB table for 32-bit addresses with 4 KB pages and 4-byte entries, a 10-bit outer index in two-level
+  paging, 16 sets in a 64-entry 4-way TLB, 2¹⁹ = 524 288 frames in 2 GB, 4096 entries and a 16 KB page table for a
+  2²⁴-byte segment. The effective-access-time arithmetic: 98 ns and 112 ns for the one-level and two-level cases,
+  120 ns against 115 ns for the 90% → 95% comparison, and 70% solved from EAT = 150 ns with t = 20 ns, m = 100 ns.
+- **No official PYQ is claimed.** `verified_pyqs` for Computer Architecture is empty, so no item carries
+  `GATE_PYQ_VARIATION` and nothing on this paper is described as an official GATE question. The About tab and the
+  Question Bank tab both say so.
+- The Question Bank tab inside the paper carries the **100** solved items of Units 2–3 with their answers and full
+  solutions, and excludes the 25 active questions of this set.
+- The portal's data block was updated in place: the new Unit 4 test record was inserted at the head of `tests`, a
+  Unit 4 record was added to `units` for Computer Architecture, and the 25 new questions were appended to
+  `data/questions-computer-architecture.js`.
+- Shell parity: the paper's `<style>` block and engine script are byte-identical to the Computer Architecture
+  Unit 3 paper; only the payload and the metadata differ.
 
 ### 2026-10-30 — Compiler Design Unit 1, Set 1 of 2 (second pass)
 
