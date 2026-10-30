@@ -7,37 +7,94 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 2 of 2**, 2026-10-30 →
-  [`computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`](computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html)
+- **Digital Logic · Unit 4 — Sequential Circuits: Counters & State Machines, Set 2 of 2**, 2026-10-30 →
+  [`digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html`](digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: UDP datagrams (6) · TCP header & connection management (7) · flow control & sliding window (6) ·
-  congestion control: slow start & AIMD (6)
-- Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects and it gave
-  **Computer Networks**. `runs[]` sorted by `(date, run)` gives the most recent paper as
-  `{date 2026-10-30, run 9, unit 5, transport-layer, Set 1 of 2}`. Unit 5 held **25** questions, below
-  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held the rotation and produced
-  **Set 2 of 2**; step B4 was not reached. Unit 5 now holds **50** questions, exactly at the cap, so the next
-  Computer Networks run advances `(index_of(transport-layer) = 4 + 1) mod 6 = 5` → **Unit 6 — Application Layer
-  & Network Security**. No override was used and no unit exceeds 50 questions.
-- The superseded Set 1 paper moved to `archive/gate_cn_mock_5_2026-10-30_run1.html` with its content frozen; the
+- Subtopics: synchronous & asynchronous counters (6) · FSM: Mealy & Moore machines (6) · state reduction &
+  assignment (6) · timing analysis (7)
+- Rotation: MODE A. Four subjects already carried a paper dated 2026-10-30 (computer-networks,
+  discrete-mathematics, operating-systems, programming-data-structures), so the draw was made over the other seven
+  and gave **Digital Logic**. `runs[]` sorted by `(date, run)` gives the most recent paper as
+  `{date 2026-10-29, run 7, unit 4, sequential-fsm-counters, Set 1 of 2}`. Unit 4 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held the
+  rotation and produced **Set 2 of 2**; step B4 was not reached. Unit 4 now holds **50** questions, exactly at the
+  cap, so the next Digital Logic run advances `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` → **Unit 1 —
+  Number Systems & Representation**. No override was used and no unit exceeds 50 questions.
+- The superseded Set 1 paper moved to `archive/gate_dl_mock_4_2026-10-29_run1.html` with its content frozen; the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- The paper's Question Bank tab lists **225** solved questions — Units 1–4 at 50 each plus the 25 questions of
-  Set 1 — against the 25 active questions of this set, which stay out of that list. Unit 6 collapses to one line.
-- Previous test: **Discrete Mathematics · Unit 8 — Recurrence Relations & Generating Functions, Set 2 of 2**,
-  2026-10-30 →
-  [`discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html`](discrete-mathematics/recurrence-generating-functions/gate_dm_mock_8_2026-10-30.html)
+- The paper's Question Bank tab lists **175** solved questions — Units 1–3 at 50 each plus the 25 questions of
+  Set 1 — against the 25 active questions of this set, which stay out of that list.
+- Previous test: **Computer Networks · Unit 5 — Transport Layer: TCP, UDP & Congestion, Set 2 of 2**, 2026-10-30 →
+  [`computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html`](computer-networks/transport-layer/gate_cn_mock_5_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 105 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 7 Digital Logic, 3 Computer Architecture) |
-| Current papers / archived sets | 52 current · 53 archived |
+| Papers published (current + archived) | 106 (19 Discrete Mathematics, 6 Algorithms, 6 Databases, 9 Compiler Design, 14 Operating Systems, 8 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 12 Theory of Computation, 8 Digital Logic, 3 Computer Architecture) |
+| Current papers / archived sets | 52 current · 54 archived |
 | Test cards on the portal | 62 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 9 of 16 in Discrete Mathematics; 3 of 7 in Algorithms; 3 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 4 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 2 of 6 in Computer Architecture |
-| Questions in the subject banks | 2625 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 175 Digital Logic, 75 Computer Architecture) |
+| Questions in the subject banks | 2650 (475 Discrete Mathematics, 150 Algorithms, 150 Databases, 225 Compiler Design, 350 Operating Systems, 200 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 300 Theory of Computation, 200 Digital Logic, 75 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 53 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 2 Digital Logic, 1 Computer Architecture) |
+| Archived sets (earlier runs) | 54 (10 Discrete Mathematics, 3 Algorithms, 3 Databases, 4 Compiler Design, 8 Operating Systems, 4 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 8 Theory of Computation, 3 Digital Logic, 1 Computer Architecture) |
+
+### 2026-10-30 — Digital Logic Unit 4, Set 2 of 2
+
+- New paper at `digital-logic/sequential-fsm-counters/gate_dl_mock_4_2026-10-30.html`. The Set 1 paper that held
+  this path was moved to `digital-logic/sequential-fsm-counters/archive/gate_dl_mock_4_2026-10-29_run1.html` with its
+  content frozen (same 25 questions, options, answers, solutions and duration); the unit folder now holds exactly one
+  current paper.
+- **Rotation (Section 1, MODE A).** Four subjects already carried a 2026-10-30 paper, so the draw was restricted to
+  the seven that had not — algorithms, compiler-design, computer-architecture, databases, digital-logic,
+  engineering-mathematics, theory-of-computation — and `random.Random(20261030).choice` gave **Digital Logic**.
+  `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{date 2026-10-29, run 7, unit 4, sequential-fsm-counters, Set 1 of 2}`. Unit 4 held **25** questions, under
+  `UNIT_QUESTION_CAP = 50`, and had been current since 2026-10-29, one day, under `DAYS_PER_UNIT_MAX = 7`, so step
+  B3 held and Unit 4 was generated again as **Set 2 of 2**. Step B4 was not reached. Unit 4 now holds **50**
+  questions, so the next Digital Logic run advances `(3 + 1) mod 4 = 0` → **Unit 1 — Number Systems &
+  Representation**. No override, no second pass, no unit above 50.
+- Coverage: all four Unit 4 subtopics — synchronous & asynchronous counters (6), FSM: Mealy & Moore machines (6),
+  state reduction & assignment (6), timing analysis (7). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty
+  10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35**.
+- Every question carries `data-subject="digital-logic"`, `data-unit="sequential-fsm-counters"`,
+  `data-unit-number="4"`, its subtopic slug, its type, its lowercase difficulty and its source tag.
+- All 25 ids are new (`DL-U4-S2-Q01`..`DL-U4-S2-Q25`). Every stem was compared with the 175 banked Digital Logic items
+  after normalisation (tags stripped, case and whitespace folded): zero id overlap and zero duplicated stems, and no
+  item reuses a numeric set-up from Set 1. No item is a `GATE_PYQ_VARIATION`, because no counter, FSM,
+  state-reduction or timing previous-year question has been verified against an official paper and answer key;
+  15 items are `STANDARD_TEXTBOOK` and 10 are `ORIGINAL_SYNTHESIS`.
+- **Every countable answer was recomputed by script, not by hand.** A 4-bit Johnson counter divides by 8, so 12 kHz
+  gives **1.5 kHz** and 8 MHz gives **1000 kHz**; a 4-bit ring counter powered up at `0110` cycles through
+  **4** states; the feedback `T₂ = Q₁, T₁ = Q₀, T₀ = 1` produces the cycle 000 → 001 → 010 → 111 → **4** states;
+  the Mealy detector for `0101` needs **4** states and the Moore version **5**; the Moore trace of `10110` is
+  **0 1 0 1 1 0**; a 6-bit one-hot register leaves **58** codes unused; `2 + 7 + 1 = 10` ns gives **100 MHz** and
+  `1.5 + 5.5 + 1.0 = 8` ns gives **125 MHz**; the largest safe positive skew is `1.0 + 0.8 − 1.2 = 0.6` ns; the
+  `110` detector fires **3** times on `110110110`; and `1.0 + 3.5 + 0.7 − 0.2 = 5` ns gives **200 MHz**. The three
+  state-reduction answers — **2** states, **3** states and **6** states — were produced by a partition-refinement
+  program run on the published tables, including the unreachable-state deletion step.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are
+  (A, C, D), (A, B, D), (A, B, D), (A, B, C) and (A, B, D) — checked by script.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell. The `<style>` block, the
+  exam `<script>` and the `:root` token block are **byte-identical** to the archived
+  `gate_dl_mock_4_2026-10-29_run1.html`, and the `:root` block still matches `design-tokens.css` and `index.html`
+  byte for byte. The generator was first proved by rebuilding the 2026-10-29 paper from `master_bank.json` and
+  getting a byte-identical 398 152-byte file, so only the title, header sub-line, candidate id, Question Bank count,
+  meta strip, question payload, bank tab, About tab and payload differ between the two papers.
+- Verified in headless Chromium from `file://`: 25 question cards with one visible, a 25-button palette, the timer
+  at 60:00, the Answer Key tab disabled and labelled locked, an empty key pane, a hidden summary, every active
+  `.sol` empty and hidden, and no option marked; the Question Bank tab renders **175** cards and the active 25 do
+  not appear in it. After answering every item correctly and submitting, the score reads **35 / 35** with 25
+  correct, 0 incorrect, 25 `ok` palette buttons and 25 key cards; an empty paper scores **0 / 35** with 25 `skip`
+  buttons; and a paper whose five MSQ are each one option short scores **25 / 35** with 5 wrong, which confirms
+  that MSQ earns nothing without the exact set.
+- The portal's data block was updated in place: the Digital Logic Unit 4 record was replaced by this run's record
+  with `set: "Set 2 of 2"` and the Set 1 paper in `archives`, and the 25 records were appended to
+  `data/questions-digital-logic.js`, which now carries 200. No new unit was registered — Digital Logic Units 1–4
+  were already in the portal's `units` table. The status table above was recomputed from the files: **106** papers,
+  **52** current, **54** archived, **62** test cards, **2650** banked questions.
+- Hygiene: the paper is filed at exactly one path, `digital-logic/sequential-fsm-counters/`, and nowhere else; no
+  temporary or loose file was left at the repository root.
 
 ### 2026-10-30 — Computer Networks Unit 5, Set 2 of 2
 
@@ -657,6 +714,16 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Digital Logic → Unit 4 (Sequential Circuits: Counters & State Machines), Set 2 of 2.**
+  MODE A: four subjects already carried a paper dated 2026-10-30, so one subject was drawn with
+  `random.Random(20261030).choice` over the remaining seven in syllabus order, giving **Digital Logic**. Most recent
+  run in `runs[]` was `{2026-10-29, run 7, unit 4, Set 1 of 2}`; Unit 4 held 25 questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held the
+  rotation and produced Set 2 of 2 — step B4 was not reached. Unit 4 now holds **50** questions, exactly at the cap,
+  so the next Digital Logic run advances `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` → Unit 1, Number
+  Systems & Representation. The superseded Set 1 paper was archived as `gate_dl_mock_4_2026-10-29_run1.html`. No
+  override, no second pass, no unit above 50. The Question Bank tab shows the 175 solved items that are not on this
+  paper.
 - **2026-10-30, Computer Networks → Unit 5 (Transport Layer: TCP, UDP & Congestion), Set 2 of 2.**
   MODE A: one subject drawn with an unseeded `secrets.choice` over the eleven in syllabus order, giving
   **Computer Networks**. Most recent run in `runs[]` was `{2026-10-30, run 9, unit 5, Set 1 of 2}`; Unit 5 held
@@ -4813,7 +4880,7 @@ Algorithms:
 | 1 | Number Systems & Representation | `number-systems` | 50 | yes |
 | 2 | Combinational Circuit Design | `combinational-circuits` | 50 | yes |
 | 3 | Sequential Circuits: Flip-Flops & Registers | `sequential-flipflops` | 50 | yes |
-| 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 0 | — |
+| 4 | Sequential Circuits: Counters & State Machines | `sequential-fsm-counters` | 50 | yes |
 
 ### Computer Architecture
 
