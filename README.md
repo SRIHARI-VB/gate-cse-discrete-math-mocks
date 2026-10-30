@@ -7,33 +7,95 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 4 — Memory Management & Paging, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html`](operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html)
+- **Algorithms · Unit 4 — Dynamic Programming, Set 2 of 2**, 2026-10-30 →
+  [`algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`](algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: contiguous allocation (6) · paging & page-table structures (7) · inverted page tables (6) ·
-  segmentation & paged segmentation (6)
-- Rotation: MODE A. The draw gave **Operating Systems**. The most recent run for the subject was
-  `{2026-10-30, run 15, unit 3, deadlocks, Set 1 of 2 (second pass)}`. Unit 3 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(deadlocks) = 2 + 1) mod 6 = 3` → **Unit 4**, Memory Management & Paging, which already held 50
-  first-pass questions. No override, no partial set.
-- The superseded first-pass Set 2 paper moved to
-  [`archive/gate_os_mock_4_2026-10-28_run2.html`](operating-systems/memory-paging/archive/gate_os_mock_4_2026-10-28_run2.html);
+- Subtopics: matrix-chain multiplication (7) · longest common subsequence (6) · 0-1 knapsack (6) ·
+  all-pairs shortest paths, Floyd–Warshall (6)
+- Rotation: MODE A. An unseeded `secrets.choice` over the eleven subjects gave **Algorithms**. The most recent run
+  for the subject was `{2026-10-30, run 7, unit 4, dynamic-programming, Set 1 of 2}`. Unit 4 held **25** questions,
+  below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so step B3
+  held and the same unit ran again as **Set 2 of 2**. Unit 4 now holds exactly 50 and closes. No override, no
+  partial set.
+- The superseded Set 1 paper moved to
+  [`archive/gate_algo_mock_4_2026-10-30_run1.html`](algorithms/dynamic-programming/archive/gate_algo_mock_4_2026-10-30_run1.html);
   the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Operating Systems · Unit 3 — Deadlocks, Set 1 of 2 (second pass)**, 2026-10-30 →
-  [`operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html`](operating-systems/deadlocks/gate_os_mock_3_2026-10-30.html)
+- Previous test: **Operating Systems · Unit 4 — Memory Management & Paging, Set 1 of 2 (second pass)**, 2026-10-30 →
+  [`operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html`](operating-systems/memory-paging/gate_os_mock_4_2026-10-30.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 119 (20 Discrete Mathematics, 7 Algorithms, 7 Databases, 12 Compiler Design, 16 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
-| Current papers / archived sets | 57 current · 62 archived |
+| Papers published (current + archived) | 120 (20 Discrete Mathematics, 8 Algorithms, 7 Databases, 12 Compiler Design, 16 Operating Systems, 10 Engineering Mathematics, 11 Programming and Data Structures, 10 Computer Networks, 13 Theory of Computation, 8 Digital Logic, 5 Computer Architecture) |
+| Current papers / archived sets | 57 current · 63 archived |
 | Test cards on the portal | 72 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 4 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 5 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 2975 (500 Discrete Mathematics, 175 Algorithms, 175 Databases, 300 Compiler Design, 400 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
+| Questions in the subject banks | 3000 (500 Discrete Mathematics, 200 Algorithms, 175 Databases, 300 Compiler Design, 400 Operating Systems, 250 Engineering Mathematics, 275 Programming and Data Structures, 250 Computer Networks, 325 Theory of Computation, 200 Digital Logic, 125 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 62 (10 Discrete Mathematics, 10 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 3 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+| Archived sets (earlier runs) | 63 (10 Discrete Mathematics, 10 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 5 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 3 Databases, 3 Digital Logic, 2 Computer Architecture) |
+
+### 2026-10-30 — Algorithms Unit 4, Set 2 of 2
+
+- New paper at `algorithms/dynamic-programming/gate_algo_mock_4_2026-10-30.html`. The 2026-10-30 paper that held this
+  path (Set 1 of 2) was moved to
+  `algorithms/dynamic-programming/archive/gate_algo_mock_4_2026-10-30_run1.html` with its content frozen (same 25
+  questions, options, answers, solutions and duration); the unit folder now holds exactly one current paper and the
+  repository root holds no copy.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` over the eleven GATE CSE subjects gave **Algorithms**.
+  `runs[]` sorted by `(date, run)` gave the most recent paper as `{2026-10-30, run 7, unit 4, dynamic-programming,
+  Set 1 of 2}`. Unit 4 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days,
+  below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and step B4 was not reached: the current unit was generated again as
+  **Set 2 of 2**. 25 + 25 = 50 closes the unit at the cap. No override, no partial set, no unit above 50, no second
+  pass started.
+- Coverage: all four Unit 4 subtopics — matrix-chain multiplication (7), longest common subsequence (6), 0-1 knapsack
+  (6), all-pairs shortest paths by Floyd–Warshall (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes.
+- Every question carries `data-subject="algorithms"`, `data-unit="dynamic-programming"`, `data-unit-number="4"`, its
+  subtopic slug, its type, its lowercase difficulty and its source tag — on the active paper and on all 175 banked
+  cards in the Question Bank tab.
+- All 25 ids are new (`ALG-U4-Q26` … `ALG-U4-Q50`); no id and no normalised stem collides with the 25 Set 1 items or
+  with the other 150 banked Algorithms items. The subject bank now holds **200** questions and the paper's Question
+  Bank tab shows the 175 that are not on it (no duplicate content between the test and the bank).
+- Set 1 tested the shape of the four DPs, the recurrence and its cost term, the Catalan formula, rolling rows and
+  Hirschberg, the 0-1 against unbounded recurrence, pseudo-polynomial time, the intermediate-vertex state and
+  Johnson's reweighting. This set takes other ground: the Catalan *count* for four matrices; the fill order the
+  recurrence forces and why an `i`-then-`j` loop silently reads zeros; hand evaluation of `m[1][3]` twice and of
+  `m[1][5]` for a five-matrix chain, where the optimal split is the last one; the cost of a *named* parenthesisation
+  against the optimum; the base case and the split table in MSQ. From LCS: an LCS length, the insertion–deletion
+  formula, a two-string instance whose answer is not the anagram length, the base row and the `c[i][j] =
+  c[i−1][j−1] + 1` converse trap, palindromic subsequences and the non-associativity of LCS over three strings, and
+  the count of *distinct* longest common subsequences. From the knapsack: an exact optimum on a small instance, the
+  size of the table with both `+1`s, a second exact optimum, the gap against the fractional optimum, the
+  `wᵢ > w` branch, and a hard six-item instance with two optimal subsets. From Floyd–Warshall: why the `k` loop must
+  be outermost, in-place updating and the sentinel-overflow guard, a shortest distance, a reachability count that
+  includes the diagonal, and a five-vertex graph with negative edges on which the obvious route (15) is not the
+  shortest (13).
+- Every numeric answer was recomputed by script, not by hand: `m[1][3] = 60` for `p = ⟨4,2,6,3⟩` and `100` for
+  `p = ⟨3,5,7,2⟩`; `(A₁(A₂A₃)) = 4500` against the optimum `1750` for `p = ⟨10,20,5,15⟩`; the full table for
+  `p = ⟨2,3,6,4,5,3⟩` with `m[1][5] = 154` and split `k = 4`; `C₃ = 5`; LCS lengths 4 (AGGTAB/GXTXAYB) and 2
+  (ABA/BAA) with insertion–deletion count 5; the two distinct LCSs of AAB/ABA; knapsack optima 7, 9 and 23 (each
+  confirmed by exhaustive subset search) and the fractional gap 105 − 90 = 15; Floyd–Warshall distances 9 (A to D)
+  and 13 (C to A) from a full `min`/`+` table; and the reachability count 13.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ, and the five MSQ answer sets are (A, B, C),
+  (A, C, D), (A, B, C), (A, B, D) and (A, B, D) — checked by script.
+- Source tags: 8 `STANDARD_TEXTBOOK`, 17 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Algorithms, so nothing on this paper is called an official GATE question.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Operating Systems
+  Unit 4 paper. The `<style>` block (13243 bytes) and the exam `<script>` (9428 bytes) are **byte-identical** to that
+  paper, the tag skeleton matches it element for element, and the `:root` block still matches `design-tokens.css`
+  and `index.html` byte for byte. Only the title, header sub-line, candidate id, Question Bank count, meta strip,
+  question payload, bank tab and About tab differ.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 ×
+  "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 175 bank cards under four unit
+  accordions, a balanced element tree, the Answer Key tab disabled, every active `.sol` empty and hidden, no
+  `ansline` markup in the question pane before submit, and a payload that decodes to 25 answers and 25 solutions.
+- Portal: `index.html` gained the Set 1 paper as the earlier set on the Algorithms · Unit 4 · 2026-10-30 card and
+  that card was moved to the head of `tests`; `data/questions-algorithms.js` grew to 200 records, and the header
+  counters were recomputed to **68 units**, **72 test cards** and **3000 solved questions**.
+- Hygiene: the paper is filed at exactly one path, `algorithms/dynamic-programming/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (57 current and 63 archived); no temporary or
+  loose file was left at the repository root.
 
 ### 2026-10-30 — Operating Systems Unit 4, Set 1 of 2 (second pass)
 
@@ -1373,6 +1435,14 @@ touches files this run did not create:
 
 ## Rotation log
 
+- **2026-10-30, Algorithms → Unit 4 (Dynamic Programming), Set 2 of 2.**
+  MODE A: an unseeded `secrets.choice` over the eleven-subject list gave **Algorithms**. Most recent run in `runs[]`
+  was `{2026-10-30, run 7, unit 4, dynamic-programming, Set 1 of 2}`. Unit 4 held 25 questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, below `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the
+  same unit ran again: Set 2 of 2. Unit 4 now holds exactly **50** questions and closes; the next Algorithms run
+  advances `(3 + 1) mod 7 = 4` → Unit 5, Graph Algorithms: Traversals & Spanning Trees. The 175 solved items shown
+  in the Question Bank tab are everything banked except this paper's own 25. No override, no unit above 50, no
+  partial set, no second pass for this subject.
 - **2026-10-30, Engineering Mathematics → Unit 5 (Continuous Probability & Distributions), Set 2 of 2.**
   MODE A: all eleven subjects already carried a paper dated 2026-10-30, so the draw ran over the full eleven-subject
   list and gave **Engineering Mathematics**. Most recent run in `runs[]` was `{2026-10-30, run 9, unit 5,
@@ -5493,7 +5563,7 @@ Algorithms:
 | 1 | Asymptotic Analysis & Recurrences | `asymptotic-analysis` | 50 | yes |
 | 2 | Divide and Conquer & Sorting | `sorting-divide-conquer` | 50 | yes |
 | 3 | Greedy Algorithms | `greedy-algorithms` | 50 | yes |
-| 4 | Dynamic Programming | `dynamic-programming` | 25 | yes |
+| 4 | Dynamic Programming | `dynamic-programming` | 50 | yes |
 | 5 | Graph Algorithms: Traversals & Spanning Trees | `graph-algorithms-traversals-mst` | 0 | — |
 | 6 | Graph Algorithms: Shortest Paths | `shortest-paths` | 0 | — |
 | 7 | Complexity Theory & NP-Completeness | `complexity-np-complete` | 0 | — |
