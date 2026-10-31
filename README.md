@@ -7,35 +7,69 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html)
+- **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
+  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: base conversions (7) · one's and two's complement (6) · floating point and IEEE 754 (6) ·
-  range and overflow (6)
-- Rotation: MODE A. Five subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining six
-  and `random.Random(20261031).choice` gave **Digital Logic**, whose most recent run is
-  `{2026-10-30, run 8, unit 4, sequential-fsm-counters, Set 2 of 2}`. Unit 4 held **50** questions, at
-  `UNIT_QUESTION_CAP = 50`, so step B4 advanced `(index_of(sequential-fsm-counters) = 3 + 1) mod 4 = 0` →
-  **Unit 1 — Number Systems & Representation**. Unit 1 already held 50 questions, so every Digital Logic unit sits at
-  the cap (50, 50, 50, 50) and step B5 applies: the second pass continues and Unit 1 takes its third set overall
-  (75 questions). No override, no partial set.
-- The unit folder held two current papers (2026-10-26 and 2026-10-27). Both were moved into
-  `digital-logic/number-systems/archive/` as `..._run1.html` and `..._run2.html` with their content frozen, so the
-  folder now holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Programming and Data Structures · Unit 6 — Heaps & Priority Queues, Set 2 of 2**, 2026-10-31 →
-  [`programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html`](programming-data-structures/heaps-priority-queues/gate_ds_mock_6_2026-10-31.html)
+- Subtopics: pipeline stages and throughput (7) · structural hazards (6) · data hazards and forwarding (6) ·
+  control hazards and branch penalty (6)
+- Rotation: MODE A. Six subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining five
+  and `random.Random("2026-10-31|run7").choice` gave **Computer Architecture**, whose most recent run is
+  `{2026-10-30, run 6, unit 4, memory-management-unit, Set 2 of 2}`. Unit 4 held **50** questions, at
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(memory-management-unit) = 3 + 1) mod 6 = 4` → **Unit 5 — Instruction Pipelining**, which held 0
+  questions. First set of 2; no override, no partial set.
+- The Unit 5 folder was empty, so nothing was archived; it now holds exactly one current paper and the repository
+  root holds no copy.
+- Previous test: **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 127 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 6 Computer Architecture) |
-| Current papers / archived sets | 58 current · 69 archived |
-| Test cards on the portal | 76 (one card per published unit-date; superseded sets are links on that card) |
-| Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 3 of 6 in Computer Architecture |
-| Questions in the subject banks | 3175 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 150 Computer Architecture) |
+| Papers published (current + archived) | 128 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 69 archived |
+| Test cards on the portal | 77 (one card per published unit-date; superseded sets are links on that card) |
+| Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
+| Questions in the subject banks | 3200 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 69 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Computer Architecture Unit 5, Set 1 of 2
+
+- New paper at `computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`. The unit folder did not exist
+  before this run, so there was no superseded paper to freeze and `archive/` stays empty for Unit 5; the repository
+  root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Algorithms, Computer Networks, Databases, Digital Logic, Operating Systems and
+  Programming and Data Structures already carry a paper dated 2026-10-31, so the draw ran over the remaining five
+  subjects (Compiler Design, Computer Architecture, Discrete Mathematics, Engineering Mathematics, Theory of
+  Computation) with `random.Random("2026-10-31|run7").choice` and returned **Computer Architecture**. `runs[]` gave
+  the most recent paper as `{2026-10-30, run 6, unit 4, memory-management-unit, Set 2 of 2}`. Unit 4 held **50**
+  questions, at `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(memory-management-unit) = 3 + 1) mod 6 = 4` → **Unit 5, Instruction Pipelining**, which held 0
+  questions. It opens as Set 1 of 2 and ends at 50 questions; no unit in the subject exceeds the cap and no override
+  was used.
+- Coverage: all four Unit 5 subtopics — pipeline stages and throughput (7); structural hazards (6); data hazards and
+  forwarding (6); control hazards and branch penalty (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking.
+- All 25 ids are new (`CO-U5-Q01` … `CO-U5-Q25`); no id and no normalised stem collides with the 150 banked Computer
+  Architecture items, all of which belong to Units 2–4. The subject bank now holds **175** questions, and the paper's
+  Question Bank tab shows the 150 that are not on it, so the active set does not reappear in the bank tab.
+- Every question carries `data-subject="computer-architecture"`, `data-unit="pipelining"`,
+  `data-unit-number="5"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  150 bank cards both carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- `data/questions-computer-architecture.js` and the portal `data` block were extended, not rebuilt: one new test card
+  and one new unit entry (with its four subtopic pills) were appended, so the archive view now offers
+  "Practise Set 1 →" for Unit 5 and reports 25 solved questions for it.
+- Shell parity: the `<style>` block, the script and the body structure of this paper are byte-identical to
+  `computer-architecture/cache-memory/gate_co_mock_3_2026-10-30.html` once the payload regions (title, header
+  sub-line, candidate id, Question Bank tab count, meta strip, question host, Question Bank and About tabs, and the
+  answer payload) are masked; measured at 27 592 bytes on both sides.
+- Source categories: 15 questions are built on the standard textbook treatment of pipelining and 10 are independently
+  designed GATE-style practice. No pipelining previous-year question has been verified against an official paper and
+  answer key, so the paper claims none: the Question Bank tab reports 0 verified GATE PYQs and says so in one
+  sentence.
 
 ### 2026-10-31 — Digital Logic Unit 1, Set 1 of 2 (second pass)
 
