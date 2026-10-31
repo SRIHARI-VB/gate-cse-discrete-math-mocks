@@ -7,35 +7,118 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html)
+- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (third pass)**, 2026-10-31 →
+  [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: LR(0) items and the canonical collection (7) · SLR(1) parsing and conflicts (6) · LR(1) and LALR(1)
-  parsers (6) · operator-precedence parsing (6)
-- Rotation: MODE A. Seven subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining four
-  (Compiler Design, Discrete Mathematics, Engineering Mathematics, Theory of Computation) and
-  `random.Random("2026-10-31|run8").choice` gave **Compiler Design**, whose most recent run is
-  `{2026-10-30, run 12, unit 2, top-down-parsing, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
-  `(index_of(top-down-parsing) = 1 + 1) mod 5 = 2` → **Unit 3 — Syntax Analysis: Bottom-Up Parsing**, which held 50
-  questions from the first pass. Every unit of the subject is at or above the cap, so step B5 applies: the second
-  pass continues and Unit 3 takes the first set of that pass. No override, no partial set.
-- The 2026-10-28 paper was moved to `archive/gate_cd_mock_3_2026-10-28_run2.html` with its content frozen, so the
+- Subtopics: derivation trees (7) · ambiguity in grammars (6) · CNF and GNF normal forms (6) · closure properties of
+  CFLs (6)
+- Rotation: MODE A. Eight subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining three
+  (Discrete Mathematics, Engineering Mathematics, Theory of Computation) and an unseeded `secrets.choice` gave
+  **Theory of Computation**, whose most recent run is `{2026-10-30, run 13, unit 1, regular-languages-fa, Set 1 of 2
+  (third pass)}`. Unit 1 held **100** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
+  B4 advanced `(index_of(regular-languages-fa) = 0 + 1) mod 4 = 1` → **Unit 2 — Grammars & Context-Free Languages**,
+  which held 75 questions. Every unit of the subject is at or above the cap (100, 75, 75, 75), so step B5 applies: the
+  modulo has wrapped and the third pass continues. Unit 2 takes the first set of that pass, its fourth set overall, and
+  goes from 75 to 100 questions. No override, no partial set.
+- The 2026-10-28 paper was moved to `archive/gate_toc_mock_2_2026-10-28_run3.html` with its content frozen, so the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
-  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
+- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2 (second pass)**,
+  2026-10-31 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 129 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 70 archived |
-| Test cards on the portal | 77 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 130 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 71 archived |
+| Test cards on the portal | 78 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3225 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3250 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 70 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 8 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 71 (10 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Theory of Computation Unit 2, Set 1 of 2 (third pass)
+
+- New paper at `theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`. The unit folder held the
+  2026-10-28 paper, which was moved to `archive/gate_toc_mock_2_2026-10-28_run3.html` with its content frozen (same
+  questions, options, answers, solutions and duration); `archive/` now holds `gate_toc_mock_2_2026-10-26_run1.html`,
+  `gate_toc_mock_2_2026-10-27_run2.html` and that run3 file, so the folder holds exactly one current paper and the root
+  still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Algorithms, Computer Architecture, Computer Networks, Compiler Design, Databases,
+  Digital Logic, Operating Systems and Programming and Data Structures already carry a paper dated 2026-10-31, so the
+  draw ran over the remaining three (Discrete Mathematics, Engineering Mathematics, Theory of Computation) with an
+  unseeded `secrets.choice` and returned **Theory of Computation**. `runs[]` sorted by `(date, run)` gave the most
+  recent paper as `{2026-10-30, run 13, unit 1, regular-languages-fa, Set 1 of 2 (third pass)}`. Unit 1 held **100**
+  questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(regular-languages-fa) = 0 + 1) mod 4 = 1` → **Unit 2, Grammars & Context-Free Languages**. Unit 2 held 75
+  questions and every unit of the subject is at or above the cap (100, 75, 75, 75), so step B5 applies: the modulo has
+  wrapped and the third pass continues. Unit 2 receives the first set of that pass, its fourth set overall, and goes
+  from 75 to 100 questions. No override was used and no partial set was generated.
+- Coverage: all four Unit 2 subtopics — derivation trees (7); ambiguity in grammars (6); CNF and GNF normal forms (6);
+  closure properties of CFLs (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking.
+- All 25 ids are new (`TOC-U2-Q76` … `TOC-U2-Q100`); no id and no normalised stem collides with the 75 banked Unit 2
+  items or with any of the other 275 Theory of Computation questions. The subject bank now holds **350** questions and
+  the paper's Question Bank tab shows the 325 that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="theory-of-computation"`, `data-unit="cfl-grammars"`,
+  `data-unit-number="2"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  325 bank cards both carry the full set, which the previous Unit 2 paper's bank cards did not. Difficulty is lowercase
+  in the attributes, in the bank and in the portal data, and the UI capitalises it with CSS.
+- What the set asks. From derivation trees: which count is invariant across all trees of a string (the leaves) and
+  which are not; the leaf count once an ε-production is drawn, and the height that follows from it; the node total as
+  productions plus leaves; what ε- and unit productions do to the child count; why a tree of a⁴ under
+  `S → SS | a` has three `S` nodes whichever of the five trees is drawn; and the largest height of a full binary tree
+  with n leaves. From ambiguity: spotting the ambiguous grammar among four; the shortest ambiguous string of
+  `S → SS | a | b`; counting trees for `a + a * a` when neither operator has precedence; unit productions
+  `S → A | B` with identical alternatives; an MSQ separating ambiguity of a grammar from properties of its language;
+  and overlapping alternatives in `S → aSb | aSbb | ε`, where `a²b³` has two trees.
+- From the normal forms: a grammar that is in Greibach but not Chomsky Normal Form because of the `S → ε` allowance;
+  the child count in a CNF tree; the three new nonterminals a right side of length five costs; five productions for
+  `S → ABC` with `A → a`, `B → b`, `C → c`; the three height and node bounds of a CNF tree; and the one GNF statement
+  that is true, about the sole permitted ε-production. From closure: `L ∪ (Σ* \ L) = Σ*` as the necessarily
+  context-free option; `{aⁿbⁿ} ∪ {cⁿdⁿ}` and its intersection; the three length-5 strings of
+  `{aⁿbⁿcᵐ}`; a seven-language membership count; the deterministic context-free languages, closed under
+  complementation but not union; and an MSQ on closure that turns on `Σ*` absorbing any language it is unioned with.
+- Every numeric answer was recomputed by script, not by hand, with a span-based parse-tree counter written for this
+  run: the tree of `a²b²` under `S → aSb | ε` has **5** leaves and the tree of `a⁵b⁵` has height **5**; `a⁴` under
+  `S → SS | a` has **5** trees, each with **3** internal nodes; `S → SS | (S) | ε` is ambiguous with witness
+  `()()()` at **2** trees; the shortest ambiguous string of `S → SS | a | b` has length **3**; `S → S + S | S * S | a`
+  gives **2** trees for `a + a * a`; `S → aSb | aSbb | ε` gives **2** trees for `aabbb` while the other three options
+  of that question never exceed **1**; `{aⁿbⁿcᵐ : n, m ≥ 0}` contains **3** strings of length 5
+  (`ccccc`, `abccc`, `aabbc`); and **4** of the seven languages in the membership count are context-free.
+- The correct option is spread 4 A / 3 B / 5 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, C, D),
+  (A, C), (A, B, C), (A, B, D) and (A, C); the five NAT answers are 5, 3, 3, 3 and 4.
+- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Theory of Computation: no context-free-grammar previous-year question has been verified against an official paper
+  and answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one
+  sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Compiler Design
+  Unit 3 paper of 2026-10-31. The `<style>` block (13,228 bytes) and the exam `<script>` (9,411 bytes) are
+  **byte-identical** to that paper, and once the payload regions are masked (title, brand, sub-line, candidate id,
+  Question Bank tab count, meta strip, question host, Question Bank and About tabs, answer payload) the two files are
+  byte-identical at 27,584 bytes on both sides. The `:root` block still matches `design-tokens.css` and `index.html`
+  byte for byte.
+- Interface repair: the shell was taken from the 2026-10-31 Compiler Design paper rather than from this subject's
+  previous paper, because the Theory of Computation Unit 1 paper of 2026-10-30 carries two defects — `#view-test` is
+  closed immediately after the meta strip, which leaves the question layout outside the view that the Mock Test tab
+  toggles, and the About tab is emitted twice, once with stale Unit 4 text. Both are gone from this paper; the older
+  paper is unchanged and still needs the same repair on a later Theory of Computation run.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 × "Marks: 1"
+  and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 325 bank cards under four unit accordions, one
+  About tab, one footer, a balanced `<div>` tree (0 net), the Answer Key tab disabled, every active `.sol` empty and
+  hidden, no `ansline` text in the question pane before submit, and a payload that decodes to 25 answers and 25
+  solutions whose display strings agree with the stored answer sets. A simulated perfect attempt scores **35 / 35**.
+- Portal: one new card at the head of `tests` — Theory of Computation · Unit 2 · 2026-10-31 — with the three frozen
+  earlier sets as its archive links; the 2026-10-28 card now points at
+  `archive/gate_toc_mock_2_2026-10-28_run3.html`. `data/questions-theory-of-computation.js` grew to 350 records and
+  the header counters were recomputed from the files to **69 units**, **78 test cards** and **3250 solved
+  questions**.
+- Hygiene: the paper is filed at exactly one path, `theory-of-computation/cfl-grammars/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (59 current and 71 archived); every `href` in
+  the portal resolves; no temporary or loose file was left at the repository root.
+- Repair outside this subject, recorded here: `data/questions-digital-logic.js` held 200 records against a bank of
+  225, so the archive tab under-reported that subject by 25 questions. The 25 missing records were appended from the
+  bank; both sides now read 225 and the eleven question files sum to the 3250 records the banks hold.
 
 ### 2026-10-31 — Compiler Design Unit 3, Set 1 of 2 (second pass)
 
