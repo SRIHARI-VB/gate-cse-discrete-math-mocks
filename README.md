@@ -7,35 +7,81 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html)
+- **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 2 of 2**, 2026-10-31 →
+  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: matrix operations (7) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (5)
-- Rotation: MODE A. Nine subjects already carried a paper dated 2026-10-31, so the draw ran over the two remaining
-  (Discrete Mathematics, Engineering Mathematics) and an unseeded `secrets.choice` gave **Engineering Mathematics**,
-  whose most recent run is `{2026-10-30, run 10, unit 5, probability-distributions, Set 2 of 2}`. Unit 5 held **50**
-  questions, at `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced
-  `(index_of(probability-distributions) = 4 + 1) mod 5 = 0` → **Unit 1 — Linear Algebra: Matrices & Systems**, which
-  also held 50. Every unit of the subject is at the cap (50, 50, 50, 50, 50), so step B5 applies: the modulo has
-  wrapped and the **second pass** has started at Unit 1. Unit 1 takes the first set of that pass, its third set
-  overall, and goes from 50 to 75 questions. No override, no partial set.
-- The 2026-10-26 paper was moved to `archive/gate_em_mock_1_2026-10-26_run2.html` with its content frozen, so the
+- Subtopics: degree sum & handshaking lemma (4) · walks, trails, paths & circuits (5) · graph connectivity (4) ·
+  isomorphism (4) · complete & bipartite graphs (4) · graph representations (4)
+- Rotation: MODE A. Discrete Mathematics was the only one of the eleven subjects still without a paper dated
+  2026-10-31, so the draw over the remaining pool returned it. Its most recent run was
+  `{2026-10-30, run 10, unit 9, graph-theory-fundamentals, Set 1 of 2}`. Unit 9 held **25** questions, under
+  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, under `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  Unit 9 was generated again as **Set 2 of 2**. No override, no partial set.
+- Unit 9 now holds exactly 50 questions, the cap, so the next Discrete Mathematics run advances
+  `(index_of(graph-theory-fundamentals) = 8 + 1) mod 16 = 9` → **Unit 10, Graph Theory Advanced**.
+- The 2026-10-30 paper was moved to `archive/gate_dm_mock_9_2026-10-30_run1.html` with its content frozen, so the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (third pass)**,
-  2026-10-31 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html)
-  — **this paper renders no questions; see the defect note below.**
+- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2 (second pass)**,
+  2026-10-31 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 131 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 72 archived |
+| Papers published (current + archived) | 132 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 73 archived |
 | Test cards on the portal | 79 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3275 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3300 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 72 (10 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 73 (11 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Discrete Mathematics Unit 9, Set 2 of 2
+
+- New paper at `discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html`. The unit folder
+  held the 2026-10-30 paper, which was moved to `archive/gate_dm_mock_9_2026-10-30_run1.html` with its content
+  frozen (same questions, options, answers, solutions and duration); the folder now holds exactly one current
+  paper and the root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Every subject except Discrete Mathematics already carried a paper dated
+  2026-10-31, so the draw ran over the remaining pool and returned **Discrete Mathematics**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-30, run 10, unit 9, graph-theory-fundamentals, Set 1 of
+  2}`. Unit 9 held **25** questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **1** day, below
+  `DAYS_PER_UNIT_MAX = 7`, so step B3 held and the unit was generated again as **Set 2 of 2**. No override was
+  used and no partial set was generated.
+- Coverage: all six Unit 9 subtopics — degree sum & handshaking lemma (4); walks, trails, paths & circuits (5);
+  graph connectivity (4); isomorphism (4); complete & bipartite graphs (4); graph representations (4). Composition
+  15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes,
+  no negative marking, MSQ all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`DM-GTF9-Q26` … `DM-GTF9-Q50`); no id and no normalised stem collides with the 25 banked
+  Unit 9 items or with any other Discrete Mathematics question. The subject bank now holds **525** questions and
+  the paper's Question Bank tab shows the 500 that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="discrete-mathematics"`, `data-unit="graph-theory-fundamentals"`,
+  `data-unit-number="9"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and
+  the 500 bank cards both carry the full set. Difficulty is lowercase in the attributes, in the bank and in the
+  portal data, and the UI capitalises it with CSS.
+- What the set asks. Degree sum & handshaking lemma: edges from a near-regular degree description; the pigeonhole
+  fact that two vertices always share a degree; and a degree description whose vertex count comes out as 28/3, so
+  no such graph exists. Walks, trails, paths & circuits: the two odd-degree vertices are exactly the ends of an
+  Euler trail; four odd vertices force at least two edge-disjoint trails and two always suffice; `K₂,₃` has no
+  Hamiltonian cycle because a bipartite graph has only even cycles and the cycle here would have length 5.
+  Graph connectivity: a cut vertex forces `κ = 1`; a connected graph with 9 vertices and 9 edges has one cycle and
+  `κ ≤ 2`; and the maximum edge count with `κ = 1` on 8 vertices, which is `K₇` and `K₂` glued at one vertex.
+  Isomorphism: degree is preserved vertex by vertex; a graph isomorphic to its complement on 6 vertices is
+  impossible because `C(6,2) = 15` is odd; six connected unlabelled graphs on 4 vertices; `C₄ ≅ K₂,₂` and
+  `complement(C₄) ≅ 2K₂`. Complete & bipartite graphs: bipartiteness against odd cycles, with the Petersen graph
+  as the cubic non-bipartite distractor; `⌊n²/4⌋ = 20` as the extremal edge count on 9 vertices; a 3-regular
+  bipartite graph on 8 vertices has 12 edges. Graph representations: 2|E| one-entries; row sums as degrees; the
+  incidence matrix against the adjacency matrix; `trace(A³) = 24` giving 4 triangles; three length-2 walks between
+  two vertices of `K₅`.
+- No question is an official GATE PYQ and no PYQ was added this run: no graph-theory previous-year question has
+  been verified against an official paper and answer key, so the set carries no `GATE_PYQ_VARIATION` item and
+  `verified_pyqs` stays at 2, both Unit 1.
+- Every numeric answer was recomputed by script, not by hand: 8 edges; 16 one-entries; 20 extremal bipartite
+  edges; 8 edges from row sums 2, 3, 1, 2; 3 walks of length 2 in `K₅`; 12 edges for the 3-regular bipartite graph;
+  4 triangles from `trace(A³) = 24`; 22 edges for the `κ = 1` maximum. `K₂,₃` was checked exhaustively to have 0
+  Hamiltonian cycles, and the connected unlabelled graphs on 4 vertices were enumerated exhaustively to give 6.
+- Shell parity: the `<style>` block and the main `<script>` of this paper are byte-identical to the 2026-10-31
+  Engineering Mathematics paper, and the `:root` block matches `design-tokens.css` and `index.html` byte for byte.
 
 ### 2026-10-31 — Engineering Mathematics Unit 1, Set 1 of 2 (second pass)
 

@@ -4,9 +4,9 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-25",
-  "last_updated": "2026-10-30",
+  "last_updated": "2026-10-31",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 500,
+  "total_questions": 525,
   "units_with_questions": [
    1,
    2,
@@ -697,6 +697,69 @@
     "representations"
    ],
    "note": "First paper for Unit 9. Unit 8 reached the 50-question cap, so the rotation advanced (7 + 1) mod 16 = 8 -> Unit 9, Graph Theory Fundamentals. No override."
+  },
+  {
+   "run": 11,
+   "date": "2026-10-31",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html",
+   "archived_previous": "discrete-mathematics/graph-theory-fundamentals/archive/gate_dm_mock_9_2026-10-30_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "degree-handshaking-lemma",
+    "walks-trails-paths-circuits",
+    "graph-connectivity",
+    "isomorphism",
+    "complete-bipartite-graphs",
+    "representations"
+   ],
+   "question_ids": [
+    "DM-GTF9-Q26",
+    "DM-GTF9-Q27",
+    "DM-GTF9-Q28",
+    "DM-GTF9-Q29",
+    "DM-GTF9-Q30",
+    "DM-GTF9-Q31",
+    "DM-GTF9-Q32",
+    "DM-GTF9-Q33",
+    "DM-GTF9-Q34",
+    "DM-GTF9-Q35",
+    "DM-GTF9-Q36",
+    "DM-GTF9-Q37",
+    "DM-GTF9-Q38",
+    "DM-GTF9-Q39",
+    "DM-GTF9-Q40",
+    "DM-GTF9-Q41",
+    "DM-GTF9-Q42",
+    "DM-GTF9-Q43",
+    "DM-GTF9-Q44",
+    "DM-GTF9-Q45",
+    "DM-GTF9-Q46",
+    "DM-GTF9-Q47",
+    "DM-GTF9-Q48",
+    "DM-GTF9-Q49",
+    "DM-GTF9-Q50"
+   ],
+   "selection": "MODE A. Discrete Mathematics was the only one of the eleven subjects still without a paper dated 2026-10-31, so the random draw over the remaining pool returned it. discrete-mathematics/question-bank/master_bank.json read back the most recent paper as {date 2026-10-30, run 10, unit 9, graph-theory-fundamentals, Set 1 of 2}. Unit 9 held 25 questions, below UNIT_QUESTION_CAP = 50, and had been current for 1 day, below DAYS_PER_UNIT_MAX = 7, so step B3 held and Unit 9 was generated again as Set 2 of 2.",
+   "note": "Set 2 of 2 for Discrete Mathematics Unit 9. The unit now holds 50 questions, exactly UNIT_QUESTION_CAP, so the next Discrete Mathematics run advances (index_of(graph-theory-fundamentals) = 8 + 1) mod 16 = 9 -> Unit 10, Graph Theory Advanced. The Set 1 paper was moved to archive/gate_dm_mock_9_2026-10-30_run1.html with its content frozen, so the unit folder holds exactly one current paper and the root holds no copy."
   }
  ],
  "verified_pyqs": [
@@ -22575,6 +22638,1156 @@
    "answer_display": "6",
    "marks": 2,
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Unlabelled trees on <span class=\"mm\">n</span> vertices are classified by their longest path (diameter) and the shape hanging off it. For <span class=\"mm\">n = 6</span> the count is 6, against <span class=\"mm\">6<sup>4</sup> = 1296</span> labelled trees by Cayley's formula.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A tree on 6 vertices has 5 edges, and its diameter is between 2 and 5. Classify by diameter.</li><li>Diameter 5: the path <span class=\"mm\">P<sub>6</sub></span> — 1 shape.</li><li>Diameter 4: a path of 5 vertices with the sixth vertex attached as a leaf to the second or the third vertex — 2 shapes. Attaching it to an end would give <span class=\"mm\">P<sub>6</sub></span>, and attaching it to the middle is the third vertex.</li><li>Diameter 3: two adjacent centres with leaves split <span class=\"mm\">1 + 3</span> or <span class=\"mm\">2 + 2</span> — 2 shapes (the <span class=\"mm\">3 + 1</span> split is the same graph relabelled).</li><li>Diameter 2: the star <span class=\"mm\">K<sub>1,5</sub></span> — 1 shape.</li><li>Total <span class=\"mm\">1 + 2 + 2 + 1 = 6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 6</span></p><p class=\"row\"><b>Common misconception.</b> Answering 1296 from Cayley's formula, which counts <i>labelled</i> trees. Here the vertices are indistinguishable, so only shapes count, and many labellings collapse to the same tree.</p><p class=\"row\"><b>Takeaway.</b> Unlabelled trees on 6 vertices: 6. Classify by diameter, and remember Cayley counts labels.</p>"
+  },
+  {
+   "id": "DM-GTF9-Q26",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "degree-handshaking-lemma",
+   "subtopic": "degree-handshaking-lemma",
+   "subtopic_label": "Degree sum & handshaking lemma",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A simple graph on 7 vertices has every vertex of degree 2 except one vertex of degree 4. How many edges does it have?",
+   "question_html": "<p class=\"qtext\">A simple graph on 7 vertices has every vertex of degree 2 except one vertex of degree 4. How many edges does it have?</p>",
+   "options": [
+    "7",
+    "8",
+    "9",
+    "16"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The handshaking lemma, <span class=\"mm\">Σ<sub>v∈V</sub> deg(v) = 2|E|</span>, converts a degree description into an edge count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Six vertices have degree 2 and one vertex has degree 4, so the degree sum is 6·2 + 4 = 16.</li><li>By the handshaking lemma the degree sum is twice the number of edges, so 2|E| = 16.</li><li>Hence |E| = 8.</li><li>Consistency check: the sum is even and no degree exceeds n − 1 = 6, and the sequence 4, 2, 2, 2, 2, 2, 2 is indeed graphical, so the graph really exists.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Many students divide 16 by 7, treating the degree sum as an average, or count only the six degree-2 vertices and report 6 edges. The divisor is 2, not the number of vertices.</p><p class=\"row\"><b>Takeaway.</b> Read “degree” as an edge-endpoint count: add the degrees, then halve.</p>",
+   "solution": {
+    "concept": "The handshaking lemma, <span class=\"mm\">Σ<sub>v∈V</sub> deg(v) = 2|E|</span>, converts a degree description into an edge count.",
+    "steps": [
+     "Six vertices have degree 2 and one vertex has degree 4, so the degree sum is 6·2 + 4 = 16.",
+     "By the handshaking lemma the degree sum is twice the number of edges, so 2|E| = 16.",
+     "Hence |E| = 8.",
+     "Consistency check: the sum is even and no degree exceeds n − 1 = 6, and the sequence 4, 2, 2, 2, 2, 2, 2 is indeed graphical, so the graph really exists."
+    ],
+    "final": "Option (B)",
+    "misconception": "Many students divide 16 by 7, treating the degree sum as an average, or count only the six degree-2 vertices and report 6 edges. The divisor is 2, not the number of vertices.",
+    "takeaway": "Read “degree” as an edge-endpoint count: add the degrees, then halve."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q27",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "walks-trails-paths-circuits",
+   "subtopic": "walks-trails-paths-circuits",
+   "subtopic_label": "Walks, trails, paths & circuits",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A connected graph has exactly two vertices of odd degree, <span class=\"mm\">u</span> and <span class=\"mm\">v</span>, so it has an Euler trail. Which statement about that trail is correct?",
+   "question_html": "<p class=\"qtext\">A connected graph has exactly two vertices of odd degree, <span class=\"mm\">u</span> and <span class=\"mm\">v</span>, so it has an Euler trail. Which statement about that trail is correct?</p>",
+   "options": [
+    "It may start and end at any pair of vertices.",
+    "It must start at one of <span class=\"mm\">u</span>, <span class=\"mm\">v</span> and end at the other.",
+    "It must start and end at a vertex of even degree.",
+    "It exists only if <span class=\"mm\">u</span> and <span class=\"mm\">v</span> are adjacent."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a trail, every vertex other than the two endpoints is entered as often as it is left, so all of its incident edges are used in pairs; only the two endpoints can be left with an odd number of used edges.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let the trail start at s and end at t. Every other vertex is visited internally, and each internal visit consumes one edge on arrival and one on departure.</li><li>So every vertex except s and t has even degree in the graph.</li><li>The graph has exactly two odd-degree vertices, u and v, so {s, t} = {u, v}.</li><li>The order does not matter — either endpoint may be the start — but the trail cannot begin or end anywhere else.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> A common error is to assume a trail can be started anywhere as long as the graph is connected. It cannot: the parity of the endpoint degrees pins down the two ends.</p><p class=\"row\"><b>Takeaway.</b> Two odd vertices means an open Euler trail whose ends are exactly those two vertices; zero odd vertices means a closed one.</p>",
+   "solution": {
+    "concept": "In a trail, every vertex other than the two endpoints is entered as often as it is left, so all of its incident edges are used in pairs; only the two endpoints can be left with an odd number of used edges.",
+    "steps": [
+     "Let the trail start at s and end at t. Every other vertex is visited internally, and each internal visit consumes one edge on arrival and one on departure.",
+     "So every vertex except s and t has even degree in the graph.",
+     "The graph has exactly two odd-degree vertices, u and v, so {s, t} = {u, v}.",
+     "The order does not matter — either endpoint may be the start — but the trail cannot begin or end anywhere else."
+    ],
+    "final": "Option (B)",
+    "misconception": "A common error is to assume a trail can be started anywhere as long as the graph is connected. It cannot: the parity of the endpoint degrees pins down the two ends.",
+    "takeaway": "Two odd vertices means an open Euler trail whose ends are exactly those two vertices; zero odd vertices means a closed one."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q28",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "isomorphism",
+   "subtopic": "isomorphism",
+   "subtopic_label": "Isomorphism",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "<span class=\"mm\">G</span> and <span class=\"mm\">H</span> are isomorphic graphs, and <span class=\"mm\">G</span> has a vertex of degree 5. Which one of the following must be true of <span class=\"mm\">H</span>?",
+   "question_html": "<p class=\"qtext\"><span class=\"mm\">G</span> and <span class=\"mm\">H</span> are isomorphic graphs, and <span class=\"mm\">G</span> has a vertex of degree 5. Which one of the following must be true of <span class=\"mm\">H</span>?</p>",
+   "options": [
+    "<span class=\"mm\">H</span> has a vertex of degree 5.",
+    "Every vertex of <span class=\"mm\">H</span> has degree 5.",
+    "<span class=\"mm\">H</span> has exactly 5 vertices.",
+    "<span class=\"mm\">H</span> has exactly 5 edges."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An isomorphism <span class=\"mm\">f : V(G) → V(H)</span> preserves adjacency, so it preserves the degree of each vertex: <span class=\"mm\">deg<sub>H</sub>(f(x)) = deg<sub>G</sub>(x)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let x be the vertex of G with degree 5 and let f be an isomorphism onto H.</li><li>The neighbours of x correspond bijectively to the neighbours of f(x), so deg_H(f(x)) = 5.</li><li>Hence H has a vertex of degree 5 — option (A).</li><li>The others fail: (B) would need H to be 5-regular, (C) confuses a degree with a vertex count, and (D) confuses a degree with an edge count.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Students read “a vertex of degree 5” as “5 vertices” or “5 edges”. A degree is a local count at one vertex; it says nothing about the order or size of the graph.</p><p class=\"row\"><b>Takeaway.</b> Degree is a per-vertex invariant: the degree sequence is preserved as a multiset, never as a single global number.</p>",
+   "solution": {
+    "concept": "An isomorphism <span class=\"mm\">f : V(G) → V(H)</span> preserves adjacency, so it preserves the degree of each vertex: <span class=\"mm\">deg<sub>H</sub>(f(x)) = deg<sub>G</sub>(x)</span>.",
+    "steps": [
+     "Let x be the vertex of G with degree 5 and let f be an isomorphism onto H.",
+     "The neighbours of x correspond bijectively to the neighbours of f(x), so deg_H(f(x)) = 5.",
+     "Hence H has a vertex of degree 5 — option (A).",
+     "The others fail: (B) would need H to be 5-regular, (C) confuses a degree with a vertex count, and (D) confuses a degree with an edge count."
+    ],
+    "final": "Option (A)",
+    "misconception": "Students read “a vertex of degree 5” as “5 vertices” or “5 edges”. A degree is a local count at one vertex; it says nothing about the order or size of the graph.",
+    "takeaway": "Degree is a per-vertex invariant: the degree sequence is preserved as a multiset, never as a single global number."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q29",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "complete-bipartite-graphs",
+   "subtopic": "complete-bipartite-graphs",
+   "subtopic_label": "Complete & bipartite graphs",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which one of the following graphs is bipartite?",
+   "question_html": "<p class=\"qtext\">Which one of the following graphs is bipartite?</p>",
+   "options": [
+    "<span class=\"mm\">C<sub>5</sub></span>",
+    "<span class=\"mm\">K<sub>3</sub></span>",
+    "the Petersen graph",
+    "<span class=\"mm\">K<sub>2,3</sub></span>"
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A graph is bipartite exactly when its vertex set splits into two independent sets, equivalently when it contains no cycle of odd length.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>C₅ is itself an odd cycle (length 5), so it is not bipartite.</li><li>K₃ is a triangle, an odd cycle, so it is not bipartite.</li><li>The Petersen graph contains 5-cycles, so it is not bipartite — its being 3-regular and triangle-free does not help it.</li><li>K₂,₃ is bipartite by construction: its two parts are the independent sets of sizes 2 and 3, and every edge joins one part to the other.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D)</span></p><p class=\"row\"><b>Common misconception.</b> “Cubic and triangle-free implies bipartite” is false, and the Petersen graph is the standard counterexample. Triangle-freeness rules out only 3-cycles, not 5-cycles.</p><p class=\"row\"><b>Takeaway.</b> Test for bipartiteness by looking for any odd cycle, not just a triangle.</p>",
+   "solution": {
+    "concept": "A graph is bipartite exactly when its vertex set splits into two independent sets, equivalently when it contains no cycle of odd length.",
+    "steps": [
+     "C₅ is itself an odd cycle (length 5), so it is not bipartite.",
+     "K₃ is a triangle, an odd cycle, so it is not bipartite.",
+     "The Petersen graph contains 5-cycles, so it is not bipartite — its being 3-regular and triangle-free does not help it.",
+     "K₂,₃ is bipartite by construction: its two parts are the independent sets of sizes 2 and 3, and every edge joins one part to the other."
+    ],
+    "final": "Option (D)",
+    "misconception": "“Cubic and triangle-free implies bipartite” is false, and the Petersen graph is the standard counterexample. Triangle-freeness rules out only 3-cycles, not 5-cycles.",
+    "takeaway": "Test for bipartiteness by looking for any odd cycle, not just a triangle."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q30",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "representations",
+   "subtopic": "representations",
+   "subtopic_label": "Graph representations",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "The adjacency matrix of a simple graph on 6 vertices with 8 edges has how many entries equal to 1?",
+   "question_html": "<p class=\"qtext\">The adjacency matrix of a simple graph on 6 vertices with 8 edges has how many entries equal to 1?</p>",
+   "options": [
+    "8",
+    "12",
+    "16",
+    "36"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In the adjacency matrix of a simple undirected graph, the entry <span class=\"mm\">a<sub>ij</sub></span> is 1 exactly when <span class=\"mm\">{v<sub>i</sub>, v<sub>j</sub>}</span> is an edge, so each edge contributes two 1-entries, at <span class=\"mm\">(i, j)</span> and at <span class=\"mm\">(j, i)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The matrix is 6 × 6, so it has 36 entries in total.</li><li>Each edge {u, v} sets a_uv = 1 and a_vu = 1, and no other entry.</li><li>Distinct edges touch distinct entry pairs, so the number of 1s is exactly 2|E|.</li><li>With |E| = 8, that is 16.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> Reporting 8 forgets that the matrix is symmetric and each edge is recorded twice; reporting 36 is the total number of entries, not the number of 1s.</p><p class=\"row\"><b>Takeaway.</b> Count 1s as 2|E|, exactly as you count degree sum as 2|E| — they are the same count seen two ways.</p>",
+   "solution": {
+    "concept": "In the adjacency matrix of a simple undirected graph, the entry <span class=\"mm\">a<sub>ij</sub></span> is 1 exactly when <span class=\"mm\">{v<sub>i</sub>, v<sub>j</sub>}</span> is an edge, so each edge contributes two 1-entries, at <span class=\"mm\">(i, j)</span> and at <span class=\"mm\">(j, i)</span>.",
+    "steps": [
+     "The matrix is 6 × 6, so it has 36 entries in total.",
+     "Each edge {u, v} sets a_uv = 1 and a_vu = 1, and no other entry.",
+     "Distinct edges touch distinct entry pairs, so the number of 1s is exactly 2|E|.",
+     "With |E| = 8, that is 16."
+    ],
+    "final": "Option (C)",
+    "misconception": "Reporting 8 forgets that the matrix is symmetric and each edge is recorded twice; reporting 36 is the total number of entries, not the number of 1s.",
+    "takeaway": "Count 1s as 2|E|, exactly as you count degree sum as 2|E| — they are the same count seen two ways."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q31",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "graph-connectivity",
+   "subtopic": "graph-connectivity",
+   "subtopic_label": "Graph connectivity",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A connected graph <span class=\"mm\">G</span> on at least three vertices has a cut vertex. What is <span class=\"mm\">κ(G)</span>, the vertex connectivity?",
+   "question_html": "<p class=\"qtext\">A connected graph <span class=\"mm\">G</span> on at least three vertices has a cut vertex. What is <span class=\"mm\">κ(G)</span>, the vertex connectivity?</p>",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "It cannot be determined from the information given."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">κ(G)</span> is the minimum number of vertices whose deletion disconnects the graph (or leaves a single vertex).</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A cut vertex is a single vertex whose deletion disconnects G, so κ(G) ≤ 1.</li><li>G is connected and has at least three vertices, so no single deletion is needed to keep it connected: κ(G) ≥ 1.</li><li>Therefore κ(G) = 1 exactly.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Some students answer 2, borrowing the value for a cycle, or 0, which is reserved for a disconnected graph (or K₁). A cut vertex forces the value to be exactly 1.</p><p class=\"row\"><b>Takeaway.</b> Cut vertex ⇔ κ = 1; bridge ⇔ λ = 1. The two are independent — a graph may have one without the other.</p>",
+   "solution": {
+    "concept": "<span class=\"mm\">κ(G)</span> is the minimum number of vertices whose deletion disconnects the graph (or leaves a single vertex).",
+    "steps": [
+     "A cut vertex is a single vertex whose deletion disconnects G, so κ(G) ≤ 1.",
+     "G is connected and has at least three vertices, so no single deletion is needed to keep it connected: κ(G) ≥ 1.",
+     "Therefore κ(G) = 1 exactly."
+    ],
+    "final": "Option (B)",
+    "misconception": "Some students answer 2, borrowing the value for a cycle, or 0, which is reserved for a disconnected graph (or K₁). A cut vertex forces the value to be exactly 1.",
+    "takeaway": "Cut vertex ⇔ κ = 1; bridge ⇔ λ = 1. The two are independent — a graph may have one without the other."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q32",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "degree-handshaking-lemma",
+   "subtopic": "degree-handshaking-lemma",
+   "subtopic_label": "Degree sum & handshaking lemma",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which statement is true of <b>every</b> simple graph with at least two vertices?",
+   "question_html": "<p class=\"qtext\">Which statement is true of <b>every</b> simple graph with at least two vertices?</p>",
+   "options": [
+    "At least two vertices have the same degree.",
+    "All vertices have distinct degrees.",
+    "At least two vertices have the same set of neighbours.",
+    "The degree sequence is graphical."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A simple graph on <span class=\"mm\">n</span> vertices has degrees in <span class=\"mm\">{0, 1, …, n−1}</span>, but the values 0 and n−1 cannot both occur: a vertex of degree n−1 is adjacent to everything, so no vertex can be isolated.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Suppose, for contradiction, that all n degrees are distinct.</li><li>They would then have to be exactly the n values 0, 1, …, n−1.</li><li>Some vertex would have degree n−1 (adjacent to all others) and another would have degree 0 (adjacent to none) — a contradiction.</li><li>So two vertices must share a degree, which is option (A).</li><li>The others fail: (B) is exactly what we just disproved; (C) fails for C₄, whose four neighbourhoods are all different; (D) is circular — a degree sequence is by definition the sequence of some graph.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Students often verify (A) only on a couple of examples, or think a regular graph is a counterexample — a regular graph has all degrees equal, which satisfies (A) even more strongly.</p><p class=\"row\"><b>Takeaway.</b> There are n vertices but only n − 1 usable degree values; the pigeonhole principle does the rest.</p>",
+   "solution": {
+    "concept": "A simple graph on <span class=\"mm\">n</span> vertices has degrees in <span class=\"mm\">{0, 1, …, n−1}</span>, but the values 0 and n−1 cannot both occur: a vertex of degree n−1 is adjacent to everything, so no vertex can be isolated.",
+    "steps": [
+     "Suppose, for contradiction, that all n degrees are distinct.",
+     "They would then have to be exactly the n values 0, 1, …, n−1.",
+     "Some vertex would have degree n−1 (adjacent to all others) and another would have degree 0 (adjacent to none) — a contradiction.",
+     "So two vertices must share a degree, which is option (A).",
+     "The others fail: (B) is exactly what we just disproved; (C) fails for C₄, whose four neighbourhoods are all different; (D) is circular — a degree sequence is by definition the sequence of some graph."
+    ],
+    "final": "Option (A)",
+    "misconception": "Students often verify (A) only on a couple of examples, or think a regular graph is a counterexample — a regular graph has all degrees equal, which satisfies (A) even more strongly.",
+    "takeaway": "There are n vertices but only n − 1 usable degree values; the pigeonhole principle does the rest."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q33",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "walks-trails-paths-circuits",
+   "subtopic": "walks-trails-paths-circuits",
+   "subtopic_label": "Walks, trails, paths & circuits",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A connected graph has exactly four vertices of odd degree. What is the smallest number of edge-disjoint trails needed to cover every edge of the graph?",
+   "question_html": "<p class=\"qtext\">A connected graph has exactly four vertices of odd degree. What is the smallest number of edge-disjoint trails needed to cover every edge of the graph?</p>",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "It depends on the graph, so no single value is forced."
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A decomposition into trails: every open trail has exactly two odd-degree endpoints (its ends) and every closed trail has none, so a graph with <span class=\"mm\">2k</span> odd-degree vertices needs at least <span class=\"mm\">k</span> trails.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each trail can account for at most two of the four odd-degree vertices, so at least 2 trails are needed.</li><li>Two suffice: add a dummy edge joining one pair of odd vertices and another dummy edge joining the other pair.</li><li>Every degree is now even, so the resulting multigraph has an Euler circuit.</li><li>Delete the two dummy edges from that circuit; the circuit splits into exactly two trails that together cover every original edge.</li><li>Hence the minimum is 2, whatever the graph looks like.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 treats each odd vertex as needing its own trail; answering “it depends” misses that the bound is tight for every such graph.</p><p class=\"row\"><b>Takeaway.</b> Minimum number of trails covering all edges = max(1, (number of odd-degree vertices)/2).</p>",
+   "solution": {
+    "concept": "A decomposition into trails: every open trail has exactly two odd-degree endpoints (its ends) and every closed trail has none, so a graph with <span class=\"mm\">2k</span> odd-degree vertices needs at least <span class=\"mm\">k</span> trails.",
+    "steps": [
+     "Each trail can account for at most two of the four odd-degree vertices, so at least 2 trails are needed.",
+     "Two suffice: add a dummy edge joining one pair of odd vertices and another dummy edge joining the other pair.",
+     "Every degree is now even, so the resulting multigraph has an Euler circuit.",
+     "Delete the two dummy edges from that circuit; the circuit splits into exactly two trails that together cover every original edge.",
+     "Hence the minimum is 2, whatever the graph looks like."
+    ],
+    "final": "Option (B)",
+    "misconception": "Answering 4 treats each odd vertex as needing its own trail; answering “it depends” misses that the bound is tight for every such graph.",
+    "takeaway": "Minimum number of trails covering all edges = max(1, (number of odd-degree vertices)/2)."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q34",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "isomorphism",
+   "subtopic": "isomorphism",
+   "subtopic_label": "Isomorphism",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A graph <span class=\"mm\">G</span> on 6 vertices is isomorphic to its own complement. Which statement is correct?",
+   "question_html": "<p class=\"qtext\">A graph <span class=\"mm\">G</span> on 6 vertices is isomorphic to its own complement. Which statement is correct?</p>",
+   "options": [
+    "<span class=\"mm\">G</span> has 7 edges.",
+    "<span class=\"mm\">G</span> has 8 edges.",
+    "<span class=\"mm\">G</span> has 7 or 8 edges, depending on which <span class=\"mm\">G</span> is chosen.",
+    "No such graph exists on 6 vertices."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A self-complementary graph satisfies <span class=\"mm\">|E(G)| + |E(Ḡ)| = C(n, 2)</span>, and an isomorphism forces the two edge counts to be equal.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>K₆ has C(6, 2) = 15 edges, and every pair of vertices is an edge of exactly one of G and its complement.</li><li>So |E(G)| + |E(Ḡ)| = 15.</li><li>If G ≅ Ḡ then |E(G)| = |E(Ḡ)|, giving 2|E(G)| = 15.</li><li>No integer satisfies that, so no self-complementary graph on 6 vertices exists.</li><li>In general a self-complementary graph needs C(n, 2) even, i.e. n ≡ 0 or 1 (mod 4); n = 6 gives 15, which is odd.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D)</span></p><p class=\"row\"><b>Common misconception.</b> Students often try to construct one and settle on “7 or 8”, assuming a near-miss is possible. Isomorphism is exact: the two edge counts must be equal, not merely close.</p><p class=\"row\"><b>Takeaway.</b> Before drawing, run the parity check C(n,2) even — it kills the n = 2, 3, 6, 7, … cases instantly.</p>",
+   "solution": {
+    "concept": "A self-complementary graph satisfies <span class=\"mm\">|E(G)| + |E(Ḡ)| = C(n, 2)</span>, and an isomorphism forces the two edge counts to be equal.",
+    "steps": [
+     "K₆ has C(6, 2) = 15 edges, and every pair of vertices is an edge of exactly one of G and its complement.",
+     "So |E(G)| + |E(Ḡ)| = 15.",
+     "If G ≅ Ḡ then |E(G)| = |E(Ḡ)|, giving 2|E(G)| = 15.",
+     "No integer satisfies that, so no self-complementary graph on 6 vertices exists.",
+     "In general a self-complementary graph needs C(n, 2) even, i.e. n ≡ 0 or 1 (mod 4); n = 6 gives 15, which is odd."
+    ],
+    "final": "Option (D)",
+    "misconception": "Students often try to construct one and settle on “7 or 8”, assuming a near-miss is possible. Isomorphism is exact: the two edge counts must be equal, not merely close.",
+    "takeaway": "Before drawing, run the parity check C(n,2) even — it kills the n = 2, 3, 6, 7, … cases instantly."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q35",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "complete-bipartite-graphs",
+   "subtopic": "complete-bipartite-graphs",
+   "subtopic_label": "Complete & bipartite graphs",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "What is the maximum number of edges in a bipartite graph on 9 vertices?",
+   "question_html": "<p class=\"qtext\">What is the maximum number of edges in a bipartite graph on 9 vertices?</p>",
+   "options": [
+    "16",
+    "18",
+    "20",
+    "36"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> If the two parts have sizes <span class=\"mm\">a</span> and <span class=\"mm\">b</span> with <span class=\"mm\">a + b = n</span>, the edge count is at most <span class=\"mm\">ab</span>, attained by the complete bipartite graph <span class=\"mm\">K<sub>a,b</sub></span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write the part sizes as a and b with a + b = 9.</li><li>Every edge has one end in each part, so |E| ≤ ab.</li><li>The product ab is largest when the parts are as equal as possible: a = 4, b = 5.</li><li>So the maximum is 4 · 5 = 20, attained by K₄,₅.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> 36 is C(9, 2), the edge count of the complete graph K₉, which is very far from bipartite. 18 comes from halving 9 · 4 without justification.</p><p class=\"row\"><b>Takeaway.</b> Balance the parts: max edges in a bipartite graph on n vertices is ⌊n²/4⌋.</p>",
+   "solution": {
+    "concept": "If the two parts have sizes <span class=\"mm\">a</span> and <span class=\"mm\">b</span> with <span class=\"mm\">a + b = n</span>, the edge count is at most <span class=\"mm\">ab</span>, attained by the complete bipartite graph <span class=\"mm\">K<sub>a,b</sub></span>.",
+    "steps": [
+     "Write the part sizes as a and b with a + b = 9.",
+     "Every edge has one end in each part, so |E| ≤ ab.",
+     "The product ab is largest when the parts are as equal as possible: a = 4, b = 5.",
+     "So the maximum is 4 · 5 = 20, attained by K₄,₅."
+    ],
+    "final": "Option (C)",
+    "misconception": "36 is C(9, 2), the edge count of the complete graph K₉, which is very far from bipartite. 18 comes from halving 9 · 4 without justification.",
+    "takeaway": "Balance the parts: max edges in a bipartite graph on n vertices is ⌊n²/4⌋."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q36",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "representations",
+   "subtopic": "representations",
+   "subtopic_label": "Graph representations",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Let <span class=\"mm\">B</span> be the incidence matrix of a simple graph with <span class=\"mm\">n</span> vertices and <span class=\"mm\">m</span> edges, with <span class=\"mm\">b<sub>ij</sub> = 1</span> when vertex <span class=\"mm\">v<sub>i</sub></span> is an endpoint of edge <span class=\"mm\">e<sub>j</sub></span>. Which statement is true?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">B</span> be the incidence matrix of a simple graph with <span class=\"mm\">n</span> vertices and <span class=\"mm\">m</span> edges, with <span class=\"mm\">b<sub>ij</sub> = 1</span> when vertex <span class=\"mm\">v<sub>i</sub></span> is an endpoint of edge <span class=\"mm\">e<sub>j</sub></span>. Which statement is true?</p>",
+   "options": [
+    "Every column sum is 2 and the <span class=\"mm\">i</span>-th row sum is <span class=\"mm\">deg(v<sub>i</sub>)</span>.",
+    "Every column sum equals the degree of the corresponding vertex.",
+    "<span class=\"mm\">B</span> is symmetric.",
+    "Every row sum is 2."
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The incidence matrix records vertex–edge incidence: rows are vertices, columns are edges.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Column j corresponds to edge e_j. A simple edge has exactly two endpoints, so column j contains exactly two 1s: its sum is 2.</li><li>Row i corresponds to vertex v_i and contains a 1 for each edge incident with v_i, so its sum is deg(v_i).</li><li>(B) swaps rows and columns; (C) fails because B is n × m and need not be square, let alone symmetric; (D) fails because row sums are degrees, which are not 2 in general.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> The adjacency matrix and the incidence matrix are often conflated. The adjacency matrix is square, symmetric, with row sums equal to degrees; the incidence matrix is n × m with column sums 2.</p><p class=\"row\"><b>Takeaway.</b> Incidence: rows vertices, columns edges, column sums 2. Adjacency: square, symmetric, row sums = degrees.</p>",
+   "solution": {
+    "concept": "The incidence matrix records vertex–edge incidence: rows are vertices, columns are edges.",
+    "steps": [
+     "Column j corresponds to edge e_j. A simple edge has exactly two endpoints, so column j contains exactly two 1s: its sum is 2.",
+     "Row i corresponds to vertex v_i and contains a 1 for each edge incident with v_i, so its sum is deg(v_i).",
+     "(B) swaps rows and columns; (C) fails because B is n × m and need not be square, let alone symmetric; (D) fails because row sums are degrees, which are not 2 in general."
+    ],
+    "final": "Option (A)",
+    "misconception": "The adjacency matrix and the incidence matrix are often conflated. The adjacency matrix is square, symmetric, with row sums equal to degrees; the incidence matrix is n × m with column sums 2.",
+    "takeaway": "Incidence: rows vertices, columns edges, column sums 2. Adjacency: square, symmetric, row sums = degrees."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q37",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "graph-connectivity",
+   "subtopic": "graph-connectivity",
+   "subtopic_label": "Graph connectivity",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A connected graph has 9 vertices and 9 edges. What is the largest possible value of <span class=\"mm\">κ(G)</span>?",
+   "question_html": "<p class=\"qtext\">A connected graph has 9 vertices and 9 edges. What is the largest possible value of <span class=\"mm\">κ(G)</span>?</p>",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": [
+    1
+   ],
+   "answer_display": "Option (B)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> For a connected graph, the cyclomatic number is <span class=\"mm\">|E| − |V| + 1</span>. Here it equals 9 − 9 + 1 = 1, so the graph has exactly one cycle.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>With |E| = |V| = 9 and G connected, G has exactly one cycle — it is unicyclic.</li><li>If any vertex lies outside that cycle, it hangs off the cycle through a tree, and the vertex where the tree meets the cycle is a cut vertex, giving κ(G) = 1.</li><li>So κ(G) ≥ 2 forces G to be exactly the cycle C₉, where removing any two vertices disconnects it but removing one does not: κ(C₉) = 2.</li><li>Hence the largest possible value is 2, attained by C₉.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B)</span></p><p class=\"row\"><b>Common misconception.</b> Students reason from the maximum degree (which can be large once trees are attached) and guess 3 or 4. Connectivity is limited by structure, not by how many edges meet at a vertex.</p><p class=\"row\"><b>Takeaway.</b> A connected graph with n vertices and n edges is a single cycle plus trees; its connectivity is 2 only in the pure-cycle case.</p>",
+   "solution": {
+    "concept": "For a connected graph, the cyclomatic number is <span class=\"mm\">|E| − |V| + 1</span>. Here it equals 9 − 9 + 1 = 1, so the graph has exactly one cycle.",
+    "steps": [
+     "With |E| = |V| = 9 and G connected, G has exactly one cycle — it is unicyclic.",
+     "If any vertex lies outside that cycle, it hangs off the cycle through a tree, and the vertex where the tree meets the cycle is a cut vertex, giving κ(G) = 1.",
+     "So κ(G) ≥ 2 forces G to be exactly the cycle C₉, where removing any two vertices disconnects it but removing one does not: κ(C₉) = 2.",
+     "Hence the largest possible value is 2, attained by C₉."
+    ],
+    "final": "Option (B)",
+    "misconception": "Students reason from the maximum degree (which can be large once trees are attached) and guess 3 or 4. Connectivity is limited by structure, not by how many edges meet at a vertex.",
+    "takeaway": "A connected graph with n vertices and n edges is a single cycle plus trees; its connectivity is 2 only in the pure-cycle case."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q38",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "walks-trails-paths-circuits",
+   "subtopic": "walks-trails-paths-circuits",
+   "subtopic_label": "Walks, trails, paths & circuits",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "How many Hamiltonian cycles does <span class=\"mm\">K<sub>2,3</sub></span> contain?",
+   "question_html": "<p class=\"qtext\">How many Hamiltonian cycles does <span class=\"mm\">K<sub>2,3</sub></span> contain?</p>",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "answer": [
+    0
+   ],
+   "answer_display": "Option (A)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A Hamiltonian cycle visits every vertex exactly once and returns to the start, so on <span class=\"mm\">n</span> vertices it is a cycle of length <span class=\"mm\">n</span>. A bipartite graph has only even cycles.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>K₂,₃ is bipartite with parts of sizes 2 and 3.</li><li>Every cycle in a bipartite graph alternates between the two parts, so it has even length.</li><li>A Hamiltonian cycle on 5 vertices would have length 5, which is odd.</li><li>So no Hamiltonian cycle exists: the count is 0.</li><li>(A Hamiltonian path does exist — the obstruction is closing the cycle, since the parts differ in size.)</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A)</span></p><p class=\"row\"><b>Common misconception.</b> Students generalise from K₃,₃, which does have Hamiltonian cycles, and answer 1 or more. The obstruction here is parity of the cycle length, not the size of the graph.</p><p class=\"row\"><b>Takeaway.</b> Bipartite ⇒ every cycle even. A Hamiltonian cycle on an odd number of vertices is therefore impossible.</p>",
+   "solution": {
+    "concept": "A Hamiltonian cycle visits every vertex exactly once and returns to the start, so on <span class=\"mm\">n</span> vertices it is a cycle of length <span class=\"mm\">n</span>. A bipartite graph has only even cycles.",
+    "steps": [
+     "K₂,₃ is bipartite with parts of sizes 2 and 3.",
+     "Every cycle in a bipartite graph alternates between the two parts, so it has even length.",
+     "A Hamiltonian cycle on 5 vertices would have length 5, which is odd.",
+     "So no Hamiltonian cycle exists: the count is 0.",
+     "(A Hamiltonian path does exist — the obstruction is closing the cycle, since the parts differ in size.)"
+    ],
+    "final": "Option (A)",
+    "misconception": "Students generalise from K₃,₃, which does have Hamiltonian cycles, and answer 1 or more. The obstruction here is parity of the cycle length, not the size of the graph.",
+    "takeaway": "Bipartite ⇒ every cycle even. A Hamiltonian cycle on an odd number of vertices is therefore impossible."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q39",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "isomorphism",
+   "subtopic": "isomorphism",
+   "subtopic_label": "Isomorphism",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "How many pairwise non-isomorphic connected simple graphs are there on 4 vertices?",
+   "question_html": "<p class=\"qtext\">How many pairwise non-isomorphic connected simple graphs are there on 4 vertices?</p>",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "11"
+   ],
+   "answer": [
+    2
+   ],
+   "answer_display": "Option (C)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Count unlabelled graphs by grouping according to degree sequence and structure; isomorphic graphs are identified, so vertex names are irrelevant.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Group by the number of edges. A connected graph on 4 vertices has at least 3 edges.</li><li>3 edges: the tree P₄ (degrees 2,2,1,1) and the star K₁,₃ (degrees 3,1,1,1) — 2 graphs.</li><li>4 edges: C₄ (2,2,2,2) and the triangle with a pendant vertex (3,2,2,1) — 2 graphs.</li><li>5 edges: K₄ with one edge removed (3,3,2,2) — 1 graph.</li><li>6 edges: K₄ (3,3,3,3) — 1 graph.</li><li>Total 2 + 2 + 1 + 1 = 6.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C)</span></p><p class=\"row\"><b>Common misconception.</b> 11 is the number of unlabelled graphs on 4 vertices including disconnected ones; the question asks for connected graphs only, which removes the five disconnected cases.</p><p class=\"row\"><b>Takeaway.</b> Enumerate by edge count, then split by degree sequence, and remember to exclude the disconnected shapes.</p>",
+   "solution": {
+    "concept": "Count unlabelled graphs by grouping according to degree sequence and structure; isomorphic graphs are identified, so vertex names are irrelevant.",
+    "steps": [
+     "Group by the number of edges. A connected graph on 4 vertices has at least 3 edges.",
+     "3 edges: the tree P₄ (degrees 2,2,1,1) and the star K₁,₃ (degrees 3,1,1,1) — 2 graphs.",
+     "4 edges: C₄ (2,2,2,2) and the triangle with a pendant vertex (3,2,2,1) — 2 graphs.",
+     "5 edges: K₄ with one edge removed (3,3,2,2) — 1 graph.",
+     "6 edges: K₄ (3,3,3,3) — 1 graph.",
+     "Total 2 + 2 + 1 + 1 = 6."
+    ],
+    "final": "Option (C)",
+    "misconception": "11 is the number of unlabelled graphs on 4 vertices including disconnected ones; the question asks for connected graphs only, which removes the five disconnected cases.",
+    "takeaway": "Enumerate by edge count, then split by degree sequence, and remember to exclude the disconnected shapes."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q40",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "degree-handshaking-lemma",
+   "subtopic": "degree-handshaking-lemma",
+   "subtopic_label": "Degree sum & handshaking lemma",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A simple graph has 12 edges, exactly two vertices of degree 1, and every remaining vertex of degree 3. Which statement is correct?",
+   "question_html": "<p class=\"qtext\">A simple graph has 12 edges, exactly two vertices of degree 1, and every remaining vertex of degree 3. Which statement is correct?</p>",
+   "options": [
+    "The graph has 8 vertices.",
+    "The graph has 9 vertices.",
+    "The graph has 10 vertices.",
+    "No such graph exists."
+   ],
+   "answer": [
+    3
+   ],
+   "answer_display": "Option (D)",
+   "marks": 1,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The handshaking lemma fixes the degree sum at <span class=\"mm\">2|E| = 24</span>; the degree description must then produce an integer vertex count.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let the graph have n vertices. Two of them have degree 1 and the other n − 2 have degree 3.</li><li>Degree sum = 2·1 + 3(n − 2) = 3n − 4.</li><li>Setting 3n − 4 = 2·12 = 24 gives 3n = 28, so n = 28/3.</li><li>A vertex count must be a positive integer, so no such graph exists.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D)</span></p><p class=\"row\"><b>Common misconception.</b> Students round 9.33 to 9 and then “verify” 3·9 − 4 = 23 ≈ 24, or adjust one degree silently. A non-integer n is a proof of impossibility, not an arithmetic slip to be patched.</p><p class=\"row\"><b>Takeaway.</b> When the unknowns are counted, always check that the answer is an integer — a fractional vertex count is a contradiction, not a rounding.</p>",
+   "solution": {
+    "concept": "The handshaking lemma fixes the degree sum at <span class=\"mm\">2|E| = 24</span>; the degree description must then produce an integer vertex count.",
+    "steps": [
+     "Let the graph have n vertices. Two of them have degree 1 and the other n − 2 have degree 3.",
+     "Degree sum = 2·1 + 3(n − 2) = 3n − 4.",
+     "Setting 3n − 4 = 2·12 = 24 gives 3n = 28, so n = 28/3.",
+     "A vertex count must be a positive integer, so no such graph exists."
+    ],
+    "final": "Option (D)",
+    "misconception": "Students round 9.33 to 9 and then “verify” 3·9 − 4 = 23 ≈ 24, or adjust one degree silently. A non-integer n is a proof of impossibility, not an arithmetic slip to be patched.",
+    "takeaway": "When the unknowns are counted, always check that the answer is an integer — a fractional vertex count is a contradiction, not a rounding."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q41",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "degree-handshaking-lemma",
+   "subtopic": "degree-handshaking-lemma",
+   "subtopic_label": "Degree sum & handshaking lemma",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which of the following hold for <b>every</b> simple graph <span class=\"mm\">G = (V, E)</span>? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following hold for <b>every</b> simple graph <span class=\"mm\">G = (V, E)</span>? (Select all that apply.)</p>",
+   "options": [
+    "<span class=\"mm\">Σ<sub>v∈V</sub> deg(v) = 2|E|</span>",
+    "The number of vertices of odd degree is even.",
+    "<span class=\"mm\">Σ<sub>v∈V</sub> deg(v) = |E|</span>",
+    "The number of vertices of even degree is even."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Handshaking lemma: every edge contributes exactly one to the degree of each of its two endpoints, so degrees sum to <span class=\"mm\">2|E|</span>; the parity consequence is that odd-degree vertices come in pairs.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) holds by the handshaking lemma, counting edge-endpoints in two ways.</li><li>(B) holds because the sum 2|E| is even and even-degree vertices contribute even amounts, so the odd degrees must contribute an even total — an even number of odd terms.</li><li>(C) is false by a factor of two: a single edge already has degree sum 2, not 1.</li><li>(D) is false: in the path P₃ the degrees are 1, 2, 1, so exactly one vertex has even degree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B)</span></p><p class=\"row\"><b>Common misconception.</b> Students assume the even-degree count must also be even by symmetry with (B). Only the odd count is constrained; the even count can be anything.</p><p class=\"row\"><b>Takeaway.</b> Odd-degree vertices pair up; even-degree vertices do not.</p>",
+   "solution": {
+    "concept": "Handshaking lemma: every edge contributes exactly one to the degree of each of its two endpoints, so degrees sum to <span class=\"mm\">2|E|</span>; the parity consequence is that odd-degree vertices come in pairs.",
+    "steps": [
+     "(A) holds by the handshaking lemma, counting edge-endpoints in two ways.",
+     "(B) holds because the sum 2|E| is even and even-degree vertices contribute even amounts, so the odd degrees must contribute an even total — an even number of odd terms.",
+     "(C) is false by a factor of two: a single edge already has degree sum 2, not 1.",
+     "(D) is false: in the path P₃ the degrees are 1, 2, 1, so exactly one vertex has even degree."
+    ],
+    "final": "Options (A) and (B)",
+    "misconception": "Students assume the even-degree count must also be even by symmetry with (B). Only the odd count is constrained; the even count can be anything.",
+    "takeaway": "Odd-degree vertices pair up; even-degree vertices do not."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q42",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "complete-bipartite-graphs",
+   "subtopic": "complete-bipartite-graphs",
+   "subtopic_label": "Complete & bipartite graphs",
+   "type": "MSQ",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which of the following graphs are bipartite? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following graphs are bipartite? (Select all that apply.)</p>",
+   "options": [
+    "every tree",
+    "<span class=\"mm\">K<sub>3,3</sub></span>",
+    "<span class=\"mm\">C<sub>6</sub></span>",
+    "<span class=\"mm\">K<sub>5</sub></span>"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A graph is bipartite exactly when it has no odd cycle. Trees and even cycles therefore qualify; complete graphs on three or more vertices do not.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A tree has no cycles at all, so it has no odd cycle: it is bipartite.</li><li>K₃,₃ is bipartite by definition — its two parts are the independent sets of size 3.</li><li>C₆ is a cycle of even length, so it alternates between two sets: bipartite.</li><li>K₅ contains triangles, so it is not bipartite.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C)</span></p><p class=\"row\"><b>Common misconception.</b> Some students believe a bipartite graph must be a complete bipartite graph, and reject the tree. Bipartiteness is a property of the vertex partition, not of maximality.</p><p class=\"row\"><b>Takeaway.</b> No odd cycle ⇒ bipartite. Trees and even cycles are the standard yes-cases.</p>",
+   "solution": {
+    "concept": "A graph is bipartite exactly when it has no odd cycle. Trees and even cycles therefore qualify; complete graphs on three or more vertices do not.",
+    "steps": [
+     "A tree has no cycles at all, so it has no odd cycle: it is bipartite.",
+     "K₃,₃ is bipartite by definition — its two parts are the independent sets of size 3.",
+     "C₆ is a cycle of even length, so it alternates between two sets: bipartite.",
+     "K₅ contains triangles, so it is not bipartite."
+    ],
+    "final": "Options (A), (B) and (C)",
+    "misconception": "Some students believe a bipartite graph must be a complete bipartite graph, and reject the tree. Bipartiteness is a property of the vertex partition, not of maximality.",
+    "takeaway": "No odd cycle ⇒ bipartite. Trees and even cycles are the standard yes-cases."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q43",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "walks-trails-paths-circuits",
+   "subtopic": "walks-trails-paths-circuits",
+   "subtopic_label": "Walks, trails, paths & circuits",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "For a connected graph <span class=\"mm\">G</span> with at least one edge, which conditions are <b>equivalent</b> to “<span class=\"mm\">G</span> has an Euler circuit”? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">For a connected graph <span class=\"mm\">G</span> with at least one edge, which conditions are <b>equivalent</b> to “<span class=\"mm\">G</span> has an Euler circuit”? (Select all that apply.)</p>",
+   "options": [
+    "Every vertex of <span class=\"mm\">G</span> has even degree.",
+    "The edge set of <span class=\"mm\">G</span> can be partitioned into edge-disjoint cycles.",
+    "<span class=\"mm\">G</span> has an Euler trail.",
+    "Every vertex of <span class=\"mm\">G</span> has degree exactly 2."
+   ],
+   "answer": [
+    0,
+    1
+   ],
+   "answer_display": "Options (A) and (B)",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Euler's theorem: a connected graph with at least one edge has an Euler circuit exactly when all degrees are even. Veblen's theorem gives the equivalent structural form — the edges can be split into edge-disjoint cycles.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is Euler's condition, so it is equivalent by the theorem.</li><li>(B) is equivalent to (A): if all degrees are even, start anywhere and peel off a closed trail repeatedly; each closed trail is a cycle decomposition of the edges it uses. Conversely, a union of edge-disjoint cycles has even degree at every vertex.</li><li>(C) is strictly weaker. A graph with exactly two odd-degree vertices has an Euler trail but no Euler circuit.</li><li>(D) is strictly stronger. The figure-eight graph has all degrees even but its centre has degree 4.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B)</span></p><p class=\"row\"><b>Common misconception.</b> “Has an Euler trail” is often treated as interchangeable with “has an Euler circuit”. It is not — the circuit is the special case with no odd-degree vertices.</p><p class=\"row\"><b>Takeaway.</b> Even degrees ⇔ Euler circuit ⇔ edge set splits into cycles; two odd vertices ⇔ Euler trail only.</p>",
+   "solution": {
+    "concept": "Euler's theorem: a connected graph with at least one edge has an Euler circuit exactly when all degrees are even. Veblen's theorem gives the equivalent structural form — the edges can be split into edge-disjoint cycles.",
+    "steps": [
+     "(A) is Euler's condition, so it is equivalent by the theorem.",
+     "(B) is equivalent to (A): if all degrees are even, start anywhere and peel off a closed trail repeatedly; each closed trail is a cycle decomposition of the edges it uses. Conversely, a union of edge-disjoint cycles has even degree at every vertex.",
+     "(C) is strictly weaker. A graph with exactly two odd-degree vertices has an Euler trail but no Euler circuit.",
+     "(D) is strictly stronger. The figure-eight graph has all degrees even but its centre has degree 4."
+    ],
+    "final": "Options (A) and (B)",
+    "misconception": "“Has an Euler trail” is often treated as interchangeable with “has an Euler circuit”. It is not — the circuit is the special case with no odd-degree vertices.",
+    "takeaway": "Even degrees ⇔ Euler circuit ⇔ edge set splits into cycles; two odd vertices ⇔ Euler trail only."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q44",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "isomorphism",
+   "subtopic": "isomorphism",
+   "subtopic_label": "Isomorphism",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which of the following statements about isomorphism are true? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements about isomorphism are true? (Select all that apply.)</p>",
+   "options": [
+    "<span class=\"mm\">C<sub>4</sub></span> is isomorphic to <span class=\"mm\">K<sub>2,2</sub></span>.",
+    "<span class=\"mm\">C<sub>6</sub></span> is isomorphic to <span class=\"mm\">K<sub>3,3</sub></span>.",
+    "<span class=\"mm\">P<sub>5</sub></span> is isomorphic to <span class=\"mm\">K<sub>1,4</sub></span>.",
+    "The complement of <span class=\"mm\">C<sub>4</sub></span> is isomorphic to <span class=\"mm\">2K<sub>2</sub></span>."
+   ],
+   "answer": [
+    0,
+    3
+   ],
+   "answer_display": "Options (A) and (D)",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Isomorphism is decided by comparing invariants — order, size, degree multiset, cycle structure — and confirmed by exhibiting an explicit bijection.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) K₂,₂ is the 4-cycle: with parts {a, b} and {c, d} the edges are ac, ad, bc, bd, which form the cycle a–c–b–d–a. True.</li><li>(B) C₆ has 6 edges and is 2-regular; K₃,₃ has 9 edges and is 3-regular. False.</li><li>(C) P₅ has degree sequence 2, 2, 2, 1, 1; K₁,₄ has 4, 1, 1, 1, 1. Different multisets, so not isomorphic. False.</li><li>(D) C₄ = a–b–c–d–a. Its complement keeps the two diagonals ac and bd and drops all four sides, giving two disjoint edges — exactly 2K₂. True.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (D)</span></p><p class=\"row\"><b>Common misconception.</b> Option (B) traps students who see “both have 6 vertices”. Order alone is a necessary condition, never a sufficient one.</p><p class=\"row\"><b>Takeaway.</b> Compare the degree multiset first; it usually settles the question before any bijection hunting.</p>",
+   "solution": {
+    "concept": "Isomorphism is decided by comparing invariants — order, size, degree multiset, cycle structure — and confirmed by exhibiting an explicit bijection.",
+    "steps": [
+     "(A) K₂,₂ is the 4-cycle: with parts {a, b} and {c, d} the edges are ac, ad, bc, bd, which form the cycle a–c–b–d–a. True.",
+     "(B) C₆ has 6 edges and is 2-regular; K₃,₃ has 9 edges and is 3-regular. False.",
+     "(C) P₅ has degree sequence 2, 2, 2, 1, 1; K₁,₄ has 4, 1, 1, 1, 1. Different multisets, so not isomorphic. False.",
+     "(D) C₄ = a–b–c–d–a. Its complement keeps the two diagonals ac and bd and drops all four sides, giving two disjoint edges — exactly 2K₂. True."
+    ],
+    "final": "Options (A) and (D)",
+    "misconception": "Option (B) traps students who see “both have 6 vertices”. Order alone is a necessary condition, never a sufficient one.",
+    "takeaway": "Compare the degree multiset first; it usually settles the question before any bijection hunting."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q45",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "graph-connectivity",
+   "subtopic": "graph-connectivity",
+   "subtopic_label": "Graph connectivity",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "Which of the following statements are true for simple graphs? (Select all that apply.)",
+   "question_html": "<p class=\"qtext\">Which of the following statements are true for simple graphs? (Select all that apply.)</p>",
+   "options": [
+    "If <span class=\"mm\">G</span> has a bridge then <span class=\"mm\">λ(G) = 1</span>.",
+    "If <span class=\"mm\">G</span> has a cut vertex then <span class=\"mm\">λ(G) = 1</span>.",
+    "<span class=\"mm\">κ(K<sub>n</sub>) = n − 1</span> for <span class=\"mm\">n ≥ 2</span>.",
+    "<span class=\"mm\">κ(P<sub>n</sub>) = 1</span> for every <span class=\"mm\">n ≥ 3</span>."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "answer_display": "Options (A), (C) and (D)",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Vertex connectivity <span class=\"mm\">κ</span> counts vertices to delete, edge connectivity <span class=\"mm\">λ</span> counts edges, and they are linked only by Whitney's chain <span class=\"mm\">κ ≤ λ ≤ δ</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) A bridge is a single edge whose removal disconnects the graph, so λ(G) ≤ 1; a connected graph has λ ≥ 1. Hence λ = 1. True.</li><li>(B) False. The bowtie — two triangles sharing one vertex — has a cut vertex, so κ = 1, yet no single edge disconnects it: λ = 2. A cut vertex constrains κ, not λ.</li><li>(C) Kₙ minus any n − 2 vertices leaves 2 adjacent vertices, while removing n − 1 leaves one vertex; so κ(Kₙ) = n − 1. True.</li><li>(D) Pₙ has an internal vertex whose deletion splits the path, so κ = 1 for n ≥ 3. True.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D)</span></p><p class=\"row\"><b>Common misconception.</b> (B) is the standard trap: students assume κ = 1 forces λ = 1. Whitney's chain allows κ < λ, and the bowtie realises 1 < 2.</p><p class=\"row\"><b>Takeaway.</b> A cut vertex says nothing about λ. Only Whitney's chain κ ≤ λ ≤ δ relates them.</p>",
+   "solution": {
+    "concept": "Vertex connectivity <span class=\"mm\">κ</span> counts vertices to delete, edge connectivity <span class=\"mm\">λ</span> counts edges, and they are linked only by Whitney's chain <span class=\"mm\">κ ≤ λ ≤ δ</span>.",
+    "steps": [
+     "(A) A bridge is a single edge whose removal disconnects the graph, so λ(G) ≤ 1; a connected graph has λ ≥ 1. Hence λ = 1. True.",
+     "(B) False. The bowtie — two triangles sharing one vertex — has a cut vertex, so κ = 1, yet no single edge disconnects it: λ = 2. A cut vertex constrains κ, not λ.",
+     "(C) Kₙ minus any n − 2 vertices leaves 2 adjacent vertices, while removing n − 1 leaves one vertex; so κ(Kₙ) = n − 1. True.",
+     "(D) Pₙ has an internal vertex whose deletion splits the path, so κ = 1 for n ≥ 3. True."
+    ],
+    "final": "Options (A), (C) and (D)",
+    "misconception": "(B) is the standard trap: students assume κ = 1 forces λ = 1. Whitney's chain allows κ < λ, and the bowtie realises 1 < 2.",
+    "takeaway": "A cut vertex says nothing about λ. Only Whitney's chain κ ≤ λ ≤ δ relates them."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q46",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "representations",
+   "subtopic": "representations",
+   "subtopic_label": "Graph representations",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "The adjacency matrix of a simple graph on 4 vertices has row sums 2, 3, 1, 2. How many entries of the matrix are equal to 1?<br/>(Enter an integer.)",
+   "question_html": "<p class=\"qtext\">The adjacency matrix of a simple graph on 4 vertices has row sums 2, 3, 1, 2. How many entries of the matrix are equal to 1?<br/>(Enter an integer.)</p>",
+   "options": [],
+   "answer": 8,
+   "answer_display": "8",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Row <span class=\"mm\">i</span> of the adjacency matrix sums to <span class=\"mm\">deg(v<sub>i</sub>)</span>, so the total number of 1-entries is the degree sum, which is <span class=\"mm\">2|E|</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Sum the given row sums: 2 + 3 + 1 + 2 = 8.</li><li>That total is the degree sum Σdeg(v), and also exactly the number of 1-entries.</li><li>Consistency check: the total is even, as 2|E| must be, giving |E| = 4 for this graph.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 8</span></p><p class=\"row\"><b>Common misconception.</b> Some students answer 4 by counting rows instead of summing them, or 16 by counting all entries of the 4 × 4 matrix.</p><p class=\"row\"><b>Takeaway.</b> Row sums of the adjacency matrix are degrees; their total is both the degree sum and the number of 1s.</p>",
+   "solution": {
+    "concept": "Row <span class=\"mm\">i</span> of the adjacency matrix sums to <span class=\"mm\">deg(v<sub>i</sub>)</span>, so the total number of 1-entries is the degree sum, which is <span class=\"mm\">2|E|</span>.",
+    "steps": [
+     "Sum the given row sums: 2 + 3 + 1 + 2 = 8.",
+     "That total is the degree sum Σdeg(v), and also exactly the number of 1-entries.",
+     "Consistency check: the total is even, as 2|E| must be, giving |E| = 4 for this graph."
+    ],
+    "final": "8",
+    "misconception": "Some students answer 4 by counting rows instead of summing them, or 16 by counting all entries of the 4 × 4 matrix.",
+    "takeaway": "Row sums of the adjacency matrix are degrees; their total is both the degree sum and the number of 1s."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q47",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "walks-trails-paths-circuits",
+   "subtopic": "walks-trails-paths-circuits",
+   "subtopic_label": "Walks, trails, paths & circuits",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "In <span class=\"mm\">K<sub>5</sub></span>, how many walks of length 2 are there from a fixed vertex <span class=\"mm\">u</span> to a fixed vertex <span class=\"mm\">v ≠ u</span>?<br/>(Enter an integer.)",
+   "question_html": "<p class=\"qtext\">In <span class=\"mm\">K<sub>5</sub></span>, how many walks of length 2 are there from a fixed vertex <span class=\"mm\">u</span> to a fixed vertex <span class=\"mm\">v ≠ u</span>?<br/>(Enter an integer.)</p>",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A walk of length 2 from <span class=\"mm\">u</span> to <span class=\"mm\">v</span> is a choice of an intermediate vertex <span class=\"mm\">w</span> adjacent to both; in <span class=\"mm\">K<sub>n</sub></span> that means every <span class=\"mm\">w ∉ {u, v}</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A length-2 walk has the form u → w → v, and both steps must be edges.</li><li>In K₅ every pair of distinct vertices is joined, so any w other than u and v works.</li><li>There are 5 − 2 = 3 such intermediate vertices, hence 3 walks.</li><li>Equivalently, (A²)_uv counts the common neighbours of u and v, which is n − 2 = 3.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 uses the degree of u and forgets that w must differ from v; the walk u → v → v is not a walk of length 2, since vv is not an edge of a simple graph.</p><p class=\"row\"><b>Takeaway.</b> Walks of length 2 between distinct vertices count common neighbours: n − 2 in Kₙ.</p>",
+   "solution": {
+    "concept": "A walk of length 2 from <span class=\"mm\">u</span> to <span class=\"mm\">v</span> is a choice of an intermediate vertex <span class=\"mm\">w</span> adjacent to both; in <span class=\"mm\">K<sub>n</sub></span> that means every <span class=\"mm\">w ∉ {u, v}</span>.",
+    "steps": [
+     "A length-2 walk has the form u → w → v, and both steps must be edges.",
+     "In K₅ every pair of distinct vertices is joined, so any w other than u and v works.",
+     "There are 5 − 2 = 3 such intermediate vertices, hence 3 walks.",
+     "Equivalently, (A²)_uv counts the common neighbours of u and v, which is n − 2 = 3."
+    ],
+    "final": "3",
+    "misconception": "Answering 4 uses the degree of u and forgets that w must differ from v; the walk u → v → v is not a walk of length 2, since vv is not an edge of a simple graph.",
+    "takeaway": "Walks of length 2 between distinct vertices count common neighbours: n − 2 in Kₙ."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q48",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "complete-bipartite-graphs",
+   "subtopic": "complete-bipartite-graphs",
+   "subtopic_label": "Complete & bipartite graphs",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Textbook-inspired",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "A 3-regular bipartite graph has 8 vertices. How many edges does it have?<br/>(Enter an integer.)",
+   "question_html": "<p class=\"qtext\">A 3-regular bipartite graph has 8 vertices. How many edges does it have?<br/>(Enter an integer.)</p>",
+   "options": [],
+   "answer": 12,
+   "answer_display": "12",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a <span class=\"mm\">k</span>-regular graph on <span class=\"mm\">n</span> vertices the degree sum is <span class=\"mm\">kn</span>, and the handshaking lemma gives <span class=\"mm\">|E| = kn/2</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Every vertex has degree 3, so the degree sum is 3 · 8 = 24.</li><li>By the handshaking lemma, 2|E| = 24.</li><li>Hence |E| = 12.</li><li>Bipartiteness is not needed for the count, but it guarantees a consistent partition: for example K₄,₄ with a perfect matching removed is 3-regular and bipartite.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12</span></p><p class=\"row\"><b>Common misconception.</b> Answering 24 forgets to halve; each edge is counted twice when degrees are summed.</p><p class=\"row\"><b>Takeaway.</b> For a k-regular graph on n vertices: |E| = kn/2, and kn must be even.</p>",
+   "solution": {
+    "concept": "In a <span class=\"mm\">k</span>-regular graph on <span class=\"mm\">n</span> vertices the degree sum is <span class=\"mm\">kn</span>, and the handshaking lemma gives <span class=\"mm\">|E| = kn/2</span>.",
+    "steps": [
+     "Every vertex has degree 3, so the degree sum is 3 · 8 = 24.",
+     "By the handshaking lemma, 2|E| = 24.",
+     "Hence |E| = 12.",
+     "Bipartiteness is not needed for the count, but it guarantees a consistent partition: for example K₄,₄ with a perfect matching removed is 3-regular and bipartite."
+    ],
+    "final": "12",
+    "misconception": "Answering 24 forgets to halve; each edge is counted twice when degrees are summed.",
+    "takeaway": "For a k-regular graph on n vertices: |E| = kn/2, and kn must be even."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q49",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "representations",
+   "subtopic": "representations",
+   "subtopic_label": "Graph representations",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "The adjacency matrix <span class=\"mm\">A</span> of a simple graph satisfies <span class=\"mm\">trace(A<sup>3</sup>) = 24</span>. How many triangles does the graph contain?<br/>(Enter an integer.)",
+   "question_html": "<p class=\"qtext\">The adjacency matrix <span class=\"mm\">A</span> of a simple graph satisfies <span class=\"mm\">trace(A<sup>3</sup>) = 24</span>. How many triangles does the graph contain?<br/>(Enter an integer.)</p>",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">(A<sup>3</sup>)<sub>ii</sub></span> counts closed walks of length 3 from <span class=\"mm\">v<sub>i</sub></span> back to itself, i.e. triangles through <span class=\"mm\">v<sub>i</sub></span> traversed in two directions; summing over <span class=\"mm\">i</span> counts each triangle six times.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A closed walk of length 3 must be v → x → y → v with all three edges present, which is a triangle through v.</li><li>Each triangle is counted twice at each of its three vertices (two traversal directions), so trace(A³) = 6T where T is the number of triangles.</li><li>Set 6T = 24, giving T = 4.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by 3 counts each triangle once per vertex but forgets the two directions; dividing by 2 forgets the three starting vertices. The correct divisor is 6.</p><p class=\"row\"><b>Takeaway.</b> trace(A²) = 2|E| and trace(A³) = 6 × (number of triangles).</p>",
+   "solution": {
+    "concept": "<span class=\"mm\">(A<sup>3</sup>)<sub>ii</sub></span> counts closed walks of length 3 from <span class=\"mm\">v<sub>i</sub></span> back to itself, i.e. triangles through <span class=\"mm\">v<sub>i</sub></span> traversed in two directions; summing over <span class=\"mm\">i</span> counts each triangle six times.",
+    "steps": [
+     "A closed walk of length 3 must be v → x → y → v with all three edges present, which is a triangle through v.",
+     "Each triangle is counted twice at each of its three vertices (two traversal directions), so trace(A³) = 6T where T is the number of triangles.",
+     "Set 6T = 24, giving T = 4."
+    ],
+    "final": "4",
+    "misconception": "Dividing by 3 counts each triangle once per vertex but forgets the two directions; dividing by 2 forgets the three starting vertices. The correct divisor is 6.",
+    "takeaway": "trace(A²) = 2|E| and trace(A³) = 6 × (number of triangles)."
+   }
+  },
+  {
+   "id": "DM-GTF9-Q50",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 9,
+   "unit_number": 9,
+   "unit_slug": "graph-theory-fundamentals",
+   "unit_name": "Graph Theory Fundamentals",
+   "topic": "Graph Theory Fundamentals",
+   "sub": "graph-connectivity",
+   "subtopic": "graph-connectivity",
+   "subtopic_label": "Graph connectivity",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 2 of 2",
+   "run": 11,
+   "run_date": "2026-10-31",
+   "question": "What is the maximum number of edges in a simple graph on 8 vertices with <span class=\"mm\">κ(G) = 1</span>?<br/>(Enter an integer.)",
+   "question_html": "<p class=\"qtext\">What is the maximum number of edges in a simple graph on 8 vertices with <span class=\"mm\">κ(G) = 1</span>?<br/>(Enter an integer.)</p>",
+   "options": [],
+   "answer": 22,
+   "answer_display": "22",
+   "marks": 2,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">κ(G) = 1</span> means the graph has a cut vertex <span class=\"mm\">v</span>; deleting <span class=\"mm\">v</span> splits the rest into components, and all edges lie inside the blocks formed by <span class=\"mm\">v</span> together with one component.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let v be a cut vertex. Then G − v has components of sizes s₁, s₂, …, s_k with k ≥ 2 and Σsᵢ = 7.</li><li>Every edge of G is either inside one of those components or incident with v: an edge joining two different components would make G − v connected, contradicting that v is a cut vertex.</li><li>So |E| ≤ Σᵢ C(sᵢ, 2) + deg(v) ≤ Σᵢ C(sᵢ, 2) + 7, and the quadratic term is largest at an extreme split.</li><li>The extreme split is s₁ = 6, s₂ = 1: |E| ≤ C(6, 2) + C(1, 2) + 7 = 15 + 0 + 7 = 22.</li><li>It is attained by K₇ and K₂ sharing exactly the vertex v: 8 vertices, 22 edges, and v is a cut vertex, so κ = 1.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 22</span></p><p class=\"row\"><b>Common misconception.</b> Answering 28 is C(8, 2), the edge count of K₈, which has κ = 7. Answering 21 gives K₇ plus an isolated vertex, whose connectivity is 0, not 1.</p><p class=\"row\"><b>Takeaway.</b> A cut vertex forces the graph to be two dense blocks glued at one point — maximise each block, not the whole graph.</p>",
+   "solution": {
+    "concept": "<span class=\"mm\">κ(G) = 1</span> means the graph has a cut vertex <span class=\"mm\">v</span>; deleting <span class=\"mm\">v</span> splits the rest into components, and all edges lie inside the blocks formed by <span class=\"mm\">v</span> together with one component.",
+    "steps": [
+     "Let v be a cut vertex. Then G − v has components of sizes s₁, s₂, …, s_k with k ≥ 2 and Σsᵢ = 7.",
+     "Every edge of G is either inside one of those components or incident with v: an edge joining two different components would make G − v connected, contradicting that v is a cut vertex.",
+     "So |E| ≤ Σᵢ C(sᵢ, 2) + deg(v) ≤ Σᵢ C(sᵢ, 2) + 7, and the quadratic term is largest at an extreme split.",
+     "The extreme split is s₁ = 6, s₂ = 1: |E| ≤ C(6, 2) + C(1, 2) + 7 = 15 + 0 + 7 = 22.",
+     "It is attained by K₇ and K₂ sharing exactly the vertex v: 8 vertices, 22 edges, and v is a cut vertex, so κ = 1."
+    ],
+    "final": "22",
+    "misconception": "Answering 28 is C(8, 2), the edge count of K₈, which has κ = 7. Answering 21 gives K₇ plus an isolated vertex, whose connectivity is 0, not 1.",
+    "takeaway": "A cut vertex forces the graph to be two dense blocks glued at one point — maximise each block, not the whole graph."
+   }
   }
  ]
 }
