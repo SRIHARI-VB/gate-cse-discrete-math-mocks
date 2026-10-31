@@ -7,34 +7,76 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 6 — Graph Algorithms: Shortest Paths, Set 1 of 2**, 2026-11-01 →
-  [`algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html`](algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html)
+- **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2 (second pass)**, 2026-11-01 →
+  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Dijkstra's algorithm (7) · Bellman–Ford algorithm (6) · shortest paths in a DAG (6) ·
-  transitive closure & Floyd–Warshall (6)
-- Rotation: MODE A. An unseeded `secrets.choice` draw over the ten subjects that do not already carry a paper dated
-  2026-11-01 (Computer Networks does) returned **Algorithms**. Its most recent run was
-  `{2026-10-31, run 10, unit 5, graph-algorithms-traversals-mst, Set 2 of 2}`. Unit 5 held **50** questions, equal to
+- Subtopics: file allocation methods (7) · free-space management (6) · disk scheduling (6) ·
+  access control & protection (6)
+- Rotation: MODE A. An unseeded `secrets.choice` draw over the nine subjects that do not already carry a paper dated
+  2026-11-01 (Algorithms and Computer Networks do) returned **Operating Systems**. Its most recent run was
+  `{2026-10-31, run 17, unit 5, virtual-memory, Set 1 of 2 (second pass)}`. Unit 5 held **75** questions, above
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph Algorithms: Shortest Paths**.
-  Unit 6 held 0 questions, so this is its **Set 1 of 2**; it now holds 25, still under the cap, and the next Algorithms
-  run stays on Unit 6 as Set 2 of 2. No override, no partial set.
-- Unit 6 had no earlier paper, so nothing was archived; `algorithms/shortest-paths/` holds exactly one current paper and
-  the repository root still holds only `index.html`.
-- Previous test: **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2 (second pass)**,
-  2026-11-01 → [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html)
+  `(index_of(virtual-memory) = 4 + 1) mod 6 = 5` → **Unit 6, File Systems & Disk Scheduling**. Unit 6 held **50**
+  questions, the two sets of its first pass, so this paper is the **Set 1 of 2** of its second pass, the same treatment
+  units 1 to 5 received. No override, no partial set.
+- The 2026-10-29 paper was the unit's current paper and moved to
+  `operating-systems/storage-file-systems/archive/gate_os_mock_6_2026-10-29_run2.html` with its content frozen, so the
+  unit folder holds exactly one current paper and the repository root still holds only `index.html`.
+- Previous test: **Algorithms · Unit 6 — Graph Algorithms: Shortest Paths, Set 1 of 2**, 2026-11-01 →
+  [`algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html`](algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 142 (23 Discrete Mathematics, 11 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
-| Current papers / archived sets | 61 current · 81 archived |
+| Papers published (current + archived) | 143 (23 Discrete Mathematics, 11 Algorithms, 8 Databases, 13 Compiler Design, 18 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
+| Current papers / archived sets | 61 current · 82 archived |
 | Test cards on the portal | 79 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 11 of 16 in Discrete Mathematics; 6 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3550 (575 Discrete Mathematics, 275 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
+| Questions in the subject banks | 3575 (575 Discrete Mathematics, 275 Algorithms, 200 Databases, 325 Compiler Design, 450 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 81 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+| Archived sets (earlier runs) | 82 (12 Discrete Mathematics, 12 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+
+### 2026-11-01 — Operating Systems Unit 6, Set 1 of 2 (second pass)
+
+- New paper at `operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html`. The unit folder held the
+  2026-10-29 paper, which was moved to `archive/gate_os_mock_6_2026-10-29_run2.html` with its content frozen (same
+  questions, options, answers, solutions and duration); the folder now holds exactly one current paper and the
+  repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` draw over the nine GATE CSE subjects that carry no
+  paper dated 2026-11-01 returned **Operating Systems**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{2026-10-31, run 17, unit 5, virtual-memory, Set 1 of 2 (second pass)}`. Unit 5 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(virtual-memory) = 4 + 1) mod 6 = 5` → **Unit 6, File Systems & Disk Scheduling**. Unit 6 held **50**
+  questions, exactly the cap, from its first pass of 2026-10-29; advancing onto a unit whose first pass is complete is
+  what starts its second pass, so this paper is **Set 1 of 2 (second pass)** and the unit now holds **75**. No override
+  was used and no unit received a partial set.
+- Coverage: all four Unit 6 subtopics — file allocation methods (7); free-space management (6); disk scheduling (6);
+  access control & protection (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not the official
+  GATE scheme.
+- All 25 ids are new (`OS-U6-Q51` … `OS-U6-Q75`) and none collides with the 425 items already banked for Operating
+  Systems. The subject bank now holds **450** questions and the paper's Question Bank tab shows the **425** previously
+  banked items with the active 25 excluded. Every question carries `data-subject="operating-systems"`,
+  `data-unit="storage-file-systems"`, `data-unit-number="6"`, its subtopic slug, type, difficulty and source — the
+  `data-subject` attribute is present on every card, active and banked.
+- Every numeric answer was recomputed by script: the first-fit bitmap word `0xF0FF0000` has its lowest set bit at 16, so
+  the allocator returns block 16; 12 direct pointers plus one double-indirect pointer over 1 KB blocks with 4-byte
+  pointers address 12 + 256² = **65548** blocks; a chain of 3 grouping blocks describes 3 × 127 = **381** addresses; a
+  2¹⁶-block bitmap in 32-bit words occupies **2048** words; on the queue 82, 170, 43, 140, 24, 16, 190, 51 from head 60,
+  FCFS moves **771** cylinders, SSTF moves 218, and SCAN (toward 0, counting the travel to cylinder 0) moves
+  **250**; and the permission mode required is **750**.
+- No GATE PYQ is claimed: `verified_pyqs` holds one entry, `PYQ-GATE2021S1-Q25` (GATE CSE 2021, Set 1, Q25, NAT,
+  official answer 12), which belongs to Unit 1, so no item is tagged `GATE_PYQ_VARIATION` and nothing on this paper is
+  presented as an official GATE question.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Algorithms Unit 6 paper
+  (2026-11-01). The `:root` token block, the `<style>` block and the `<script>` block are byte-identical to that shell
+  and to every other current paper; only the payload, the question cards, the bank tab, the About tab, the title, the
+  header and the meta strip differ. The markup balances: 25 question cards, 25 palette buttons, 425 bank cards.
+- Known deviation, unchanged from every earlier run: the `:root` token block is byte-identical in `index.html`,
+  `design-tokens.css` and every paper, but the shipped shell also carries raw hex values in inline styles outside
+  `:root` (for example `color:#5b6b7a` on the marks label). They belong to the template, not to this run's payload, and
+  were left alone so that the shell stays byte-identical across all 143 papers.
 
 ### 2026-11-01 — Algorithms Unit 6, Set 1 of 2
 
