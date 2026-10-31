@@ -7,34 +7,116 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 10 — Graph Theory Advanced, Set 1 of 2**, 2026-10-31 →
+- **Discrete Mathematics · Unit 10 — Graph Theory Advanced, Set 2 of 2**, 2026-10-31 →
   [`discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html`](discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
 - Subtopics: Eulerian & Hamiltonian graphs (5) · Planarity & Euler's formula (5) · Colouring & chromatic number (5) ·
   Trees & spanning trees (5) · Network flows (5)
-- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the subjects
-  whose next paper is admissible under the cap rules — Databases (Unit 5), Discrete Mathematics (Unit 10) and
-  Programming and Data Structures (Unit 7) — with a draw seeded on `20261031`, and returned **Discrete Mathematics**.
-  Its most recent run was `{2026-10-31, unit 9, graph-theory-fundamentals, Set 2 of 2}`. Unit 9 held **50**
-  questions, at `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
-  `(index_of(graph-theory-fundamentals) = 8 + 1) mod 16 = 9` → **Unit 10, Graph Theory Advanced**, which held 0
-  questions and therefore receives its first set. No override, no partial set.
-- No earlier paper existed in this unit, so nothing was archived: the new unit folder holds exactly one current
-  paper and the repository root still holds only `index.html`.
-- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html)
+- Rotation: MODE A. Every one of the eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the
+  three subjects whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions),
+  Computer Architecture (Unit 5, 25) and Discrete Mathematics (Unit 10, 25) — with an unseeded `secrets.choice`, and
+  returned **Discrete Mathematics**. Its most recent run was `{2026-10-31, unit 10, graph-theory-advanced, Set 1 of
+  2}`; Unit 10 held 25 questions, so step B3 held and the unit was generated again as **Set 2 of 2**. Unit 10 now
+  holds 50 questions, exactly the cap, so the next Discrete Mathematics run advances to Unit 11, Boolean Algebra &
+  Switching Logic. No override, no partial set.
+- The Set 1 paper of the same date was moved to
+  [`archive/gate_dm_mock_10_2026-10-31_run1.html`](discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html)
+  with its content frozen, so the unit folder holds exactly one current paper.
+- Previous test: **Discrete Mathematics · Unit 10 — Graph Theory Advanced, Set 1 of 2**, 2026-10-31 →
+  [`archive/gate_dm_mock_10_2026-10-31_run1.html`](discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 137 (22 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 60 current · 77 archived |
+| Papers published (current + archived) | 138 (23 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 60 current · 78 archived |
 | Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 11 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3425 (550 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3450 (575 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 77 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 78 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Discrete Mathematics Unit 10, Set 2 of 2
+
+- New paper at `discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html`. The unit folder held the
+  Set 1 paper of the same date, which was moved to `archive/gate_dm_mock_10_2026-10-31_run1.html` with its content
+  frozen (same questions, options, answers, solutions and duration); the folder now holds exactly one current paper
+  and the repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over
+  the three subjects whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions),
+  Computer Architecture (Unit 5, 25) and Discrete Mathematics (Unit 10, 25) — with an unseeded `secrets.choice` and
+  returned **Discrete Mathematics**. `runs[]` gave the most recent paper as `{2026-10-31, unit 10,
+  graph-theory-advanced, Set 1 of 2}`. Unit 10 held **25** questions, below the cap, and had been current for **0**
+  days, so step B3 held and the unit was generated again as **Set 2 of 2**. Unit 10 now holds **50** questions, exactly
+  the cap, so the next Discrete Mathematics run advances: `(index_of(graph-theory-advanced) = 9 + 1) mod 16 = 10` →
+  **Unit 11, Boolean Algebra & Switching Logic**. No override was used and no partial set was generated.
+- Coverage: all five Unit 10 subtopics — Eulerian & Hamiltonian graphs (5); planarity & Euler's formula (5); colouring
+  & chromatic number (5); trees & spanning trees (5); network flows (5). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ
+  all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`DM-GTA-Q26` … `DM-GTA-Q50`). No id collides with the 550 banked items, and no normalised stem
+  does either: the first check flagged three stems that repeated Set 1 wording (the "exactly one of the following has
+  an Eulerian circuit" opener, the bare "Which of the following statements are TRUE?" MSQ stem and the "TRUE for every
+  tree" stem), and all three were rewritten before the paper was built. The subject bank now holds **575** questions
+  and the paper's Question Bank tab shows the **550** that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="discrete-mathematics"`, `data-unit="graph-theory-advanced"`,
+  `data-unit-number="10"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  550 bank cards all carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- What the set asks. Eulerian and Hamiltonian: the 2-vertex-connectivity that a Hamiltonian cycle forces; the parity
+  test applied to both sides of `K₃,₃`, `K₃,₄`, `K₄,₄` and `K₅` minus an edge; a Hamiltonian path without a Hamiltonian
+  cycle when the parts have sizes 4 and 5; three TRUE statements on edge-disjoint cycle decompositions, connectedness
+  and the endpoints of an Euler trail; and the **12** Hamiltonian paths of `K₂,₃`. Planarity: the single face of a
+  plane tree; `f = 6` for a cubic planar graph on 8 vertices; the bipartite `2n − 4` argument that rules out `K₃,₃`
+  where `3n − 6` does not bite; three TRUE statements (four-colour theorem, 15 edges at `n = 7`, a vertex of degree at
+  most 5); and the **18**-edge maximum for a planar bipartite graph on 11 vertices. Colouring: `χ(Petersen) = 3`;
+  `P(K₃, 3) = 6`; `χ(W₅) = 4`; the clique, greedy and independence bounds; and the **4** edges that make `K₅`
+  bipartite. Trees: the **7** spanning trees of `C₇`; a tree as its own only spanning tree; **625** labelled trees on
+  6 vertices with vertex 1 of degree 1; three TRUE statements including the fundamental cycle of a non-tree edge and
+  Cayley's formula; and the **45** spanning trees of `W₄`. Flows: the definition of a cut capacity; the **14**-unit
+  source-side bound; a **6**-unit maximum flow whose minimum cut sits in the middle of the network; three TRUE
+  statements on integrality, weak duality and residual reverse edges; and a **17**-unit maximum flow whose bottleneck
+  is the sink side.
+- Every numeric answer was recomputed by script, not by hand: 12 Hamiltonian paths of `K₂,₃` by enumerating all `5!`
+  vertex orders; `χ(Petersen) = 3` with the 3-colouring `1,2,1,2,3` / `2,1,3,3,2` checked edge by edge; 6 proper
+  3-colourings of `K₃`; `χ(W₅) = 4`; 4 deletions to make `K₅` bipartite (exhaustive over all `2¹⁰` subgraphs); 7
+  spanning trees of `C₇` and 45 of `W₄` by the Matrix–Tree determinant, the second cross-checked by enumerating all
+  `C(8,4) = 70` four-edge subsets; 625 Prüfer sequences avoiding label 1 out of 1296; and maximum flows 6 and 17 by
+  Edmonds–Karp.
+- The correct option is spread 4 A / 3 B / 4 C / 4 D across the 15 MCQ; the five MSQ answer sets are (A, B, D),
+  (A, B, C), (A, B, C), (A, C, D) and (A, B, C); the five NAT answers are 12, 18, 4, 45 and 17.
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` stays at 2 for
+  Discrete Mathematics, both from Unit 1: no Eulerian, planarity, colouring, spanning-tree or flow previous-year
+  question has been verified against an official paper and answer key for this unit, so nothing on this paper is
+  called an official GATE question and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload, question cards, bank tab and About text into the
+  shipped shell of the Set 1 paper. The `<style>` block and the exam `<script>` are **byte-identical** to it, and the
+  `:root` block matches `design-tokens.css` and `index.html` byte for byte.
+- Verification by text and structure checks: 25 question cards numbered `data-n` 1–25, 25 palette buttons, 15 ×
+  "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 550 bank cards, one About tab, a
+  balanced `<div>` tree (2482 open / 2482 close), the Answer Key tab disabled, every active `.sol` empty and hidden,
+  no `ansline` text and no option mark in the question pane before submit, and a payload that decodes to 25 answers
+  and 25 solutions whose display strings agree with the stored answer sets.
+- A jsdom harness was run against the paper: exactly one card visible on load, the timer at `60:00`, no answer text,
+  option mark or `correct`/`wrongpick` class before submit, the key tab disabled, all 25 palette buttons green after
+  answering, the marked-for-review (`amr`) and clear-response states working, Save & Next and palette navigation
+  moving the current question, **35 / 35** on a perfect attempt, 25 correct, the key tab unlocked, all 25 solutions
+  revealed, and the Answer Key, Question Bank and About tabs opening after submit.
+- Portal: the Discrete Mathematics Unit 10 card now points at this paper, is labelled `Set 2 of 2` and lists
+  `Set 1 (2026-10-31)` as its earlier set; `data/questions-discrete-mathematics.js` grew to 575 records. The header and
+  meta-strip counters were recomputed from the files to **69** units in the series, **78** test cards, **3450** solved
+  questions, and **60 of 69** units covered across **259** subtopics; the previous 3400 figures were one set stale.
+- **Metadata repair.** The Set 1 entry in `runs[]` had been written without a run index, so `runs[]` could not be
+  sorted by `(date, run)`. It now carries `run 12`; nothing in its question payload was touched.
+- **Bank-tab note.** The 525 shipped bank cards were carried over byte for byte instead of being re-rendered: older
+  batches store solution extras (`why_wrong`, `faster`, `takeaway`) that the newer generator does not print, so a
+  re-render would have rewritten 525 cards for no gain. The 25 new cards are rendered by the current generator, which
+  prints concept, steps, answer, misconception and takeaway. The two earlier shell defects on record — the missing
+  `:focus-visible` rings and the `#view-key`/`#view-bank` nesting in some older papers — are unchanged by this run.
+- Hygiene: the paper is filed at exactly one path, `discrete-mathematics/graph-theory-advanced/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (60 current and 78 archived); every `href` in
+  the portal resolves; no temporary or loose file was left at the repository root.
 
 ### 2026-10-31 — Discrete Mathematics Unit 10, Set 1 of 2
 
