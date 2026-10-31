@@ -7,34 +7,100 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 6 — Application Layer & Network Security, Set 2 of 2**, 2026-10-31 →
-  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
+- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (third pass)**, 2026-10-31 →
+  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: DNS hierarchy & resolution (6) · HTTP, HTTPS, SMTP & FTP (7) · symmetric & asymmetric cryptography,
-  RSA (7) · digital signatures, certificates & firewalls (5)
-- Rotation: MODE A. The draw over the eleven subjects, seeded on the run date, returned Computer Networks. Its most
-  recent run was `{2026-10-31, run 11, unit 6, application-layer-security, Set 1 of 2}`. Unit 6 held **25** questions,
-  under `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, under `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  Unit 6 was generated again as **Set 2 of 2**. No override, no partial set.
-- Unit 6 now holds exactly 50 questions, the cap, so the next Computer Networks run advances
-  `(index_of(application-layer-security) = 5 + 1) mod 6 = 0` → **Unit 1, Layering, Physical & Framing** — the second
-  pass for this subject begins there.
-- The earlier 2026-10-31 paper was moved to `archive/gate_cn_mock_6_2026-10-31_run1.html` with its content frozen, so
-  the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 2 of 2**, 2026-10-31 →
-  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html)
+- Subtopics: deterministic PDA (7) · nondeterministic PDA (6) · acceptance by empty store vs final state (6) ·
+  equivalence with CFG (6)
+- Rotation: MODE A. All eleven subjects already carried a 2026-10-31 paper, so the draw ran over the full set of eleven
+  again and returned Theory of Computation. Its most recent run was
+  `{2026-10-31, run 14, unit 2, cfl-grammars, Set 1 of 2 (third pass)}`. Unit 2 held **100** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**, which held 75 questions. Every unit of
+  the subject is at or above the cap (100, 100, 75, 75), so step B5 applies: the third pass continues. Unit 3 receives
+  the first set of that pass, its fourth set overall, and goes from 75 to 100 questions. No override, no partial set.
+- The previous current paper of the unit was moved to `archive/gate_toc_mock_3_2026-10-28_run3.html` with its content
+  frozen, so the unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Computer Networks · Unit 6 — Application Layer & Network Security, Set 2 of 2**, 2026-10-31 →
+  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 133 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 12 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 74 archived |
+| Papers published (current + archived) | 134 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 12 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 75 archived |
 | Test cards on the portal | 79 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3325 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 300 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3350 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 300 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 74 (11 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 6 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 75 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 6 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Theory of Computation Unit 3, Set 1 of 2 (third pass)
+
+- New paper at `theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html`. The unit folder held the
+  2026-10-28 paper, which was moved to `archive/gate_toc_mock_3_2026-10-28_run3.html` with its content frozen (same
+  questions, options, answers, solutions and duration); `archive/` now holds `gate_toc_mock_3_2026-10-27_run1.html`,
+  `gate_toc_mock_3_2026-10-27_run2.html` and that run3 file, so the folder holds exactly one current paper and the root
+  still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Every one of the eleven subjects already carried a paper dated 2026-10-31 (twelve
+  papers in all, Computer Networks having taken two sets), so the daily draw ran over the full set of eleven with
+  `random.Random("gate-cse-mock-2026-10-31|run13").choice` and returned **Theory of Computation**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-31, run 14, unit 2, cfl-grammars, Set 1 of 2 (third pass)}`.
+  Unit 2 held **100** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**. Unit 3 held 75 and every unit of the
+  subject is at or above the cap (100, 100, 75, 75), so step B5 applies: the modulo has wrapped and the third pass
+  continues. Unit 3 receives the first set of that pass, its fourth set overall, and goes from 75 to 100 questions. No
+  override was used and no partial set was generated.
+- Coverage: all four Unit 3 subtopics — deterministic PDA (7); nondeterministic PDA (6); acceptance by empty store vs
+  final state (6); equivalence with CFG (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not
+  the official GATE scheme.
+- All 25 ids are new (`TOC-U3-Q76` … `TOC-U3-Q100`); no id and no normalised stem collides with the 75 banked Unit 3
+  items or with any of the other 275 Theory of Computation questions. The subject bank now holds **375** questions and
+  the paper's Question Bank tab shows the 350 that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="theory-of-computation"`, `data-unit="pushdown-automata"`,
+  `data-unit-number="3"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  350 bank cards all carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal data,
+  and the UI capitalises it with CSS.
+- What the set asks. Deterministic PDA: why the stack matches the second half in reverse order and so separates
+  `{w wᴿ}` from `{ww}`; the 4 × 3 × 2 = **24** transition triples of a DPDA; a stack height of **3** after `a⁴b²`; the
+  union `{aⁿbⁿ} ∪ {aⁿb²ⁿ}` as a context-free language that no DPDA accepts; four languages tested for determinism;
+  an `ε`-loop that diverges without changing the language; and the De Morgan argument that closes intersection as soon
+  as complement is available and union is not. Nondeterministic PDA: a guess that later input confirms; the **2**
+  strings of length 6 in `{aⁿbⁿ} ∪ {aⁿb²ⁿ}`; a machine with no final states that still accepts; closure under union
+  and reversal but not intersection or complement; and the direction in which closure under reversal is true. Acceptance
+  modes: the prefix property as the test for empty-stack acceptance; the stack including the bottom marker empty at
+  acceptance; **1** of five languages prefix-free; the DPDA asymmetry and its theorem; `{w : w ends in b}` as a
+  final-state-only language. Equivalence with CFG: the stack after the first read step of `aab`; the grammar of a
+  push-a-per-a machine; **4** symbols on the stack before `c` in `aacbb`; the two constructions; Greibach Normal Form
+  without `ε`-moves; and finiteness of `L(G)` as the one decidable problem among four.
+- Every numeric answer was recomputed by script, not by hand: 24 transition triples; stack height 3 after `a⁴b²`; 2
+  strings of length 6 in the union (enumerated exhaustively); 1 of the five languages prefix-free (pairwise prefix test);
+  and 4 symbols on the stack before `c` in `aacbb`, checked by simulating the single-state construction over both
+  productions.
+- The correct option is spread 3 A / 4 B / 5 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, B, D),
+  (A, D), (A, B, C), (A, B, C) and (A, B, D); the five NAT answers are 24, 3, 2, 1 and 4.
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Theory of Computation: no pushdown-automaton previous-year question has been verified against an official paper and
+  answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Theory of Computation
+  Unit 2 paper of 2026-10-31. The `<style>` block (13,243 bytes) and the exam `<script>` (9,411 bytes) are
+  **byte-identical** to that paper and to the Compiler Design, Computer Networks, Operating Systems and Discrete
+  Mathematics papers of the same day. The `:root` block still matches `design-tokens.css` and `index.html` byte for
+  byte.
+- Verification by text and structure checks: 25 question cards numbered `data-n` 1–25, 25 palette buttons, 25 `qno`
+  labels, 15 × "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, every input's `name="qN"`
+  matching its card, 350 bank cards under four unit accordions, one About tab, one footer, a balanced `<div>` tree
+  (0 net), the Answer Key tab disabled, every active `.sol` empty and hidden, no `ansline` text and no option mark in
+  the question pane before submit, and a payload that decodes to 25 answers and 25 solutions whose display strings
+  agree with the stored answer sets.
+- Portal: the Theory of Computation Unit 3 card now points at the 2026-10-31 paper and lists Set 3 (2026-10-28), Set 1
+  and Set 2 (both 2026-10-27) as its earlier sets; `data/questions-theory-of-computation.js` grew to 375 records and the
+  header counters were recomputed from the files to **69 units**, **79 test cards** and **3300 solved questions**.
+- Hygiene: the paper is filed at exactly one path, `theory-of-computation/pushdown-automata/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (59 current and 75 archived); every `href` in the
+  portal resolves; no temporary or loose file was left at the repository root.
 
 ### 2026-10-31 — Computer Networks Unit 6, Set 2 of 2
 
@@ -177,7 +243,7 @@ and no answer, option mark or hint visible until the test is submitted.
   `nullity(I − A) = 3`.
 - The correct option is spread 3 A / 4 B / 4 C / 4 D across the 15 MCQ; the five MSQ answer sets are (A, C),
   (A, B, D), (A, B, D), (A, C, D) and (A, B, C); the five NAT answers are 3, 8, 4, 1 and −2.
-- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
   Engineering Mathematics: no linear-algebra previous-year question has been verified against an official paper and
   answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one sentence.
 - Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Compiler Design
@@ -261,7 +327,7 @@ and no answer, option mark or hint visible until the test is submitted.
   (`ccccc`, `abccc`, `aabbc`); and **4** of the seven languages in the membership count are context-free.
 - The correct option is spread 4 A / 3 B / 5 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, C, D),
   (A, C), (A, B, C), (A, B, D) and (A, C); the five NAT answers are 5, 3, 3, 3 and 4.
-- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
   Theory of Computation: no context-free-grammar previous-year question has been verified against an official paper
   and answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one
   sentence.
@@ -653,7 +719,7 @@ and no answer, option mark or hint visible until the test is submitted.
   72 above 1 = **5**; 2048 bits ÷ 8 = **256** bytes.
 - The correct option is spread 3 A / 5 B / 4 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, B, C),
   (A, B, D), (A, B, C), (A, B, C) and (A, B, C).
-- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` for Computer
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` for Computer
   Networks is empty: no DNS, HTTP, cryptography, digital-signature or firewall previous-year question has been
   verified against an official paper and answer key, so nothing in this paper is called an official GATE question
   and the bank tab says so in one sentence.
@@ -1016,7 +1082,7 @@ and no answer, option mark or hint visible until the test is submitted.
   `P(X < Y) = λ_X/(λ_X + λ_Y)`; the `±1.96` tail; inverting a tail to `σ`; a two-sided normal area; affine
   invariance and joint normality; inverting to `c`; `Var(2X − 3Y)`; `Cov(X,X)`; `Cov` from `ρ`; uncorrelated
   versus independent; and a negative correlation.
-- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. No Engineering Mathematics
+- Source tags: 20 `STANDARD_TEXTBOOK`, 5 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. No Engineering Mathematics
   previous-year question has been verified against an official paper and answer key, so nothing in this paper is
   called an official GATE question.
 - Shell parity: the `<style>` block and the whole `<script>` are byte-identical to the Set 1 paper now in
