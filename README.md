@@ -7,34 +7,78 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 2 of 2**, 2026-10-31 →
-  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html)
+- **Computer Networks · Unit 6 — Application Layer & Network Security, Set 2 of 2**, 2026-10-31 →
+  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: degree sum & handshaking lemma (4) · walks, trails, paths & circuits (5) · graph connectivity (4) ·
-  isomorphism (4) · complete & bipartite graphs (4) · graph representations (4)
-- Rotation: MODE A. Discrete Mathematics was the only one of the eleven subjects still without a paper dated
-  2026-10-31, so the draw over the remaining pool returned it. Its most recent run was
-  `{2026-10-30, run 10, unit 9, graph-theory-fundamentals, Set 1 of 2}`. Unit 9 held **25** questions, under
-  `UNIT_QUESTION_CAP = 50`, and had been current for 1 day, under `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
-  Unit 9 was generated again as **Set 2 of 2**. No override, no partial set.
-- Unit 9 now holds exactly 50 questions, the cap, so the next Discrete Mathematics run advances
-  `(index_of(graph-theory-fundamentals) = 8 + 1) mod 16 = 9` → **Unit 10, Graph Theory Advanced**.
-- The 2026-10-30 paper was moved to `archive/gate_dm_mock_9_2026-10-30_run1.html` with its content frozen, so the
-  unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2 (second pass)**,
-  2026-10-31 → [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html)
+- Subtopics: DNS hierarchy & resolution (6) · HTTP, HTTPS, SMTP & FTP (7) · symmetric & asymmetric cryptography,
+  RSA (7) · digital signatures, certificates & firewalls (5)
+- Rotation: MODE A. The draw over the eleven subjects, seeded on the run date, returned Computer Networks. Its most
+  recent run was `{2026-10-31, run 11, unit 6, application-layer-security, Set 1 of 2}`. Unit 6 held **25** questions,
+  under `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, under `DAYS_PER_UNIT_MAX = 7`, so step B3 held and
+  Unit 6 was generated again as **Set 2 of 2**. No override, no partial set.
+- Unit 6 now holds exactly 50 questions, the cap, so the next Computer Networks run advances
+  `(index_of(application-layer-security) = 5 + 1) mod 6 = 0` → **Unit 1, Layering, Physical & Framing** — the second
+  pass for this subject begins there.
+- The earlier 2026-10-31 paper was moved to `archive/gate_cn_mock_6_2026-10-31_run1.html` with its content frozen, so
+  the unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Discrete Mathematics · Unit 9 — Graph Theory Fundamentals, Set 2 of 2**, 2026-10-31 →
+  [`discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html`](discrete-mathematics/graph-theory-fundamentals/gate_dm_mock_9_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 132 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 73 archived |
+| Papers published (current + archived) | 133 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 12 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 74 archived |
 | Test cards on the portal | 79 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3300 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3325 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 300 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 73 (11 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 74 (11 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 6 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Computer Networks Unit 6, Set 2 of 2
+
+- New paper at `computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`. The unit folder held the
+  Set 1 paper of the same date, which was moved to `archive/gate_cn_mock_6_2026-10-31_run1.html` with its content
+  frozen (same questions, options, answers, solutions and duration); the folder now holds exactly one current paper and
+  the root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** The subject draw over the eleven GATE CSE subjects, seeded on the run date
+  (`random.Random('gate-cse-mock-2026-10-31')`), returned **Computer Networks**. `runs[]` sorted by `(date, run)` gave
+  the most recent paper as `{2026-10-31, run 11, unit 6, application-layer-security, Set 1 of 2}`. Unit 6 held **25**
+  questions, below `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, below `DAYS_PER_UNIT_MAX = 7`, so
+  step B3 held and the unit was generated again as **Set 2 of 2**. No override was used and no partial set was made.
+- Coverage: all four Unit 6 subtopics — DNS hierarchy & resolution (6); HTTP, HTTPS, SMTP & FTP (7); symmetric &
+  asymmetric cryptography, RSA (7); digital signatures, certificates & firewalls (5). Composition 15 MCQ / 5 MSQ /
+  5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking,
+  MSQ all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`CN-U6-Q26` … `CN-U6-Q50`); no id and no stem collides with the 25 banked Unit 6 items of Set 1.
+  The subject bank now holds **300** questions and the paper's Question Bank tab shows the 275 that are not on it
+  (250 from Units 1–5 plus Set 1's 25), so the active set does not reappear there.
+- Every question carries `data-subject="computer-networks"`, `data-unit="application-layer-security"`,
+  `data-unit-number="6"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  275 bank cards all carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- What the set asks. DNS: the reverse tree (`7.113.0.203.in-addr.arpa`, type `PTR`); glue as the fix for a delegation
+  pointing inside its own zone; TTL arithmetic where the miss, not the query, restarts the clock (5 misses in 120
+  queries); recursion as transferred responsibility; DNSSEC as signatures and a `DS` chain with no confidentiality in
+  it; and the exclusivity of a `CNAME`. HTTP: port 25 between MTAs; `304` as the body-less answer to a matching
+  `ETag`; cookies as the state a stateless protocol carries; one FTP control connection plus one data connection per
+  transfer (4); the safe/idempotent grid; HTTP/2 removing the application-level head-of-line queue while the TCP one
+  survives; persistence, `Range`/`206` and `HEAD`. Cryptography: the digital envelope; block against stream ciphers;
+  `5³ mod 33 = 26`; `33 − φ(33) = 13` non-invertible residues; Diffie–Hellman without authentication; `d = 113` for
+  `n = 143, e = 17`; and the common-modulus attack as a Bézout combination of two exponents. Signatures and firewalls:
+  what a certificate does not give; hash-then-sign and collision resistance; a SHA-256 digest as 64 hex characters;
+  the chain through an intermediate to a trusted root; and the state that separates a packet filter from a firewall.
+- No question is an official GATE PYQ and no PYQ was added this run: no DNS, HTTP, cryptography, digital-signature or
+  firewall previous-year question has been verified against an official paper and answer key for this unit, so
+  `verified_pyqs` stays empty for Computer Networks and the set carries no `GATE_PYQ_VARIATION` item.
+- Every numeric answer was recomputed by script, not by hand: 5 cache misses; 4 FTP connections; 26 for `5³ mod 33`;
+  13 non-invertible residues modulo 33; 113 as the inverse of 17 modulo 120; 64 hex characters for a 256-bit digest.
+  `17 × 113 = 1921 = 16 × 120 + 1` and `26⁷ mod 33 = 5` were both checked directly.
+- Shell parity: the `<style>` block and the main `<script>` of this paper are byte-identical to the 2026-10-31 Set 1
+  paper it replaced, and the `:root` block matches `design-tokens.css` and `index.html` byte for byte.
+- Portal: the Computer Networks Unit 6 card now points at Set 2 and lists `Set 1 (2026-10-31)` as an earlier set; the
+  archive view counts the 25 new items, so the dashboard total is 300 for this subject.
 
 ### 2026-10-31 — Discrete Mathematics Unit 9, Set 2 of 2
 
