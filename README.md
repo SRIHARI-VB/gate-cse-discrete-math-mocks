@@ -90,6 +90,11 @@ and no answer, option mark or hint visible until the test is submitted.
   metadata strings (title, header sub-line, candidate id, Question Bank count, set label) and the content regions
   differ. `index.html` was regenerated from its own `#data` block (one card replaced by one card), and
   `data/questions-computer-networks.js` grew from 350 to 375 records.
+- Push: the contents endpoint rejected the whole 5.1 MB change set with a 413, so the change went to `main`
+  as five commits under the same message (paper and deletion, archived copy, `index.html` and this
+  README, portal data, master bank). The tree after the last commit is exactly what a single commit
+  would have produced: 142 HTML files (60 current papers, 81 archived sets, `index.html`), 375 banked
+  Computer Networks questions and 15 runs.
 
 ### 2026-10-31 — Computer Architecture Unit 5, Set 2 of 2
 
