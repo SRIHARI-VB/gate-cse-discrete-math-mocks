@@ -7,35 +7,118 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2 (second pass)**, 2026-11-01 →
-  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html)
+- **Theory of Computation · Unit 4 — Turing Machines & Decidability, Set 1 of 2 (third pass)**, 2026-11-01 →
+  [`theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-11-01.html`](theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-11-01.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: file allocation methods (7) · free-space management (6) · disk scheduling (6) ·
-  access control & protection (6)
-- Rotation: MODE A. An unseeded `secrets.choice` draw over the nine subjects that do not already carry a paper dated
-  2026-11-01 (Algorithms and Computer Networks do) returned **Operating Systems**. Its most recent run was
-  `{2026-10-31, run 17, unit 5, virtual-memory, Set 1 of 2 (second pass)}`. Unit 5 held **75** questions, above
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
-  `(index_of(virtual-memory) = 4 + 1) mod 6 = 5` → **Unit 6, File Systems & Disk Scheduling**. Unit 6 held **50**
-  questions, the two sets of its first pass, so this paper is the **Set 1 of 2** of its second pass, the same treatment
-  units 1 to 5 received. No override, no partial set.
+- Subtopics: standard TM models (5) · recursive vs recursively enumerable (5) · halting problem (6) ·
+  Rice's theorem & reductions (5) · Chomsky hierarchy (4)
+- Rotation: MODE A. An unseeded `secrets.choice` draw over the eight subjects that do not already carry a paper
+  dated 2026-11-01 (Algorithms, Computer Networks and Operating Systems do) returned **Theory of Computation**
+  (index 7 of the eight). Its most recent run was `{2026-10-31, run 15, unit 3, pushdown-automata, Set 1 of 2
+  (third pass)}`. Unit 3 held **100** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and
+  step B4 advanced one unit: `(index_of(pushdown-automata) = 2 + 1) mod 4 = 3` → **Unit 4, Turing Machines &
+  Decidability**. Unit 4 held **75** questions, so every unit of the subject is at or above the cap and step B5
+  applies: the modulo has wrapped, the third pass continues, and Unit 4 receives its first set of that pass. No
+  override, no partial set.
 - The 2026-10-29 paper was the unit's current paper and moved to
-  `operating-systems/storage-file-systems/archive/gate_os_mock_6_2026-10-29_run2.html` with its content frozen, so the
-  unit folder holds exactly one current paper and the repository root still holds only `index.html`.
-- Previous test: **Algorithms · Unit 6 — Graph Algorithms: Shortest Paths, Set 1 of 2**, 2026-11-01 →
-  [`algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html`](algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html)
+  `theory-of-computation/turing-machines-decidability/archive/gate_toc_mock_4_2026-10-29_run3.html` with its
+  content frozen, so the unit folder holds exactly one current paper and the repository root still holds only
+  `index.html`.
+- Previous test: **Operating Systems · Unit 6 — File Systems & Disk Scheduling, Set 1 of 2 (second pass)**,
+  2026-11-01 →
+  [`operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html`](operating-systems/storage-file-systems/gate_os_mock_6_2026-11-01.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 143 (23 Discrete Mathematics, 11 Algorithms, 8 Databases, 13 Compiler Design, 18 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
-| Current papers / archived sets | 61 current · 82 archived |
-| Test cards on the portal | 79 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
+| Papers published (current + archived) | 144 (23 Discrete Mathematics, 11 Algorithms, 8 Databases, 13 Compiler Design, 18 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 16 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
+| Current papers / archived sets | 61 current · 83 archived |
+| Test cards on the portal | 79 (one card per current paper; superseded sets are links on that card) |
 | Units covered | 11 of 16 in Discrete Mathematics; 6 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3575 (575 Discrete Mathematics, 275 Algorithms, 200 Databases, 325 Compiler Design, 450 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
+| Questions in the subject banks | 3600 (575 Discrete Mathematics, 275 Algorithms, 200 Databases, 325 Compiler Design, 450 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 400 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 82 (12 Discrete Mathematics, 12 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+| Archived sets (earlier runs) | 83 (12 Discrete Mathematics, 12 Operating Systems, 12 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+
+### 2026-11-01 — Theory of Computation Unit 4, Set 1 of 2 (third pass)
+
+- New paper at `theory-of-computation/turing-machines-decidability/gate_toc_mock_4_2026-11-01.html`. The unit
+  folder held the 2026-10-29 paper, which was moved to `archive/gate_toc_mock_4_2026-10-29_run3.html` with its
+  content frozen (same questions, options, answers, solutions and duration); the folder now holds exactly one
+  current paper and the repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Three subjects already carried a paper dated 2026-11-01 (Algorithms,
+  Computer Networks, Operating Systems), so the draw ran over the remaining eight in syllabus order with an
+  unseeded `secrets.choice` and returned **Theory of Computation** (index 7 of 8). `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-31, run 15, unit 3, pushdown-automata, Set 1 of 2 (third
+  pass)}`. Unit 3 held **100** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
+  B4 advanced exactly one unit: `(index_of(pushdown-automata) = 2 + 1) mod 4 = 3` → **Unit 4, Turing Machines &
+  Decidability**. Unit 4 held **75** questions from its first and second passes, so every unit of the subject is
+  at or above the cap and step B5 applies: the modulo wraps, the third pass continues, and Unit 4 receives the
+  first set of that pass. No override was used and no partial set was generated.
+- Coverage: all five Unit 4 subtopics — standard TM models (5); recursive vs recursively enumerable (5); halting
+  problem & undecidability (6); Rice's theorem & reductions (5); Chomsky hierarchy (4). Composition 15 MCQ /
+  5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no
+  negative marking, MSQ all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`TOC-U4-Q76` … `TOC-U4-Q100`) and none collides with the 75 items already banked for Unit 4
+  or with the other 300 Theory of Computation questions. The subject bank now holds **400** questions and the
+  paper's Question Bank tab shows the **375** that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="theory-of-computation"`, `data-unit="turing-machines-decidability"`,
+  `data-unit-number="4"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards
+  and the 375 bank cards all carry the full set. Difficulty is lowercase in the attributes, in the bank and in
+  the portal data, and the UI capitalises it with CSS.
+- What the set asks. Models: the Church–Turing thesis as a definition rather than a theorem; a two-dimensional
+  tape simulated through a spiral ordering; the RAM model as equal in power and different in cost; a
+  nondeterministic machine's acceptance as existential and its decidability as universal; and **36** entries in
+  the table of a two-tape machine over 4 states and 3 tape symbols. Recursive vs r.e.: closure of the recursive
+  languages under every Boolean operation plus concatenation and star; `A` recursive with `B` r.e. giving only
+  `A ∩ B` r.e.; a co-finite r.e. language being recursive; mapping reducibility preserving r.e.-ness and
+  undecidability and commuting with complementation; and the image of an r.e. set under a computable function
+  being r.e. Halting: a trace question whose machine **loops on `01`** and halts on `00`; acceptance against
+  halting, both r.e. and neither recursive; fixing the machine versus fixing the input; a mark-write-sweep
+  machine taking **9** moves on `1111` (2n + 1 in general); a one-transition machine that halts on every input
+  despite never changing state; and a right-moving machine that accepts **12** strings of length at most 4
+  (the `00`-substring language, counted as 0 + 0 + 1 + 3 + 8). Rice: "at least 100 strings" being r.e. but not
+  recursive; "at most 100 strings" being co-r.e. but not r.e.; `{⟨M⟩ : L(M) is not r.e.}` collapsing to `∅`
+  because every `L(M)` is r.e.; `P(∅) ≠ P(Σ*)` as a sufficient but not necessary test of non-triviality; and
+  **2** of five listed sets being decidable. Chomsky: DCFL a proper subclass of CFL, closed under complementation
+  but not union or intersection; the chain REG ⊊ DCFL ⊊ CFL ⊊ CSL ⊊ R ⊊ RE with a witness for each strict
+  inclusion; membership decidable at **3** of the 4 levels but not for RE; emptiness decidable for CFGs and not
+  for CSGs; equivalence decidable only for the regular level.
+- Every numeric answer was recomputed by script, not by hand: 36 from 4 × 3 × 3; 9 from 1 + 3 + 1 + 3 + 1 on the
+  `1111` trace; 12 by enumerating all 31 strings of length at most 4 through a step-accurate simulator (the
+  length-4 count also checked against the no-two-consecutive-zeros recurrence, 16 − 8 = 8); 2 and 3 from the
+  decidability classifications. Both trace questions and every acceptance and step count were produced by the
+  same simulator, which was also used to confirm that the first machine loops on `01` and halts on `00`.
+- The correct option is spread 4 A / 4 B / 4 C / 3 D across the 15 MCQ; the five MSQ answer sets are (A, B, C),
+  (A, B, C), (B, C, D), (A, C) and (B, C, D); the five NAT answers are 36, 9, 12, 2 and 3.
+- Source tags: 16 `STANDARD_TEXTBOOK`, 9 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` stays
+  empty for Theory of Computation: no Turing-machine, decidability, Rice or Chomsky-hierarchy previous-year
+  question has been verified against an official paper and answer key for this unit, so nothing on this paper is
+  called an official GATE question and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload, question cards, Question Bank tab and About
+  text into the shipped shell of the Theory of Computation Unit 3 paper (2026-10-31). The `<style>` block
+  (13,235 bytes) and the exam `<script>` (9,419 bytes) are **byte-identical** to it, as are the `:root` block,
+  the palette block and the footer; only the five allowed metadata strings (title, header sub-line, candidate id,
+  Question Bank count, set label) and the content regions differ.
+- Verification by text and structure checks: 25 question cards numbered `data-n` 1–25, 25 palette buttons,
+  15 × "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 375 bank cards, one About
+  tab, a balanced `<div>` tree (1759 open / 1759 close), the Answer Key tab disabled, every active `.sol` empty
+  and hidden, no `ansline` text inside `#qhost` before submit, and a payload that decodes to 25 answers and 25
+  solutions whose display strings agree with the stored answer sets.
+- Portal: the Theory of Computation Unit 4 card now points at this paper, is labelled `Set 1 of 2 (third pass)`
+  and lists the 2026-10-29 second-pass set and both 2026-10-27/28 first-pass sets as earlier sets;
+  `data/questions-theory-of-computation.js` grew from 375 to 400 records. The portal counters were recomputed
+  from the files: **3600** solved questions and **3600** bank records, **79** test cards over **69** units, and
+  **61 of 69** units with **263** subtopics banked — the previous `3500`, `78`, `60 of 69` and `259` figures were
+  one or more runs stale.
+- Hygiene: the paper is filed at exactly one path, `theory-of-computation/turing-machines-decidability/`, and
+  nowhere else; `find . -name "*.html"` returns `index.html` plus one file per paper (61 current and 83 archived,
+  145 in all); every `href` in the portal and in each paper resolves; no temporary or loose file was left at the
+  repository root.
+- Known deviation, unchanged from every earlier run: the `:root` token block is byte-identical in `index.html`,
+  `design-tokens.css` and every paper, but the shipped shell also carries raw hex values in inline styles outside
+  `:root` (for example `color:#5b6b7a` on the marks label). They belong to the template, not to this run's
+  payload, and were left alone so that the shell stays byte-identical across all 144 papers.
 
 ### 2026-11-01 — Operating Systems Unit 6, Set 1 of 2 (second pass)
 
