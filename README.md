@@ -7,35 +7,111 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 2 of 2**, 2026-10-31 →
-  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
+- **Computer Architecture · Unit 5 — Instruction Pipelining, Set 2 of 2**, 2026-10-31 →
+  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: BFS/DFS & edge classification (7) · Topological sort (6) · Prim's algorithm (6) · Kruskal's algorithm &
-  disjoint sets (6)
-- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the two subjects
-  whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions) and Computer
-  Architecture (Unit 5, 25) — with an unseeded `secrets.choice`, and returned **Algorithms**. Its most recent run was
-  `{2026-10-31, unit 5, graph-algorithms-traversals-mst, Set 1 of 2}`; Unit 5 held 25 questions, so step B3 held and
-  the unit was generated again as **Set 2 of 2**. Unit 5 now holds 50 questions, exactly the cap, so the next
-  Algorithms run advances: `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph
-  Algorithms: Shortest Paths**. No override, no partial set.
+- Subtopics: stages & throughput (8) · structural hazards (5) · data hazards & forwarding (6) · control hazards &
+  branch penalty (6)
+- Rotation: MODE A. An unseeded `secrets.randbelow(11)` draw over the eleven subjects in syllabus order returned
+  **Computer Architecture** (index 3). Its most recent run was `{2026-10-31, run 7, unit 5, pipelining, Set 1 of 2}`;
+  Unit 5 held 25 questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held and the
+  unit was generated again as **Set 2 of 2**. Unit 5 now holds 50 questions, exactly the cap, so the next Computer
+  Architecture run advances: `(index_of(pipelining) = 4 + 1) mod 6 = 5` → **Unit 6, I/O Interface & Storage**. No
+  override, no partial set.
 - The Set 1 paper of the same date was moved to
-  [`archive/gate_algo_mock_5_2026-10-31_run1.html`](algorithms/graph-algorithms-traversals-mst/archive/gate_algo_mock_5_2026-10-31_run1.html)
+  [`archive/gate_co_mock_5_2026-10-31_run1.html`](computer-architecture/pipelining/archive/gate_co_mock_5_2026-10-31_run1.html)
   with its content frozen, so the unit folder holds exactly one current paper.
-- Previous test: **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
-  [`archive/gate_algo_mock_5_2026-10-31_run1.html`](algorithms/graph-algorithms-traversals-mst/archive/gate_algo_mock_5_2026-10-31_run1.html)
+- Previous test: **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
+  [`archive/gate_co_mock_5_2026-10-31_run1.html`](computer-architecture/pipelining/archive/gate_co_mock_5_2026-10-31_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 139 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 60 current · 79 archived |
+| Papers published (current + archived) | 140 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
+| Current papers / archived sets | 60 current · 80 archived |
 | Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 11 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3475 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3500 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 79 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 80 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+
+### 2026-10-31 — Computer Architecture Unit 5, Set 2 of 2
+
+- New paper at `computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`. The unit folder held the Set 1 paper
+  of the same date, which was moved to `archive/gate_co_mock_5_2026-10-31_run1.html` with its content frozen (same
+  questions, options, answers, solutions and duration); the folder now holds exactly one current paper and the
+  repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.randbelow(11)` draw over the eleven GATE CSE subjects in
+  syllabus order returned **Computer Architecture** (index 3). `runs[]` sorted by `(date, run)` gave the most recent
+  paper as `{2026-10-31, run 7, unit 5, pipelining, Set 1 of 2}`. Unit 5 held **25** questions, below
+  `UNIT_QUESTION_CAP = 50`, and had been current for **0** days, so step B3 held and the unit was generated again as
+  **Set 2 of 2**. Unit 5 now holds **50** questions, exactly the cap, so the next Computer Architecture run advances:
+  `(index_of(pipelining) = 4 + 1) mod 6 = 5` → **Unit 6, I/O Interface & Storage**. No override was used and no
+  partial set was generated.
+- Coverage: all four Unit 5 subtopics — stages & throughput (8); structural hazards (5); data hazards & forwarding (6);
+  control hazards & branch penalty (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard;
+  marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not the
+  official GATE scheme.
+- All 25 ids are new (`CO-U5-Q26` … `CO-U5-Q50`) and none collides with the 175 items banked for Computer Architecture
+  or with the 25 Set 1 items of this unit. The subject bank now holds **200** questions and the paper's Question Bank
+  tab shows the **150** that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="computer-architecture"`, `data-unit="pipelining"`, `data-unit-number="5"`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the 150 bank cards all carry
+  the full set. Difficulty is lowercase in the attributes, in the bank and in the portal data, and the UI capitalises
+  it with CSS.
+- What the set asks. Stages and throughput: throughput as `1/T` against latency `kT`; the clock as slowest stage plus
+  register overhead; unbalanced 4/3/6/3 ns stages with 1 ns registers, where 20 instructions take **161 ns**; the
+  speedup `nk/(n+k−1)` giving **4.84** at n = 120; and a 5-stage to 10-stage re-cut whose throughput speedup is
+  **1.71**, not 2. Structural hazards: the IF/MEM collision on one memory; a register file cut to a single read port;
+  a data memory that delivers one word every two cycles, CPI **1.35**; a dual-issue EX conflict and a multi-cycle
+  divider; and **50** cycles of data-memory occupancy in a 200-instruction program. Data hazards: WAR/WAW impossible
+  in order; `lw` then `sw` of the same register needing **0** stalls with a MEM→MEM path; the three-instruction gap
+  closed by write-first register-file timing (**0** stalls); forwarding edge cases; and a three-stall sequence, plus a
+  mixed-hazard total of **1004** cycles. Control hazards: a branch resolved in ID squashing **1** instruction; taken
+  branch CPI **1.30**; a BTB hit costing **0** cycles; delay slots; 2-bit counters; and a 90%-accurate BTB giving CPI
+  **1.03**.
+- Every numeric answer was recomputed by script, not by hand: 161 ns from clock 7 ns × 23 cycles; 4.8387 from
+  600/124; 1.35, 1.30 and 1.03 from their CPI sums; 1.7143 from 2.4/1.4; 20 instructions from 30/1.5 ns; 50 busy
+  cycles from 200 × 0.25; 1004 cycles from 500 + 4 + 250 + 100 + 150. The stall counts were cross-checked with a
+  cycle-accurate five-stage model (ALU value usable one cycle after EX, load value one cycle after MEM, store data read
+  in MEM, write-first register file): the listed 8-instruction sequence costs **3** stalls, `lw`→`sw` costs **0**,
+  `lw`→`add` costs **1**, and a producer three instructions ahead costs **0**.
+- The correct option is spread 4 A / 2 B / 4 C / 5 D across the 15 MCQ; the five MSQ answer sets are (A, C, D),
+  (A, B, D), (A, C, D), (A, B, D) and (A, B, C); the five NAT answers are 20, 50, 3, 1.03 and 1004.
+- Source tags: 18 `STANDARD_TEXTBOOK`, 7 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` stays empty for
+  Computer Architecture: no pipelining previous-year question has been verified against an official paper and answer
+  key for this unit, so nothing on this paper is called an official GATE question and the bank tab says so in one
+  sentence.
+- Shell parity: the paper was produced by splicing the new payload, question cards and About text into the shipped
+  shell of the Set 1 paper. The `<style>` block (13,235 bytes) and the exam `<script>` (9,445 bytes) are
+  **byte-identical** to it, as are the `<aside>` palette block and the whole Question Bank tab; the `:root` block
+  matches `design-tokens.css` and `index.html` byte for byte.
+- Verification by text and structure checks: 25 question cards numbered `data-n` 1–25, 25 palette buttons, 15 ×
+  "Marks: 1" and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 150 bank cards, one About tab, a
+  balanced `<div>` tree (833 open / 833 close), the Answer Key tab disabled, every active `.sol` empty and hidden, no
+  `ansline` text and no `correct`/`wrongpick` class inside `#qhost` before submit, and a payload that decodes to 25
+  answers and 25 solutions whose display strings agree with the stored answer sets.
+- A jsdom harness was run against the paper: the timer at `60:00`, exactly one card visible on load, no answer text or
+  option mark before submit, the key tab disabled and its list empty, all 25 `.sol` blocks empty and hidden, 15 MCQ +
+  5 MSQ + 5 NAT inputs answering cleanly, all 25 palette buttons green, the marked-for-review (`amr`) and
+  clear-response states working, Save & Next and palette navigation moving the current question, **35 / 35** on a
+  perfect attempt with 25 correct, the key tab unlocked, all 25 solutions revealed, the palette switching to `ok`, and
+  the Answer Key, Question Bank, About and Mock Test tabs all opening after submit.
+- Portal: the Computer Architecture Unit 5 card now points at this paper, is labelled `Set 2 of 2` and lists
+  `Set 1 (2026-10-31)` as its earlier set; `data/questions-computer-architecture.js` grew to 200 records. The portal
+  counters were recomputed from the files to **3500** solved questions and **3500** bank records; the previous 3450
+  figures were one set stale. The `69 units`, `78 test cards`, `60 of 69 units` and `259 subtopics` figures are
+  unchanged, because this run adds a second set to a unit that already had a card.
+- **Known shell deviations, unchanged by this run.** (1) The shared shell still has no `:focus-visible` ring on
+  buttons, palette buttons, tabs, options or accordions (spec 6.5); fixing it is a shell-wide change that would break
+  byte-level parity for every paper, so it is left for a single rebuild rather than a per-paper edit. (2) The shell
+  uses 38 raw hex values outside `:root` in its `<style>` block (spec 6.4); this paper carries exactly the same 38 as
+  the Set 1 paper it was built from. (3) The missing `data-subject` attribute that earlier papers lacked is **not**
+  present here: all 25 cards carry it.
+- Hygiene: the paper is filed at exactly one path, `computer-architecture/pipelining/`, and nowhere else;
+  `find . -name "*.html"` returns `index.html` plus one file per paper (60 current and 80 archived); every `href` in the
+  portal and in each paper resolves; no temporary or loose file was left at the repository root.
 
 ### 2026-10-31 — Algorithms Unit 5, Set 2 of 2
 
