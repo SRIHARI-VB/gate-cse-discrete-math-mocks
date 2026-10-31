@@ -7,35 +7,118 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (third pass)**, 2026-10-31 →
-  [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html)
+- **Engineering Mathematics · Unit 1 — Linear Algebra: Matrices & Systems, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html`](engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: derivation trees (7) · ambiguity in grammars (6) · CNF and GNF normal forms (6) · closure properties of
-  CFLs (6)
-- Rotation: MODE A. Eight subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining three
-  (Discrete Mathematics, Engineering Mathematics, Theory of Computation) and an unseeded `secrets.choice` gave
-  **Theory of Computation**, whose most recent run is `{2026-10-30, run 13, unit 1, regular-languages-fa, Set 1 of 2
-  (third pass)}`. Unit 1 held **100** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
-  B4 advanced `(index_of(regular-languages-fa) = 0 + 1) mod 4 = 1` → **Unit 2 — Grammars & Context-Free Languages**,
-  which held 75 questions. Every unit of the subject is at or above the cap (100, 75, 75, 75), so step B5 applies: the
-  modulo has wrapped and the third pass continues. Unit 2 takes the first set of that pass, its fourth set overall, and
-  goes from 75 to 100 questions. No override, no partial set.
-- The 2026-10-28 paper was moved to `archive/gate_toc_mock_2_2026-10-28_run3.html` with its content frozen, so the
+- Subtopics: matrix operations (7) · rank & nullity (7) · systems of linear equations (6) · Gauss elimination (5)
+- Rotation: MODE A. Nine subjects already carried a paper dated 2026-10-31, so the draw ran over the two remaining
+  (Discrete Mathematics, Engineering Mathematics) and an unseeded `secrets.choice` gave **Engineering Mathematics**,
+  whose most recent run is `{2026-10-30, run 10, unit 5, probability-distributions, Set 2 of 2}`. Unit 5 held **50**
+  questions, at `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(probability-distributions) = 4 + 1) mod 5 = 0` → **Unit 1 — Linear Algebra: Matrices & Systems**, which
+  also held 50. Every unit of the subject is at the cap (50, 50, 50, 50, 50), so step B5 applies: the modulo has
+  wrapped and the **second pass** has started at Unit 1. Unit 1 takes the first set of that pass, its third set
+  overall, and goes from 50 to 75 questions. No override, no partial set.
+- The 2026-10-26 paper was moved to `archive/gate_em_mock_1_2026-10-26_run2.html` with its content frozen, so the
   unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2 (second pass)**,
-  2026-10-31 → [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html)
+- Previous test: **Theory of Computation · Unit 2 — Grammars & Context-Free Languages, Set 1 of 2 (third pass)**,
+  2026-10-31 → [`theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`](theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html)
+  — **this paper renders no questions; see the defect note below.**
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 130 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 71 archived |
-| Test cards on the portal | 78 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 131 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 14 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 72 archived |
+| Test cards on the portal | 79 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3250 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3275 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 350 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 71 (10 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 72 (10 Discrete Mathematics, 11 Operating Systems, 10 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Engineering Mathematics Unit 1, Set 1 of 2 (second pass)
+
+- New paper at `engineering-mathematics/linear-algebra-matrices/gate_em_mock_1_2026-10-31.html`. The unit folder held
+  the 2026-10-26 paper, which was moved to `archive/gate_em_mock_1_2026-10-26_run2.html` with its content frozen (same
+  questions, options, answers, solutions and duration); `archive/` now holds `gate_em_mock_1_2026-10-26_run1.html` and
+  that run2 file, so the folder holds exactly one current paper and the root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Nine subjects already carry a paper dated 2026-10-31 (Algorithms, Computer
+  Architecture, Computer Networks, Compiler Design, Databases, Digital Logic, Operating Systems, Programming and Data
+  Structures, Theory of Computation), so the draw ran over the remaining two (Discrete Mathematics, Engineering
+  Mathematics) with an unseeded `secrets.choice` and returned **Engineering Mathematics**. `runs[]` sorted by
+  `(date, run)` gave the most recent paper as `{2026-10-30, run 10, unit 5, probability-distributions, Set 2 of 2}`.
+  Unit 5 held **50** questions, at `UNIT_QUESTION_CAP`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(probability-distributions) = 4 + 1) mod 5 = 0` → **Unit 1, Linear Algebra: Matrices & Systems**. Unit 1
+  also held 50 and every unit of the subject is at the cap (50, 50, 50, 50, 50), so step B5 applies: the modulo has
+  wrapped and the **second pass has started**. Unit 1 receives the first set of that pass, its third set overall, and
+  goes from 50 to 75 questions. No override was used and no partial set was generated.
+- Coverage: all four Unit 1 subtopics — matrix operations (7); rank & nullity (7); systems of linear equations (6);
+  Gauss elimination (5). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks
+  15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing.
+- All 25 ids are new (`EM-U1-Q51` … `EM-U1-Q75`); no id and no normalised stem collides with the 50 banked Unit 1
+  items or with any of the other 200 Engineering Mathematics questions. The subject bank now holds **275** questions
+  and the paper's Question Bank tab shows the 250 that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="engineering-mathematics"`, `data-unit="linear-algebra-matrices"`,
+  `data-unit-number="1"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  250 bank cards both carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- What the set asks. From matrix operations: what `AᵀA = I` forces on `det(A)` (both signs, because `−I` is
+  orthogonal too); `det(ABᵀ)` as a product of determinants; the trace identity `tr(AB) = tr(BA)` against three
+  plausible falsehoods; a determinant MSQ where `det(A + B)` and the `A² = I` trap are the two false options;
+  one `(2, 1)` entry of a product; `det(adj A) = (det A)ⁿ⁻¹` for `n = 4`; and `A³ = I` over `ℝ`, where the real cube
+  root of `1` is the whole answer. From rank and nullity: `nullity(Aᵀ)` for a `5 × 5` of rank 2 and again for a
+  `7 × 4` of rank 3; `rank(AB) ≤ min` as an inequality rather than an identity; `AᵀA` invertible but `AAᵀ` not, for a
+  tall full-column-rank matrix; Sylvester's bound with the `2 × 2` rank-1 example that attains `rank(AB) = 0`; the
+  rank-nullity MSQ; and an idempotent where `rank(I − A)` and `nullity(I − A)` are deliberately different.
+- From systems: fewer equations than unknowns plus consistency; `rank(A) ≠ rank([A | b])` as the inconsistency test;
+  a third row that is the sum of the first two; `k² = 1` where only `k = 1` survives the consistency check; a
+  consistency MSQ; and a 3 × 3 solve. From Gauss elimination: which quantity row operations preserve (rank, not the
+  determinant, trace or eigenvalues); a zero pivot in a **non-singular** matrix; the uniqueness of RREF against the
+  non-uniqueness of row echelon form; the MSQ on row operations and their determinant multipliers; and a
+  determinant-accounting NAT where one swap and two scalings sit between `A` and `U`.
+- Every numeric answer was recomputed by script, not by hand: `AB = [[4, 2], [3, 3]]` so the `(2, 1)` entry is **3**;
+  `det(adj A) = 2³ = **8**`; `nullity(Aᵀ) = 7 − 3 = **4**`; the 3 × 3 system
+  `x + y + z = 6, 2x − y + z = 3, x + 2y − 3z = −4` has `det = 13 ≠ 0` and solution `(1, 2, 3)`, so `x = **1**`; and
+  `det(U) = (−1)(2)(3)·det(A) = 12` gives `det(A) = **−2**`. Rank and consistency were checked with sympy and numpy:
+  the `4 × 4` Sylvester example has ranks 3, 3 and product rank 2; the dependent 3 × 3 system has
+  `rank(A) = rank([A | b]) = 2`; `k = 1` gives rank 1 with a rank-1 augmented matrix while `k = −1` gives rank 1
+  against an augmented rank of 2; the idempotent of rank 3 on `ℝ⁵` has `rank(I − A) = 2`, `trace = 3` and
+  `nullity(I − A) = 3`.
+- The correct option is spread 3 A / 4 B / 4 C / 4 D across the 15 MCQ; the five MSQ answer sets are (A, C),
+  (A, B, D), (A, B, D), (A, C, D) and (A, B, C); the five NAT answers are 3, 8, 4, 1 and −2.
+- Source tags: 12 `STANDARD_TEXTBOOK`, 13 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` is empty for
+  Engineering Mathematics: no linear-algebra previous-year question has been verified against an official paper and
+  answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one sentence.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Compiler Design
+  Unit 3 paper of 2026-10-31. The `<style>` block (13,228 bytes) and the exam `<script>` (9,411 bytes) are
+  **byte-identical** to that paper. The `:root` block still matches `design-tokens.css` and `index.html` byte for
+  byte. Two defects in that shell source were **not** inherited: its meta strip still names Unit 2 of Compiler
+  Design, and it is the same file that the Theory of Computation run spliced from — the meta strip here is
+  regenerated for Unit 1, so the paper's own strip, header sub-line and title all agree.
+- Verification by text and structure checks: 25 question cards, 25 palette buttons, 25 `qno` labels, 15 × "Marks: 1"
+  and 10 × "Marks: 2", 5 NAT inputs, 60 radio and 20 checkbox inputs, 250 bank cards under five unit accordions, one
+  About tab, one footer, a balanced `<div>` tree (1252 open / 1252 close), the Answer Key tab disabled, every active
+  `.sol` empty and hidden, no `ansline` text and no option mark in the question pane before submit, and a payload
+  that decodes to 25 answers and 25 solutions whose display strings agree with the stored answer sets.
+- A jsdom harness was run against the paper: exactly one card visible on load, 25 palette buttons, no answer text or
+  option mark before submit, the key tab disabled, all 25 palette buttons green after answering, **35 / 35** on a
+  perfect attempt, 25 correct, the key tab unlocked, the solution revealed, and Save & Next advancing from the
+  current card.
+- Portal: one new card at the head of `tests` — Engineering Mathematics · Unit 1 · 2026-10-31 — with the two frozen
+  earlier sets as its archive links; the 2026-10-26 card now points at
+  `archive/gate_em_mock_1_2026-10-26_run2.html` and lists Set 1 beside it. `data/questions-engineering-mathematics.js`
+  grew to 275 records and the header counters were recomputed from the files to **69 units**, **79 test cards** and
+  **3275 solved questions**.
+- Hygiene: the paper is filed at exactly one path, `engineering-mathematics/linear-algebra-matrices/`, and nowhere
+  else; `find . -name "*.html"` returns `index.html` plus one file per paper (59 current and 72 archived); every
+  `href` in the portal resolves; no temporary or loose file was left at the repository root.
+- **Defect found and recorded, not fixed here:** `theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html`
+  numbers its 25 question cards `data-n="76"` … `data-n="100"` (the bank positions of those questions) while the
+  shell's `card(n)` looks up `data-n="1"` … `data-n="25"`. A jsdom load of that paper shows 25 cards and **zero**
+  visible, so the Mock Test tab is empty and the paper is not usable as published. The fix is to renumber `data-n`,
+  the `name`/`aria-label` of each input and the `qno` labels back to 1–25 in that one file; it was left for its own
+  subject's next run rather than changed blind from another subject's run.
 
 ### 2026-10-31 — Theory of Computation Unit 2, Set 1 of 2 (third pass)
 
