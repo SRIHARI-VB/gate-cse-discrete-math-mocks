@@ -7,35 +7,82 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html)
+- **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: OSI & TCP/IP models (6) · delays & bandwidth-delay product (7) · framing: bit & byte stuffing (6) ·
-  CRC, checksum & Hamming (6)
-- Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects with an unseeded
-  `random.SystemRandom()` draw; it returned Computer Networks. Its most recent run was
-  `{2026-10-31, run 12, unit 6, application-layer-security, Set 2 of 2}`. Unit 6 held **50** questions, exactly
-  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
-  `(index_of(application-layer-security) = 5 + 1) mod 6 = 0` → **Unit 1, Layering, Physical & Framing**. Every unit of
-  the subject then held 50 questions (50, 50, 50, 50, 50, 50), so step B5 applies: **the second pass for Computer
-  Networks begins here**. Unit 1 receives the first set of that pass, its third set overall, and goes from 50 to 75
-  questions. No override, no partial set.
-- The previous current paper of the unit was moved to `archive/gate_cn_mock_1_2026-10-27_run2.html` with its content
+- Subtopics: stop-and-wait ARQ (5) · Go-Back-N & selective repeat (5) · pure & slotted ALOHA (5) ·
+  CSMA/CD, CSMA/CA & backoff (5) · Ethernet, switches & bridges (5)
+- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the full
+  eleven-subject list in syllabus order with an unseeded `secrets.randbelow` and returned **Computer Networks**
+  (draw index 10 of 11). Its most recent run was
+  `{2026-10-31, run 13, unit 1, network-fundamentals-framing, Set 1 of 2 (second pass)}`. Unit 1 held **75**
+  questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(network-fundamentals-framing) = 0 + 1) mod 6 = 1` → **Unit 2, Data Link Protocols & MAC**. Unit 2 held
+  50 questions from the first pass and every unit of the subject is at or above the cap (75, 50, 50, 50, 50, 50), so
+  step B5 applies: the second pass that began with Unit 1 continues, and Unit 2 receives its first set of that pass,
+  going from 50 to 75 questions. No override, no partial set.
+- The previous current paper of the unit was moved to `archive/gate_cn_mock_2_2026-10-28_run2.html` with its content
   frozen, so the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (third pass)**, 2026-10-31 →
-  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html)
+- Previous test: **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 135 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 13 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 76 archived |
-| Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. The two legacy Computer Networks Unit 1 archive cards were folded into its current card this run) |
+| Papers published (current + archived) | 136 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 77 archived |
+| Test cards on the portal | 77 (one card per current paper; superseded sets are links on that card. This run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3375 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 325 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3400 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 76 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 7 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 77 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Computer Networks Unit 2, Set 1 of 2 (second pass)
+
+- New paper at `computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html`. The unit folder held the 2026-10-28
+  paper, which was moved to `archive/gate_cn_mock_2_2026-10-28_run2.html` with its content frozen (same questions,
+  options, answers, solutions and duration); the folder now holds exactly one current paper and the root still holds
+  only `index.html`.
+- **Rotation (Section 1, MODE A).** Every one of the eleven subjects already carried a paper dated 2026-10-31, so the
+  draw ran over the full eleven-subject list in syllabus order with an unseeded `secrets.randbelow` and returned
+  **Computer Networks**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{2026-10-31, run 13, unit 1, network-fundamentals-framing, Set 1 of 2 (second pass)}`. Unit 1 held **75**
+  questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(network-fundamentals-framing) = 0 + 1) mod 6 = 1` → **Unit 2, data-link-mac**. Every unit of the subject
+  is at or above the cap (75, 50, 50, 50, 50, 50), so step B5 applies and the **second pass for Computer Networks
+  continues from Unit 2**. Unit 2 goes from 50 to 75 questions; no override was used and no partial set was made.
+- Coverage: all five Unit 2 subtopics — stop-and-wait ARQ (5); Go-Back-N and selective repeat (5); pure and slotted
+  ALOHA (5); CSMA/CD, CSMA/CA and backoff (5); Ethernet standards, switches and bridges (5). Composition 15 MCQ /
+  5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative
+  marking, MSQ all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`CN-U2-Q51` … `CN-U2-Q75`); no id and no stem collides with the 50 banked Unit 2 items of Sets
+  1 and 2. The subject bank now holds **350** questions and the paper's Question Bank tab shows the 325 that are not
+  on it, so the active set does not reappear there.
+- Every question carries `data-subject="computer-networks"`, `data-unit="data-link-mac"`, `data-unit-number="2"`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the 325 bank cards all
+  carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal data, and the UI
+  capitalises it with CSS.
+- What the set asks. Stop-and-wait: utilisation `Tt/(Tt+2Tp)` = 33.33% on a 1 ms/1 ms link; why one bit
+  of sequence number suffices; the 10000-bit frame that makes utilisation 20% at 20 ms; the three TRUE statements
+  about buffering, timers and duplicate detection; and the 7500 bps link needed for 80% utilisation. Sliding windows:
+  the 8-number sequence space of a 7-frame Go-Back-N window; the 8-frame selective-repeat window at 4 bits;
+  Go-Back-N utilisation 5/21 = 23.81%; the three TRUE statements on receiver buffering and cumulative acknowledgement;
+  and the 101-frame window that fills a 1 ms/50 ms pipe. ALOHA: the 1/e = 36.8% ceiling, the 2T vulnerable period,
+  S = 0.5e^−0.5 = 0.303, the three TRUE statements on slotted ALOHA, and 368 frames per second at peak load.
+  CSMA: the backoff range 0…7 after three collisions, why 802.11 cannot detect collisions, the 512-bit minimum frame
+  at 10 Mbps and 25.6 μs, the three TRUE statements on detection and RTS/CTS, and the 2.56 μs propagation limit at
+  100 Mbps. Ethernet: learning from source addresses, 802.3u for 100BASE-TX, 8 collision domains against 1 broadcast
+  domain, the three TRUE statements on bridging and cut-through, and 2400 Mbps of full-duplex aggregate throughput.
+- No question is an official GATE PYQ and no PYQ was added this run: no stop-and-wait, sliding-window, ALOHA, CSMA or
+  Ethernet previous-year question has been verified against an official paper and answer key for this unit, so
+  `verified_pyqs` stays empty for Computer Networks and the set carries no `GATE_PYQ_VARIATION` item.
+- **Shell note.** This paper is built on the same shell as the other Computer Networks papers, and its non-payload
+  bytes match `archive/gate_cn_mock_2_2026-10-28_run2.html` exactly. The three newer Computer Networks papers
+  (`gate_cn_mock_1_2026-10-31.html`, `gate_cn_mock_6_2026-10-31.html`, `gate_cn_mock_5_2026-10-30.html`) carry a
+  duplicated `<div class="layout">` wrapper that nests `#view-key` and `#view-bank` inside `#view-test`, so their
+  Answer Key and Question Bank tabs stay hidden after submit. That drift is not carried forward here; those three
+  papers need a shell rebuild before their tabs work.
 
 ### 2026-10-31 — Computer Networks Unit 1, Set 1 of 2 (second pass)
 
