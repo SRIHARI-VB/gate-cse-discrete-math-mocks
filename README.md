@@ -7,36 +7,74 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2 (second pass)**, 2026-11-01 →
-  [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html)
+- **Algorithms · Unit 6 — Graph Algorithms: Shortest Paths, Set 1 of 2**, 2026-11-01 →
+  [`algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html`](algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: IPv4 header & fragmentation (5) · classful vs classless & CIDR (7) · subnet masking & supernetting (6) ·
-  IPv6 basics & differences (7)
-- Rotation: MODE A. An unseeded `random.SystemRandom().choice` draw over the eleven subjects in syllabus order returned
-  **Computer Networks** (index 10). Its most recent run was `{2026-10-31, run 14, unit 2, data-link-mac, Set 1 of 2
-  (second pass)}`. Unit 2 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
-  B4 advanced one unit: `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing &
-  Subnetting**. Unit 3 already held 50 questions from 2026-10-28, so this paper is the first set of that unit's second
-  pass: 25 new questions, none of them repeating the 50 already banked. Unit 3 now holds **75** questions, above the
-  cap, so the next Computer Networks run advances `(2 + 1) mod 6 = 3` → **Unit 4, Network Layer: Routing & Protocols**.
-  No override, no partial set.
-- The 2026-10-28 paper that was current in this unit was moved to
-  [`archive/gate_cn_mock_3_2026-10-28_run2.html`](computer-networks/ipv4-subnetting/archive/gate_cn_mock_3_2026-10-28_run2.html)
-  with its content frozen, so the unit folder holds exactly one current paper.
-- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html)
+- Subtopics: Dijkstra's algorithm (7) · Bellman–Ford algorithm (6) · shortest paths in a DAG (6) ·
+  transitive closure & Floyd–Warshall (6)
+- Rotation: MODE A. An unseeded `secrets.choice` draw over the ten subjects that do not already carry a paper dated
+  2026-11-01 (Computer Networks does) returned **Algorithms**. Its most recent run was
+  `{2026-10-31, run 10, unit 5, graph-algorithms-traversals-mst, Set 2 of 2}`. Unit 5 held **50** questions, equal to
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph Algorithms: Shortest Paths**.
+  Unit 6 held 0 questions, so this is its **Set 1 of 2**; it now holds 25, still under the cap, and the next Algorithms
+  run stays on Unit 6 as Set 2 of 2. No override, no partial set.
+- Unit 6 had no earlier paper, so nothing was archived; `algorithms/shortest-paths/` holds exactly one current paper and
+  the repository root still holds only `index.html`.
+- Previous test: **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2 (second pass)**,
+  2026-11-01 → [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 141 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
-| Current papers / archived sets | 60 current · 81 archived |
-| Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
-| Units covered | 11 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3525 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
+| Papers published (current + archived) | 142 (23 Discrete Mathematics, 11 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
+| Current papers / archived sets | 61 current · 81 archived |
+| Test cards on the portal | 79 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
+| Units covered | 11 of 16 in Discrete Mathematics; 6 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
+| Questions in the subject banks | 3550 (575 Discrete Mathematics, 275 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
 | Archived sets (earlier runs) | 81 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+
+### 2026-11-01 — Algorithms Unit 6, Set 1 of 2
+
+- New paper at `algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html`. Unit 6 had no earlier paper, so nothing was
+  archived and the unit folder holds exactly one current paper; the repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** An unseeded `secrets.choice` draw over the ten GATE CSE subjects that do not already
+  carry a paper dated 2026-11-01 (Computer Networks does) returned **Algorithms**. `runs[]` sorted by `(date, run)` gave
+  the most recent paper as `{2026-10-31, run 10, unit 5, graph-algorithms-traversals-mst, Set 2 of 2}`. Unit 5 held
+  **50** questions, equal to `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph Algorithms: Shortest Paths**.
+  Unit 6 held **0** questions, so this paper is **Set 1 of 2** and the next Algorithms run stays on Unit 6 for Set 2 of
+  2. No override was used and no unit is above the cap.
+- Coverage: all four Unit 6 subtopics — Dijkstra's algorithm (7); Bellman–Ford algorithm (6); shortest paths in a DAG
+  (6); transitive closure & Floyd–Warshall (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium /
+  5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not
+  the official GATE scheme.
+- All 25 ids are new (`ALG-U6-Q01` … `ALG-U6-Q25`) and none collides with the 250 items banked for Algorithms. The
+  subject bank now holds **275** questions and the paper's Question Bank tab shows the **250** previously banked items
+  with the active 25 excluded. Every question carries `data-subject="algorithms"`, `data-unit="shortest-paths"`,
+  `data-unit-number="6"`, its subtopic slug, type, difficulty and source.
+- Every numeric answer was recomputed by script: Dijkstra gives `d(d) = 10` and the extraction order `s, a, b, c, d, e`;
+  the undirected distance sum is 23; there are 3 distinct shortest `A → E` paths; Bellman–Ford gives 4 on both
+  negative-edge traces; the DAG gives `d(E) = 8` and a longest path of 12; the transitive-closure count on the
+  two-cycle graph is 19 (14 distinct-end pairs plus 5 diagonal entries).
+- No GATE PYQ is claimed: `verified_pyqs` is empty for Algorithms, so no item is tagged `GATE_PYQ_VARIATION` and nothing
+  on this paper is presented as an official GATE question.
+- Shell parity: the paper was produced by splicing the new payload into the shipped shell of the Computer Networks
+  Unit 3 paper (2026-11-01). With the payload, the question cards, the bank tab, the About tab, the title, the header
+  and the meta strip removed, the remaining bytes are identical to that shell and to the Computer Architecture Unit 5
+  shell.
+- **Shell repair.** `algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html` shipped without the
+  `<div id="qhost">` wrapper around its question cards while its script still called `getElementById('qhost')`, so that
+  paper's script aborted on load and the question area stayed blank. The wrapper and its closing tag were restored, so
+  the paper is now functional and byte-identical to the canonical shell outside its payload. Content, answers,
+  solutions and duration were not touched. The two `discrete-mathematics/proof-techniques/archive/` papers of
+  2026-10-25 come from an earlier shell generation that never referenced `qhost`; they were left as they are.
+- Known deviation, unchanged from every earlier run: the `:root` token block is byte-identical in `index.html`,
+  `design-tokens.css` and every paper, but the shipped shell also contains 33 raw hex values in inline styles outside
+  `:root` (for example `color:#5b6b7a` on the marks label). They belong to the template, not to this run's payload, and
+  were left alone so that the shell stays byte-identical across all 142 papers.
 
 ### 2026-11-01 — Computer Networks Unit 3, Set 1 of 2 (second pass)
 

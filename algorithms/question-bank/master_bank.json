@@ -4,17 +4,18 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-31",
+  "last_updated": "2026-11-01",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 250,
+  "total_questions": 275,
   "units_with_questions": [
    1,
    2,
    3,
    4,
-   5
+   5,
+   6
   ],
-  "total_runs": 10
+  "total_runs": 11
  },
  "runs": [
   {
@@ -568,6 +569,67 @@
     "medium": 10,
     "hard": 5
    }
+  },
+  {
+   "run": 11,
+   "date": "2026-11-01",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "set": "Set 1 of 2",
+   "count": 25,
+   "file": "algorithms/shortest-paths/gate_algo_mock_6_2026-11-01.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": {
+    "dijkstra-algorithm": 7,
+    "bellman-ford-algorithm": 6,
+    "dag-shortest-paths": 6,
+    "transitive-closure-warshall": 6
+   },
+   "question_ids": [
+    "ALG-U6-Q01",
+    "ALG-U6-Q02",
+    "ALG-U6-Q03",
+    "ALG-U6-Q04",
+    "ALG-U6-Q05",
+    "ALG-U6-Q06",
+    "ALG-U6-Q07",
+    "ALG-U6-Q08",
+    "ALG-U6-Q09",
+    "ALG-U6-Q10",
+    "ALG-U6-Q11",
+    "ALG-U6-Q12",
+    "ALG-U6-Q13",
+    "ALG-U6-Q14",
+    "ALG-U6-Q15",
+    "ALG-U6-Q16",
+    "ALG-U6-Q17",
+    "ALG-U6-Q18",
+    "ALG-U6-Q19",
+    "ALG-U6-Q20",
+    "ALG-U6-Q21",
+    "ALG-U6-Q22",
+    "ALG-U6-Q23",
+    "ALG-U6-Q24",
+    "ALG-U6-Q25"
+   ],
+   "mode": "MODE_A_RANDOM_SUBJECT",
+   "selection": "MODE A. An unseeded secrets.choice over the ten subjects that do not already carry a paper dated 2026-11-01 (Computer Networks does) gave Algorithms. algorithms/question-bank/master_bank.json read back runs[] sorted by (date, run) as {date 2026-10-31, run 10, unit 5, graph-algorithms-traversals-mst, Set 2 of 2}. Unit 5 held 50 questions, equal to UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced one unit: (index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5 -> Unit 6, Graph Algorithms: Shortest Paths. Unit 6 held 0 questions, so this is Set 1 of 2. No override was used and no unit is above the cap.",
+   "note": "Set 1 of 2 for Algorithms Unit 6, the first paper of a unit that had no banked questions, so nothing was archived and the unit folder holds exactly one paper. All 25 items are new (ALG-U6-Q01..Q25); no id and no normalised stem collides with the 250 items already banked for Algorithms. Coverage: 7 Dijkstra, 6 Bellman-Ford, 6 DAG shortest paths, 6 transitive closure - every unit subtopic represented. Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; 35 marks in 60 minutes. Every numeric answer was recomputed by script: the Dijkstra trace gives d(d) = 10 and the extraction order s, a, b, c, d, e; the undirected distance sum is 23; there are 3 distinct shortest A->E paths; Bellman-Ford gives 4 for both the negative-edge traces; the DAG gives d(E) = 8 and a longest path of 12; the transitive-closure count on the two-cycle graph is 19. verified_pyqs is empty for this subject, so no item is tagged GATE_PYQ_VARIATION and nothing on this paper is claimed as an official GATE question."
   }
  ],
  "verified_pyqs": [],
@@ -9479,6 +9541,1005 @@
     "final": "9",
     "trap": "Reporting 8, from <span class=\"mm\">n − 2</span>, or 17, from rejecting everything except the first edge. Count the accepted edges first: a spanning tree always has exactly <span class=\"mm\">n − 1</span> of them, however many edges the graph has."
    }
+  },
+  {
+   "id": "ALG-U6-Q01",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph contains exactly one edge of weight <span class=\"mm\">−2</span> and has no negative-weight cycle. Dijkstra's algorithm is run from a source <span class=\"mm\">s</span> that can reach that edge. Which one of the following is TRUE?",
+   "options": [
+    "it always returns correct shortest distances, because the graph has no negative-weight cycle",
+    "it may report a distance that is larger than the true shortest distance",
+    "it never terminates, because a label can keep decreasing",
+    "it is correct whenever the graph is strongly connected"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Dijkstra's correctness rests on non-negativity. When the unsettled vertex with the smallest tentative label is settled, every alternative route to it must leave the settled set and therefore pays a non-negative edge, so no later relaxation can improve it. A negative edge breaks exactly that argument.",
+    "steps": [
+     "Settlement is final in Dijkstra: once a vertex leaves the priority queue its label is never revisited.",
+     "A route that is discovered later can still be cheaper if it uses the <span class=\"mm\">−2</span> edge, because the label already settled was computed without it.",
+     "So the returned distance may exceed the true shortest distance. The algorithm still terminates, and it reports nothing about the negative edge.",
+     "Absence of a negative cycle is the condition that makes Bellman–Ford correct, not Dijkstra."
+    ],
+    "final": "Option (B) — the distance reported may be too large.",
+    "trap": "Candidates transfer the Bellman–Ford precondition (\"no negative cycle is enough\") to Dijkstra. Dijkstra needs non-negative weights; with a negative edge it can settle a vertex too early and never repair it."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Dijkstra's correctness rests on non-negativity. When the unsettled vertex with the smallest tentative label is settled, every alternative route to it must leave the settled set and therefore pays a non-negative edge, so no later relaxation can improve it. A negative edge breaks exactly that argument.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Settlement is final in Dijkstra: once a vertex leaves the priority queue its label is never revisited.</li><li>A route that is discovered later can still be cheaper if it uses the <span class=\"mm\">−2</span> edge, because the label already settled was computed without it.</li><li>So the returned distance may exceed the true shortest distance. The algorithm still terminates, and it reports nothing about the negative edge.</li><li>Absence of a negative cycle is the condition that makes Bellman–Ford correct, not Dijkstra.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — the distance reported may be too large.</span></p><p class=\"row\"><b>Common misconception.</b> Candidates transfer the Bellman–Ford precondition (\"no negative cycle is enough\") to Dijkstra. Dijkstra needs non-negative weights; with a negative edge it can settle a vertex too early and never repair it.</p>"
+  },
+  {
+   "id": "ALG-U6-Q02",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Dijkstra's algorithm is implemented with a binary min-heap and adjacency lists, and uses lazy deletion instead of decrease-key: when a shorter label is found the pair is pushed again, and stale entries are discarded when they are popped. On a graph with <span class=\"mm\">V</span> vertices and <span class=\"mm\">E</span> edges its running time is:",
+   "options": [
+    "<span class=\"mm\">Θ(V²)</span>",
+    "<span class=\"mm\">O(E log V)</span>",
+    "<span class=\"mm\">O(V log E)</span>",
+    "<span class=\"mm\">O(E²)</span>"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Each edge can cause at most one successful relaxation, so at most <span class=\"mm\">E</span> pairs ever enter the heap. Every heap operation costs <span class=\"mm\">O(log E)</span>, and <span class=\"mm\">log E = O(log V²) = O(log V)</span> for a simple graph.",
+    "steps": [
+     "At most one push per edge → at most <span class=\"mm\">E</span> pushes and <span class=\"mm\">E</span> pops.",
+     "Each push and each pop costs <span class=\"mm\">O(log E)</span> with a binary heap.",
+     "Stale entries are simply skipped on pop, which costs nothing extra.",
+     "Total <span class=\"mm\">O(E log E)</span>, i.e. <span class=\"mm\">O(E log V)</span>. The <span class=\"mm\">Θ(V²)</span> bound is the array implementation without a heap."
+    ],
+    "final": "Option (B) — <span class=\"mm\">O(E log V)</span>.",
+    "trap": "The <span class=\"mm\">Θ(V²)</span> answer is the matrix-and-array implementation. Mixing the two implementations up is the usual slip."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each edge can cause at most one successful relaxation, so at most <span class=\"mm\">E</span> pairs ever enter the heap. Every heap operation costs <span class=\"mm\">O(log E)</span>, and <span class=\"mm\">log E = O(log V²) = O(log V)</span> for a simple graph.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>At most one push per edge → at most <span class=\"mm\">E</span> pushes and <span class=\"mm\">E</span> pops.</li><li>Each push and each pop costs <span class=\"mm\">O(log E)</span> with a binary heap.</li><li>Stale entries are simply skipped on pop, which costs nothing extra.</li><li>Total <span class=\"mm\">O(E log E)</span>, i.e. <span class=\"mm\">O(E log V)</span>. The <span class=\"mm\">Θ(V²)</span> bound is the array implementation without a heap.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">O(E log V)</span>.</span></p><p class=\"row\"><b>Common misconception.</b> The <span class=\"mm\">Θ(V²)</span> answer is the matrix-and-array implementation. Mixing the two implementations up is the usual slip.</p>"
+  },
+  {
+   "id": "ALG-U6-Q03",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph has the weighted edges <span class=\"mm\">s→a (4), s→b (1), b→a (2), a→c (5), b→c (8), c→d (2), a→d (10)</span>. Dijkstra's algorithm is run from <span class=\"mm\">s</span>. What is the shortest distance from <span class=\"mm\">s</span> to <span class=\"mm\">d</span>?",
+   "options": [
+    "7",
+    "8",
+    "10",
+    "13"
+   ],
+   "answer": 2,
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "Dijkstra settles vertices in non-decreasing order of distance, so a vertex must be settled only after every cheaper route to it has been tried.",
+    "steps": [
+     "Settle <span class=\"mm\">s = 0</span>. Relax <span class=\"mm\">a = 4</span>, <span class=\"mm\">b = 1</span>.",
+     "Settle <span class=\"mm\">b = 1</span>. Relax <span class=\"mm\">a = min(4, 1 + 2) = 3</span>, <span class=\"mm\">c = 1 + 8 = 9</span>.",
+     "Settle <span class=\"mm\">a = 3</span>. Relax <span class=\"mm\">c = min(9, 3 + 5) = 8</span>, <span class=\"mm\">d = 3 + 10 = 13</span>.",
+     "Settle <span class=\"mm\">c = 8</span>. Relax <span class=\"mm\">d = min(13, 8 + 2) = 10</span>.",
+     "Settle <span class=\"mm\">d = 10</span>."
+    ],
+    "final": "Option (C) — 10, along <span class=\"mm\">s→b→a→c→d = 1 + 2 + 5 + 2</span>.",
+    "trap": "13 is the distance found the moment <span class=\"mm\">a</span> is settled. Anyone who stops relaxing when <span class=\"mm\">d</span> is first labelled reports 13; <span class=\"mm\">c</span> is settled later and improves it."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Dijkstra settles vertices in non-decreasing order of distance, so a vertex must be settled only after every cheaper route to it has been tried.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Settle <span class=\"mm\">s = 0</span>. Relax <span class=\"mm\">a = 4</span>, <span class=\"mm\">b = 1</span>.</li><li>Settle <span class=\"mm\">b = 1</span>. Relax <span class=\"mm\">a = min(4, 1 + 2) = 3</span>, <span class=\"mm\">c = 1 + 8 = 9</span>.</li><li>Settle <span class=\"mm\">a = 3</span>. Relax <span class=\"mm\">c = min(9, 3 + 5) = 8</span>, <span class=\"mm\">d = 3 + 10 = 13</span>.</li><li>Settle <span class=\"mm\">c = 8</span>. Relax <span class=\"mm\">d = min(13, 8 + 2) = 10</span>.</li><li>Settle <span class=\"mm\">d = 10</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 10, along <span class=\"mm\">s→b→a→c→d = 1 + 2 + 5 + 2</span>.</span></p><p class=\"row\"><b>Common misconception.</b> 13 is the distance found the moment <span class=\"mm\">a</span> is settled. Anyone who stops relaxing when <span class=\"mm\">d</span> is first labelled reports 13; <span class=\"mm\">c</span> is settled later and improves it.</p>"
+  },
+  {
+   "id": "ALG-U6-Q04",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph has the weighted edges <span class=\"mm\">s→a (2), s→b (7), s→c (4), a→b (1), a→c (3), b→d (2), c→d (5), d→e (1)</span>. Dijkstra's algorithm is run from <span class=\"mm\">s</span>. Which vertex is removed from the priority queue third? Count <span class=\"mm\">s</span> as the first removal.",
+   "options": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "With non-negative weights the priority queue hands out vertices in non-decreasing order of their final distances, so the removal order is the distance order.",
+    "steps": [
+     "Settle <span class=\"mm\">s = 0</span>; labels <span class=\"mm\">a = 2, b = 7, c = 4</span>.",
+     "Settle <span class=\"mm\">a = 2</span>; relax <span class=\"mm\">b = min(7, 3) = 3</span>, <span class=\"mm\">c = min(4, 5) = 4</span>.",
+     "The queue now holds <span class=\"mm\">b = 3, c = 4, s→b</span> already replaced, so <span class=\"mm\">b</span> is settled next.",
+     "Order: <span class=\"mm\">s(0), a(2), b(3), c(4), d(5), e(6)</span>."
+    ],
+    "final": "Option (B) — <span class=\"mm\">b</span>, with distance 3.",
+    "trap": "Settling <span class=\"mm\">c = 4</span> before <span class=\"mm\">b</span> because <span class=\"mm\">c</span> was labelled earlier (4 at the first step, when <span class=\"mm\">b</span> showed 7). The queue orders by label, not by the moment a vertex was discovered."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> With non-negative weights the priority queue hands out vertices in non-decreasing order of their final distances, so the removal order is the distance order.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Settle <span class=\"mm\">s = 0</span>; labels <span class=\"mm\">a = 2, b = 7, c = 4</span>.</li><li>Settle <span class=\"mm\">a = 2</span>; relax <span class=\"mm\">b = min(7, 3) = 3</span>, <span class=\"mm\">c = min(4, 5) = 4</span>.</li><li>The queue now holds <span class=\"mm\">b = 3, c = 4, s→b</span> already replaced, so <span class=\"mm\">b</span> is settled next.</li><li>Order: <span class=\"mm\">s(0), a(2), b(3), c(4), d(5), e(6)</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <span class=\"mm\">b</span>, with distance 3.</span></p><p class=\"row\"><b>Common misconception.</b> Settling <span class=\"mm\">c = 4</span> before <span class=\"mm\">b</span> because <span class=\"mm\">c</span> was labelled earlier (4 at the first step, when <span class=\"mm\">b</span> showed 7). The queue orders by label, not by the moment a vertex was discovered.</p>"
+  },
+  {
+   "id": "ALG-U6-Q05",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about Dijkstra's algorithm are TRUE? (Select all that apply.)",
+   "options": [
+    "When every edge weight is non-negative, the distance label of a vertex is final at the moment it is removed from the priority queue.",
+    "Implemented with a Fibonacci heap it runs in <span class=\"mm\">O(V log V + E)</span> time.",
+    "It can be used to detect a negative-weight cycle that is reachable from the source.",
+    "On a directed acyclic graph, relaxing the edges in topological order is asymptotically faster in the worst case than running Dijkstra's algorithm."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Dijkstra is a label-setting algorithm: with non-negative weights the settled set always holds the true distances. Its cost is the cost of the priority queue, and on a DAG the topological order removes the queue entirely.",
+    "steps": [
+     "(A) is the settlement theorem, and it is exactly what non-negativity buys.",
+     "(B) is the textbook bound: <span class=\"mm\">V</span> extract-min operations at <span class=\"mm\">O(log V)</span> each after the amortised <span class=\"mm\">O(1)</span> decrease-key, plus <span class=\"mm\">E</span> decrease-key operations.",
+     "(C) is false: Dijkstra never re-examines a settled vertex, so it cannot see a cycle of negative total weight; it silently returns wrong distances.",
+     "(D) is true: a DAG shortest-path sweep is <span class=\"mm\">Θ(V + E)</span>, which beats <span class=\"mm\">O(E log V)</span> in the worst case."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "Statement (C) is the trap. Negative-cycle detection needs the extra Bellman–Ford pass; Dijkstra has no mechanism to notice that a settled label could still be improved."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Dijkstra is a label-setting algorithm: with non-negative weights the settled set always holds the true distances. Its cost is the cost of the priority queue, and on a DAG the topological order removes the queue entirely.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is the settlement theorem, and it is exactly what non-negativity buys.</li><li>(B) is the textbook bound: <span class=\"mm\">V</span> extract-min operations at <span class=\"mm\">O(log V)</span> each after the amortised <span class=\"mm\">O(1)</span> decrease-key, plus <span class=\"mm\">E</span> decrease-key operations.</li><li>(C) is false: Dijkstra never re-examines a settled vertex, so it cannot see a cycle of negative total weight; it silently returns wrong distances.</li><li>(D) is true: a DAG shortest-path sweep is <span class=\"mm\">Θ(V + E)</span>, which beats <span class=\"mm\">O(E log V)</span> in the worst case.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> Statement (C) is the trap. Negative-cycle detection needs the extra Bellman–Ford pass; Dijkstra has no mechanism to notice that a settled label could still be improved.</p>"
+  },
+  {
+   "id": "ALG-U6-Q06",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A weighted undirected graph on the vertices <span class=\"mm\">A</span>–<span class=\"mm\">E</span> has the edges <span class=\"mm\">AB 4, AC 1, CB 2, BD 5, CD 8, DE 3</span>. Dijkstra's algorithm is run from <span class=\"mm\">A</span>. What is the sum of the shortest distances from <span class=\"mm\">A</span> to all five vertices, counting the distance to <span class=\"mm\">A</span> itself as 0?",
+   "options": [],
+   "answer": 23,
+   "answer_display": "23",
+   "solution": {
+    "concept": "On an undirected graph every edge is usable in both directions, so each listed edge is two arcs of the same weight.",
+    "steps": [
+     "Settle <span class=\"mm\">A = 0</span>; labels <span class=\"mm\">B = 4, C = 1</span>.",
+     "Settle <span class=\"mm\">C = 1</span>; relax <span class=\"mm\">B = min(4, 1 + 2) = 3</span>, <span class=\"mm\">D = 1 + 8 = 9</span>.",
+     "Settle <span class=\"mm\">B = 3</span>; relax <span class=\"mm\">D = min(9, 3 + 5) = 8</span>.",
+     "Settle <span class=\"mm\">D = 8</span>; relax <span class=\"mm\">E = 8 + 3 = 11</span>. Settle <span class=\"mm\">E = 11</span>.",
+     "Sum <span class=\"mm\">= 0 + 3 + 1 + 8 + 11 = 23</span>."
+    ],
+    "final": "23",
+    "trap": "Taking <span class=\"mm\">AB = 4</span> as the distance to <span class=\"mm\">B</span> gives 24. The path <span class=\"mm\">A→C→B</span> costs 1 + 2 = 3 and is cheaper."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> On an undirected graph every edge is usable in both directions, so each listed edge is two arcs of the same weight.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Settle <span class=\"mm\">A = 0</span>; labels <span class=\"mm\">B = 4, C = 1</span>.</li><li>Settle <span class=\"mm\">C = 1</span>; relax <span class=\"mm\">B = min(4, 1 + 2) = 3</span>, <span class=\"mm\">D = 1 + 8 = 9</span>.</li><li>Settle <span class=\"mm\">B = 3</span>; relax <span class=\"mm\">D = min(9, 3 + 5) = 8</span>.</li><li>Settle <span class=\"mm\">D = 8</span>; relax <span class=\"mm\">E = 8 + 3 = 11</span>. Settle <span class=\"mm\">E = 11</span>.</li><li>Sum <span class=\"mm\">= 0 + 3 + 1 + 8 + 11 = 23</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 23</span></p><p class=\"row\"><b>Common misconception.</b> Taking <span class=\"mm\">AB = 4</span> as the distance to <span class=\"mm\">B</span> gives 24. The path <span class=\"mm\">A→C→B</span> costs 1 + 2 = 3 and is cheaper.</p>"
+  },
+  {
+   "id": "ALG-U6-Q07",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dijkstra-algorithm",
+   "subtopic": "dijkstra-algorithm",
+   "subtopic_label": "Dijkstra's algorithm",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph has the weighted edges <span class=\"mm\">A→B (1), A→C (2), B→C (1), B→D (3), C→D (2), A→D (5), D→E (1), C→E (6), B→E (10)</span>. How many distinct paths of minimum total weight lead from <span class=\"mm\">A</span> to <span class=\"mm\">E</span>?",
+   "options": [],
+   "answer": 3,
+   "answer_display": "3",
+   "solution": {
+    "concept": "Once the shortest distances are known, the number of shortest paths is counted in non-decreasing order of distance: a vertex inherits the count of every predecessor that lies on a tight edge, that is, one with <span class=\"mm\">d[u] + w(u,v) = d[v]</span>.",
+    "steps": [
+     "Distances: <span class=\"mm\">A = 0, B = 1, C = min(2, 1 + 1) = 2, D = min(1 + 3, 2 + 2, 5) = 4, E = 4 + 1 = 5</span>.",
+     "Paths to <span class=\"mm\">C</span>: <span class=\"mm\">A→C</span> and <span class=\"mm\">A→B→C</span>, both of weight 2 → count 2.",
+     "Paths to <span class=\"mm\">D</span>: <span class=\"mm\">A→B→D</span> (4) and the two paths to <span class=\"mm\">C</span> extended by <span class=\"mm\">C→D</span> (4) → count 1 + 2 = 3. The direct edge <span class=\"mm\">A→D</span> costs 5 and is not tight.",
+     "Paths to <span class=\"mm\">E</span>: only <span class=\"mm\">D→E</span> is tight (5); <span class=\"mm\">C→E = 8</span> and <span class=\"mm\">B→E = 11</span> are not.",
+     "So the count at <span class=\"mm\">E</span> is the count at <span class=\"mm\">D</span> = 3."
+    ],
+    "final": "3",
+    "trap": "Counting only the paths that a single Dijkstra run happens to discover. The tie <span class=\"mm\">d(B) + w(B,C) = d(A) + w(A,C) = 2</span> is easy to miss, and it doubles the count below <span class=\"mm\">C</span>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Once the shortest distances are known, the number of shortest paths is counted in non-decreasing order of distance: a vertex inherits the count of every predecessor that lies on a tight edge, that is, one with <span class=\"mm\">d[u] + w(u,v) = d[v]</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Distances: <span class=\"mm\">A = 0, B = 1, C = min(2, 1 + 1) = 2, D = min(1 + 3, 2 + 2, 5) = 4, E = 4 + 1 = 5</span>.</li><li>Paths to <span class=\"mm\">C</span>: <span class=\"mm\">A→C</span> and <span class=\"mm\">A→B→C</span>, both of weight 2 → count 2.</li><li>Paths to <span class=\"mm\">D</span>: <span class=\"mm\">A→B→D</span> (4) and the two paths to <span class=\"mm\">C</span> extended by <span class=\"mm\">C→D</span> (4) → count 1 + 2 = 3. The direct edge <span class=\"mm\">A→D</span> costs 5 and is not tight.</li><li>Paths to <span class=\"mm\">E</span>: only <span class=\"mm\">D→E</span> is tight (5); <span class=\"mm\">C→E = 8</span> and <span class=\"mm\">B→E = 11</span> are not.</li><li>So the count at <span class=\"mm\">E</span> is the count at <span class=\"mm\">D</span> = 3.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Counting only the paths that a single Dijkstra run happens to discover. The tie <span class=\"mm\">d(B) + w(B,C) = d(A) + w(A,C) = 2</span> is easy to miss, and it doubles the count below <span class=\"mm\">C</span>.</p>"
+  },
+  {
+   "id": "ALG-U6-Q08",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Bellman–Ford relaxes every edge once per pass. In the worst case, how many passes are needed before the distance labels are guaranteed correct on a graph with <span class=\"mm\">V</span> vertices that has no negative-weight cycle reachable from the source?",
+   "options": [
+    "<span class=\"mm\">V − 1</span>",
+    "<span class=\"mm\">V</span>",
+    "<span class=\"mm\">V + 1</span>",
+    "<span class=\"mm\">2V</span>"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "After pass <span class=\"mm\">i</span>, every label is at most the weight of the cheapest walk with at most <span class=\"mm\">i</span> edges. A shortest path in a graph without a negative cycle is simple, so it has at most <span class=\"mm\">V − 1</span> edges.",
+    "steps": [
+     "Pass 1 handles all shortest paths of one edge, pass 2 those of two edges, and so on.",
+     "A simple path on <span class=\"mm\">V</span> vertices uses at most <span class=\"mm\">V − 1</span> edges.",
+     "Hence <span class=\"mm\">V − 1</span> passes suffice, and the bound is tight: a chain of <span class=\"mm\">V</span> vertices needs all of them.",
+     "The extra <span class=\"mm\">V</span>-th pass is used only for cycle detection."
+    ],
+    "final": "Option (A) — <span class=\"mm\">V − 1</span> passes.",
+    "trap": "Answering <span class=\"mm\">V</span> because there are <span class=\"mm\">V</span> vertices. Vertices and edges on a path differ by one."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> After pass <span class=\"mm\">i</span>, every label is at most the weight of the cheapest walk with at most <span class=\"mm\">i</span> edges. A shortest path in a graph without a negative cycle is simple, so it has at most <span class=\"mm\">V − 1</span> edges.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Pass 1 handles all shortest paths of one edge, pass 2 those of two edges, and so on.</li><li>A simple path on <span class=\"mm\">V</span> vertices uses at most <span class=\"mm\">V − 1</span> edges.</li><li>Hence <span class=\"mm\">V − 1</span> passes suffice, and the bound is tight: a chain of <span class=\"mm\">V</span> vertices needs all of them.</li><li>The extra <span class=\"mm\">V</span>-th pass is used only for cycle detection.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — <span class=\"mm\">V − 1</span> passes.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">V</span> because there are <span class=\"mm\">V</span> vertices. Vertices and edges on a path differ by one.</p>"
+  },
+  {
+   "id": "ALG-U6-Q09",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "After the <span class=\"mm\">V − 1</span> passes of Bellman–Ford, how is a negative-weight cycle reachable from the source detected?",
+   "options": [
+    "run one additional pass over all edges; if any edge can still be relaxed, such a cycle exists",
+    "check whether every vertex has a finite distance label",
+    "check whether the sum of all edge weights is negative",
+    "check whether the graph contains a cycle at all"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "In a graph whose reachable part has no negative cycle, every edge satisfies <span class=\"mm\">d[v] ≤ d[u] + w(u,v)</span> after <span class=\"mm\">V − 1</span> passes. A negative cycle makes some edge permanently relaxable, because walking the cycle lowers the label without bound.",
+    "steps": [
+     "Run the relaxation loop once more over the whole edge list.",
+     "If some edge <span class=\"mm\">(u,v)</span> still satisfies <span class=\"mm\">d[v] > d[u] + w(u,v)</span>, a negative cycle is reachable from the source.",
+     "A negative cycle whose vertices are all unreachable from the source leaves every label untouched, so it is not reported — the detection is source-relative.",
+     "The other three tests say nothing about cycles: a finite label set only means the graph is connected enough, and a negative total edge weight does not imply a negative cycle."
+    ],
+    "final": "Option (A) — one extra pass, and any relaxable edge proves the cycle.",
+    "trap": "Believing that a negative sum of weights, or any cycle at all, is the signal. Only a still-relaxable edge after the final pass is."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a graph whose reachable part has no negative cycle, every edge satisfies <span class=\"mm\">d[v] ≤ d[u] + w(u,v)</span> after <span class=\"mm\">V − 1</span> passes. A negative cycle makes some edge permanently relaxable, because walking the cycle lowers the label without bound.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Run the relaxation loop once more over the whole edge list.</li><li>If some edge <span class=\"mm\">(u,v)</span> still satisfies <span class=\"mm\">d[v] > d[u] + w(u,v)</span>, a negative cycle is reachable from the source.</li><li>A negative cycle whose vertices are all unreachable from the source leaves every label untouched, so it is not reported — the detection is source-relative.</li><li>The other three tests say nothing about cycles: a finite label set only means the graph is connected enough, and a negative total edge weight does not imply a negative cycle.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — one extra pass, and any relaxable edge proves the cycle.</span></p><p class=\"row\"><b>Common misconception.</b> Believing that a negative sum of weights, or any cycle at all, is the signal. Only a still-relaxable edge after the final pass is.</p>"
+  },
+  {
+   "id": "ALG-U6-Q10",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph has the weighted edges <span class=\"mm\">s→a (4), s→b (5), a→b (−3), a→c (6), b→c (2), b→d (4), c→d (1)</span>. Bellman–Ford is run from <span class=\"mm\">s</span>. What is the shortest distance from <span class=\"mm\">s</span> to <span class=\"mm\">d</span>?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "8"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Bellman–Ford tolerates negative edges: it keeps relaxing until no pass changes a label, so a negative edge can lower a label that was already set in an earlier pass.",
+    "steps": [
+     "After pass 1: <span class=\"mm\">a = 4, b = min(5, 4 − 3) = 1, c = 1 + 2 = 3, d = min(1 + 4, 3 + 1) = 4</span>.",
+     "Pass 2 changes nothing: <span class=\"mm\">a = min(4, …) = 4</span>, <span class=\"mm\">b = min(1, 4 − 3) = 1</span>, <span class=\"mm\">c = min(3, 4 + 6) = 3</span>, <span class=\"mm\">d = min(4, 1 + 4, 3 + 1) = 4</span>.",
+     "The answer is <span class=\"mm\">4</span>, along <span class=\"mm\">s→a→b→d = 4 − 3 + 4</span> or <span class=\"mm\">s→a→b→c→d = 4 − 3 + 2 + 1</span>."
+    ],
+    "final": "Option (B) — 4.",
+    "trap": "5 is <span class=\"mm\">s→b→d</span> and ignores that the negative edge makes <span class=\"mm\">b</span> cheaper through <span class=\"mm\">a</span>. 8 is the sum of the raw weights of the longest route."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Bellman–Ford tolerates negative edges: it keeps relaxing until no pass changes a label, so a negative edge can lower a label that was already set in an earlier pass.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>After pass 1: <span class=\"mm\">a = 4, b = min(5, 4 − 3) = 1, c = 1 + 2 = 3, d = min(1 + 4, 3 + 1) = 4</span>.</li><li>Pass 2 changes nothing: <span class=\"mm\">a = min(4, …) = 4</span>, <span class=\"mm\">b = min(1, 4 − 3) = 1</span>, <span class=\"mm\">c = min(3, 4 + 6) = 3</span>, <span class=\"mm\">d = min(4, 1 + 4, 3 + 1) = 4</span>.</li><li>The answer is <span class=\"mm\">4</span>, along <span class=\"mm\">s→a→b→d = 4 − 3 + 4</span> or <span class=\"mm\">s→a→b→c→d = 4 − 3 + 2 + 1</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 4.</span></p><p class=\"row\"><b>Common misconception.</b> 5 is <span class=\"mm\">s→b→d</span> and ignores that the negative edge makes <span class=\"mm\">b</span> cheaper through <span class=\"mm\">a</span>. 8 is the sum of the raw weights of the longest route.</p>"
+  },
+  {
+   "id": "ALG-U6-Q11",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about the Bellman–Ford algorithm are TRUE? (Select all that apply.)",
+   "options": [
+    "It runs in <span class=\"mm\">O(V E)</span> time.",
+    "It handles negative edge weights correctly as long as no negative-weight cycle is reachable from the source.",
+    "It reports a negative-weight cycle that is not reachable from the source.",
+    "After <span class=\"mm\">V − 1</span> passes, every edge satisfies <span class=\"mm\">d[v] ≤ d[u] + w(u,v)</span> when no reachable negative cycle exists."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Bellman–Ford is a dynamic program over the number of edges: pass <span class=\"mm\">i</span> certifies all shortest paths of at most <span class=\"mm\">i</span> edges. Its cost is one full edge scan per pass.",
+    "steps": [
+     "(A) is true: <span class=\"mm\">V − 1</span> passes, each scanning <span class=\"mm\">E</span> edges.",
+     "(B) is true: negative edges are fine, since nothing is ever declared final.",
+     "(C) is false: vertices unreachable from the source keep an infinite label, so no relaxation inside that part of the graph is ever performed and the cycle goes unnoticed.",
+     "(D) is true: it is the optimality condition that the final pass certifies."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "(C) inverts the source-relative nature of the algorithm. Bellman–Ford answers single-source questions only; a negative cycle in another component is invisible to it."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Bellman–Ford is a dynamic program over the number of edges: pass <span class=\"mm\">i</span> certifies all shortest paths of at most <span class=\"mm\">i</span> edges. Its cost is one full edge scan per pass.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: <span class=\"mm\">V − 1</span> passes, each scanning <span class=\"mm\">E</span> edges.</li><li>(B) is true: negative edges are fine, since nothing is ever declared final.</li><li>(C) is false: vertices unreachable from the source keep an infinite label, so no relaxation inside that part of the graph is ever performed and the cycle goes unnoticed.</li><li>(D) is true: it is the optimality condition that the final pass certifies.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (C) inverts the source-relative nature of the algorithm. Bellman–Ford answers single-source questions only; a negative cycle in another component is invisible to it.</p>"
+  },
+  {
+   "id": "ALG-U6-Q12",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A connected undirected graph on 6 vertices has 8 edges, exactly one of which has negative weight, and that edge lies on a cycle. Bellman–Ford is run from any source. Which one of the following is TRUE?",
+   "options": [
+    "it returns correct distances, because no cycle of negative total weight exists",
+    "it reports a negative-weight cycle, because the negative edge can be traversed in both directions and so forms a cycle of negative total weight",
+    "it returns correct distances only when the negative edge is a bridge",
+    "it reports a negative cycle only when the graph is not a tree"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "An undirected edge of weight <span class=\"mm\">w</span> becomes two directed arcs, both of weight <span class=\"mm\">w</span>. The 2-cycle <span class=\"mm\">u→v→u</span> therefore has total weight <span class=\"mm\">2w</span>, which is negative whenever <span class=\"mm\">w</span> is.",
+    "steps": [
+     "Model each undirected edge as two arcs in opposite directions, the standard reduction.",
+     "The negative edge <span class=\"mm\">{u,v}</span> contributes arcs <span class=\"mm\">u→v</span> and <span class=\"mm\">v→u</span>, both negative.",
+     "Walking <span class=\"mm\">u→v→u</span> costs <span class=\"mm\">2w &lt; 0</span>, a negative-weight cycle of length 2 that is reachable as soon as one of its ends is reachable.",
+     "The extra pass therefore finds a relaxable edge and reports the cycle."
+    ],
+    "final": "Option (B).",
+    "trap": "Thinking that a single negative edge is harmless because it is not part of a \"real\" cycle. In an undirected graph every edge is its own 2-cycle, so any negative edge produces a negative cycle — which is why undirected shortest paths assume non-negative weights."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An undirected edge of weight <span class=\"mm\">w</span> becomes two directed arcs, both of weight <span class=\"mm\">w</span>. The 2-cycle <span class=\"mm\">u→v→u</span> therefore has total weight <span class=\"mm\">2w</span>, which is negative whenever <span class=\"mm\">w</span> is.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Model each undirected edge as two arcs in opposite directions, the standard reduction.</li><li>The negative edge <span class=\"mm\">{u,v}</span> contributes arcs <span class=\"mm\">u→v</span> and <span class=\"mm\">v→u</span>, both negative.</li><li>Walking <span class=\"mm\">u→v→u</span> costs <span class=\"mm\">2w &lt; 0</span>, a negative-weight cycle of length 2 that is reachable as soon as one of its ends is reachable.</li><li>The extra pass therefore finds a relaxable edge and reports the cycle.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Thinking that a single negative edge is harmless because it is not part of a \"real\" cycle. In an undirected graph every edge is its own 2-cycle, so any negative edge produces a negative cycle — which is why undirected shortest paths assume non-negative weights.</p>"
+  },
+  {
+   "id": "ALG-U6-Q13",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "bellman-ford-algorithm",
+   "subtopic": "bellman-ford-algorithm",
+   "subtopic_label": "Bellman–Ford algorithm",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph has the weighted edges <span class=\"mm\">s→a (2), s→b (3), b→a (−1), a→c (3), c→d (1), a→d (7), b→d (6), d→e (−2)</span>. There is no negative-weight cycle. Bellman–Ford is run from <span class=\"mm\">s</span>. What is the shortest distance from <span class=\"mm\">s</span> to <span class=\"mm\">e</span>?",
+   "options": [],
+   "answer": 4,
+   "answer_display": "4",
+   "solution": {
+    "concept": "A shortest path may be improved at a later pass when a negative edge lies behind it, so all passes must be completed before the labels are read.",
+    "steps": [
+     "Pass 1: <span class=\"mm\">a = 2, b = 3, c = 5, d = min(2 + 7, 3 + 6, 5 + 1) = 6, e = 6 − 2 = 4</span>.",
+     "Pass 2: <span class=\"mm\">b→a</span> gives <span class=\"mm\">a = min(2, 3 − 1) = 2</span>, unchanged; every other label is unchanged.",
+     "The path is <span class=\"mm\">s→b→a→c→d→e = 3 − 1 + 3 + 1 − 2 = 4</span>.",
+     "Check the alternatives: <span class=\"mm\">s→a→c→d→e = 2 + 3 + 1 − 2 = 4</span>, the same value; <span class=\"mm\">s→a→d→e = 2 + 7 − 2 = 7</span>."
+    ],
+    "final": "4",
+    "trap": "7, from <span class=\"mm\">s→a→d→e</span>. It is the route a single forward pass along the listed edge order might suggest if the <span class=\"mm\">c→d</span> shortcut is overlooked."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shortest path may be improved at a later pass when a negative edge lies behind it, so all passes must be completed before the labels are read.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Pass 1: <span class=\"mm\">a = 2, b = 3, c = 5, d = min(2 + 7, 3 + 6, 5 + 1) = 6, e = 6 − 2 = 4</span>.</li><li>Pass 2: <span class=\"mm\">b→a</span> gives <span class=\"mm\">a = min(2, 3 − 1) = 2</span>, unchanged; every other label is unchanged.</li><li>The path is <span class=\"mm\">s→b→a→c→d→e = 3 − 1 + 3 + 1 − 2 = 4</span>.</li><li>Check the alternatives: <span class=\"mm\">s→a→c→d→e = 2 + 3 + 1 − 2 = 4</span>, the same value; <span class=\"mm\">s→a→d→e = 2 + 7 − 2 = 7</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4</span></p><p class=\"row\"><b>Common misconception.</b> 7, from <span class=\"mm\">s→a→d→e</span>. It is the route a single forward pass along the listed edge order might suggest if the <span class=\"mm\">c→d</span> shortcut is overlooked.</p>"
+  },
+  {
+   "id": "ALG-U6-Q14",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Single-source shortest paths in a directed acyclic graph whose edges may be negative can be computed in:",
+   "options": [
+    "<span class=\"mm\">Θ(V + E)</span>",
+    "<span class=\"mm\">Θ(E log V)</span>",
+    "<span class=\"mm\">Θ(V E)</span>",
+    "<span class=\"mm\">Θ(V³)</span>"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "A topological order guarantees that when a vertex is processed every path into it has already been accounted for, so one relaxation per edge finishes the job — and no negative edge can invalidate a label because no label is ever declared final before all its predecessors are done.",
+    "steps": [
+     "Topologically sort the DAG: <span class=\"mm\">Θ(V + E)</span>.",
+     "Set <span class=\"mm\">d[s] = 0</span> and every other label to <span class=\"mm\">∞</span>.",
+     "Scan the vertices in topological order and relax every outgoing edge once: <span class=\"mm\">Θ(V + E)</span>.",
+     "Total <span class=\"mm\">Θ(V + E)</span>, the best possible since the input must be read."
+    ],
+    "final": "Option (A) — <span class=\"mm\">Θ(V + E)</span>.",
+    "trap": "Assuming negative edges force Bellman–Ford. They force <span class=\"mm\">Θ(V E)</span> only when cycles can exist; a DAG has none, so the topological order replaces the repeated passes."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A topological order guarantees that when a vertex is processed every path into it has already been accounted for, so one relaxation per edge finishes the job — and no negative edge can invalidate a label because no label is ever declared final before all its predecessors are done.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Topologically sort the DAG: <span class=\"mm\">Θ(V + E)</span>.</li><li>Set <span class=\"mm\">d[s] = 0</span> and every other label to <span class=\"mm\">∞</span>.</li><li>Scan the vertices in topological order and relax every outgoing edge once: <span class=\"mm\">Θ(V + E)</span>.</li><li>Total <span class=\"mm\">Θ(V + E)</span>, the best possible since the input must be read.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — <span class=\"mm\">Θ(V + E)</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming negative edges force Bellman–Ford. They force <span class=\"mm\">Θ(V E)</span> only when cycles can exist; a DAG has none, so the topological order replaces the repeated passes.</p>"
+  },
+  {
+   "id": "ALG-U6-Q15",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which one of the following is TRUE about longest simple paths?",
+   "options": [
+    "they can be found in polynomial time in every graph",
+    "they can be found in <span class=\"mm\">O(V + E)</span> time in a DAG, but the problem is NP-hard in a general graph",
+    "they are always found by negating every weight and running Dijkstra's algorithm",
+    "they equal the shortest path computed on the negated weights in every graph"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Negating the weights turns a longest-path problem into a shortest-path problem, and that transform is faithful exactly when the negated graph has no negative cycle — which a DAG guarantees. In a general graph a longest simple path cannot be certified edge by edge because a cheaper walk may repeat vertices.",
+    "steps": [
+     "In a DAG every walk is a path, so the negated graph has no negative cycle and the topological-order sweep returns the longest path in <span class=\"mm\">O(V + E)</span>.",
+     "In a general graph, longest path contains Hamiltonian path as a special case, which is NP-complete.",
+     "Negating the weights and running Dijkstra is invalid: negating makes the weights negative, and Dijkstra requires non-negative weights.",
+     "Negating and running Bellman–Ford returns the longest walk, which is unbounded when a positive cycle exists, not the longest simple path."
+    ],
+    "final": "Option (B).",
+    "trap": "Believing that \"negate and run a shortest-path algorithm\" is always valid. It is valid only when the negated graph has no negative cycle, and it computes longest walks, not longest simple paths."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Negating the weights turns a longest-path problem into a shortest-path problem, and that transform is faithful exactly when the negated graph has no negative cycle — which a DAG guarantees. In a general graph a longest simple path cannot be certified edge by edge because a cheaper walk may repeat vertices.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>In a DAG every walk is a path, so the negated graph has no negative cycle and the topological-order sweep returns the longest path in <span class=\"mm\">O(V + E)</span>.</li><li>In a general graph, longest path contains Hamiltonian path as a special case, which is NP-complete.</li><li>Negating the weights and running Dijkstra is invalid: negating makes the weights negative, and Dijkstra requires non-negative weights.</li><li>Negating and running Bellman–Ford returns the longest walk, which is unbounded when a positive cycle exists, not the longest simple path.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Believing that \"negate and run a shortest-path algorithm\" is always valid. It is valid only when the negated graph has no negative cycle, and it computes longest walks, not longest simple paths.</p>"
+  },
+  {
+   "id": "ALG-U6-Q16",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A DAG has the weighted edges <span class=\"mm\">A→B (2), A→C (5), B→C (1), B→D (6), C→D (2), D→E (3), C→E (9)</span>. What is the shortest distance from <span class=\"mm\">A</span> to <span class=\"mm\">E</span>?",
+   "options": [
+    "5",
+    "8",
+    "12",
+    "14"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "Relax the edges in topological order; each edge is examined once and the label it produces is already based on the best route to its tail.",
+    "steps": [
+     "Topological order <span class=\"mm\">A, B, C, D, E</span>.",
+     "<span class=\"mm\">A = 0</span>; <span class=\"mm\">B = 2, C = 5</span>.",
+     "<span class=\"mm\">C = min(5, 2 + 1) = 3</span>.",
+     "<span class=\"mm\">D = min(2 + 6, 3 + 2) = 5</span>.",
+     "<span class=\"mm\">E = min(5 + 3, 3 + 9) = 8</span>."
+    ],
+    "final": "Option (B) — 8, along <span class=\"mm\">A→B→C→D→E = 2 + 1 + 2 + 3</span>.",
+    "trap": "12 is <span class=\"mm\">A→C→E</span>, the route taken by reading the edges in the order they are listed. The topological sweep is what exposes <span class=\"mm\">A→B→C</span> as the cheaper way into <span class=\"mm\">C</span>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Relax the edges in topological order; each edge is examined once and the label it produces is already based on the best route to its tail.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Topological order <span class=\"mm\">A, B, C, D, E</span>.</li><li><span class=\"mm\">A = 0</span>; <span class=\"mm\">B = 2, C = 5</span>.</li><li><span class=\"mm\">C = min(5, 2 + 1) = 3</span>.</li><li><span class=\"mm\">D = min(2 + 6, 3 + 2) = 5</span>.</li><li><span class=\"mm\">E = min(5 + 3, 3 + 9) = 8</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 8, along <span class=\"mm\">A→B→C→D→E = 2 + 1 + 2 + 3</span>.</span></p><p class=\"row\"><b>Common misconception.</b> 12 is <span class=\"mm\">A→C→E</span>, the route taken by reading the edges in the order they are listed. The topological sweep is what exposes <span class=\"mm\">A→B→C</span> as the cheaper way into <span class=\"mm\">C</span>.</p>"
+  },
+  {
+   "id": "ALG-U6-Q17",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about shortest paths in a DAG are TRUE? (Select all that apply.)",
+   "options": [
+    "In a topological sweep every edge is relaxed exactly once.",
+    "Any valid topological order of the DAG produces the correct distances.",
+    "The method fails as soon as one edge has a negative weight.",
+    "Replacing <span class=\"mm\">min</span> by <span class=\"mm\">max</span> in the same sweep computes the longest path."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "Correctness needs only that every edge leaves an already-processed vertex; any topological order has that property, and the number of edge relaxations is fixed at <span class=\"mm\">E</span> whatever the order.",
+    "steps": [
+     "(A) is true: the sweep visits each vertex once and each outgoing edge once.",
+     "(B) is true: topological orders differ, but each one places every tail before its head.",
+     "(C) is false: acyclicity is what makes the sweep valid; negative weights are harmless because a label is never frozen before all its predecessors are processed.",
+     "(D) is true: in a DAG every walk is a path, so the <span class=\"mm\">max</span> relaxation over a topological order gives the longest path."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "(C) is the reflex that negative weights always mean Bellman–Ford. That reflex is about cycles, not about signs."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Correctness needs only that every edge leaves an already-processed vertex; any topological order has that property, and the number of edge relaxations is fixed at <span class=\"mm\">E</span> whatever the order.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: the sweep visits each vertex once and each outgoing edge once.</li><li>(B) is true: topological orders differ, but each one places every tail before its head.</li><li>(C) is false: acyclicity is what makes the sweep valid; negative weights are harmless because a label is never frozen before all its predecessors are processed.</li><li>(D) is true: in a DAG every walk is a path, so the <span class=\"mm\">max</span> relaxation over a topological order gives the longest path.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (C) is the reflex that negative weights always mean Bellman–Ford. That reflex is about cycles, not about signs.</p>"
+  },
+  {
+   "id": "ALG-U6-Q18",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about paths in a DAG are TRUE? (Select all that apply.)",
+   "options": [
+    "The number of distinct paths from the source to every vertex can be counted in one topological sweep in <span class=\"mm\">O(V + E)</span> time.",
+    "A DAG on <span class=\"mm\">n ≥ 2</span> vertices has at most <span class=\"mm\">2^(n−2)</span> distinct paths from a fixed source to a fixed target.",
+    "If a DAG has a unique topological order then it has exactly one path from its first vertex to its last.",
+    "A longest path in a DAG can be found by negating every weight and running the topological-order shortest-path sweep."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "answer_display": "Options (A), (B) and (D)",
+   "solution": {
+    "concept": "A DAG supports counting and extremal path queries in one pass because every path into a vertex arrives from vertices that are already finished in topological order; the counts and the labels therefore compose.",
+    "steps": [
+     "(A) is true: set <span class=\"mm\">cnt[s] = 1</span> and add <span class=\"mm\">cnt[u]</span> into <span class=\"mm\">cnt[v]</span> on every edge <span class=\"mm\">u→v</span> processed in topological order.",
+     "(B) is true: the extreme case is the tournament-like DAG in which every pair <span class=\"mm\">i &lt; j</span> carries the edge <span class=\"mm\">i→j</span>; a path is then any subset of the <span class=\"mm\">n − 2</span> intermediate vertices, so there are <span class=\"mm\">2^(n−2)</span> of them.",
+     "(C) is false: the DAG <span class=\"mm\">v₁→v₂, v₂→v₃, v₁→v₃</span> has the unique order <span class=\"mm\">v₁, v₂, v₃</span> but two paths from <span class=\"mm\">v₁</span> to <span class=\"mm\">v₃</span>.",
+     "(D) is true: negating gives a DAG with no negative cycle, so the topological sweep returns the longest path."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "trap": "(C) confuses a unique topological order with a unique path. A unique order only forces the edges <span class=\"mm\">vᵢ→vᵢ₊₁</span> to exist; extra forward edges create extra paths without creating extra orders."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A DAG supports counting and extremal path queries in one pass because every path into a vertex arrives from vertices that are already finished in topological order; the counts and the labels therefore compose.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: set <span class=\"mm\">cnt[s] = 1</span> and add <span class=\"mm\">cnt[u]</span> into <span class=\"mm\">cnt[v]</span> on every edge <span class=\"mm\">u→v</span> processed in topological order.</li><li>(B) is true: the extreme case is the tournament-like DAG in which every pair <span class=\"mm\">i &lt; j</span> carries the edge <span class=\"mm\">i→j</span>; a path is then any subset of the <span class=\"mm\">n − 2</span> intermediate vertices, so there are <span class=\"mm\">2^(n−2)</span> of them.</li><li>(C) is false: the DAG <span class=\"mm\">v₁→v₂, v₂→v₃, v₁→v₃</span> has the unique order <span class=\"mm\">v₁, v₂, v₃</span> but two paths from <span class=\"mm\">v₁</span> to <span class=\"mm\">v₃</span>.</li><li>(D) is true: negating gives a DAG with no negative cycle, so the topological sweep returns the longest path.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> (C) confuses a unique topological order with a unique path. A unique order only forces the edges <span class=\"mm\">vᵢ→vᵢ₊₁</span> to exist; extra forward edges create extra paths without creating extra orders.</p>"
+  },
+  {
+   "id": "ALG-U6-Q19",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "dag-shortest-paths",
+   "subtopic": "dag-shortest-paths",
+   "subtopic_label": "Shortest paths in a DAG",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A DAG has the weighted edges <span class=\"mm\">A→B (3), A→C (2), B→D (4), C→D (1), D→E (5), B→E (1), C→E (8)</span>. What is the total weight of a longest path from <span class=\"mm\">A</span> to <span class=\"mm\">E</span>?",
+   "options": [],
+   "answer": 12,
+   "answer_display": "12",
+   "solution": {
+    "concept": "Longest paths in a DAG obey the same topological recurrence with <span class=\"mm\">max</span> in place of <span class=\"mm\">min</span>: <span class=\"mm\">L[v] = max over edges u→v of (L[u] + w(u,v))</span>.",
+    "steps": [
+     "Topological order <span class=\"mm\">A, B, C, D, E</span>.",
+     "<span class=\"mm\">L[A] = 0, L[B] = 3, L[C] = 2</span>.",
+     "<span class=\"mm\">L[D] = max(3 + 4, 2 + 1) = 7</span>.",
+     "<span class=\"mm\">L[E] = max(7 + 5, 3 + 1, 2 + 8) = max(12, 4, 10) = 12</span>."
+    ],
+    "final": "12, along <span class=\"mm\">A→B→D→E = 3 + 4 + 5</span>.",
+    "trap": "10, from <span class=\"mm\">A→C→E = 2 + 8</span>. The heavier single edge does not compensate for the longer route through <span class=\"mm\">B</span> and <span class=\"mm\">D</span>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Longest paths in a DAG obey the same topological recurrence with <span class=\"mm\">max</span> in place of <span class=\"mm\">min</span>: <span class=\"mm\">L[v] = max over edges u→v of (L[u] + w(u,v))</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Topological order <span class=\"mm\">A, B, C, D, E</span>.</li><li><span class=\"mm\">L[A] = 0, L[B] = 3, L[C] = 2</span>.</li><li><span class=\"mm\">L[D] = max(3 + 4, 2 + 1) = 7</span>.</li><li><span class=\"mm\">L[E] = max(7 + 5, 3 + 1, 2 + 8) = max(12, 4, 10) = 12</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12, along <span class=\"mm\">A→B→D→E = 3 + 4 + 5</span>.</span></p><p class=\"row\"><b>Common misconception.</b> 10, from <span class=\"mm\">A→C→E = 2 + 8</span>. The heavier single edge does not compensate for the longer route through <span class=\"mm\">B</span> and <span class=\"mm\">D</span>.</p>"
+  },
+  {
+   "id": "ALG-U6-Q20",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "The transitive closure of a directed graph with <span class=\"mm\">V</span> vertices and <span class=\"mm\">E</span> edges is computed by running a breadth-first search from every vertex, with the graph stored as adjacency lists. The running time is:",
+   "options": [
+    "<span class=\"mm\">Θ(V + E)</span>",
+    "<span class=\"mm\">Θ(V E)</span>",
+    "<span class=\"mm\">Θ(V(V + E))</span>",
+    "<span class=\"mm\">Θ(V³)</span>"
+   ],
+   "answer": 2,
+   "answer_display": "Option (C)",
+   "solution": {
+    "concept": "One search from a fixed source visits each vertex and each edge at most once, costing <span class=\"mm\">Θ(V + E)</span>. Repeating it for every source multiplies that by <span class=\"mm\">V</span>.",
+    "steps": [
+     "A single breadth-first search is <span class=\"mm\">Θ(V + E)</span>.",
+     "There are <span class=\"mm\">V</span> possible sources.",
+     "Total <span class=\"mm\">Θ(V (V + E))</span>, which is <span class=\"mm\">Θ(V²)</span> on a sparse graph and <span class=\"mm\">Θ(V³)</span> only when the graph is dense.",
+     "Floyd–Warshall instead pays <span class=\"mm\">Θ(V³)</span> regardless of <span class=\"mm\">E</span>."
+    ],
+    "final": "Option (C) — <span class=\"mm\">Θ(V(V + E))</span>.",
+    "trap": "Reporting <span class=\"mm\">Θ(V³)</span> out of habit. On a sparse graph the <span class=\"mm\">V</span> searches are strictly better than Floyd–Warshall; the two agree only for dense graphs."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> One search from a fixed source visits each vertex and each edge at most once, costing <span class=\"mm\">Θ(V + E)</span>. Repeating it for every source multiplies that by <span class=\"mm\">V</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A single breadth-first search is <span class=\"mm\">Θ(V + E)</span>.</li><li>There are <span class=\"mm\">V</span> possible sources.</li><li>Total <span class=\"mm\">Θ(V (V + E))</span>, which is <span class=\"mm\">Θ(V²)</span> on a sparse graph and <span class=\"mm\">Θ(V³)</span> only when the graph is dense.</li><li>Floyd–Warshall instead pays <span class=\"mm\">Θ(V³)</span> regardless of <span class=\"mm\">E</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <span class=\"mm\">Θ(V(V + E))</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Reporting <span class=\"mm\">Θ(V³)</span> out of habit. On a sparse graph the <span class=\"mm\">V</span> searches are strictly better than Floyd–Warshall; the two agree only for dense graphs.</p>"
+  },
+  {
+   "id": "ALG-U6-Q21",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Floyd–Warshall is extended with a matrix <code class=\"mm\">next[i][j]</code> that stores the vertex that follows <span class=\"mm\">i</span> on a shortest path from <span class=\"mm\">i</span> to <span class=\"mm\">j</span>. Given <span class=\"mm\">i</span> and <span class=\"mm\">j</span>, the path is recovered by:",
+   "options": [
+    "following <code class=\"mm\">next[i][j]</code>, then <code class=\"mm\">next[next[i][j]][j]</code>, and so on, until <span class=\"mm\">j</span> is reached",
+    "reading the iteration <span class=\"mm\">k</span> at which <code class=\"mm\">d[i][j]</code> was last updated and printing that <span class=\"mm\">k</span>",
+    "scanning row <span class=\"mm\">i</span> of the distance matrix for its smallest entry and repeating",
+    "reading the path off the diagonal, because the diagonal stores the predecessor of every vertex"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "A shortest path is a sequence of hops, and one stored successor per ordered pair is enough to walk it: each step consumes one hop, so the walk costs the number of edges on the path.",
+    "steps": [
+     "Initialise <code class=\"mm\">next[i][j] = j</code> for every edge <span class=\"mm\">i→j</span> that exists.",
+     "When the update <span class=\"mm\">d[i][j] > d[i][k] + d[k][j]</span> fires, set <code class=\"mm\">next[i][j] = next[i][k]</code>.",
+     "To print the path, start at <span class=\"mm\">i</span> and repeatedly move to <code class=\"mm\">next[cur][j]</code> until <span class=\"mm\">j</span> is reached.",
+     "The stored matrix is <span class=\"mm\">Θ(V²)</span>, the same order as the distance matrix itself."
+    ],
+    "final": "Option (A).",
+    "trap": "Storing only <span class=\"mm\">k</span> per update. The intermediate vertex of the last improvement does not describe the whole path; the successor pointer does."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A shortest path is a sequence of hops, and one stored successor per ordered pair is enough to walk it: each step consumes one hop, so the walk costs the number of edges on the path.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Initialise <code class=\"mm\">next[i][j] = j</code> for every edge <span class=\"mm\">i→j</span> that exists.</li><li>When the update <span class=\"mm\">d[i][j] > d[i][k] + d[k][j]</span> fires, set <code class=\"mm\">next[i][j] = next[i][k]</code>.</li><li>To print the path, start at <span class=\"mm\">i</span> and repeatedly move to <code class=\"mm\">next[cur][j]</code> until <span class=\"mm\">j</span> is reached.</li><li>The stored matrix is <span class=\"mm\">Θ(V²)</span>, the same order as the distance matrix itself.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Storing only <span class=\"mm\">k</span> per update. The intermediate vertex of the last improvement does not describe the whole path; the successor pointer does.</p>"
+  },
+  {
+   "id": "ALG-U6-Q22",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "In the Floyd–Warshall recurrence <span class=\"mm\">d[i][j] = min(d[i][j], d[i][k] + d[k][j])</span> the operator <span class=\"mm\">min</span> is replaced by <span class=\"mm\">max</span>. The resulting entry equals:",
+   "options": [
+    "the weight of a longest simple path from <span class=\"mm\">i</span> to <span class=\"mm\">j</span>",
+    "the weight of a maximum-weight walk from <span class=\"mm\">i</span> to <span class=\"mm\">j</span>, which is not the longest simple path and which has no finite value when a positive-weight cycle lies on such a walk",
+    "the weight of a longest simple path in every graph, because <span class=\"mm\">max</span> distributes over concatenation",
+    "the same value as the shortest path whenever all weights are negative"
+   ],
+   "answer": 1,
+   "answer_display": "Option (B)",
+   "solution": {
+    "concept": "The <span class=\"mm\">(min, +)</span> pair works because shortest paths decompose at a vertex without repeating it. The pair <span class=\"mm\">(max, +)</span> composes walks, and a walk may revisit vertices, so the result is not a simple path.",
+    "steps": [
+     "A <span class=\"mm\">max</span> recurrence combines the best walk into <span class=\"mm\">k</span> with the best walk out of <span class=\"mm\">k</span>, and nothing forbids those two walks from sharing vertices.",
+     "The concatenation is therefore a walk, not necessarily a simple path, and it may be heavier than any simple path.",
+     "If a positive-weight cycle is reachable on such a walk, no maximum exists at all.",
+     "Detecting this needs a positive-cycle check, exactly as the <span class=\"mm\">min</span> version needs a negative-cycle check."
+    ],
+    "final": "Option (B).",
+    "trap": "Assuming the two recurrences are symmetric. Longest simple path is NP-hard in general, so no <span class=\"mm\">Θ(V³)</span> recurrence can compute it; the <span class=\"mm\">max</span> version solves a different, easier problem."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The <span class=\"mm\">(min, +)</span> pair works because shortest paths decompose at a vertex without repeating it. The pair <span class=\"mm\">(max, +)</span> composes walks, and a walk may revisit vertices, so the result is not a simple path.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A <span class=\"mm\">max</span> recurrence combines the best walk into <span class=\"mm\">k</span> with the best walk out of <span class=\"mm\">k</span>, and nothing forbids those two walks from sharing vertices.</li><li>The concatenation is therefore a walk, not necessarily a simple path, and it may be heavier than any simple path.</li><li>If a positive-weight cycle is reachable on such a walk, no maximum exists at all.</li><li>Detecting this needs a positive-cycle check, exactly as the <span class=\"mm\">min</span> version needs a negative-cycle check.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming the two recurrences are symmetric. Longest simple path is NP-hard in general, so no <span class=\"mm\">Θ(V³)</span> recurrence can compute it; the <span class=\"mm\">max</span> version solves a different, easier problem.</p>"
+  },
+  {
+   "id": "ALG-U6-Q23",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Let <span class=\"mm\">d</span> be the matrix produced by Floyd–Warshall from the usual initialisation, and let <span class=\"mm\">T</span> be a transitive-closure matrix. Which one of the following is TRUE?",
+   "options": [
+    "<span class=\"mm\">T[i][j] = 1</span> exactly when <span class=\"mm\">d[i][j] &lt; ∞</span>, and this already gives the reflexive closure, because the diagonal is initialised to 0",
+    "<span class=\"mm\">T[i][j] = 1</span> exactly when <span class=\"mm\">d[i][j] &lt; ∞</span> gives the irreflexive closure, so the diagonal must then be cleared",
+    "<span class=\"mm\">T[i][j] = 1</span> exactly when <span class=\"mm\">d[i][j] ≤ 0</span>, because only non-positive distances correspond to a path",
+    "<span class=\"mm\">T</span> cannot be derived from <span class=\"mm\">d</span>, because <span class=\"mm\">d</span> stores weights and <span class=\"mm\">T</span> stores booleans"
+   ],
+   "answer": 0,
+   "answer_display": "Option (A)",
+   "solution": {
+    "concept": "Floyd–Warshall initialises <span class=\"mm\">d[i][i] = 0</span> for every vertex, so a vertex always reaches itself with a path of length 0 and the diagonal stays finite. The test \"finite distance\" therefore returns the reflexive closure directly.",
+    "steps": [
+     "Initialise <span class=\"mm\">d[i][i] = 0</span>, <span class=\"mm\">d[i][j] = w(i,j)</span> when the edge exists, and <span class=\"mm\">∞</span> otherwise.",
+     "After the run <span class=\"mm\">d[i][j] &lt; ∞</span> exactly when a path from <span class=\"mm\">i</span> to <span class=\"mm\">j</span> exists, including the empty path <span class=\"mm\">i = j</span>.",
+     "So <span class=\"mm\">T[i][j] = 1 ⇔ d[i][j] &lt; ∞</span> is the reflexive transitive closure; no diagonal fix-up is needed.",
+     "For the strict closure, set <span class=\"mm\">T[i][i] = 0</span> and then restore it only for vertices that lie on a cycle, which is detected by <span class=\"mm\">d[i][i] &lt; 0</span> or by a separate reachability test."
+    ],
+    "final": "Option (A).",
+    "trap": "Clearing the diagonal \"because a vertex cannot reach itself\". In the reflexive closure it can, by the path of length 0, and Floyd–Warshall has already encoded that as <span class=\"mm\">d[i][i] = 0</span>."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Floyd–Warshall initialises <span class=\"mm\">d[i][i] = 0</span> for every vertex, so a vertex always reaches itself with a path of length 0 and the diagonal stays finite. The test \"finite distance\" therefore returns the reflexive closure directly.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Initialise <span class=\"mm\">d[i][i] = 0</span>, <span class=\"mm\">d[i][j] = w(i,j)</span> when the edge exists, and <span class=\"mm\">∞</span> otherwise.</li><li>After the run <span class=\"mm\">d[i][j] &lt; ∞</span> exactly when a path from <span class=\"mm\">i</span> to <span class=\"mm\">j</span> exists, including the empty path <span class=\"mm\">i = j</span>.</li><li>So <span class=\"mm\">T[i][j] = 1 ⇔ d[i][j] &lt; ∞</span> is the reflexive transitive closure; no diagonal fix-up is needed.</li><li>For the strict closure, set <span class=\"mm\">T[i][i] = 0</span> and then restore it only for vertices that lie on a cycle, which is detected by <span class=\"mm\">d[i][i] &lt; 0</span> or by a separate reachability test.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Clearing the diagonal \"because a vertex cannot reach itself\". In the reflexive closure it can, by the path of length 0, and Floyd–Warshall has already encoded that as <span class=\"mm\">d[i][i] = 0</span>.</p>"
+  },
+  {
+   "id": "ALG-U6-Q24",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "Which of the following statements about the transitive closure are TRUE? (Select all that apply.)",
+   "options": [
+    "Running a breadth-first search from every vertex computes it in <span class=\"mm\">Θ(V(V + E))</span> time on adjacency lists.",
+    "The transitive closure of an undirected graph is a symmetric matrix.",
+    "Floyd–Warshall computes it in <span class=\"mm\">Θ(V³)</span> time whatever the number of edges.",
+    "In the transitive closure of a DAG on <span class=\"mm\">V</span> vertices every row contains at most <span class=\"mm\">V − 1</span> ones."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "answer_display": "Options (A), (B) and (C)",
+   "solution": {
+    "concept": "Reachability is the <span class=\"mm\">(OR, AND)</span> version of shortest paths: the same three-loop structure works, and the cost of the two methods depends on density.",
+    "steps": [
+     "(A) is true: <span class=\"mm\">V</span> searches of cost <span class=\"mm\">Θ(V + E)</span> each.",
+     "(B) is true: an undirected edge can be traversed both ways, so reachability is a symmetric relation.",
+     "(C) is true: the triple loop performs <span class=\"mm\">V³</span> constant-time steps independent of <span class=\"mm\">E</span>.",
+     "(D) is false: in the DAG <span class=\"mm\">1→2, 1→3, …, 1→V</span> the first row is all ones, that is <span class=\"mm\">V</span> ones, because the vertex reaches every other vertex and itself."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "trap": "(D) is the trap: the reflexive entry at <span class=\"mm\">(i,i)</span> counts too, so a row can be entirely ones."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Reachability is the <span class=\"mm\">(OR, AND)</span> version of shortest paths: the same three-loop structure works, and the cost of the two methods depends on density.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>(A) is true: <span class=\"mm\">V</span> searches of cost <span class=\"mm\">Θ(V + E)</span> each.</li><li>(B) is true: an undirected edge can be traversed both ways, so reachability is a symmetric relation.</li><li>(C) is true: the triple loop performs <span class=\"mm\">V³</span> constant-time steps independent of <span class=\"mm\">E</span>.</li><li>(D) is false: in the DAG <span class=\"mm\">1→2, 1→3, …, 1→V</span> the first row is all ones, that is <span class=\"mm\">V</span> ones, because the vertex reaches every other vertex and itself.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> (D) is the trap: the reflexive entry at <span class=\"mm\">(i,i)</span> counts too, so a row can be entirely ones.</p>"
+  },
+  {
+   "id": "ALG-U6-Q25",
+   "subject": "algorithms",
+   "subject_name": "Algorithms",
+   "unit": 6,
+   "unit_number": 6,
+   "unit_slug": "shortest-paths",
+   "unit_name": "Graph Algorithms: Shortest Paths",
+   "topic": "Graph Algorithms: Shortest Paths",
+   "sub": "transitive-closure-warshall",
+   "subtopic": "transitive-closure-warshall",
+   "subtopic_label": "Transitive closure & Floyd–Warshall",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original GATE-style",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-11-01",
+   "set": "Set 1 of 2",
+   "question": "A directed graph on the vertices 1–5 has the edges <span class=\"mm\">1→2, 2→3, 3→1, 3→4, 4→5, 5→4</span>, every edge having weight 1. Floyd–Warshall is run to completion. How many of the 25 entries of the final distance matrix are finite, that is, not <span class=\"mm\">∞</span>?",
+   "options": [],
+   "answer": 19,
+   "answer_display": "19",
+   "solution": {
+    "concept": "A finite entry means reachability, so the question is a transitive-closure count. Vertices that lie on a common cycle reach each other, and the diagonal is finite for every vertex because <span class=\"mm\">d[i][i] = 0</span>.",
+    "steps": [
+     "The cycles <span class=\"mm\">1→2→3→1</span> and <span class=\"mm\">4→5→4</span> put the vertices into two groups: <span class=\"mm\">{1,2,3}</span> and <span class=\"mm\">{4,5}</span>.",
+     "Inside <span class=\"mm\">{1,2,3}</span> every vertex reaches both others, and <span class=\"mm\">3</span> also reaches <span class=\"mm\">4</span> and <span class=\"mm\">5</span>.",
+     "So 1, 2 and 3 each reach 4 vertices other than themselves: 12 ordered pairs with distinct ends.",
+     "Inside <span class=\"mm\">{4,5}</span>: 4 reaches 5 and 5 reaches 4, which adds 2 pairs. Nothing reaches 1, 2 or 3 from <span class=\"mm\">{4,5}</span>.",
+     "Distinct-end pairs <span class=\"mm\">= 12 + 2 = 14</span>; add the 5 diagonal entries: <span class=\"mm\">14 + 5 = 19</span>."
+    ],
+    "final": "19",
+    "trap": "Forgetting the diagonal, which gives 14, or assuming the whole graph is one strongly connected component, which would give all 25."
+   },
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A finite entry means reachability, so the question is a transitive-closure count. Vertices that lie on a common cycle reach each other, and the diagonal is finite for every vertex because <span class=\"mm\">d[i][i] = 0</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The cycles <span class=\"mm\">1→2→3→1</span> and <span class=\"mm\">4→5→4</span> put the vertices into two groups: <span class=\"mm\">{1,2,3}</span> and <span class=\"mm\">{4,5}</span>.</li><li>Inside <span class=\"mm\">{1,2,3}</span> every vertex reaches both others, and <span class=\"mm\">3</span> also reaches <span class=\"mm\">4</span> and <span class=\"mm\">5</span>.</li><li>So 1, 2 and 3 each reach 4 vertices other than themselves: 12 ordered pairs with distinct ends.</li><li>Inside <span class=\"mm\">{4,5}</span>: 4 reaches 5 and 5 reaches 4, which adds 2 pairs. Nothing reaches 1, 2 or 3 from <span class=\"mm\">{4,5}</span>.</li><li>Distinct-end pairs <span class=\"mm\">= 12 + 2 = 14</span>; add the 5 diagonal entries: <span class=\"mm\">14 + 5 = 19</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 19</span></p><p class=\"row\"><b>Common misconception.</b> Forgetting the diagonal, which gives 14, or assuming the whole graph is one strongly connected component, which would give all 25.</p>"
   }
  ]
 }
