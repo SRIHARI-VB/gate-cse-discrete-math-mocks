@@ -7,34 +7,89 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 5 — Instruction Pipelining, Set 2 of 2**, 2026-10-31 →
-  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
+- **Computer Networks · Unit 3 — Network Layer: IP Addressing & Subnetting, Set 1 of 2 (second pass)**, 2026-11-01 →
+  [`computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html`](computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: stages & throughput (8) · structural hazards (5) · data hazards & forwarding (6) · control hazards &
-  branch penalty (6)
-- Rotation: MODE A. An unseeded `secrets.randbelow(11)` draw over the eleven subjects in syllabus order returned
-  **Computer Architecture** (index 3). Its most recent run was `{2026-10-31, run 7, unit 5, pipelining, Set 1 of 2}`;
-  Unit 5 held 25 questions, below `UNIT_QUESTION_CAP = 50`, and had been current for 0 days, so step B3 held and the
-  unit was generated again as **Set 2 of 2**. Unit 5 now holds 50 questions, exactly the cap, so the next Computer
-  Architecture run advances: `(index_of(pipelining) = 4 + 1) mod 6 = 5` → **Unit 6, I/O Interface & Storage**. No
-  override, no partial set.
-- The Set 1 paper of the same date was moved to
-  [`archive/gate_co_mock_5_2026-10-31_run1.html`](computer-architecture/pipelining/archive/gate_co_mock_5_2026-10-31_run1.html)
+- Subtopics: IPv4 header & fragmentation (5) · classful vs classless & CIDR (7) · subnet masking & supernetting (6) ·
+  IPv6 basics & differences (7)
+- Rotation: MODE A. An unseeded `random.SystemRandom().choice` draw over the eleven subjects in syllabus order returned
+  **Computer Networks** (index 10). Its most recent run was `{2026-10-31, run 14, unit 2, data-link-mac, Set 1 of 2
+  (second pass)}`. Unit 2 held **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step
+  B4 advanced one unit: `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing &
+  Subnetting**. Unit 3 already held 50 questions from 2026-10-28, so this paper is the first set of that unit's second
+  pass: 25 new questions, none of them repeating the 50 already banked. Unit 3 now holds **75** questions, above the
+  cap, so the next Computer Networks run advances `(2 + 1) mod 6 = 3` → **Unit 4, Network Layer: Routing & Protocols**.
+  No override, no partial set.
+- The 2026-10-28 paper that was current in this unit was moved to
+  [`archive/gate_cn_mock_3_2026-10-28_run2.html`](computer-networks/ipv4-subnetting/archive/gate_cn_mock_3_2026-10-28_run2.html)
   with its content frozen, so the unit folder holds exactly one current paper.
-- Previous test: **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
-  [`archive/gate_co_mock_5_2026-10-31_run1.html`](computer-architecture/pipelining/archive/gate_co_mock_5_2026-10-31_run1.html)
+- Previous test: **Computer Networks · Unit 2 — Data Link Protocols & MAC, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html`](computer-networks/data-link-mac/gate_cn_mock_2_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 140 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
-| Current papers / archived sets | 60 current · 80 archived |
+| Papers published (current + archived) | 141 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 15 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 8 Computer Architecture) |
+| Current papers / archived sets | 60 current · 81 archived |
 | Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 11 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3500 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
+| Questions in the subject banks | 3525 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 375 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 200 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 80 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+| Archived sets (earlier runs) | 81 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 9 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 4 Computer Architecture) |
+
+### 2026-11-01 — Computer Networks Unit 3, Set 1 of 2 (second pass)
+
+- New paper at `computer-networks/ipv4-subnetting/gate_cn_mock_3_2026-11-01.html`. The unit folder held the
+  2026-10-28 paper, which was moved to `archive/gate_cn_mock_3_2026-10-28_run2.html` with its content frozen (same
+  questions, options, answers, solutions and duration); the folder now holds exactly one current paper and the
+  repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** An unseeded `random.SystemRandom().choice` draw over the eleven GATE CSE subjects
+  in syllabus order returned **Computer Networks** (index 10). `runs[]` sorted by `(date, run)` gave the most recent
+  paper as `{2026-10-31, run 14, unit 2, data-link-mac, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions,
+  above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced one unit:
+  `(index_of(data-link-mac) = 1 + 1) mod 6 = 2` → **Unit 3, Network Layer: IP Addressing & Subnetting**. Unit 3
+  already held **50** questions from 2026-10-28, so this is the first set of its second pass; it now holds **75**,
+  above the cap, and the next Computer Networks run advances `(2 + 1) mod 6 = 3` → Unit 4. No override was used and
+  no partial set was generated.
+- Coverage: all four Unit 3 subtopics — IPv4 header & fragmentation (5); classful vs classless & CIDR (7); subnet
+  masking & supernetting (6); IPv6 basics & differences (7). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy /
+  10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice
+  scheme, not the official GATE scheme.
+- All 25 ids are new (`CN-U3-Q51` … `CN-U3-Q75`) and none collides with the 350 items banked for Computer Networks or
+  with the 50 Unit 3 items already banked. The subject bank now holds **375** questions and the paper's Question Bank
+  tab shows the **350** that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="computer-networks"`, `data-unit="ipv4-subnetting"`, `data-unit-number="3"`,
+  `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the 350 bank cards all carry
+  the full set, including the historical cards, which is the attribute the earlier papers omitted. Difficulty is
+  lowercase in the attributes, in the bank and in the portal data, and the UI capitalises it with CSS.
+- What the set asks. Header and fragmentation: TTL 1 discarded with ICMP Time Exceeded; a 3000-byte datagram across an
+  MTU of 620 giving **5** fragments; the 16-bit fields (Identification, Total Length, checksum) against the 13-bit
+  fragment offset; a 3500-byte datagram across an MTU of 800, whose second fragment has offset **97**; and a 40-byte
+  header with 2000 bytes of payload across an MTU of 1000, giving **3** fragments whose last Total Length is **120**.
+  Addressing: the Class D range 224–239; 172.31.255.1 as private space; the broadcast of 100.64.0.0/10 as
+  100.127.255.255; 192.168.203.17/21 resolving to 192.168.200.0; classful rules including the 127/8 loopback block;
+  four aggregation pairs, of which only (A) and (C) are exact; and **262144** /26 subnets in a /8. Masking: a /26 as
+  the longest prefix for 60 hosts; the first usable host of 172.20.8.0/21; the broadcast of 10.5.12.0/22 as
+  10.5.15.255; the last usable host of 10.20.30.200/26 as .254; supernetting statements; and a /24+/24 summary of
+  prefix **23**. IPv6: multicast as the group-delivery type; Hop Limit; the last address of a /64 subnet; fc00::/7 as
+  unique local space; mapped, anycast and multiple-address statements; **64** bits of interface identifier; and
+  **256** /64 subnets inside a /56.
+- Every numeric answer was recomputed by script, not by hand: 5 from ceil(2980/600); 97 from 776/8; 3 fragments and
+  120 bytes from 960+960+80 and 40+80; 100.127.255.255 from 64 + 63; 262144 from 2^18; 23 from the seven bits that
+  172.16.8.0/24 and 172.16.9.0/24 share; 256 from 2^8. The block boundaries were checked in binary.
+- The correct option is spread 3 A / 4 B / 4 C / 4 D across the 15 MCQ; the five MSQ answer sets are (A), (C), (D);
+  (A), (C), (D); (A), (C); (A), (C), (D); and (A), (B), (C); the five NAT answers are 97, 262144, 23, 64 and 256.
+- Source tags: 15 `STANDARD_TEXTBOOK`, 10 `ORIGINAL_SYNTHESIS`, 0 `GATE_PYQ_VARIATION`. `verified_pyqs` stays empty
+  for Computer Networks: no IPv4 or IPv6 previous-year question on this unit has been verified against an official
+  paper and answer key, so nothing on this paper is called an official GATE question and the bank tab says so in one
+  sentence.
+- Shell parity: the paper was produced by splicing the new payload, question cards, Question Bank tab and About text
+  into the shipped shell of the paper it supersedes, so its `<style>` block, its palette, its answer-key view, its
+  footer and its script are byte-identical to `archive/gate_cn_mock_3_2026-10-28_run2.html`; only the five allowed
+  metadata strings (title, header sub-line, candidate id, Question Bank count, set label) and the content regions
+  differ. `index.html` was regenerated from its own `#data` block (one card replaced by one card), and
+  `data/questions-computer-networks.js` grew from 350 to 375 records.
 
 ### 2026-10-31 — Computer Architecture Unit 5, Set 2 of 2
 
@@ -2585,6 +2640,14 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-11-01, Computer Networks → Unit 3 (Network Layer: IP Addressing & Subnetting), Set 1 of 2 (second pass).**
+  MODE A: an unseeded `random.SystemRandom().choice` over the eleven-subject list gave **Computer Networks**. Most
+  recent run in `runs[]` was `{2026-10-31, run 14, unit 2, data-link-mac, Set 1 of 2 (second pass)}`. Unit 2 held
+  **75** questions, above `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(1 + 1) mod 6 = 2` → Unit 3. Unit 3 already held 50 from 2026-10-28, so this is the first set of its second pass:
+  it goes from 50 to 75 questions. The 350 solved items shown in the Question Bank tab are everything banked except
+  this paper's own 25. No override, no partial set.
 
 - **2026-10-31, Computer Networks → Unit 1 (Layering, Physical & Framing), Set 1 of 2 (second pass).**
   MODE A: an unseeded `random.SystemRandom()` draw over the eleven-subject list gave **Computer Networks**. Most recent
@@ -6794,8 +6857,8 @@ Algorithms:
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
 | 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 75 | yes |
-| 2 | Data Link Protocols & MAC | `data-link-mac` | 50 | yes |
-| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 50 | yes |
+| 2 | Data Link Protocols & MAC | `data-link-mac` | 75 | yes |
+| 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 75 | yes |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 50 | yes |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 50 | yes |
 | 6 | Application Layer & Network Security | `application-layer-security` | 50 | yes |
@@ -6971,3 +7034,9 @@ review interface.
   outside `:root`, no explicit `:focus-visible` selector, palette fills on the `--green`/`--red`/`--violet` tokens
   rather than their `-d` variants), for the same reason: re-typing any of them in one paper would break shell parity.
   Its `<style>` block and its script are byte-identical to the Set 1 paper now in `archive/`.
+
+- The 2026-11-01 Computer Networks Unit 3 Set 1 paper inherits the open shell items above unchanged (the unclosed
+  `#view-about`, literal hex outside `:root`, no explicit `:focus-visible` selector, palette fills on the
+  `--green`/`--red`/`--violet` tokens rather than their `-d` variants), for the same reason: re-typing any of them in
+  one paper would break shell parity. It does carry the full `data-*` attribute set on its historical Question Bank
+  cards, which earlier papers omitted, so the archive inside the paper is now portable across subjects.
