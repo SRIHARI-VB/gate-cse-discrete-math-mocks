@@ -7,34 +7,89 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (third pass)**, 2026-10-31 →
-  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html)
+- **Computer Networks · Unit 1 — Layering, Physical & Framing, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html`](computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: deterministic PDA (7) · nondeterministic PDA (6) · acceptance by empty store vs final state (6) ·
-  equivalence with CFG (6)
-- Rotation: MODE A. All eleven subjects already carried a 2026-10-31 paper, so the draw ran over the full set of eleven
-  again and returned Theory of Computation. Its most recent run was
-  `{2026-10-31, run 14, unit 2, cfl-grammars, Set 1 of 2 (third pass)}`. Unit 2 held **100** questions, above
+- Subtopics: OSI & TCP/IP models (6) · delays & bandwidth-delay product (7) · framing: bit & byte stuffing (6) ·
+  CRC, checksum & Hamming (6)
+- Rotation: MODE A. One subject was drawn uniformly at random from the eleven GATE CSE subjects with an unseeded
+  `random.SystemRandom()` draw; it returned Computer Networks. Its most recent run was
+  `{2026-10-31, run 12, unit 6, application-layer-security, Set 2 of 2}`. Unit 6 held **50** questions, exactly
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
-  `(index_of(cfl-grammars) = 1 + 1) mod 4 = 2` → **Unit 3, Pushdown Automata**, which held 75 questions. Every unit of
-  the subject is at or above the cap (100, 100, 75, 75), so step B5 applies: the third pass continues. Unit 3 receives
-  the first set of that pass, its fourth set overall, and goes from 75 to 100 questions. No override, no partial set.
-- The previous current paper of the unit was moved to `archive/gate_toc_mock_3_2026-10-28_run3.html` with its content
+  `(index_of(application-layer-security) = 5 + 1) mod 6 = 0` → **Unit 1, Layering, Physical & Framing**. Every unit of
+  the subject then held 50 questions (50, 50, 50, 50, 50, 50), so step B5 applies: **the second pass for Computer
+  Networks begins here**. Unit 1 receives the first set of that pass, its third set overall, and goes from 50 to 75
+  questions. No override, no partial set.
+- The previous current paper of the unit was moved to `archive/gate_cn_mock_1_2026-10-27_run2.html` with its content
   frozen, so the unit folder holds exactly one current paper and the repository root holds no copy.
-- Previous test: **Computer Networks · Unit 6 — Application Layer & Network Security, Set 2 of 2**, 2026-10-31 →
-  [`computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html`](computer-networks/application-layer-security/gate_cn_mock_6_2026-10-31.html)
+- Previous test: **Theory of Computation · Unit 3 — Pushdown Automata, Set 1 of 2 (third pass)**, 2026-10-31 →
+  [`theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html`](theory-of-computation/pushdown-automata/gate_toc_mock_3_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 134 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 12 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 75 archived |
-| Test cards on the portal | 79 (one card per published unit-date; superseded sets are links on that card) |
+| Papers published (current + archived) | 135 (21 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 13 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 76 archived |
+| Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. The two legacy Computer Networks Unit 1 archive cards were folded into its current card this run) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3350 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 300 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3375 (525 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 325 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 75 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 6 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 76 (11 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 7 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Computer Networks Unit 1, Set 1 of 2 (second pass)
+
+- New paper at `computer-networks/network-fundamentals-framing/gate_cn_mock_1_2026-10-31.html`. The unit folder held
+  the 2026-10-27 paper, which was moved to `archive/gate_cn_mock_1_2026-10-27_run2.html` with its content frozen (same
+  questions, options, answers, solutions and duration); the folder now holds exactly one current paper and the root
+  still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** An unseeded `random.SystemRandom()` draw over the eleven GATE CSE subjects
+  returned **Computer Networks**. `runs[]` sorted by `(date, run)` gave the most recent paper as
+  `{2026-10-31, run 12, unit 6, application-layer-security, Set 2 of 2}`. Unit 6 held **50** questions, exactly
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced exactly one unit:
+  `(index_of(application-layer-security) = 5 + 1) mod 6 = 0` → **Unit 1, network-fundamentals-framing**. At that point
+  all six units of the subject held 50 questions, so step B5 applies and **a second pass for Computer Networks starts
+  with Unit 1** — recorded here as Section 1 requires. Unit 1 goes from 50 to 75 questions; no override was used and
+  no partial set was made.
+- Coverage: all four Unit 1 subtopics — OSI & TCP/IP models (6); transmission delay, queueing delay and the
+  bandwidth-delay product (7); framing, bit stuffing and byte stuffing (6); CRC, checksum and Hamming codes (6).
+  Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in
+  60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not the official GATE scheme.
+- All 25 ids are new (`CN-U1-Q51` … `CN-U1-Q75`); no id and no stem collides with the 50 banked Unit 1 items of Sets 1
+  and 2. The subject bank now holds **325** questions and the paper's Question Bank tab shows the 300 that are not on
+  it (Units 1–6 at 50 each), so the active set does not reappear there.
+- Every question carries `data-subject="computer-networks"`, `data-unit="network-fundamentals-framing"`,
+  `data-unit-number="1"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  300 bank cards all carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- What the set asks. Layering: the internet layer as the owner of logical addressing and routing; a repeater as a
+  layer-1 device because it reads no header; the MAC pair naming one hop while the IP pair names the whole path;
+  decapsulation as the inverse of encapsulation; frame efficiency as payload over payload plus every header and
+  trailer (94%); and a middlebox that rewrites a destination IP invalidating both the header checksum and the
+  transport checksum, because the transport pseudo-header carries the address. Delay: `L/R` against `d/s`; bits in
+  flight on a satellite link (2 500 000); store-and-forward over links of unequal rate (8 ms + 4 ms); window-limited
+  throughput at 400 Mbps against a 1 Mbit bandwidth-delay product; a queue growing at 1500 − 1250 packets per second
+  for 8 s (2000 packets); and a propagation-to-transmission ratio of 83.33. Framing: `0x7E` stuffed as `0x7D 0x5E`;
+  the five-1s rule; 3 inserted zeros in a given bit stream; de-stuffing `41 7D 5E 42 7D 5D 43` back to `41 7E 42 7D 43`;
+  and ⌊n/5⌋ as the worst-case insertion count. Error detection: `d − 1` detection against ⌊(d−1)/2⌋ correction; the
+  one's-complement checksum with end-around carry (0xC000 + 0x6000 + 0x2000 folds to 0x4001, checksum 0xBFFE =
+  49150); CRC bursts up to the generator degree; the `x + 1` factor and odd-weight errors; and a Hamming syndrome that
+  points at position 6 in a received word `0110001`.
+- No question is an official GATE PYQ and no PYQ was added this run: no layering, delay, framing or error-detection
+  previous-year question has been verified against an official paper and answer key for this unit, so `verified_pyqs`
+  stays empty for Computer Networks and the set carries no `GATE_PYQ_VARIATION` item.
+- Every numeric answer was recomputed by script, not by hand: 94% efficiency; 4 ms; 2 500 000 bits; 12 ms; 400 Mbps;
+  83.33; 2000 packets; 3 stuffed zeros; 0x7E from `0x5E XOR 0x20`; 0xBFFE = 49150 with the carry folded; and syndrome
+  6, cross-checked by flipping bit 6 to recover a codeword whose syndrome is 0.
+- Shell parity: the `<style>` block and the main `<script>` of this paper are byte-identical to the 2026-10-31
+  Computer Networks Unit 6 paper it was generated from, and the `:root` block matches `design-tokens.css` and
+  `index.html` byte for byte. The regeneration was validated by rebuilding that Unit 6 paper from `master_bank.json`
+  on the same generator and getting a byte-identical file, so the shell, the palette, the bank renderer and the
+  payload encoder are the same code that produced the previously shipped papers.
+- Portal: the Computer Networks Unit 1 card now points at this paper, is labelled `Set 1 of 2 (second pass)` and lists
+  `Set 2 (2026-10-27)` and `Set 1 (2026-10-26)` as earlier sets. The two legacy cards that pointed straight at those
+  archived runs were folded into it, which closes the deviation recorded under "Known deviation" for this unit; the
+  archive view counts the 25 new items, so the dashboard total is 325 for this subject.
 
 ### 2026-10-31 — Theory of Computation Unit 3, Set 1 of 2 (third pass)
 
@@ -2238,6 +2293,14 @@ touches files this run did not create:
   link is broken; the card simply launches an earlier set.
 
 ## Rotation log
+
+- **2026-10-31, Computer Networks → Unit 1 (Layering, Physical & Framing), Set 1 of 2 (second pass).**
+  MODE A: an unseeded `random.SystemRandom()` draw over the eleven-subject list gave **Computer Networks**. Most recent
+  run in `runs[]` was `{2026-10-31, run 12, unit 6, application-layer-security, Set 2 of 2}`. Unit 6 held **50**
+  questions, exactly `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(5 + 1) mod 6 = 0` → Unit 1. Every unit of the subject then held 50, so step B5 applies and the **second pass
+  starts** with Unit 1, which goes from 50 to 75 questions. The 300 solved items shown in the Question Bank tab are
+  everything banked except this paper's own 25. No override, no partial set.
 
 - **2026-10-31, Databases → Unit 4 (Transactions & Concurrency Control), Set 2 of 2.**
   MODE A: an unseeded `secrets.choice` over the eleven-subject list gave **Databases**. Most recent run in `runs[]`
@@ -6438,12 +6501,12 @@ Algorithms:
 
 | # | Unit | Slug | Questions in bank | Covered |
 | --- | --- | --- | --- | --- |
-| 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 50 | yes |
+| 1 | Layering, Physical & Framing | `network-fundamentals-framing` | 75 | yes |
 | 2 | Data Link Protocols & MAC | `data-link-mac` | 50 | yes |
 | 3 | Network Layer: IP Addressing & Subnetting | `ipv4-subnetting` | 50 | yes |
 | 4 | Network Layer: Routing & Protocols | `routing-protocols` | 50 | yes |
 | 5 | Transport Layer: TCP, UDP & Congestion | `transport-layer` | 50 | yes |
-| 6 | Application Layer & Network Security | `application-layer-security` | 0 | — |
+| 6 | Application Layer & Network Security | `application-layer-security` | 50 | yes |
 
 ### Theory of Computation
 
@@ -6489,6 +6552,14 @@ Algorithms:
   `--violet` tokens rather than their `-d` variants — because re-typing any of them in one paper would break shell
   parity. Its `<style>` block, its exam `<script>`, its palette and its footer are byte-identical to the Computer
   Networks Unit 5 paper of 2026-10-30.
+
+- **Computer Networks Unit 1 (2026-10-31).** This paper inherits the three open shell items above unchanged —
+  literal hex outside `:root`, no explicit `:focus-visible` selector, and palette fills on the `--green`/`--red`/
+  `--violet` tokens rather than their `-d` variants — because re-typing any of them in one paper would break shell
+  parity. Its `<style>` block and its exam `<script>` are byte-identical to the Computer Networks Unit 6 paper of
+  2026-10-31. This run also closed one recorded item: the Computer Networks `network-fundamentals-framing` portal card
+  now launches the current paper and carries its two superseded sets as earlier-set links, so no card for that unit
+  launches an archived run any more.
 
 ## Provenance rules used in every test
 
