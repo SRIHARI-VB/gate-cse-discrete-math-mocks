@@ -4,19 +4,19 @@
   "owner": "SRIHARI V B",
   "exam": "GATE CSE 2027",
   "created": "2026-10-26",
-  "last_updated": "2026-10-30",
+  "last_updated": "2026-10-31",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as practice.",
   "unit_question_cap": 50,
   "set_size": 25,
   "sets_per_unit": 2,
-  "total_questions": 325,
+  "total_questions": 350,
   "units_with_questions": [
    1,
    2,
    3,
    4
   ],
-  "total_runs": 13
+  "total_runs": 14
  },
  "runs": [
   {
@@ -700,6 +700,74 @@
    "mode": "MODE A (random subject draw, bank-driven unit rotation)",
    "selection": "MODE A. Eight subjects already carried a paper dated 2026-10-30 (discrete-mathematics, digital-logic, computer-architecture, programming-data-structures, compiler-design, operating-systems, databases, computer-networks), so the draw ran over the remaining three (engineering-mathematics, algorithms, theory-of-computation) and an unseeded secrets.choice gave Theory of Computation. runs[] sorted by (date, run) gave the most recent paper as run 12 (2026-10-29, Unit 4 turing-machines-decidability, Set 1 of 2 second pass). Unit 4 held 75 questions, above UNIT_QUESTION_CAP = 50, so step B4 advanced (index_of(turing-machines-decidability) = 3 + 1) mod 4 = 0 -> Unit 1, Regular Languages & Finite Automata. Every unit of the subject is at or above the cap (75, 75, 75, 75), so the modulo wraps and step B5 applies: Unit 1 receives its fourth set and goes from 75 to 100 questions. No override was used.",
    "note": "Third pass, Unit 1. Ids TOC-U1-Q76..TOC-U1-Q100 continue the unit numbering. All 25 items are new: no id and no normalised stem collides with the 300 banked Theory of Computation questions. No item is GATE_PYQ_VARIATION: no regular-language previous-year question has been verified against an official paper and key, so nothing on this paper is claimed as an official GATE question."
+  },
+  {
+   "run": 14,
+   "date": "2026-10-31",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "set": "Set 1 of 2 (third pass)",
+   "count": 25,
+   "file": "theory-of-computation/cfl-grammars/gate_toc_mock_2_2026-10-31.html",
+   "archived_previous": "theory-of-computation/cfl-grammars/archive/gate_toc_mock_2_2026-10-28_run3.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "cfg-derivation-trees",
+    "ambiguity-in-grammars",
+    "cnf-gnf-normal-forms",
+    "closure-properties-cfl"
+   ],
+   "subtopic_counts": {
+    "cfg-derivation-trees": 7,
+    "ambiguity-in-grammars": 6,
+    "cnf-gnf-normal-forms": 6,
+    "closure-properties-cfl": 6
+   },
+   "question_ids": [
+    "TOC-U2-Q76",
+    "TOC-U2-Q77",
+    "TOC-U2-Q78",
+    "TOC-U2-Q79",
+    "TOC-U2-Q80",
+    "TOC-U2-Q81",
+    "TOC-U2-Q82",
+    "TOC-U2-Q83",
+    "TOC-U2-Q84",
+    "TOC-U2-Q85",
+    "TOC-U2-Q86",
+    "TOC-U2-Q87",
+    "TOC-U2-Q88",
+    "TOC-U2-Q89",
+    "TOC-U2-Q90",
+    "TOC-U2-Q91",
+    "TOC-U2-Q92",
+    "TOC-U2-Q93",
+    "TOC-U2-Q94",
+    "TOC-U2-Q95",
+    "TOC-U2-Q96",
+    "TOC-U2-Q97",
+    "TOC-U2-Q98",
+    "TOC-U2-Q99",
+    "TOC-U2-Q100"
+   ],
+   "mode": "MODE A (random subject draw, bank-driven unit rotation)",
+   "selection": "MODE A. Eight subjects already carried a paper dated 2026-10-31 (algorithms, compiler-design, computer-architecture, computer-networks, databases, digital-logic, operating-systems, programming-data-structures), so the draw ran over the remaining three (discrete-mathematics, engineering-mathematics, theory-of-computation) and an unseeded secrets.choice gave Theory of Computation. runs[] sorted by (date, run) gave the most recent paper as run 13 (2026-10-30, Unit 1 regular-languages-fa, Set 1 of 2 third pass). Unit 1 held 100 questions, above UNIT_QUESTION_CAP = 50, so step B3 failed on the cap and step B4 advanced (index_of(regular-languages-fa) = 0 + 1) mod 4 = 1 -> Unit 2, Grammars & Context-Free Languages. Every unit of the subject is at or above the cap (100, 75, 75, 75), so the modulo has wrapped and step B5 applies: Unit 2 receives its fourth set and goes from 75 to 100 questions. No override was used and no partial set was generated.",
+   "note": "Third pass, Unit 2. Ids TOC-U2-Q76..TOC-U2-Q100 continue the unit numbering. All 25 items are new: no id and no normalised stem collides with the 75 banked Unit 2 questions. Coverage: derivation trees 7, ambiguity 6, CNF and GNF 6, closure properties 6. Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5 hard; marks 15x1 + 10x2 = 35 in 60 minutes, no negative marking. No item is GATE_PYQ_VARIATION: no context-free-grammar previous-year question has been verified against an official paper and answer key, so nothing on this paper is claimed as an official GATE question."
   }
  ],
  "verified_pyqs": [],
@@ -12876,6 +12944,939 @@
    "answer_display": "Options (A and B)",
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The pumping lemma is a one-way implication: regular <span class=\"mm\">⇒</span> pumpable. Its contrapositive, not pumpable <span class=\"mm\">⇒</span> not regular, is the direction that is actually usable, and it requires defeating <i>every</i> decomposition of a suitably chosen word for <i>every</i> constant.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> If <span class=\"mm\">p</span> exceeds the longest word, no word of <span class=\"mm\">L</span> has length <span class=\"mm\">≥ p</span>, so the condition is quantified over an empty set and holds. <b>TRUE</b> ✓</li><li><b>(B)</b> There are non-regular languages that satisfy the lemma, so satisfaction cannot be used to conclude regularity. <b>TRUE</b> ✓</li><li><b>(C)</b> A single failed decomposition proves nothing: the lemma only promises that <i>some</i> decomposition pumps. To refute it you must show that <b>no</b> decomposition of <span class=\"mm\">w</span> pumps, and that this holds for <b>every</b> <span class=\"mm\">p</span>. <b>FALSE</b> ✗</li><li><b>(D)</b> The value of the constant carries no structural information. A non-regular language that satisfies the lemma for some <span class=\"mm\">p</span> can be re-parameterised, and regularity is a property of the language, not of a numeric constant. <b>FALSE</b> ✗</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A) and (B).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing \"there exists a decomposition\" with \"every decomposition\". The quantifier structure — for all <span class=\"mm\">p</span>, there exists <span class=\"mm\">w</span>, for all decompositions, there exists <span class=\"mm\">i</span> — is the whole content of the lemma, and negating it correctly is the examinable skill.</p><p class=\"row\"><b>Takeaway.</b> Use the pumping lemma only in the negative direction, and only with a word and a proof that every legal decomposition breaks. For a positive answer, use Myhill–Nerode or exhibit an automaton.</p>",
    "solution_plain": "Detailed solutionConcept. The pumping lemma is a one-way implication: regular ⇒ pumpable. Its contrapositive, not pumpable ⇒ not regular, is the direction that is actually usable, and it requires defeating every decomposition of a suitably chosen word for every constant.Step by step.(A) If p exceeds the longest word, no word of L has length ≥ p, so the condition is quantified over an empty set and holds. TRUE ✓(B) There are non-regular languages that satisfy the lemma, so satisfaction cannot be used to conclude regularity. TRUE ✓(C) A single failed decomposition proves nothing: the lemma only promises that some decomposition pumps. To refute it you must show that no decomposition of w pumps, and that this holds for every p. FALSE ✗(D) The value of the constant carries no structural information. A non-regular language that satisfies the lemma for some p can be re-parameterised, and regularity is a property of the language, not of a numeric constant. FALSE ✗Answer: Options (A) and (B).Common misconception. Confusing \"there exists a decomposition\" with \"every decomposition\". The quantifier structure — for all p, there exists w, for all decompositions, there exists i — is the whole content of the lemma, and negating it correctly is the examinable skill.Takeaway. Use the pumping lemma only in the negative direction, and only with a word and a proof that every legal decomposition breaks. For a positive answer, use Myhill–Nerode or exhibit an automaton."
+  },
+  {
+   "id": "TOC-U2-Q76",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be a context-free grammar with no ε-productions, and let T be a complete derivation tree for a string w ∈ L(G). Which one of the following numbers is the same for every complete derivation tree of w?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be a context-free grammar with <b>no ε-productions</b>, and let <span class=\"mm\">T</span> be a complete derivation tree for a string <span class=\"mm\">w ∈ L(G)</span>. Which one of the following numbers is the same for every complete derivation tree of <span class=\"mm\">w</span>?</p>",
+   "options": [
+    "the number of internal nodes",
+    "the total number of nodes",
+    "the number of leaves",
+    "the height of the tree"
+   ],
+   "options_html": [
+    "the number of internal nodes",
+    "the total number of nodes",
+    "the number of leaves",
+    "the height of the tree"
+   ],
+   "answer": [
+    2.0
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The leaves of a complete derivation tree, read left to right, spell the yield. With no ε-productions no leaf can contribute the empty string, so leaves and symbols of the yield stand in one-to-one correspondence.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each leaf contributes exactly one symbol to the yield of the tree.</li><li>The yield is <span class=\"mm\">w</span>, so every complete derivation tree of <span class=\"mm\">w</span> has exactly <span class=\"mm\">|w|</span> leaves, whatever its shape.</li><li>The internal nodes are the productions applied. Two derivations of the same string may apply different numbers of productions: in <code class=\"mm\">S → A | a, A → a</code> the string <span class=\"mm\">a</span> has one tree with 1 internal node and another with 2.</li><li>The total number of nodes is leaves plus internal nodes, and the height also changes from tree to tree, so only the leaf count is fixed.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — the number of leaves, which equals <span class=\"mm\">|w|</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that all derivation trees of a string have the same shape, and therefore the same node count and height. Ambiguity exists precisely because the shapes differ; what cannot differ is how many symbols the leaves have to spell.</p>",
+   "solution_plain": "Detailed solutionConcept. The leaves of a complete derivation tree, read left to right, spell the yield. With no ε-productions no leaf can contribute the empty string, so leaves and symbols of the yield stand in one-to-one correspondence.Step by step.Each leaf contributes exactly one symbol to the yield of the tree.The yield is w, so every complete derivation tree of w has exactly |w| leaves, whatever its shape.The internal nodes are the productions applied. Two derivations of the same string may apply different numbers of productions: in S → A | a, A → a the string a has one tree with 1 internal node and another with 2.The total number of nodes is leaves plus internal nodes, and the height also changes from tree to tree, so only the leaf count is fixed.Answer: Option (C) — the number of leaves, which equals |w|.Common misconception. Assuming that all derivation trees of a string have the same shape, and therefore the same node count and height. Ambiguity exists precisely because the shapes differ; what cannot differ is how many symbols the leaves have to spell."
+  },
+  {
+   "id": "TOC-U2-Q77",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be the grammar S → aSb | ε. The complete derivation tree of the string a²b² is drawn with the ε-production shown as a single child labelled ε. How many leaves does that tree have?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be the grammar <code class=\"mm\">S → aSb | ε</code>. The complete derivation tree of the string <span class=\"mm\">a²b²</span> is drawn with the ε-production shown as a single child labelled <span class=\"mm\">ε</span>. How many leaves does that tree have?</p>",
+   "options": [
+    "3",
+    "4",
+    "6",
+    "5"
+   ],
+   "options_html": [
+    "3",
+    "4",
+    "6",
+    "5"
+   ],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An ε-production gives an internal node a single child labelled <span class=\"mm\">ε</span>. That child is a leaf, but it contributes nothing to the yield, so the tree has more leaves than the string has symbols.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Derive the string: <span class=\"mm\">S ⇒ aSb ⇒ a(aSb)b ⇒ a(aεb)b = aabb</span>.</li><li>The root <span class=\"mm\">S</span> has children <span class=\"mm\">a, S, b</span>; the middle <span class=\"mm\">S</span> again has children <span class=\"mm\">a, S, b</span>; the innermost <span class=\"mm\">S</span> has the single child <span class=\"mm\">ε</span>.</li><li>Leaves in left-to-right order: <span class=\"mm\">a, a, b, b, ε</span> — five of them.</li><li>The four terminal leaves spell <span class=\"mm\">aabb</span>; the fifth leaf contributes the empty string.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — 5 leaves.</span></p><p class=\"row\"><b>Common misconception.</b> Counting only the terminal leaves and answering 4. The ε-leaf is a real leaf of the drawn tree; it simply adds nothing to the yield. This is exactly why a tree may have more leaves than <span class=\"mm\">|w|</span> once ε-productions are allowed.</p>",
+   "solution_plain": "Detailed solutionConcept. An ε-production gives an internal node a single child labelled ε. That child is a leaf, but it contributes nothing to the yield, so the tree has more leaves than the string has symbols.Step by step.Derive the string: S ⇒ aSb ⇒ a(aSb)b ⇒ a(aεb)b = aabb.The root S has children a, S, b; the middle S again has children a, S, b; the innermost S has the single child ε.Leaves in left-to-right order: a, a, b, b, ε — five of them.The four terminal leaves spell aabb; the fifth leaf contributes the empty string.Answer: Option (D) — 5 leaves.Common misconception. Counting only the terminal leaves and answering 4. The ε-leaf is a real leaf of the drawn tree; it simply adds nothing to the yield. This is exactly why a tree may have more leaves than |w| once ε-productions are allowed."
+  },
+  {
+   "id": "TOC-U2-Q78",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be the grammar S → aSb | ε. The complete derivation tree of the string a⁵b⁵ is drawn with the ε-production shown as a single child labelled ε. The height of a tree is the number of edges on a longest path from the root to a leaf. What is the height of that tree?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be the grammar <code class=\"mm\">S → aSb | ε</code>. The complete derivation tree of the string <span class=\"mm\">a⁵b⁵</span> is drawn with the ε-production shown as a single child labelled <span class=\"mm\">ε</span>. The <b>height</b> of a tree is the number of edges on a longest path from the root to a leaf. What is the height of that tree?</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    5.0
+   ],
+   "answer_display": "5",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every application of <code class=\"mm\">S → aSb</code> adds one edge to the spine of the tree, and the spine ends at the single <span class=\"mm\">ε</span> leaf created by <code class=\"mm\">S → ε</code>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The string <span class=\"mm\">a⁵b⁵</span> needs five applications of <code class=\"mm\">S → aSb</code>, one per matched pair, and then one application of <code class=\"mm\">S → ε</code> at the innermost <span class=\"mm\">S</span>.</li><li>The nodes on the spine are <span class=\"mm\">S₀, S₁, S₂, S₃, S₄, S₅</span>, where <span class=\"mm\">S₅</span> is the node that expands to <span class=\"mm\">ε</span>.</li><li>The path from <span class=\"mm\">S₀</span> to the ε-leaf therefore has 5 edges, and no other path is longer because every terminal leaf hangs directly off one of these <span class=\"mm\">S</span> nodes.</li><li>Height = 5.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 5</span></p><p class=\"row\"><b>Common misconception.</b> Counting the six nodes on the path and answering 6, or counting the ten terminal symbols and answering 10. Height counts <i>edges</i>, not nodes, and only along the longest single path.</p>",
+   "solution_plain": "Detailed solutionConcept. Every application of S → aSb adds one edge to the spine of the tree, and the spine ends at the single ε leaf created by S → ε.Step by step.The string a⁵b⁵ needs five applications of S → aSb, one per matched pair, and then one application of S → ε at the innermost S.The nodes on the spine are S₀, S₁, S₂, S₃, S₄, S₅, where S₅ is the node that expands to ε.The path from S₀ to the ε-leaf therefore has 5 edges, and no other path is longer because every terminal leaf hangs directly off one of these S nodes.Height = 5.Answer: 5Common misconception. Counting the six nodes on the path and answering 6, or counting the ten terminal symbols and answering 10. Height counts edges, not nodes, and only along the longest single path."
+  },
+  {
+   "id": "TOC-U2-Q79",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "A complete derivation tree of a string uses 7 productions, and its yield has length 5. How many nodes does the tree have in total, counting internal nodes and leaves together?",
+   "question_html": "<p class=\"qtext\">A complete derivation tree of a string uses <b>7 productions</b>, and its yield has length <b>5</b>. How many nodes does the tree have in total, counting internal nodes and leaves together?</p>",
+   "options": [
+    "11",
+    "13",
+    "12",
+    "14"
+   ],
+   "options_html": [
+    "11",
+    "13",
+    "12",
+    "14"
+   ],
+   "answer": [
+    2.0
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Each internal node is one application of a production, and each leaf is one symbol of the yield. The two counts are therefore independent of each other and simply add.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Internal nodes = number of productions applied = 7.</li><li>Leaves = length of the yield = 5, since each leaf contributes exactly one symbol.</li><li>Total nodes = internal nodes + leaves = 7 + 5 = <b>12</b>.</li><li>Check with the edge count: a tree with 12 nodes has 11 edges, and the 7 internal nodes have 7 children in total across the last level plus the internal ones — consistent with a tree of 12 nodes.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — 12 nodes.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 9 by applying the CNF identity <span class=\"mm\">2|w| − 1</span> without checking that the grammar is in Chomsky Normal Form, or answering 13 by adding an extra node for a phantom root. Only in CNF with no ε-productions is the node count forced to be <span class=\"mm\">2|w| − 1</span>.</p>",
+   "solution_plain": "Detailed solutionConcept. Each internal node is one application of a production, and each leaf is one symbol of the yield. The two counts are therefore independent of each other and simply add.Step by step.Internal nodes = number of productions applied = 7.Leaves = length of the yield = 5, since each leaf contributes exactly one symbol.Total nodes = internal nodes + leaves = 7 + 5 = 12.Check with the edge count: a tree with 12 nodes has 11 edges, and the 7 internal nodes have 7 children in total across the last level plus the internal ones — consistent with a tree of 12 nodes.Answer: Option (C) — 12 nodes.Common misconception. Answering 9 by applying the CNF identity 2|w| − 1 without checking that the grammar is in Chomsky Normal Form, or answering 13 by adding an extra node for a phantom root. Only in CNF with no ε-productions is the node count forced to be 2|w| − 1."
+  },
+  {
+   "id": "TOC-U2-Q80",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G = (V, T, P, S) be a context-free grammar and let T be a complete derivation tree for a string w ∈ L(G). Select every statement that is TRUE.",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G = (V, T, P, S)</span> be a context-free grammar and let <span class=\"mm\">T</span> be a complete derivation tree for a string <span class=\"mm\">w ∈ L(G)</span>. Select every statement that is TRUE.</p>",
+   "options": [
+    "If G contains an ε-production and w ≠ ε, the tree may contain a leaf labelled ε.",
+    "If every production of G has a right-hand side of length at most two, then every internal node of the tree has exactly two children.",
+    "If G contains a unit production A → B, the tree may contain an internal node labelled A whose only child is labelled B.",
+    "The number of internal nodes of the tree equals the number of productions applied in the derivation that the tree represents."
+   ],
+   "options_html": [
+    "If <span class=\"mm\">G</span> contains an ε-production and <span class=\"mm\">w ≠ ε</span>, the tree may contain a leaf labelled <span class=\"mm\">ε</span>.",
+    "If every production of <span class=\"mm\">G</span> has a right-hand side of length at most two, then every internal node of the tree has exactly two children.",
+    "If <span class=\"mm\">G</span> contains a unit production <span class=\"mm\">A → B</span>, the tree may contain an internal node labelled <span class=\"mm\">A</span> whose only child is labelled <span class=\"mm\">B</span>.",
+    "The number of internal nodes of the tree equals the number of productions applied in the derivation that the tree represents."
+   ],
+   "answer": [
+    0.0,
+    2.0,
+    3.0
+   ],
+   "answer_display": "Options (A, C and D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The children of an internal node are exactly the right-hand side of the production used there. The number of children is therefore the length of that right-hand side — one for a unit production or a terminal production, two for a binary production, and one labelled <span class=\"mm\">ε</span> for an ε-production.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> In <code class=\"mm\">S → aSb | ε</code> the tree of <span class=\"mm\">aabb</span> contains the leaf <span class=\"mm\">ε</span>, even though <span class=\"mm\">w ≠ ε</span>.</li><li><b>(B) false.</b> A right-hand side of length one is allowed by the hypothesis, and it gives a node with a single child — a unit production <span class=\"mm\">A → B</span> or a terminal production <span class=\"mm\">A → a</span>. \"At most two\" is not \"exactly two\".</li><li><b>(C) true.</b> Applying <span class=\"mm\">A → B</span> creates a node labelled <span class=\"mm\">A</span> with the single child <span class=\"mm\">B</span>.</li><li><b>(D) true.</b> Each internal node is one application of a production, and each application creates exactly one internal node, so the two counts agree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A, C and D).</span></p><p class=\"row\"><b>Common misconception.</b> Reading \"at most two\" as \"exactly two\" and concluding that the tree is a full binary tree. Unit productions and terminal productions both have a right-hand side of length one, so a node may have a single child.</p>",
+   "solution_plain": "Detailed solutionConcept. The children of an internal node are exactly the right-hand side of the production used there. The number of children is therefore the length of that right-hand side — one for a unit production or a terminal production, two for a binary production, and one labelled ε for an ε-production.Step by step.(A) true. In S → aSb | ε the tree of aabb contains the leaf ε, even though w ≠ ε.(B) false. A right-hand side of length one is allowed by the hypothesis, and it gives a node with a single child — a unit production A → B or a terminal production A → a. \"At most two\" is not \"exactly two\".(C) true. Applying A → B creates a node labelled A with the single child B.(D) true. Each internal node is one application of a production, and each application creates exactly one internal node, so the two counts agree.Answer: Options (A, C and D).Common misconception. Reading \"at most two\" as \"exactly two\" and concluding that the tree is a full binary tree. Unit productions and terminal productions both have a right-hand side of length one, so a node may have a single child."
+  },
+  {
+   "id": "TOC-U2-Q81",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be the grammar S → SS | a. A derivation tree of the string a⁴ is drawn. How many nodes of that tree are labelled S, and how does the answer depend on which tree is drawn?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be the grammar <code class=\"mm\">S → SS | a</code>. A derivation tree of the string <span class=\"mm\">a⁴</span> is drawn. How many nodes of that tree are labelled <span class=\"mm\">S</span>, and how does the answer depend on which tree is drawn?</p>",
+   "options": [
+    "4, and it is the same for every such tree",
+    "3, and it is the same for every such tree",
+    "3, but it differs between the five trees of a⁴",
+    "5, and it is the same for every such tree"
+   ],
+   "options_html": [
+    "4, and it is the same for every such tree",
+    "3, and it is the same for every such tree",
+    "3, but it differs between the five trees of <span class=\"mm\">a⁴</span>",
+    "5, and it is the same for every such tree"
+   ],
+   "answer": [
+    1.0
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In <code class=\"mm\">S → SS | a</code> every internal node has exactly two children, so every derivation tree is a full binary tree whose leaves are the terminals. A full binary tree with <span class=\"mm\">n</span> leaves always has exactly <span class=\"mm\">n − 1</span> internal nodes.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The yield <span class=\"mm\">a⁴</span> supplies 4 leaves, one per terminal.</li><li>A full binary tree with 4 leaves has 4 − 1 = 3 internal nodes.</li><li>Every internal node is labelled <span class=\"mm\">S</span> (the only nonterminal) and every leaf is labelled <span class=\"mm\">a</span>, so the tree has exactly 3 nodes labelled <span class=\"mm\">S</span>.</li><li>The shape can vary — there are 5 such trees — but the leaf count and the child count are fixed, so the internal-node count is fixed too.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — 3 nodes labelled <span class=\"mm\">S</span>, the same for every tree.</span></p><p class=\"row\"><b>Common misconception.</b> Believing that because there are several trees they must have different sizes. Different shapes with the same leaf count always have the same number of internal nodes; only the arrangement differs.</p>",
+   "solution_plain": "Detailed solutionConcept. In S → SS | a every internal node has exactly two children, so every derivation tree is a full binary tree whose leaves are the terminals. A full binary tree with n leaves always has exactly n − 1 internal nodes.Step by step.The yield a⁴ supplies 4 leaves, one per terminal.A full binary tree with 4 leaves has 4 − 1 = 3 internal nodes.Every internal node is labelled S (the only nonterminal) and every leaf is labelled a, so the tree has exactly 3 nodes labelled S.The shape can vary — there are 5 such trees — but the leaf count and the child count are fixed, so the internal-node count is fixed too.Answer: Option (B) — 3 nodes labelled S, the same for every tree.Common misconception. Believing that because there are several trees they must have different sizes. Different shapes with the same leaf count always have the same number of internal nodes; only the arrangement differs."
+  },
+  {
+   "id": "TOC-U2-Q82",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cfg-derivation-trees",
+   "subtopic": "cfg-derivation-trees",
+   "subtopic_label": "CFG derivation trees",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be a context-free grammar in which every production has a right-hand side of length exactly two, and let w ∈ L(G) with |w| = n ≥ 1. Taking height as the number of edges on a longest root-to-leaf path, what is the largest possible height of a derivation tree of w?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be a context-free grammar in which every production has a right-hand side of length exactly two, and let <span class=\"mm\">w ∈ L(G)</span> with <span class=\"mm\">|w| = n ≥ 1</span>. Taking height as the number of edges on a longest root-to-leaf path, what is the <b>largest</b> possible height of a derivation tree of <span class=\"mm\">w</span>?</p>",
+   "options": [
+    "n − 1",
+    "n",
+    "2n − 1",
+    "⌈log₂ n⌉"
+   ],
+   "options_html": [
+    "n − 1",
+    "n",
+    "2n − 1",
+    "⌈log₂ n⌉"
+   ],
+   "answer": [
+    0.0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A right-hand side of length exactly two gives every internal node exactly two children, so every derivation tree is a full binary tree with <span class=\"mm\">n</span> leaves.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Write <span class=\"mm\">h</span> for the height and <span class=\"mm\">n</span> for the number of leaves.</li><li>A path of <span class=\"mm\">h</span> edges passes through <span class=\"mm\">h</span> internal nodes, and each of them has a second child that is not on the path. Those second children are distinct nodes of the tree, and each of them roots at least one leaf, so <span class=\"mm\">n ≥ h + 1</span>, that is <span class=\"mm\">h ≤ n − 1</span>.</li><li>The bound is attained by the \"comb\" shape, in which each internal node has one terminal child and one internal child; the tree then looks like a path of <span class=\"mm\">n − 1</span> edges.</li><li>So the largest possible height is <span class=\"mm\">n − 1</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — <span class=\"mm\">n − 1</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Answering <span class=\"mm\">⌈log₂ n⌉</span>, which is the <i>smallest</i> possible height (a balanced tree), or <span class=\"mm\">2n − 1</span>, which is the number of nodes rather than the height. Read the question as asking for a maximum and reason about the most lopsided tree.</p>",
+   "solution_plain": "Detailed solutionConcept. A right-hand side of length exactly two gives every internal node exactly two children, so every derivation tree is a full binary tree with n leaves.Step by step.Write h for the height and n for the number of leaves.A path of h edges passes through h internal nodes, and each of them has a second child that is not on the path. Those second children are distinct nodes of the tree, and each of them roots at least one leaf, so n ≥ h + 1, that is h ≤ n − 1.The bound is attained by the \"comb\" shape, in which each internal node has one terminal child and one internal child; the tree then looks like a path of n − 1 edges.So the largest possible height is n − 1.Answer: Option (A) — n − 1.Common misconception. Answering ⌈log₂ n⌉, which is the smallest possible height (a balanced tree), or 2n − 1, which is the number of nodes rather than the height. Read the question as asking for a maximum and reason about the most lopsided tree."
+  },
+  {
+   "id": "TOC-U2-Q83",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Which one of the following grammars is ambiguous?",
+   "question_html": "<p class=\"qtext\">Which one of the following grammars is ambiguous?</p>",
+   "options": [
+    "S → (S) | ()",
+    "S → SS | (S) | ε",
+    "S → aSb | ab",
+    "S → aS | bS | ε"
+   ],
+   "options_html": [
+    "<code class=\"mm\">S → (S) | ()</code>",
+    "<code class=\"mm\">S → SS | (S) | ε</code>",
+    "<code class=\"mm\">S → aSb | ab</code>",
+    "<code class=\"mm\">S → aS | bS | ε</code>"
+   ],
+   "answer": [
+    1.0
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A grammar is ambiguous when some string in its language has two distinct derivation trees. The quickest witness is a string that can be split into two parts of the language in more than one way.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> generates exactly <span class=\"mm\">(ⁿ)ⁿ</span>: every string is forced, one tree each. Unambiguous.</li><li><b>(C)</b> generates <span class=\"mm\">{aⁿbⁿ : n ≥ 1}</span>: the <span class=\"mm\">a</span>'s must all be produced before the <span class=\"mm\">b</span>'s. Unambiguous.</li><li><b>(D)</b> is right-linear — each right-hand side has at most one nonterminal, at the extreme right — and every string over <span class=\"mm\">{a, b}</span> has exactly one derivation. Unambiguous.</li><li><b>(B) is ambiguous.</b> Take the string <span class=\"mm\">()()()</span>. One tree splits it as <span class=\"mm\">()</span> followed by <span class=\"mm\">()()</span> at the root; another splits it as <span class=\"mm\">()()</span> followed by <span class=\"mm\">()</span>. Both are legal <span class=\"mm\">S → SS</span> derivations, so the string has two distinct derivation trees.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B) — <code class=\"mm\">S → SS | (S) | ε</code>.</span></p><p class=\"row\"><b>Common misconception.</b> Testing only short strings. For grammar (B) the strings <span class=\"mm\">()</span> and <span class=\"mm\">()()</span> each have exactly one tree; the ambiguity first shows at length 6. A single unambiguous string never proves a grammar unambiguous, and one ambiguous string is enough to prove it ambiguous.</p>",
+   "solution_plain": "Detailed solutionConcept. A grammar is ambiguous when some string in its language has two distinct derivation trees. The quickest witness is a string that can be split into two parts of the language in more than one way.Step by step.(A) generates exactly (ⁿ)ⁿ: every string is forced, one tree each. Unambiguous.(C) generates {aⁿbⁿ : n ≥ 1}: the a's must all be produced before the b's. Unambiguous.(D) is right-linear — each right-hand side has at most one nonterminal, at the extreme right — and every string over {a, b} has exactly one derivation. Unambiguous.(B) is ambiguous. Take the string ()()(). One tree splits it as () followed by ()() at the root; another splits it as ()() followed by (). Both are legal S → SS derivations, so the string has two distinct derivation trees.Answer: Option (B) — S → SS | (S) | ε.Common misconception. Testing only short strings. For grammar (B) the strings () and ()() each have exactly one tree; the ambiguity first shows at length 6. A single unambiguous string never proves a grammar unambiguous, and one ambiguous string is enough to prove it ambiguous."
+  },
+  {
+   "id": "TOC-U2-Q84",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be the grammar S → SS | a | b. Every string in L(G) is a non-empty string over {a, b}. What is the length of the shortest string in L(G) that has two distinct derivation trees?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be the grammar <code class=\"mm\">S → SS | a | b</code>. Every string in <span class=\"mm\">L(G)</span> is a non-empty string over <span class=\"mm\">{a, b}</span>. What is the length of the <b>shortest</b> string in <span class=\"mm\">L(G)</span> that has two distinct derivation trees?</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A derivation tree for a string of length <span class=\"mm\">n</span> is a full binary tree with <span class=\"mm\">n</span> leaves, so the only freedom is how the string is split into two non-empty parts at the root. Two trees exist exactly when the string can be split into two parts of the language in two different ways.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>Length 1.</b> The single symbol must be produced by <span class=\"mm\">S → a</span> or <span class=\"mm\">S → b</span>; there is one tree.</li><li><b>Length 2.</b> The only split is (first symbol)(second symbol), and both halves are single symbols of the language. One tree.</li><li><b>Length 3.</b> Take <span class=\"mm\">aab</span>. It splits as <span class=\"mm\">a | ab</span> and as <span class=\"mm\">aa | b</span>, and all four parts are strings of the language. Two distinct trees.</li><li>So the shortest ambiguous string has length 3. (In general the number of trees for a string of length <span class=\"mm\">n</span> is the Catalan number <span class=\"mm\">C(n−1)</span>.)</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Answering 2, usually by imagining that <span class=\"mm\">ab</span> can be produced both as <span class=\"mm\">S ⇒ SS ⇒ ab</span> and in some other order. There is only one split of a two-symbol string, so only one tree.</p>",
+   "solution_plain": "Detailed solutionConcept. A derivation tree for a string of length n is a full binary tree with n leaves, so the only freedom is how the string is split into two non-empty parts at the root. Two trees exist exactly when the string can be split into two parts of the language in two different ways.Step by step.Length 1. The single symbol must be produced by S → a or S → b; there is one tree.Length 2. The only split is (first symbol)(second symbol), and both halves are single symbols of the language. One tree.Length 3. Take aab. It splits as a | ab and as aa | b, and all four parts are strings of the language. Two distinct trees.So the shortest ambiguous string has length 3. (In general the number of trees for a string of length n is the Catalan number C(n−1).)Answer: 3Common misconception. Answering 2, usually by imagining that ab can be produced both as S ⇒ SS ⇒ ab and in some other order. There is only one split of a two-symbol string, so only one tree."
+  },
+  {
+   "id": "TOC-U2-Q85",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be the grammar S → S + S | S * S | a. How many distinct derivation trees does G have for the string a + a * a?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be the grammar <code class=\"mm\">S → S + S | S * S | a</code>. How many distinct derivation trees does <span class=\"mm\">G</span> have for the string <span class=\"mm\">a + a * a</span>?</p>",
+   "options": [
+    "2",
+    "1",
+    "3",
+    "4"
+   ],
+   "options_html": [
+    "2",
+    "1",
+    "3",
+    "4"
+   ],
+   "answer": [
+    0.0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In this grammar neither operator is given precedence and neither is given associativity, so each binary parenthesisation of the expression is a separate derivation tree. Counting trees is counting the parenthesisations.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The expression has three operands and two operators, so every tree is a full binary tree with three leaves.</li><li>A full binary tree with three leaves has exactly two shapes: the root operator is the first one, or the root operator is the second one.</li><li>Shape 1: <span class=\"mm\">(a + a) * a</span> — root <span class=\"mm\">*</span>, left child <span class=\"mm\">a + a</span>.</li><li>Shape 2: <span class=\"mm\">a + (a * a)</span> — root <span class=\"mm\">+</span>, right child <span class=\"mm\">a * a</span>.</li><li>Both are derivations of <span class=\"mm\">G</span>, so there are 2 distinct derivation trees — the classic evidence that the grammar is ambiguous.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — 2 trees.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 1 by silently applying the usual precedence of <span class=\"mm\">*</span> over <span class=\"mm\">+</span>. Precedence is a property of a particular grammar, not of the expression: this grammar has none, which is exactly why it is ambiguous.</p>",
+   "solution_plain": "Detailed solutionConcept. In this grammar neither operator is given precedence and neither is given associativity, so each binary parenthesisation of the expression is a separate derivation tree. Counting trees is counting the parenthesisations.Step by step.The expression has three operands and two operators, so every tree is a full binary tree with three leaves.A full binary tree with three leaves has exactly two shapes: the root operator is the first one, or the root operator is the second one.Shape 1: (a + a) * a — root *, left child a + a.Shape 2: a + (a * a) — root +, right child a * a.Both are derivations of G, so there are 2 distinct derivation trees — the classic evidence that the grammar is ambiguous.Answer: Option (A) — 2 trees.Common misconception. Answering 1 by silently applying the usual precedence of * over +. Precedence is a property of a particular grammar, not of the expression: this grammar has none, which is exactly why it is ambiguous."
+  },
+  {
+   "id": "TOC-U2-Q86",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G have the productions S → A | B, A → aA | a and B → aB | a. Which one of the following is TRUE?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> have the productions <code class=\"mm\">S → A | B</code>, <code class=\"mm\">A → aA | a</code> and <code class=\"mm\">B → aB | a</code>. Which one of the following is TRUE?</p>",
+   "options": [
+    "G is unambiguous and L(G) = a⁺",
+    "G is ambiguous and L(G) = a*",
+    "G is unambiguous and L(G) = a*",
+    "G is ambiguous and L(G) = a⁺"
+   ],
+   "options_html": [
+    "<span class=\"mm\">G</span> is unambiguous and <span class=\"mm\">L(G) = a⁺</span>",
+    "<span class=\"mm\">G</span> is ambiguous and <span class=\"mm\">L(G) = a*</span>",
+    "<span class=\"mm\">G</span> is unambiguous and <span class=\"mm\">L(G) = a*</span>",
+    "<span class=\"mm\">G</span> is ambiguous and <span class=\"mm\">L(G) = a⁺</span>"
+   ],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">A</span> and <span class=\"mm\">B</span> are two different nonterminals with identical productions, and <span class=\"mm\">S</span> may start with either. Every string therefore has at least two derivation trees, one through <span class=\"mm\">A</span> and one through <span class=\"mm\">B</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>The language.</b> <span class=\"mm\">A</span> produces <span class=\"mm\">a⁺</span>: each <span class=\"mm\">A → aA</span> adds one <span class=\"mm\">a</span> and the last step uses <span class=\"mm\">A → a</span>. The same holds for <span class=\"mm\">B</span>, so <span class=\"mm\">L(G) = a⁺</span> — one or more <span class=\"mm\">a</span>'s, never the empty string.</li><li><b>Ambiguity.</b> For the string <span class=\"mm\">a</span> there are two trees: <span class=\"mm\">S ⇒ A ⇒ a</span> and <span class=\"mm\">S ⇒ B ⇒ a</span>.</li><li>A single string with two distinct derivation trees is enough, so <span class=\"mm\">G</span> is ambiguous.</li><li>Hence <span class=\"mm\">G</span> is ambiguous and <span class=\"mm\">L(G) = a⁺</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — ambiguous, with <span class=\"mm\">L(G) = a⁺</span>.</span></p><p class=\"row\"><b>Common misconception.</b> Choosing <span class=\"mm\">a*</span> because both alternatives look like they could stop immediately. <span class=\"mm\">A</span> has no ε-production, so it must emit at least one <span class=\"mm\">a</span>; the empty string is not in the language. The ambiguity comes from the two parallel routes, not from the ε.</p>",
+   "solution_plain": "Detailed solutionConcept. A and B are two different nonterminals with identical productions, and S may start with either. Every string therefore has at least two derivation trees, one through A and one through B.Step by step.The language. A produces a⁺: each A → aA adds one a and the last step uses A → a. The same holds for B, so L(G) = a⁺ — one or more a's, never the empty string.Ambiguity. For the string a there are two trees: S ⇒ A ⇒ a and S ⇒ B ⇒ a.A single string with two distinct derivation trees is enough, so G is ambiguous.Hence G is ambiguous and L(G) = a⁺.Answer: Option (D) — ambiguous, with L(G) = a⁺.Common misconception. Choosing a* because both alternatives look like they could stop immediately. A has no ε-production, so it must emit at least one a; the empty string is not in the language. The ambiguity comes from the two parallel routes, not from the ε."
+  },
+  {
+   "id": "TOC-U2-Q87",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Select every statement about ambiguous context-free grammars that is TRUE.",
+   "question_html": "<p class=\"qtext\">Select every statement about ambiguous context-free grammars that is TRUE.</p>",
+   "options": [
+    "Every finite language has an unambiguous context-free grammar.",
+    "If a grammar has an ε-production, then it is ambiguous.",
+    "If every string of L(G) has exactly one derivation tree, then no string of L(G) has two distinct leftmost derivations.",
+    "If L(G) is regular, then G is unambiguous."
+   ],
+   "options_html": [
+    "Every finite language has an unambiguous context-free grammar.",
+    "If a grammar has an ε-production, then it is ambiguous.",
+    "If every string of <span class=\"mm\">L(G)</span> has exactly one derivation tree, then no string of <span class=\"mm\">L(G)</span> has two distinct leftmost derivations.",
+    "If <span class=\"mm\">L(G)</span> is regular, then <span class=\"mm\">G</span> is unambiguous."
+   ],
+   "answer": [
+    0.0,
+    2.0
+   ],
+   "answer_display": "Options (A and C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Ambiguity is a property of a grammar; regularity and finiteness are properties of a language. The bridge between them is that the number of derivation trees of a string equals the number of its leftmost derivations.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> A finite language <span class=\"mm\">{w₁, …, wₖ}</span> is generated unambiguously by <span class=\"mm\">S → w₁ | … | wₖ</span> with fresh nonterminals for each symbol, or simply by listing the strings; every string then has exactly one tree.</li><li><b>(B) false.</b> <code class=\"mm\">S → aSb | ε</code> is unambiguous and contains an ε-production. ε-productions create ambiguity only in combination with other overlapping alternatives.</li><li><b>(C) true.</b> The number of leftmost derivations of a string equals the number of its derivation trees, so one tree means at most one leftmost derivation — and there is always at least one.</li><li><b>(D) false.</b> The grammar <code class=\"mm\">S → A | B, A → a, B → a</code> is ambiguous, yet its language <span class=\"mm\">{a}</span> is regular.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A and C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating ambiguity as a property of the language. A regular — indeed a finite — language always has an unambiguous grammar, but nothing forces the particular grammar in front of you to be that one.</p>",
+   "solution_plain": "Detailed solutionConcept. Ambiguity is a property of a grammar; regularity and finiteness are properties of a language. The bridge between them is that the number of derivation trees of a string equals the number of its leftmost derivations.Step by step.(A) true. A finite language {w₁, …, wₖ} is generated unambiguously by S → w₁ | … | wₖ with fresh nonterminals for each symbol, or simply by listing the strings; every string then has exactly one tree.(B) false. S → aSb | ε is unambiguous and contains an ε-production. ε-productions create ambiguity only in combination with other overlapping alternatives.(C) true. The number of leftmost derivations of a string equals the number of its derivation trees, so one tree means at most one leftmost derivation — and there is always at least one.(D) false. The grammar S → A | B, A → a, B → a is ambiguous, yet its language {a} is regular.Answer: Options (A and C).Common misconception. Treating ambiguity as a property of the language. A regular — indeed a finite — language always has an unambiguous grammar, but nothing forces the particular grammar in front of you to be that one."
+  },
+  {
+   "id": "TOC-U2-Q88",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "ambiguity-in-grammars",
+   "subtopic": "ambiguity-in-grammars",
+   "subtopic_label": "Ambiguity in grammars",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Which one of the following grammars is ambiguous?",
+   "question_html": "<p class=\"qtext\">Which one of the following grammars is ambiguous?</p>",
+   "options": [
+    "S → aSb | ab",
+    "S → aSb | ε",
+    "S → aSb | aSbb | ε",
+    "S → aS | bS | ε"
+   ],
+   "options_html": [
+    "<code class=\"mm\">S → aSb | ab</code>",
+    "<code class=\"mm\">S → aSb | ε</code>",
+    "<code class=\"mm\">S → aSb | aSbb | ε</code>",
+    "<code class=\"mm\">S → aS | bS | ε</code>"
+   ],
+   "answer": [
+    2.0
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Alternatives whose languages overlap create ambiguity. In <code class=\"mm\">S → aSb | aSbb | ε</code> a derivation may add one <span class=\"mm\">b</span> or two <span class=\"mm\">b</span>'s at each level, so the same string can be built with different mixtures of the two alternatives.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A)</b> generates <span class=\"mm\">{aⁿbⁿ : n ≥ 1}</span>. The <span class=\"mm\">a</span>'s and <span class=\"mm\">b</span>'s are forced into matched pairs, so each string has exactly one tree. Unambiguous.</li><li><b>(B)</b> generates <span class=\"mm\">{aⁿbⁿ : n ≥ 0}</span>, again one tree per string. Unambiguous.</li><li><b>(D)</b> is right-linear and generates every string over <span class=\"mm\">{a, b}</span>; each string has one derivation, read off left to right. Unambiguous.</li><li><b>(C)</b> generates <span class=\"mm\">aᵏbᵐ</span> with <span class=\"mm\">k ≤ m ≤ 2k</span>. Each of the <span class=\"mm\">k</span> levels adds either 1 or 2 <span class=\"mm\">b</span>'s, so the number of trees for a string with <span class=\"mm\">m − k</span> \"doubling\" levels is <span class=\"mm\">C(k, m − k)</span>. For <span class=\"mm\">a²b³</span> this is <span class=\"mm\">C(2, 1) = 2</span>: the levels may add 2 then 1, or 1 then 2. Two trees, so the grammar is ambiguous.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — <code class=\"mm\">S → aSb | aSbb | ε</code>.</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that because the alternatives look different they cannot produce the same string. Ambiguity comes from overlap in the <i>languages</i> of the alternatives, not from their appearance; here <span class=\"mm\">aSb</span> and <span class=\"mm\">aSbb</span> both contribute to strings whose <span class=\"mm\">b</span>-count lies strictly between the two extremes.</p>",
+   "solution_plain": "Detailed solutionConcept. Alternatives whose languages overlap create ambiguity. In S → aSb | aSbb | ε a derivation may add one b or two b's at each level, so the same string can be built with different mixtures of the two alternatives.Step by step.(A) generates {aⁿbⁿ : n ≥ 1}. The a's and b's are forced into matched pairs, so each string has exactly one tree. Unambiguous.(B) generates {aⁿbⁿ : n ≥ 0}, again one tree per string. Unambiguous.(D) is right-linear and generates every string over {a, b}; each string has one derivation, read off left to right. Unambiguous.(C) generates aᵏbᵐ with k ≤ m ≤ 2k. Each of the k levels adds either 1 or 2 b's, so the number of trees for a string with m − k \"doubling\" levels is C(k, m − k). For a²b³ this is C(2, 1) = 2: the levels may add 2 then 1, or 1 then 2. Two trees, so the grammar is ambiguous.Answer: Option (C) — S → aSb | aSbb | ε.Common misconception. Assuming that because the alternatives look different they cannot produce the same string. Ambiguity comes from overlap in the languages of the alternatives, not from their appearance; here aSb and aSbb both contribute to strings whose b-count lies strictly between the two extremes."
+  },
+  {
+   "id": "TOC-U2-Q89",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "A grammar has exactly the productions S → aB | ε and B → b. Which one of the following is TRUE?",
+   "question_html": "<p class=\"qtext\">A grammar has exactly the productions <code class=\"mm\">S → aB | ε</code> and <code class=\"mm\">B → b</code>. Which one of the following is TRUE?</p>",
+   "options": [
+    "It is in Chomsky Normal Form.",
+    "It is in Greibach Normal Form, under the standard allowance of S → ε when ε ∈ L(G) and S occurs on the right side of no production.",
+    "It is in both normal forms.",
+    "It is in neither normal form."
+   ],
+   "options_html": [
+    "It is in Chomsky Normal Form.",
+    "It is in Greibach Normal Form, under the standard allowance of <span class=\"mm\">S → ε</span> when <span class=\"mm\">ε ∈ L(G)</span> and <span class=\"mm\">S</span> occurs on the right side of no production.",
+    "It is in both normal forms.",
+    "It is in neither normal form."
+   ],
+   "answer": [
+    1.0
+   ],
+   "answer_display": "Option (B)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Chomsky Normal Form allows only <span class=\"mm\">A → BC</span> (two nonterminals) and <span class=\"mm\">A → a</span> (one terminal). Greibach Normal Form allows only <span class=\"mm\">A → aα</span> with <span class=\"mm\">a</span> a terminal and <span class=\"mm\">α</span> a string of nonterminals, plus the single exception <span class=\"mm\">S → ε</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>Not CNF.</b> The production <span class=\"mm\">S → aB</span> has a terminal followed by a nonterminal; CNF has no such form.</li><li><b>GNF, first two productions.</b> <span class=\"mm\">S → aB</span> is <span class=\"mm\">aα</span> with <span class=\"mm\">α = B</span>, and <span class=\"mm\">B → b</span> is <span class=\"mm\">aα</span> with <span class=\"mm\">α = ε</span>.</li><li><b>GNF, the ε-production.</b> <span class=\"mm\">ε ∈ L(G)</span> and <span class=\"mm\">S</span> appears on no right side, so <span class=\"mm\">S → ε</span> is exactly the exception that GNF permits.</li><li>So the grammar is in Greibach Normal Form and not in Chomsky Normal Form.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Rejecting the grammar because of <span class=\"mm\">S → ε</span>. Greibach Normal Form does allow one ε-production — <span class=\"mm\">S → ε</span>, when the language contains ε and <span class=\"mm\">S</span> is never used on a right side. Without that exception no GNF grammar could generate a language containing ε.</p>",
+   "solution_plain": "Detailed solutionConcept. Chomsky Normal Form allows only A → BC (two nonterminals) and A → a (one terminal). Greibach Normal Form allows only A → aα with a a terminal and α a string of nonterminals, plus the single exception S → ε.Step by step.Not CNF. The production S → aB has a terminal followed by a nonterminal; CNF has no such form.GNF, first two productions. S → aB is aα with α = B, and B → b is aα with α = ε.GNF, the ε-production. ε ∈ L(G) and S appears on no right side, so S → ε is exactly the exception that GNF permits.So the grammar is in Greibach Normal Form and not in Chomsky Normal Form.Answer: Option (B).Common misconception. Rejecting the grammar because of S → ε. Greibach Normal Form does allow one ε-production — S → ε, when the language contains ε and S is never used on a right side. Without that exception no GNF grammar could generate a language containing ε."
+  },
+  {
+   "id": "TOC-U2-Q90",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be a grammar in Chomsky Normal Form with no ε-productions, and let T be a complete derivation tree for a string w ∈ L(G) with |w| ≥ 2. How many children does every internal node of T have?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be a grammar in Chomsky Normal Form with no ε-productions, and let <span class=\"mm\">T</span> be a complete derivation tree for a string <span class=\"mm\">w ∈ L(G)</span> with <span class=\"mm\">|w| ≥ 2</span>. How many children does every internal node of <span class=\"mm\">T</span> have?</p>",
+   "options": [
+    "exactly two",
+    "at most two",
+    "at least two",
+    "either one or two"
+   ],
+   "options_html": [
+    "exactly two",
+    "at most two",
+    "at least two",
+    "either one or two"
+   ],
+   "answer": [
+    0.0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every production of a CNF grammar is either <span class=\"mm\">A → BC</span> or <span class=\"mm\">A → a</span>. The children of an internal node are the right-hand side of the production used there, so the child count is the length of that right-hand side.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A production <span class=\"mm\">A → a</span> ends the branch: the node labelled <span class=\"mm\">a</span> is a leaf, not an internal node.</li><li>A production <span class=\"mm\">A → BC</span> gives the internal node <span class=\"mm\">A</span> exactly two children, <span class=\"mm\">B</span> and <span class=\"mm\">C</span>.</li><li>No ε-productions means no node has a single child labelled <span class=\"mm\">ε</span>.</li><li>Hence every internal node has exactly two children: the tree is a full binary tree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A) — exactly two children.</span></p><p class=\"row\"><b>Common misconception.</b> Answering \"at most two\" by carrying over the CNF definition without applying the two extra hypotheses. \"At most two\" would be the right answer for a general grammar with short right sides; with CNF and no ε-productions the count is forced to be exactly two.</p>",
+   "solution_plain": "Detailed solutionConcept. Every production of a CNF grammar is either A → BC or A → a. The children of an internal node are the right-hand side of the production used there, so the child count is the length of that right-hand side.Step by step.A production A → a ends the branch: the node labelled a is a leaf, not an internal node.A production A → BC gives the internal node A exactly two children, B and C.No ε-productions means no node has a single child labelled ε.Hence every internal node has exactly two children: the tree is a full binary tree.Answer: Option (A) — exactly two children.Common misconception. Answering \"at most two\" by carrying over the CNF definition without applying the two extra hypotheses. \"At most two\" would be the right answer for a general grammar with short right sides; with CNF and no ε-productions the count is forced to be exactly two."
+  },
+  {
+   "id": "TOC-U2-Q91",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "NAT",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "A grammar has the productions S → ABCDE, A → a, B → b, C → c, D → d and E → e. It is converted to Chomsky Normal Form by the standard procedure, which replaces a right side of length k ≥ 3 by a chain of productions of length two, introducing one new nonterminal per split. How many new nonterminals does the procedure introduce for the production S → ABCDE?",
+   "question_html": "<p class=\"qtext\">A grammar has the productions <code class=\"mm\">S → ABCDE</code>, <code class=\"mm\">A → a</code>, <code class=\"mm\">B → b</code>, <code class=\"mm\">C → c</code>, <code class=\"mm\">D → d</code> and <code class=\"mm\">E → e</code>. It is converted to Chomsky Normal Form by the standard procedure, which replaces a right side of length <span class=\"mm\">k ≥ 3</span> by a chain of productions of length two, introducing one new nonterminal per split. How many new nonterminals does the procedure introduce for the production <code class=\"mm\">S → ABCDE</code>?</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A right side of length <span class=\"mm\">k</span> is broken into <span class=\"mm\">k − 1</span> binary productions, and the first of them can keep the original left side, so <span class=\"mm\">k − 2</span> new nonterminals are needed.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Here <span class=\"mm\">k = 5</span>, so <span class=\"mm\">k − 2 = 3</span>.</li><li>Concretely: <span class=\"mm\">S → A X₁</span>, <span class=\"mm\">X₁ → B X₂</span>, <span class=\"mm\">X₂ → C X₃</span>, <span class=\"mm\">X₃ → D E</span>.</li><li>The new nonterminals are <span class=\"mm\">X₁, X₂, X₃</span> — three of them.</li><li>The other five productions are already of the form <span class=\"mm\">A → a</span>, so no terminal needs to be replaced and no further nonterminal is introduced.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 by assuming one new nonterminal per binary production, or 5 by assuming one per symbol. The first split keeps <span class=\"mm\">S</span> as the left side and the last group has two symbols, so the count is <span class=\"mm\">k − 2</span>.</p>",
+   "solution_plain": "Detailed solutionConcept. A right side of length k is broken into k − 1 binary productions, and the first of them can keep the original left side, so k − 2 new nonterminals are needed.Step by step.Here k = 5, so k − 2 = 3.Concretely: S → A X₁, X₁ → B X₂, X₂ → C X₃, X₃ → D E.The new nonterminals are X₁, X₂, X₃ — three of them.The other five productions are already of the form A → a, so no terminal needs to be replaced and no further nonterminal is introduced.Answer: 3Common misconception. Answering 4 by assuming one new nonterminal per binary production, or 5 by assuming one per symbol. The first split keeps S as the left side and the last group has two symbols, so the count is k − 2."
+  },
+  {
+   "id": "TOC-U2-Q92",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "A grammar has the productions S → ABC, A → a, B → b and C → c. It is converted to Chomsky Normal Form by the standard procedure: new nonterminals are introduced only where the form requires them, and no production is duplicated. How many productions does the resulting CNF grammar have?",
+   "question_html": "<p class=\"qtext\">A grammar has the productions <code class=\"mm\">S → ABC</code>, <code class=\"mm\">A → a</code>, <code class=\"mm\">B → b</code> and <code class=\"mm\">C → c</code>. It is converted to Chomsky Normal Form by the standard procedure: new nonterminals are introduced only where the form requires them, and no production is duplicated. How many productions does the resulting CNF grammar have?</p>",
+   "options": [
+    "4",
+    "6",
+    "7",
+    "5"
+   ],
+   "options_html": [
+    "4",
+    "6",
+    "7",
+    "5"
+   ],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "Option (D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Only two things in CNF conversion add productions: splitting a right side longer than two, and replacing a terminal that sits beside a nonterminal. Here the terminals already have nonterminals of their own, so only one split is needed.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The three terminal productions <span class=\"mm\">A → a</span>, <span class=\"mm\">B → b</span>, <span class=\"mm\">C → c</span> already have the CNF form; they are kept unchanged (3 productions).</li><li><span class=\"mm\">S → ABC</span> has length 3, so it is split once: <span class=\"mm\">S → A X</span> and <span class=\"mm\">X → B C</span>, with one new nonterminal <span class=\"mm\">X</span> (2 productions).</li><li>No right side contains a terminal beside a nonterminal, so no further nonterminal is introduced.</li><li>Total: <span class=\"mm\">3 + 2 = 5</span> productions.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D) — 5 productions.</span></p><p class=\"row\"><b>Common misconception.</b> Answering 4 by forgetting that <span class=\"mm\">S → ABC</span> cannot stay as it is, or 7 by inventing terminal nonterminals for <span class=\"mm\">a, b, c</span> that the grammar already provides as <span class=\"mm\">A, B, C</span>.</p>",
+   "solution_plain": "Detailed solutionConcept. Only two things in CNF conversion add productions: splitting a right side longer than two, and replacing a terminal that sits beside a nonterminal. Here the terminals already have nonterminals of their own, so only one split is needed.Step by step.The three terminal productions A → a, B → b, C → c already have the CNF form; they are kept unchanged (3 productions).S → ABC has length 3, so it is split once: S → A X and X → B C, with one new nonterminal X (2 productions).No right side contains a terminal beside a nonterminal, so no further nonterminal is introduced.Total: 3 + 2 = 5 productions.Answer: Option (D) — 5 productions.Common misconception. Answering 4 by forgetting that S → ABC cannot stay as it is, or 7 by inventing terminal nonterminals for a, b, c that the grammar already provides as A, B, C."
+  },
+  {
+   "id": "TOC-U2-Q93",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let G be a grammar in Chomsky Normal Form with no ε-productions, and let T be a complete derivation tree for a string w ∈ L(G) with |w| = n ≥ 2. Select every statement that is TRUE.",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">G</span> be a grammar in Chomsky Normal Form with no ε-productions, and let <span class=\"mm\">T</span> be a complete derivation tree for a string <span class=\"mm\">w ∈ L(G)</span> with <span class=\"mm\">|w| = n ≥ 2</span>. Select every statement that is TRUE.</p>",
+   "options": [
+    "Every internal node of T has exactly two children.",
+    "T has exactly n − 1 internal nodes.",
+    "The height of T is at least ⌈log₂ n⌉.",
+    "The height of T is at most ⌈log₂ n⌉."
+   ],
+   "options_html": [
+    "Every internal node of <span class=\"mm\">T</span> has exactly two children.",
+    "<span class=\"mm\">T</span> has exactly <span class=\"mm\">n − 1</span> internal nodes.",
+    "The height of <span class=\"mm\">T</span> is at least <span class=\"mm\">⌈log₂ n⌉</span>.",
+    "The height of <span class=\"mm\">T</span> is at most <span class=\"mm\">⌈log₂ n⌉</span>."
+   ],
+   "answer": [
+    0.0,
+    1.0,
+    2.0
+   ],
+   "answer_display": "Options (A, B and C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A CNF grammar with no ε-productions produces only binary and terminal productions, so every derivation tree is a full binary tree whose <span class=\"mm\">n</span> leaves are the terminals of <span class=\"mm\">w</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> <span class=\"mm\">A → BC</span> gives two children; <span class=\"mm\">A → a</span> creates a leaf, not an internal node.</li><li><b>(B) true.</b> A full binary tree with <span class=\"mm\">n</span> leaves has exactly <span class=\"mm\">n − 1</span> internal nodes — equivalently, the derivation uses <span class=\"mm\">2n − 1</span> productions in all.</li><li><b>(C) true.</b> A tree of height <span class=\"mm\">h</span> has at most <span class=\"mm\">2^h</span> leaves, so <span class=\"mm\">n ≤ 2^h</span> and <span class=\"mm\">h ≥ ⌈log₂ n⌉</span>.</li><li><b>(D) false.</b> The height can be far larger: the comb-shaped tree has height <span class=\"mm\">n − 1</span>, which for <span class=\"mm\">n = 8</span> is 7 against <span class=\"mm\">⌈log₂ 8⌉ = 3</span>. <span class=\"mm\">⌈log₂ n⌉</span> is a lower bound, not an upper one.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A, B and C).</span></p><p class=\"row\"><b>Common misconception.</b> Confusing a lower bound with an upper bound. <span class=\"mm\">⌈log₂ n⌉</span> is the <i>smallest</i> height a tree with <span class=\"mm\">n</span> leaves can have — the balanced shape — while a lopsided tree of the same string can be much taller.</p>",
+   "solution_plain": "Detailed solutionConcept. A CNF grammar with no ε-productions produces only binary and terminal productions, so every derivation tree is a full binary tree whose n leaves are the terminals of w.Step by step.(A) true. A → BC gives two children; A → a creates a leaf, not an internal node.(B) true. A full binary tree with n leaves has exactly n − 1 internal nodes — equivalently, the derivation uses 2n − 1 productions in all.(C) true. A tree of height h has at most 2^h leaves, so n ≤ 2^h and h ≥ ⌈log₂ n⌉.(D) false. The height can be far larger: the comb-shaped tree has height n − 1, which for n = 8 is 7 against ⌈log₂ 8⌉ = 3. ⌈log₂ n⌉ is a lower bound, not an upper one.Answer: Options (A, B and C).Common misconception. Confusing a lower bound with an upper bound. ⌈log₂ n⌉ is the smallest height a tree with n leaves can have — the balanced shape — while a lopsided tree of the same string can be much taller."
+  },
+  {
+   "id": "TOC-U2-Q94",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "cnf-gnf-normal-forms",
+   "subtopic": "cnf-gnf-normal-forms",
+   "subtopic_label": "CNF & GNF normal forms",
+   "type": "MCQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Which one of the following statements about Greibach Normal Form is TRUE?",
+   "question_html": "<p class=\"qtext\">Which one of the following statements about Greibach Normal Form is TRUE?</p>",
+   "options": [
+    "A grammar in Greibach Normal Form can derive ε only through a production S → ε, and only when S occurs on the right side of no production.",
+    "Every grammar in Greibach Normal Form is unambiguous.",
+    "In a grammar in Greibach Normal Form every right-hand side begins with a nonterminal.",
+    "A grammar in Greibach Normal Form may contain a unit production A → B."
+   ],
+   "options_html": [
+    "A grammar in Greibach Normal Form can derive <span class=\"mm\">ε</span> only through a production <span class=\"mm\">S → ε</span>, and only when <span class=\"mm\">S</span> occurs on the right side of no production.",
+    "Every grammar in Greibach Normal Form is unambiguous.",
+    "In a grammar in Greibach Normal Form every right-hand side begins with a nonterminal.",
+    "A grammar in Greibach Normal Form may contain a unit production <span class=\"mm\">A → B</span>."
+   ],
+   "answer": [
+    0.0
+   ],
+   "answer_display": "Option (A)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Greibach Normal Form requires every production to have the shape <span class=\"mm\">A → aα</span>, where <span class=\"mm\">a</span> is a terminal and <span class=\"mm\">α</span> is a possibly empty string of nonterminals. The only permitted exception is <span class=\"mm\">S → ε</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> Every ordinary production consumes at least one terminal, so <span class=\"mm\">ε</span> can only come from the single exception <span class=\"mm\">S → ε</span>. That exception is allowed only when <span class=\"mm\">ε ∈ L(G)</span> and <span class=\"mm\">S</span> is never used on a right side — otherwise a derivation could re-enter <span class=\"mm\">S</span> and the grammar could derive <span class=\"mm\">ε</span> in ways the normal form does not permit.</li><li><b>(B) false.</b> GNF removes left recursion and fixes the first symbol of every right side; it does not remove ambiguity. <code class=\"mm\">S → aSB | b, B → b</code> is in GNF and remains a starting point for ambiguous grammars over the same language.</li><li><b>(C) false.</b> Exactly the opposite: every right side <i>begins with a terminal</i>, which is what makes the next input symbol decide the production.</li><li><b>(D) false.</b> A unit production <span class=\"mm\">A → B</span> begins with a nonterminal, so it is not of the form <span class=\"mm\">aα</span> and is excluded.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Thinking that a normal form also settles ambiguity or determinism. Normal forms constrain the <i>shape</i> of the productions; they say nothing about how many derivation trees a string has.</p>",
+   "solution_plain": "Detailed solutionConcept. Greibach Normal Form requires every production to have the shape A → aα, where a is a terminal and α is a possibly empty string of nonterminals. The only permitted exception is S → ε.Step by step.(A) true. Every ordinary production consumes at least one terminal, so ε can only come from the single exception S → ε. That exception is allowed only when ε ∈ L(G) and S is never used on a right side — otherwise a derivation could re-enter S and the grammar could derive ε in ways the normal form does not permit.(B) false. GNF removes left recursion and fixes the first symbol of every right side; it does not remove ambiguity. S → aSB | b, B → b is in GNF and remains a starting point for ambiguous grammars over the same language.(C) false. Exactly the opposite: every right side begins with a terminal, which is what makes the next input symbol decide the production.(D) false. A unit production A → B begins with a nonterminal, so it is not of the form aα and is excluded.Answer: Option (A).Common misconception. Thinking that a normal form also settles ambiguity or determinism. Normal forms constrain the shape of the productions; they say nothing about how many derivation trees a string has."
+  },
+  {
+   "id": "TOC-U2-Q95",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let L be a context-free language over Σ = {a, b}. Which one of the following is necessarily context-free?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">L</span> be a context-free language over <span class=\"mm\">Σ = {a, b}</span>. Which one of the following is <b>necessarily</b> context-free?</p>",
+   "options": [
+    "the complement Σ* \\ L",
+    "L ∩ {ww : w ∈ {a, b}*}",
+    "L ∪ (Σ* \\ L)",
+    "{ww : w ∈ L}"
+   ],
+   "options_html": [
+    "the complement <span class=\"mm\">Σ* \\ L</span>",
+    "<span class=\"mm\">L ∩ {ww : w ∈ {a, b}*}</span>",
+    "<span class=\"mm\">L ∪ (Σ* \\ L)</span>",
+    "<span class=\"mm\">{ww : w ∈ L}</span>"
+   ],
+   "answer": [
+    2.0
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The context-free languages are closed under union, concatenation and Kleene star, but not under intersection or complementation. A union that swallows the whole alphabet is therefore safe even though the two parts of it are not individually well behaved.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(C) true.</b> <span class=\"mm\">L ∪ (Σ* \\ L) = Σ*</span> for every language <span class=\"mm\">L</span>, and <span class=\"mm\">Σ*</span> is regular, hence context-free. No property of <span class=\"mm\">L</span> is needed.</li><li><b>(A) false.</b> Complementation does not preserve context-freeness. If it did, closure under union and complementation would give closure under intersection, which fails.</li><li><b>(B) false.</b> Take <span class=\"mm\">L = Σ*</span>, which is context-free. Then <span class=\"mm\">L ∩ {ww} = {ww}</span>, and <span class=\"mm\">{ww : w ∈ {a, b}*}</span> is the standard non-context-free language.</li><li><b>(D) false.</b> With <span class=\"mm\">L = Σ*</span> the set <span class=\"mm\">{ww : w ∈ L}</span> is again <span class=\"mm\">{ww}</span>, which is not context-free.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that a set built out of a context-free language by set operations stays context-free. Only the listed operations are safe; complement and intersection are not, and doubling each half of a string is a classic way to destroy context-freeness.</p>",
+   "solution_plain": "Detailed solutionConcept. The context-free languages are closed under union, concatenation and Kleene star, but not under intersection or complementation. A union that swallows the whole alphabet is therefore safe even though the two parts of it are not individually well behaved.Step by step.(C) true. L ∪ (Σ* \\ L) = Σ* for every language L, and Σ* is regular, hence context-free. No property of L is needed.(A) false. Complementation does not preserve context-freeness. If it did, closure under union and complementation would give closure under intersection, which fails.(B) false. Take L = Σ*, which is context-free. Then L ∩ {ww} = {ww}, and {ww : w ∈ {a, b}*} is the standard non-context-free language.(D) false. With L = Σ* the set {ww : w ∈ L} is again {ww}, which is not context-free.Answer: Option (C).Common misconception. Assuming that a set built out of a context-free language by set operations stays context-free. Only the listed operations are safe; complement and intersection are not, and doubling each half of a string is a classic way to destroy context-freeness."
+  },
+  {
+   "id": "TOC-U2-Q96",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let L₁ = {aⁿbⁿ : n ≥ 0} and L₂ = {cⁿdⁿ : n ≥ 0}, both read over the alphabet {a, b, c, d}. Which one of the following is TRUE?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">L₁ = {aⁿbⁿ : n ≥ 0}</span> and <span class=\"mm\">L₂ = {cⁿdⁿ : n ≥ 0}</span>, both read over the alphabet <span class=\"mm\">{a, b, c, d}</span>. Which one of the following is TRUE?</p>",
+   "options": [
+    "only L₁ ∪ L₂ is context-free",
+    "only L₁ ∩ L₂ is context-free",
+    "both L₁ ∪ L₂ and L₁ ∩ L₂ are context-free",
+    "neither L₁ ∪ L₂ nor L₁ ∩ L₂ is context-free"
+   ],
+   "options_html": [
+    "only <span class=\"mm\">L₁ ∪ L₂</span> is context-free",
+    "only <span class=\"mm\">L₁ ∩ L₂</span> is context-free",
+    "both <span class=\"mm\">L₁ ∪ L₂</span> and <span class=\"mm\">L₁ ∩ L₂</span> are context-free",
+    "neither <span class=\"mm\">L₁ ∪ L₂</span> nor <span class=\"mm\">L₁ ∩ L₂</span> is context-free"
+   ],
+   "answer": [
+    2.0
+   ],
+   "answer_display": "Option (C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Union of two context-free languages is always context-free. Intersection is not preserved in general, but here the two languages use disjoint alphabets, so their intersection collapses to a single short string.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>The union.</b> <span class=\"mm\">L₁</span> and <span class=\"mm\">L₂</span> are each context-free, and the context-free languages are closed under union, so <span class=\"mm\">L₁ ∪ L₂</span> is context-free.</li><li><b>The intersection.</b> Every string of <span class=\"mm\">L₁</span> uses only <span class=\"mm\">a</span> and <span class=\"mm\">b</span>; every string of <span class=\"mm\">L₂</span> uses only <span class=\"mm\">c</span> and <span class=\"mm\">d</span>.</li><li>The only string in both is <span class=\"mm\">ε</span>, so <span class=\"mm\">L₁ ∩ L₂ = {ε}</span>, which is finite and therefore regular, hence context-free.</li><li>Both languages are context-free.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C) — both are context-free.</span></p><p class=\"row\"><b>Common misconception.</b> Applying the general fact \"context-free languages are not closed under intersection\" as if it said every intersection fails. Non-closure only guarantees that <i>some</i> intersection is outside the class; a particular intersection may well be context-free.</p>",
+   "solution_plain": "Detailed solutionConcept. Union of two context-free languages is always context-free. Intersection is not preserved in general, but here the two languages use disjoint alphabets, so their intersection collapses to a single short string.Step by step.The union. L₁ and L₂ are each context-free, and the context-free languages are closed under union, so L₁ ∪ L₂ is context-free.The intersection. Every string of L₁ uses only a and b; every string of L₂ uses only c and d.The only string in both is ε, so L₁ ∩ L₂ = {ε}, which is finite and therefore regular, hence context-free.Both languages are context-free.Answer: Option (C) — both are context-free.Common misconception. Applying the general fact \"context-free languages are not closed under intersection\" as if it said every intersection fails. Non-closure only guarantees that some intersection is outside the class; a particular intersection may well be context-free."
+  },
+  {
+   "id": "TOC-U2-Q97",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "NAT",
+   "difficulty": "medium",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let L = {aⁿbⁿcᵐ : n ≥ 0, m ≥ 0} over the alphabet {a, b, c}. How many strings of length 5 belong to L?",
+   "question_html": "<p class=\"qtext\">Let <span class=\"mm\">L = {aⁿbⁿcᵐ : n ≥ 0, m ≥ 0}</span> over the alphabet <span class=\"mm\">{a, b, c}</span>. How many strings of length 5 belong to <span class=\"mm\">L</span>?</p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    3.0
+   ],
+   "answer_display": "3",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every string of <span class=\"mm\">L</span> is fixed by its two counts: <span class=\"mm\">n</span> <span class=\"mm\">a</span>'s followed by <span class=\"mm\">n</span> <span class=\"mm\">b</span>'s followed by <span class=\"mm\">m</span> <span class=\"mm\">c</span>'s. Its length is <span class=\"mm\">2n + m</span>, and for a fixed pair <span class=\"mm\">(n, m)</span> there is exactly one string.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Set <span class=\"mm\">2n + m = 5</span> with <span class=\"mm\">n, m ≥ 0</span>.</li><li><span class=\"mm\">n = 0</span> gives <span class=\"mm\">m = 5</span>: the string <span class=\"mm\">ccccc</span>.</li><li><span class=\"mm\">n = 1</span> gives <span class=\"mm\">m = 3</span>: the string <span class=\"mm\">abccc</span>.</li><li><span class=\"mm\">n = 2</span> gives <span class=\"mm\">m = 1</span>: the string <span class=\"mm\">aabbc</span>.</li><li><span class=\"mm\">n ≥ 3</span> would need <span class=\"mm\">m &lt; 0</span>, which is not allowed. So there are exactly 3 strings.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 3</span></p><p class=\"row\"><b>Common misconception.</b> Counting arrangements of <span class=\"mm\">a</span>'s, <span class=\"mm\">b</span>'s and <span class=\"mm\">c</span>'s and multiplying by binomial coefficients. The language fixes the order — all <span class=\"mm\">a</span>'s, then all <span class=\"mm\">b</span>'s, then all <span class=\"mm\">c</span>'s — so each legal pair <span class=\"mm\">(n, m)</span> gives exactly one string.</p>",
+   "solution_plain": "Detailed solutionConcept. Every string of L is fixed by its two counts: n a's followed by n b's followed by m c's. Its length is 2n + m, and for a fixed pair (n, m) there is exactly one string.Step by step.Set 2n + m = 5 with n, m ≥ 0.n = 0 gives m = 5: the string ccccc.n = 1 gives m = 3: the string abccc.n = 2 gives m = 1: the string aabbc.n ≥ 3 would need m &lt; 0, which is not allowed. So there are exactly 3 strings.Answer: 3Common misconception. Counting arrangements of a's, b's and c's and multiplying by binomial coefficients. The language fixes the order — all a's, then all b's, then all c's — so each legal pair (n, m) gives exactly one string."
+  },
+  {
+   "id": "TOC-U2-Q98",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Consider these seven languages over the alphabet {a, b, c, d}. How many of them are context-free?(i) {aⁿbⁿ : n ≥ 0}(ii) {aⁿbⁿcⁿ : n ≥ 0}(iii) {ww : w ∈ {a, b}*}(iv) {aⁱbʲ : i ≠ j, i, j ≥ 0}(v) {aⁿbⁿcᵐ : n, m ≥ 0}(vi) {aⁿbⁿcⁿdⁿ : n ≥ 0}(vii) {aⁿbⁿcᵐdᵐ : n, m ≥ 0}",
+   "question_html": "<p class=\"qtext\">Consider these seven languages over the alphabet <span class=\"mm\">{a, b, c, d}</span>. How many of them are context-free?<br/>(i) <span class=\"mm\">{aⁿbⁿ : n ≥ 0}</span><br/>(ii) <span class=\"mm\">{aⁿbⁿcⁿ : n ≥ 0}</span><br/>(iii) <span class=\"mm\">{ww : w ∈ {a, b}*}</span><br/>(iv) <span class=\"mm\">{aⁱbʲ : i ≠ j, i, j ≥ 0}</span><br/>(v) <span class=\"mm\">{aⁿbⁿcᵐ : n, m ≥ 0}</span><br/>(vi) <span class=\"mm\">{aⁿbⁿcⁿdⁿ : n ≥ 0}</span><br/>(vii) <span class=\"mm\">{aⁿbⁿcᵐdᵐ : n, m ≥ 0}</span></p>",
+   "options": [],
+   "options_html": [],
+   "answer": [
+    4.0
+   ],
+   "answer_display": "4",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A context-free language may enforce one matched count at a time; the moment two independent counts must agree, the language usually leaves the class. A single stack cannot verify two independent balances.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(i) context-free.</b> <span class=\"mm\">S → aSb | ε</span>.</li><li><b>(ii) not context-free.</b> Three matched counts; the pumping lemma on <span class=\"mm\">aᵖbᵖcᵖ</span> breaks every decomposition.</li><li><b>(iii) not context-free.</b> The copy language <span class=\"mm\">{ww}</span> is the standard example — the machine would have to remember an unbounded prefix.</li><li><b>(iv) context-free.</b> It is the union of <span class=\"mm\">{aⁱbʲ : i &lt; j}</span> and <span class=\"mm\">{aⁱbʲ : i &gt; j}</span>, each generated by a small grammar; the class is closed under union.</li><li><b>(v) context-free.</b> <span class=\"mm\">S → aSb | C</span>, <span class=\"mm\">C → cC | ε</span>: the <span class=\"mm\">c</span>'s are free after the matched block.</li><li><b>(vi) not context-free.</b> Four matched counts, and already three of them would be too many.</li><li><b>(vii) context-free.</b> It is the concatenation of <span class=\"mm\">{aⁿbⁿ}</span> and <span class=\"mm\">{cᵐdᵐ}</span>, and the class is closed under concatenation: <span class=\"mm\">S → XY</span>, <span class=\"mm\">X → aXb | ε</span>, <span class=\"mm\">Y → cYd | ε</span>. The two balances run one after the other, never at the same time.</li><li>Context-free: (i), (iv), (v) and (vii) — <b>4</b> of the seven.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that any language with two matched pairs is outside the class. What matters is whether the two balances must be checked <i>at the same time</i>. In (vii) the <span class=\"mm\">a = b</span> block finishes before the <span class=\"mm\">c = d</span> block begins, so one stack suffices; in a language such as <span class=\"mm\">{aⁿbᵐcⁿdᵐ}</span> the two balances are interleaved and it does not.</p>",
+   "solution_plain": "Detailed solutionConcept. A context-free language may enforce one matched count at a time; the moment two independent counts must agree, the language usually leaves the class. A single stack cannot verify two independent balances.Step by step.(i) context-free. S → aSb | ε.(ii) not context-free. Three matched counts; the pumping lemma on aᵖbᵖcᵖ breaks every decomposition.(iii) not context-free. The copy language {ww} is the standard example — the machine would have to remember an unbounded prefix.(iv) context-free. It is the union of {aⁱbʲ : i &lt; j} and {aⁱbʲ : i &gt; j}, each generated by a small grammar; the class is closed under union.(v) context-free. S → aSb | C, C → cC | ε: the c's are free after the matched block.(vi) not context-free. Four matched counts, and already three of them would be too many.(vii) context-free. It is the concatenation of {aⁿbⁿ} and {cᵐdᵐ}, and the class is closed under concatenation: S → XY, X → aXb | ε, Y → cYd | ε. The two balances run one after the other, never at the same time.Context-free: (i), (iv), (v) and (vii) — 4 of the seven.Answer: 4Common misconception. Assuming that any language with two matched pairs is outside the class. What matters is whether the two balances must be checked at the same time. In (vii) the a = b block finishes before the c = d block begins, so one stack suffices; in a language such as {aⁿbᵐcⁿdᵐ} the two balances are interleaved and it does not."
+  },
+  {
+   "id": "TOC-U2-Q99",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Let DCFL denote the class of languages accepted by some deterministic pushdown automaton. Select every statement that is TRUE.",
+   "question_html": "<p class=\"qtext\">Let <b>DCFL</b> denote the class of languages accepted by some deterministic pushdown automaton. Select every statement that is TRUE.</p>",
+   "options": [
+    "Every language in DCFL is context-free.",
+    "DCFL is closed under complementation.",
+    "DCFL is closed under union.",
+    "Every language in DCFL has an unambiguous context-free grammar."
+   ],
+   "options_html": [
+    "Every language in DCFL is context-free.",
+    "DCFL is closed under complementation.",
+    "DCFL is closed under union.",
+    "Every language in DCFL has an unambiguous context-free grammar."
+   ],
+   "answer": [
+    0.0,
+    1.0,
+    3.0
+   ],
+   "answer_display": "Options (A, B and D)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A deterministic pushdown automaton is a special case of a nondeterministic one, so DCFL sits inside the context-free languages. Determinism buys some closure properties and costs others.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> Every DPDA is an NPDA, so <span class=\"mm\">DCFL ⊆ CFL</span>.</li><li><b>(B) true.</b> DCFL is one of the classes where complementation is preserved — swap the accepting and non-accepting states of a DPDA that never gets stuck. This is a genuine contrast with the context-free languages, which are not closed under complementation.</li><li><b>(C) false.</b> The union of two deterministic context-free languages need not be deterministic: <span class=\"mm\">{aⁿbⁿ : n ≥ 1} ∪ {aⁿb²ⁿ : n ≥ 1}</span> is not accepted by any DPDA.</li><li><b>(D) true.</b> A DPDA has at most one run on each input, so a single derivation tree per string can be read off it. Determinism always implies the existence of an unambiguous grammar.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A, B and D).</span></p><p class=\"row\"><b>Common misconception.</b> Assuming that a class closed under complementation must also be closed under union, or the reverse. Closure properties come in independent pairs; DCFL has complementation but not union, while CFL has union but not complementation.</p>",
+   "solution_plain": "Detailed solutionConcept. A deterministic pushdown automaton is a special case of a nondeterministic one, so DCFL sits inside the context-free languages. Determinism buys some closure properties and costs others.Step by step.(A) true. Every DPDA is an NPDA, so DCFL ⊆ CFL.(B) true. DCFL is one of the classes where complementation is preserved — swap the accepting and non-accepting states of a DPDA that never gets stuck. This is a genuine contrast with the context-free languages, which are not closed under complementation.(C) false. The union of two deterministic context-free languages need not be deterministic: {aⁿbⁿ : n ≥ 1} ∪ {aⁿb²ⁿ : n ≥ 1} is not accepted by any DPDA.(D) true. A DPDA has at most one run on each input, so a single derivation tree per string can be read off it. Determinism always implies the existence of an unambiguous grammar.Answer: Options (A, B and D).Common misconception. Assuming that a class closed under complementation must also be closed under union, or the reverse. Closure properties come in independent pairs; DCFL has complementation but not union, while CFL has union but not complementation."
+  },
+  {
+   "id": "TOC-U2-Q100",
+   "subject": "theory-of-computation",
+   "subject_name": "Theory of Computation",
+   "unit": 2,
+   "unit_number": 2,
+   "unit_slug": "cfl-grammars",
+   "unit_name": "Grammars & Context-Free Languages",
+   "topic": "Grammars & Context-Free Languages",
+   "sub": "closure-properties-cfl",
+   "subtopic": "closure-properties-cfl",
+   "subtopic_label": "Closure properties of CFLs",
+   "type": "MSQ",
+   "difficulty": "hard",
+   "reference_category": "Original synthesis",
+   "source": "ORIGINAL_SYNTHESIS",
+   "date": "2026-10-31",
+   "set": "Set 1 of 2 (third pass)",
+   "question": "Select every statement about the closure properties of the context-free languages that is TRUE.",
+   "question_html": "<p class=\"qtext\">Select every statement about the closure properties of the context-free languages that is TRUE.</p>",
+   "options": [
+    "They are closed under intersection with a regular language, but not under intersection in general.",
+    "If L₁ is context-free and L₂ is not, then L₁ ∩ L₂ is not context-free.",
+    "The union of a context-free language with a non-context-free language can be context-free.",
+    "If L₁ ⊆ L₂ and L₂ is context-free, then L₁ is context-free."
+   ],
+   "options_html": [
+    "They are closed under intersection with a regular language, but not under intersection in general.",
+    "If <span class=\"mm\">L₁</span> is context-free and <span class=\"mm\">L₂</span> is not, then <span class=\"mm\">L₁ ∩ L₂</span> is not context-free.",
+    "The union of a context-free language with a non-context-free language can be context-free.",
+    "If <span class=\"mm\">L₁ ⊆ L₂</span> and <span class=\"mm\">L₂</span> is context-free, then <span class=\"mm\">L₁</span> is context-free."
+   ],
+   "answer": [
+    0.0,
+    2.0
+   ],
+   "answer_display": "Options (A and C)",
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Closure is a statement about the class as a whole, never about one particular pair of languages. A property can fail for the class and still hold for the pair in front of you.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><b>(A) true.</b> Intersecting with a regular language means running the pushdown automaton and the finite automaton together, which is again a pushdown automaton. Intersecting two context-free languages would need two stacks, and <span class=\"mm\">{aⁿbⁿcᵐ} ∩ {aᵐbⁿcⁿ} = {aⁿbⁿcⁿ}</span> shows the failure.</li><li><b>(B) false.</b> Take <span class=\"mm\">L₁ = Σ*</span>, which is context-free, and any non-context-free <span class=\"mm\">L₂</span>. Then <span class=\"mm\">L₁ ∩ L₂ = L₂</span>, which is not context-free — but take instead <span class=\"mm\">L₁ = {aⁿbⁿ}</span> and <span class=\"mm\">L₂</span> a non-context-free language disjoint from it, and the intersection is <span class=\"mm\">∅</span>, which is context-free. The conclusion does not follow.</li><li><b>(C) true.</b> Let <span class=\"mm\">N</span> be any non-context-free language over <span class=\"mm\">{a, b}</span>, for instance <span class=\"mm\">{ww}</span>, and take <span class=\"mm\">L = Σ*</span>. Then <span class=\"mm\">L ∪ N = Σ*</span>, which is regular and hence context-free. A union can hide a non-context-free part completely.</li><li><b>(D) false.</b> Subsets of a context-free language are arbitrary. <span class=\"mm\">{ww}</span> is a subset of <span class=\"mm\">Σ*</span>, which is context-free, yet <span class=\"mm\">{ww}</span> is not.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A and C).</span></p><p class=\"row\"><b>Common misconception.</b> Treating \"not closed under intersection\" as \"every intersection is outside the class\", and \"closed under union\" as \"a union tells you what its parts were\". Neither is true: closure describes what is guaranteed for all inputs, not what happens in one example.</p>",
+   "solution_plain": "Detailed solutionConcept. Closure is a statement about the class as a whole, never about one particular pair of languages. A property can fail for the class and still hold for the pair in front of you.Step by step.(A) true. Intersecting with a regular language means running the pushdown automaton and the finite automaton together, which is again a pushdown automaton. Intersecting two context-free languages would need two stacks, and {aⁿbⁿcᵐ} ∩ {aᵐbⁿcⁿ} = {aⁿbⁿcⁿ} shows the failure.(B) false. Take L₁ = Σ*, which is context-free, and any non-context-free L₂. Then L₁ ∩ L₂ = L₂, which is not context-free — but take instead L₁ = {aⁿbⁿ} and L₂ a non-context-free language disjoint from it, and the intersection is ∅, which is context-free. The conclusion does not follow.(C) true. Let N be any non-context-free language over {a, b}, for instance {ww}, and take L = Σ*. Then L ∪ N = Σ*, which is regular and hence context-free. A union can hide a non-context-free part completely.(D) false. Subsets of a context-free language are arbitrary. {ww} is a subset of Σ*, which is context-free, yet {ww} is not.Answer: Options (A and C).Common misconception. Treating \"not closed under intersection\" as \"every intersection is outside the class\", and \"closed under union\" as \"a union tells you what its parts were\". Neither is true: closure describes what is guaranteed for all inputs, not what happens in one example."
   }
  ]
 }
