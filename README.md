@@ -7,35 +7,73 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Discrete Mathematics · Unit 10 — Graph Theory Advanced, Set 2 of 2**, 2026-10-31 →
-  [`discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html`](discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html)
+- **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 2 of 2**, 2026-10-31 →
+  [`algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`](algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: Eulerian & Hamiltonian graphs (5) · Planarity & Euler's formula (5) · Colouring & chromatic number (5) ·
-  Trees & spanning trees (5) · Network flows (5)
-- Rotation: MODE A. Every one of the eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the
-  three subjects whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions),
-  Computer Architecture (Unit 5, 25) and Discrete Mathematics (Unit 10, 25) — with an unseeded `secrets.choice`, and
-  returned **Discrete Mathematics**. Its most recent run was `{2026-10-31, unit 10, graph-theory-advanced, Set 1 of
-  2}`; Unit 10 held 25 questions, so step B3 held and the unit was generated again as **Set 2 of 2**. Unit 10 now
-  holds 50 questions, exactly the cap, so the next Discrete Mathematics run advances to Unit 11, Boolean Algebra &
-  Switching Logic. No override, no partial set.
+- Subtopics: BFS/DFS & edge classification (7) · Topological sort (6) · Prim's algorithm (6) · Kruskal's algorithm &
+  disjoint sets (6)
+- Rotation: MODE A. All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the two subjects
+  whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions) and Computer
+  Architecture (Unit 5, 25) — with an unseeded `secrets.choice`, and returned **Algorithms**. Its most recent run was
+  `{2026-10-31, unit 5, graph-algorithms-traversals-mst, Set 1 of 2}`; Unit 5 held 25 questions, so step B3 held and
+  the unit was generated again as **Set 2 of 2**. Unit 5 now holds 50 questions, exactly the cap, so the next
+  Algorithms run advances: `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph
+  Algorithms: Shortest Paths**. No override, no partial set.
 - The Set 1 paper of the same date was moved to
-  [`archive/gate_dm_mock_10_2026-10-31_run1.html`](discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html)
+  [`archive/gate_algo_mock_5_2026-10-31_run1.html`](algorithms/graph-algorithms-traversals-mst/archive/gate_algo_mock_5_2026-10-31_run1.html)
   with its content frozen, so the unit folder holds exactly one current paper.
-- Previous test: **Discrete Mathematics · Unit 10 — Graph Theory Advanced, Set 1 of 2**, 2026-10-31 →
-  [`archive/gate_dm_mock_10_2026-10-31_run1.html`](discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html)
+- Previous test: **Algorithms · Unit 5 — Graph Algorithms: Traversals & Spanning Trees, Set 1 of 2**, 2026-10-31 →
+  [`archive/gate_algo_mock_5_2026-10-31_run1.html`](algorithms/graph-algorithms-traversals-mst/archive/gate_algo_mock_5_2026-10-31_run1.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 138 (23 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 60 current · 78 archived |
+| Papers published (current + archived) | 139 (23 Discrete Mathematics, 10 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 11 Engineering Mathematics, 12 Programming and Data Structures, 14 Computer Networks, 15 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 60 current · 79 archived |
 | Test cards on the portal | 78 (one card per current paper; superseded sets are links on that card. An earlier run folded the legacy 2026-10-27 Computer Networks Unit 2 card into its current card, the same way the two legacy Unit 1 archive cards were folded) |
 | Units covered | 11 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3450 (575 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3475 (575 Discrete Mathematics, 250 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 275 Engineering Mathematics, 300 Programming and Data Structures, 350 Computer Networks, 375 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 78 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 79 (12 Discrete Mathematics, 11 Operating Systems, 11 Theory of Computation, 8 Compiler Design, 6 Engineering Mathematics, 6 Programming and Data Structures, 8 Computer Networks, 5 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Algorithms Unit 5, Set 2 of 2
+
+- New paper at `algorithms/graph-algorithms-traversals-mst/gate_algo_mock_5_2026-10-31.html`. The unit folder held the
+  Set 1 paper of the same date, which was moved to `archive/gate_algo_mock_5_2026-10-31_run1.html` with its content
+  frozen (same questions, options, answers, solutions and duration); the folder now holds exactly one current paper
+  and the repository root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over
+  the two subjects whose current unit was still below `UNIT_QUESTION_CAP = 50` — Algorithms (Unit 5, 25 questions) and
+  Computer Architecture (Unit 5, 25) — with an unseeded `secrets.choice` and returned **Algorithms**. `runs[]` gave
+  the most recent paper as `{2026-10-31, unit 5, graph-algorithms-traversals-mst, Set 1 of 2}`. Unit 5 held **25**
+  questions, below the cap, and had been current for **0** days, so step B3 held and the unit was generated again as
+  **Set 2 of 2**. Unit 5 now holds **50** questions, exactly the cap, so the next Algorithms run advances:
+  `(index_of(graph-algorithms-traversals-mst) = 4 + 1) mod 7 = 5` → **Unit 6, Graph Algorithms: Shortest Paths**. No
+  override was used and no partial set was generated.
+- Coverage: all four Unit 5 subtopics — BFS/DFS & edge classification (7); topological sort (6); Prim's algorithm (6);
+  Kruskal's algorithm & disjoint sets (6). Composition 15 MCQ / 5 MSQ / 5 NAT; difficulty 10 easy / 10 medium / 5
+  hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking, MSQ all-or-nothing. Practice scheme, not
+  the official GATE scheme.
+- All 25 ids are new (`ALG-U5-S2-Q01` … `ALG-U5-S2-Q25`) and none collides with the 225 items already banked for
+  Algorithms. Set 1 had already used the discovery-order trace, the non-tree-edge formula `m − n + 1`, the directed
+  edge-classification trace on a five-vertex graph, the `d[u] < d[v]` test, Kahn with a min-priority ready set, the
+  five-vertex linear-extension count, the full Prim run from a stated root, the distinct-MST count, the first
+  rejected Kruskal edge and a seven-vertex run; Set 2 therefore works different graphs and different invariants — BFS
+  level counts and a distance sum, the grey/black test that separates a forward edge from a cross edge, the
+  at-most-one-level gap of a non-tree edge, Kahn with a FIFO queue, the Hamiltonian-path characterisation of
+  uniqueness, the heap and matrix running times of Prim, the cycle property, the height bound of union by rank and a
+  union-by-size trace. Every computed answer was re-derived by script (BFS levels, DFS edge classes, Kahn output,
+  linear-extension counts by exhaustive permutation, Prim's run, Kruskal's total, union-by-size parent pointers).
+- Interface: the paper is generated from the Set 1 shell, so the `:root` token block, the whole `<style>` block, the
+  palette, the answer-key view, the footer and the entire application script are byte-identical to the archived Set 1;
+  only the 25 question cards, the question-bank payload, the About text and the metadata differ. Mock Test Mode holds:
+  no answer, option mark or solution is rendered before Submit.
+- Question Bank tab: **225** solved questions (the 225 banked before this run, grouped under Units 1–5), 0 verified
+  GATE PYQs, and the active 25 are not repeated there. Portal: the Algorithms Unit 5 card now reads *Set 2 of 2* and
+  links Set 1 (2026-10-31) from `archive/`; `data/questions-algorithms.js` gains the 25 new records.
+- No verified official PYQ exists for this unit, so none is claimed: nothing on this paper is presented as an
+  official GATE question.
 
 ### 2026-10-31 — Discrete Mathematics Unit 10, Set 2 of 2
 
