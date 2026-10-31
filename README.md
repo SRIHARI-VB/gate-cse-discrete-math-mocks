@@ -7,33 +7,86 @@ and no answer, option mark or hint visible until the test is submitted.
 
 ## Latest test
 
-- **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
-  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
+- **Compiler Design · Unit 3 — Syntax Analysis: Bottom-Up Parsing, Set 1 of 2 (second pass)**, 2026-10-31 →
+  [`compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html`](compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html)
 - 25 questions: 15 MCQ · 5 MSQ · 5 NAT · difficulty 10 easy / 10 medium / 5 hard · 60 minutes · 35 marks
-- Subtopics: pipeline stages and throughput (7) · structural hazards (6) · data hazards and forwarding (6) ·
-  control hazards and branch penalty (6)
-- Rotation: MODE A. Six subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining five
-  and `random.Random("2026-10-31|run7").choice` gave **Computer Architecture**, whose most recent run is
-  `{2026-10-30, run 6, unit 4, memory-management-unit, Set 2 of 2}`. Unit 4 held **50** questions, at
+- Subtopics: LR(0) items and the canonical collection (7) · SLR(1) parsing and conflicts (6) · LR(1) and LALR(1)
+  parsers (6) · operator-precedence parsing (6)
+- Rotation: MODE A. Seven subjects already carried a paper dated 2026-10-31, so the draw ran over the remaining four
+  (Compiler Design, Discrete Mathematics, Engineering Mathematics, Theory of Computation) and
+  `random.Random("2026-10-31|run8").choice` gave **Compiler Design**, whose most recent run is
+  `{2026-10-30, run 12, unit 2, top-down-parsing, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
   `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
-  `(index_of(memory-management-unit) = 3 + 1) mod 6 = 4` → **Unit 5 — Instruction Pipelining**, which held 0
-  questions. First set of 2; no override, no partial set.
-- The Unit 5 folder was empty, so nothing was archived; it now holds exactly one current paper and the repository
-  root holds no copy.
-- Previous test: **Digital Logic · Unit 1 — Number Systems & Representation, Set 1 of 2 (second pass)**, 2026-10-31 →
-  [`digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html`](digital-logic/number-systems/gate_dl_mock_1_2026-10-31.html)
+  `(index_of(top-down-parsing) = 1 + 1) mod 5 = 2` → **Unit 3 — Syntax Analysis: Bottom-Up Parsing**, which held 50
+  questions from the first pass. Every unit of the subject is at or above the cap, so step B5 applies: the second
+  pass continues and Unit 3 takes the first set of that pass. No override, no partial set.
+- The 2026-10-28 paper was moved to `archive/gate_cd_mock_3_2026-10-28_run2.html` with its content frozen, so the
+  unit folder holds exactly one current paper and the repository root holds no copy.
+- Previous test: **Computer Architecture · Unit 5 — Instruction Pipelining, Set 1 of 2**, 2026-10-31 →
+  [`computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html`](computer-architecture/pipelining/gate_co_mock_5_2026-10-31.html)
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Papers published (current + archived) | 128 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 12 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
-| Current papers / archived sets | 59 current · 69 archived |
+| Papers published (current + archived) | 129 (20 Discrete Mathematics, 9 Algorithms, 8 Databases, 13 Compiler Design, 17 Operating Systems, 10 Engineering Mathematics, 12 Programming and Data Structures, 11 Computer Networks, 13 Theory of Computation, 9 Digital Logic, 7 Computer Architecture) |
+| Current papers / archived sets | 59 current · 70 archived |
 | Test cards on the portal | 77 (one card per published unit-date; superseded sets are links on that card) |
 | Units covered | 10 of 16 in Discrete Mathematics; 5 of 7 in Algorithms; 4 of 5 in Databases; 5 of 5 in Compiler Design; 6 of 6 in Operating Systems; 5 of 5 in Engineering Mathematics; 6 of 7 in Programming and Data Structures; 6 of 6 in Computer Networks; 4 of 4 in Theory of Computation; 4 of 4 in Digital Logic; 4 of 6 in Computer Architecture |
-| Questions in the subject banks | 3200 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 300 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
+| Questions in the subject banks | 3225 (500 Discrete Mathematics, 225 Algorithms, 200 Databases, 325 Compiler Design, 425 Operating Systems, 250 Engineering Mathematics, 300 Programming and Data Structures, 275 Computer Networks, 325 Theory of Computation, 225 Digital Logic, 175 Computer Architecture) |
 | Verified official PYQs | 6 (2 Discrete Mathematics, 1 Databases, 1 Operating Systems, 2 Digital Logic) |
-| Archived sets (earlier runs) | 69 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 7 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+| Archived sets (earlier runs) | 70 (10 Discrete Mathematics, 11 Operating Systems, 9 Theory of Computation, 8 Compiler Design, 5 Engineering Mathematics, 6 Programming and Data Structures, 5 Computer Networks, 4 Algorithms, 4 Databases, 5 Digital Logic, 3 Computer Architecture) |
+
+### 2026-10-31 — Compiler Design Unit 3, Set 1 of 2 (second pass)
+
+- New paper at `compiler-design/bottom-up-parsing/gate_cd_mock_3_2026-10-31.html`. The unit folder held the
+  2026-10-28 paper, which was moved to `archive/gate_cd_mock_3_2026-10-28_run2.html` with its content frozen (same
+  questions, options, answers, solutions and duration); `archive/` now holds `gate_cd_mock_3_2026-10-27_run1.html`
+  and that run2 file, so the folder holds exactly one current paper and the root still holds only `index.html`.
+- **Rotation (Section 1, MODE A).** Algorithms, Computer Architecture, Computer Networks, Databases, Digital Logic,
+  Operating Systems and Programming and Data Structures already carry a paper dated 2026-10-31, so the draw ran over
+  the remaining four (Compiler Design, Discrete Mathematics, Engineering Mathematics, Theory of Computation) with
+  `random.Random("2026-10-31|run8").choice` and returned **Compiler Design**. `runs[]` gave the most recent paper as
+  `{2026-10-30, run 12, unit 2, top-down-parsing, Set 1 of 2 (second pass)}`. Unit 2 held **75** questions, above
+  `UNIT_QUESTION_CAP = 50`, so step B3 failed on the cap and step B4 advanced
+  `(index_of(top-down-parsing) = 1 + 1) mod 5 = 2` → **Unit 3, Syntax Analysis: Bottom-Up Parsing**. Unit 3 held 50
+  questions (its first-pass sets), and units 3, 4 and 5 are all at the cap while units 1 and 2 are above it, so step
+  B5 applies: the modulo has wrapped and the second pass continues. Unit 3 receives the first set of that pass, its
+  third set overall, and goes from 50 to 75 questions. No override was used and no partial set was generated.
+- Coverage: all four Unit 3 subtopics — LR(0) items and the canonical collection (7); SLR(1) parsing and conflicts
+  (6); LR(1) and LALR(1) parsers (6); operator-precedence parsing (6). Composition 15 MCQ / 5 MSQ / 5 NAT;
+  difficulty 10 easy / 10 medium / 5 hard; marks 15 × 1 + 10 × 2 = **35** in 60 minutes, no negative marking.
+- All 25 ids are new (`CD-U3-Q51` … `CD-U3-Q75`); no id and no normalised stem collides with the 50 first-pass Unit 3
+  items or with any of the other 300 banked Compiler Design questions. The subject bank now holds **325** questions
+  and the paper's Question Bank tab shows the 300 that are not on it, so the active set does not reappear there.
+- Every question carries `data-subject="compiler-design"`, `data-unit="bottom-up-parsing"`,
+  `data-unit-number="3"`, `data-subtopic`, `data-type`, `data-difficulty` and `data-source`; the 25 test cards and the
+  300 bank cards both carry the full set. Difficulty is lowercase in the attributes, in the bank and in the portal
+  data, and the UI capitalises it with CSS.
+- `data/questions-compiler-design.js` and the portal `data` block were extended, not rebuilt: the unit 3 card was
+  replaced by the 2026-10-31 one, whose `archives` list now carries Set 1 (2026-10-27) and Set 2 (2026-10-28) of the
+  first pass, so the archive view offers both practice buttons for Unit 3 and reports 75 solved questions for it.
+  The 25 new records were appended to the subject's question file; the portal's test-card count stays at 77 because
+  one card was replaced, not added.
+- Shell parity: the `<style>` block, the script and the body structure of this paper are byte-identical to
+  `compiler-design/top-down-parsing/gate_cd_mock_2_2026-10-30.html` once the payload regions (title, header sub-line,
+  meta date, Question Bank tab count, question host, Question Bank and About tabs, and the answer payload) are
+  masked; measured at 28 217 bytes on both sides. The `:root` token block is byte-identical to `index.html` and to
+  `design-tokens.css`.
+- Every numeric answer was recomputed by script with an LR(0)/SLR(1)/LR(1)/LALR(1) construction toolkit written for
+  this run: `S → A B, A → a, B → b` has **6** LR(0) states from 9 items; `S → S S + | S S * | a` has **6** LR(0)
+  states, is LR(0) (no state mixes a shift with a reduce), and exactly **3** of those states hold a completed item
+  other than the accept item; `S → ( S ) S | ε` has **6** LR(0) states, is not LR(0) because the initial state holds
+  `S → ·` and shifts on `(`, but is SLR(1) with `FOLLOW(S) = { ), $ }` and **8** reduce cells, and its canonical
+  LR(1) collection has **10** states against **6** for LALR(1); `S → A a | b A c | d c | b d a, A → d` has 11 states
+  and exactly **1** SLR(1) conflict cell (shift on `c` against reduce `A → d`) while its LR(1) and LALR(1) tables are
+  conflict free; `S → A a | b A c | B c | b B a, A → d, B → d` is LR(1) with 13 states and no conflict but LALR(1)
+  with 12 states and 2 reduce/reduce conflict cells; and the operator-precedence parser for
+  `E → E + E | E * E | ( E ) | id` performs 5 shifts and **5** reduce moves on `id + id * id`.
+- Source categories: 17 questions are built on the standard textbook treatment of bottom-up parsing and 8 are
+  independently designed GATE-style practice. No bottom-up-parsing previous-year question has been verified against
+  an official paper and answer key, so the paper claims none: the Question Bank tab reports 0 verified GATE PYQs and
+  says so in one sentence.
 
 ### 2026-10-31 — Computer Architecture Unit 5, Set 1 of 2
 
