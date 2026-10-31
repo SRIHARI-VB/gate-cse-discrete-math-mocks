@@ -6,7 +6,7 @@
   "created": "2026-10-25",
   "last_updated": "2026-10-31",
   "note": "Append-only. Never delete previous entries. Every question carries unit, unit_number, unit_slug, subtopic slug, type, difficulty and source classification. Historical PYQs carry verified provenance only; anything unverified is marked as such.",
-  "total_questions": 550,
+  "total_questions": 575,
   "units_with_questions": [
    1,
    2,
@@ -38,7 +38,9 @@
     "Easy": 10,
     "Moderate": 10,
     "Difficult": 5
-   }
+   },
+   "run": 1,
+   "note": " Run index 1 assigned on 2026-10-31 (the entry was written without one)."
   },
   {
    "date": "2026-10-25",
@@ -779,7 +781,77 @@
     "hard": 5
    },
    "set": "Set 1 of 2",
-   "note": "First paper of the unit; no earlier paper existed, so nothing was archived."
+   "note": "First paper of the unit; no earlier paper existed, so nothing was archived. Run index 12 assigned on 2026-10-31 (the entry was written without one).",
+   "run": 12
+  },
+  {
+   "run": 13,
+   "date": "2026-10-31",
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "unit": 10,
+   "unit_number": 10,
+   "unit_slug": "graph-theory-advanced",
+   "unit_name": "Graph Theory Advanced",
+   "set": "Set 2 of 2",
+   "count": 25,
+   "file": "discrete-mathematics/graph-theory-advanced/gate_dm_mock_10_2026-10-31.html",
+   "archived_previous": "discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html",
+   "duration_min": 60,
+   "marks": 35,
+   "composition": {
+    "MCQ": 15,
+    "MSQ": 5,
+    "NAT": 5
+   },
+   "difficulty": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 5
+   },
+   "subtopics": [
+    "eulerian-hamiltonian-graphs",
+    "planarity-eulers-formula",
+    "graph-coloring-chromatic-number",
+    "trees-spanning-trees",
+    "network-flows"
+   ],
+   "subtopic_counts": {
+    "eulerian-hamiltonian-graphs": 5,
+    "planarity-eulers-formula": 5,
+    "graph-coloring-chromatic-number": 5,
+    "trees-spanning-trees": 5,
+    "network-flows": 5
+   },
+   "question_ids": [
+    "DM-GTA-Q26",
+    "DM-GTA-Q27",
+    "DM-GTA-Q28",
+    "DM-GTA-Q29",
+    "DM-GTA-Q30",
+    "DM-GTA-Q31",
+    "DM-GTA-Q32",
+    "DM-GTA-Q33",
+    "DM-GTA-Q34",
+    "DM-GTA-Q35",
+    "DM-GTA-Q36",
+    "DM-GTA-Q37",
+    "DM-GTA-Q38",
+    "DM-GTA-Q39",
+    "DM-GTA-Q40",
+    "DM-GTA-Q41",
+    "DM-GTA-Q42",
+    "DM-GTA-Q43",
+    "DM-GTA-Q44",
+    "DM-GTA-Q45",
+    "DM-GTA-Q46",
+    "DM-GTA-Q47",
+    "DM-GTA-Q48",
+    "DM-GTA-Q49",
+    "DM-GTA-Q50"
+   ],
+   "selection": "MODE A. All eleven subjects already carried a paper dated 2026-10-31, so the draw ran over the subjects whose current unit was still below UNIT_QUESTION_CAP = 50: Algorithms (Unit 5, 25 questions), Computer Architecture (Unit 5, 25) and Discrete Mathematics (Unit 10, 25). An unseeded secrets.choice over those three returned Discrete Mathematics. runs[] gave the most recent paper as {2026-10-31, unit 10, graph-theory-advanced, Set 1 of 2} with 25 questions, so step B3 held (25 < 50 and 0 days current) and Unit 10 was generated again as Set 2 of 2.",
+   "note": "Set 2 of 2 for Discrete Mathematics Unit 10. The unit now holds 50 questions, exactly UNIT_QUESTION_CAP, so the next Discrete Mathematics run advances (index_of(graph-theory-advanced) = 9 + 1) mod 16 = 10 -> Unit 11, Boolean Algebra & Switching Logic. The Set 1 paper was moved to discrete-mathematics/graph-theory-advanced/archive/gate_dm_mock_10_2026-10-31_run1.html with its content frozen, so the unit folder holds exactly one current paper and the root holds no copy."
   }
  ],
  "verified_pyqs": [
@@ -25040,6 +25112,1233 @@
    "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The three edges entering <span class=\"mm\">t</span> bound the flow. The cut <span class=\"mm\">S = {s, a, b, c}</span> has capacity <span class=\"mm\">3 + 3 + 6 = 12</span>, so 12 is an upper bound; a matching feasible flow proves it is attained.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Cut <span class=\"mm\">S = {s, a, b, c}</span>, <span class=\"mm\">T = {t}</span> has capacity <span class=\"mm\">a→t + b→t + c→t = 3 + 3 + 6 = 12</span>. Hence max flow <span class=\"mm\">≤ 12</span>.</li><li>Feasible flow of value 12: <span class=\"mm\">s→a = 6</span>, <span class=\"mm\">s→b = 6</span>; <span class=\"mm\">a→t = 3</span>, <span class=\"mm\">a→c = 3</span>, <span class=\"mm\">a→b = 0</span>; <span class=\"mm\">b→t = 3</span>, <span class=\"mm\">b→c = 3</span>; <span class=\"mm\">c→t = 6</span>.</li><li>Check conservation: at <span class=\"mm\">a</span>, in 6 = out 3 + 3; at <span class=\"mm\">b</span>, in 6 = out 3 + 3; at <span class=\"mm\">c</span>, in 3 + 3 = out 6.</li><li>All capacities are respected and the value is <span class=\"mm\">3 + 3 + 6 = 12</span>, equal to the cut capacity, so the maximum is 12.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Answering 20 by summing <span class=\"mm\">s→a</span> and <span class=\"mm\">s→b</span>, or 13 by adding <span class=\"mm\">8 + 9</span> into <span class=\"mm\">c</span> and forgetting <span class=\"mm\">c→t = 6</span>, both ignore an interior bottleneck.</p><p class=\"row\"><b>Takeaway.</b> Always look for the tightest cut: here it is the sink-side cut, not the source-side one.</p>",
    "answer_display": "Option (C)",
    "set": "Set 1 of 2"
+  },
+  {
+   "id": "DM-GTA-Q26",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Eulerian & Hamiltonian graphs",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Every Hamiltonian graph on at least three vertices has which of the following properties?",
+   "options": [
+    "It is bipartite.",
+    "It is Eulerian.",
+    "It is 2-vertex-connected: deleting any single vertex leaves the graph connected.",
+    "It is planar."
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "A Hamiltonian cycle is a spanning cycle — it visits every vertex exactly once and returns to the start. Deleting any vertex from a cycle leaves a path through all the other vertices.",
+    "steps": [
+     "Let `C` be a Hamiltonian cycle of `G` and let `v` be any vertex of `G`. The cycle `C` minus `v` is a path containing every other vertex.",
+     "A graph with a path through all of its vertices is connected, so `G − v` is connected for every choice of `v`.",
+     "`G` has at least three vertices, so `G − v` still has at least two vertices; hence `G` has no cut vertex, that is, `κ(G) ≥ 2`.",
+     "The other three properties fail: `K₄` is Hamiltonian and is not bipartite (A); `K₄` is Hamiltonian and 3-regular, so no Eulerian circuit exists (B); `K₅` is Hamiltonian and is not planar (D)."
+    ],
+    "final": "Option (C).",
+    "misconception": "Hamiltonicity is confused with having an Eulerian circuit. A Hamiltonian cycle constrains how the vertices are visited, not how the edges are traversed, so it says nothing about the degrees.",
+    "takeaway": "A Hamiltonian cycle is a spanning 2-connected structure: remove any one vertex and a spanning path survives."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "eulerian-hamiltonian-graphs",
+   "subtopic_label": "Eulerian & Hamiltonian graphs",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Every Hamiltonian graph on at least three vertices has which of the following properties?</p>",
+   "options_html": [
+    "It is bipartite.",
+    "It is Eulerian.",
+    "It is 2-vertex-connected: deleting any single vertex leaves the graph connected.",
+    "It is planar."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A Hamiltonian cycle is a spanning cycle &mdash; it visits every vertex exactly once and returns to the start. Deleting any vertex from a cycle leaves a path through all the other vertices.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Let <span class=\"mm\">C</span> be a Hamiltonian cycle of <span class=\"mm\">G</span> and let <span class=\"mm\">v</span> be any vertex of <span class=\"mm\">G</span>. The cycle <span class=\"mm\">C</span> minus <span class=\"mm\">v</span> is a path containing every other vertex.</li><li>A graph with a path through all of its vertices is connected, so <span class=\"mm\">G − v</span> is connected for every choice of <span class=\"mm\">v</span>.</li><li><span class=\"mm\">G</span> has at least three vertices, so <span class=\"mm\">G − v</span> still has at least two vertices; hence <span class=\"mm\">G</span> has no cut vertex, that is, <span class=\"mm\">κ(G) ≥ 2</span>.</li><li>The other three properties fail: <span class=\"mm\">K₄</span> is Hamiltonian and is not bipartite (A); <span class=\"mm\">K₄</span> is Hamiltonian and 3-regular, so no Eulerian circuit exists (B); <span class=\"mm\">K₅</span> is Hamiltonian and is not planar (D).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Hamiltonicity is confused with having an Eulerian circuit. A Hamiltonian cycle constrains how the vertices are visited, not how the edges are traversed, so it says nothing about the degrees.</p><p class=\"row\"><b>Takeaway.</b> A Hamiltonian cycle is a spanning 2-connected structure: remove any one vertex and a spanning path survives.</p>",
+   "answer_display": "Option (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q27",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Eulerian & Hamiltonian graphs",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which one of these four graphs has an Eulerian circuit?",
+   "options": [
+    "`K₃,₃`",
+    "`K₃,₄`",
+    "`K₅` with one edge deleted",
+    "`K₄,₄`"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "A connected graph has an Eulerian circuit exactly when every vertex has even degree. In `Kₘ,ₙ` every vertex on one side has degree `n` and every vertex on the other side has degree `m`, so both parities must be checked.",
+    "steps": [
+     "`K₃,₃`: every vertex has degree 3, so there are six odd-degree vertices — no Eulerian circuit.",
+     "`K₃,₄`: the three vertices of the small side have degree 4 (even) but the four vertices of the large side have degree 3 (odd), so there are four odd vertices — no Eulerian circuit.",
+     "`K₅` with one edge deleted: the two endpoints of the deleted edge drop to degree 3 and the other three vertices stay at degree 4, so there are exactly two odd vertices — an Eulerian trail exists, but it is open, not a circuit.",
+     "`K₄,₄`: every vertex has degree 4, so every degree is even and an Eulerian circuit exists."
+    ],
+    "final": "Option (D).",
+    "misconception": "Only the degree on one side of the bipartition is checked. In `Kₘ,ₙ` the two sides have degrees `n` and `m`, and both must be even for an Eulerian circuit.",
+    "takeaway": "For `Kₘ,ₙ` an Eulerian circuit needs `m` and `n` both even; an Eulerian trail needs exactly one of them odd and the other at most 2."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "eulerian-hamiltonian-graphs",
+   "subtopic_label": "Eulerian & Hamiltonian graphs",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Which one of these four graphs has an Eulerian circuit?</p>",
+   "options_html": [
+    "<span class=\"mm\">K₃,₃</span>",
+    "<span class=\"mm\">K₃,₄</span>",
+    "<span class=\"mm\">K₅</span> with one edge deleted",
+    "<span class=\"mm\">K₄,₄</span>"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A connected graph has an Eulerian circuit exactly when every vertex has even degree. In <span class=\"mm\">Kₘ,ₙ</span> every vertex on one side has degree <span class=\"mm\">n</span> and every vertex on the other side has degree <span class=\"mm\">m</span>, so both parities must be checked.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">K₃,₃</span>: every vertex has degree 3, so there are six odd-degree vertices &mdash; no Eulerian circuit.</li><li><span class=\"mm\">K₃,₄</span>: the three vertices of the small side have degree 4 (even) but the four vertices of the large side have degree 3 (odd), so there are four odd vertices &mdash; no Eulerian circuit.</li><li><span class=\"mm\">K₅</span> with one edge deleted: the two endpoints of the deleted edge drop to degree 3 and the other three vertices stay at degree 4, so there are exactly two odd vertices &mdash; an Eulerian trail exists, but it is open, not a circuit.</li><li><span class=\"mm\">K₄,₄</span>: every vertex has degree 4, so every degree is even and an Eulerian circuit exists.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Common misconception.</b> Only the degree on one side of the bipartition is checked. In <span class=\"mm\">Kₘ,ₙ</span> the two sides have degrees <span class=\"mm\">n</span> and <span class=\"mm\">m</span>, and both must be even for an Eulerian circuit.</p><p class=\"row\"><b>Takeaway.</b> For <span class=\"mm\">Kₘ,ₙ</span> an Eulerian circuit needs <span class=\"mm\">m</span> and <span class=\"mm\">n</span> both even; an Eulerian trail needs exactly one of them odd and the other at most 2.</p>",
+   "answer_display": "Option (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q28",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Eulerian & Hamiltonian graphs",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "A bipartite graph has parts of size 4 and 5. Which of the following is TRUE?",
+   "options": [
+    "It can have a Hamiltonian path, but no Hamiltonian cycle.",
+    "It can have a Hamiltonian cycle, but no Hamiltonian path.",
+    "It can have both a Hamiltonian path and a Hamiltonian cycle.",
+    "It can have neither a Hamiltonian path nor a Hamiltonian cycle."
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Every edge of a bipartite graph joins the two parts, so the parts alternate along any path or cycle. A path of `k` vertices uses `⌈k/2⌉` vertices of one part and `⌊k/2⌋` of the other; a cycle uses the same number from each part.",
+    "steps": [
+     "A Hamiltonian path has 9 vertices, so the alternation forces the part sizes `⌈9/2⌉ = 5` and `⌊9/2⌋ = 4` — exactly the sizes given. Such a path starts and ends in the part of size 5.",
+     "The complete bipartite graph `K₄,₅` contains such a path, for example `y₁ x₁ y₂ x₂ y₃ x₃ y₄ x₄ y₅`.",
+     "A Hamiltonian cycle on 9 vertices would use 9 vertices split evenly between the parts, which is impossible with sizes 4 and 5.",
+     "So a Hamiltonian path exists but a Hamiltonian cycle cannot."
+    ],
+    "final": "Option (A).",
+    "misconception": "Bipartiteness is treated as a blanket obstruction to long spanning structures. It obstructs a spanning cycle only when the parts are unequal; a spanning path survives a difference of one.",
+    "takeaway": "A bipartite graph on `2k` vertices can have a Hamiltonian cycle only if both parts have `k` vertices; on `2k + 1` vertices only a path is possible."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "eulerian-hamiltonian-graphs",
+   "subtopic_label": "Eulerian & Hamiltonian graphs",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">A bipartite graph has parts of size 4 and 5. Which of the following is TRUE?</p>",
+   "options_html": [
+    "It can have a Hamiltonian path, but no Hamiltonian cycle.",
+    "It can have a Hamiltonian cycle, but no Hamiltonian path.",
+    "It can have both a Hamiltonian path and a Hamiltonian cycle.",
+    "It can have neither a Hamiltonian path nor a Hamiltonian cycle."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Every edge of a bipartite graph joins the two parts, so the parts alternate along any path or cycle. A path of <span class=\"mm\">k</span> vertices uses <span class=\"mm\">⌈k/2⌉</span> vertices of one part and <span class=\"mm\">⌊k/2⌋</span> of the other; a cycle uses the same number from each part.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A Hamiltonian path has 9 vertices, so the alternation forces the part sizes <span class=\"mm\">⌈9/2⌉ = 5</span> and <span class=\"mm\">⌊9/2⌋ = 4</span> &mdash; exactly the sizes given. Such a path starts and ends in the part of size 5.</li><li>The complete bipartite graph <span class=\"mm\">K₄,₅</span> contains such a path, for example <span class=\"mm\">y₁ x₁ y₂ x₂ y₃ x₃ y₄ x₄ y₅</span>.</li><li>A Hamiltonian cycle on 9 vertices would use 9 vertices split evenly between the parts, which is impossible with sizes 4 and 5.</li><li>So a Hamiltonian path exists but a Hamiltonian cycle cannot.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> Bipartiteness is treated as a blanket obstruction to long spanning structures. It obstructs a spanning cycle only when the parts are unequal; a spanning path survives a difference of one.</p><p class=\"row\"><b>Takeaway.</b> A bipartite graph on <span class=\"mm\">2k</span> vertices can have a Hamiltonian cycle only if both parts have <span class=\"mm\">k</span> vertices; on <span class=\"mm\">2k + 1</span> vertices only a path is possible.</p>",
+   "answer_display": "Option (A)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q29",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Eulerian & Hamiltonian graphs",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For a connected graph `G`, which of these statements about Eulerian trails and Hamiltonian paths are TRUE? Select all that apply.",
+   "options": [
+    "If every vertex of a connected graph has even degree, then its edge set can be partitioned into edge-disjoint cycles.",
+    "Every graph that has a Hamiltonian path is connected.",
+    "Every Hamiltonian graph is Eulerian.",
+    "If a connected graph has exactly two vertices of odd degree, then every Eulerian trail of it starts at one odd vertex and ends at the other."
+   ],
+   "answer": [
+    0,
+    1,
+    3
+   ],
+   "solution": {
+    "concept": "An Eulerian circuit traverses every edge once and returns to its start; cutting it at repeated vertices yields edge-disjoint cycles. Along any trail, every vertex other than the two endpoints is entered and left equally often, so only the endpoints can have odd degree.",
+    "steps": [
+     "A: an Eulerian circuit exists by the parity criterion, and cutting it at repeated vertices splits it into edge-disjoint closed trails, that is, cycles. TRUE.",
+     "B: a Hamiltonian path is a walk that reaches every vertex, so the graph is connected. TRUE.",
+     "C: `K₄` is Hamiltonian, but every vertex has degree 3, so it has no Eulerian circuit. FALSE.",
+     "D: in a trail the internal visits of a vertex consume edges in pairs, so a vertex of odd degree must be an endpoint. With exactly two odd vertices the trail must start at one and end at the other. TRUE."
+    ],
+    "final": "Options (A), (B) and (D).",
+    "misconception": "C is accepted because both words suggest 'visits everything'. Eulerian is about edges, Hamiltonian about vertices, and the two conditions are independent.",
+    "takeaway": "Eulerian conditions are local (degrees); Hamiltonian conditions are global and have no comparable parity test."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "eulerian-hamiltonian-graphs",
+   "subtopic_label": "Eulerian & Hamiltonian graphs",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">For a connected graph <span class=\"mm\">G</span>, which of these statements about Eulerian trails and Hamiltonian paths are TRUE? Select all that apply.</p>",
+   "options_html": [
+    "If every vertex of a connected graph has even degree, then its edge set can be partitioned into edge-disjoint cycles.",
+    "Every graph that has a Hamiltonian path is connected.",
+    "Every Hamiltonian graph is Eulerian.",
+    "If a connected graph has exactly two vertices of odd degree, then every Eulerian trail of it starts at one odd vertex and ends at the other."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> An Eulerian circuit traverses every edge once and returns to its start; cutting it at repeated vertices yields edge-disjoint cycles. Along any trail, every vertex other than the two endpoints is entered and left equally often, so only the endpoints can have odd degree.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: an Eulerian circuit exists by the parity criterion, and cutting it at repeated vertices splits it into edge-disjoint closed trails, that is, cycles. TRUE.</li><li>B: a Hamiltonian path is a walk that reaches every vertex, so the graph is connected. TRUE.</li><li>C: <span class=\"mm\">K₄</span> is Hamiltonian, but every vertex has degree 3, so it has no Eulerian circuit. FALSE.</li><li>D: in a trail the internal visits of a vertex consume edges in pairs, so a vertex of odd degree must be an endpoint. With exactly two odd vertices the trail must start at one and end at the other. TRUE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> C is accepted because both words suggest 'visits everything'. Eulerian is about edges, Hamiltonian about vertices, and the two conditions are independent.</p><p class=\"row\"><b>Takeaway.</b> Eulerian conditions are local (degrees); Hamiltonian conditions are global and have no comparable parity test.</p>",
+   "answer_display": "Options ((A), (B)) and (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q30",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Eulerian & Hamiltonian graphs",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "How many distinct Hamiltonian paths does the complete bipartite graph `K₂,₃` have? Two paths count as distinct when their vertex sequences differ. (Enter an integer.)",
+   "options": null,
+   "answer": 12,
+   "solution": {
+    "concept": "In a bipartite graph every edge crosses between the parts, so a Hamiltonian path alternates and must start and end in the larger part.",
+    "steps": [
+     "`K₂,₃` has parts `X = {x₁, x₂}` and `Y = {y₁, y₂, y₃}`, five vertices in all.",
+     "An alternating sequence of five vertices has the pattern `Y, X, Y, X, Y`, so it uses all three `Y` vertices and both `X` vertices.",
+     "The `Y` vertices can be ordered in `3! = 6` ways and the `X` vertices in `2! = 2` ways, giving `6 × 2 = 12` sequences.",
+     "Every such sequence is a path, because `K₂,₃` contains every `X–Y` edge.",
+     "Paths are not identified with their reversals, so no division by 2 is made; a brute-force check of all `5! = 120` vertex orders finds exactly 12 that are paths."
+    ],
+    "final": "12",
+    "misconception": "Dividing by 2 as one does when counting cycles gives 6. A path and its reverse are different sequences, so the division is wrong here.",
+    "takeaway": "Alternating sequences in `Kₘ,ₙ`: Hamiltonian paths number `2·m!·n!` when `|m − n| = 1`, and none exist when the sizes differ by more than 1."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "eulerian-hamiltonian-graphs",
+   "subtopic_label": "Eulerian & Hamiltonian graphs",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">How many distinct Hamiltonian paths does the complete bipartite graph <span class=\"mm\">K₂,₃</span> have? Two paths count as distinct when their vertex sequences differ. (Enter an integer.)</p>",
+   "options_html": null,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a bipartite graph every edge crosses between the parts, so a Hamiltonian path alternates and must start and end in the larger part.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">K₂,₃</span> has parts <span class=\"mm\">X = {x₁, x₂}</span> and <span class=\"mm\">Y = {y₁, y₂, y₃}</span>, five vertices in all.</li><li>An alternating sequence of five vertices has the pattern <span class=\"mm\">Y, X, Y, X, Y</span>, so it uses all three <span class=\"mm\">Y</span> vertices and both <span class=\"mm\">X</span> vertices.</li><li>The <span class=\"mm\">Y</span> vertices can be ordered in <span class=\"mm\">3! = 6</span> ways and the <span class=\"mm\">X</span> vertices in <span class=\"mm\">2! = 2</span> ways, giving <span class=\"mm\">6 × 2 = 12</span> sequences.</li><li>Every such sequence is a path, because <span class=\"mm\">K₂,₃</span> contains every <span class=\"mm\">X–Y</span> edge.</li><li>Paths are not identified with their reversals, so no division by 2 is made; a brute-force check of all <span class=\"mm\">5! = 120</span> vertex orders finds exactly 12 that are paths.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 12</span></p><p class=\"row\"><b>Common misconception.</b> Dividing by 2 as one does when counting cycles gives 6. A path and its reverse are different sequences, so the division is wrong here.</p><p class=\"row\"><b>Takeaway.</b> Alternating sequences in <span class=\"mm\">Kₘ,ₙ</span>: Hamiltonian paths number <span class=\"mm\">2·m!·n!</span> when <span class=\"mm\">|m − n| = 1</span>, and none exist when the sizes differ by more than 1.</p>",
+   "answer_display": "12",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q31",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Planarity & Euler's formula",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "A tree on 20 vertices is drawn in the plane without crossings. Into how many regions (faces) does the drawing divide the plane?",
+   "options": [
+    "1",
+    "2",
+    "19",
+    "20"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "Euler's formula `n − m + f = 2` holds for every connected plane graph, and a tree on `n` vertices has `m = n − 1` edges.",
+    "steps": [
+     "A tree on 20 vertices has `m = 19` edges.",
+     "Substituting in `n − m + f = 2` gives `20 − 19 + f = 2`, so `f = 1`.",
+     "Geometrically, a tree contains no cycle and therefore encloses no bounded region: the only face is the unbounded one."
+    ],
+    "final": "Option (A).",
+    "misconception": "`f = 2` is the value for a single cycle. Quoting it together with `m = n − 1` double counts the unbounded face.",
+    "takeaway": "A plane graph with no cycles has exactly one face, whatever its size."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "planarity-eulers-formula",
+   "subtopic_label": "Planarity & Euler's formula",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">A tree on 20 vertices is drawn in the plane without crossings. Into how many regions (faces) does the drawing divide the plane?</p>",
+   "options_html": [
+    "1",
+    "2",
+    "19",
+    "20"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Euler's formula <span class=\"mm\">n − m + f = 2</span> holds for every connected plane graph, and a tree on <span class=\"mm\">n</span> vertices has <span class=\"mm\">m = n − 1</span> edges.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A tree on 20 vertices has <span class=\"mm\">m = 19</span> edges.</li><li>Substituting in <span class=\"mm\">n − m + f = 2</span> gives <span class=\"mm\">20 − 19 + f = 2</span>, so <span class=\"mm\">f = 1</span>.</li><li>Geometrically, a tree contains no cycle and therefore encloses no bounded region: the only face is the unbounded one.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">f = 2</span> is the value for a single cycle. Quoting it together with <span class=\"mm\">m = n − 1</span> double counts the unbounded face.</p><p class=\"row\"><b>Takeaway.</b> A plane graph with no cycles has exactly one face, whatever its size.</p>",
+   "answer_display": "Option (A)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q32",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Planarity & Euler's formula",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "A simple connected planar graph is 3-regular and has 8 vertices. How many faces does every planar embedding of it have?",
+   "options": [
+    "4",
+    "6",
+    "8",
+    "12"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "The handshaking lemma gives `2m = Σdeg`, and Euler's formula then fixes the number of faces once `n` and `m` are known.",
+    "steps": [
+     "Every vertex has degree 3, so `2m = 8 × 3 = 24`, that is, `m = 12`.",
+     "Euler's formula: `f = 2 − n + m = 2 − 8 + 12 = 6`.",
+     "The cube graph is the example — 8 vertices, 12 edges and 6 square faces — so the count is attained."
+    ],
+    "final": "Option (B).",
+    "misconception": "`m = 24` is read off the degree sum by forgetting the factor 2 in the handshaking lemma; that error gives `f = 18`.",
+    "takeaway": "For a `d`-regular plane graph, `f = 2 − n + dn/2`; for the cube it is 6."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "planarity-eulers-formula",
+   "subtopic_label": "Planarity & Euler's formula",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">A simple connected planar graph is 3-regular and has 8 vertices. How many faces does every planar embedding of it have?</p>",
+   "options_html": [
+    "4",
+    "6",
+    "8",
+    "12"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The handshaking lemma gives <span class=\"mm\">2m = Σdeg</span>, and Euler's formula then fixes the number of faces once <span class=\"mm\">n</span> and <span class=\"mm\">m</span> are known.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Every vertex has degree 3, so <span class=\"mm\">2m = 8 × 3 = 24</span>, that is, <span class=\"mm\">m = 12</span>.</li><li>Euler's formula: <span class=\"mm\">f = 2 − n + m = 2 − 8 + 12 = 6</span>.</li><li>The cube graph is the example &mdash; 8 vertices, 12 edges and 6 square faces &mdash; so the count is attained.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">m = 24</span> is read off the degree sum by forgetting the factor 2 in the handshaking lemma; that error gives <span class=\"mm\">f = 18</span>.</p><p class=\"row\"><b>Takeaway.</b> For a <span class=\"mm\">d</span>-regular plane graph, <span class=\"mm\">f = 2 − n + dn/2</span>; for the cube it is 6.</p>",
+   "answer_display": "Option (B)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q33",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Planarity & Euler's formula",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "`K₃,₃` has 6 vertices and 9 edges, and `9 ≤ 3·6 − 6 = 12`, so the general planar bound does not settle it. Which argument proves that `K₃,₃` is not planar?",
+   "options": [
+    "`K₃,₃` contains `K₅` as a subgraph, and `K₅` is not planar.",
+    "`K₃,₃` has a Hamiltonian cycle, and no graph with a Hamiltonian cycle is planar.",
+    "`K₃,₃` is 3-regular, and no 3-regular graph is planar.",
+    "Every face of a plane bipartite graph has at least 4 sides, so `2m ≥ 4f`; combined with `n − m + f = 2` this gives `m ≤ 2n − 4 = 8`, which 9 edges contradict."
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "In a bipartite plane graph every closed walk has even length and no face has length 2, so every face is bounded by at least 4 edges. That strengthens the edge bound from `3n − 6` to `2n − 4`.",
+    "steps": [
+     "Each edge borders two faces, so the face lengths add to `2m`; with every face of length at least 4, `2m ≥ 4f`, that is, `f ≤ m/2`.",
+     "Euler's formula gives `f = 2 − n + m`. Substituting: `2 − n + m ≤ m/2`, hence `m ≤ 2n − 4`.",
+     "For `n = 6` this is `m ≤ 8`, but `K₃,₃` has 9 edges — a contradiction, so `K₃,₃` is not planar.",
+     "The bound is tight: `K₂,₄` is bipartite, planar, and has `2·6 − 4 = 8` edges on 6 vertices.",
+     "The other options fail: `K₃,₃` has no triangles and only 6 vertices, so it cannot contain `K₅` (A); `C₆` is planar and has a Hamiltonian cycle (B); the cube graph is 3-regular and planar (C)."
+    ],
+    "final": "Option (D).",
+    "misconception": "The `3n − 6` bound is applied to a triangle-free graph and found not to bite, so planarity is assumed. The bound that applies to a bipartite graph is `2n − 4`.",
+    "takeaway": "Bipartite plane graphs satisfy the sharper `m ≤ 2n − 4`, which is exactly what separates `K₃,₃` from the planar world."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "planarity-eulers-formula",
+   "subtopic_label": "Planarity & Euler's formula",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\"><span class=\"mm\">K₃,₃</span> has 6 vertices and 9 edges, and <span class=\"mm\">9 ≤ 3·6 − 6 = 12</span>, so the general planar bound does not settle it. Which argument proves that <span class=\"mm\">K₃,₃</span> is not planar?</p>",
+   "options_html": [
+    "<span class=\"mm\">K₃,₃</span> contains <span class=\"mm\">K₅</span> as a subgraph, and <span class=\"mm\">K₅</span> is not planar.",
+    "<span class=\"mm\">K₃,₃</span> has a Hamiltonian cycle, and no graph with a Hamiltonian cycle is planar.",
+    "<span class=\"mm\">K₃,₃</span> is 3-regular, and no 3-regular graph is planar.",
+    "Every face of a plane bipartite graph has at least 4 sides, so <span class=\"mm\">2m ≥ 4f</span>; combined with <span class=\"mm\">n − m + f = 2</span> this gives <span class=\"mm\">m ≤ 2n − 4 = 8</span>, which 9 edges contradict."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a bipartite plane graph every closed walk has even length and no face has length 2, so every face is bounded by at least 4 edges. That strengthens the edge bound from <span class=\"mm\">3n − 6</span> to <span class=\"mm\">2n − 4</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Each edge borders two faces, so the face lengths add to <span class=\"mm\">2m</span>; with every face of length at least 4, <span class=\"mm\">2m ≥ 4f</span>, that is, <span class=\"mm\">f ≤ m/2</span>.</li><li>Euler's formula gives <span class=\"mm\">f = 2 − n + m</span>. Substituting: <span class=\"mm\">2 − n + m ≤ m/2</span>, hence <span class=\"mm\">m ≤ 2n − 4</span>.</li><li>For <span class=\"mm\">n = 6</span> this is <span class=\"mm\">m ≤ 8</span>, but <span class=\"mm\">K₃,₃</span> has 9 edges &mdash; a contradiction, so <span class=\"mm\">K₃,₃</span> is not planar.</li><li>The bound is tight: <span class=\"mm\">K₂,₄</span> is bipartite, planar, and has <span class=\"mm\">2·6 − 4 = 8</span> edges on 6 vertices.</li><li>The other options fail: <span class=\"mm\">K₃,₃</span> has no triangles and only 6 vertices, so it cannot contain <span class=\"mm\">K₅</span> (A); <span class=\"mm\">C₆</span> is planar and has a Hamiltonian cycle (B); the cube graph is 3-regular and planar (C).</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Common misconception.</b> The <span class=\"mm\">3n − 6</span> bound is applied to a triangle-free graph and found not to bite, so planarity is assumed. The bound that applies to a bipartite graph is <span class=\"mm\">2n − 4</span>.</p><p class=\"row\"><b>Takeaway.</b> Bipartite plane graphs satisfy the sharper <span class=\"mm\">m ≤ 2n − 4</span>, which is exactly what separates <span class=\"mm\">K₃,₃</span> from the planar world.</p>",
+   "answer_display": "Option (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q34",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Planarity & Euler's formula",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements about planar graphs are TRUE? Select all that apply.",
+   "options": [
+    "Every simple planar graph is 4-colourable.",
+    "A simple planar graph on 7 vertices has at most 15 edges.",
+    "Every simple planar graph has a vertex of degree at most 5.",
+    "`K₅` is planar, because it can be drawn in the plane with only one pair of edges crossing."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "The four-colour theorem, the edge bound `m ≤ 3n − 6`, and the degeneracy argument that every planar graph has a vertex of degree at most 5 are the three standard consequences of planarity.",
+    "steps": [
+     "A: the four-colour theorem states that every planar graph is 4-colourable. TRUE.",
+     "B: `m ≤ 3n − 6 = 3·7 − 6 = 15`. TRUE.",
+     "C: if every degree were at least 6 then `2m ≥ 6n`, that is `m ≥ 3n`, contradicting `m ≤ 3n − 6`. So some vertex has degree at most 5. TRUE.",
+     "D: planarity requires an embedding with no crossing at all. A drawing with one crossing proves nothing, and `K₅` is not planar. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "misconception": "D confuses 'can be drawn with few crossings' with 'is planar'. Every graph can be drawn with crossings; planarity is the existence of a drawing with none.",
+    "takeaway": "Planarity is a property of the graph, not of one drawing of it."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "planarity-eulers-formula",
+   "subtopic_label": "Planarity & Euler's formula",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Which of the following statements about planar graphs are TRUE? Select all that apply.</p>",
+   "options_html": [
+    "Every simple planar graph is 4-colourable.",
+    "A simple planar graph on 7 vertices has at most 15 edges.",
+    "Every simple planar graph has a vertex of degree at most 5.",
+    "<span class=\"mm\">K₅</span> is planar, because it can be drawn in the plane with only one pair of edges crossing."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> The four-colour theorem, the edge bound <span class=\"mm\">m ≤ 3n − 6</span>, and the degeneracy argument that every planar graph has a vertex of degree at most 5 are the three standard consequences of planarity.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: the four-colour theorem states that every planar graph is 4-colourable. TRUE.</li><li>B: <span class=\"mm\">m ≤ 3n − 6 = 3·7 − 6 = 15</span>. TRUE.</li><li>C: if every degree were at least 6 then <span class=\"mm\">2m ≥ 6n</span>, that is <span class=\"mm\">m ≥ 3n</span>, contradicting <span class=\"mm\">m ≤ 3n − 6</span>. So some vertex has degree at most 5. TRUE.</li><li>D: planarity requires an embedding with no crossing at all. A drawing with one crossing proves nothing, and <span class=\"mm\">K₅</span> is not planar. FALSE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> D confuses 'can be drawn with few crossings' with 'is planar'. Every graph can be drawn with crossings; planarity is the existence of a drawing with none.</p><p class=\"row\"><b>Takeaway.</b> Planarity is a property of the graph, not of one drawing of it.</p>",
+   "answer_display": "Options ((A), (B)) and (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q35",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Planarity & Euler's formula",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "What is the largest number of edges that a simple planar bipartite graph on 11 vertices can have? (Enter an integer.)",
+   "options": null,
+   "answer": 18,
+   "solution": {
+    "concept": "In a simple planar bipartite graph every face has at least 4 sides, so `2m ≥ 4f`; combining this with Euler's formula gives the bound `m ≤ 2n − 4`.",
+    "steps": [
+     "Face lengths sum to `2m` and each face has length at least 4, so `2m ≥ 4f`.",
+     "With `f = 2 − n + m` this becomes `2 − n + m ≤ m/2`, hence `m ≤ 2n − 4`.",
+     "At `n = 11`: `m ≤ 2·11 − 4 = 18`.",
+     "The bound is attained by `K₂,₉`: bipartite, planar (two poles with nine vertices in a fan between them), with `2 × 9 = 18` edges on 11 vertices.",
+     "So the maximum is 18, not the `3n − 6 = 27` that the triangle-based bound would suggest."
+    ],
+    "final": "18",
+    "misconception": "Using `3n − 6 = 27` ignores bipartiteness and overstates the maximum by 9.",
+    "takeaway": "Planar bipartite graphs saturate at `2n − 4` edges, achieved by `K₂,ₙ₋₂`."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "planarity-eulers-formula",
+   "subtopic_label": "Planarity & Euler's formula",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">What is the largest number of edges that a simple planar bipartite graph on 11 vertices can have? (Enter an integer.)</p>",
+   "options_html": null,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a simple planar bipartite graph every face has at least 4 sides, so <span class=\"mm\">2m ≥ 4f</span>; combining this with Euler's formula gives the bound <span class=\"mm\">m ≤ 2n − 4</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Face lengths sum to <span class=\"mm\">2m</span> and each face has length at least 4, so <span class=\"mm\">2m ≥ 4f</span>.</li><li>With <span class=\"mm\">f = 2 − n + m</span> this becomes <span class=\"mm\">2 − n + m ≤ m/2</span>, hence <span class=\"mm\">m ≤ 2n − 4</span>.</li><li>At <span class=\"mm\">n = 11</span>: <span class=\"mm\">m ≤ 2·11 − 4 = 18</span>.</li><li>The bound is attained by <span class=\"mm\">K₂,₉</span>: bipartite, planar (two poles with nine vertices in a fan between them), with <span class=\"mm\">2 × 9 = 18</span> edges on 11 vertices.</li><li>So the maximum is 18, not the <span class=\"mm\">3n − 6 = 27</span> that the triangle-based bound would suggest.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 18</span></p><p class=\"row\"><b>Common misconception.</b> Using <span class=\"mm\">3n − 6 = 27</span> ignores bipartiteness and overstates the maximum by 9.</p><p class=\"row\"><b>Takeaway.</b> Planar bipartite graphs saturate at <span class=\"mm\">2n − 4</span> edges, achieved by <span class=\"mm\">K₂,ₙ₋₂</span>.</p>",
+   "answer_display": "18",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q36",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Colouring & chromatic number",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "What is the chromatic number of the Petersen graph?",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "`χ(G) ≥ 3` exactly when `G` is not bipartite; an explicit colouring with `k` colours shows `χ(G) ≤ k`.",
+    "steps": [
+     "The Petersen graph contains 5-cycles — for instance its outer pentagon — and an odd cycle needs 3 colours, so `χ ≥ 3`.",
+     "It is therefore not 2-colourable: 2-colourable graphs are exactly the bipartite ones, and an odd cycle is not bipartite.",
+     "A 3-colouring exists: colour the outer pentagon `v₁…v₅` with `1, 2, 1, 2, 3` and the inner pentagram `u₁…u₅` with `2, 1, 3, 3, 2`, where `uᵢ` is the inner vertex joined to `vᵢ`; every spoke and every pentagram edge joins two different colours.",
+     "Hence `χ = 3`."
+    ],
+    "final": "Option (A).",
+    "misconception": "The graph is 3-regular, so students answer 3 from 'regular means equal to the degree' or 2 from 'sparse means bipartite'. Odd cycles settle the lower bound and an explicit colouring the upper bound.",
+    "takeaway": "The Petersen graph is 3-chromatic, triangle-free and 3-regular: a standard counterexample to `χ = ω` and to `χ = Δ`."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "graph-coloring-chromatic-number",
+   "subtopic_label": "Colouring & chromatic number",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">What is the chromatic number of the Petersen graph?</p>",
+   "options_html": [
+    "3",
+    "2",
+    "4",
+    "5"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> <span class=\"mm\">χ(G) ≥ 3</span> exactly when <span class=\"mm\">G</span> is not bipartite; an explicit colouring with <span class=\"mm\">k</span> colours shows <span class=\"mm\">χ(G) ≤ k</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The Petersen graph contains 5-cycles &mdash; for instance its outer pentagon &mdash; and an odd cycle needs 3 colours, so <span class=\"mm\">χ ≥ 3</span>.</li><li>It is therefore not 2-colourable: 2-colourable graphs are exactly the bipartite ones, and an odd cycle is not bipartite.</li><li>A 3-colouring exists: colour the outer pentagon <span class=\"mm\">v₁…v₅</span> with <span class=\"mm\">1, 2, 1, 2, 3</span> and the inner pentagram <span class=\"mm\">u₁…u₅</span> with <span class=\"mm\">2, 1, 3, 3, 2</span>, where <span class=\"mm\">uᵢ</span> is the inner vertex joined to <span class=\"mm\">vᵢ</span>; every spoke and every pentagram edge joins two different colours.</li><li>Hence <span class=\"mm\">χ = 3</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> The graph is 3-regular, so students answer 3 from 'regular means equal to the degree' or 2 from 'sparse means bipartite'. Odd cycles settle the lower bound and an explicit colouring the upper bound.</p><p class=\"row\"><b>Takeaway.</b> The Petersen graph is 3-chromatic, triangle-free and 3-regular: a standard counterexample to <span class=\"mm\">χ = ω</span> and to <span class=\"mm\">χ = Δ</span>.</p>",
+   "answer_display": "Option (A)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q37",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Colouring & chromatic number",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "The number of proper `k`-colourings of `K₃` is given by the chromatic polynomial `P(K₃, k)`. What is `P(K₃, 3)`?",
+   "options": [
+    "6",
+    "3",
+    "9",
+    "27"
+   ],
+   "answer": [
+    0
+   ],
+   "solution": {
+    "concept": "In a complete graph every pair of vertices is adjacent, so a proper colouring must assign distinct colours to all vertices: `P(Kₙ, k) = k(k − 1) ⋯ (k − n + 1)`.",
+    "steps": [
+     "Vertex 1 may take any of the 3 colours.",
+     "Vertex 2 is adjacent to vertex 1, so it has 2 colours left.",
+     "Vertex 3 is adjacent to both, so it has 1 colour left.",
+     "`P(K₃, 3) = 3 × 2 × 1 = 6`."
+    ],
+    "final": "Option (A).",
+    "misconception": "`3³ = 27` counts all assignments, including the 21 improper ones. Adjacent vertices must differ.",
+    "takeaway": "`P(Kₙ, k) = k(k−1)⋯(k−n+1)`, which is 0 whenever `k < n`."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "graph-coloring-chromatic-number",
+   "subtopic_label": "Colouring & chromatic number",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">The number of proper <span class=\"mm\">k</span>-colourings of <span class=\"mm\">K₃</span> is given by the chromatic polynomial <span class=\"mm\">P(K₃, k)</span>. What is <span class=\"mm\">P(K₃, 3)</span>?</p>",
+   "options_html": [
+    "6",
+    "3",
+    "9",
+    "27"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In a complete graph every pair of vertices is adjacent, so a proper colouring must assign distinct colours to all vertices: <span class=\"mm\">P(Kₙ, k) = k(k − 1) ⋯ (k − n + 1)</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Vertex 1 may take any of the 3 colours.</li><li>Vertex 2 is adjacent to vertex 1, so it has 2 colours left.</li><li>Vertex 3 is adjacent to both, so it has 1 colour left.</li><li><span class=\"mm\">P(K₃, 3) = 3 × 2 × 1 = 6</span>.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (A).</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">3³ = 27</span> counts all assignments, including the 21 improper ones. Adjacent vertices must differ.</p><p class=\"row\"><b>Takeaway.</b> <span class=\"mm\">P(Kₙ, k) = k(k−1)⋯(k−n+1)</span>, which is 0 whenever <span class=\"mm\">k < n</span>.</p>",
+   "answer_display": "Option (A)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q38",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Colouring & chromatic number",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "The wheel `W₅` consists of a 5-cycle together with a hub joined to all five rim vertices. What is `χ(W₅)`?",
+   "options": [
+    "3",
+    "5",
+    "4",
+    "6"
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "A hub adjacent to every rim vertex needs a colour different from all rim colours, so `χ(Wheel) = χ(rim) + 1`.",
+    "steps": [
+     "The rim `C₅` is an odd cycle, so `χ ≥ 3` and the rim alone needs exactly 3 colours.",
+     "The hub is adjacent to all five rim vertices, so its colour must differ from every rim colour: `χ(W₅) = χ(C₅) + 1 = 4`.",
+     "A 4-colouring exists: colour the rim `1, 2, 1, 2, 3` around the cycle and the hub 4.",
+     "The rim does not need five colours, so the answer is not 5, and 3 is impossible because the rim alone needs 3 and the hub needs a fourth."
+    ],
+    "final": "Option (C).",
+    "misconception": "The hub has degree 5, so `Δ + 1 = 6` is offered. Brooks' theorem reserves `Δ + 1` for complete graphs and odd cycles; the wheel is neither.",
+    "takeaway": "`χ(Wₙ) = 4` when `n` is odd (the rim is an odd cycle) and 3 when `n` is even."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "graph-coloring-chromatic-number",
+   "subtopic_label": "Colouring & chromatic number",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">The wheel <span class=\"mm\">W₅</span> consists of a 5-cycle together with a hub joined to all five rim vertices. What is <span class=\"mm\">χ(W₅)</span>?</p>",
+   "options_html": [
+    "3",
+    "5",
+    "4",
+    "6"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A hub adjacent to every rim vertex needs a colour different from all rim colours, so <span class=\"mm\">χ(Wheel) = χ(rim) + 1</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The rim <span class=\"mm\">C₅</span> is an odd cycle, so <span class=\"mm\">χ ≥ 3</span> and the rim alone needs exactly 3 colours.</li><li>The hub is adjacent to all five rim vertices, so its colour must differ from every rim colour: <span class=\"mm\">χ(W₅) = χ(C₅) + 1 = 4</span>.</li><li>A 4-colouring exists: colour the rim <span class=\"mm\">1, 2, 1, 2, 3</span> around the cycle and the hub 4.</li><li>The rim does not need five colours, so the answer is not 5, and 3 is impossible because the rim alone needs 3 and the hub needs a fourth.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> The hub has degree 5, so <span class=\"mm\">Δ + 1 = 6</span> is offered. Brooks' theorem reserves <span class=\"mm\">Δ + 1</span> for complete graphs and odd cycles; the wheel is neither.</p><p class=\"row\"><b>Takeaway.</b> <span class=\"mm\">χ(Wₙ) = 4</span> when <span class=\"mm\">n</span> is odd (the rim is an odd cycle) and 3 when <span class=\"mm\">n</span> is even.</p>",
+   "answer_display": "Option (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q39",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Colouring & chromatic number",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For a graph `G` on `n` vertices with clique number `ω(G)`, independence number `α(G)` and maximum degree `Δ(G)`, which of the following are TRUE? Select all that apply.",
+   "options": [
+    "`χ(G) ≥ ω(G)`.",
+    "`χ(G) ≤ Δ(G) + 1`.",
+    "`χ(G) ≥ n / α(G)`.",
+    "If `χ(G) = 3` then `G` contains a triangle."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Three standard bounds: a clique needs a distinct colour per vertex, greedy colouring in any order uses at most `Δ + 1` colours, and each colour class is an independent set of size at most `α`.",
+    "steps": [
+     "A: the vertices of a largest clique are pairwise adjacent, so they must receive distinct colours. TRUE.",
+     "B: order the vertices arbitrarily and colour each with the smallest colour not used on its earlier neighbours; at most `Δ` neighbours are already coloured, so at most `Δ + 1` colours are used. TRUE.",
+     "C: the `χ` colour classes partition the `n` vertices and each has at most `α` vertices, so `n ≤ χ·α`. TRUE.",
+     "D: `C₅` has `χ = 3` and no triangle, and so does the Petersen graph. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "misconception": "D is the perfect-graph intuition `χ = ω`. It holds for perfect graphs only; odd cycles of length at least 5 are the standard counterexamples.",
+    "takeaway": "`ω ≤ χ ≤ Δ + 1` and `χ ≥ n/α`; none of the three can be reversed."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "graph-coloring-chromatic-number",
+   "subtopic_label": "Colouring & chromatic number",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">For a graph <span class=\"mm\">G</span> on <span class=\"mm\">n</span> vertices with clique number <span class=\"mm\">ω(G)</span>, independence number <span class=\"mm\">α(G)</span> and maximum degree <span class=\"mm\">Δ(G)</span>, which of the following are TRUE? Select all that apply.</p>",
+   "options_html": [
+    "<span class=\"mm\">χ(G) ≥ ω(G)</span>.",
+    "<span class=\"mm\">χ(G) ≤ Δ(G) + 1</span>.",
+    "<span class=\"mm\">χ(G) ≥ n / α(G)</span>.",
+    "If <span class=\"mm\">χ(G) = 3</span> then <span class=\"mm\">G</span> contains a triangle."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Three standard bounds: a clique needs a distinct colour per vertex, greedy colouring in any order uses at most <span class=\"mm\">Δ + 1</span> colours, and each colour class is an independent set of size at most <span class=\"mm\">α</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: the vertices of a largest clique are pairwise adjacent, so they must receive distinct colours. TRUE.</li><li>B: order the vertices arbitrarily and colour each with the smallest colour not used on its earlier neighbours; at most <span class=\"mm\">Δ</span> neighbours are already coloured, so at most <span class=\"mm\">Δ + 1</span> colours are used. TRUE.</li><li>C: the <span class=\"mm\">χ</span> colour classes partition the <span class=\"mm\">n</span> vertices and each has at most <span class=\"mm\">α</span> vertices, so <span class=\"mm\">n ≤ χ·α</span>. TRUE.</li><li>D: <span class=\"mm\">C₅</span> has <span class=\"mm\">χ = 3</span> and no triangle, and so does the Petersen graph. FALSE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> D is the perfect-graph intuition <span class=\"mm\">χ = ω</span>. It holds for perfect graphs only; odd cycles of length at least 5 are the standard counterexamples.</p><p class=\"row\"><b>Takeaway.</b> <span class=\"mm\">ω ≤ χ ≤ Δ + 1</span> and <span class=\"mm\">χ ≥ n/α</span>; none of the three can be reversed.</p>",
+   "answer_display": "Options ((A), (B)) and (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q40",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Colouring & chromatic number",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "What is the smallest number of edges that must be deleted from `K₅` so that the remaining graph is bipartite? (Enter an integer.)",
+   "options": null,
+   "answer": 4,
+   "solution": {
+    "concept": "A bipartite graph on `n` vertices has at most `⌊n²/4⌋` edges, attained by a complete bipartite graph with parts as equal as possible (Turán's theorem for triangle-free graphs).",
+    "steps": [
+     "`K₅` has `C(5, 2) = 10` edges.",
+     "A bipartite subgraph on 5 vertices has at most `⌊5²/4⌋ = 6` edges, the count for parts of size 2 and 3.",
+     "So at least `10 − 6 = 4` edges must be deleted; deleting the single edge inside the 2-part and the three edges inside the 3-part of a `K₂,₃` leaves exactly 6 edges and is bipartite.",
+     "A brute-force check over all `2¹⁰` subgraphs confirms that no subgraph of `K₅` with 7 or more edges is bipartite, so 4 is optimal."
+    ],
+    "final": "4",
+    "misconception": "Deleting one edge per triangle of a 5-cycle decomposition (5 edges) is more than necessary; the extremal count `⌊n²/4⌋` gives the exact answer.",
+    "takeaway": "The largest bipartite subgraph of `Kₙ` has `⌊n²/4⌋` edges, so `C(n,2) − ⌊n²/4⌋` deletions are needed."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "graph-coloring-chromatic-number",
+   "subtopic_label": "Colouring & chromatic number",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">What is the smallest number of edges that must be deleted from <span class=\"mm\">K₅</span> so that the remaining graph is bipartite? (Enter an integer.)</p>",
+   "options_html": null,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A bipartite graph on <span class=\"mm\">n</span> vertices has at most <span class=\"mm\">⌊n²/4⌋</span> edges, attained by a complete bipartite graph with parts as equal as possible (Turán's theorem for triangle-free graphs).</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">K₅</span> has <span class=\"mm\">C(5, 2) = 10</span> edges.</li><li>A bipartite subgraph on 5 vertices has at most <span class=\"mm\">⌊5²/4⌋ = 6</span> edges, the count for parts of size 2 and 3.</li><li>So at least <span class=\"mm\">10 − 6 = 4</span> edges must be deleted; deleting the single edge inside the 2-part and the three edges inside the 3-part of a <span class=\"mm\">K₂,₃</span> leaves exactly 6 edges and is bipartite.</li><li>A brute-force check over all <span class=\"mm\">2¹⁰</span> subgraphs confirms that no subgraph of <span class=\"mm\">K₅</span> with 7 or more edges is bipartite, so 4 is optimal.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 4</span></p><p class=\"row\"><b>Common misconception.</b> Deleting one edge per triangle of a 5-cycle decomposition (5 edges) is more than necessary; the extremal count <span class=\"mm\">⌊n²/4⌋</span> gives the exact answer.</p><p class=\"row\"><b>Takeaway.</b> The largest bipartite subgraph of <span class=\"mm\">Kₙ</span> has <span class=\"mm\">⌊n²/4⌋</span> edges, so <span class=\"mm\">C(n,2) − ⌊n²/4⌋</span> deletions are needed.</p>",
+   "answer_display": "4",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q41",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Trees & spanning trees",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "How many distinct spanning trees does the cycle `C₇` have?",
+   "options": [
+    "1",
+    "49",
+    "128",
+    "7"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "A spanning tree of a cycle is obtained by deleting exactly one edge: the result is a path on all the vertices.",
+    "steps": [
+     "`C₇` has 7 vertices and 7 edges, while a spanning tree needs 6 edges.",
+     "Deleting any single edge leaves a path through all 7 vertices, which is a spanning tree.",
+     "Deleting two or more edges disconnects the cycle.",
+     "So there is exactly one spanning tree per deleted edge: 7 in all."
+    ],
+    "final": "Option (D).",
+    "misconception": "`C₇` is confused with `K₇`, whose spanning-tree count is `7⁵ = 16807` by Cayley's formula.",
+    "takeaway": "`Cₙ` has `n` spanning trees; `Kₙ` has `nⁿ⁻²`."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "trees-spanning-trees",
+   "subtopic_label": "Trees & spanning trees",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">How many distinct spanning trees does the cycle <span class=\"mm\">C₇</span> have?</p>",
+   "options_html": [
+    "1",
+    "49",
+    "128",
+    "7"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A spanning tree of a cycle is obtained by deleting exactly one edge: the result is a path on all the vertices.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">C₇</span> has 7 vertices and 7 edges, while a spanning tree needs 6 edges.</li><li>Deleting any single edge leaves a path through all 7 vertices, which is a spanning tree.</li><li>Deleting two or more edges disconnects the cycle.</li><li>So there is exactly one spanning tree per deleted edge: 7 in all.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">C₇</span> is confused with <span class=\"mm\">K₇</span>, whose spanning-tree count is <span class=\"mm\">7⁵ = 16807</span> by Cayley's formula.</p><p class=\"row\"><b>Takeaway.</b> <span class=\"mm\">Cₙ</span> has <span class=\"mm\">n</span> spanning trees; <span class=\"mm\">Kₙ</span> has <span class=\"mm\">nⁿ⁻²</span>.</p>",
+   "answer_display": "Option (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q42",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Trees & spanning trees",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For every tree `T` with `n ≥ 2` vertices, which of the following holds?",
+   "options": [
+    "`T` has a perfect matching.",
+    "`T` is a path.",
+    "`T` is the only spanning tree of itself.",
+    "`T` has exactly two vertices of odd degree."
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "A spanning tree of a connected graph is a connected spanning subgraph with `n − 1` edges. A tree has exactly `n − 1` edges, so it has no edge to spare.",
+    "steps": [
+     "Any spanning subgraph of `T` on all `n` vertices that is connected needs at least `n − 1` edges.",
+     "`T` has exactly `n − 1` edges, so every spanning tree of `T` must use all of them: only `T` itself qualifies.",
+     "(A) fails for the star `K₁,₃`, which has 4 vertices and no perfect matching.",
+     "(B) fails for any tree with a vertex of degree 3, and (D) fails for `K₁,₃`, which has three vertices of odd degree."
+    ],
+    "final": "Option (C).",
+    "misconception": "Students search for a counting formula; for a tree the count is 1 for the structural reason that there is no edge to spare.",
+    "takeaway": "Every tree is its own unique spanning tree, so the spanning-tree count of `T` is 1."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "trees-spanning-trees",
+   "subtopic_label": "Trees & spanning trees",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">For every tree <span class=\"mm\">T</span> with <span class=\"mm\">n ≥ 2</span> vertices, which of the following holds?</p>",
+   "options_html": [
+    "<span class=\"mm\">T</span> has a perfect matching.",
+    "<span class=\"mm\">T</span> is a path.",
+    "<span class=\"mm\">T</span> is the only spanning tree of itself.",
+    "<span class=\"mm\">T</span> has exactly two vertices of odd degree."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A spanning tree of a connected graph is a connected spanning subgraph with <span class=\"mm\">n − 1</span> edges. A tree has exactly <span class=\"mm\">n − 1</span> edges, so it has no edge to spare.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Any spanning subgraph of <span class=\"mm\">T</span> on all <span class=\"mm\">n</span> vertices that is connected needs at least <span class=\"mm\">n − 1</span> edges.</li><li><span class=\"mm\">T</span> has exactly <span class=\"mm\">n − 1</span> edges, so every spanning tree of <span class=\"mm\">T</span> must use all of them: only <span class=\"mm\">T</span> itself qualifies.</li><li>(A) fails for the star <span class=\"mm\">K₁,₃</span>, which has 4 vertices and no perfect matching.</li><li>(B) fails for any tree with a vertex of degree 3, and (D) fails for <span class=\"mm\">K₁,₃</span>, which has three vertices of odd degree.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Students search for a counting formula; for a tree the count is 1 for the structural reason that there is no edge to spare.</p><p class=\"row\"><b>Takeaway.</b> Every tree is its own unique spanning tree, so the spanning-tree count of <span class=\"mm\">T</span> is 1.</p>",
+   "answer_display": "Option (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q43",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Trees & spanning trees",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "Labelled trees on the vertex set `{1, …, 6}` correspond to Prüfer sequences of length 4 over those six labels. How many of the trees have vertex 1 of degree 1?",
+   "options": [
+    "750",
+    "1296",
+    "3125",
+    "625"
+   ],
+   "answer": [
+    3
+   ],
+   "solution": {
+    "concept": "In the Prüfer sequence of a labelled tree, the degree of a vertex equals 1 plus the number of times its label occurs in the sequence.",
+    "steps": [
+     "Degree 1 means the label 1 does not occur in the sequence at all.",
+     "The sequence has length `n − 2 = 4` and may use the remaining 5 labels freely, giving `5⁴ = 625` sequences.",
+     "Consistency check: there are `6⁴ = 1296` labelled trees in total, so `1296 − 625 = 671` of them have vertex 1 of degree at least 2."
+    ],
+    "final": "Option (D).",
+    "misconception": "`5⁴ = 625` is confused with `5!/1! = 120` (an injective count, wrong because labels may repeat) or with `6⁴ = 1296` (all trees).",
+    "takeaway": "In a Prüfer sequence, `deg(v) = 1 + (number of occurrences of v)`, so leaves are exactly the labels that never appear."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "trees-spanning-trees",
+   "subtopic_label": "Trees & spanning trees",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Labelled trees on the vertex set <span class=\"mm\">{1, …, 6}</span> correspond to Prüfer sequences of length 4 over those six labels. How many of the trees have vertex 1 of degree 1?</p>",
+   "options_html": [
+    "750",
+    "1296",
+    "3125",
+    "625"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> In the Prüfer sequence of a labelled tree, the degree of a vertex equals 1 plus the number of times its label occurs in the sequence.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Degree 1 means the label 1 does not occur in the sequence at all.</li><li>The sequence has length <span class=\"mm\">n − 2 = 4</span> and may use the remaining 5 labels freely, giving <span class=\"mm\">5⁴ = 625</span> sequences.</li><li>Consistency check: there are <span class=\"mm\">6⁴ = 1296</span> labelled trees in total, so <span class=\"mm\">1296 − 625 = 671</span> of them have vertex 1 of degree at least 2.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (D).</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">5⁴ = 625</span> is confused with <span class=\"mm\">5!/1! = 120</span> (an injective count, wrong because labels may repeat) or with <span class=\"mm\">6⁴ = 1296</span> (all trees).</p><p class=\"row\"><b>Takeaway.</b> In a Prüfer sequence, <span class=\"mm\">deg(v) = 1 + (number of occurrences of v)</span>, so leaves are exactly the labels that never appear.</p>",
+   "answer_display": "Option (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q44",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Trees & spanning trees",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements about spanning trees are TRUE? Select all that apply.",
+   "options": [
+    "Every connected graph has at least one spanning tree.",
+    "Every graph with `n` vertices and `n − 1` edges is a tree.",
+    "If `T` is a spanning tree of a connected graph `G` and `e` is an edge of `G` not in `T`, then `T + e` contains exactly one cycle.",
+    "The complete graph `Kₙ` has `nⁿ⁻²` spanning trees."
+   ],
+   "answer": [
+    0,
+    2,
+    3
+   ],
+   "solution": {
+    "concept": "Spanning trees exist by repeatedly breaking cycles; adding a non-tree edge to a spanning tree creates exactly one cycle, the fundamental cycle of that edge; and Cayley's formula counts the spanning trees of `Kₙ`.",
+    "steps": [
+     "A: delete edges that lie on cycles one at a time until no cycle remains. Connectedness is preserved and the result spans all vertices. TRUE.",
+     "B: a triangle together with an isolated vertex has 4 vertices and 3 edges and is not a tree, because it is disconnected. FALSE.",
+     "C: `T` is connected, so `e = uv` closes the unique `u–v` path of `T` into a cycle; a second cycle would already lie inside the acyclic `T`. TRUE.",
+     "D: Cayley's formula. TRUE."
+    ],
+    "final": "Options (A), (C) and (D).",
+    "misconception": "B is accepted because connectedness is silently assumed. `n − 1` edges force a tree only together with connectedness, equivalently with acyclicity.",
+    "takeaway": "For a graph on `n` vertices, any two of {connected, acyclic, `n − 1` edges} imply the third."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "trees-spanning-trees",
+   "subtopic_label": "Trees & spanning trees",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Which of the following statements about spanning trees are TRUE? Select all that apply.</p>",
+   "options_html": [
+    "Every connected graph has at least one spanning tree.",
+    "Every graph with <span class=\"mm\">n</span> vertices and <span class=\"mm\">n − 1</span> edges is a tree.",
+    "If <span class=\"mm\">T</span> is a spanning tree of a connected graph <span class=\"mm\">G</span> and <span class=\"mm\">e</span> is an edge of <span class=\"mm\">G</span> not in <span class=\"mm\">T</span>, then <span class=\"mm\">T + e</span> contains exactly one cycle.",
+    "The complete graph <span class=\"mm\">Kₙ</span> has <span class=\"mm\">nⁿ⁻²</span> spanning trees."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Spanning trees exist by repeatedly breaking cycles; adding a non-tree edge to a spanning tree creates exactly one cycle, the fundamental cycle of that edge; and Cayley's formula counts the spanning trees of <span class=\"mm\">Kₙ</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: delete edges that lie on cycles one at a time until no cycle remains. Connectedness is preserved and the result spans all vertices. TRUE.</li><li>B: a triangle together with an isolated vertex has 4 vertices and 3 edges and is not a tree, because it is disconnected. FALSE.</li><li>C: <span class=\"mm\">T</span> is connected, so <span class=\"mm\">e = uv</span> closes the unique <span class=\"mm\">u–v</span> path of <span class=\"mm\">T</span> into a cycle; a second cycle would already lie inside the acyclic <span class=\"mm\">T</span>. TRUE.</li><li>D: Cayley's formula. TRUE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (C) and (D).</span></p><p class=\"row\"><b>Common misconception.</b> B is accepted because connectedness is silently assumed. <span class=\"mm\">n − 1</span> edges force a tree only together with connectedness, equivalently with acyclicity.</p><p class=\"row\"><b>Takeaway.</b> For a graph on <span class=\"mm\">n</span> vertices, any two of {connected, acyclic, <span class=\"mm\">n − 1</span> edges} imply the third.</p>",
+   "answer_display": "Options ((A), (C)) and (D)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q45",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Trees & spanning trees",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "The wheel `W₄` is a 4-cycle together with a hub joined to all four rim vertices. How many distinct spanning trees does it have? (Enter an integer.)",
+   "options": null,
+   "answer": 45,
+   "solution": {
+    "concept": "Matrix–tree theorem: the number of spanning trees of a graph equals any cofactor of its Laplacian matrix, that is, the determinant obtained by deleting one row and the matching column.",
+    "steps": [
+     "`W₄` has 5 vertices: a hub `h` and rim vertices `v₁, v₂, v₃, v₄`; the degrees are `d(h) = 4` and `d(vᵢ) = 3`.",
+     "Its Laplacian has these degrees on the diagonal, `−1` for the four spokes `h vᵢ`, `−1` for the four rim edges and 0 elsewhere.",
+     "Deleting the hub row and column leaves the 4 × 4 matrix `3I − A(C₄)`, whose determinant counts the spanning trees.",
+     "Evaluating that determinant gives 45; the wheel formula `((3+√5)/2)⁴ + ((3−√5)/2)⁴ − 2` gives the same value.",
+     "A direct enumeration of all 4-edge subsets of the 8 edges, keeping those that are connected and acyclic, also gives 45."
+    ],
+    "final": "45",
+    "misconception": "`C₄` has 4 spanning trees and there are 4 spokes, so students answer 4 or 8; most spanning trees mix spokes and rim edges.",
+    "takeaway": "Adding a hub to `Cₙ` multiplies the spanning-tree count sharply: `W₄` has 45 against the 4 of `C₄`."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "trees-spanning-trees",
+   "subtopic_label": "Trees & spanning trees",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">The wheel <span class=\"mm\">W₄</span> is a 4-cycle together with a hub joined to all four rim vertices. How many distinct spanning trees does it have? (Enter an integer.)</p>",
+   "options_html": null,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Matrix–tree theorem: the number of spanning trees of a graph equals any cofactor of its Laplacian matrix, that is, the determinant obtained by deleting one row and the matching column.</p><p class=\"row\"><b>Step by step.</b></p><ol><li><span class=\"mm\">W₄</span> has 5 vertices: a hub <span class=\"mm\">h</span> and rim vertices <span class=\"mm\">v₁, v₂, v₃, v₄</span>; the degrees are <span class=\"mm\">d(h) = 4</span> and <span class=\"mm\">d(vᵢ) = 3</span>.</li><li>Its Laplacian has these degrees on the diagonal, <span class=\"mm\">−1</span> for the four spokes <span class=\"mm\">h vᵢ</span>, <span class=\"mm\">−1</span> for the four rim edges and 0 elsewhere.</li><li>Deleting the hub row and column leaves the 4 × 4 matrix <span class=\"mm\">3I − A(C₄)</span>, whose determinant counts the spanning trees.</li><li>Evaluating that determinant gives 45; the wheel formula <span class=\"mm\">((3+√5)/2)⁴ + ((3−√5)/2)⁴ − 2</span> gives the same value.</li><li>A direct enumeration of all 4-edge subsets of the 8 edges, keeping those that are connected and acyclic, also gives 45.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 45</span></p><p class=\"row\"><b>Common misconception.</b> <span class=\"mm\">C₄</span> has 4 spanning trees and there are 4 spokes, so students answer 4 or 8; most spanning trees mix spokes and rim edges.</p><p class=\"row\"><b>Takeaway.</b> Adding a hub to <span class=\"mm\">Cₙ</span> multiplies the spanning-tree count sharply: <span class=\"mm\">W₄</span> has 45 against the 4 of <span class=\"mm\">C₄</span>.</p>",
+   "answer_display": "45",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q46",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Network flows",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "For an `s–t` cut `(S, T)` of a capacitated flow network, how is the capacity of the cut defined?",
+   "options": [
+    "As the sum of the capacities of all edges with one endpoint in `S` and the other in `T`, counted in both directions.",
+    "As the sum of the capacities of the edges from `S` to `T`; edges from `T` to `S` are ignored.",
+    "As the sum of the flows on the edges from `S` to `T` in a maximum flow.",
+    "As the sum of the capacities of the edges from `T` to `S`."
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "A cut is directed: `c(S, T) = Σ c(u, v)` over edges with `u ∈ S` and `v ∈ T`. Backward edges do not add to the capacity, although the net flow across the cut subtracts them.",
+    "steps": [
+     "A cut separates `s ∈ S` from `t ∈ T`. The net flow across it is `f(S, T) − f(T, S)`, and that net value equals the flow value `|f|`.",
+     "The capacity, however, is defined on the forward direction only: `c(S, T) = Σ c(u, v)` for `u ∈ S, v ∈ T`.",
+     "Counting both directions (A) would give the cut `({s}, V∖{s})` a capacity inflated by edges entering `s`, which no flow can use to leave the source.",
+     "(C) confuses the flow across a cut with its capacity, and (D) reverses the direction of the cut."
+    ],
+    "final": "Option (B).",
+    "misconception": "Capacity looks like a symmetric quantity, so both directions are summed. A cut is directed and only forward edges contribute.",
+    "takeaway": "Capacity counts forward edges only; net flow subtracts backward flow. The two coincide at a minimum cut, where all forward edges are saturated and all backward edges carry zero."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "network-flows",
+   "subtopic_label": "Network flows",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">For an <span class=\"mm\">s–t</span> cut <span class=\"mm\">(S, T)</span> of a capacitated flow network, how is the capacity of the cut defined?</p>",
+   "options_html": [
+    "As the sum of the capacities of all edges with one endpoint in <span class=\"mm\">S</span> and the other in <span class=\"mm\">T</span>, counted in both directions.",
+    "As the sum of the capacities of the edges from <span class=\"mm\">S</span> to <span class=\"mm\">T</span>; edges from <span class=\"mm\">T</span> to <span class=\"mm\">S</span> are ignored.",
+    "As the sum of the flows on the edges from <span class=\"mm\">S</span> to <span class=\"mm\">T</span> in a maximum flow.",
+    "As the sum of the capacities of the edges from <span class=\"mm\">T</span> to <span class=\"mm\">S</span>."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> A cut is directed: <span class=\"mm\">c(S, T) = Σ c(u, v)</span> over edges with <span class=\"mm\">u ∈ S</span> and <span class=\"mm\">v ∈ T</span>. Backward edges do not add to the capacity, although the net flow across the cut subtracts them.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A cut separates <span class=\"mm\">s ∈ S</span> from <span class=\"mm\">t ∈ T</span>. The net flow across it is <span class=\"mm\">f(S, T) − f(T, S)</span>, and that net value equals the flow value <span class=\"mm\">|f|</span>.</li><li>The capacity, however, is defined on the forward direction only: <span class=\"mm\">c(S, T) = Σ c(u, v)</span> for <span class=\"mm\">u ∈ S, v ∈ T</span>.</li><li>Counting both directions (A) would give the cut <span class=\"mm\">({s}, V∖{s})</span> a capacity inflated by edges entering <span class=\"mm\">s</span>, which no flow can use to leave the source.</li><li>(C) confuses the flow across a cut with its capacity, and (D) reverses the direction of the cut.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> Capacity looks like a symmetric quantity, so both directions are summed. A cut is directed and only forward edges contribute.</p><p class=\"row\"><b>Takeaway.</b> Capacity counts forward edges only; net flow subtracts backward flow. The two coincide at a minimum cut, where all forward edges are saturated and all backward edges carry zero.</p>",
+   "answer_display": "Option (B)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q47",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Network flows",
+   "type": "MCQ",
+   "difficulty": "easy",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "In a flow network the four edges leaving the source `s` have capacities 5, 3, 2 and 4, and no edge enters `s`. What is the largest possible value of an `s–t` flow?",
+   "options": [
+    "10",
+    "12",
+    "14",
+    "20"
+   ],
+   "answer": [
+    2
+   ],
+   "solution": {
+    "concept": "Flow conservation at the source makes the flow value equal to the net flow leaving `s`, which cannot exceed the total capacity of the edges leaving `s` — the capacity of the cut `({s}, V∖{s})`.",
+    "steps": [
+     "The net flow out of `s` is exactly the flow value `|f|`.",
+     "Every unit leaving `s` must use one of the four outgoing edges, whose capacities total `5 + 3 + 2 + 4 = 14`.",
+     "So `|f| ≤ 14`, and this is the capacity of the source-side cut.",
+     "The bound is attained when all four edges can be saturated, which happens whenever no other cut is smaller."
+    ],
+    "final": "Option (C).",
+    "misconception": "Only the two largest edges are added, or the capacities are averaged. The source-side cut is the relevant upper bound.",
+    "takeaway": "The cut `({s}, V∖{s})` bounds the flow by the total capacity leaving the source."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "network-flows",
+   "subtopic_label": "Network flows",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">In a flow network the four edges leaving the source <span class=\"mm\">s</span> have capacities 5, 3, 2 and 4, and no edge enters <span class=\"mm\">s</span>. What is the largest possible value of an <span class=\"mm\">s–t</span> flow?</p>",
+   "options_html": [
+    "10",
+    "12",
+    "14",
+    "20"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Flow conservation at the source makes the flow value equal to the net flow leaving <span class=\"mm\">s</span>, which cannot exceed the total capacity of the edges leaving <span class=\"mm\">s</span> &mdash; the capacity of the cut <span class=\"mm\">({s}, V∖{s})</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>The net flow out of <span class=\"mm\">s</span> is exactly the flow value <span class=\"mm\">|f|</span>.</li><li>Every unit leaving <span class=\"mm\">s</span> must use one of the four outgoing edges, whose capacities total <span class=\"mm\">5 + 3 + 2 + 4 = 14</span>.</li><li>So <span class=\"mm\">|f| ≤ 14</span>, and this is the capacity of the source-side cut.</li><li>The bound is attained when all four edges can be saturated, which happens whenever no other cut is smaller.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (C).</span></p><p class=\"row\"><b>Common misconception.</b> Only the two largest edges are added, or the capacities are averaged. The source-side cut is the relevant upper bound.</p><p class=\"row\"><b>Takeaway.</b> The cut <span class=\"mm\">({s}, V∖{s})</span> bounds the flow by the total capacity leaving the source.</p>",
+   "answer_display": "Option (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q48",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Network flows",
+   "type": "MCQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "A flow network has source `s`, sink `t` and capacities `s→a 3`, `s→b 4`, `a→b 2`, `a→t 4`, `b→t 3`. What is the maximum flow value from `s` to `t`?",
+   "options": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": [
+    1
+   ],
+   "solution": {
+    "concept": "Max-flow min-cut: the maximum flow equals the minimum cut capacity, so it is enough to exhibit a cut of capacity `k` and a flow of value `k`.",
+    "steps": [
+     "Cut `{s}`: forward edges `s→a` and `s→b`, capacity `3 + 4 = 7`.",
+     "Cut `{s, b}`: forward edges `s→a` (3) and `b→t` (3); the edge `a→b` points from outside into `S`, so it is not counted. Capacity 6.",
+     "Cut `{s, a, b}`: forward edges `a→t` (4) and `b→t` (3), capacity 7.",
+     "The minimum cut is 6, so no flow exceeds 6. The flow `s→a 3`, `s→b 3`, `a→t 3`, `b→t 3` is feasible and has value 6, so 6 is attained."
+    ],
+    "final": "Option (B).",
+    "misconception": "The source-side cut 7 is taken as the answer and a flow of 7 is assumed to exist; the middle cut `{s, b}` is tighter because `b→t` alone caps the right-hand side.",
+    "takeaway": "Search every cut, not just the cut at the source: the bottleneck often sits in the middle."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "network-flows",
+   "subtopic_label": "Network flows",
+   "marks": 1,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">A flow network has source <span class=\"mm\">s</span>, sink <span class=\"mm\">t</span> and capacities <span class=\"mm\">s→a 3</span>, <span class=\"mm\">s→b 4</span>, <span class=\"mm\">a→b 2</span>, <span class=\"mm\">a→t 4</span>, <span class=\"mm\">b→t 3</span>. What is the maximum flow value from <span class=\"mm\">s</span> to <span class=\"mm\">t</span>?</p>",
+   "options_html": [
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Max-flow min-cut: the maximum flow equals the minimum cut capacity, so it is enough to exhibit a cut of capacity <span class=\"mm\">k</span> and a flow of value <span class=\"mm\">k</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Cut <span class=\"mm\">{s}</span>: forward edges <span class=\"mm\">s→a</span> and <span class=\"mm\">s→b</span>, capacity <span class=\"mm\">3 + 4 = 7</span>.</li><li>Cut <span class=\"mm\">{s, b}</span>: forward edges <span class=\"mm\">s→a</span> (3) and <span class=\"mm\">b→t</span> (3); the edge <span class=\"mm\">a→b</span> points from outside into <span class=\"mm\">S</span>, so it is not counted. Capacity 6.</li><li>Cut <span class=\"mm\">{s, a, b}</span>: forward edges <span class=\"mm\">a→t</span> (4) and <span class=\"mm\">b→t</span> (3), capacity 7.</li><li>The minimum cut is 6, so no flow exceeds 6. The flow <span class=\"mm\">s→a 3</span>, <span class=\"mm\">s→b 3</span>, <span class=\"mm\">a→t 3</span>, <span class=\"mm\">b→t 3</span> is feasible and has value 6, so 6 is attained.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Option (B).</span></p><p class=\"row\"><b>Common misconception.</b> The source-side cut 7 is taken as the answer and a flow of 7 is assumed to exist; the middle cut <span class=\"mm\">{s, b}</span> is tighter because <span class=\"mm\">b→t</span> alone caps the right-hand side.</p><p class=\"row\"><b>Takeaway.</b> Search every cut, not just the cut at the source: the bottleneck often sits in the middle.</p>",
+   "answer_display": "Option (B)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q49",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Network flows",
+   "type": "MSQ",
+   "difficulty": "medium",
+   "reference_category": "Standard textbook",
+   "source": "STANDARD_TEXTBOOK",
+   "question": "Which of the following statements about flows and cuts are TRUE? Select all that apply.",
+   "options": [
+    "If every capacity is an integer, then some maximum flow assigns an integer flow to every edge.",
+    "The value of every `s–t` flow is at most the capacity of every `s–t` cut.",
+    "Augmenting along a path in the residual network can reduce the flow currently assigned to an edge of the original network.",
+    "The max-flow min-cut theorem holds only for networks without directed cycles."
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "solution": {
+    "concept": "Integrality comes from augmenting by integer bottlenecks; weak duality bounds every flow by every cut; residual reverse edges allow augmentation to cancel earlier flow.",
+    "steps": [
+     "A: with integer capacities, each augmentation adds an integer bottleneck amount, so the algorithm terminates with an integral flow of maximum value. TRUE.",
+     "B: weak duality — the net flow across a cut equals `|f|` and is at most the sum of the forward capacities. TRUE.",
+     "C: for every edge `u→v` carrying flow `f(u, v)`, the residual network contains `v→u` with capacity `f(u, v)`; augmenting along it reduces the flow on `u→v`. TRUE.",
+     "D: the theorem holds for all capacitated networks; cycles are handled by the residual network. FALSE."
+    ],
+    "final": "Options (A), (B) and (C).",
+    "misconception": "C is rejected because 'augment' sounds like 'add only'. The residual network deliberately contains reverse edges, and augmenting them removes earlier flow.",
+    "takeaway": "Residual reverse edges are what make greedy augmentation safe: they let the algorithm undo a locally poor choice."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "network-flows",
+   "subtopic_label": "Network flows",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">Which of the following statements about flows and cuts are TRUE? Select all that apply.</p>",
+   "options_html": [
+    "If every capacity is an integer, then some maximum flow assigns an integer flow to every edge.",
+    "The value of every <span class=\"mm\">s–t</span> flow is at most the capacity of every <span class=\"mm\">s–t</span> cut.",
+    "Augmenting along a path in the residual network can reduce the flow currently assigned to an edge of the original network.",
+    "The max-flow min-cut theorem holds only for networks without directed cycles."
+   ],
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Integrality comes from augmenting by integer bottlenecks; weak duality bounds every flow by every cut; residual reverse edges allow augmentation to cancel earlier flow.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>A: with integer capacities, each augmentation adds an integer bottleneck amount, so the algorithm terminates with an integral flow of maximum value. TRUE.</li><li>B: weak duality &mdash; the net flow across a cut equals <span class=\"mm\">|f|</span> and is at most the sum of the forward capacities. TRUE.</li><li>C: for every edge <span class=\"mm\">u→v</span> carrying flow <span class=\"mm\">f(u, v)</span>, the residual network contains <span class=\"mm\">v→u</span> with capacity <span class=\"mm\">f(u, v)</span>; augmenting along it reduces the flow on <span class=\"mm\">u→v</span>. TRUE.</li><li>D: the theorem holds for all capacitated networks; cycles are handled by the residual network. FALSE.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: Options (A), (B) and (C).</span></p><p class=\"row\"><b>Common misconception.</b> C is rejected because 'augment' sounds like 'add only'. The residual network deliberately contains reverse edges, and augmenting them removes earlier flow.</p><p class=\"row\"><b>Takeaway.</b> Residual reverse edges are what make greedy augmentation safe: they let the algorithm undo a locally poor choice.</p>",
+   "answer_display": "Options ((A), (B)) and (C)",
+   "set": "Set 2 of 2"
+  },
+  {
+   "id": "DM-GTA-Q50",
+   "unit": 10,
+   "unit_name": "Graph Theory Advanced",
+   "topic": "Graph Theory Advanced",
+   "sub": "Network flows",
+   "type": "NAT",
+   "difficulty": "hard",
+   "reference_category": "Original",
+   "source": "ORIGINAL_SYNTHESIS",
+   "question": "A flow network has source `s`, sink `t` and capacities `s→a 10`, `s→b 10`, `a→b 4`, `a→t 8`, `b→t 9`. What is the maximum flow value from `s` to `t`? (Enter an integer.)",
+   "options": null,
+   "answer": 17,
+   "solution": {
+    "concept": "Max-flow min-cut. Here the tightest cut is the sink-side cut `{s, a, b}`, whose forward edges are exactly the two edges entering `t`.",
+    "steps": [
+     "Cut `{s, a, b}`: its forward edges are `a→t` (8) and `b→t` (9), so its capacity is 17 and no flow can exceed 17.",
+     "Construct a flow of 17: `s→a 10`, `a→t 8`, `a→b 2`, `s→b 7`, `b→t 9`.",
+     "Conservation: at `a`, inflow 10 equals outflow `8 + 2`; at `b`, inflow `7 + 2 = 9` equals outflow 9; at `s`, outflow `10 + 7 = 17`; at `t`, inflow `8 + 9 = 17`.",
+     "Capacity checks: `a→b` uses 2 of 4, `s→b` uses 7 of 10, and the two sink edges are saturated, so the flow is feasible.",
+     "A feasible flow of 17 meets a cut of capacity 17, so 17 is optimal."
+    ],
+    "final": "17",
+    "misconception": "Answering 20 by adding `s→a` and `s→b` ignores that only 17 units can leave through `a→t` and `b→t`; answering 18 double counts the edge `a→b`.",
+    "takeaway": "When the sink edges are the bottleneck, the minimum cut is the sink side, not the source side."
+   },
+   "run_date": "2026-10-31",
+   "unit_slug": "graph-theory-advanced",
+   "unit_number": 10,
+   "subtopic": "network-flows",
+   "subtopic_label": "Network flows",
+   "marks": 2,
+   "subject": "discrete-mathematics",
+   "subject_name": "Discrete Mathematics",
+   "question_html": "<p class=\"qtext\">A flow network has source <span class=\"mm\">s</span>, sink <span class=\"mm\">t</span> and capacities <span class=\"mm\">s→a 10</span>, <span class=\"mm\">s→b 10</span>, <span class=\"mm\">a→b 4</span>, <span class=\"mm\">a→t 8</span>, <span class=\"mm\">b→t 9</span>. What is the maximum flow value from <span class=\"mm\">s</span> to <span class=\"mm\">t</span>? (Enter an integer.)</p>",
+   "options_html": null,
+   "solution_html": "<h4>Detailed solution</h4><p class=\"row\"><b>Concept.</b> Max-flow min-cut. Here the tightest cut is the sink-side cut <span class=\"mm\">{s, a, b}</span>, whose forward edges are exactly the two edges entering <span class=\"mm\">t</span>.</p><p class=\"row\"><b>Step by step.</b></p><ol><li>Cut <span class=\"mm\">{s, a, b}</span>: its forward edges are <span class=\"mm\">a→t</span> (8) and <span class=\"mm\">b→t</span> (9), so its capacity is 17 and no flow can exceed 17.</li><li>Construct a flow of 17: <span class=\"mm\">s→a 10</span>, <span class=\"mm\">a→t 8</span>, <span class=\"mm\">a→b 2</span>, <span class=\"mm\">s→b 7</span>, <span class=\"mm\">b→t 9</span>.</li><li>Conservation: at <span class=\"mm\">a</span>, inflow 10 equals outflow <span class=\"mm\">8 + 2</span>; at <span class=\"mm\">b</span>, inflow <span class=\"mm\">7 + 2 = 9</span> equals outflow 9; at <span class=\"mm\">s</span>, outflow <span class=\"mm\">10 + 7 = 17</span>; at <span class=\"mm\">t</span>, inflow <span class=\"mm\">8 + 9 = 17</span>.</li><li>Capacity checks: <span class=\"mm\">a→b</span> uses 2 of 4, <span class=\"mm\">s→b</span> uses 7 of 10, and the two sink edges are saturated, so the flow is feasible.</li><li>A feasible flow of 17 meets a cut of capacity 17, so 17 is optimal.</li></ol><p class=\"row\"><span class=\"ansline\">Answer: 17</span></p><p class=\"row\"><b>Common misconception.</b> Answering 20 by adding <span class=\"mm\">s→a</span> and <span class=\"mm\">s→b</span> ignores that only 17 units can leave through <span class=\"mm\">a→t</span> and <span class=\"mm\">b→t</span>; answering 18 double counts the edge <span class=\"mm\">a→b</span>.</p><p class=\"row\"><b>Takeaway.</b> When the sink edges are the bottleneck, the minimum cut is the sink side, not the source side.</p>",
+   "answer_display": "17",
+   "set": "Set 2 of 2"
   }
  ]
 }
